@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, PlayCircle } from "lucide-react";
-import logoImg from "@/assets/basketball-orbit-logo.webp";
+import logoImg from "@/assets/basketball-orbit-logo.png";
 
 const HeroSection = () => {
   return (
