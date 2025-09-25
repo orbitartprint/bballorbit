@@ -44,7 +44,7 @@ const VideoSection = () => {
 
           <div className="mt-8 text-center">
             <p className="text-muted-foreground">
-              Subscribe to our YouTube channel for weekly drill breakdowns and coaching tips
+              Subscribe to our <a href="https://www.youtube.com/@basketballorbit"> YouTube channel</a> for more drill breakdowns and coaching tips
             </p>
           </div>
         </div>
