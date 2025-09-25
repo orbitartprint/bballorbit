@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, BookOpen } from "lucide-react";
+import Navigation from "@/components/ui/navigation";
+import Footer from "@/components/ui/footer";
 
 const FreeResources = () => {
   const resources = [
@@ -30,6 +32,7 @@ const FreeResources = () => {
       </Helmet>
       
       <div className="min-h-screen bg-background">
+        <Navigation />
         <div className="container mx-auto px-4 py-16">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -86,6 +89,7 @@ const FreeResources = () => {
             </Button>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

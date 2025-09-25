@@ -13,38 +13,29 @@ const VideoSection = () => {
           </p>
 
           {/* Video Embed */}
-          <div className="relative aspect-video rounded-xl overflow-hidden shadow-glow bg-muted group">
-            {/* Placeholder for YouTube embed - replace with actual video */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-bounce cursor-pointer">
-                  <Play className="h-8 w-8 text-white ml-1" fill="currentColor" />
-                </div>
-                <p className="text-foreground font-semibold">
-                  Click to watch our latest drill video
-                </p>
-                <p className="text-muted-foreground text-sm mt-2">
-                  Replace this with actual YouTube embed
-                </p>
-              </div>
-            </div>
-            
-            {/* YouTube iframe would go here */}
-            {/* 
+          <div className="relative aspect-video rounded-xl overflow-hidden shadow-glow bg-black">
             <iframe
               className="w-full h-full"
-              src="https://youtu.be/u7dRADmLkZ4"
+              src="https://www.youtube.com/embed/u7dRADmLkZ4"
               title="Why Every Coach Should Be Running This 5-Out Entry - Zoom Action"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-            */}
           </div>
 
           <div className="mt-8 text-center">
             <p className="text-muted-foreground">
-              Subscribe to our <a href="https://www.youtube.com/@basketballorbit"> YouTube channel</a> for more drill breakdowns and coaching tips
+              Subscribe to our{" "}
+              <a 
+                href="https://www.youtube.com/@basketballorbit" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors underline decoration-primary/30 hover:decoration-primary"
+              >
+                YouTube channel
+              </a>{" "}
+              for more drill breakdowns and coaching tips
             </p>
           </div>
         </div>
