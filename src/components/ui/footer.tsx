@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Youtube, href: "https://www.youtube.com/@basketballorbit", label: "YouTube" },
+    { icon: Instagram, href: "https://www.instagram.com/basketball_orbit", label: "Instagram" },
+    /*{ icon: Twitter, href: "#", label: "Twitter" },*/
+    /*{ icon: Facebook, href: "#", label: "Facebook" },*/
   ];
 
   const legalLinks = [
