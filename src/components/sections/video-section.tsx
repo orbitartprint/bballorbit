@@ -33,8 +33,8 @@ const VideoSection = () => {
             {/* 
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-              title="Basketball Drill Video"
+              src="https://youtu.be/u7dRADmLkZ4"
+              title="Why Every Coach Should Be Running This 5-Out Entry - Zoom Action"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
