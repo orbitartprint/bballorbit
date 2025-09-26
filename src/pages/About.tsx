@@ -18,7 +18,7 @@ const About = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 lg:py-24">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -45,7 +45,7 @@ const About = () => {
         </section>
 
         {/* My Story Section */}
-        <section className="py-16 lg:py-24 bg-card/50">
+        <section className="py-10 lg:py-16 bg-card/50">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
@@ -92,7 +92,7 @@ const About = () => {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-16 lg:py-24">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-12">Mission & Vision</h2>
@@ -119,7 +119,7 @@ const About = () => {
         </section>
 
         {/* Social Proof */}
-        <section className="py-16 lg:py-24 bg-card/50">
+        <section className="py-10 lg:py-16 bg-card/50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Coaches Are Saying</h2>
@@ -154,7 +154,7 @@ const About = () => {
         </section>
 
         {/* Stats Highlight */}
-        <section className="py-16 lg:py-24">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -176,7 +176,7 @@ const About = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 lg:py-24 bg-gradient-orange/10">
+        <section className="py-10 lg:py-16 bg-gradient-orange/10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Join the Basketball Orbit Community</h2>
