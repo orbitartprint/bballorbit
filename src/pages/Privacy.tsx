@@ -209,10 +209,10 @@ const Privacy = () => {
                 <p className="text-sm text-muted-foreground">
                   For questions about this privacy policy, please contact us at{" "}
                   <a 
-                    href="mailto:info@bballorbit.com" 
+                    href="mailto:info[at]bballorbit.com" 
                     className="text-primary hover:text-primary/80 underline"
                   >
-                    info@bballorbit.com
+                    info[at]bballorbit.com
                   </a>
                 </p>
               </div>
