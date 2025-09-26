@@ -9,7 +9,7 @@ const VideoSection = () => {
             Latest from Basketball Orbit
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Watch our newest drill breakdown and coaching insights
+            Watch my newest drill breakdown and coaching insights
           </p>
 
           {/* Video Embed */}
