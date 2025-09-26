@@ -199,24 +199,27 @@ const Privacy = () => {
               </li>
             </ul>
 
-            {/* Continue with remaining sections... */}
-            <div className="mt-16 p-6 bg-muted/20 rounded-lg border border-muted">
-              <p className="text-center text-muted-foreground">
-                <em>This privacy policy continues with additional sections covering data processing, legal bases, sharing practices, cookies, retention policies, privacy rights, and contact information. The complete policy ensures compliance with international privacy regulations including GDPR, CCPA, and other applicable laws.</em>
-              </p>
-              
-              <div className="text-center mt-6">
-                <p className="text-sm text-muted-foreground">
-                  For questions about this privacy policy, please contact us at{" "}
-                  <a 
-                    href="mailto:info[at]bballorbit.com" 
-                    className="text-primary hover:text-primary/80 underline"
-                  >
-                    info[at]bballorbit.com
-                  </a>
-                </p>
-              </div>
-            </div>
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infouse">
+              2. HOW DO WE PROCESS YOUR INFORMATION?
+            </h2>
+            <p><strong><em>In Short:</em></strong> <em>We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law.
+               We process the personal information for the following purposes listed below.
+               We may also process your information for other purposes
+               only with your prior explicit
+               consent.</em>
+            </p>
+            <strong>
+               We process your personal information for a variety of reasons, depending on how you interact with our Services, including:
+            </strong>
+            <ul className="list-disc pl-6 space-y-4">
+              <li>
+                <strong>To save or protect an individual's vital interest.</strong>
+                We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.
+              </li>
+            </ul>
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infouse">
+              3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
+            </h2>
           </div>
         </div>
       </main>
