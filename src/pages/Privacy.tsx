@@ -2,6 +2,7 @@ import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Helmet } from "react-helmet";
 import { useNavigate, Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Privacy = () => {
   const navigate = useNavigate();
