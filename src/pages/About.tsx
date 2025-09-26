@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
