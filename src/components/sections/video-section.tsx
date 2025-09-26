@@ -35,7 +35,7 @@ const VideoSection = () => {
               >
                 YouTube channel
               </a>{" "}
-              for more drill breakdowns and coaching tips
+              for more basketball drill breakdowns and coaching tips
             </p>
           </div>
         </div>
