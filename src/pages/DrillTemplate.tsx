@@ -3,10 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/ui/navigation";
+import { useNavigate, Link } from "react-router-dom";
 import Footer from "@/components/ui/footer";
 import { Download, Play, Clock, Users, TrendingUp } from "lucide-react";
 
 const DrillTemplate = () => {
+  const navigate = useNavigate();
+  useEffect(() => {window.scrollTo(0, 0);}, []);
   const [activeTab, setActiveTab] = useState("instructions");
 
   // Sample drill data - this would come from props/params in real implementation
