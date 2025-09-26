@@ -1,8 +1,11 @@
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Helmet } from "react-helmet";
+import { useNavigate, Link } from "react-router-dom";
 
 const Privacy = () => {
+  const navigate = useNavigate();
+  useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -205,8 +208,7 @@ const Privacy = () => {
             <p><strong><em>In Short:</em></strong> <em>We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law.
                We process the personal information for the following purposes listed below.
                We may also process your information for other purposes
-               only with your prior explicit
-               consent.</em>
+               only with your prior explicit consent.</em>
             </p>
             <strong>
                We process your personal information for a variety of reasons, depending on how you interact with our Services, including:
@@ -217,9 +219,134 @@ const Privacy = () => {
                 We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.
               </li>
             </ul>
-            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infouse">
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="legalbases">
               3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
             </h2>
+            <p><strong><em>In Short:</em></strong> <em>We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e. ,
+               legal basis) to do so under applicable law, like with your consent, to comply with laws, to provide you with services to enter into or
+               fulfill our contractual obligations, to protect your rights, or to fulfill our legitimate business interests.</em>
+            </p>
+            <em>
+             <strong>
+              <u>
+               If you are located in the EU or UK, this section applies to you.
+              </u>
+             </strong>
+            </em>
+            <br/>
+            The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases to process your personal information:
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              <strong>
+               Consent.
+              </strong>
+              We may process your information if you have given us permission (i.e.
+              ,
+              consent) to use your personal information for a specific purpose. You can withdraw your consent at any time. Learn more about
+              <a href="#withdrawconsent">
+               withdrawing your consent
+              </a>
+              .
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              <strong>
+               Legal Obligations.
+              </strong>
+              We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.
+              <br/>
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              <strong>
+               Vital Interests.
+              </strong>
+              We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.
+             </li>
+            </ul>
+            <br/>
+            <strong>
+             <u>
+              <em>
+               If you are located in Canada, this section applies to you.
+              </em>
+             </u>
+            </strong>
+            <br/>
+            We may process your information if you have given us specific permission (i.e.
+            ,
+            express consent) to use your personal information for a specific purpose, or in situations where your permission can be inferred (i.e.
+            ,
+            implied consent). You can
+            <a href="#withdrawconsent">
+             withdraw your consent
+            </a>
+            at any time.
+            <br/>
+            In some exceptional cases, we may be legally permitted under applicable law to process your information without your consent, including, for example:
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If collection is clearly in the interests of an individual and consent cannot be obtained in a timely way
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              For investigations and fraud detection and prevention
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              For business transactions provided certain conditions are met
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If it is contained in a witness statement and the collection is necessary to assess, process, or settle an insurance claim
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              For identifying injured, ill, or deceased persons and communicating with next of kin
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If we have reasonable grounds to believe an individual has been, is, or may be victim of financial abuse
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If it is reasonable to expect collection and use with consent would compromise the availability or the accuracy of the information and the collection is reasonable for purposes related to investigating a breach of an agreement or a contravention of the laws of Canada or a province
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If disclosure is required to comply with a subpoena, warrant, court order, or rules of the court relating to the production of records
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If it was produced by an individual in the course of their employment, business, or profession and the collection is consistent with the purposes for which the information was produced
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If the collection is solely for journalistic, artistic, or literary purposes
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              If the information is publicly available and is specified by the regulations
+             </li>
+            </ul>
+            <ul>
+             <li data-custom-class="body_text" style="line-height: 1.5;">
+              We may disclose de-identified information for approved research or statistics projects, subject to ethics oversight and confidentiality commitments
+             </li>
+            </ul>
+            <br/>
           </div>
         </div>
       </main>
