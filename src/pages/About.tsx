@@ -61,7 +61,7 @@ const About = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4 text-primary">Why Basketball Orbit</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    Coaching can be challenging — planning practices, teaching plays, and motivating players isn't always easy. 
+                    Coaching can be challenging — planning practices, teaching concepts, and motivating players isn't always easy. 
                     That's why I started Basketball Orbit: to share the strategies and tools I've learned to help coaches like you create confident, successful teams.
                   </p>
                 </div>
@@ -69,7 +69,7 @@ const About = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4 text-primary">What You'll Get Here</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    On my YouTube channel, I focus on practical drills, plays, and strategies for youth and senior teams alike. 
+                    On my YouTube channel, I focus on practical drills, modern concepts, and strategies for youth and senior teams alike. 
                     My goal is simple: to help you grow as a coach and take your team to the next level. 
                     Basketball is about more than just winning — it's about teamwork, resilience, and having fun. 
                     Join me on this journey, and let's build stronger teams together.
