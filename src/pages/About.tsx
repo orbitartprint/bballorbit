@@ -3,10 +3,13 @@ import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate, Link } from "react-router-dom";
 import chrisPhoto1 from "@/assets/chris-photo-1.webp";
 import chrisPhoto2 from "@/assets/chris-photo-2.webp";
 
 const About = () => {
+  const navigate = useNavigate();
+  useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
