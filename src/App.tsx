@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import DrillTemplate from "./pages/DrillTemplate";
 import Newsletter from "./pages/Newsletter";
 import FreeResources from "./pages/FreeResources";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/drills" element={<DrillTemplate />} />
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/free-resources" element={<FreeResources />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
