@@ -266,6 +266,123 @@ const Privacy = () => {
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="whoshare">
               4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
             </h2>
+            <p className="mb-4">
+              <strong><em>In Short:</em></strong> <em>We may share information in specific situations described in this section and/or with the following third parties.</em>
+            </p>
+            <p className="mb-2">We may need to share your personal information in the following situations:</p>
+            <ul className="list-disc ml-6 mb-4">
+              <li>
+                <strong>Business Transfers.</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
+              </li>
+            </ul>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="cookies">
+              5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
+            </h2>
+            <p className="mb-4">
+              <strong><em>In Short:</em></strong> <em>We may use cookies and other tracking technologies to collect and store your information.</em>
+            </p>
+            <p className="mb-4">
+              We may use cookies and similar tracking technologies (like web beacons and pixels) to gather information when you interact with our Services. Some online tracking technologies help us maintain the security of our Services, prevent crashes, fix bugs, save your preferences, and assist with basic site functions.
+            </p>
+            <p className="mb-4">
+              We also permit third parties and service providers to use online tracking technologies on our Services for analytics and advertising, including to help manage and display advertisements, to tailor advertisements to your interests, or to send abandoned shopping cart reminders (depending on your communication preferences). The third parties and service providers use their technology to provide advertising about products and services tailored to your interests which may appear either on our Services or on other websites.
+            </p>
+            <p className="mb-4">
+              To the extent these online tracking technologies are deemed to be a "sale"/"sharing" (which includes targeted advertising, as defined under the applicable laws) under applicable US state laws, you can opt out of these online tracking technologies by submitting a request as described below under section "{" "}
+              <a href="#uslaws" className="text-blue-600 underline">DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a>"
+            </p>
+            <p className="mb-4">Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice.</p>
+
+            <h3 className="text-lg font-bold mb-2 text-black">5.1 GOOGLE ANALYTICS</h3>
+            <p className="mb-4">
+              We use Google Analytics to understand how our website is used and to improve its functionality. Google Analytics collects data about your Browse activity, including the pages you visit, the links you click, and your IP address (which is anonymized). This data is used to generate reports on website traffic and user behavior. Google Analytics uses cookies to collect this data. You can manage your cookie preferences and opt-out of personalized advertising through Google's Ad Settings. For more information on how Google Analytics handles data, please refer to Google's{" "}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a href="https://business.safety.google/adsservices/processorterms/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                Google Analytics's Data Processing Terms
+              </a>.
+            </p>
+
+            <h3 className="text-lg font-bold mb-2 text-black">5.2 GOOGLE ADSENSE</h3>
+            <p className="mb-4">
+              We use Google AdSense to display advertising on our website. Google and its partners use cookies to serve ads based on your prior visits to our website and other websites. You can opt out of personalized advertising by visiting Google's{" "}
+              <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                Ad Settings
+              </a>. We also use cookies and device identifiers to personalize your experience and analyze ad performance. You can manage your cookie preferences on our site or through your browser settings. We are committed to protecting your privacy and comply with all relevant data privacy laws.
+            </p>
+            <h3 className="text-lg font-bold mb-2 text-black">5.3 YOUTUBE EMBEDS</h3>
+            <p className="mb-4">
+              Our website embeds videos from YouTube. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. 
+              When you visit a page containing a YouTube video, a connection to YouTube’s servers is established. 
+              The YouTube server is informed which of our pages you have visited.
+              <br/>
+              If you are logged into your YouTube account, Google may associate your browsing behavior directly with your personal profile. 
+              You can prevent this by logging out of your YouTube account beforehand. 
+              The use of YouTube is in the interest of presenting our online content in an appealing way and making content easier to understand 
+              (Art. 6 (1) lit. f GDPR).
+              <br/>
+              Further information can be found in Google’s Privacy Policy: 
+              <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="newsletter">
+              6. NEWSLETTER
+            </h2>
+            <p className="mb-4">
+              We offer you the opportunity to subscribe to our newsletter to receive regular updates on basketball training, coaching tips, and new offers. 
+              For this purpose, we use the service provider ConvertKit (ConvertKit LLC, 750 W Bannock St #761, Boise, ID 83701, USA).
+              <br/>
+              When registering for the newsletter, the following data will be collected and stored by ConvertKit:
+              <ul className="list-disc ml-6 mb-4 space-y-1">
+                <li>Name (if provided)</li>
+                <li>Email address</li>
+                <li>Time of registration (Double Opt-In process)</li>
+              </ul>
+              Processing is based on your consent in accordance with Art. 6 (1) lit. a GDPR. 
+              You may revoke your consent at any time with effect for the future by unsubscribing via the link provided in each newsletter. 
+              ConvertKit may store data on servers located in the USA. A Data Processing Agreement (DPA) in accordance with Art. 28 GDPR has been concluded with ConvertKit to ensure compliance with European data protection standards.
+              For more information, please see ConvertKit’s Privacy Policy:
+              <a href="https://convertkit.com/privacy" target="_blank">https://convertkit.com/privacy</a>.
+              <br/>
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="hosting">
+              7. HOSTING OF THE WEBSITE
+            </h2>
+            <p className="mb-4">
+              Our website is hosted on the servers of GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA).
+              When you visit our website, technical data (e.g., IP address, browser type, operating system) may automatically be collected by GitHub 
+              in order to ensure the operation of the site and to maintain stability and security.
+              Processing is based on Art. 6 (1) lit. f GDPR (legitimate interest in a secure and efficient provision of our website).
+              For more information, please see GitHub's Privacy Statement:
+              <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="inforetain">
+              8. HOW LONG DO WE KEEP YOUR INFORMATION?
+            </h2>
+            <p className="mb-4">
+              <strong><em>In Short:</em></strong> <em>We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice unless otherwise required by law.</em>
+            </p>
+            <p className="mb-4">
+              We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).
+            </p>
+            <p className="mb-4">
+              When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infominors">
+              9. DO WE COLLECT INFORMATION FROM MINORS?
+            </h2>
+            <p className="mb-4">
+              <strong><em>In Short:</em></strong> <em>We do not knowingly collect data from or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction.</em>
+            </p>
+            <p className="mb-4">
+              We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at info[at]bballorbit.com.
+            </p>
           </div>
         </div>
       </main>
