@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Legal = () => {
   const navigate = useNavigate();
-
+  useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
