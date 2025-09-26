@@ -16,7 +16,7 @@ const Footer = () => {
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
     { name: "Affiliate Disclosure", path: "/affiliate" },
-    { name: "Legal", path: "/legal" },
+    { name: "Legal Notice", path: "/legal" },
   ];
 
   const quickLinks = [
