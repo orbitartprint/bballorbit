@@ -26,7 +26,7 @@ const VideoSection = () => {
 
           <div className="mt-8 text-center">
             <p className="text-muted-foreground">
-              Subscribe to our{" "}
+              Subscribe to my{" "}
               <a 
                 href="https://www.youtube.com/@basketballorbit" 
                 target="_blank" 
