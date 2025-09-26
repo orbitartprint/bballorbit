@@ -4,11 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import Navigation from "@/components/ui/navigation";
+import { useNavigate, Link } from "react-router-dom";
 import Footer from "@/components/ui/footer";
 import { Mail, Download, Check, Users, Clock, Target } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Newsletter = () => {
+  const navigate = useNavigate();
+  useEffect(() => {window.scrollTo(0, 0);}, []);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [gdprConsent, setGdprConsent] = useState(false);
