@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import { useNavigate, Link } from "react-router-dom";
 import Footer from "@/components/ui/footer";
