@@ -3,9 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, BookOpen } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
+import { useNavigate, Link } from "react-router-dom";
 import Footer from "@/components/ui/footer";
 
 const FreeResources = () => {
+  const navigate = useNavigate();
+  useEffect(() => {window.scrollTo(0, 0);}, []);
   const resources = [
     {
       id: 1,
