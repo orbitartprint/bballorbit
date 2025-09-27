@@ -8,7 +8,7 @@ const Privacy = () => {
   const navigate = useNavigate();
   useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
-    <<div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <Helmet>
         <title>Privacy Policy - Basketball Orbit</title>
         <meta name="description" content="Privacy Policy for Basketball Orbit - Learn how we protect your privacy and handle your data." />
@@ -18,7 +18,7 @@ const Privacy = () => {
       <Navigation />
       
       <main className="container mx-auto px-4 pt-24 pb-12 max-w-4xl">
-        <div className="prose prose-invert max-w-none">
+        <div className="max-w-none">
           <h1 className="text-4xl font-bold text-foreground mb-8">
             PRIVACY POLICY
           </h1>
@@ -164,19 +164,16 @@ const Privacy = () => {
             </p>
 
             <ul className="list-disc pl-6 space-y-2">
-              <li>weight measurements you enter for comparison purposes</li>
-              <li>custom objects you create for weight comparisons</li>
-              <li>contact or authentication data</li>
+              <li>Contact information (such as your name and email address, when subscribing to our newsletter or downloading free resources)</li>
+              <li>Account or authentication data (if you create an account in the future)</li>
+              <li>Purchase information (such as billing details and shipping information for physical or digital products)</li>
             </ul>
-
             <p>
               <strong>Sensitive Information.</strong> We do not process sensitive information.
             </p>
-
             <p>
               All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
             </p>
-
             <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
               Information automatically collected
             </h3>
@@ -432,7 +429,6 @@ const Privacy = () => {
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="uslaws">
               12. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
             </h2>
-
             <p className="mb-4">
               <strong><em>In Short:</em></strong> <em>If you are a resident of, you may have the right to request access to and receive details about the personal information we maintain about you and how we have processed it, correct inaccuracies, get a copy of, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. More information is provided below.</em>
             </p>
@@ -559,9 +555,9 @@ const Privacy = () => {
             <h3 className="text-lg font-bold mb-2 text-black">How to Exercise Your Rights</h3>
             <p className="mb-4">
               To exercise these rights, you can contact us by submitting our{" "}
-              <a href="https://www.weightvs.com/contact" target="_blank" className="text-blue-600 underline">
+              <a href="https://www.bballorbit.com/contact" target="_blank" className="text-blue-600 underline">
                 contact formular
-              </a>, by emailing us at info[at]weightvs.com, or by referring to the contact details at the bottom of this document.
+              </a>, by emailing us at info[at]bballorbit.com, or by referring to the contact details at the bottom of this document.
             </p>
             <p className="mb-4">
               Under certain US state data protection laws, you can designate an authorized agent to make a request on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with applicable laws.
@@ -573,6 +569,65 @@ const Privacy = () => {
             </p>
             <p className="mb-4">
               If you submit the request through an authorized agent, we may need to collect additional information to verify your identity before processing your request and the agent will need to provide a written and signed permission from you to submit such request on your behalf.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="downloads">
+              13. DOWNLOADS AND ONLINE SHOP
+            </h2>
+            <p>
+              We offer digital content (such as PDF guides and digital products) as well as physical items (such as T-shirts and basketball equipment) for download or purchase on our website.
+            </p>
+            When ordering or downloading such products, the following personal data may be processed:
+            <ul>
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Payment details (only for paid products)</li>
+              <li>Order history</li>
+            </ul>
+            <br/>
+            Data processing is carried out exclusively for the purpose of fulfilling the contract (Art. 6 (1) lit. b GDPR) 
+            and to comply with legal obligations (e.g., tax retention obligations pursuant to Art. 6 (1) lit. c GDPR).
+            <br/>
+            For payment processing, we may use external payment service providers (e.g., PayPal, Stripe). 
+            Your data will only be passed on to the extent necessary for the payment process. 
+            Please also refer to the privacy policies of the respective payment providers.
+            <br/>
+            For free downloads (such as freebies), processing is based on your consent in accordance with Art. 6 (1) lit. a GDPR 
+            in connection with our newsletter offering.
+            <br/>
+            
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="policyupdates">
+              14. DO WE MAKE UPDATES TO THIS NOTICE?
+            </h2>
+            <p className="mb-4">
+              <em><strong>In Short:</strong> Yes, we will update this notice as necessary to stay compliant with relevant laws.</em>
+            </p>
+            <p className="mb-4">
+              We may update this Privacy Notice from time to time. The updated version will be indicated by an updated "Revised" date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="contact">
+              15. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+            </h2>
+            <p className="mb-4">
+              If you have questions or comments about this notice, you may email us at info[at]bballorbit.com
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="request">
+              16. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
+            </h2>
+            <p className="mb-4">
+              Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please fill out and submit our{" "}
+              <a href="https://www.bballorbit.com/contact" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                contact formular
+              </a>.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="request">
+              17. SSL/TLS ENCRYPTION
+            </h2>
+            <p className="mb-4">
+              This site uses SSL/TLS encryption for security reasons and to protect the transmission of confidential content, such as orders or inquiries you send to us as the site operator. You can recognize an encrypted connection by the change in the browser's address line from "http://" to "https://" and by the lock symbol in your browser bar. When SSL/TLS encryption is activated, the data you transmit to us cannot be read by third parties.
             </p>
           </div>
         </div>
