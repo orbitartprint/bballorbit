@@ -623,7 +623,7 @@ const Privacy = () => {
               </a>.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="request">
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="SSL">
               17. SSL/TLS ENCRYPTION
             </h2>
             <p className="mb-4">
