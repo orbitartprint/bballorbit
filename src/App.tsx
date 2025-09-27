@@ -10,6 +10,7 @@ import FreeResources from "./pages/FreeResources";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Legal from "./pages/Legal";
+import Affiliate from "./pages/Affiliate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/affiliate" element={<Affiliate />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
