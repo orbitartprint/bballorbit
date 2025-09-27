@@ -8,7 +8,7 @@ const Privacy = () => {
   const navigate = useNavigate();
   useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
-    <div className="bg-background text-4xl font-bold text-foreground mb-8 scroll-mt-24">
+    <<div className="min-h-screen bg-background">
       <Helmet>
         <title>Privacy Policy - Basketball Orbit</title>
         <meta name="description" content="Privacy Policy for Basketball Orbit - Learn how we protect your privacy and handle your data." />
@@ -17,7 +17,7 @@ const Privacy = () => {
       
       <Navigation />
       
-      <main className="container mx-auto px-4 py-12 max-w-4xl">
+      <main className="container mx-auto px-4 pt-24 pb-12 max-w-4xl">
         <div className="prose prose-invert max-w-none">
           <h1 className="text-4xl font-bold text-foreground mb-8">
             PRIVACY POLICY
@@ -382,6 +382,197 @@ const Privacy = () => {
             </p>
             <p className="mb-4">
               We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at info[at]bballorbit.com.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="privacyrights">
+              10. WHAT ARE YOUR PRIVACY RIGHTS?
+            </h2>
+            <p className="mb-4">
+              <strong><em>In Short:</em></strong> <em>Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.</em>
+            </p>
+            <p className="mb-4">
+              In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. If a decision that produces legal or similarly significant effects is made solely by automated means, we will inform you, explain the main factors, and offer a simple way to request human review. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section "{" "}
+              <a href="#contact" className="text-blue-600 underline">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>" below.
+            </p>
+            <p className="mb-4">
+              We will consider and act upon any request in accordance with applicable data protection laws. If you are located in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to complain to your{" "}
+              <a href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                 Member State data protection authority
+              </a>{" "}
+              or{" "}
+              <a href="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                UK data protection authority
+              </a>.
+            </p>
+            <p className="mb-4">
+              If you are located in Switzerland, you may contact the{" "}
+              <a href="https://www.edoeb.admin.ch/edoeb/en/home.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                Federal Data Protection and Information Commissioner
+              </a>.
+            </p>
+              
+            <p className="mb-4" id="withdrawconsent">
+              <strong><u>Withdrawing your consent:</u></strong> If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "{" "}
+              <a href="#contact" className="text-blue-600 underline">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>" below.
+            </p>
+            <p className="mb-4">
+              However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="DNT">
+              11. CONTROLS FOR DO-NOT-TRACK FEATURES
+            </h2>
+            <p className="mb-4">
+              Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT") feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.
+            </p>
+            <p className="mb-4">
+              California law requires us to let you know how we respond to web browser DNT signals. Because there currently is not an industry or legal standard for recognizing or honoring DNT signals, we do not respond to them at this time.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="uslaws">
+              12. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
+            </h2>
+
+            <p className="mb-4">
+              <strong><em>In Short:</em></strong> <em>If you are a resident of, you may have the right to request access to and receive details about the personal information we maintain about you and how we have processed it, correct inaccuracies, get a copy of, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. More information is provided below.</em>
+            </p>
+
+            <h3 className="text-lg font-bold mb-2 text-black">Categories of Personal Information We Collect</h3>
+            <p className="mb-4">
+              The table below shows the categories of personal information we have collected in the past twelve (12) months. The table includes illustrative examples of each category and does not reflect the personal information we collect from you. For a comprehensive inventory of all personal information we process, please refer to the section "{" "}
+              <a href="#infocollect" className="text-blue-600 underline">WHAT INFORMATION DO WE COLLECT?</a>"
+            </p>
+
+            <div className="overflow-x-auto mb-4">
+              <table className="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="border border-gray-300 p-2 text-left"><strong>Category</strong></th>
+                    <th className="border border-gray-300 p-2 text-left"><strong>Examples</strong></th>
+                    <th className="border border-gray-300 p-2 text-left"><strong>Collected</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2">A. Identifiers</td>
+                    <td className="border border-gray-300 p-2">Contact details, such as real name, alias, postal address, telephone or mobile contact number, unique personal identifier, online identifier, Internet Protocol address, email address, and account name</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">B. Protected classification characteristics under state or federal law</td>
+                    <td className="border border-gray-300 p-2">Gender, age, date of birth, race and ethnicity, national origin, marital status, and other demographic data</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">C. Commercial information</td>
+                    <td className="border border-gray-300 p-2">Transaction information, purchase history, financial details, and payment information</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">D. Biometric information</td>
+                    <td className="border border-gray-300 p-2">Fingerprints and voiceprints</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">E. Internet or other similar network activity</td>
+                    <td className="border border-gray-300 p-2">Browsing history, search history, online behavior, interest data, and interactions with our and other websites, applications, systems, and advertisements</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">F. Geolocation data</td>
+                    <td className="border border-gray-300 p-2">Device location</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">G. Audio, electronic, sensory, or similar information</td>
+                    <td className="border border-gray-300 p-2">Images and audio, video or call recordings created in connection with our business activities</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">H. Professional or employment-related information</td>
+                    <td className="border border-gray-300 p-2">Business contact details in order to provide you our Services at a business level or job title, work history, and professional qualifications if you apply for a job with us</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">I. Education Information</td>
+                    <td className="border border-gray-300 p-2">Student records and directory information</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">J. Inferences drawn from collected personal information</td>
+                    <td className="border border-gray-300 p-2">Inferences drawn from any of the collected personal information listed above to create a profile or summary about, for example, an individual's preferences and characteristics</td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">K. Sensitive personal Information</td>
+                    <td className="border border-gray-300 p-2"></td>
+                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="mb-2">We may also collect other personal information outside of these categories through instances where you interact with us in person, online, or by phone or mail in the context of:</p>
+            <ul className="list-disc ml-6 mb-4 space-y-1">
+              <li>Receiving help through our customer support channels;</li>
+              <li>Participation in customer surveys or contests; and</li>
+              <li>Facilitation in the delivery of our Services and to respond to your inquiries.</li>
+            </ul>
+
+            <h3 className="text-lg font-bold mb-2 text-black">Sources of Personal Information</h3>
+            <p className="mb-4">
+              Learn more about the sources of personal information we collect in "{" "}
+              <a href="#infocollect" className="text-blue-600 underline">WHAT INFORMATION DO WE COLLECT?</a>"
+            </p>
+
+            <h3 className="text-lg font-bold mb-2 text-black">How We Use and Share Personal Information</h3>
+            <p className="mb-4">
+              Learn more about how we use your personal information in the section, "{" "}
+              <a href="#infouse" className="text-blue-600 underline">HOW DO WE PROCESS YOUR INFORMATION?</a>"
+            </p>
+            <p className="mb-4">
+              <strong>Will your information be shared with anyone else?</strong>
+            </p>
+            <p className="mb-4">
+              We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, "{" "}
+              <a href="#whoshare" className="text-blue-600 underline">WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a>"
+            </p>
+            <p className="mb-4">
+              We may use your personal information for our own business purposes, such as for undertaking internal research for technological development and demonstration. This is not considered to be "selling" of your personal information.
+            </p>
+            <p className="mb-4">
+              We have not disclosed, sold, or shared any personal information to third parties for a business or commercial purpose in the preceding twelve (12) months. We will not sell or share personal information in the future belonging to website visitors, users, and other consumers.
+            </p>
+
+            <h3 className="text-lg font-bold mb-2 text-black">Your Rights</h3>
+            <p className="mb-2">You have rights under certain US state data protection laws. However, these rights are not absolute, and in certain cases, we may decline your request as permitted by law. These rights include:</p>
+            <ul className="list-disc ml-6 mb-4 space-y-1">
+              <li><strong>Right to know</strong> whether or not we are processing your personal data</li>
+              <li><strong>Right to access</strong> your personal data</li>
+              <li><strong>Right to correct</strong> inaccuracies in your personal data</li>
+              <li><strong>Right to request</strong> the deletion of your personal data</li>
+              <li><strong>Right to obtain a copy</strong> of the personal data you previously shared with us</li>
+              <li><strong>Right to non-discrimination</strong> for exercising your rights</li>
+              <li><strong>Right to opt out</strong> of the processing of your personal data if it is used for targeted advertising, the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")</li>
+            </ul>
+
+            <h3 className="text-lg font-bold mb-2 text-black">How to Exercise Your Rights</h3>
+            <p className="mb-4">
+              To exercise these rights, you can contact us by submitting our{" "}
+              <a href="https://www.weightvs.com/contact" target="_blank" className="text-blue-600 underline">
+                contact formular
+              </a>, by emailing us at info[at]weightvs.com, or by referring to the contact details at the bottom of this document.
+            </p>
+            <p className="mb-4">
+              Under certain US state data protection laws, you can designate an authorized agent to make a request on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with applicable laws.
+            </p>
+
+            <h3 className="text-lg font-bold mb-2 text-black">Request Verification</h3>
+            <p className="mb-4">
+              Upon receiving your request, we will need to verify your identity to determine you are the same person about whom we have the information in our system. We will only use personal information provided in your request to verify your identity or authority to make the request. However, if we cannot verify your identity from the information already maintained by us, we may request that you provide additional information for the purposes of verifying your identity and for security or fraud-prevention purposes.
+            </p>
+            <p className="mb-4">
+              If you submit the request through an authorized agent, we may need to collect additional information to verify your identity before processing your request and the agent will need to provide a written and signed permission from you to submit such request on your behalf.
             </p>
           </div>
         </div>
