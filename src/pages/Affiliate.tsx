@@ -83,6 +83,14 @@ const Affiliate = () => {
                 By using affiliate links, you help keep Basketball Orbit growing and allow me to keep sharing drills, plays, and coaching strategies with the global coaching community. Thank you for your support!
               </p>
             </div>
+            <div className="mt-12 pt-8 border-t border-border">
+              <button
+                onClick={() => navigate('/')}
+                className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              >
+                ← Back to Home
+              </button>
+            </div>
           </div>
         </div>
       </div>
