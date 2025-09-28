@@ -69,7 +69,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Sending email notification");
     const emailResponse = await resend.emails.send({
-      from: "Basketball Orbit <onboarding@resend.dev>",
+      from: "Basketball Orbit <contact@updates.bballorbit.com>",
       to: ["info@bballorbit.com"],
       replyTo: email,
       subject: `Contact Form: ${subject}`,
