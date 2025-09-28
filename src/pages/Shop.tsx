@@ -24,7 +24,7 @@ const Shop = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="flex flex-col items-center justify-center text-center space-y-8 max-w-2xl mx-auto">
             {/* Basketball Icon */}
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-basketball-orange to-basketball-orange/80 flex items-center justify-center shadow-xl shadow-basketball-orange/20">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-basketball-orange to-basketball-orange/80 flex items-center justify-center shadow-basketball-orange/20">
               <div className="text-6xl">🏀</div>
             </div>
             
@@ -35,7 +35,7 @@ const Shop = () => {
             
             {/* Subline */}
             <p className="text-xl text-white/80 mb-8 max-w-md">
-              We're working on something exciting – stay tuned.
+              I am working on something exciting – stay tuned.
             </p>
             
             {/* YouTube Button */}
@@ -46,7 +46,7 @@ const Shop = () => {
               onClick={() => window.open('https://youtube.com/@basketballorbit', '_blank')}
             >
               <ExternalLink className="w-5 h-5 mr-2" />
-              Check Out Our YouTube Channel
+              Check Out My YouTube Channel
             </Button>
           </div>
         </div>
