@@ -85,7 +85,7 @@ const Blog = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />
-        <main className="container mx-auto px-4 py-12 md:py-16">
+        <main className="container mx-auto px-4 py-12 pt-20 md:py-16">
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
