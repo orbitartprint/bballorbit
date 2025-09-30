@@ -39,7 +39,7 @@ const BlogArticle = () => {
     return (
       <div className="min-h-screen bg-background">
         <Navigation />
-        <div className="container mx-auto py-12 text-center">
+        <div className="container mx-auto py-8 text-center">
           <h1 className="text-2xl font-bold text-foreground mb-4">Article not found</h1>
           <Button asChild>
             <Link to="/blog">Back to Blog</Link>
