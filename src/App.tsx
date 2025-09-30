@@ -14,6 +14,8 @@ import Terms from "./pages/Terms";
 import Affiliate from "./pages/Affiliate";
 import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/free-resources" element={<FreeResources />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/terms" element={<Terms />} />
