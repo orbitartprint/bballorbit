@@ -77,11 +77,13 @@ const Contact = () => {
   return (
     <>
       <Helmet>
+        <div className="container mx-auto py-8 text-center">
         <title>Contact Basketball Orbit – Get in Touch with Chris</title>
         <meta
           name="description"
           content="Have questions about drills, plays, or coaching strategies? Contact Basketball Orbit. Chris is here to help coaches develop better players."
         />
+          </div>
       </Helmet>
 
       <div className="min-h-screen bg-background">
