@@ -128,26 +128,31 @@ const BlogArticle = () => {
                 </Dialog>
 
                 {/* Article Content */}
-                <div className="prose prose-lg max-w-none dark:prose-invert
+                <div className="prose prose-lg prose-invert max-w-none
                   prose-headings:text-foreground prose-headings:font-bold prose-headings:scroll-mt-24
-                  prose-h1:text-4xl prose-h1:mb-6
-                  prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6
-                  prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
-                  prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
-                  prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-6
-                  prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+                  prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-4
+                  prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
+                  prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
+                  prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-2
+                  prose-h5:text-lg prose-h5:mt-4 prose-h5:mb-2
+                  prose-h6:text-base prose-h6:mt-4 prose-h6:mb-2
+                  prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-4
+                  prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline hover:prose-a:text-secondary
                   prose-strong:text-foreground prose-strong:font-semibold
-                  prose-ul:text-foreground prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-                  prose-ol:text-foreground prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-                  prose-li:my-2 prose-li:text-foreground
-                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-6 prose-blockquote:italic prose-blockquote:text-muted-foreground
-                  prose-code:text-primary prose-code:bg-card prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none
-                  prose-pre:bg-card prose-pre:border prose-pre:border-border prose-pre:p-4 prose-pre:rounded-lg prose-pre:my-6 prose-pre:overflow-x-auto
-                  prose-img:rounded-lg prose-img:my-8 prose-img:shadow-lg
+                  prose-em:text-foreground prose-em:italic
+                  prose-ul:my-4 prose-ul:list-disc prose-ul:pl-6
+                  prose-ol:my-4 prose-ol:list-decimal prose-ol:pl-6
+                  prose-li:my-1 prose-li:text-foreground prose-li:leading-relaxed
+                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:py-1 prose-blockquote:my-4 prose-blockquote:italic prose-blockquote:text-muted-foreground prose-blockquote:bg-card/30
+                  prose-code:text-primary prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none
+                  prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:p-4 prose-pre:rounded-lg prose-pre:my-6 prose-pre:overflow-x-auto
+                  prose-pre:code:bg-transparent prose-pre:code:p-0 prose-pre:code:text-foreground
+                  prose-img:rounded-lg prose-img:my-6 prose-img:shadow-lg prose-img:border prose-img:border-border
                   prose-hr:border-border prose-hr:my-8
-                  prose-table:text-foreground prose-table:border-collapse
-                  prose-th:border prose-th:border-border prose-th:bg-card prose-th:p-3
-                  prose-td:border prose-td:border-border prose-td:p-3">
+                  prose-table:w-full prose-table:my-6 prose-table:border-collapse
+                  prose-th:border prose-th:border-border prose-th:bg-muted prose-th:p-3 prose-th:text-left prose-th:font-semibold
+                  prose-td:border prose-td:border-border prose-td:p-3
+                  prose-tr:border-b prose-tr:border-border">
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm, remarkMath]}
                     rehypePlugins={[rehypeRaw, rehypeSlug, rehypeKatex]}

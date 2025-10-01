@@ -43,7 +43,7 @@ const BlogCard = ({ article, featured = false }: BlogCardProps) => {
           {article.excerpt}
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {article.tags.slice(0, 3).map((tag) => (
+          {article.tags.map((tag) => (
             <Badge key={tag} variant="outline" className="text-xs">
               {tag}
             </Badge>
