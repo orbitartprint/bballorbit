@@ -40,7 +40,7 @@ const FreeResources = () => {
         <div className="container mx-auto px-4 py-16">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 pb-8">
               Your Free Coaching Resources
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
