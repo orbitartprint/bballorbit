@@ -9,7 +9,7 @@ import Footer from "@/components/ui/footer";
 import { Mail, Download, Check, Users, Clock, Target } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const Newsletter = () => {
+const Resources = () => {
   const navigate = useNavigate();
   useEffect(() => {window.scrollTo(0, 0);}, []);
   const [email, setEmail] = useState("");
@@ -271,4 +271,4 @@ const Newsletter = () => {
   );
 };
 
-export default Newsletter;
+export default Resources;
