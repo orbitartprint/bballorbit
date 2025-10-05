@@ -1,273 +1,204 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import Navigation from "@/components/ui/navigation";
-import { useNavigate, Link } from "react-router-dom";
 import Footer from "@/components/ui/footer";
-import { Mail, Download, Check, Users, Clock, Target } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Download, ShoppingCart, Users, Globe, TrendingUp } from "lucide-react";
+import { resources, categories, type CategoryFilter, type Resource } from "@/data/resources";
 
 const Resources = () => {
-  const navigate = useNavigate();
-  useEffect(() => {window.scrollTo(0, 0);}, []);
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [gdprConsent, setGdprConsent] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const { toast } = useToast();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  
+  const [typeFilter, setTypeFilter] = useState<"All" | "Free" | "Paid">("All");
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("All");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email || !name) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
-      });
-      return;
-    }
+  const filteredResources = resources.filter((resource) => {
+    const matchesType = typeFilter === "All" || resource.type === typeFilter;
+    const matchesCategory = categoryFilter === "All" || resource.category === categoryFilter;
+    return matchesType && matchesCategory;
+  });
 
-    if (!gdprConsent) {
-      toast({
-        title: "Consent Required",
-        description: "Please consent to receive our newsletter.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    // Simulate API call - replace with actual newsletter service
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubscribed(true);
-      toast({
-        title: "Successfully Subscribed!",
-        description: "Check your email for the free drill PDF.",
-      });
-    } catch (error) {
-      toast({
-        title: "Subscription Failed",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  if (isSubscribed) {
-    return (
+  return (
+    <>
+      <Helmet>
+        <title>Free & Premium Coaching Resources - Basketball Orbit</title>
+        <meta name="description" content="Browse all Basketball Orbit coaching PDFs and resources. Get free drills or explore premium toolkits to elevate your coaching." />
+      </Helmet>
+      
       <div className="min-h-screen bg-background">
         <Navigation />
         
         <main className="pt-20 pb-16">
-          <div className="container mx-auto px-4 lg:px-8 flex items-center justify-center min-h-[80vh]">
-            <Card className="max-w-2xl w-full text-center">
-              <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Check className="h-8 w-8 text-white" />
+          {/* Hero Section */}
+          <div className="container mx-auto px-4 lg:px-8 text-center py-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Get Every Coaching Resource in One Place
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+              Browse all my free and premium PDFs — or sign up once to unlock every free resource instantly.
+            </p>
+
+            {/* ConvertKit Form Embed */}
+            <div className="max-w-2xl mx-auto mb-16">
+              <div 
+                dangerouslySetInnerHTML={{
+                  __html: '<script async data-uid="d0839f9f3a" src="https://bballorbit.kit.com/d0839f9f3a/index.js"></script>'
+                }}
+              />
+            </div>
+
+            {/* Social Proof */}
+            <div className="max-w-4xl mx-auto bg-card border border-border rounded-lg p-8 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-primary mb-1">30,000+</div>
+                  <div className="text-sm text-muted-foreground">Coaches Worldwide</div>
                 </div>
-                <h1 className="text-3xl font-bold mb-4 text-foreground">
-                  Welcome to Basketball Orbit!
-                </h1>
-                <p className="text-xl text-muted-foreground mb-6">
-                  Check your email for your free "5 Drills Every Youth Team Needs" PDF guide.
-                </p>
-                <p className="text-muted-foreground mb-8">
-                  You'll receive weekly coaching tips, new drills, and exclusive content to help you become a better coach.
-                </p>
-                <Button asChild size="lg" className="shadow-orange">
-                  <a href="/">Return to Homepage</a>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-3">
+                    <Globe className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-secondary mb-1">50+</div>
+                  <div className="text-sm text-muted-foreground">Countries</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-3">
+                    <TrendingUp className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-accent mb-1">98%</div>
+                  <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Filter Section */}
+          <div className="container mx-auto px-4 lg:px-8 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <div className="flex gap-2">
+                <Button
+                  variant={typeFilter === "All" ? "default" : "outline"}
+                  onClick={() => setTypeFilter("All")}
+                  className={typeFilter === "All" ? "shadow-orange" : ""}
+                >
+                  All
                 </Button>
-              </CardContent>
-            </Card>
+                <Button
+                  variant={typeFilter === "Free" ? "default" : "outline"}
+                  onClick={() => setTypeFilter("Free")}
+                  className={typeFilter === "Free" ? "shadow-orange" : ""}
+                >
+                  Free
+                </Button>
+                <Button
+                  variant={typeFilter === "Paid" ? "default" : "outline"}
+                  onClick={() => setTypeFilter("Paid")}
+                  className={typeFilter === "Paid" ? "shadow-orange" : ""}
+                >
+                  Paid
+                </Button>
+              </div>
+
+              <Select value={categoryFilter} onValueChange={(value) => setCategoryFilter(value as CategoryFilter)}>
+                <SelectTrigger className="w-[200px]">
+                  <SelectValue placeholder="Category" />
+                </SelectTrigger>
+                <SelectContent>
+                  {categories.map((category) => (
+                    <SelectItem key={category} value={category}>
+                      {category}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          {/* Resource Grid */}
+          <div className="container mx-auto px-4 lg:px-8 mb-16">
+            {filteredResources.length === 0 ? (
+              <div className="text-center py-16">
+                <p className="text-xl text-muted-foreground">
+                  No resources found matching your filters.
+                </p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredResources.map((resource) => (
+                  <Card 
+                    key={resource.id} 
+                    className="border-border bg-card hover:shadow-orange transition-smooth hover:scale-105"
+                  >
+                    <CardHeader className="p-0">
+                      <div className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={resource.image} 
+                          alt={resource.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-3">
+                        <CardTitle className="text-xl text-card-foreground flex-1">
+                          {resource.title}
+                        </CardTitle>
+                        <Badge 
+                          variant={resource.type === "Free" ? "default" : "secondary"}
+                          className="ml-2"
+                        >
+                          {resource.type === "Free" ? "Free" : resource.price}
+                        </Badge>
+                      </div>
+                      <CardDescription className="text-muted-foreground mb-4 line-clamp-2">
+                        {resource.description}
+                      </CardDescription>
+                      <Button 
+                        className="w-full shadow-orange transition-smooth hover:scale-105"
+                        onClick={() => window.open(resource.link, '_blank')}
+                      >
+                        {resource.type === "Free" ? (
+                          <>
+                            <Download className="w-4 h-4 mr-2" />
+                            Get Free PDF
+                          </>
+                        ) : (
+                          <>
+                            <ShoppingCart className="w-4 h-4 mr-2" />
+                            Buy Now
+                          </>
+                        )}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Footer Note */}
+          <div className="container mx-auto px-4 lg:px-8 text-center">
+            <p className="text-muted-foreground">
+              Already subscribed? Check your inbox for your link to the Free Resources Library.
+            </p>
           </div>
         </main>
 
         <Footer />
       </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      
-      <main className="pt-20 pb-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-12">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Download className="h-8 w-8 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Get 5 Drills Every Youth Team Needs
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Join thousands of coaches worldwide and get our most popular drill collection, 
-                plus weekly coaching insights delivered to your inbox.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Benefits */}
-              <div>
-                <h2 className="text-2xl font-semibold mb-6 text-foreground">
-                  What You'll Get:
-                </h2>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <Download className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">
-                        Free PDF: 5 Essential Drills
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Detailed instructions, diagrams, and coaching points for our most effective youth drills.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">
-                        Weekly Coaching Tips
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Modern strategies, drill variations, and insights to keep your coaching fresh and effective.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
-                      <Users className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">
-                        Exclusive Community Access
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Connect with coaches worldwide and share experiences in our private community.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Social Proof */}
-                <div className="mt-8 p-6 bg-card rounded-lg border border-border">
-                  <div className="flex items-center justify-between text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">10,000+</div>
-                      <div className="text-sm text-muted-foreground">Coaches</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-secondary">50+</div>
-                      <div className="text-sm text-muted-foreground">Countries</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-accent">98%</div>
-                      <div className="text-sm text-muted-foreground">Satisfaction</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Form */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl text-center">
-                    Get Your Free Drills Now
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Your Name *
-                      </label>
-                      <Input
-                        id="name"
-                        type="text"
-                        placeholder="Enter your name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email Address *
-                      </label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                      />
-                    </div>
-
-                    <div className="flex items-start space-x-3 pt-2">
-                      <Checkbox
-                        id="gdpr"
-                        checked={gdprConsent}
-                        onCheckedChange={(checked) => setGdprConsent(checked as boolean)}
-                        required
-                      />
-                      <label htmlFor="gdpr" className="text-sm text-muted-foreground leading-relaxed">
-                        I consent to receive the Basketball Orbit newsletter and understand I can unsubscribe at any time. 
-                        View our <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>.
-                      </label>
-                    </div>
-
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full shadow-orange transition-bounce hover:scale-105"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <Clock className="mr-2 h-5 w-5 animate-spin" />
-                          Subscribing...
-                        </>
-                      ) : (
-                        <>
-                          <Download className="mr-2 h-5 w-5" />
-                          Get Free Drills PDF
-                        </>
-                      )}
-                    </Button>
-                  </form>
-
-                  <p className="text-xs text-muted-foreground text-center mt-4">
-                    No spam, ever. Unsubscribe with one click.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
