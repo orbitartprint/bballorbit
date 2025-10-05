@@ -53,7 +53,7 @@ const Navigation = () => {
               asChild
               className="shadow-orange"
             >
-              <Link to="/newsletter">Get Free Drills</Link>
+              <Link to="/resources">Get Free Drills</Link>
             </Button>
           </div>
 
@@ -90,7 +90,7 @@ const Navigation = () => {
                 asChild
                 className="w-fit shadow-orange"
               >
-                <Link to="/newsletter" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/resources" onClick={() => setIsMenuOpen(false)}>
                   Get Free Drills
                 </Link>
               </Button>
