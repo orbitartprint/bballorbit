@@ -45,7 +45,7 @@ const HeroSection = () => {
               asChild
               className="text-lg px-8 py-6 shadow-orange transition-bounce hover:scale-105"
             >
-              <Link to="/newsletter">
+              <Link to="/resources">
                 Get Free Drills PDF
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
