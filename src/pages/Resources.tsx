@@ -58,7 +58,7 @@ const Resources = () => {
         
         <main className="pt-20 pb-16">
           {/* Hero Section */}
-          <div className="container mx-auto px-4 lg:px-8 text-center py-16">
+          <div className="container mx-auto px-4 lg:px-8 text-center py-10">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Get Every Coaching Resource in One Place
             </h1>
