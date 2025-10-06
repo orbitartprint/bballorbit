@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import DrillTemplate from "./pages/DrillTemplate";
+import DrillLibrary from "./pages/DrillLibrary";
 import Resources from "./pages/Resources";
 import FreeResources from "./pages/FreeResources";
 import About from "./pages/About";
@@ -28,7 +29,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/drills" element={<DrillTemplate />} />
+          <Route path="/drills" element={<DrillLibrary />} />
+          <Route path="/drills/:slug" element={<DrillTemplate />} />
           <Route path="/Resources" element={<Resources />} />
           <Route path="/free-resources" element={<FreeResources />} />
           <Route path="/about" element={<About />} />
