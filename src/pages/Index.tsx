@@ -8,6 +8,26 @@ import VideoSection from "@/components/sections/video-section";
 const Index = () => {
   const navigate = useNavigate();
   useEffect(() => {window.scrollTo(0, 0);}, []);
+  const organizationSchema = {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "BballOrbit.com",
+    "url": "https://www.bballorbit.com",
+    "logo": "https://www.bballorbit.com/logo.png",
+    "sameAs": [
+      // Fügen Sie hier Ihre Social-Media-Links ein, z.B.:
+      // "https://twitter.com/WeightVs",
+      // "https://facebook.com/WeightVsOfficial"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "BballOrbit.com - Modern Drills. Smarter Coaching. Better Players.",
+    "url": "https://www.bballorbit.com"
+    // "potentialAction" ist weggelassen, da keine Suchseite vorhanden ist
+  };
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
