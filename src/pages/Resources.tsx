@@ -17,6 +17,24 @@ import { resources, categories, type CategoryFilter, type Resource } from "@/dat
 
 const Resources = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
+  useEffect(() => {
+  const SCRIPT_ID = 'convertkit-script-d0839f9f3a';
+  // avoid injecting twice
+  if (document.getElementById(SCRIPT_ID)) return;
+
+  const container = document.getElementById('convertkit-form-container') || document.body;
+  const script = document.createElement('script');
+  script.id = SCRIPT_ID;
+  script.async = true;
+  script.dataset.uid = 'd0839f9f3a';
+  script.src = 'https://bballorbit.kit.com/d0839f9f3a/index.js';
+
+  container.appendChild(script);
+
+  return () => {
+    // cleanup on unmount
+    script.remove();
+  };
   
   const [typeFilter, setTypeFilter] = useState<"All" | "Free" | "Paid">("All");
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("All");
@@ -48,13 +66,7 @@ const Resources = () => {
             </p>
 
             {/* ConvertKit Form Embed */}
-            <div className="max-w-2xl mx-auto mb-16">
-              <div 
-                dangerouslySetInnerHTML={{
-                  __html: '<script async data-uid="d0839f9f3a" src="https://bballorbit.kit.com/d0839f9f3a/index.js"></script>'
-                }}
-              />
-            </div>
+            <div id="convertkit-form-container" className="max-w-2xl mx-auto mb-16" />
 
             {/* Social Proof */}
             <div className="max-w-4xl mx-auto bg-card border border-border rounded-lg p-8 mb-16">
