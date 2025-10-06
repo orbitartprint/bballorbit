@@ -20,9 +20,9 @@ const About = () => {
       
       <Navigation />
       
-      <main className="pt-10">
+      <main className="pt-12">
         {/* Hero Section */}
-        <section className="py-8 lg:py-16">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
