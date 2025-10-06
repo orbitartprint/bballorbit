@@ -1,31 +1,30 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Download, BookOpen } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Download } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
-import { useNavigate, Link } from "react-router-dom";
 import Footer from "@/components/ui/footer";
+import { resources, categories, type CategoryFilter } from "@/data/resources";
 
 const FreeResources = () => {
-  const navigate = useNavigate();
-  useEffect(() => {window.scrollTo(0, 0);}, []);
-  const resources = [
-    {
-      id: 1,
-      title: "5 Shooting Challenges for Youth Players",
-      description: "Progressive shooting drills that build confidence and accuracy for players aged 8-14.",
-      image: "/placeholder.svg",
-      downloadUrl: "#", // Placeholder for now
-    },
-    {
-      id: 2,
-      title: "Essential Ball Handling Fundamentals",
-      description: "Master the basics with these proven drills that every young player needs to know.",
-      image: "/placeholder.svg", 
-      downloadUrl: "#", // Placeholder for now
-    },
-  ];
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("All");
+
+  // Filter to only show free resources
+  const freeResources = resources.filter((resource) => {
+    const isFree = resource.type === "Free";
+    const matchesCategory = categoryFilter === "All" || resource.category === categoryFilter;
+    return isFree && matchesCategory;
+  });
 
   return (
     <>
@@ -37,62 +36,96 @@ const FreeResources = () => {
       
       <div className="min-h-screen bg-background">
         <Navigation />
-        <div className="container mx-auto px-4 py-16">
-          {/* Header Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 pb-8">
+        
+        <main className="pt-24 pb-16">
+          {/* Hero Section */}
+          <div className="container mx-auto px-4 lg:px-8 text-center py-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Your Free Coaching Resources
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Thanks for being part of Basketball Orbit! Here you can download all free guides I've created for you.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              You've unlocked full access! Download any of these free coaching resources directly below.
             </p>
           </div>
 
-          {/* Resources Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {resources.map((resource) => (
-              <Card key={resource.id} className="border-border bg-card hover:shadow-orange transition-smooth">
-                <CardHeader className="p-0">
-                  <div className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center">
-                    <BookOpen className="w-16 h-16 text-muted-foreground" />
-                  </div>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <CardTitle className="text-xl mb-3 text-card-foreground">
-                    {resource.title}
-                  </CardTitle>
-                  <CardDescription className="text-muted-foreground mb-4 line-clamp-3">
-                    {resource.description}
-                  </CardDescription>
-                  <Button 
-                    className="w-full gradient-orange text-white hover:shadow-orange transition-smooth"
-                    onClick={() => window.open(resource.downloadUrl, '_blank')}
+          {/* Filter Section */}
+          <div className="container mx-auto px-4 lg:px-8 mb-8">
+            <div className="flex justify-center">
+              <Select value={categoryFilter} onValueChange={(value) => setCategoryFilter(value as CategoryFilter)}>
+                <SelectTrigger className="w-[200px]">
+                  <SelectValue placeholder="Category" />
+                </SelectTrigger>
+                <SelectContent>
+                  {categories.map((category) => (
+                    <SelectItem key={category} value={category}>
+                      {category}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          {/* Resource Grid */}
+          <div className="container mx-auto px-4 lg:px-8 mb-16">
+            {freeResources.length === 0 ? (
+              <div className="text-center py-16">
+                <p className="text-xl text-muted-foreground">
+                  No resources found matching your filter.
+                </p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {freeResources.map((resource) => (
+                  <Card 
+                    key={resource.id} 
+                    className="border-border bg-card hover:shadow-orange transition-smooth hover:scale-105"
                   >
-                    <Download className="w-4 h-4 mr-2" />
-                    Download PDF
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                    <CardHeader className="p-0">
+                      <div className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={resource.image} 
+                          alt={resource.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                      <CardTitle className="text-xl text-card-foreground mb-3">
+                        {resource.title}
+                      </CardTitle>
+                      <CardDescription className="text-muted-foreground mb-4 line-clamp-2">
+                        {resource.description}
+                      </CardDescription>
+                      <Button 
+                        className="w-full shadow-orange transition-smooth hover:scale-105"
+                        asChild
+                      >
+                        <a 
+                          href={resource.filePath || resource.link} 
+                          download={resource.filePath ? `${resource.title}.pdf` : undefined}
+                          target={resource.filePath ? undefined : "_blank"}
+                          rel={resource.filePath ? undefined : "noopener noreferrer"}
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Download PDF
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* Newsletter Reminder Section */}
-          <div className="bg-card border border-border rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-semibold text-card-foreground mb-4">
-              Want More Resources?
-            </h2>
-            <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              New guides are added regularly! Make sure you're subscribed to our newsletter to get notified when fresh content drops.
+          {/* Footer Note */}
+          <div className="container mx-auto px-4 lg:px-8 text-center">
+            <p className="text-muted-foreground">
+              New guides are added regularly! Make sure you're subscribed to stay updated on fresh coaching content.
             </p>
-            <Button 
-              variant="outline" 
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth"
-              onClick={() => window.location.href = '/newsletter'}
-            >
-              Subscribe to Newsletter
-            </Button>
           </div>
-        </div>
+        </main>
+
         <Footer />
       </div>
     </>

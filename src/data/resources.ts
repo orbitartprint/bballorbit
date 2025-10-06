@@ -7,6 +7,7 @@ export interface Resource {
   type: "Free" | "Paid";
   price?: string;
   link: string;
+  filePath?: string; // Local PDF file path for free resources
 }
 
 export const resources: Resource[] = [
@@ -18,6 +19,7 @@ export const resources: Resource[] = [
     category: "Offense",
     type: "Free",
     link: "https://guide.bballorbit.com/zoom",
+    filePath: "/pdfs/zoom-action.pdf",
   },
   {
     id: "defense-toolkit",
@@ -26,9 +28,8 @@ export const resources: Resource[] = [
     image: "/lovable-uploads/run-and-jump-pdf.webp",
     category: "Defense",
     type: "Free",
-    //type: "Paid",
-    //price: "$9.90",
     link: "https://guide.bballorbit.com/runandjump",
+    filePath: "/pdfs/run-and-jump-defense.pdf",
   },
 ];
 
