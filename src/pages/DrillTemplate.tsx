@@ -161,6 +161,13 @@ const DrillTemplate = () => {
                 </CardContent>
               </Card>
             )}
+            {/* Back Button */}
+            <Link to="/drills">
+              <Button variant="ghost" className="mb-6 text-muted-foreground hover:text-foreground">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Drill Library
+              </Button>
+            </Link>
           </div>
         </main>
 
