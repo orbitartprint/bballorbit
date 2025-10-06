@@ -157,7 +157,7 @@ const DrillLibrary = () => {
                         ))}
                       </div>
                       <Link to={`/drills/${drill.slug}`}>
-                        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground space-y-3">
                           View Drill
                         </Button>
                       </Link>
