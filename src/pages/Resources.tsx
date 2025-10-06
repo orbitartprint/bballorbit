@@ -35,6 +35,7 @@ const Resources = () => {
     // cleanup on unmount
     script.remove();
   };
+}, []);
   
   const [typeFilter, setTypeFilter] = useState<"All" | "Free" | "Paid">("All");
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("All");
