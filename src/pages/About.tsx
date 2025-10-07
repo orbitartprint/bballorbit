@@ -188,7 +188,9 @@ const About = () => {
                 Get free drills and coaching insights delivered to your inbox.
               </p>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg">
-                Subscribe to Newsletter
+                <Link to="/resources">
+                   Subscribe to Newsletter
+                </Link>
               </Button>
             </div>
           </div>
