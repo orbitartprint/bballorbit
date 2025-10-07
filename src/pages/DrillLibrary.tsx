@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/ui/navigation";
@@ -17,7 +17,6 @@ import { drills, focusAreas, drillTypes, type FocusAreaFilter, type DrillTypeFil
 import { Target, Zap } from "lucide-react";
 
 const DrillLibrary = () => {
-  const navigate = useNavigate();
   useEffect(() => {window.scrollTo(0, 0);}, []);
   const [focusFilter, setFocusFilter] = useState<FocusAreaFilter>("All");
   const [typeFilter, setTypeFilter] = useState<DrillTypeFilter>("All");
