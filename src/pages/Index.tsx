@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
-import { useNavigate, Link } from "react-router-dom";
 import Footer from "@/components/ui/footer";
 import HeroSection from "@/components/sections/hero-section";
 import VideoSection from "@/components/sections/video-section";
+import WhyBballOrbit from "@/components/sections/why-bball-orbit";
+import MoreVideos from "@/components/sections/more-videos";
+import Testimonials from "@/components/sections/testimonials";
 
 const Index = () => {
-  const navigate = useNavigate();
   useEffect(() => {window.scrollTo(0, 0);}, []);
   const organizationSchema = {
     "@context": "http://schema.org",
@@ -34,6 +35,9 @@ const Index = () => {
       <main>
         <HeroSection />
         <VideoSection />
+        <WhyBballOrbit />
+        <MoreVideos />
+        <Testimonials />
       </main>
       <Footer />
     </div>
