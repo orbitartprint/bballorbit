@@ -25,6 +25,13 @@ const About = () => {
         <section className="py-10 lg:py-12">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="absolute inset-0 -left-4 -right-4 opacity-12">
+                <img 
+                  src="/lovable-uploads/court-trans.png" 
+                  alt="Basketball court texture" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                   Where strategy meets passion — this is{" "}
