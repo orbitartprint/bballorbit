@@ -205,7 +205,7 @@ const DrillTemplate = () => {
             {/* Bottom Back Button */}
             <div className="mt-12 pt-8 border-t border-border">
               <Link to="/drills">
-                <Button variant="secondary" className="text-muted-foreground hover:text-foreground">
+                <Button variant="ghost" className="mb-6 text-muted-foreground hover:text-foreground">
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Drill Library
                 </Button>
