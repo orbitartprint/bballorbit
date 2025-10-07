@@ -56,43 +56,61 @@ const Resources = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
         
-        <main className="pt-14 pb-16">
-          {/* Hero Section */}
-          <div className="container mx-auto px-4 lg:px-8 text-center py-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Get Every Coaching Resource in One Place
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-              Browse all my free and premium PDFs — or sign up once to unlock every free resource instantly.
-            </p>
-
-            {/* ConvertKit Form Embed */}
-            <div id="convertkit-form-container" className="max-w-2xl mx-auto mb-16" />
-
-            {/* Social Proof */}
-            <div className="max-w-4xl mx-auto bg-card border border-border rounded-lg p-8 mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
-                    <Users className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-primary mb-1">30,000+</div>
-                  <div className="text-sm text-muted-foreground">Coaches Worldwide</div>
+        <main className="pt-12 pb-16">
+          {/* Hero Section - Two Column Layout */}
+          <div className="container mx-auto px-6 lg:px-8 py-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              
+              {/* Left Column - Text & Stats with Court Background */}
+              <div className="relative bg-black text-white rounded-xl p-8 md:p-10 overflow-hidden">
+                {/* Basketball Court Background */}
+                <div className="absolute inset-0 opacity-10">
+                  <img 
+                    src="/images/court-trans.png" 
+                    alt="Basketball court texture" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-3">
-                    <Globe className="h-6 w-6 text-white" />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+                    Get Every Coaching Resource in One Place
+                  </h1>
+                  <p className="text-lg md:text-xl text-gray-200 mb-8">
+                    Join 30,000+ coaches worldwide and unlock all free PDFs instantly.
+                  </p>
+                  
+                  {/* Stats */}
+                  <div className="flex flex-wrap gap-6 mt-8">
+                    <div className="flex items-center gap-3">
+                      <Users className="h-6 w-6 text-[#f57520]" />
+                      <div>
+                        <div className="text-2xl font-bold text-[#f57520]">30,000+</div>
+                        <div className="text-xs text-gray-300">Coaches Worldwide</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Globe className="h-6 w-6 text-[#f57520]" />
+                      <div>
+                        <div className="text-2xl font-bold text-[#f57520]">50+</div>
+                        <div className="text-xs text-gray-300">Countries</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <TrendingUp className="h-6 w-6 text-[#f57520]" />
+                      <div>
+                        <div className="text-2xl font-bold text-[#f57520]">98%</div>
+                        <div className="text-xs text-gray-300">Satisfaction Rate</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-3xl font-bold text-secondary mb-1">50+</div>
-                  <div className="text-sm text-muted-foreground">Countries</div>
                 </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-3">
-                    <TrendingUp className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-accent mb-1">98%</div>
-                  <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
-                </div>
+              </div>
+              
+              {/* Right Column - ConvertKit Form */}
+              <div className="flex flex-col justify-center items-center bg-black rounded-xl p-6">
+                <div id="convertkit-form-container" className="w-full max-w-md" />
               </div>
             </div>
           </div>
