@@ -17,6 +17,8 @@ import { drills, focusAreas, drillTypes, type FocusAreaFilter, type DrillTypeFil
 import { Target, Zap } from "lucide-react";
 
 const DrillLibrary = () => {
+  const navigate = useNavigate();
+  useEffect(() => {window.scrollTo(0, 0);}, []);
   const [focusFilter, setFocusFilter] = useState<FocusAreaFilter>("All");
   const [typeFilter, setTypeFilter] = useState<DrillTypeFilter>("All");
 
