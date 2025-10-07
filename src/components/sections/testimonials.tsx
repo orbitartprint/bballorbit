@@ -4,15 +4,15 @@ import { Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      text: "This video is amazing! I've watched it over and over...",
+      text: "This video is amazing! I have watched it over and over so I can use all of the different drill options! Very well done! Thanks, Coach!",
       author: "Coach Mike"
     },
     {
-      text: "You help me be a better coach. Great videos!",
+      text: "I really appreciate your Videos, with them I plan my Trainings. You help me to be a better Coach. Great Videos 👍 Always looking forward for the next Video 😊",
       author: "Sarah L."
     },
     {
-      text: "You've really helped me see that any basic drill can be developed...",
+      text: "This is awesome! You've really helped me see that any basic drill can be continually modified and developed into something bigger and tougher. Thanks for taking the time to make these videos. I love the format.",
       author: "Tom R."
     }
   ];
