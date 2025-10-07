@@ -64,7 +64,7 @@ const Resources = () => {
               {/* Left Column - Text & Stats with Court Background */}
               <div className="relative bg-black text-white rounded-xl p-8 md:p-10 overflow-hidden">
                 {/* Basketball Court Background */}
-                <div className="absolute inset-0 -left-14 -right-14 opacity-14">
+                <div className="absolute inset-0 -left-1 -right-1 opacity-10">
                   <img 
                     src="/lovable-uploads/court-trans.png" 
                     alt="Basketball court texture" 
