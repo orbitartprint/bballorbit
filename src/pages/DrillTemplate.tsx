@@ -79,6 +79,28 @@ const DrillTemplate = () => {
               </div>
             )}
 
+            {/* Image Gallery */}
+            {drill.images && drill.images.length > 0 && (
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold text-foreground mb-6">Drill Images</h3>
+                <div className={`grid gap-6 ${
+                  drill.images.length === 1 ? 'grid-cols-1' :
+                  drill.images.length === 2 ? 'grid-cols-1 md:grid-cols-2' :
+                  'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                }`}>
+                  {drill.images.map((image, index) => (
+                    <div key={index} className="rounded-xl overflow-hidden shadow-lg">
+                      <img
+                        src={image}
+                        alt={`${drill.title} - Image ${index + 1}`}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Drill Details Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
               <Card className="border-border bg-card">
@@ -130,6 +152,24 @@ const DrillTemplate = () => {
               </Card>
             </div>
 
+            {/* Step-by-Step Instructions */}
+            {drill.steps && drill.steps.length > 0 && (
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold text-foreground mb-6">Drill Breakdown</h3>
+                <Card className="border-border bg-card">
+                  <CardContent className="pt-6">
+                    <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
+                      {drill.steps.map((step, index) => (
+                        <li key={index} className="text-base leading-relaxed">
+                          {step}
+                        </li>
+                      ))}
+                    </ol>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
             {/* Tags */}
             <div className="mb-12">
               <h3 className="text-lg font-semibold text-foreground mb-4">Tags</h3>
@@ -144,7 +184,7 @@ const DrillTemplate = () => {
 
             {/* PDF Download Section */}
             {drill.pdfAvailable && drill.filePath && (
-              <Card className="border-border bg-card">
+              <Card className="border-border bg-card mb-12">
                 <CardHeader>
                   <CardTitle className="text-foreground">Download PDF Guide</CardTitle>
                 </CardHeader>
@@ -161,13 +201,16 @@ const DrillTemplate = () => {
                 </CardContent>
               </Card>
             )}
-            {/* Back Button */}
-            <Link to="/drills">
-              <Button variant="ghost" className="mb-6 text-muted-foreground hover:text-foreground">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Drill Library
-              </Button>
-            </Link>
+
+            {/* Bottom Back Button */}
+            <div className="mt-12 pt-8 border-t border-border">
+              <Link to="/drills">
+                <Button variant="secondary" className="text-muted-foreground hover:text-foreground">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Drill Library
+                </Button>
+              </Link>
+            </div>
           </div>
         </main>
 

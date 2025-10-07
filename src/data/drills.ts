@@ -11,6 +11,8 @@ export interface Drill {
   youtubeUrl?: string;
   filePath?: string;
   pdfAvailable: boolean;
+  images?: string[];
+  steps?: string[];
 }
 
 export const drills: Drill[] = [
@@ -26,6 +28,14 @@ export const drills: Drill[] = [
     tags: ["Shooting", "Competition", "Individual", "Skill Development"],
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     pdfAvailable: false,
+    images: ["/lovable-uploads/basketball-fundamentals-hero.webp"],
+    steps: [
+      "Set up 5 shooting spots around the arc (corners, wings, top of key)",
+      "Player must make 2 shots from each spot before advancing to the next",
+      "If a shot is missed, player returns to the previous spot",
+      "First player to complete all 5 spots wins the challenge",
+      "Add time limits or consequences for added pressure"
+    ],
   },
   {
     slug: "closeout-shell-drill",
@@ -40,6 +50,14 @@ export const drills: Drill[] = [
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     filePath: "/pdfs/run-and-jump-defense.pdf",
     pdfAvailable: true,
+    images: ["/lovable-uploads/run-and-jump-pdf.webp", "/lovable-uploads/zoom-action-pdf.webp"],
+    steps: [
+      "Position 4 defenders in a shell formation around the paint",
+      "Offense passes the ball around the perimeter - no dribbling initially",
+      "On each pass, the on-ball defender must closeout with high hands",
+      "Off-ball defenders must adjust position to provide help-side defense",
+      "Progress to live situations once proper positioning is established"
+    ],
   },
   {
     slug: "transition-advantage-game",
@@ -54,6 +72,14 @@ export const drills: Drill[] = [
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     filePath: "/pdfs/zoom-action.pdf",
     pdfAvailable: true,
+    images: ["/lovable-uploads/zoom-action-pdf.webp", "/lovable-uploads/basketball-fundamentals-hero.webp", "/lovable-uploads/run-and-jump-pdf.webp"],
+    steps: [
+      "Start with 3 offensive players at half court and 2 defenders at the basket",
+      "Offense attacks 3v2 trying to score quickly",
+      "After the shot (make or miss), 2 offensive players sprint back on defense",
+      "The 2 defenders now become offense with 1 new player joining them for a 3v2 advantage going the other way",
+      "Continuous transition back and forth for 2-3 minutes per group"
+    ],
   },
   {
     slug: "pick-and-roll-reads",
@@ -67,6 +93,13 @@ export const drills: Drill[] = [
     tags: ["Offense", "Ball Handling", "Decision-Making", "Pick and Roll"],
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     pdfAvailable: false,
+    steps: [
+      "Start with no defense - establish proper spacing and timing between ball handler and screener",
+      "Add passive defense showing 'drop coverage' - ball handler attacks downhill",
+      "Defense shows 'hedge and recover' - ball handler uses hesitation moves",
+      "Defense shows 'switch' - ball handler recognizes mismatch opportunities",
+      "Live 2v2 with defense varying coverages - ball handler must read and react"
+    ],
   },
 ];
 

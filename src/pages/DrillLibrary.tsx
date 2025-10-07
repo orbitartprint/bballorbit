@@ -123,13 +123,15 @@ const DrillLibrary = () => {
                     key={drill.slug}
                     className="group overflow-hidden border-border bg-card hover:shadow-xl hover:shadow-primary/20 hover:scale-105 transition-all duration-300"
                   >
-                    <div className="aspect-video w-full overflow-hidden bg-muted">
-                      <img
-                        src={drill.thumbnail}
-                        alt={drill.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
+                    <Link to={`/drills/${drill.slug}`} className="block">
+                      <div className="aspect-video w-full overflow-hidden bg-muted cursor-pointer">
+                        <img
+                          src={drill.thumbnail}
+                          alt={drill.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                    </Link>
                     <CardHeader>
                       <CardTitle className="text-xl text-foreground">
                         {drill.title}
@@ -149,7 +151,7 @@ const DrillLibrary = () => {
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-3">
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {drill.tags.slice(0, 3).map((tag) => (
                           <Badge key={tag} variant="secondary" className="text-xs">
                             {tag}
