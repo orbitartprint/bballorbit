@@ -56,15 +56,15 @@ const Resources = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
         
-        <main className="pt-12 pb-16">
+        <main className="pt-10 pb-14">
           {/* Hero Section - Two Column Layout */}
-          <div className="container mx-auto px-6 lg:px-8 py-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto px-6 lg:px-8 py-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               
               {/* Left Column - Text & Stats with Court Background */}
               <div className="relative bg-black text-white rounded-xl p-8 md:p-10 overflow-hidden">
                 {/* Basketball Court Background */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-20">
                   <img 
                     src="/images/court-trans.png" 
                     alt="Basketball court texture" 
