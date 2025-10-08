@@ -1,6 +1,6 @@
-# How to Build an Unstoppable Transition Offense That Never Slows Down
+# How to Build an Unstoppable Transition Offense
 
-> “A bad transition is still better than a perfect half-court set.”
+> A bad transition is still better than a perfect half-court set.
 
 Every coach talks about playing fast — but few teams actually do.  
 Transition isn’t just about speed; it’s about **reaction**, **intention**, and **freedom**.  
@@ -42,10 +42,10 @@ If you’re interested in this approach, check out [Principles Over Rules](https
 In my system:
 - Anyone can push the ball.
 - Everyone else runs **full speed** down the floor.
-- The wings sprint wide — early spacing wins time.
-- The first two wings fill the **corners** to create both **horizontal** and **vertical spacing**.
+- The wings sprint wide — leave the middle lane to the ball handler.
+- The first two wings fill the **corners** to create both **horizontal** and **vertical spacing** - unless there is a chance for a quick layup.
 - The ballhandler attacks the open middle. If there’s space — go.  
-  If not, kick it to a wing and let the advantage continue.
+  If not, kick it to a wing or flow into a trigger and let the advantage continue.
 
 When every player knows that *speed* is the rule and *structure* adapts, you get a natural rhythm.  
 You’re not waiting for a point guard. You’re not passing sideways. You’re simply playing basketball.
