@@ -5,7 +5,7 @@ import articleContent from '../content/transition-offense.md?raw';
 
 export const transitionOffense = {
   slug: "transition-offense",
-  title: "How to Build an Unstoppable Transition Offense",
+  title: "How to Build an Unstoppable Transition Offense That Never Slows Down",
   excerpt:
     "Turn every defensive stop into instant offense. Discover the principles, drills, and mindset behind a fast, modern transition offense that creates advantages and high-percentage shots.",
   author: "Chris Bernhard",
