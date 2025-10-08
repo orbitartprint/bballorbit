@@ -40,7 +40,7 @@ Instead, I teach **principles**.
 If you’re interested in this approach, check out [Principles Over Rules](https://transformingbball.com/principles-over-rules/).
 
 In my system:
-- Anyone can push the ball.
+- Anyone can push the ball - few exceptions allowed.
 - Everyone else runs **full speed** down the floor.
 - The wings sprint wide — leave the middle lane to the ball handler.
 - The first two wings fill the **corners** to create both **horizontal** and **vertical spacing** - unless there is a chance for a quick layup.
@@ -62,7 +62,7 @@ In practice, I often give **double points** for fast-break scores.
 It creates an instant incentive — players sprint without me saying a word.
 
 ### 2. Create Defensive Disadvantages
-Before the defense can play, one defender must touch the baseline or sideline.  
+Before the defense can play, one defender (e. g. the last one to touch the ball) must touch the baseline or sideline.  
 For a few seconds, the offense has a **numbers advantage** — but only if they react quickly.  
 It’s a natural way to train urgency.
 
@@ -88,7 +88,7 @@ Here are a few takeaways you can apply right away:
 - **Keep it simple:** Your goal isn’t perfect structure — it’s instant action.
 - **Encourage freedom:** Let players read the game, not memorize routes.
 - **Reinforce spacing:** Wide corners open driving lanes and early passing options.
-- **Reward speed:** Use your scoring system to teach behavior naturally.
+- **Reward speed:** Use your scoring system or other constraints to teach behavior naturally.
 - **Avoid stopping drills:** Let mistakes flow — speed improves through repetition, not explanation.
 
 ---
