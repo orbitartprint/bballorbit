@@ -13,11 +13,11 @@ export interface BlogArticle {
   publishDate: string;
 }
 
-import { basketballFundamentalsGuide } from '../blog/article-data/basketball-fundamentals-guide';
+import { transitionOffense } from '../blog/article-data/transition-offense';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
-  basketballFundamentalsGuide,
+  transitionOffense,
   // Add more articles here as you create them
 ].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
