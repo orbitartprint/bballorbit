@@ -1,13 +1,13 @@
 // src/blog/article-data/transition-offense.ts
 
 import { calculateReadTime } from '../../utils/blogHelpers';
-import articleContent from '../content/basketball-fundamentals-guide.md?raw';
+import articleContent from '../content/transition-offense.md?raw';
 
-export const articleData = {
+export const transitionOffense = {
   slug: "transition-offense",
-  title: "How to Build a Relentless Transition Offense",
+  title: "How to Build an Unstoppable Transition Offense",
   excerpt:
-    "Learn how to turn defense into instant offense. Discover the principles, drills, and mindset behind a fast, modern transition offense that creates advantages and high-percentage shots.",
+    "Turn every defensive stop into instant offense. Discover the principles, drills, and mindset behind a fast, modern transition offense that creates advantages and high-percentage shots.",
   author: "Chris Bernhard",
   date: "2025-10-06",
   category: "Offense",
@@ -18,7 +18,7 @@ export const articleData = {
     "Constraint Led Approach",
     "Modern Basketball"
   ],
-  heroImage: "/lovable-uploads/basketball-fundamentals-hero.webp",
+  heroImage: "/lovable-uploads/transition-offense-hero.webp",
   heroImageAlt: "Basketball player practicing dribbling drills on an outdoor court at sunset",
   readTimeMinutes: calculateReadTime(articleContent),
   content: articleContent,
