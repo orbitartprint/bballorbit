@@ -9,7 +9,6 @@ export const transitionOffense = {
   excerpt:
     "Turn every defensive stop into instant offense. Discover the principles, drills, and mindset behind a fast, modern transition offense that creates advantages and high-percentage shots.",
   author: "Chris Bernhard",
-  date: "2025-10-06",
   category: "Offense",
   tags: [
     "Transition Offense",
