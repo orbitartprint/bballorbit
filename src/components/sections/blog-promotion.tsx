@@ -26,7 +26,7 @@ const BlogPromotion = () => {
           </div>
 
           {/* Right Column - CTA */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-start">
             <Link to="/blog">
               <Button 
                 size="lg" 
