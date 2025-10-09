@@ -6,6 +6,7 @@ import VideoSection from "@/components/sections/video-section";
 import WhyBballOrbit from "@/components/sections/why-bball-orbit";
 import MoreVideos from "@/components/sections/more-videos";
 import Testimonials from "@/components/sections/testimonials";
+import BlogPromotion from "@/components/sections/blog-promotion";
 
 const Index = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
@@ -38,6 +39,7 @@ const Index = () => {
         <WhyBballOrbit />
         <MoreVideos />
         <Testimonials />
+        <BlogPromotion />
       </main>
       <Footer />
     </div>
