@@ -26,7 +26,7 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-gradient-orange">Modern Drills.</span>
+            <span className="text-gradient-orange">Modern Practice.</span>
             <br />
             <span className="text-foreground">Smarter Coaching.</span>
             <br />
