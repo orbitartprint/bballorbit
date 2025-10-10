@@ -9,9 +9,10 @@ import { blogArticles } from "@/data/blogArticles";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Search, X } from "lucide-react";
+import { Search, X, ChevronDown, Check } from "lucide-react";
 
 const Blog = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -155,41 +156,47 @@ const Blog = () => {
                 <Label htmlFor="tags" className="text-sm text-muted-foreground mb-2 block">
                   Tags
                 </Label>
-                <Select
-                  value={selectedTags.length === 0 ? "all" : "selected"}
-                  onValueChange={() => {}}
-                >
-                  <SelectTrigger id="tags" className="bg-card/50 backdrop-blur border-border">
-                    <SelectValue>
-                      {selectedTags.length === 0 ? "All Tags" : `${selectedTags.length} tag(s) selected`}
-                    </SelectValue>
-                  </SelectTrigger>
-                  <SelectContent className="bg-card border-border z-50">
-                    <SelectItem 
-                      value="all" 
-                      onClick={() => toggleTag("all")}
-                      className="hover:bg-accent focus:bg-accent cursor-pointer"
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      role="combobox"
+                      className="w-full justify-between bg-card/50 backdrop-blur border-border hover:bg-card/70"
                     >
-                      <div className="flex items-center gap-2">
-                        {selectedTags.length === 0 && <span className="text-primary">✓</span>}
-                        <span>All Tags</span>
-                      </div>
-                    </SelectItem>
-                    {allTags.map((tag) => (
-                      <SelectItem 
-                        key={tag} 
-                        value={tag}
-                        onClick={() => toggleTag(tag)}
-                        className="hover:bg-accent focus:bg-accent cursor-pointer"
+                      {selectedTags.length === 0 ? "All Tags" : `${selectedTags.length} tag(s) selected`}
+                      <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-[200px] p-0 bg-card border-border" align="start">
+                    <div className="max-h-[300px] overflow-y-auto">
+                      <button
+                        onClick={() => toggleTag("all")}
+                        className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
                       >
-                        <div className="flex items-center gap-2">
-                          {selectedTags.includes(tag) && <span className="text-primary">✓</span>}
-                          <span>{tag}</span>
-                        </div>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                        <Check
+                          className={`mr-2 h-4 w-4 text-primary ${
+                            selectedTags.length === 0 ? "opacity-100" : "opacity-0"
+                          }`}
+                        />
+                        All Tags
+                      </button>
+                      {allTags.map((tag) => (
+                        <button
+                          key={tag}
+                          onClick={() => toggleTag(tag)}
+                          className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
+                        >
+                          <Check
+                            className={`mr-2 h-4 w-4 text-primary ${
+                              selectedTags.includes(tag) ? "opacity-100" : "opacity-0"
+                            }`}
+                          />
+                          {tag}
+                        </button>
+                      ))}
+                    </div>
+                  </PopoverContent>
+                </Popover>
               </div>
 
               {hasActiveFilters && (
