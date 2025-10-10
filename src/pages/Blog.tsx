@@ -126,8 +126,8 @@ const Blog = () => {
               />
             </div>
 
-            <div className="flex flex-wrap gap-4 items-end justify-center">
-              <div className="w-full sm:w-auto min-w-[200px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end justify-center max-w-4xl mx-auto">
+              <div className="w-full">
                 <Label htmlFor="category" className="text-sm text-muted-foreground mb-2 block">
                   Category
                 </Label>
@@ -152,7 +152,7 @@ const Blog = () => {
                 </Select>
               </div>
 
-              <div className="w-full sm:w-auto min-w-[200px]">
+              <div className="w-full">
                 <Label htmlFor="tags" className="text-sm text-muted-foreground mb-2 block">
                   Tags
                 </Label>
@@ -171,27 +171,27 @@ const Blog = () => {
                     <div className="max-h-[300px] overflow-y-auto">
                       <button
                         onClick={() => toggleTag("all")}
-                        className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
+                        className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
                       >
                         <Check
-                          className={`mr-2 h-4 w-4 text-primary ${
+                          className={`mr-2 h-4 w-4 flex-shrink-0 text-primary ${
                             selectedTags.length === 0 ? "opacity-100" : "opacity-0"
                           }`}
                         />
-                        All Tags
+                        <span className="text-left">All Tags</span>
                       </button>
                       {allTags.map((tag) => (
                         <button
                           key={tag}
                           onClick={() => toggleTag(tag)}
-                          className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
+                          className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
                         >
                           <Check
-                            className={`mr-2 h-4 w-4 text-primary ${
+                            className={`mr-2 h-4 w-4 flex-shrink-0 text-primary ${
                               selectedTags.includes(tag) ? "opacity-100" : "opacity-0"
                             }`}
                           />
-                          {tag}
+                          <span className="text-left">{tag}</span>
                         </button>
                       ))}
                     </div>
@@ -199,17 +199,21 @@ const Blog = () => {
                 </Popover>
               </div>
 
-              {hasActiveFilters && (
-                <Button
-                  variant="outline"
-                  size="default"
-                  onClick={clearFilters}
-                  className="gap-2"
-                >
-                  <X className="h-4 w-4" />
-                  Clear Filters
-                </Button>
-              )}
+              <div className="w-full flex items-end">
+                {hasActiveFilters ? (
+                  <Button
+                    variant="outline"
+                    size="default"
+                    onClick={clearFilters}
+                    className="gap-2 w-full"
+                  >
+                    <X className="h-4 w-4" />
+                    Clear Filters
+                  </Button>
+                ) : (
+                  <div className="h-10"></div>
+                )}
+              </div>
             </div>
 
             {/* Active Filters Display */}

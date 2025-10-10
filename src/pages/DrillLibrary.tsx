@@ -16,7 +16,7 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Label } from "@/components/ui/label";
 import { drills, focusAreas, getAllTags, type FocusAreaFilter } from "@/data/drills";
-import { Target, ChevronDown, Check } from "lucide-react";
+import { Target, ChevronDown, Check, X } from "lucide-react";
 
 const DrillLibrary = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
@@ -69,8 +69,8 @@ const DrillLibrary = () => {
 
           {/* Filter Section */}
           <div className="container mx-auto px-4 lg:px-8 mb-12">
-            <div className="flex flex-col sm:flex-row gap-4 items-end justify-center">
-              <div className="w-full sm:w-auto min-w-[200px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end justify-center max-w-4xl mx-auto">
+              <div className="w-full">
                 <Label htmlFor="category" className="text-sm text-muted-foreground mb-2 block">
                   Category
                 </Label>
@@ -92,7 +92,7 @@ const DrillLibrary = () => {
                 </Select>
               </div>
 
-              <div className="w-full sm:w-auto min-w-[200px]">
+              <div className="w-full">
                 <Label htmlFor="tags" className="text-sm text-muted-foreground mb-2 block">
                   Tags
                 </Label>
@@ -111,47 +111,73 @@ const DrillLibrary = () => {
                     <div className="max-h-[300px] overflow-y-auto">
                       <button
                         onClick={() => toggleTag("all")}
-                        className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
+                        className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
                       >
                         <Check
-                          className={`mr-2 h-4 w-4 text-primary ${
+                          className={`mr-2 h-4 w-4 flex-shrink-0 text-primary ${
                             selectedTags.length === 0 ? "opacity-100" : "opacity-0"
                           }`}
                         />
-                        All Tags
+                        <span className="text-left">All Tags</span>
                       </button>
                       {allTags.map((tag) => (
                         <button
                           key={tag}
                           onClick={() => toggleTag(tag)}
-                          className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
+                          className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
                         >
                           <Check
-                            className={`mr-2 h-4 w-4 text-primary ${
+                            className={`mr-2 h-4 w-4 flex-shrink-0 text-primary ${
                               selectedTags.includes(tag) ? "opacity-100" : "opacity-0"
                             }`}
                           />
-                          {tag}
+                          <span className="text-left">{tag}</span>
                         </button>
                       ))}
                     </div>
                   </PopoverContent>
                 </Popover>
               </div>
+
+              <div className="w-full flex items-end">
+                {(focusFilter !== "All" || selectedTags.length > 0) ? (
+                  <Button
+                    variant="outline"
+                    size="default"
+                    onClick={() => {
+                      setFocusFilter("All");
+                      setSelectedTags([]);
+                    }}
+                    className="gap-2 w-full"
+                  >
+                    <X className="h-4 w-4" />
+                    Clear Filters
+                  </Button>
+                ) : (
+                  <div className="h-10"></div>
+                )}
+              </div>
             </div>
 
+            {/* Active Filters Display */}
             {(focusFilter !== "All" || selectedTags.length > 0) && (
-              <div className="text-center mt-4">
-                <Button
-                  variant="ghost"
-                  onClick={() => {
-                    setFocusFilter("All");
-                    setSelectedTags([]);
-                  }}
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Clear Filters
-                </Button>
+              <div className="flex flex-wrap gap-2 justify-center mt-6">
+                {focusFilter !== "All" && (
+                  <Badge variant="secondary" className="gap-2">
+                    Category: {focusFilter}
+                    <button onClick={() => setFocusFilter("All")} className="ml-1 hover:text-primary">
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
+                )}
+                {selectedTags.map(tag => (
+                  <Badge key={tag} variant="secondary" className="gap-2">
+                    Tag: {tag}
+                    <button onClick={() => toggleTag(tag)} className="ml-1 hover:text-primary">
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
+                ))}
               </div>
             )}
           </div>
