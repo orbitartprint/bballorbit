@@ -63,7 +63,7 @@ const DrillLibrary = () => {
               Basketball Drill Library
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore modern, game-like drills to level up your practices. Filter by skill focus, drill type, or keyword to find what you need.
+              Explore modern, game-like drills to level up your practices. Filter by skill focus or keyword to find what you need.
             </p>
           </div>
 
