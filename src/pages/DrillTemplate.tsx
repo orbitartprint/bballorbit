@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { drills } from "@/data/drills";
-import { ArrowLeft, Download, Target, Zap, Lightbulb } from "lucide-react";
+import { ArrowLeft, Download, Target, Lightbulb } from "lucide-react";
 
 const DrillTemplate = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -116,18 +116,6 @@ const DrillTemplate = () => {
               </Card>
 
               <Card className="border-border bg-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-foreground">
-                    <Zap className="w-5 h-5 text-secondary" />
-                    Drill Type
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{drill.drillType}</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border bg-card lg:col-span-2">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-foreground">
                     <Target className="w-5 h-5 text-primary" />

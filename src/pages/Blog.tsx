@@ -17,7 +17,7 @@ const Blog = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 9;
 
@@ -34,7 +34,7 @@ const Blog = () => {
     return Array.from(tags).sort();
   }, []);
 
-  // Filter articles based on search query, category, and tag
+  // Filter articles based on search query, category, and tags
   const filteredArticles = useMemo(() => {
     return blogArticles.filter((article) => {
       const matchesSearch = searchQuery === "" ||
@@ -43,11 +43,11 @@ const Blog = () => {
         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
 
       const matchesCategory = selectedCategory === null || article.category === selectedCategory;
-      const matchesTag = selectedTag === null || article.tags.includes(selectedTag);
+      const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => article.tags.includes(tag));
 
-      return matchesSearch && matchesCategory && matchesTag;
+      return matchesSearch && matchesCategory && matchesTags;
     });
-  }, [searchQuery, selectedCategory, selectedTag]);
+  }, [searchQuery, selectedCategory, selectedTags]);
 
   // Featured Article: First article from filtered list
   const featuredArticle = useMemo(() => {
@@ -70,11 +70,24 @@ const Blog = () => {
   const clearFilters = () => {
     setSearchQuery("");
     setSelectedCategory(null);
-    setSelectedTag(null);
+    setSelectedTags([]);
     setCurrentPage(1);
   };
 
-  const hasActiveFilters = searchQuery !== "" || selectedCategory !== null || selectedTag !== null;
+  const toggleTag = (tag: string) => {
+    if (tag === "all") {
+      setSelectedTags([]);
+    } else {
+      setSelectedTags(prev => 
+        prev.includes(tag) 
+          ? prev.filter(t => t !== tag)
+          : [...prev, tag]
+      );
+    }
+    setCurrentPage(1);
+  };
+
+  const hasActiveFilters = searchQuery !== "" || selectedCategory !== null || selectedTags.length > 0;
 
   return (
     <>
@@ -139,24 +152,40 @@ const Blog = () => {
               </div>
 
               <div className="w-full sm:w-auto min-w-[200px]">
-                <Label htmlFor="tag" className="text-sm text-muted-foreground mb-2 block">
-                  Tag
+                <Label htmlFor="tags" className="text-sm text-muted-foreground mb-2 block">
+                  Tags
                 </Label>
                 <Select
-                  value={selectedTag || "all"}
-                  onValueChange={(value) => {
-                    setSelectedTag(value === "all" ? null : value);
-                    setCurrentPage(1);
-                  }}
+                  value={selectedTags.length === 0 ? "all" : "selected"}
+                  onValueChange={() => {}}
                 >
-                  <SelectTrigger id="tag" className="bg-card/50 backdrop-blur border-border">
-                    <SelectValue placeholder="All Tags" />
+                  <SelectTrigger id="tags" className="bg-card/50 backdrop-blur border-border">
+                    <SelectValue>
+                      {selectedTags.length === 0 ? "All Tags" : `${selectedTags.length} tag(s) selected`}
+                    </SelectValue>
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Tags</SelectItem>
+                  <SelectContent className="bg-card border-border z-50">
+                    <SelectItem 
+                      value="all" 
+                      onClick={() => toggleTag("all")}
+                      className="hover:bg-accent focus:bg-accent cursor-pointer"
+                    >
+                      <div className="flex items-center gap-2">
+                        {selectedTags.length === 0 && <span className="text-primary">✓</span>}
+                        <span>All Tags</span>
+                      </div>
+                    </SelectItem>
                     {allTags.map((tag) => (
-                      <SelectItem key={tag} value={tag}>
-                        {tag}
+                      <SelectItem 
+                        key={tag} 
+                        value={tag}
+                        onClick={() => toggleTag(tag)}
+                        className="hover:bg-accent focus:bg-accent cursor-pointer"
+                      >
+                        <div className="flex items-center gap-2">
+                          {selectedTags.includes(tag) && <span className="text-primary">✓</span>}
+                          <span>{tag}</span>
+                        </div>
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -195,14 +224,14 @@ const Blog = () => {
                     </button>
                   </Badge>
                 )}
-                {selectedTag && (
-                  <Badge variant="secondary" className="gap-2">
-                    Tag: {selectedTag}
-                    <button onClick={() => setSelectedTag(null)} className="ml-1 hover:text-primary">
+                {selectedTags.map(tag => (
+                  <Badge key={tag} variant="secondary" className="gap-2">
+                    Tag: {tag}
+                    <button onClick={() => toggleTag(tag)} className="ml-1 hover:text-primary">
                       <X className="h-3 w-3" />
                     </button>
                   </Badge>
-                )}
+                ))}
               </div>
             )}
           </div>

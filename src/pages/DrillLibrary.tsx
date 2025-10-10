@@ -13,18 +13,33 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { drills, focusAreas, drillTypes, type FocusAreaFilter, type DrillTypeFilter } from "@/data/drills";
-import { Target, Zap } from "lucide-react";
+import { Label } from "@/components/ui/label";
+import { drills, focusAreas, getAllTags, type FocusAreaFilter } from "@/data/drills";
+import { Target } from "lucide-react";
 
 const DrillLibrary = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
   const [focusFilter, setFocusFilter] = useState<FocusAreaFilter>("All");
-  const [typeFilter, setTypeFilter] = useState<DrillTypeFilter>("All");
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+  const allTags = getAllTags();
+
+  const toggleTag = (tag: string) => {
+    if (tag === "all") {
+      setSelectedTags([]);
+    } else {
+      setSelectedTags(prev => 
+        prev.includes(tag) 
+          ? prev.filter(t => t !== tag)
+          : [...prev, tag]
+      );
+    }
+  };
 
   const filteredDrills = drills.filter((drill) => {
     const matchesFocus = focusFilter === "All" || drill.focusArea === focusFilter;
-    const matchesType = typeFilter === "All" || drill.drillType === typeFilter;
-    return matchesFocus && matchesType;
+    const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => drill.tags.includes(tag));
+    return matchesFocus && matchesTags;
   });
 
   return (
@@ -53,11 +68,14 @@ const DrillLibrary = () => {
 
           {/* Filter Section */}
           <div className="container mx-auto px-4 lg:px-8 mb-12">
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <div className="w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-4 items-end justify-center">
+              <div className="w-full sm:w-auto min-w-[200px]">
+                <Label htmlFor="category" className="text-sm text-muted-foreground mb-2 block">
+                  Category
+                </Label>
                 <Select value={focusFilter} onValueChange={(value) => setFocusFilter(value as FocusAreaFilter)}>
-                  <SelectTrigger className="w-full sm:w-[200px] bg-card border-border">
-                    <SelectValue placeholder="Focus Area" />
+                  <SelectTrigger id="category" className="w-full bg-card border-border">
+                    <SelectValue placeholder="All Categories" />
                   </SelectTrigger>
                   <SelectContent className="bg-card border-border z-50">
                     {focusAreas.map((area) => (
@@ -73,19 +91,41 @@ const DrillLibrary = () => {
                 </Select>
               </div>
 
-              <div className="w-full sm:w-auto">
-                <Select value={typeFilter} onValueChange={(value) => setTypeFilter(value as DrillTypeFilter)}>
-                  <SelectTrigger className="w-full sm:w-[250px] bg-card border-border">
-                    <SelectValue placeholder="Drill Type" />
+              <div className="w-full sm:w-auto min-w-[200px]">
+                <Label htmlFor="tags" className="text-sm text-muted-foreground mb-2 block">
+                  Tags
+                </Label>
+                <Select
+                  value={selectedTags.length === 0 ? "all" : "selected"}
+                  onValueChange={() => {}}
+                >
+                  <SelectTrigger id="tags" className="w-full bg-card border-border">
+                    <SelectValue>
+                      {selectedTags.length === 0 ? "All Tags" : `${selectedTags.length} tag(s) selected`}
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent className="bg-card border-border z-50">
-                    {drillTypes.map((type) => (
+                    <SelectItem 
+                      value="all" 
+                      onClick={() => toggleTag("all")}
+                      className="hover:bg-accent focus:bg-accent cursor-pointer"
+                    >
+                      <div className="flex items-center gap-2">
+                        {selectedTags.length === 0 && <span className="text-primary">✓</span>}
+                        <span>All Tags</span>
+                      </div>
+                    </SelectItem>
+                    {allTags.map((tag) => (
                       <SelectItem 
-                        key={type} 
-                        value={type}
-                        className="hover:bg-accent focus:bg-accent"
+                        key={tag} 
+                        value={tag}
+                        onClick={() => toggleTag(tag)}
+                        className="hover:bg-accent focus:bg-accent cursor-pointer"
                       >
-                        {type}
+                        <div className="flex items-center gap-2">
+                          {selectedTags.includes(tag) && <span className="text-primary">✓</span>}
+                          <span>{tag}</span>
+                        </div>
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -93,13 +133,13 @@ const DrillLibrary = () => {
               </div>
             </div>
 
-            {(focusFilter !== "All" || typeFilter !== "All") && (
+            {(focusFilter !== "All" || selectedTags.length > 0) && (
               <div className="text-center mt-4">
                 <Button
                   variant="ghost"
                   onClick={() => {
                     setFocusFilter("All");
-                    setTypeFilter("All");
+                    setSelectedTags([]);
                   }}
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
@@ -141,10 +181,6 @@ const DrillLibrary = () => {
                         <div className="flex items-center gap-1">
                           <Target className="w-4 h-4 text-primary" />
                           <span>{drill.focusArea}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Zap className="w-4 h-4 text-secondary" />
-                          <span>{drill.drillType}</span>
                         </div>
                       </div>
                       <CardDescription className="line-clamp-2 mt-3">
