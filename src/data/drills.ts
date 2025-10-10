@@ -16,9 +16,9 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
-    slug: "shooting-ladder-challenge",
-    title: "Shooting Ladder Challenge",
-    description: "A competitive shooting drill that builds consistency and mental toughness through progressive challenges at multiple spots.",
+    slug: "1v1-kick-out-shooting",
+    title: "1v1 Kick Out Shooting",
+    description: "A competitive shooting drill that add dribbling and passing under pressure.",
     thumbnail: "/lovable-uploads/basketball-fundamentals-hero.webp",
     focusArea: "Shooting",
     mainGoal: "Develop shooting consistency under pressure while maintaining proper technique across various court positions",
