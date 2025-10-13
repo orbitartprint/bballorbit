@@ -79,13 +79,6 @@ const HeroSection = () => {
               <p className="text-muted-foreground">Suitable for all skill levels and age groups</p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                “I focus on modern basketball training — built on small-sided games and the constraint-led approach. Every drill you’ll find here is designed to improve decision-making, not just repetition.”
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
