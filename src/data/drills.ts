@@ -37,7 +37,7 @@ export const drills: Drill[] = [
     thumbnail: "/lovable-uploads/1v1-kick-out.webp",
     videoMp4: "/videos/1v1-kick-out.mp4",
     // images: ["/lovable-uploads/basketball-fundamentals-hero.webp"],
-    youtubeUrl: "https://youtu.be/9th4smk0MR0?si=ektgDdCJyxScY9A9&t=102",
+    youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Shooting", "Competition", "Individual", "Skill Development", "Decision Making"],
   },
   
