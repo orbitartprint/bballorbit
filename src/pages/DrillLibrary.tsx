@@ -49,7 +49,7 @@ const DrillLibrary = () => {
         <title>Basketball Drill Library - Basketball Orbit</title>
         <meta
           name="description"
-          content="Explore modern, game-like basketball drills to level up your practices. Filter by skill focus, drill type, or keyword to find what you need."
+          content="Explore modern game-based drills that challenge players through real decisions — not scripted movements - and level up your practices. Filter by skill focus, or keyword to find what you need."
         />
       </Helmet>
 
