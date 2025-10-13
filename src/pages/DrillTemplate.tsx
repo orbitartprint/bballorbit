@@ -141,6 +141,24 @@ const DrillTemplate = () => {
             {drill.constraints && drill.constraints.length > 0 && (
               <div className="mb-12">
                 <h2 className="text-3xl font-bold text-foreground mb-6">Constraints</h2>
+                <div className="relative group">
+                  <button
+                    className="text-gray-400 hover:text-[#f57520] focus:outline-none"
+                    aria-label="What are Constraints?"
+                  >
+                    ℹ️
+                  </button>
+                  <div
+                    className="absolute z-10 hidden group-hover:block w-72 md:w-96 bg-black text-white text-sm rounded-lg p-4 shadow-lg top-6 left-1/2 -translate-x-1/2"
+                  >
+                    <p>
+                      Constraints are small, intentional rules or limitations used to shape player behavior 
+                      and decision-making during practice. Instead of giving step-by-step instructions, 
+                      coaches use constraints to let players discover effective solutions on their own — 
+                      improving game understanding and adaptability.
+                    </p>
+                  </div>
+                </div>
                 <Card className="bg-card border-border">
                   <CardContent className="pt-6">
                     <ol className="space-y-3">
