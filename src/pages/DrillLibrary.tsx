@@ -194,13 +194,13 @@ const DrillLibrary = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredDrills.map((drill) => (
                   <Card
-                    key={drill.slug}
+                    key={drill.id}
                     className="group overflow-hidden border-border bg-card hover:shadow-xl hover:shadow-primary/20 hover:scale-105 transition-all duration-300"
                   >
-                    <Link to={`/drills/${drill.slug}`} className="block">
+                    <Link to={`/drills/${drill.id}`} className="block">
                       <div className="aspect-video w-full overflow-hidden bg-muted cursor-pointer">
                         <img
-                          src={drill.thumbnail}
+                          src={drill.images?.[0] || "/lovable-uploads/basketball-fundamentals-hero.webp"}
                           alt={drill.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         />
@@ -210,6 +210,11 @@ const DrillLibrary = () => {
                       <CardTitle className="text-xl text-foreground">
                         {drill.title}
                       </CardTitle>
+                      {drill.subtitle && (
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {drill.subtitle}
+                        </p>
+                      )}
                       <div className="flex items-center gap-3 text-sm text-muted-foreground mt-2">
                         <div className="flex items-center gap-1">
                           <Target className="w-4 h-4 text-primary" />
@@ -217,7 +222,7 @@ const DrillLibrary = () => {
                         </div>
                       </div>
                       <CardDescription className="line-clamp-2 mt-3">
-                        {drill.description}
+                        {drill.description[0]}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-3">
@@ -228,7 +233,7 @@ const DrillLibrary = () => {
                           </Badge>
                         ))}
                       </div>
-                      <Link to={`/drills/${drill.slug}`}>
+                      <Link to={`/drills/${drill.id}`}>
                         <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                           View Drill
                         </Button>

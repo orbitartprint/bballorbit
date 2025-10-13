@@ -1,100 +1,108 @@
 export interface Drill {
-  slug: string;
+  id: string;
   title: string;
-  description: string;
-  thumbnail: string;
+  subtitle?: string;
   focusArea: string;
   mainGoal: string;
-  keyCoachingPoint: string;
-  tags: string[];
-  youtubeUrl?: string;
-  filePath?: string;
-  pdfAvailable: boolean;
+  description: string[];
+  constraints?: string[];
+  videoMp4?: string;
   images?: string[];
-  steps?: string[];
+  youtubeUrl?: string;
+  tags: string[];
 }
 
 export const drills: Drill[] = [
   {
-    slug: "1v1-kick-out-shooting",
+    id: "1v1-kick-out-shooting",
     title: "1v1 Kick Out Shooting",
-    description: "A competitive shooting drill that add dribbling and passing under pressure.",
-    thumbnail: "/lovable-uploads/basketball-fundamentals-hero.webp",
+    subtitle: "Competitive shooting under pressure",
     focusArea: "Shooting",
     mainGoal: "Develop shooting consistency under pressure while maintaining proper technique across various court positions",
-    keyCoachingPoint: "Focus on shot preparation and follow-through - every rep should look identical regardless of the score",
-    tags: ["Shooting", "Competition", "Individual", "Skill Development"],
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    pdfAvailable: false,
-    images: ["/lovable-uploads/basketball-fundamentals-hero.webp"],
-    steps: [
+    description: [
       "Set up 5 shooting spots around the arc (corners, wings, top of key)",
       "Player must make 2 shots from each spot before advancing to the next",
       "If a shot is missed, player returns to the previous spot",
       "First player to complete all 5 spots wins the challenge",
       "Add time limits or consequences for added pressure"
     ],
+    constraints: [
+      "Must use proper shooting form on every attempt",
+      "No moving onto the next spot until 2 makes are achieved",
+      "Time limit of 10 minutes to complete the entire circuit"
+    ],
+    videoMp4: "/videos/1v1-kick-out.mp4",
+    images: ["/lovable-uploads/basketball-fundamentals-hero.webp"],
+    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    tags: ["Shooting", "Competition", "Individual", "Skill Development"],
   },
   {
-    slug: "closeout-shell-drill",
+    id: "closeout-shell-drill",
     title: "Closeout Shell Drill",
-    description: "A defensive positioning drill that teaches proper closeout technique and off-ball help defense in a controlled 4-on-4 setting.",
-    thumbnail: "/lovable-uploads/run-and-jump-pdf.webp",
+    subtitle: "Master defensive positioning and rotations",
     focusArea: "Defense",
     mainGoal: "Master defensive rotations, closeouts, and help positioning while maintaining proper stance and intensity",
-    keyCoachingPoint: "Sprint to closeout but arrive under control - choppy feet in the last 3 steps prevent blow-bys",
-    tags: ["Defense", "Team", "Positioning", "Closeouts"],
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    filePath: "/pdfs/run-and-jump-defense.pdf",
-    pdfAvailable: true,
-    images: ["/lovable-uploads/run-and-jump-pdf.webp", "/lovable-uploads/zoom-action-pdf.webp"],
-    steps: [
+    description: [
       "Position 4 defenders in a shell formation around the paint",
       "Offense passes the ball around the perimeter - no dribbling initially",
       "On each pass, the on-ball defender must closeout with high hands",
       "Off-ball defenders must adjust position to provide help-side defense",
       "Progress to live situations once proper positioning is established"
     ],
+    constraints: [
+      "Sprint to closeout but arrive under control with choppy feet",
+      "Maintain help-side positioning at all times",
+      "High hands on every closeout to contest potential shots"
+    ],
+    videoMp4: "/videos/closeout-shell.mp4",
+    images: ["/lovable-uploads/run-and-jump-pdf.webp", "/lovable-uploads/zoom-action-pdf.webp"],
+    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    tags: ["Defense", "Team", "Positioning", "Closeouts"],
   },
   {
-    slug: "transition-advantage-game",
+    id: "transition-advantage-game",
     title: "3v2 to 2v1 Transition Game",
-    description: "A fast-paced transition drill that creates decision-making opportunities in advantage situations going both ways.",
-    thumbnail: "/lovable-uploads/zoom-action-pdf.webp",
+    subtitle: "Fast-paced decision-making in transition",
     focusArea: "Transition",
     mainGoal: "Improve court vision, decision-making speed, and finishing ability in transition advantage situations",
-    keyCoachingPoint: "Attack the rim immediately on the catch - every second of hesitation gives defense time to recover",
-    tags: ["Transition", "Decision-Making", "Game-Like", "Conditioning"],
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    filePath: "/pdfs/zoom-action.pdf",
-    pdfAvailable: true,
-    images: ["/lovable-uploads/zoom-action-pdf.webp", "/lovable-uploads/basketball-fundamentals-hero.webp", "/lovable-uploads/run-and-jump-pdf.webp"],
-    steps: [
+    description: [
       "Start with 3 offensive players at half court and 2 defenders at the basket",
       "Offense attacks 3v2 trying to score quickly",
       "After the shot (make or miss), 2 offensive players sprint back on defense",
       "The 2 defenders now become offense with 1 new player joining them for a 3v2 advantage going the other way",
       "Continuous transition back and forth for 2-3 minutes per group"
     ],
+    constraints: [
+      "Attack the rim immediately on the catch - no hesitation",
+      "Must get a shot off within 7 seconds of gaining possession",
+      "Defenders sprint back immediately after the shot attempt"
+    ],
+    videoMp4: "/videos/transition-game.mp4",
+    images: ["/lovable-uploads/zoom-action-pdf.webp", "/lovable-uploads/basketball-fundamentals-hero.webp", "/lovable-uploads/run-and-jump-pdf.webp"],
+    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    tags: ["Transition", "Decision-Making", "Game-Like", "Conditioning"],
   },
   {
-    slug: "pick-and-roll-reads",
+    id: "pick-and-roll-reads",
     title: "Pick and Roll Reads Progression",
-    description: "A systematic approach to teaching ball handlers how to read and attack different pick and roll coverages.",
-    thumbnail: "/lovable-uploads/basketball-fundamentals-hero.webp",
+    subtitle: "Systematic approach to reading coverages",
     focusArea: "Offense",
     mainGoal: "Develop the ability to recognize defensive coverage and make the correct read in pick and roll situations",
-    keyCoachingPoint: "Eyes on the low man - their decision dictates whether you attack downhill or find the roller",
-    tags: ["Offense", "Ball Handling", "Decision-Making", "Pick and Roll"],
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    pdfAvailable: false,
-    steps: [
+    description: [
       "Start with no defense - establish proper spacing and timing between ball handler and screener",
       "Add passive defense showing 'drop coverage' - ball handler attacks downhill",
       "Defense shows 'hedge and recover' - ball handler uses hesitation moves",
       "Defense shows 'switch' - ball handler recognizes mismatch opportunities",
       "Live 2v2 with defense varying coverages - ball handler must read and react"
     ],
+    constraints: [
+      "Eyes on the low man - read their positioning before making a decision",
+      "Screener must set solid screens at the proper angle",
+      "Ball handler waits for screen to be set before attacking"
+    ],
+    images: ["/lovable-uploads/basketball-fundamentals-hero.webp"],
+    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    tags: ["Offense", "Ball Handling", "Decision-Making", "Pick and Roll"],
   },
 ];
 
