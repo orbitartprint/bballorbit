@@ -79,6 +79,17 @@ const HeroSection = () => {
               <p className="text-muted-foreground">Suitable for all skill levels and age groups</p>
             </div>
           </div>
+
+          {/* Coaching Philosophy */}
+          <div className="mt-12 bg-[#101010] border border-[#2d32f1]/30 rounded-xl p-6 md:p-8 max-w-3xl mx-auto text-center shadow-lg">
+            <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
+              At Basketball Orbit, we build <span className="text-orange-400 font-semibold">smarter players</span> —
+              not through endless repetition, but through real decisions.
+              Every drill here is a small-sided game designed around the
+              <span className="text-blue-400 font-semibold"> constraint-led approach </span>
+              to teach the game — not just the moves.
+            </p>
+          </div>
         </div>
       </div>
     </section>
