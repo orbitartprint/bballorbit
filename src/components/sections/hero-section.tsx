@@ -13,10 +13,10 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full border border-primary"></div>
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 text-center relative z-10 pt-12 pb-16">
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
-          <div className="mb-8 flex justify-center">
+          <div className="mb-8 flex justify-center py-10">
             <img 
               src={logoImg} 
               alt="Basketball Orbit" 
