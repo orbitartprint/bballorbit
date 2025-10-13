@@ -34,7 +34,7 @@ const WhyBballOrbit = () => {
             Why Basketball Orbit?
           </h2>
           <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Basketball Orbit helps coaches modernize their training with game-realistic drills, smart strategies, and creative challenges that players love. Whether you coach youth or senior teams, you'll find practical tools to build confidence, improve skills, and have fun doing it.
+            Basketball Orbit helps coaches transform their practices with small-sided games, constraint-led methods, and game-realistic challenges players actually enjoy. No more mindless drills — every session builds decision-making, creativity, and confidence on the court.
           </p>
 
           {/* Feature Grid */}
