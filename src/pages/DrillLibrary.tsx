@@ -200,7 +200,7 @@ const DrillLibrary = () => {
                     <Link to={`/drills/${drill.id}`} className="block">
                       <div className="aspect-video w-full overflow-hidden bg-muted cursor-pointer">
                         <img
-                          src={drill.images?.[0] || "/lovable-uploads/basketball-fundamentals-hero.webp"}
+                          src={drill.thumbnail || "/lovable-uploads/1v1-kick-out.webp"}
                           alt={drill.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         />
