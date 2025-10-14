@@ -62,7 +62,7 @@ In practice, I often give **double points** for fast-break scores.
 It creates an instant incentive — players sprint without me saying a word.
 
 ### 2. Create Defensive Disadvantages
-When possession changes, the last player to touch the ball on offense must first touch the sideline or before defending.  
+When possession changes, the last player to touch the ball on offense must first touch the sideline before defending.  
 For a few seconds, the offense has a **numbers advantage** — but only if they react quickly.  
 It’s a natural way to train urgency.
 
