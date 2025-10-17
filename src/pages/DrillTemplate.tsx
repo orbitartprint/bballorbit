@@ -100,7 +100,7 @@ const DrillTemplate = () => {
                       src={drill.videoMp4} 
                       controls 
                       className="rounded-xl w-full h-auto shadow-lg"
-                      poster={drill.thumbnail?}
+                      poster={drill.thumbnail}
                     />
                   </div>
                 )}
