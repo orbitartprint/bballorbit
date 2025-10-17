@@ -18,7 +18,7 @@ export const transitionOffense = {
     "Modern Basketball"
   ],
   heroImage: "/lovable-uploads/transition-offense-hero.webp",
-  heroImageAlt: "Basketball player practicing dribbling drills on an outdoor court at sunset",
+  heroImageAlt: "Basketball player running down the court and dribbling",
   readTimeMinutes: calculateReadTime(articleContent),
   content: articleContent,
   publishDate: "2025-10-11",
