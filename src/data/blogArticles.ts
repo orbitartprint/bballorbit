@@ -14,10 +14,12 @@ export interface BlogArticle {
 }
 
 import { transitionOffense } from '../blog/article-data/transition-offense';
+import { zoomAction } from '../blog/article-data/zoom-action';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
   transitionOffense,
+  zoomAction,
   // Add more articles here as you create them
 ].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
