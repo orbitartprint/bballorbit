@@ -10,13 +10,13 @@ The Zoom Action is one of those moves that looks simple on paper but unlocks a d
 
 **The Zoom Action** is a two-step offensive trigger that combines a down screen and a handoff — giving the offense two chances to create separation before the defense can react.
 
-It starts with an **off-ball screen** (often a down screen), allowing the cutter to shake their defender and move toward the ball. As that happens, the ballhandler — typically on the wing or slot — steps toward the cutter and executes a **dribble handoff (DHO)**.
+It starts with an **off-ball screen** (often a down screen), allowing the cutter to shake their defender and move toward the ball. As that happens, the ballhandler — typically on the wing or corner — steps toward the cutter and executes a **dribble handoff (DHO)**.
 
 This combination forces the defender to fight through **two actions in quick succession** — first the screen, then the handoff. By the time they recover, the offensive player already has a running start, clean separation, and multiple options to attack.
 
 **How it works**
 1. The screener sets a solid off-ball screen for the cutter.  
-2. The cutter sprints toward the ball and flows directly into a handoff.  
+2. The receiver sprints toward the ball and flows directly into a handoff.  
 3. The ballhandler executes a dribble handoff and rolls, pops, or spaces — depending on spacing rules.  
 4. The receiver reads the defense: attack, pull-up, or kick to the open man.
 
