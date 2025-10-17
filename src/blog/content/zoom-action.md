@@ -14,16 +14,18 @@ It starts with an **off-ball screen** (often a down screen), allowing the cutter
 
 This combination forces the defender to fight through **two actions in quick succession** — first the screen, then the handoff. By the time they recover, the offensive player already has a running start, clean separation, and multiple options to attack.
 
-**How it works**
-1. The screener sets a solid off-ball screen for the cutter.  
-2. The receiver sprints toward the ball and flows directly into a handoff.  
-3. The ballhandler executes a dribble handoff and rolls, pops, or spaces — depending on spacing rules.  
-4. The receiver reads the defense: attack, pull-up, or kick to the open man.
-
-<video width="100%" controls poster="/lovable-uploads/zoom-action-setup.webp">
-  <source src="/videos/zoom-action.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+  <p>**How it works**
+  1. The screener sets a solid off-ball screen for the cutter.  
+  2. The receiver sprints toward the ball and flows directly into a handoff.  
+  3. The ballhandler executes a dribble handoff and rolls, pops, or spaces — depending on spacing rules.  
+  4. The receiver reads the defense: attack, pull-up, or kick to the open man.
+  </p>
+  <video width="48%" controls poster="/lovable-uploads/zoom-action-setup.webp">
+    <source src="/videos/zoom-action.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 **Why this is powerful:**  
 The Zoom Action isn’t just a play — it’s a way to *initiate* offense with built-in reads. You’re not calling a set; you’re giving your players a simple, repeatable way to trigger movement and spacing while maintaining freedom.
