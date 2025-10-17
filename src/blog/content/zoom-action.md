@@ -20,7 +20,10 @@ This combination forces the defender to fight through **two actions in quick suc
 3. The ballhandler executes a dribble handoff and rolls, pops, or spaces — depending on spacing rules.  
 4. The receiver reads the defense: attack, pull-up, or kick to the open man.
 
-[IMAGE_PLACEHOLDER: Zoom Action sequence – down screen into handoff, spacing arrows, 5-out alignment]
+<video width="100%" controls poster="/lovable-uploads/zoom-action-setup.webp">
+  <source src="/videos/zoom-action.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 **Why this is powerful:**  
 The Zoom Action isn’t just a play — it’s a way to *initiate* offense with built-in reads. You’re not calling a set; you’re giving your players a simple, repeatable way to trigger movement and spacing while maintaining freedom.
