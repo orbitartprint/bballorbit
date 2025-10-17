@@ -14,21 +14,103 @@ It starts with an **off-ball screen** (often a down screen), allowing the cutter
 
 This combination forces the defender to fight through **two actions in quick succession** — first the screen, then the handoff. By the time they recover, the offensive player already has a running start, clean separation, and multiple options to attack.
 
-<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-  <p>**How it works**
-  1. The screener sets a solid off-ball screen for the cutter.  
-  2. The receiver sprints toward the ball and flows directly into a handoff.  
-  3. The ballhandler executes a dribble handoff and rolls, pops, or spaces — depending on spacing rules.  
-  4. The receiver reads the defense: attack, pull-up, or kick to the open man.
-  </p>
-  <video width="48%" controls poster="/lovable-uploads/zoom-action-setup.webp">
-    <source src="/videos/zoom-action.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
+  <!-- Left Column: Text -->
+  <div class="md:w-1/2">
+    <h3 class="text-2xl font-semibold mb-4">How it works</h3>
+    <ol class="list-decimal list-inside space-y-2 text-base leading-relaxed">
+      <li>The screener [3] sets a solid off-ball screen for the receiver [1]</li>
+      <li>The receiver sprints toward the ball and flows directly into a handoff.</li>
+      <li>The ballhandler [5] executes a dribble handoff and rolls, pops, or spaces — depending on spacing rules.</li>
+      <li>The receiver reads the defense: attack, pull-up, or kick to the open man.</li>
+    </ol>
+  </div>
+
+  <!-- Right Column: Video -->
+  <div class="md:w-1/2 flex justify-center">
+    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-action-setup.webp">
+      <source src="/videos/zoom-action.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </div>
 
-**Why this is powerful:**  
-The Zoom Action isn’t just a play — it’s a way to *initiate* offense with built-in reads. You’re not calling a set; you’re giving your players a simple, repeatable way to trigger movement and spacing while maintaining freedom.
+## Reading the Defense – Four Options After the Handoff
+
+Once the receiver comes off the handoff, the read is everything.  
+These four simple options cover nearly every situation — teach players to recognize them and react without hesitation.
+
+<!-- Option 1 -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
+  <div class="md:w-1/2 flex justify-center">
+    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-1.webp">
+      <source src="/videos/zoom-option-1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="md:w-1/2">
+    <h3 class="text-2xl font-semibold mb-3">1. Attack the Rim</h3>
+    <p class="text-base leading-relaxed">
+      If the defender is trailing behind, the receiver should immediately attack the paint.
+      This forces the defense to collapse and opens passing lanes to the <strong>weak-side corner</strong> or <strong>ball-side wing</strong>.
+      Encourage players to finish strong but stay ready to <em>kick out</em> if help arrives early.
+    </p>
+  </div>
+</div>
+
+<!-- Option 2 -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
+  <div class="md:w-1/2 flex justify-center">
+    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-2.webp">
+      <source src="/videos/zoom-option-2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="md:w-1/2">
+    <h3 class="text-2xl font-semibold mb-3">2. Catch-and-Shoot Three</h3>
+    <p class="text-base leading-relaxed">
+      When the defender goes under the handoff, the receiver has one job — <strong>shoot in rhythm</strong>.
+      The Zoom Action naturally creates separation at the top or wing, making it a perfect setup for
+      confident catch-and-shoot threes. Reinforce spacing and timing so shooters are ready before the handoff even happens.
+    </p>
+  </div>
+</div>
+
+<!-- Option 3 -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
+  <div class="md:w-1/2 flex justify-center">
+    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-3.webp">
+      <source src="/videos/zoom-option-3.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="md:w-1/2">
+    <h3 class="text-2xl font-semibold mb-3">3. Hit the Roller</h3>
+    <p class="text-base leading-relaxed">
+      If the defense switches or overplays the handoff, the ballhandler often becomes the open man.
+      The receiver should quickly recognize the roll and make a <strong>pocket pass</strong> or <strong>drop pass</strong> to the roller for a finish at the rim.
+      This keeps the defense rotating and rewards quick reads instead of scripted actions.
+    </p>
+  </div>
+</div>
+
+<!-- Option 4 -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
+  <div class="md:w-1/2 flex justify-center">
+    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-4.webp">
+      <source src="/videos/zoom-option-4.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="md:w-1/2">
+    <h3 class="text-2xl font-semibold mb-3">4. Rescreen and Re-attack</h3>
+    <p class="text-base leading-relaxed">
+      If the first action doesn’t create an advantage, don’t reset — <strong>rescreen</strong>.
+      A quick rescreen or flip of the angle forces the defender to navigate another decision instantly.
+      This simple adjustment keeps pressure on the defense and often opens the middle for a drive or kick-out.
+    </p>
+  </div>
+</div>
 
 ---
 
