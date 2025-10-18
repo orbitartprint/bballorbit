@@ -54,12 +54,14 @@ These four simple options cover nearly every situation — teach players to reco
   <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">1. Attack the Rim</h3>
     <p class="text-base leading-relaxed">
-      If the defender is trailing behind, the receiver should immediately attack the paint.
+      If the defender is trailing behind, the receiver should immediately attack the paint.<br />
       This forces the defense to collapse and opens passing lanes to the <strong>weak-side corner</strong> or <strong>ball-side wing</strong>.
       Encourage players to finish strong but stay ready to <em>kick out</em> if help arrives early.
     </p>
   </div>
 </div>
+
+---
 
 <!-- Option 2 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
@@ -74,12 +76,14 @@ These four simple options cover nearly every situation — teach players to reco
   <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">2. Catch-and-Shoot Three</h3>
     <p class="text-base leading-relaxed">
-      When the defender goes under the handoff, the receiver has one job — <strong>shoot in rhythm</strong>.
+      When the defender goes under the handoff, the receiver has one job — <strong>shoot in rhythm</strong>.<br />
       The Zoom Action naturally creates separation at the top or wing, making it a perfect setup for
-      confident catch-and-shoot threes. Reinforce spacing and timing so shooters are ready before the handoff even happens.
+      confident catch-and-shoot threes. <br />Reinforce spacing and timing so shooters are ready before the handoff even happens.
     </p>
   </div>
 </div>
+
+---
 
 <!-- Option 3 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
@@ -94,12 +98,14 @@ These four simple options cover nearly every situation — teach players to reco
   <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">3. Hit the Roller</h3>
     <p class="text-base leading-relaxed">
-      If the defense switches or overplays the handoff, the ballhandler often becomes the open man.
+      If the defense switches or overplays the handoff, the ballhandler often becomes the open man.<br />
       The receiver should quickly recognize the roll and make a <strong>pocket pass</strong> or <strong>drop pass</strong> to the roller for a finish at the rim.
       This keeps the defense rotating and rewards quick reads instead of scripted actions.
     </p>
   </div>
 </div>
+
+---
 
 <!-- Option 4 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
@@ -114,7 +120,7 @@ These four simple options cover nearly every situation — teach players to reco
   <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">4. Rescreen and Re-attack</h3>
     <p class="text-base leading-relaxed">
-      If the first action doesn’t create an advantage, don’t reset — <strong>rescreen</strong>.
+      If the first action doesn’t create an advantage, don’t reset — <strong>rescreen</strong>.<br />
       A quick rescreen or flip of the angle forces the defender to navigate another decision instantly.
       This simple adjustment keeps pressure on the defense and often opens the middle for a drive or kick-out.
     </p>
@@ -152,7 +158,7 @@ Below are three commonly used variations and the tactical rationale for each.
   <!-- Text (right) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
-      The <strong>Staggered Zoom</strong> adds a second off-ball screener to the action, creating a staggered setup that gives the cutter more time and separation before receiving the handoff.
+      The <strong>Staggered Zoom</strong> adds a second off-ball screener to the action, creating a staggered setup that gives the cutter more time and separation before receiving the handoff.<br />
       Against pressure defenses, this extra screen helps disrupt defensive timing and generates cleaner lanes for the handoff.
     </p>
     <p class="text-sm text-muted-foreground">
@@ -178,7 +184,7 @@ Below are three commonly used variations and the tactical rationale for each.
   <!-- Text (right) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
-      The <strong>Middle Zoom</strong> shifts the entire action to the center of the floor, usually out of a 5-Out setup.
+      The <strong>Middle Zoom</strong> shifts the entire action to the center of the floor, usually out of a 5-Out setup.<br />
       The big receives the ball in the slot while a screen lifts a guard from the wing into the middle handoff.
       This central alignment opens up both sides of the court and makes defensive help rotations much harder.
     </p>
@@ -204,7 +210,7 @@ Below are three commonly used variations and the tactical rationale for each.
   <!-- Text (right) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
-      The <strong>Horns Zoom</strong> begins from a Horns alignment — with two players at the elbows. The point guard enters the ball to one big, then clears to the side to set up the next action.
+      The <strong>Horns Zoom</strong> begins from a Horns alignment — with two players at the elbows. <br />The point guard enters the ball to one big, then clears to the side to set up the next action.
       The opposite big sets a down screen for the wing, who flows into the handoff at the elbow. From there, the Zoom principles apply: drive, kick, or re-screen.
     </p>
     <p class="text-sm text-muted-foreground">
@@ -214,6 +220,143 @@ Below are three commonly used variations and the tactical rationale for each.
 </div>
 
 ---
+
+## Inbound Plays Using the Zoom Action
+
+The Zoom Action also works great for inbound plays — whether from the **baseline** or the **sideline**.  
+These quick-hitter options use the same principles to create instant motion and confusion for the defense.
+
+<!-- Variation 1: Baseline Out of Bounds (BLOB) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">BLOB – Baseline Out of Bounds</h4>
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-blob.webp">
+      <source src="/videos/zoom-blob.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Text (right) -->
+  <div class="w-full">
+    <p class="text-base leading-relaxed mb-2">
+      The inbounder passes to a big near the elbow or the slot. Immediately after the pass, the inbounder receives a down screen and flows directly into a handoff.
+      This quick action shifts the ball from the baseline to the top — and back into the paint — before the defense can fully set up.
+    </p>
+    <p class="text-sm text-muted-foreground">
+      <em>Tactical note:</em> Ideal for quick scoring opportunities out of timeouts or dead-ball situations. The movement chain creates early confusion and open lanes.
+    </p>
+  </div>
+</div>
+
+---
+
+<!-- Variation 2: Sideline Out of Bounds (SLOB) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">SLOB – Sideline Out of Bounds</h4>
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-slob.webp">
+      <source src="/videos/zoom-slob.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Text (right) -->
+  <div class="w-full">
+    <p class="text-base leading-relaxed mb-2">
+      The inbound pass goes to the big positioned at the slot. Player 4 sets a down screen for the corner player, who comes up to receive the dribble handoff.
+      From there, all standard Zoom Action reads apply — drive, kick, or re-screen.
+    </p>
+    <p class="text-sm text-muted-foreground">
+      <em>Tactical note:</em> This sideline setup uses spacing and quick movement to turn a static inbound into a dynamic scoring action within seconds.
+    </p>
+  </div>
+</div>
+
+---
+
+## Counters and Wrinkles
+
+No action works every time — and that’s exactly why we build **counters and wrinkles** into our Zoom setup.  
+Here are three simple adjustments you can use when the defense starts reading your base action.
+<div class="text-center text-muted-foreground mt-4">
+  <em>Each counter keeps the defense guessing — and ensures the Zoom Action never feels predictable.</em>
+</div>
+
+<!-- Variation 1: Backdoor Cut on a Switch -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Backdoor Cut on a Switch</h4>
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-backdoor.webp">
+      <source src="/videos/zoom-backdoor.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Text (right) -->
+  <div class="w-full">
+    <p class="text-base leading-relaxed mb-2">
+      When the defense switches aggressively on the down screen, the cutter can instantly backdoor cut instead of taking the handoff.
+      This counter punishes defenders who overplay and helps you generate easy finishes at the rim.
+    </p>
+    <p class="text-sm text-muted-foreground">
+      <em>Tactical note:</em> Works best if the screener’s defender shows high or helps early, leaving the paint open for a quick pass.
+    </p>
+  </div>
+</div>
+
+---
+
+<!-- Variation 2: Handoff by the Screener -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Handoff by the Screener</h4>
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-screener.webp">
+      <source src="/videos/zoom-screener.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Text (right) -->
+  <div class="w-full">
+    <p class="text-base leading-relaxed mb-2">
+      If the defense denies the receiver’s path to the handoff, the screener can turn and take the ball directly from the ball handler.
+      This keeps the play alive while reversing the roles — the screener becomes the new decision-maker.
+    </p>
+    <p class="text-sm text-muted-foreground">
+      <em>Tactical note:</em> Great for maintaining flow and rhythm — the action continues even if the initial handoff is cut off.
+    </p>
+  </div>
+</div>
+
+---
+
+<!-- Variation 3: Slip or Basket Cut by the Screener -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Slip or Basket Cut by the Screener</h4>
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-slip.webp">
+      <source src="/videos/zoom-slip.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Text (right) -->
+  <div class="w-full">
+    <p class="text-base leading-relaxed mb-2">
+      When the defense is focused on the screen or switches too early, the screener can fake the screen and slip straight to the basket.
+      The timing of this movement often catches defenders ball-watching — creating an uncontested layup.
+    </p>
+    <p class="text-sm text-muted-foreground">
+      <em>Tactical note:</em> Use the slip sparingly — it’s most effective when the defense expects contact on the screen.
+    </p>
+  </div>
+</div>
+
 
 ## How I Teach Zoom — Principles Over Routes
 
@@ -225,17 +368,6 @@ I prefer *principles* over rigid rules. The Zoom Action fits perfectly into a Co
 - **Numbers & timing matter more than fancy sets.** If your first read doesn’t appear, reset quickly or use the next simple advantage.
 
 [IMAGE_PLACEHOLDER: Sequence images — ballhandler attack (1), zoom cut (2), kick or finish (3) — 2-up or single-column layout]
-
----
-
-## Common Zoom Variations (and why to use them)
-
-- **Basic Zoom (5-Out):** Space for an immediate drive and kick options.
-- **Staggered Zoom:** Uses two screens or stagger actions to free a shooter, good against switching defense.
-- **Middle Zoom:** The zoom happens to the middle lane — great to punish drop coverage.
-- **Horns Zoom:** Works well when you want a quick two-man game off a post or elbow screen.
-
-Each variation is the same principle: **create a reaction, read the reaction, attack the opening.**
 
 ---
 
