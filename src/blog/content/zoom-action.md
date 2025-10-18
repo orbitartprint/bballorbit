@@ -43,6 +43,7 @@ These four simple options cover nearly every situation — teach players to reco
 <!-- Option 1 -->
 <div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
   <div class="md:w-1/2 flex justify-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Dribble Drive</h4>
     <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-1.webp">
       <source src="/videos/zoom-option-1.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -61,6 +62,7 @@ These four simple options cover nearly every situation — teach players to reco
 <!-- Option 2 -->
 <div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
   <div class="md:w-1/2 flex justify-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Catch and Shoot</h4>
     <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-2.webp">
       <source src="/videos/zoom-option-2.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -79,6 +81,7 @@ These four simple options cover nearly every situation — teach players to reco
 <!-- Option 3 -->
 <div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
   <div class="md:w-1/2 flex justify-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Pick and Roll</h4>
     <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-3.webp">
       <source src="/videos/zoom-option-3.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -97,6 +100,7 @@ These four simple options cover nearly every situation — teach players to reco
 <!-- Option 4 -->
 <div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
   <div class="md:w-1/2 flex justify-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Rescreen</h4>
     <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-4.webp">
       <source src="/videos/zoom-option-4.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -134,6 +138,7 @@ The Zoom Action is adaptable — the same principle yields different advantages 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
     <!-- Video (left) -->
     <div class="w-full flex justify-center">
+      <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Staggered Zoom</h4>
       <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-staggered.webp">
         <source src="/videos/zoom-staggered.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -159,6 +164,7 @@ The Zoom Action is adaptable — the same principle yields different advantages 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
     <!-- Video (left) -->
     <div class="w-full flex justify-center">
+      <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Middle Zoom</h4>
       <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-middle.webp">
         <source src="/videos/zoom-middle.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -184,6 +190,7 @@ The Zoom Action is adaptable — the same principle yields different advantages 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
     <!-- Video (left) -->
     <div class="w-full flex justify-center">
+      <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Horns Zoom</h4>
       <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-horns.webp">
         <source src="/videos/zoom-horns.mp4" type="video/mp4" />
         Your browser does not support the video tag.
