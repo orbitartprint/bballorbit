@@ -16,7 +16,7 @@ const VideoSection = () => {
           <div className="relative aspect-video rounded-xl overflow-hidden shadow-glow bg-black">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/u7dRADmLkZ4"
+              src="https://youtu.be/rTVDgsR5cV0"
               title="Why Every Coach Should Be Running This 5-Out Entry - Zoom Action"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
