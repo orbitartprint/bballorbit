@@ -357,17 +357,12 @@ Here are three simple adjustments you can use when the defense starts reading yo
   </div>
 </div>
 
+---
 
-## How I Teach Zoom — Principles Over Routes
+## Video — Zoom Action (Concept & Walkthrough)
 
-I prefer *principles* over rigid rules. The Zoom Action fits perfectly into a Constraint Led Approach (CLA): instead of prescribing exactly where to cut, I set constraints and let players discover correct solutions.
-
-**Practical principles**
-- **Push & Space:** Ballhandler or primary ballcarrier must read the opportunity and push into the paint (or at least threaten it).
-- **Sprint to make yourself available:** Off-ball players commit to full-speed movement — early sprinting creates time and reduces congestion.
-- **Numbers & timing matter more than fancy sets.** If your first read doesn’t appear, reset quickly or use the next simple advantage.
-
-[IMAGE_PLACEHOLDER: Sequence images — ballhandler attack (1), zoom cut (2), kick or finish (3) — 2-up or single-column layout]
+**Watch the full concept video:**  
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/u7dRADmLkZ4" title="Zoom Action - Concept" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
@@ -384,47 +379,17 @@ Rather than drilling the Zoom as a static pattern, I coach it through small-side
 
 ---
 
-## Video — Zoom Action (Concept & Walkthrough)
-
-**Watch the concept video:**  
-<iframe width="100%" height="420" src="https://www.youtube.com/embed/u7dRADmLkZ4" title="Zoom Action - Concept" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-*(Tip: Use the video to show each read slowly, then at full speed — pause and point out the defender’s reaction.)*
-
----
-
 ## Drills: Train the Zoom Action (from the Zoom Drills video)
 
 Below are the drills covered in the Zoom Drills video. Each drill is game-realistic, easy to scale, and aligns with the CLA approach shown earlier. Video demo is embedded after the drill list.
 
 > **Important:** these drills intentionally prioritize decision-making and spacing. Use them as small-sided games where players must read and react — not memorize steps.
 
-### Drill 1 — 3v2 Zoom Progression
-- Start 3v2 with a dedicated shooter on the arc.
-- Ballhandler attacks; if the drive cannot finish, the zoom option should present early as a pass or secondary cut.
-- Encourage quick kick-and-go actions; reward successful finishes with extra points.
-
-[IMAGE_PLACEHOLDER: Drill 1 diagram / court snapshot]
-
-### Drill 2 — Stagger Zoom to Perimeter Shooter
-- Place two screeners to create staggered separation for a wing shooter.
-- Ballhandler drives; if defense helps, the stagger allows a clean kick or step-in shot.
-- Limit dribbles after the kick to increase passing and timing.
-
-[IMAGE_PAIR_PLACEHOLDER: two small images showing stagger screens side-by-side]
-
-### Drill 3 — Transition Zoom (push + read)
-- Simulate a turnover or rebound; ballhandler immediately pushes.
-- Wings sprint wide; zoom option becomes a direct finish or pass-back for secondary action.
-- Reward fast breaks with higher points to reinforce behavior.
-
-[IMAGE_PLACEHOLDER: Transition Zoom photo or drill snapshot]
-
 ---
 
-## Video — Zoom Drills (Practical Coaching Demos)
+## Video — Zoom Drills
 
-**Watch the drills & variations:**  
+**Watch the drills:**  
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/rTVDgsR5cV0" title="Zoom Drills and Variations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
@@ -444,14 +409,18 @@ Also, check related content:
 ## Practical Coaching Tips (Quick Wins)
 
 - **Reward early finishes:** give extra points for quick, clean finishes to encourage the initial push.  
-- **Teach the read:** practice the defender’s reaction — drill the recognition more than the cut.  
-- **Small rules yield big changes:** a small constraint (e.g., no more than one dribble after the kick) forces quicker decisions and better spacing.
+- **Teach the read:** practice the defender’s reaction — drill the recognition more than the cut (e.g. dictate different defensive coverages).  
+- **Small rules yield big changes:** a small constraint (e.g., ball handler must decide within zero seconds) forces quicker decisions and better spacing.
 
 ---
 
-## Final Thoughts
+## Congratulations!
 
-The Zoom Action is elegant because it is simple — teachable, scalable and hugely effective when coached as a principle. When you combine it with small-sided games and a constraint-led approach, your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
+You’ve now got a solid understanding of the Zoom Action — one of the most
+effective entry triggers for a 5-Out motion offense when coached as a principle.<br />
+When you combine it with small-sided games and a constraint-led approach, your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
+
+---
 
 **Want the full toolkit?** Download the complete Zoom Action guide (diagrams, practice progressions, and printable drills) here: https://guide.bballorbit.com/zoom
 
