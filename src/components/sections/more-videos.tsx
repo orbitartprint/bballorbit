@@ -3,18 +3,18 @@ import { Play } from "lucide-react";
 const MoreVideos = () => {
   const videos = [
     {
+      id: "u7dRADmLkZ4",
+      url: "https://youtu.be/u7dRADmLkZ4",
+      title: "Basketball Training Video 1"
+    },
+    {
       id: "YVFqsTxJxQ0",
       url: "https://youtu.be/YVFqsTxJxQ0",
-      title: "Basketball Training Video 1"
+      title: "Basketball Training Video 2"
     },
     {
       id: "9th4smk0MR0",
       url: "https://youtu.be/9th4smk0MR0",
-      title: "Basketball Training Video 2"
-    },
-    {
-      id: "NC1-3nrGHyc",
-      url: "https://youtu.be/NC1-3nrGHyc",
       title: "Basketball Training Video 3"
     }
   ];
