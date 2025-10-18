@@ -122,14 +122,90 @@ These four simple options cover nearly every situation — teach players to reco
 - **It easily flows into further actions** — re-screens, slips, or post entries — making it a seamless part of a motion or 5-out offense.
 - **It works without restricting creativity.** If you run a 5-Out Motion Offense, the Zoom Action is one of the cleanest ways to start breaking down a defense — without taking away freedom or spontaneity.
 
-<iframe width="100%" height="420" src="https://www.youtube.com/embed/u7dRADmLkZ4" 
-title="Zoom Action Overview - Basketball Orbit" frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+---
 
-[IMAGE_PLACEHOLDER: Example Zoom Action diagram or still frame from video]
+## Variations of the Zoom Action
 
-**Coaching note:** Teach the principle, not the route. When players learn the *why* (read the defender, exploit the rotation), they become adaptable and confident.
+The Zoom Action is adaptable — the same principle yields different advantages depending on alignment and the number of screens. Below are three commonly used variations and the tactical rationale for each.
+
+<div class="space-y-12">
+
+  <!-- Staggered Zoom -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Video (left) -->
+    <div class="w-full flex justify-center">
+      <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-staggered.webp">
+        <source src="/videos/zoom-staggered.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Text (right) -->
+    <div class="w-full">
+      <h3 class="text-2xl font-semibold mb-3">Staggered Zoom</h3>
+      <p class="text-base leading-relaxed mb-2">
+        The Staggered Zoom adds a second off-ball screen before the handoff. Two staggered screens provide
+        the cutter with increased separation and a longer window to receive the handoff in stride.
+        Versus pressure defenses, the added screen time produces larger driving lanes and clearer passing windows.
+      </p>
+      <p class="text-sm text-muted-foreground">
+        Tactical note: the stagger forces defenders to navigate three successive interactions, increasing the likelihood
+        of defensive breakdowns and clean finishing opportunities.
+      </p>
+    </div>
+  </div>
+
+  <!-- Middle Zoom -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Video (left) -->
+    <div class="w-full flex justify-center">
+      <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-middle.webp">
+        <source src="/videos/zoom-middle.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Text (right) -->
+    <div class="w-full">
+      <h3 class="text-2xl font-semibold mb-3">Middle Zoom</h3>
+      <p class="text-base leading-relaxed mb-2">
+        The Middle Zoom relocates the action to the center of the floor. A screen brings a guard or wing into the
+        middle for a handoff, opening both sides for immediate attack. This alignment reduces the defender’s ability
+        to overload one side and is effective against teams that habitually help from the weak side.
+      </p>
+      <p class="text-sm text-muted-foreground">
+        Tactical note: because the action occurs centrally, help defenders must choose quickly—this often leaves perimeter
+        shooters or rim lanes momentarily unguarded.
+      </p>
+    </div>
+  </div>
+
+  <!-- Horns Zoom -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Video (left) -->
+    <div class="w-full flex justify-center">
+      <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-horns.webp">
+        <source src="/videos/zoom-horns.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Text (right) -->
+    <div class="w-full">
+      <h3 class="text-2xl font-semibold mb-3">Horns Zoom</h3>
+      <p class="text-base leading-relaxed mb-2">
+        The Horns Zoom is executed from a two-big (Horns) alignment. After a short entry to a big at the elbow, the point clears
+        and a down screen on the opposite side frees a wing into the handoff. This integration allows the Zoom trigger to coexist with traditional Horns
+        actions and creates multiple options on either side of the floor.
+      </p>
+      <p class="text-sm text-muted-foreground">
+        Tactical note: this variation blends post-entry and wing motion, making defensive rotation more complex and often producing
+        early scoring chances.
+      </p>
+    </div>
+  </div>
+
+</div>
 
 ---
 
