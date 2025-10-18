@@ -41,15 +41,17 @@ Once the receiver comes off the handoff, the read is everything.
 These four simple options cover nearly every situation — teach players to recognize them and react without hesitation.
 
 <!-- Option 1 -->
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
-  <div class="md:w-1/2 flex justify-center">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Dribble Drive</h4>
-    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-1.webp">
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-option-1.webp">
       <source src="/videos/zoom-option-1.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="md:w-1/2">
+  <!-- Text (right) -->
+  <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">1. Attack the Rim</h3>
     <p class="text-base leading-relaxed">
       If the defender is trailing behind, the receiver should immediately attack the paint.
@@ -60,15 +62,16 @@ These four simple options cover nearly every situation — teach players to reco
 </div>
 
 <!-- Option 2 -->
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
-  <div class="md:w-1/2 flex justify-center">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Catch and Shoot</h4>
-    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-2.webp">
+    <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-2.webp">
       <source src="/videos/zoom-option-2.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="md:w-1/2">
+  <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">2. Catch-and-Shoot Three</h3>
     <p class="text-base leading-relaxed">
       When the defender goes under the handoff, the receiver has one job — <strong>shoot in rhythm</strong>.
@@ -79,15 +82,16 @@ These four simple options cover nearly every situation — teach players to reco
 </div>
 
 <!-- Option 3 -->
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
-  <div class="md:w-1/2 flex justify-center">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Pick and Roll</h4>
-    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-3.webp">
+    <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-3.webp">
       <source src="/videos/zoom-option-3.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="md:w-1/2">
+  <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">3. Hit the Roller</h3>
     <p class="text-base leading-relaxed">
       If the defense switches or overplays the handoff, the ballhandler often becomes the open man.
@@ -98,15 +102,16 @@ These four simple options cover nearly every situation — teach players to reco
 </div>
 
 <!-- Option 4 -->
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
-  <div class="md:w-1/2 flex justify-center">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
+  <!-- Video (left) -->
+  <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Rescreen</h4>
-    <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-option-4.webp">
+    <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-4.webp">
       <source src="/videos/zoom-option-4.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="md:w-1/2">
+  <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">4. Rescreen and Re-attack</h3>
     <p class="text-base leading-relaxed">
       If the first action doesn’t create an advantage, don’t reset — <strong>rescreen</strong>.
