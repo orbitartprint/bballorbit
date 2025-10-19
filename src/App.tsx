@@ -18,6 +18,25 @@ import Shop from "./pages/Shop";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import NotFound from "./pages/NotFound";
+import usePageTracking from "./hooks/usePageTracking";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import { Helmet } from "react-helmet";
+import AppRoutes from "./routes"; // oder deine Routing-Komponente
+
+function App() {
+  usePageTracking();
+  return (
+    <Router>
+      <Helmet>
+        <title>Basketball Orbit</title>
+      </Helmet>
+      <Navigation />
+      <AppRoutes />
+      <Footer />
+    </Router>
+  );
+}
 
 const queryClient = new QueryClient();
 
