@@ -16,10 +16,10 @@ const VideoSection = () => {
           <div className="relative aspect-video rounded-xl overflow-hidden shadow-glow bg-black">
             <iframe
               className="w-full h-full"
-              //src="https://youtu.be/rTVDgsR5cV0"
-              src="https://youtu.be/u7dRADmLkZ4"
+              src="https://www.youtube.com/embed/rTVDgsR5cV0"
               title="How to Teach the Zoom Action – 3 Game-Realistic Drills"
               frameBorder="0"
+              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
