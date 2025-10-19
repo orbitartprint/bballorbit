@@ -5,17 +5,17 @@ const MoreVideos = () => {
     {
       id: "u7dRADmLkZ4",
       url: "https://youtu.be/u7dRADmLkZ4",
-      title: "Basketball Training Video 1"
+      title: "Why Every Coach Should Be Running This 5-Out Entry – Zoom Action"
     },
     {
       id: "YVFqsTxJxQ0",
       url: "https://youtu.be/YVFqsTxJxQ0",
-      title: "Basketball Training Video 2"
+      title: "How to Dominate with the 3-2 Zone Defense - Complete Guide"
     },
     {
       id: "9th4smk0MR0",
       url: "https://youtu.be/9th4smk0MR0",
-      title: "Basketball Training Video 3"
+      title: "Stop Practicing Shots You’ll Never Take – Do These 5 Drills Instead"
     }
   ];
 
