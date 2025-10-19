@@ -21,52 +21,41 @@ import NotFound from "./pages/NotFound";
 import usePageTracking from "./hooks/usePageTracking";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import { Helmet } from "react-helmet";
-import AppRoutes from "./routes"; // oder deine Routing-Komponente
-
-function App() {
-  usePageTracking();
-  return (
-    <Router>
-      <Helmet>
-        <title>Basketball Orbit</title>
-      </Helmet>
-      <Navigation />
-      <AppRoutes />
-      <Footer />
-    </Router>
-  );
-}
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/drills" element={<DrillLibrary />} />
-          <Route path="/drills/:slug" element={<DrillTemplate />} />
-          <Route path="/Resources" element={<Resources />} />
-          <Route path="/free-resources" element={<FreeResources />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogArticle />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/legal" element={<Legal />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/affiliate" element={<Affiliate />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/shop" element={<Shop />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  usePageTracking();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/drills" element={<DrillLibrary />} />
+            <Route path="/drills/:slug" element={<DrillTemplate />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/free-resources" element={<FreeResources />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogArticle />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/affiliate" element={<Affiliate />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
 
 export default App;
