@@ -19,8 +19,6 @@ import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import NotFound from "./pages/NotFound";
 import usePageTracking from "./hooks/usePageTracking";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -33,7 +31,6 @@ function App() {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Navigation />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/drills" element={<DrillLibrary />} />
@@ -51,7 +48,6 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
