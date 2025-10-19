@@ -56,6 +56,8 @@ These four simple options cover nearly every situation — teach players to reco
     <p class="text-base leading-relaxed">
       If the defender is trailing behind, the receiver should immediately attack the paint.<br />
       This forces the defense to collapse and opens passing lanes to the <strong>weak-side corner</strong> or <strong>ball-side wing</strong>.
+    </p>
+    <p class="text-base leading-relaxed">
       Encourage players to finish strong but stay ready to <em>kick out</em> if help arrives early.
     </p>
   </div>
@@ -78,7 +80,7 @@ These four simple options cover nearly every situation — teach players to reco
     <p class="text-base leading-relaxed">
       When the defender goes under the handoff, the receiver has one job — <strong>shoot in rhythm</strong>.
     </p>
-    <p>
+    <p class="text-base leading-relaxed">
       The Zoom Action naturally creates separation at the top or wing, making it a perfect setup for
       confident catch-and-shoot threes. <br />Reinforce spacing and timing so shooters are ready before the handoff even happens.
     </p>
@@ -102,7 +104,7 @@ These four simple options cover nearly every situation — teach players to reco
     <p class="text-base leading-relaxed">
       If the defense switches or overplays the handoff, the ballhandler often becomes the open man.
     </p>
-    <p>
+    <p class="text-base leading-relaxed">
       The receiver should quickly recognize the roll and make a <strong>pocket pass</strong> or <strong>drop pass</strong> to the roller for a finish at the rim.
       This keeps the defense rotating and rewards quick reads instead of scripted actions.
     </p>
@@ -166,7 +168,7 @@ Below are three commonly used variations and the tactical rationale for each.
     <p class="text-base leading-relaxed mb-2">
       The <strong>Staggered Zoom</strong> adds a second off-ball screener to the action, creating a staggered setup that gives the cutter more time and separation before receiving the handoff.
     </p>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       Against pressure defenses, this extra screen helps disrupt defensive timing and generates cleaner lanes for the handoff.
     </p>
     <p class="text-sm text-muted-foreground">
@@ -194,7 +196,7 @@ Below are three commonly used variations and the tactical rationale for each.
     <p class="text-base leading-relaxed mb-2">
       The <strong>Middle Zoom</strong> shifts the entire action to the center of the floor, usually out of a 5-Out setup.
     </p>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       The big receives the ball in the slot while a screen lifts a guard from the wing into the middle handoff.
       This central alignment opens up both sides of the court and makes defensive help rotations much harder.
     </p>
@@ -222,7 +224,7 @@ Below are three commonly used variations and the tactical rationale for each.
     <p class="text-base leading-relaxed mb-2">
       The <strong>Horns Zoom</strong> begins from a Horns alignment — with two players at the elbows.
     </p>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       The point guard enters the ball to one big, then clears to the side to set up the next action.
       The opposite big sets a down screen for the wing, who flows into the handoff at the elbow. From there, the Zoom principles apply: drive, kick, or re-screen.
     </p>
@@ -396,11 +398,11 @@ These three small-sided drills turn the concept into game-realistic reps your pl
     </video>
   </div>
   <div>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       Start with a ball handler on the baseline and a receiver on the wing. The offense passes to the wing and follows the pass into a handoff while guarded by a defender.
       From there, it’s live 1v1 play — the ball handler can drive, pull up, or reject the screen.<br />
     </p>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       To adjust the difficulty, limit the dribbles, allow re-screens, or change how the defender guards the action.
       This drill teaches <strong>timing, spacing, and reading the handoff under pressure.</strong>
     </p>
@@ -413,11 +415,11 @@ These three small-sided drills turn the concept into game-realistic reps your pl
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
   <div>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       Now we add another layer. Two offensive players start in the corners, each guarded by a defender. One begins with the ball and dribbles along the three-point line.
       The opposite corner player cuts toward the ball to receive the handoff — and once it happens, the drill is live.
     </p>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       You can dictate defensive behavior (e.g., switch or fight over) or allow the ball handler to reject the handoff entirely.
       This setup naturally trains <strong>decision-making, spacing, and reaction to defensive coverage.</strong>
     </p>
@@ -442,12 +444,12 @@ These three small-sided drills turn the concept into game-realistic reps your pl
     </video>
   </div>
   <div>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       Here’s where players start <strong>discovering the Zoom Action themselves.</strong>  
       The only rule: every possession starts with an off-ball screen followed by a handoff.
       Players must figure out how to create and use the advantage — and they’ll quickly learn what works.
     </p>
-    <p>
+    <p class="text-base leading-relaxed mb-2">
       Add constraints like rotating positions or limiting the playable space to increase creativity and decision speed.
       This drill connects directly with the <em>Constraint Led Approach (CLA)</em>, making it ideal for modern player development.
     </p>
@@ -482,7 +484,7 @@ These progressive small-sided drills teach players to make reads, react faster, 
 
 ## Downloadable Guide & Resources
 
-If you want the **complete Zoom Action guide** (full diagrams, step-by-step progressions and PDFs), grab the free PDF here:  
+If you want the **complete Zoom Action guide** (full diagrams, step-by-step progressions), grab the free PDF here:  
 👉 **Complete Zoom Action Guide (free PDF)** — https://guide.bballorbit.com/zoom
 
 Also, check related content:
@@ -498,9 +500,6 @@ You’ve now got a solid understanding of the Zoom Action — one of the most
 effective entry triggers for a 5-Out motion offense when coached as a principle.<br /><br />
 When you combine it with small-sided games and a constraint-led approach, your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
 
----
-
-**Want the full toolkit?** Download the complete Zoom Action guide (diagrams, practice progressions, and printable drills) here: https://guide.bballorbit.com/zoom
 
 *Written by Chris Bernhard — Basketball Orbit*  
 *© 2025 Basketball Orbit*
