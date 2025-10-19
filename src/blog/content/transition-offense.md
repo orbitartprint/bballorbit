@@ -2,25 +2,25 @@
 
 > A bad transition is still better than a perfect half-court set.
 
-Every coach talks about playing fast — but few teams actually do.  
+Every coach talks about playing fast - but few teams actually do.  
 Transition isn’t just about speed; it’s about **reaction**, **intention**, and **freedom**.  
-When your team learns to push the ball, attack early, and make quick decisions, everything changes — the energy, the confidence, and the way your players see the game.
+When your team learns to push the ball, attack early, and make quick decisions, everything changes - the energy, the confidence, and the way your players see the game.
 
-In this article, I’ll show you how to turn defense into instant offense by focusing on **principles, not positions** — and how to train your team to play fast without losing control.
+In this article, I’ll show you how to turn defense into instant offense by focusing on **principles, not positions** - and how to train your team to play fast without losing control.
 
 ---
 
 ## Why Transition Offense Creates Easy Wins
 
 Transition is the easiest way to gain an advantage.  
-It’s not about running a perfect fast-break pattern — it’s about being the first team to *recognize opportunity*.
+It’s not about running a perfect fast-break pattern - it’s about being the first team to *recognize opportunity*.
 
 When the ball changes hands, most teams hesitate.  
 They look for their point guard, check the floor, slow down.  
 In that moment, the advantage is already gone.
 
 The truth is simple:
-> The fastest team doesn’t always win — but the team that reacts fastest usually does.
+> The fastest team doesn’t always win - but the team that reacts fastest usually does.
 
 Transition gives you:
 - **Early advantages** before the defense sets.
@@ -42,9 +42,9 @@ If you’re interested in this approach, check out [Principles Over Rules](https
 In my system:
 - Anyone can push the ball - few exceptions allowed.
 - Everyone else runs **full speed** down the floor.
-- The wings sprint wide — leave the middle lane to the ball handler.
+- The wings sprint wide - leave the middle lane to the ball handler.
 - The first two wings fill the **corners** to create both **horizontal** and **vertical spacing** - unless there is a chance for a quick layup.
-- The ballhandler attacks the open middle. If there’s space — go.  
+- The ballhandler attacks the open middle. If there’s space - go.  
   If not, kick it to a wing or flow into a trigger and let the advantage continue.
 
 When every player knows that *speed* is the rule and *structure* adapts, you get a natural rhythm.  
@@ -75,7 +75,7 @@ When playing 4v4 or 5v5, I use rules that emphasize tempo:
 
 This approach, known as the **Constraint-Led Approach (CLA)**, builds implicit learning.  
 Players adapt and find solutions on their own, without rigid instructions.  
-It creates creative, confident decision-makers — exactly what you want in modern basketball.
+It creates creative, confident decision-makers - exactly what you want in modern basketball.
 
 🎥 **Watch: 4 Drills to Train Transition Offense**  
 [![Transition Drills](https://img.youtube.com/vi/DTqeh4D-agI/hqdefault.jpg)](https://youtu.be/DTqeh4D-agI)
@@ -85,7 +85,7 @@ It creates creative, confident decision-makers — exactly what you want in mode
 ## Practical Coaching Tips
 
 Here are a few takeaways you can apply right away:
-- **Keep it simple:** Your goal isn’t perfect structure — it’s instant action.
+- **Keep it simple:** Your goal isn’t perfect structure - it’s instant action.
 - **Encourage freedom:** Let players read the game, not memorize routes.
 - **Reinforce spacing:** Wide corners open driving lanes and early passing options.
 - **Reward speed:** Use your scoring system or other constraints to teach behavior naturally.
@@ -95,14 +95,14 @@ Here are a few takeaways you can apply right away:
 
 ## Key Takeaways
 
-Transition isn’t just a phase of offense — it’s a **mindset**.  
+Transition isn’t just a phase of offense - it’s a **mindset**.  
 When your team learns to turn every rebound, steal, or inbound into an attack, you’ll notice:
 - More open shots  
 - Higher energy  
 - Faster decision-making  
 - More fun for everyone involved
 
-It’s the fastest way to play better basketball — and the most enjoyable way to coach it.
+It’s the fastest way to play better basketball - and the most enjoyable way to coach it.
 
 ---
 
