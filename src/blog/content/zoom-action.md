@@ -76,7 +76,9 @@ These four simple options cover nearly every situation — teach players to reco
   <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">2. Catch-and-Shoot Three</h3>
     <p class="text-base leading-relaxed">
-      When the defender goes under the handoff, the receiver has one job — <strong>shoot in rhythm</strong>.<br />
+      When the defender goes under the handoff, the receiver has one job — <strong>shoot in rhythm</strong>.
+    </p>
+    <p>
       The Zoom Action naturally creates separation at the top or wing, making it a perfect setup for
       confident catch-and-shoot threes. <br />Reinforce spacing and timing so shooters are ready before the handoff even happens.
     </p>
@@ -98,7 +100,9 @@ These four simple options cover nearly every situation — teach players to reco
   <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">3. Hit the Roller</h3>
     <p class="text-base leading-relaxed">
-      If the defense switches or overplays the handoff, the ballhandler often becomes the open man.<br />
+      If the defense switches or overplays the handoff, the ballhandler often becomes the open man.
+    </p>
+    <p>
       The receiver should quickly recognize the roll and make a <strong>pocket pass</strong> or <strong>drop pass</strong> to the roller for a finish at the rim.
       This keeps the defense rotating and rewards quick reads instead of scripted actions.
     </p>
@@ -120,7 +124,9 @@ These four simple options cover nearly every situation — teach players to reco
   <div class="w-full">
     <h3 class="text-2xl font-semibold mb-3">4. Rescreen and Re-attack</h3>
     <p class="text-base leading-relaxed">
-      If the first action doesn’t create an advantage, don’t reset — <strong>rescreen</strong>.<br />
+      If the first action doesn’t create an advantage, don’t reset — <strong>rescreen</strong>.
+    </p>
+    <p>
       A quick rescreen or flip of the angle forces the defender to navigate another decision instantly.
       This simple adjustment keeps pressure on the defense and often opens the middle for a drive or kick-out.
     </p>
@@ -158,7 +164,9 @@ Below are three commonly used variations and the tactical rationale for each.
   <!-- Text (right) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
-      The <strong>Staggered Zoom</strong> adds a second off-ball screener to the action, creating a staggered setup that gives the cutter more time and separation before receiving the handoff.<br />
+      The <strong>Staggered Zoom</strong> adds a second off-ball screener to the action, creating a staggered setup that gives the cutter more time and separation before receiving the handoff.
+    </p>
+    <p>
       Against pressure defenses, this extra screen helps disrupt defensive timing and generates cleaner lanes for the handoff.
     </p>
     <p class="text-sm text-muted-foreground">
@@ -184,7 +192,9 @@ Below are three commonly used variations and the tactical rationale for each.
   <!-- Text (right) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
-      The <strong>Middle Zoom</strong> shifts the entire action to the center of the floor, usually out of a 5-Out setup.<br />
+      The <strong>Middle Zoom</strong> shifts the entire action to the center of the floor, usually out of a 5-Out setup.
+    </p>
+    <p>
       The big receives the ball in the slot while a screen lifts a guard from the wing into the middle handoff.
       This central alignment opens up both sides of the court and makes defensive help rotations much harder.
     </p>
@@ -210,7 +220,10 @@ Below are three commonly used variations and the tactical rationale for each.
   <!-- Text (right) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
-      The <strong>Horns Zoom</strong> begins from a Horns alignment — with two players at the elbows. <br />The point guard enters the ball to one big, then clears to the side to set up the next action.
+      The <strong>Horns Zoom</strong> begins from a Horns alignment — with two players at the elbows.
+    </p>
+    <p>
+      The point guard enters the ball to one big, then clears to the side to set up the next action.
       The opposite big sets a down screen for the wing, who flows into the handoff at the elbow. From there, the Zoom principles apply: drive, kick, or re-screen.
     </p>
     <p class="text-sm text-muted-foreground">
@@ -447,20 +460,23 @@ These three small-sided drills turn the concept into game-realistic reps your pl
 
 If you want your team to *own* the Zoom Action, don’t over-explain it — let them **experience** it.  
 These progressive small-sided drills teach players to make reads, react faster, and execute the action at game speed.
-> **Important:** These drills intentionally prioritize decision-making and spacing can be perfectly aligned with the CLA (Constraint Led Approach).
-
-## Drills: Train the Zoom Action (from the Zoom Drills video)
-
-Below are the drills covered in the Zoom Drills video. Each drill is game-realistic, easy to scale, and aligns with the CLA approach shown earlier. Video demo is embedded after the drill list.
-
-> **Important:** these drills intentionally prioritize decision-making and spacing. Use them as small-sided games where players must read and react — not memorize steps.
+> **Important:** These drills intentionally prioritize decision-making and spacing can be perfectly aligned with the CLA.
 
 ---
 
 ## Video — Zoom Drills
 
-**👉 Watch the full breakdown of all three drills here:  **  
+👉 **Watch the full breakdown of all three drills here:**
+> **Important:** Use them as small-sided games where players must read and react — not memorize steps.
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/rTVDgsR5cV0" title="Zoom Drills and Variations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Practical Coaching Tips (Quick Wins)
+
+- **Reward early finishes:** give extra points for quick, clean finishes to encourage the initial push.  
+- **Teach the read:** practice the defender’s reaction — drill the recognition more than the cut (e.g. dictate different defensive coverages).  
+- **Small rules yield big changes:** a small constraint (e.g., ball handler must decide within zero seconds) forces quicker decisions and better spacing.
 
 ---
 
@@ -476,18 +492,10 @@ Also, check related content:
 
 ---
 
-## Practical Coaching Tips (Quick Wins)
-
-- **Reward early finishes:** give extra points for quick, clean finishes to encourage the initial push.  
-- **Teach the read:** practice the defender’s reaction — drill the recognition more than the cut (e.g. dictate different defensive coverages).  
-- **Small rules yield big changes:** a small constraint (e.g., ball handler must decide within zero seconds) forces quicker decisions and better spacing.
-
----
-
 ## Congratulations!
 
 You’ve now got a solid understanding of the Zoom Action — one of the most
-effective entry triggers for a 5-Out motion offense when coached as a principle.<br />
+effective entry triggers for a 5-Out motion offense when coached as a principle.<br /><br />
 When you combine it with small-sided games and a constraint-led approach, your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
 
 ---
