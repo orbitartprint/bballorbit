@@ -17,7 +17,7 @@ const VideoSection = () => {
             <iframe
               className="w-full h-full"
               src="https://youtu.be/rTVDgsR5cV0"
-              title="Why Every Coach Should Be Running This 5-Out Entry - Zoom Action"
+              title="How to Teach the Zoom Action – 3 Game-Realistic Drills"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
