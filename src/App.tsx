@@ -22,15 +22,19 @@ import usePageTracking from "./hooks/usePageTracking";
 
 const queryClient = new QueryClient();
 
-function App() {
+function PageTrackingWrapper() {
   usePageTracking();
+  return null;
+}
 
+function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <PageTrackingWrapper />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/drills" element={<DrillLibrary />} />

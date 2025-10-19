@@ -2,6 +2,12 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 /**
  * Automatically tracks page views in Google Analytics (GA4)
  * when the route changes in your React app.
