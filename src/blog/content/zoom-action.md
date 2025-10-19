@@ -366,18 +366,88 @@ Here are three simple adjustments you can use when the defense starts reading yo
 
 ---
 
-## Teaching Progressions & Small-Sided Games
+## Drills to Teach the Zoom Action
 
-Rather than drilling the Zoom as a static pattern, I coach it through small-sided, game-like constraints:
-
-**Progression example**
-1. 2v1 or 3v2 SSG that rewards a quick drive or finish (emphasize early push).  
-2. Add a defensive constraint (e.g., the last defender must touch baseline before contesting) to create repeated advantages.  
-3. Move to 4v4 with the Zoom trigger allowed only in certain phases — players learn when it’s best to zoom and when to use other actions.
-
-**Why SSGs?** They build decision-making under pressure and recreate the space/time dynamics of a real match — exactly what Zoom depends on.
+Teaching the **Zoom Action** isn’t about memorizing steps — it’s about helping players *feel* the timing, spacing, and rhythm of the action.  
+These three small-sided drills turn the concept into game-realistic reps your players can learn from immediately.
 
 ---
+
+### 1️⃣ 1v1 Handoff Read
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
+  <div>
+    <video width="100%" controls poster="/lovable-uploads/zoom-1v1.webp">
+      <source src="/videos/zoom-1v1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div>
+    <p>
+      Start with a ball handler on the baseline and a receiver on the wing. The offense passes to the wing and follows the pass into a handoff while guarded by a defender.
+      From there, it’s live 1v1 play — the ball handler can drive, pull up, or reject the screen.<br />
+    </p>
+    <p>
+      To adjust the difficulty, limit the dribbles, allow re-screens, or change how the defender guards the action.
+      This drill teaches <strong>timing, spacing, and reading the handoff under pressure.</strong>
+    </p>
+  </div>
+</div>
+
+---
+
+### 2️⃣ 2v2 Zoom Game
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
+  <div>
+    <p>
+      Now we add another layer. Two offensive players start in the corners, each guarded by a defender. One begins with the ball and dribbles along the three-point line.
+      The opposite corner player cuts toward the ball to receive the handoff — and once it happens, the drill is live.
+    </p>
+    <p>
+      You can dictate defensive behavior (e.g., switch or fight over) or allow the ball handler to reject the handoff entirely.
+      This setup naturally trains <strong>decision-making, spacing, and reaction to defensive coverage.</strong>
+    </p>
+  </div>
+  <div>
+    <video width="100%" controls poster="/lovable-uploads/zoom-2v2.webp">
+      <source src="/videos/zoom-2v2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+---
+
+### 3️⃣ 3v3 Guided Discovery
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
+  <div>
+    <video width="100%" controls poster="/lovable-uploads/zoom-3v3.webp">
+      <source src="/videos/zoom-3v3.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div>
+    <p>
+      Here’s where players start <strong>discovering the Zoom Action themselves.</strong>  
+      The only rule: every possession starts with an off-ball screen followed by a handoff.
+      Players must figure out how to create and use the advantage — and they’ll quickly learn what works.
+    </p>
+    <p>
+      Add constraints like rotating positions or limiting the playable space to increase creativity and decision speed.
+      This drill connects directly with the <em>Constraint Led Approach (CLA)</em>, making it ideal for modern player development.
+    </p>
+  </div>
+</div>
+
+---
+
+### 🔍 Conclusion
+
+If you want your team to *own* the Zoom Action, don’t over-explain it — let them **experience** it.  
+These progressive small-sided drills teach players to make reads, react faster, and execute the action at game speed.
+> **Important:** These drills intentionally prioritize decision-making and spacing can be perfectly aligned with the CLA (Constraint Led Approach).
 
 ## Drills: Train the Zoom Action (from the Zoom Drills video)
 
@@ -389,7 +459,7 @@ Below are the drills covered in the Zoom Drills video. Each drill is game-realis
 
 ## Video — Zoom Drills
 
-**Watch the drills:**  
+**👉 Watch the full breakdown of all three drills here:  **  
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/rTVDgsR5cV0" title="Zoom Drills and Variations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
