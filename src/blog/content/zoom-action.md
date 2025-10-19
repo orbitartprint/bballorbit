@@ -128,7 +128,7 @@ These four simple options cover nearly every situation — teach players to reco
     <p class="text-base leading-relaxed">
       If the first action doesn’t create an advantage, don’t reset — <strong>rescreen</strong>.
     </p>
-    <p>
+    <p class="text-base leading-relaxed">
       A quick rescreen or flip of the angle forces the defender to navigate another decision instantly.
       This simple adjustment keeps pressure on the defense and often opens the middle for a drive or kick-out.
     </p>
@@ -326,16 +326,7 @@ Here are three simple adjustments you can use when the defense starts reading yo
 
 <!-- Variation 2: Handoff by the Screener -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
-  <!-- Video (left) -->
-  <div class="w-full flex flex-col justify-center items-center">
-    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Handoff by the Screener</h4>
-    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-screener.webp">
-      <source src="/videos/zoom-screener.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Text (right) -->
+  <!-- Text (left) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
       If the defense denies the receiver’s path to the handoff, the screener can turn and take the ball directly from the ball handler.
@@ -344,6 +335,15 @@ Here are three simple adjustments you can use when the defense starts reading yo
     <p class="text-sm text-muted-foreground">
       <em>Tactical note:</em> Great for maintaining flow and rhythm — the action continues even if the initial handoff is cut off.
     </p>
+  </div>
+
+  <!-- Video (right) -->
+  <div class="w-full flex flex-col justify-center items-center">
+    <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Handoff by the Screener</h4>
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-screener.webp">
+      <source src="/videos/zoom-screener.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </div>
 </div>
 
