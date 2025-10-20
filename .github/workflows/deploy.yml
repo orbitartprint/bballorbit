@@ -16,6 +16,9 @@ jobs:
       - run: npm install
 
       - run: npm run build
+      
+      - name: Pre-render routes
+        run: node scripts/prerender.js
 
       - name: Copy index.html to 404.html
         run: cp dist/index.html dist/404.html
