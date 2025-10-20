@@ -222,7 +222,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-medium text-foreground">Email Support</p>
-                        <p className="text-sm text-muted-foreground">info@bballorbit.com</p>
+                        <p className="text-sm text-muted-foreground">info[at]bballorbit.com</p>
                       </div>
                     </div>
 
