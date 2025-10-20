@@ -55,8 +55,17 @@ const BlogArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{article.title} - Basketball Orbit Blog</title>
+        <title>{article.title} | Basketball Orbit</title>
         <meta name="description" content={article.excerpt} />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:description" content={article.excerpt} />
+        <meta property="og:image" content={article.heroImage} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Basketball Orbit" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={article.title} />
+        <meta name="twitter:description" content={article.excerpt} />
+        <meta name="twitter:image" content={article.heroImage} />
         <link rel="canonical" href={`https://www.bballorbit.com/blog/${article.slug}`} />
       </Helmet>
       <div className="min-h-screen bg-background">
