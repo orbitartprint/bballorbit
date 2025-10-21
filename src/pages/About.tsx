@@ -38,7 +38,9 @@ const About = () => {
                 <div className="relative">
                   <img 
                     src={chrisPhoto1} 
-                    alt="Chris - Basketball Orbit Founder" 
+                    alt="Chris - Basketball Orbit Founder"
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-lg shadow-orange w-80 h-96 object-cover"
                   />
                   <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-orange rounded-full opacity-20"></div>
@@ -85,7 +87,9 @@ const About = () => {
                 <div className="relative">
                   <img 
                     src={chrisPhoto2} 
-                    alt="Chris coaching on basketball court" 
+                    alt="Chris coaching on basketball court"
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-lg shadow-blue w-80 h-96 object-cover"
                   />
                   <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-blue rounded-full opacity-20"></div>
