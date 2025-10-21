@@ -42,6 +42,8 @@ const MoreVideos = () => {
                 <img
                   src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                   alt={video.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 
