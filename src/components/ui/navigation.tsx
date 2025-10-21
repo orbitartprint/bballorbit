@@ -28,6 +28,7 @@ const Navigation = () => {
               src={logoImg} 
               alt="Basketball Orbit" 
               className="h-10 w-auto"
+              loading="lazy"
             />
             <span className="font-bold text-xl hidden sm:block text-foreground">
               Basketball Orbit
