@@ -117,6 +117,8 @@ const BlogArticle = () => {
                       <img
                         src={article.heroImage}
                         alt={article.heroImageAlt}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-auto max-h-[500px] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
                           e.currentTarget.src = '/placeholder.svg';
@@ -128,6 +130,8 @@ const BlogArticle = () => {
                     <img
                       src={article.heroImage}
                       alt={article.heroImageAlt}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-auto"
                       onError={(e) => {
                         e.currentTarget.src = '/placeholder.svg';
