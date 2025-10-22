@@ -102,18 +102,44 @@ const DrillTemplate = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
               {/* Left Column: Video/Images */}
               <div className="space-y-6">
+                {/* ✅ Clickable Video (Full-area Play Trigger) */}
                 {drill.videoMp4 && (
-                  <div>
-                    <video 
-                      src={drill.videoMp4} 
-                      controls 
-                      className="rounded-xl w-full h-auto shadow-lg"
+                  <div
+                    className="relative w-full rounded-xl overflow-hidden shadow-lg cursor-pointer group"
+                    onClick={(e) => {
+                      const video = e.currentTarget.querySelector("video");
+                      if (video) {
+                        if (video.paused) video.play();
+                        else video.pause();
+                      }
+                    }}
+                  >
+                    <video
+                      src={drill.videoMp4}
+                      className="w-full h-auto rounded-xl"
                       poster={drill.thumbnail}
+                      preload="metadata"
+                      playsInline
                     />
+                    {/* Overlay with Play Icon */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-black/60 rounded-full p-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-10 w-10 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-4.596-2.65A1 1 0 009 9.385v5.23a1 1 0 001.156.867l4.596-2.65a1 1 0 000-1.764z" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 )}
                 
-                // 🧩 Bild-Galerie mit Lightbox und Lazy Loading
+                {/* Bild-Galerie mit Lightbox und Lazy Loading */}
                 {drill.images && drill.images.length > 0 && (
                   <div
                     className={`grid gap-4 ${
@@ -142,8 +168,8 @@ const DrillTemplate = () => {
                   </div>
                 )}
                 
-                {/* ✅ Lightbox Overlay mit Navigation */}
-                {selectedIndex !== null && (
+                {/* Lightbox Overlay mit Navigation */}
+                {selectedIndex !== null && drill.images && drill.images[selectedIndex] && (
                   <div
                     className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
                     onClick={() => setSelectedIndex(null)}
@@ -152,7 +178,7 @@ const DrillTemplate = () => {
                       className="relative flex items-center justify-center w-full h-full"
                       onClick={(e) => e.stopPropagation()} // verhindert, dass Klick auf Bild das Overlay schließt
                     >
-                      {/* ❌ Schließen-Button */}
+                      {/* Close Button */}
                       <button
                         onClick={() => setSelectedIndex(null)}
                         className="absolute top-6 right-6 text-white hover:text-[#f57520] transition-colors"
@@ -161,7 +187,7 @@ const DrillTemplate = () => {
                         <X size={32} />
                       </button>
                 
-                      {/* ◀️ Zurück */}
+                      {/* Previous */}
                       <button
                         onClick={() =>
                           setSelectedIndex(
@@ -174,14 +200,14 @@ const DrillTemplate = () => {
                         <ChevronLeft size={48} />
                       </button>
                 
-                      {/* 🖼 Bildanzeige */}
+                      {/* Image display */}
                       <img
                         src={drill.images[selectedIndex]}
                         alt={`${drill.title} - Full view`}
                         className="max-w-5xl max-h-[90vh] rounded-lg shadow-2xl object-contain"
                       />
                 
-                      {/* ▶️ Weiter */}
+                      {/* Next */}
                       <button
                         onClick={() =>
                           setSelectedIndex(
