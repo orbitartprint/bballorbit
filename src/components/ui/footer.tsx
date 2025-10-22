@@ -82,22 +82,30 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
-            <ul className="space-y-2">
-              {legalLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-muted-foreground hover:text-primary transition-smooth"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Legal */}
+        <div>
+          <h3 className="font-semibold text-foreground mb-4">Legal</h3>
+          <ul className="space-y-2">
+            {legalLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.path}
+                  className="text-muted-foreground hover:text-primary transition-smooth"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+            {/* Cookie Settings Button */}
+            <li>
+              <button
+                onClick={() => window.cookieyes && window.cookieyes.resetConsent()}
+                className="text-muted-foreground hover:text-primary transition-smooth"
+              >
+                Cookie Preferences
+              </button>
+            </li>
+          </ul>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
