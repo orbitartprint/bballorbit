@@ -88,7 +88,7 @@ export const drills: Drill[] = [
     ],
     thumbnail: "/lovable-uploads/2v2-rolling-break.webp",
     videoMp4: "/videos/2v2-rolling-break.mp4",
-    images: ["/lovable-uploads/2v2-baseline-reload-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
+    images: ["/lovable-uploads/2v2-rolling-break-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
     tags: ["Transition", "Competition", "Conditioning", "Decision Making"],
   },
   
