@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import { Youtube, Instagram, Twitter, Facebook } from "lucide-react";
 import logoImg from "@/assets/basketball-orbit-logo.webp";
 
+declare global {
+  interface Window {
+    cookieyes?: {
+      resetConsent: () => void;
+    };
+  }
+}
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -82,30 +90,31 @@ const Footer = () => {
             </ul>
           </div>
 
-        {/* Legal */}
-        <div>
-          <h3 className="font-semibold text-foreground mb-4">Legal</h3>
-          <ul className="space-y-2">
-            {legalLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  to={link.path}
+          {/* Legal */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="text-muted-foreground hover:text-primary transition-smooth"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+              {/* Cookie Settings Button */}
+              <li>
+                <button
+                  onClick={() => window.cookieyes && window.cookieyes.resetConsent()}
                   className="text-muted-foreground hover:text-primary transition-smooth"
                 >
-                  {link.name}
-                </Link>
+                  Cookie Preferences
+                </button>
               </li>
-            ))}
-            {/* Cookie Settings Button */}
-            <li>
-              <button
-                onClick={() => window.cookieyes && window.cookieyes.resetConsent()}
-                className="text-muted-foreground hover:text-primary transition-smooth"
-              >
-                Cookie Preferences
-              </button>
-            </li>
-          </ul>
+            </ul>
+          </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
