@@ -7,10 +7,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { drills } from "@/data/drills";
 import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const DrillTemplate = () => {
   const { slug } = useParams<{ slug: string }>();
   const drill = drills.find((d) => d.id === slug);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   if (!drill) {
     return <Navigate to="/drills" replace />;
@@ -111,21 +113,87 @@ const DrillTemplate = () => {
                   </div>
                 )}
                 
+                // 🧩 Bild-Galerie mit Lightbox und Lazy Loading
                 {drill.images && drill.images.length > 0 && (
-                  <div className={`grid gap-4 ${
-                    drill.images.length === 1 ? 'grid-cols-1' :
-                    drill.images.length === 2 ? 'grid-cols-2' :
-                    'grid-cols-3'
-                  }`}>
+                  <div
+                    className={`grid gap-4 ${
+                      drill.images.length === 1
+                        ? "grid-cols-1"
+                        : drill.images.length === 2
+                        ? "grid-cols-2"
+                        : "grid-cols-3"
+                    }`}
+                  >
                     {drill.images.map((image, index) => (
-                      <div key={index} className="rounded-lg overflow-hidden shadow-md">
+                      <div
+                        key={index}
+                        className="rounded-lg overflow-hidden shadow-md cursor-pointer group relative"
+                        onClick={() => setSelectedIndex(index)}
+                      >
                         <img
                           src={image}
                           alt={`${drill.title} - Image ${index + 1}`}
-                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                          className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                         />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
                       </div>
                     ))}
+                  </div>
+                )}
+                
+                {/* ✅ Lightbox Overlay mit Navigation */}
+                {selectedIndex !== null && (
+                  <div
+                    className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+                    onClick={() => setSelectedIndex(null)}
+                  >
+                    <div
+                      className="relative flex items-center justify-center w-full h-full"
+                      onClick={(e) => e.stopPropagation()} // verhindert, dass Klick auf Bild das Overlay schließt
+                    >
+                      {/* ❌ Schließen-Button */}
+                      <button
+                        onClick={() => setSelectedIndex(null)}
+                        className="absolute top-6 right-6 text-white hover:text-[#f57520] transition-colors"
+                        aria-label="Close"
+                      >
+                        <X size={32} />
+                      </button>
+                
+                      {/* ◀️ Zurück */}
+                      <button
+                        onClick={() =>
+                          setSelectedIndex(
+                            selectedIndex > 0 ? selectedIndex - 1 : drill.images.length - 1
+                          )
+                        }
+                        className="absolute left-4 md:left-10 text-white hover:text-[#f57520] transition-colors"
+                        aria-label="Previous"
+                      >
+                        <ChevronLeft size={48} />
+                      </button>
+                
+                      {/* 🖼 Bildanzeige */}
+                      <img
+                        src={drill.images[selectedIndex]}
+                        alt={`${drill.title} - Full view`}
+                        className="max-w-5xl max-h-[90vh] rounded-lg shadow-2xl object-contain"
+                      />
+                
+                      {/* ▶️ Weiter */}
+                      <button
+                        onClick={() =>
+                          setSelectedIndex(
+                            selectedIndex < drill.images.length - 1 ? selectedIndex + 1 : 0
+                          )
+                        }
+                        className="absolute right-4 md:right-10 text-white hover:text-[#f57520] transition-colors"
+                        aria-label="Next"
+                      >
+                        <ChevronRight size={48} />
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
