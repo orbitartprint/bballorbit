@@ -81,7 +81,7 @@ export const drills: Drill[] = [
       "This sequence repeats back and forth, emphasizing quick transitions and communication."
     ],
     constraints: [
-      "Vary the starting spots of the waiting players.",
+      "Vary the starting spots of the waiting players, e.g. one player at the baseline and the other player at the midline.",
       "Adjust the court size — for example, play only on one side of the floor.",
       "Limit the time allowed for each offensive possession.",
       "Disallow passes within the backcourt to increase tempo and decision-making speed.",
