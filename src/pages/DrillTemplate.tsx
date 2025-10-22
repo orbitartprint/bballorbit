@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { drills } from "@/data/drills";
-import { ArrowLeft, Target, Award } from "lucide-react";
+import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight } from "lucide-react";
 
 const DrillTemplate = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -30,6 +30,12 @@ const DrillTemplate = () => {
   };
 
   const embedUrl = getEmbedUrl(drill.youtubeUrl);
+
+  // Get drills from the same category
+  const sameCategoryDrills = drills.filter(d => d.focusArea === drill.focusArea);
+  const currentIndex = sameCategoryDrills.findIndex(d => d.id === drill.id);
+  const previousDrill = currentIndex > 0 ? sameCategoryDrills[currentIndex - 1] : null;
+  const nextDrill = currentIndex < sameCategoryDrills.length - 1 ? sameCategoryDrills[currentIndex + 1] : null;
 
   return (
     <>
@@ -212,6 +218,43 @@ const DrillTemplate = () => {
                 ))}
               </div>
             </div>
+
+            {/* Drill Navigation */}
+            {(previousDrill || nextDrill) && (
+              <div className="mt-12 pt-8 border-t border-border">
+                <div className="flex justify-between items-center gap-4">
+                  {previousDrill ? (
+                    <Link 
+                      to={`/drills/${previousDrill.id}`}
+                      className="group flex items-center gap-2 text-muted-foreground hover:text-[#f57520] transition-colors"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                      <div className="text-left">
+                        <div className="text-xs uppercase tracking-wide mb-1">Previous Drill</div>
+                        <div className="font-medium">{previousDrill.title}</div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div />
+                  )}
+                  
+                  {nextDrill ? (
+                    <Link 
+                      to={`/drills/${nextDrill.id}`}
+                      className="group flex items-center gap-2 text-muted-foreground hover:text-[#f57520] transition-colors ml-auto"
+                    >
+                      <div className="text-right">
+                        <div className="text-xs uppercase tracking-wide mb-1">Next Drill</div>
+                        <div className="font-medium">{nextDrill.title}</div>
+                      </div>
+                      <ChevronRight className="w-5 h-5" />
+                    </Link>
+                  ) : (
+                    <div />
+                  )}
+                </div>
+              </div>
+            )}
 
             {/* Bottom Back Button */}
             <div className="mt-12 pt-8 border-t border-border text-center">

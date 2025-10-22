@@ -6,6 +6,9 @@ declare global {
   interface Window {
     cookieyes?: {
       resetConsent: () => void;
+      consent?: {
+        marketing?: boolean;
+      };
     };
   }
 }
