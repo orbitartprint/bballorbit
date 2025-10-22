@@ -176,7 +176,7 @@ const DrillTemplate = () => {
                   >
                     <div
                       className="relative flex items-center justify-center w-full h-full"
-                      onClick={(e) => e.stopPropagation()} // verhindert, dass Klick auf Bild das Overlay schließt
+                      onClick={(e) => e.stopPropagation()}
                     >
                       {/* Close Button */}
                       <button
