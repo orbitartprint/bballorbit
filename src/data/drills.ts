@@ -40,6 +40,32 @@ export const drills: Drill[] = [
     youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Shooting", "Competition", "Individual", "Skill Development", "Decision Making"],
   },
+  {
+    id: "2v2-rolling-break",
+    title: "2v2 Rolling Break",
+    subtitle: "Continuous 2-on-2 Baseline Transition Drill",
+    focusArea: "Transition",
+    mainGoal: "Develop fast transition reactions, continuous play, and defensive communication under pressure.",
+    description: [
+      "Start with two offensive players and two defenders playing live 2-on-2.",
+      "Two additional offensive players wait behind the baseline on each side of the floor.",
+      "Limit each possession to a single shot attempt to keep the tempo high.",
+      "After a missed shot or turnover, one of the waiting players behind the baseline grabs the ball and attacks the other basket with their teammate.",
+      "The former offensive players instantly switch to defense, while the original defenders step off and wait behind the baseline for their next turn.",
+      "The drill continues in a fast, back-and-forth rhythm with constant possession changes and no breaks.",
+    ],
+    constraints: [
+      "C1: Vary the starting spots of the waiting players.",
+      "C2: Adjust the court size — for example, play only on one side of the floor.",
+      "C3: Limit the time allowed for each offensive possession.",
+      "C4: Disallow passes within the backcourt to increase tempo and decision-making speed.",
+      "C5: Offensive player who last touched the ball must touch sideline before defending.",
+    ],
+    thumbnail: "/lovable-uploads/2v2-rolling-break.webp",
+    videoMp4: "/videos/2v2-rolling-break.mp4",
+    images: ["/lovable-uploads/2v2-rolling-break-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
+    tags: ["Transition", "Competition", "Conditioning", "Decision Making"],
+  },
   
 ];
 
