@@ -6,10 +6,11 @@ const VideoSection = () => {
 
   // 🔸 Hier änderst du nur diese eine Zeile:
   const videoId = "rTVDgsR5cV0";
+  const videoTitle ="How to Teach the Zoom Action – 3 Game-Realistic Drills";
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
     <section className="py-6 lg:py-10 bg-card">
@@ -44,9 +45,13 @@ const VideoSection = () => {
               >
                 <img
                   src={thumbnailUrl}
-                  alt="How to Teach the Zoom Action – 3 Game-Realistic Drills"
+                  alt={videoTitle}
                   loading="lazy"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Wenn kein HD-Thumbnail existiert, nutze die HQ-Version
+                    e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                  }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition">
                   <Play size={64} className="text-white" />
@@ -56,7 +61,7 @@ const VideoSection = () => {
               <iframe
                 className="w-full h-full"
                 src={videoUrl}
-                title="How to Teach the Zoom Action – 3 Game-Realistic Drills"
+                title={videoTitle}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
