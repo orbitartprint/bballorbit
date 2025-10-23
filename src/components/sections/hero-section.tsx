@@ -14,6 +14,8 @@ const HeroSection = () => {
         loading="eager"
         fetchPriority="high"
       />
+      {/* Gradient unten */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0e0e0e]" />
     
       {/* Optional: Dark Overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/60" />
@@ -28,11 +30,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 text-center relative z-10 pt-12 pb-16">
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
-          <div className="mb-8 flex justify-center py-10">
+          <div className="mb-6 flex justify-center py-10">
             <img 
               src={logoImg} 
               alt="Basketball Orbit" 
-              className="h-24 md:h-32 w-auto shadow-glow"
+              className="h-24 md:h-32 w-auto"
             />
           </div>
 
