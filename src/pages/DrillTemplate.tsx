@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { drills } from "@/data/drills";
-import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 
 const DrillTemplate = () => {
@@ -149,7 +149,7 @@ const DrillTemplate = () => {
                 >
                   <div
                     className="relative flex items-center justify-center w-full h-full"
-                    onClick={(e) => e.stopPropagation()} // verhindert, dass Klick auf Bild das Overlay schließt
+                    onClick={(e) => e.stopPropagation()}
                   >
                     {/* ❌ Schließen-Button */}
                     <button
