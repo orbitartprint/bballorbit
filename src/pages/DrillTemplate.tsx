@@ -105,13 +105,13 @@ const DrillTemplate = () => {
               {/* Left Column: Video/Images */}
               <div className="space-y-6">
                 {drill.videoMp4 && (
-                <div className="relative w-full">
+                <div className="relative w-full rounded-xl overflow-hidden shadow-lg bg-black">
                   {!isVideoPlaying ? (
                     <button
-                      className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black group"
+                      className="relative w-full rounded-xl overflow-hidden bg-black group"
                       onClick={() => {
                         setIsVideoPlaying(true);
-                        setTimeout(() => videoRef.current?.play(), 150); // sanfter Start
+                        setTimeout(() => videoRef.current?.play(), 150);
                       }}
                       aria-label="Play video"
                     >
@@ -120,7 +120,8 @@ const DrillTemplate = () => {
                         src={drill.thumbnail}
                         alt={`${drill.title} - preview`}
                         loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto object-contain bg-black transition-transform duration-300 group-hover:scale-105"
+                        style={{ aspectRatio: "auto" }}
                       />
               
                       {/* Overlay mit Play Icon */}
@@ -140,18 +141,17 @@ const DrillTemplate = () => {
                       ref={videoRef}
                       src={drill.videoMp4}
                       controls
-                      className="rounded-xl w-full h-auto shadow-lg"
+                      className="w-full h-auto object-contain bg-black rounded-xl"
                       poster={drill.thumbnail}
                       preload="metadata"
                       playsInline
-                      onEnded={() => setIsVideoPlaying(false)} // Nach Ende wieder Thumbnail zeigen
+                      onEnded={(e) => e.currentTarget.pause()} // bleibt beim letzten Frame stehen
                     >
                       Your browser does not support the video tag.
                     </video>
                   )}
                 </div>
               )}
-
                 
                 {drill.images && drill.images.length > 0 && (
                 <div
