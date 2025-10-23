@@ -7,12 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { drills } from "@/data/drills";
 import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const DrillTemplate = () => {
   const { slug } = useParams<{ slug: string }>();
   const drill = drills.find((d) => d.id === slug);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   if (!drill) {
     return <Navigate to="/drills" replace />;
@@ -103,15 +105,53 @@ const DrillTemplate = () => {
               {/* Left Column: Video/Images */}
               <div className="space-y-6">
                 {drill.videoMp4 && (
-                  <div>
-                    <video 
-                      src={drill.videoMp4} 
-                      controls 
+                <div className="relative w-full">
+                  {!isVideoPlaying ? (
+                    <button
+                      className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black group"
+                      onClick={() => {
+                        setIsVideoPlaying(true);
+                        setTimeout(() => videoRef.current?.play(), 150); // sanfter Start
+                      }}
+                      aria-label="Play video"
+                    >
+                      {/* Thumbnail */}
+                      <img
+                        src={drill.thumbnail}
+                        alt={`${drill.title} - preview`}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+              
+                      {/* Overlay mit Play Icon */}
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="white"
+                          className="w-20 h-20 opacity-90"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </button>
+                  ) : (
+                    <video
+                      ref={videoRef}
+                      src={drill.videoMp4}
+                      controls
                       className="rounded-xl w-full h-auto shadow-lg"
                       poster={drill.thumbnail}
-                    />
-                  </div>
-                )}
+                      preload="metadata"
+                      playsInline
+                      onEnded={() => setIsVideoPlaying(false)} // Nach Ende wieder Thumbnail zeigen
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
+                </div>
+              )}
+
                 
                 {drill.images && drill.images.length > 0 && (
                 <div
