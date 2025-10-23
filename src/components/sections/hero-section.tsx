@@ -15,7 +15,7 @@ const HeroSection = () => {
         fetchPriority="high"
       />
       {/* Gradient unten */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0e0e0e]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#222222]" />
     
       {/* Optional: Dark Overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/60" />
