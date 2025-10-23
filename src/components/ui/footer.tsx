@@ -110,21 +110,7 @@ const Footer = () => {
               {/* Cookie Settings Button */}
               <li>
                 <button
-                  onClick={() => {
-                    if (window.cookieyes && typeof window.cookieyes.resetConsent === "function") {
-                      window.cookieyes.resetConsent();
-                    } else {
-                      // Warte kurz und versuche es erneut, falls CookieYes noch nicht geladen ist
-                      const retry = setInterval(() => {
-                        if (window.cookieyes && typeof window.cookieyes.resetConsent === "function") {
-                          window.cookieyes.resetConsent();
-                          clearInterval(retry);
-                        }
-                      }, 500);
-                      // Sicherheitshalber nach 5 Sekunden stoppen
-                      setTimeout(() => clearInterval(retry), 4000);
-                    }
-                  }}
+                  data-cky-tag="preferences"
                   className="text-muted-foreground hover:text-primary transition-smooth"
                 >
                   Cookie Preferences
