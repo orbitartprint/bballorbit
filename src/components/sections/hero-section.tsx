@@ -5,9 +5,21 @@ import logoImg from "@/assets/basketball-orbit-logo.webp";
 
 const HeroSection = () => {
   return (
-    <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Background Image */}
+      <img
+        src="/lovable-uploads/arena-1.webp"
+        alt="Basketball Training Hall"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
+        loading="eager"
+        fetchPriority="high"
+      />
+    
+      {/* Optional: Dark Overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black/60" />
+    
+      {/* Optional: keep your geometric accents if you like */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full border-2 border-primary"></div>
         <div className="absolute bottom-20 right-10 w-24 h-24 rounded-full border-2 border-secondary"></div>
         <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full border border-primary"></div>
