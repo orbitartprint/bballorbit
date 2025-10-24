@@ -60,7 +60,7 @@ const HeroSection = () => {
               className="text-lg px-8 py-6 shadow-orange transition-bounce hover:scale-105"
             >
               <Link to="/resources">
-                Get Free Drills PDF
+                Get Free Coaching Resources
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
