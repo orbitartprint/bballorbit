@@ -180,10 +180,16 @@ This new role requires creativity, curiosity, and humility — trusting the proc
 
 ### Summary: The Scientific Core of Modern Coaching
 
-The Constraint-Led Approach stands on the shoulders of decades of research in human movement science.  
-It redefines skill not as a set of technical templates, but as a living, adaptive process — shaped by the constraints of player, task, and environment.  
+The Constraint-Led Approach stands on the shoulders of decades of research in human movement science.
+It redefines skill not as a set of technical templates, but as a living, adaptive process — shaped by the dynamic interaction of player, task, and environment.
 
-In the next chapter, we’ll explore how this theory transforms practice design — turning drills into learning environments where adaptability, creativity, and intelligence thrive.
+When we remove that interaction, we remove the very conditions under which skill emerges.
+Practicing in isolation might look clean, organized, and productive — but without context, decisions, or pressure, it teaches coordination that doesn’t survive real games.
+
+So the question becomes: if “clean drills” don’t create real learning, how should we design environments that do?
+How can we create practices where perception, action, and decision-making are inseparable — and where adaptability, creativity, and intelligence thrive?
+
+In the next chapter, we’ll move from theory to practice — exploring how the CLA framework transforms the way we design drills, structure practices, and develop smarter players through interaction, not instruction.
 
 <!-- 🟠 INFOBOX IDEA:
 Title: "Infobox 1 – The Three Constraints at a Glance"
