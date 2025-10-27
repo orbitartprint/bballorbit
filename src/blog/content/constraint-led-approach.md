@@ -155,7 +155,7 @@ But unlike a **Games-Based Approach**, which focuses mostly on tactical awarenes
 Every small-sided game, spacing change, or scoring rule acts as a deliberate design choice to shape behavior.  
 In short: it’s not chaos — it’s *controlled chaos*.
 
-As summarized in *Applying CLA to Basketball Shooting* (2022):  
+As summarized in *Applying CLA to Basketball Shooting* (2019):  
 movement coordination emerges “through the interaction between the organism and the environment,” guided by task-specific constraints rather than verbal correction.
 
 This is why the CLA feels so different — it aligns coaching with how the brain and body actually learn.  
