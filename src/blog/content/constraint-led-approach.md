@@ -211,6 +211,6 @@ Teacher = facilitator	Coach = environment designer -->
 - Newell, K. M. (1986). *Constraints on the Development of Coordination.*  
 - Davids, K. et al. (2012). *Ecological Dynamics as a Framework for Understanding Skill Acquisition.*  
 - Cassidy, J. (2021). *Different Approaches to Skill Acquisition.* [Skilled Athleticism Blog](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)  
-- Bonfigli, T. (2019). *Applying CLA to Basketball Shooting* (2022).  
-- Sarama, A. & Klusemann, M. (2024). *Transforming Basketball Podcast*, EP31: *How Basketball Coaches Can Create a Culture of Learning with the CLA.* Spotify. [Spotify Podcast](https://open.spotify.com/episode/0h5Tim3n1oDj8k78xWbTS9)
+- Bonfigli, T. (2019). *Applying CLA to Basketball Shooting*.  
+- Sarama, A. & Klusemann, M. (2024). *Transforming Basketball Podcast*, EP31: *How Basketball Coaches Can Create a Culture of Learning with the CLA.* [Spotify Podcast](https://open.spotify.com/episode/0h5Tim3n1oDj8k78xWbTS9)
 
