@@ -133,4 +133,49 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* 🟧 Orange Info Box (z. B. für Key Takeaways, Tipps) */
+  .infobox {
+    @apply border border-[#f57520]/40 bg-[#111111] rounded-xl p-6 shadow-lg mt-8 mb-8;
+  }
+
+  .infobox h4 {
+    @apply text-[#f57520] font-semibold mb-3;
+  }
+
+  .infobox p {
+    @apply text-muted-foreground leading-relaxed;
+  }
+
+  /* 💡 Kleine graue Pro-Tip Box */
+  .protip {
+    @apply bg-card/40 border border-border rounded-lg p-4 mt-6 mb-6 text-sm text-muted-foreground;
+  }
+
+  .protip strong {
+    @apply text-foreground;
+  }
+
+  /* 🟦 Blaue Infobox – für wissenschaftliche Definitionen, theoretische Konzepte, Zitate */
+  .infobox-blue {
+    @apply bg-gradient-to-br from-[#1a1d3f]/60 via-[#121321] to-[#0b0b0d] border border-[#2d32f1]/50 rounded-xl p-6 mt-8 mb-8 shadow-lg;
+    box-shadow: 0 0 25px rgba(45, 50, 241, 0.15);
+  }
+
+  .infobox-blue h4 {
+    @apply text-[#2d32f1] font-semibold mb-3;
+  }
+
+  .infobox-blue p {
+    @apply text-muted-foreground leading-relaxed;
+  }
+
+  /* ✨ Hover-Effekt für alle Boxen */
+  .infobox:hover,
+  .infobox-blue:hover,
+  .protip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(245, 117, 32, 0.25);
+    transition: all 0.3s ease;
+  }
 }
