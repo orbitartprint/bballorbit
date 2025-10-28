@@ -1,68 +1,66 @@
 # The Constraint-Led Approach Revolution: Rethinking How We Coach Basketball
 ### How Science, Creativity, and Game Reality Are Transforming Player Development
 
-> “We don’t teach the move — we teach the mind that creates it.”
+> We don’t teach the move — we teach the mind that creates it.
 
 ---
 
-> **Intro**
->
-> For decades, basketball coaching has looked the same — lines of players, constant instructions, and rehearsed drills that seem productive but fail under pressure.  
-> A quiet revolution is now reshaping the game: the **Constraint-Led Approach (CLA)**, a science-backed framework that views learning not as repetition, but as interaction.  
->
-> In this article, we explore how the CLA challenges traditional coaching, explains the science behind real skill development, and shows how modern coaches can design practices that build smarter, more adaptable players — without losing the joy of the game.
+<div className="infobox">
+  <h4>Intro</h4>
+  <p>
+    A quiet revolution is now reshaping the game: the **Constraint-Led Approach (CLA)**, a science-backed framework that views learning not as repetition, but as interaction.  
+
+   In this article, we explore how the CLA challenges traditional coaching, explains the science behind real skill development, and shows how modern coaches can design practices that build smarter, more adaptable players — without losing the joy of the game.
+  </p>
+</div>
 
 ---
 
 ## I. The End of the Old Coaching Era
 
-For decades, basketball coaching has looked disciplined — but much of it wasn’t truly learning.  
-Players stood in lines, repeated identical moves, and perfected technique in silence while coaches barked corrections.  
-It *felt* organized. It *looked* productive. But it produced players who could perform in practice, not in games.
+For decades, basketball coaching has looked disciplined — but most of it wasn’t true learning.  
+Players stood in lines, repeated the same moves, and perfected technique in silence while coaches barked corrections.  
+It *looked* productive — but it built players who could perform in practice, not in games.
 
-Today, that era is quietly ending.  
-A new wave of coaches is questioning everything — from the purpose of drills to the role of the coach itself.  
-This transformation is driven by science, not slogans. And at its core stands the **Constraint-Led Approach (CLA)** — a framework that redefines how humans learn movement and decision-making.
+Now, that era is quietly ending.  
+A new generation of coaches is questioning everything — from the purpose of drills to the coach’s role itself.  
+At the heart of this transformation stands the **Constraint-Led Approach (CLA)** — a science-based framework redefining how humans learn movement and decision-making.
 
 ---
 
 ### The Old Paradigm: Technique Without Context
 
-Traditional coaching assumes that players first learn *skills* in isolation — dribbling, shooting, passing — and only later apply them to real play.  
-The gym becomes a lab for “perfect form,” where defenders, time pressure, and uncertainty are removed.
+Traditional coaching assumes players must first master skills in isolation — dribbling, shooting, passing — and only then apply them in games.  
+The gym becomes a lab for “perfect form,” stripped of defenders, pressure, and unpredictability.
 
-The problem?  
-Once you strip away context, you strip away the *problem* that the skill was meant to solve.  
-As coach George Vaz put it in *The Transforming Basketball Podcast* (EP 136, 2025):
+But once you remove context, you remove the *problem* the skill was meant to solve.  
+As coach George Vaz explained in *The Transforming Basketball Podcast* (EP 136, 2025):
 
-> “We’ve been practicing moves without the problem those moves were designed to solve.”  
-> — [The Transforming Basketball Podcast, EP 136](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
+> We’ve been practicing moves without the problem those moves were designed to solve.  
+> — [*The Transforming Basketball Podcast, EP 136 (2025)*](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
 
-That single line exposes the flaw of the old system: it treats movement as choreography rather than *problem solving*.  
-Players learn to repeat — not to adapt.  
-They master technique in a vacuum, only to see it fall apart under real defensive pressure.
+That single line exposes the flaw: traditional training treats movement as choreography, not problem-solving.  
+Players learn to repeat — not to adapt — and their technique collapses under real defensive pressure.
 
 ---
 
 ### The Illusion of Mastery
 
-Smooth drills and perfect mechanics feel like progress — but they’re often *false learning*.  
-Consistency without variability breeds fragility.  
-Real learning happens when the environment forces the player to *adjust* — when mistakes aren’t punished, but explored.
+Perfect mechanics feel like progress — but often they’re *false learning*.  
+Repetition without variability breeds fragility.  
+Real learning happens when players must *adjust* — when mistakes aren’t punished but explored.
 
-The **CLA** flips the equation: instead of chasing control, it invites *chaos*.  
+The **CLA** flips this logic: instead of avoiding chaos, it uses it.  
 Every constraint — spacing, time, defenders — becomes a tool to shape perception and decision-making.  
-It may look messy from the sideline, but that mess is what real transfer looks like.
+It may look messy, but that mess is what real transfer looks like.
 
 ---
 
 ### Why the Old Way Persists
 
-If the science is clear, why do so many gyms still look the same?
-
+If the science is clear, why do most gyms still look the same?  
 Because control feels safe.  
-Lines, commands, and order make a coach look “in charge.”  
-Game-like learning, on the other hand, feels unpredictable — and that’s uncomfortable.  
+Lines and order make coaches appear “in charge,” while game-like learning feels unpredictable.
 
 But control kills discovery.  
 Modern coaches are no longer dictators of technique — they’re **architects of learning environments**.  
@@ -70,37 +68,60 @@ As Jordan Cassidy wrote in *Different Approaches to Skill Acquisition* (2021):
 
 > “The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
 > but an architect who designs learning environments that allow solutions to emerge.”  
-> — [Different Approaches to Skill Acquisition, Jordan Cassidy (2021)](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
+> — [*Different Approaches to Skill Acquisition, Jordan Cassidy (2021)*](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
 
 ---
 
 ### The Turning Point
 
-This isn’t just about better drills — it’s about redefining coaching itself.  
+This shift goes beyond drills — it redefines coaching itself.  
 We’re moving from *telling* players what to do to *designing* situations where they can discover what works.  
 From perfection to adaptation.  
 From rote learning to genuine understanding.
 
-> “The Constraint-Led Approach doesn’t just make you better — it makes basketball feel like basketball again.”  
-> — *The Transforming Basketball Podcast, EP 82 (2025)*  
-> [Listen on Spotify](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
+> The Constraint-Led Approach doesn’t just make you better — it makes basketball feel like basketball again.  
+> — [*The Transforming Basketball Podcast, EP 82 (2024)*](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
 
-The revolution is here — and it starts the moment we stop chasing flawless form  
+The revolution begins the moment we stop chasing flawless form  
 and start creating environments where learning feels like the game itself.
 
 ---
 
-<!-- 🟠 INFOBOX IDEA:
-Title: "Signs of the Old Coaching Paradigm"
-Content: Static drills • Coach-led correction • Isolated repetition • Control over discovery -->
+<div className="protip">
+  💡 <strong>Signs of the Old Coaching Paradigm:</strong> Static drills • Coach-led correction • Isolated repetition • Control over discovery
+</div>
 
-<!-- 🔵 VISUAL PLACEHOLDER:
-Simple diagram showing the shift:
-“Instructor → Environment Designer” -->
+<!-- VISUAL PLACEHOLDER: Instructor → Environment Designer -->
+<div class="flex items-center justify-center my-10">
+  <div class="flex items-center space-x-6 md:space-x-10">
+    <!-- Left Circle -->
+    <div class="flex flex-col items-center">
+      <div class="w-28 h-28 rounded-full border-2 border-primary flex items-center justify-center bg-[#111] text-white font-semibold text-center">
+        Instructor
+      </div>
+      <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
+    </div>
+
+    <!-- Arrow -->
+    <div class="text-primary text-4xl md:text-5xl font-bold">
+      →
+    </div>
+
+    <!-- Right Circle -->
+    <div class="flex flex-col items-center">
+      <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
+        Environment<br />Designer
+      </div>
+      <span class="mt-2 text-sm text-muted-foreground">New Role</span>
+    </div>
+  </div>
+</div>
+
+---
 
 ## II. The Science Behind the CLA: Ecological Dynamics
 
-> “Skill doesn’t live in the player — it lives in the interaction between the player and the environment.”  
+> Skill doesn’t live in the player — it lives in the interaction between the player and the environment.
 > — adapted from Seifert & Davids (2017)
 
 The **Constraint-Led Approach (CLA)** is not a random collection of coaching tricks — it’s built on a deep scientific foundation called **Ecological Dynamics**.  
