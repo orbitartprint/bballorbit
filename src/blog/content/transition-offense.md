@@ -47,7 +47,7 @@ In my system:
 - The ballhandler attacks the open middle. If there’s space - go.  
   If not, kick it to a wing or flow into a trigger and let the advantage continue.
 
-![transition](lovable-uploads/transition.webp)
+![transition](/lovable-uploads/transition.webp)
 
 When every player knows that *speed* is the rule and *structure* adapts, you get a natural rhythm.  
 You’re not waiting for a point guard. You’re not passing sideways. You’re simply playing basketball.
@@ -75,7 +75,7 @@ When playing 4v4 or 5v5, I use rules that emphasize tempo:
 - ✅ This forces players to **push the ball** themselves.
 - ✅ It teaches wings to **sprint early** — there’s no reason to wait in the backcourt.
 
-This approach, known as the [**Constraint-Led Approach (CLA)**](blog/constraint-led-approach), builds implicit learning.  
+This approach, known as the [**Constraint-Led Approach (CLA)**](/blog/constraint-led-approach), builds implicit learning.  
 Players adapt and find solutions on their own, without rigid instructions.  
 It creates creative, confident decision-makers - exactly what you want in modern basketball.
 
