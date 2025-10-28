@@ -169,6 +169,16 @@ const BlogArticle = () => {
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm, remarkMath]}
                     rehypePlugins={[rehypeRaw, rehypeSlug, rehypeKatex]}
+                    components={{
+                      a: ({ node, ...props }) => (
+                        <a
+                          {...props}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        />
+                      ),
+                    }}
                   >
                     {article.content}
                   </ReactMarkdown>
