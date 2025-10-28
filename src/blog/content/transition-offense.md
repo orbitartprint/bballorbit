@@ -47,6 +47,8 @@ In my system:
 - The ballhandler attacks the open middle. If there’s space - go.  
   If not, kick it to a wing or flow into a trigger and let the advantage continue.
 
+![transition](lovable-uploads/transition.webp)
+
 When every player knows that *speed* is the rule and *structure* adapts, you get a natural rhythm.  
 You’re not waiting for a point guard. You’re not passing sideways. You’re simply playing basketball.
 
