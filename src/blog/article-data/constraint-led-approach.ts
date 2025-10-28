@@ -17,7 +17,7 @@ export const constraintLedApproach = {
     "Modern Coaching",
     "Basketball Learning",
   ],
-  heroImage: "/lovable-uploads/constraint-led-approach.webp",
+  heroImage: "/lovable-uploads/constraint-led-approach-hero.webp",
   heroImageAlt: "Coach guiding basketball players in a dynamic practice setting",
   readTimeMinutes: calculateReadTime(articleContent),
   content: articleContent,
