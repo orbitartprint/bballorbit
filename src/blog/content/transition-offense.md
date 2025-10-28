@@ -29,7 +29,7 @@ Transition gives you:
 - **Fun and freedom** that players love.
 
 🎥 **Watch the full video breakdown:**  
-[![Transition Offense Breakdown](https://img.youtube.com/vi/WIUktpk29iI/hqdefault.jpg)](https://youtu.be/WIUktpk29iI)
+[![Transition Offense Breakdown](https://img.youtube.com/vi/WIUktpk29iI/hqdefault.jpg)](https://youtu.be/WIUktpk29iI){:target="_blank"}
 
 ---
 
@@ -37,7 +37,7 @@ Transition gives you:
 
 I don’t teach fixed lanes or “positions.”  
 Instead, I teach **principles**.  
-If you’re interested in this approach, check out [Principles Over Rules](https://transformingbball.com/principles-over-rules/).
+If you’re interested in this approach, check out [Principles Over Rules](https://transformingbball.com/principles-over-rules/){:target="_blank"}.
 
 In my system:
 - Anyone can push the ball - few exceptions allowed.
@@ -80,7 +80,7 @@ Players adapt and find solutions on their own, without rigid instructions.
 It creates creative, confident decision-makers - exactly what you want in modern basketball.
 
 🎥 **Watch: 4 Drills to Train Transition Offense**  
-[![Transition Drills](https://img.youtube.com/vi/DTqeh4D-agI/hqdefault.jpg)](https://youtu.be/DTqeh4D-agI)
+[![Transition Drills](https://img.youtube.com/vi/DTqeh4D-agI/hqdefault.jpg)](https://youtu.be/DTqeh4D-agI){:target="_blank"}
 
 ---
 
