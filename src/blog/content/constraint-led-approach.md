@@ -319,6 +319,90 @@ Coaches stop “running drills” and start *shaping learning environments*.
 
 In the next chapter, we’ll explore how this philosophy comes alive in **Small-Sided Games and Constraint Systems** — where the game itself becomes the teacher.
 
+---
+
+# V. Real-World Transformation – My Journey with the CLA
+
+> “Good coaching isn’t about control — it’s about curiosity.”
+
+Like most coaches, I started the traditional way:  
+line-up layups, 3-man weaves, static dribbling drills — the routines everyone knew.  
+
+It all looked clean and structured until game day came.  
+Then I’d watch my players miss the same layups they’d drilled a hundred times the night before. 
+That’s when it hit me: *we were practicing movement, not solving problems.*
+
+---
+
+## Discovering a New Lens
+
+During the COVID lockdowns, I finally had time to rethink my coaching.  
+I dove into podcasts, research papers, and online discussions — and that’s when I came across **Alex Sarama** and *Transforming Basketball*.  
+
+The **Constraint-Led Approach** first seemed chaotic, even risky.  
+But its message stuck: learning happens *through* the game, not *before* it.  
+Over time I learned to trust the process.  
+
+Even today, I wouldn’t claim perfect alignment with every principle — and that’s fine.  
+The CLA itself is about continuous exploration.
+
+---
+
+## The First Experiments
+
+When I introduced my first CLA drills, the reaction was instant — **the players loved it.**  
+The energy was different. Instead of repeating the same motion over and over, they were exploring, reacting, laughing — *learning.*
+
+---
+
+> 💡 **Coaching Insight:**  
+> Start small. One constraint per drill is often enough to change behavior.
+
+---
+
+One session still stands out.  
+I wanted to teach pick-and-roll reads, but instead of giving instructions,  
+I created a **small-sided game** with a few simple constraints.  
+Within minutes, the players discovered the very solutions I’d planned to explain in weeks.  
+They didn’t need more information — they needed better *problems.*
+
+---
+
+## How Constraints Shape Behavior
+
+Since then, I’ve used constraints to replace commands.
+
+- **Fast-break points count double** → instant pace and decision-making.  
+- **No passes in the backcourt** → natural spacing and rhythm emerged.
+
+When players view constraints not as limits but as *challenges*, learning accelerates.  
+They start competing within the rule — and that’s when creativity takes off.
+
+---
+
+## What Changed
+
+The energy in practice shifted.  
+Players talked, adjusted, and solved problems on their own.  
+They failed often — but failed *forward.*  
+
+For me, it was liberating.  
+I stopped micromanaging and started observing.  
+My job wasn’t to tell them what to do — it was to **design an environment where discovery could happen.**
+
+---
+
+> ![Learning in action — discovery through design.](path/to/your-image.webp)
+
+> “They didn’t need more instruction. They needed better problems.”
+
+---
+
+**→ Next:**  
+We’ll take a closer look at how these ideas translate into practice —  
+how to design constraints and small-sided games that shape real basketball intelligence.
+
+
 
 *References:*  
 - Seifert, L. & Davids, K. (2017). *Ecological Dynamics and the Acquisition of Movement Skills.*  
