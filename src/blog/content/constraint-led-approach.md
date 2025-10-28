@@ -8,7 +8,7 @@
 <div className="infobox">
   <h4>Intro</h4>
   <p>
-    A quiet revolution is now reshaping the game: the **Constraint-Led Approach (CLA)**, a science-backed framework that views learning not as repetition, but as interaction.  
+    A quiet revolution is now reshaping the game: the <strong>Constraint-Led Approach (CLA)</strong>, a science-backed framework that views learning not as repetition, but as interaction.  
 
    In this article, we explore how the CLA challenges traditional coaching, explains the science behind real skill development, and shows how modern coaches can design practices that build smarter, more adaptable players — without losing the joy of the game.
   </p>
@@ -19,10 +19,13 @@
 ## I. The End of the Old Coaching Era
 
 For decades, basketball coaching has looked disciplined — but most of it wasn’t true learning.  
+
 Players stood in lines, repeated the same moves, and perfected technique in silence while coaches barked corrections.  
+
 It *looked* productive — but it built players who could perform in practice, not in games.
 
 Now, that era is quietly ending.  
+
 A new generation of coaches is questioning everything — from the purpose of drills to the coach’s role itself.  
 At the heart of this transformation stands the **Constraint-Led Approach (CLA)** — a science-based framework redefining how humans learn movement and decision-making.
 
@@ -88,7 +91,8 @@ and start creating environments where learning feels like the game itself.
 ---
 
 <div className="protip">
-  💡 <strong>Signs of the Old Coaching Paradigm:</strong> Static drills • Coach-led correction • Isolated repetition • Control over discovery
+  💡 <strong>Signs of the Old Coaching Paradigm:</strong>
+  Static drills • Coach-led correction • Isolated repetition • Control over discovery
 </div>
 
 <!-- VISUAL PLACEHOLDER: Instructor → Environment Designer -->
