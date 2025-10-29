@@ -13,28 +13,6 @@ import { Helmet } from "react-helmet";
 const Index = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
-      <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "Basketball Orbit",
-        url: "https://www.bballorbit.com",
-        logo: "https://www.bballorbit.com/logo.png",
-        sameAs: [
-          "https://www.youtube.com/@BasketballOrbit",
-          "https://www.instagram.com/basketball_orbit"
-        ]
-      })}
-    </script>
-  
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "BballOrbit.com - Modern Drills. Smarter Coaching. Better Players.",
-        url: "https://www.bballorbit.com"
-      })}
-    </script>
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
