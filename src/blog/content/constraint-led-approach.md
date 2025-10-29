@@ -5,7 +5,7 @@
 
 ---
 
-<div className="infobox">
+<div class="infobox">
   <h4>Intro</h4>
   <p>
     A quiet revolution is now reshaping the game: the <strong>Constraint-Led Approach (CLA)</strong>, a science-backed framework that views learning not as repetition, but as interaction.  
@@ -40,7 +40,7 @@ But once you remove context, you remove the *problem* the skill was meant to sol
 As coach George Vaz explained in *The Transforming Basketball Podcast* (EP 136, 2025):
 
 > We’ve been practicing moves without the problem those moves were designed to solve.  
-> — [*The Transforming Basketball Podcast, EP 136 (2025)*](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
+> — [The Transforming Basketball Podcast, EP 136 (2025)](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
 
 That single line exposes the flaw: traditional training treats movement as choreography, not problem-solving.  
 Players learn to repeat — not to adapt — and their technique collapses under real defensive pressure.
@@ -90,8 +90,8 @@ and start creating environments where learning feels like the game itself.
 
 ---
 
-<div className="protip">
-  💡 <strong>Signs of the Old Coaching Paradigm:</strong>
+<div class="protip">
+  💡 <strong>Signs of the Old Coaching Paradigm:</strong><br>
   Static drills • Coach-led correction • Isolated repetition • Control over discovery
 </div>
 
@@ -106,12 +106,10 @@ and start creating environments where learning feels like the game itself.
       <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
     </div>
 
-    <!-- Arrow -->
     <div class="text-primary text-4xl md:text-5xl font-bold">
       →
     </div>
 
-    <!-- Right Circle -->
     <div class="flex flex-col items-center">
       <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
         Environment<br />Designer
