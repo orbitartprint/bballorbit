@@ -90,14 +90,15 @@ and start creating environments where learning feels like the game itself.
 
 
 <div class="my-10">
-  <div class="protip mb-8">
-    💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
-    Static drills • Coach-led correction • Isolated repetition • Control over discovery
+  <div class="border-l-4 border-[#f57520] bg-[#0e0e0e] p-4 rounded-md shadow-sm">
+    <div class="text-sm text-muted-foreground">
+      💡 <strong class="text-foreground">Signs of the Old Coaching Paradigm:</strong><br />
+      Static drills • Coach-led correction • Isolated repetition • Control over discovery
+    </div>
   </div>
 
   <div class="flex items-center justify-center">
     <div class="flex items-center space-x-6 md:space-x-10">
-      <!-- Left Circle -->
       <div class="flex flex-col items-center">
         <div class="w-28 h-28 rounded-full border-2 border-primary flex items-center justify-center bg-[#111] text-white font-semibold text-center">
           Instructor
@@ -105,10 +106,8 @@ and start creating environments where learning feels like the game itself.
         <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
       </div>
 
-      <!-- Arrow (no HTML comment) -->
       <div class="text-primary text-4xl md:text-5xl font-bold">→</div>
 
-      <!-- Right Circle -->
       <div class="flex flex-col items-center">
         <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
           Environment<br />Designer
