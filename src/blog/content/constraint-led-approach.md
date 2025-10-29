@@ -65,6 +65,11 @@ If the science is clear, why do most gyms still look the same?
 Because control feels safe.  
 Lines and order make coaches appear “in charge,” while game-like learning feels unpredictable.
 
+<div className="protip">
+  💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
+    Static drills • Coach-led correction • Isolated repetition • Control over discovery
+</div>
+
 But control kills discovery.  
 Modern coaches are no longer dictators of technique — they’re **architects of learning environments**.  
 As Jordan Cassidy wrote in *Different Approaches to Skill Acquisition* (2021):
@@ -89,11 +94,6 @@ The revolution begins the moment we stop chasing flawless form
 and start creating environments where learning feels like the game itself.
 
 ---
-
-<div className="protip">
-  💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
-    Static drills • Coach-led correction • Isolated repetition • Control over discovery
-</div>
 
 ![oldrole_newrole](/lovable-uploads/oldrole-newrole.webp)
 
@@ -223,10 +223,7 @@ The Constraint-Led Approach lives or dies in practice design.
 Theory alone doesn’t change how players learn — the gym does.  
 And in that gym, the coach’s job is no longer to control the session, but to *design* it.
 
-The modern coach has become an architect of environments — a designer of learning conditions that invite discovery.  
-Every drill, every rule, every setup sends a message:  
-“This is what matters here.”  
-The art lies in shaping those conditions so that the right behaviors emerge *without* having to be commanded.
+The art lies in creating that design so that the right behaviors emerge *without* having to be commanded.
 
 ---
 
