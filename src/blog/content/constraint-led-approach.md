@@ -111,8 +111,9 @@ This framework merges two fields of research: **Ecological Psychology**, which s
 <div className="infobox-blue">
   <h4>Ecological Dynamics</h4>
   <p>
-    At its core, Ecological Dynamics views every player as a <strong>dynamic system</strong> that continuously adapts to their surroundings.  
-Movement isn’t something stored in the brain and executed on command — it *emerges* in real time as players interact with defenders, space, and task demands.  
+    At its core, it views every player as a <strong>dynamic system</strong> that continuously adapts to their surroundings.
+    
+Movement isn’t something stored in the brain and executed on command — it <strong>emerges</strong> in real time as players interact with defenders, space, and task demands.  
 Skill, therefore, is not the memorization of a technique — it’s a <strong>functional adaptation</strong> to a constantly changing environment.
   </p>
 </div>
@@ -185,15 +186,13 @@ In this framework, the coach’s job changes fundamentally.
 Rather than being the sole source of answers, the coach becomes a **designer of learning environments**.  
 Each constraint — a rule, a space, a number of players — becomes a teaching tool.
 
-As summarized by Jordan Cassidy (2021) in [Different Approaches to Skill Acquisitio](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review):  
+As summarized by Jordan Cassidy (2021) in [Different Approaches to Skill Acquisition](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review):  
 > The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
 > but an architect who designs learning environments that allow solutions to emerge.
 
 This new role requires creativity, curiosity, and humility — trusting the process instead of the script.
 
 ---
-
-### Summary: The Scientific Core of Modern Coaching
 
 <div class="infobox">
   <h3>📘 Summary: The Scientific Core of Modern Coaching</h3>
@@ -227,7 +226,7 @@ Teacher = facilitator	Coach = environment designer -->
 ## III. From Theory to Practice – Designing CLA Environments
 
 > The purpose of manipulating constraints is to guide behavior — that’s essentially why we do it.
-> — The Transforming Basketball Podcast, EP132: Effective Constraint Manipulation
+> [The Transforming Basketball Podcast, EP 132 (2025)](https://open.spotify.com/episode/5KLyAcpIUifmKjFFk7VBYW)
 
 ---
 
