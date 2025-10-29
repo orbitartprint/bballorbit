@@ -11,21 +11,58 @@ import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import { Helmet } from "react-helmet";
 
 const Index = () => {
-  useEffect(() => {window.scrollTo(0, 0);}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <main>
-        <HeroSection />
-        <VideoSection />
-        <WhyBballOrbit />
-        <MoreVideos />
-        <Testimonials />
-        <BlogPromotion />
-        <LatestBlogPosts />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Helmet>
+        <title>Basketball Orbit — Modern Drills. Smarter Coaching. Better Players.</title>
+        <meta
+          name="description"
+          content="Your go-to hub for modern basketball coaching: small-sided games, constraint-led approach, and ready-to-use drills and resources."
+        />
+        {/* Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Basketball Orbit",
+            url: "https://www.bballorbit.com",
+            logo: "https://www.bballorbit.com/logo.png",
+            sameAs: [
+              "https://www.youtube.com/@BasketballOrbit",
+              "https://www.instagram.com/basketball_orbit"
+            ]
+          })}
+        </script>
+        {/* WebSite Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "BballOrbit.com - Modern Drills. Smarter Coaching. Better Players.",
+            url: "https://www.bballorbit.com"
+            // Wenn du später eine Suche hast, kannst du "potentialAction" ergänzen
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <main>
+          <HeroSection />
+          <VideoSection />
+          <WhyBballOrbit />
+          <MoreVideos />
+          <Testimonials />
+          <BlogPromotion />
+          <LatestBlogPosts />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
