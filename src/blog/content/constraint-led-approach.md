@@ -106,7 +106,7 @@ and start creating environments where learning feels like the game itself.
         <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
       </div>
 
-      <div class="text-primary text-4xl md:text-5xl font-bold">→</div>
+      <div class="text-primary text-4xl md:text-5xl font-bold">arrow</div>
 
       <div class="flex flex-col items-center">
         <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
