@@ -5,7 +5,7 @@
 
 ---
 
-<div className="infobox">
+<div class="infobox">
   <h4>Intro</h4>
   <p>
     A quiet revolution is now reshaping the game: the <strong>Constraint-Led Approach (CLA)</strong>, a science-backed framework that views learning not as repetition, but as interaction.  
@@ -40,7 +40,7 @@ But once you remove context, you remove the *problem* the skill was meant to sol
 As coach George Vaz explained in *The Transforming Basketball Podcast* (EP 136, 2025):
 
 > We’ve been practicing moves without the problem those moves were designed to solve.  
-> [The Transforming Basketball Podcast, EP 136 (2025)](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
+> — *The Transforming Basketball Podcast, EP 136 (2025)* – [Spotify](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
 
 That single line exposes the flaw: traditional training treats movement as choreography, not problem-solving.  
 Players learn to repeat — not to adapt — and their technique collapses under real defensive pressure.
@@ -65,7 +65,7 @@ If the science is clear, why do most gyms still look the same?
 Because control feels safe.  
 Lines and order make coaches appear “in charge,” while game-like learning feels unpredictable.
 
-<div className="protip">
+<div class="protip">
   💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
     Static drills • Coach-led correction • Isolated repetition • Control over discovery
 </div>
@@ -76,7 +76,7 @@ As Jordan Cassidy wrote in *Different Approaches to Skill Acquisition* (2021):
 
 > The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
 > but an architect who designs learning environments that allow solutions to emerge.
-— [Different Approaches to Skill Acquisition, Jordan Cassidy (2021)](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
+> — *Cassidy (2021), Different Approaches to Skill Acquisition* – [Skilled Athleticism Blog](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
 
 ---
 
@@ -88,14 +88,14 @@ From perfection to adaptation.
 From rote learning to genuine understanding.
 
 > The Constraint-Led Approach doesn’t just make you better — it makes basketball feel like basketball again.  
-> — [The Transforming Basketball Podcast, EP 82 (2024)](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
+> — *The Transforming Basketball Podcast, EP 82 (2024)* – [Spotify](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
 
 The revolution begins the moment we stop chasing flawless form  
 and start creating environments where learning feels like the game itself.
 
 ---
 
-![oldrole_newrole](/lovable-uploads/oldrole-newrole.webp)
+![Diagram: Old role ‘Instructor’ → New role ‘Environment Designer](/lovable-uploads/oldrole-newrole.webp)
 
 ---
 
@@ -108,7 +108,7 @@ The **Constraint-Led Approach (CLA)** is not a random collection of coaching tri
 
 This framework merges two fields of research: **Ecological Psychology**, which studies how humans perceive and act in their environments, and [Dynamical Systems Theory (DST)](https://en.wikipedia.org/wiki/Dynamical_systems_theory), which explains how complex systems — like the human body — self-organize without a central command.
 
-<div className="infobox-blue">
+<div class="infobox-blue">
   <h4>Ecological Dynamics</h4>
   <p>
     At its core, it views every player as a <strong>dynamic system</strong> that continuously adapts to their surroundings.
@@ -145,7 +145,7 @@ When coaches modify constraints, players discover efficient movement solutions *
 For example: reducing dribble limits, adjusting space, or adding defenders changes the *information landscape*, prompting players to reorganize their movement patterns.  
 This is what makes CLA so powerful — the coach doesn’t *tell* players what to do; the environment *shows* them what works.
 
-![Self-Organization](/lovable-uploads/self-organization.webp)
+![Diagram: Self-Organization flow (Constraints → Perception → Action → Feedback → Adaptation)](/lovable-uploads/self-organization.webp)
 
 The scientific roots of this idea come directly from DST:  
 systems under the right constraints spontaneously settle into stable yet flexible patterns.  
@@ -181,7 +181,7 @@ movement coordination emerges “through the interaction between the organism an
 This is why the CLA feels so different — it aligns coaching with how the brain and body actually learn.  
 Instead of controlling behavior, it creates conditions where learning *self-emerges*.
 
-![Games Based Approach vs CLA](/lovable-uploads/ssg-vs-cla.webp)
+![Games Based Approach vs Constraint-Led Approach](/lovable-uploads/ssg-vs-cla.webp)
 
 ---
 
@@ -191,7 +191,7 @@ In this framework, the coach’s job changes fundamentally.
 Rather than being the sole source of answers, the coach becomes a **designer of learning environments**.  
 Each constraint — a rule, a space, a number of players — becomes a teaching tool.
 
-![Coach as Designer](/lovable-uploads/coach-as-designer.webp)
+![Graphic of a Basketball Coach as a Designer of Practice](/lovable-uploads/coach-as-designer.webp)
 
 As summarized by Jordan Cassidy (2021) in [Different Approaches to Skill Acquisition](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review):  
 > The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
@@ -204,23 +204,25 @@ This new role requires creativity, curiosity, and humility — trusting the proc
 <div class="infobox">
   <h3>📘 Summary: The Scientific Core of Modern Coaching</h3>
   <p>The <strong>Constraint-Led Approach (CLA)</strong> builds on decades of movement science — redefining skill as a <em>living, adaptive process</em> shaped by the dynamic interaction of <strong>player, task, and environment</strong>.</p>
-  <p>When we remove that interaction, we remove the very conditions under which skill emerges. “Clean drills” may look organized, but without context or decision-making, they don’t survive real games.</p>
-  <p><strong>The real question:</strong> How do we design practices where perception, action, and decision-making stay connected — where <strong>adaptability, creativity, and intelligence</strong> thrive?</p>
-  <p><em>Let's move from theory to practice: how the CLA turns these ideas into practice design that teaches itself.</em></p>
+  <p>Practicing in isolation might look clean, organized, and productive — but without context, decisions, or pressure, it teaches coordination that doesn’t survive real games.</p>
+  <p>The<strong>Constraint-Led Approach</strong> reminds us that learning is not about memorizing technique — it’s about interacting with the game itself.</p>
 </div>
+
+
+
+The Constraint-Led Approach reminds us that learning is not about memorizing technique — it’s about interacting with the game itself.
 
 ---
 
 ## III. From Theory to Practice – Designing CLA Environments
 
 > The purpose of manipulating constraints is to guide behavior — that’s essentially why we do it.
-> [The Transforming Basketball Podcast, EP 132 (2025)](https://open.spotify.com/episode/5KLyAcpIUifmKjFFk7VBYW)
+> — *The Transforming Basketball Podcast, EP 132 (2025)* – [Spotify](https://open.spotify.com/episode/5KLyAcpIUifmKjFFk7VBYW)
 
 ---
 
 The Constraint-Led Approach lives or dies in practice design.  
 Theory alone doesn’t change how players learn — the gym does.  
-And in that gym, the coach’s job is no longer to control the session, but to *design* it.
 
 The art lies in creating that design so that the right behaviors emerge *without* having to be commanded.
 
@@ -257,7 +259,7 @@ Here are three principles that turn rules into learning tools:
 
 ---
 
-<div className="infobox">
+<div class="infobox">
   <h4>When to Add a Constraint</h4>
   <p>
     Add a constraint when:<br>
@@ -312,14 +314,8 @@ As coach George Vaz put it in [The Transforming Basketball Podcast, EP 132 (2025
 
 ---
 
-### Summary
-
-A Constraint-Led practice doesn’t look cleaner — it looks *smarter*.  
-It embraces variability, decision-making, and context to mirror the chaos of real basketball.  
-Coaches stop “running drills” and start *shaping learning environments*.
-
 <div class="infobox">
-  <h3>📘 Summary: The Scientific Core of Modern Coaching</h3>
+  <h3>📘 Summary</h3>
   <p>A Constraint-Led practice doesn’t look cleaner — it looks <strong>smarter</strong>.<br>
 It embraces variability, decision-making, and context to mirror the chaos of real basketball.<br>
 Coaches stop “running drills” and start <strong>shaping learning environments</strong>.</p>
@@ -400,7 +396,7 @@ My job wasn’t to tell them what to do — it was to **design an environment wh
 
 ---
 
-![Learning in Action](/lovable-uploads/constraint-led-approach.webp)
+![Learning in Action - Young Kids playing Basketball in the Gym](/lovable-uploads/constraint-led-approach.webp)
 
 > They didn’t need more instruction. They needed better problems.
 
@@ -475,7 +471,7 @@ It doesn’t demand that you abandon structure; it invites you to redesign it.
 As one episode concludes:
 
 > Skill acquisition isn’t theory vs practice — it’s science that helps us design better practice.
-> [The Transforming Basketball Podcast, EP 53](https://open.spotify.com/episode/5pypmh4u1JGWX3xgNpnj3W)
+> — *The Transforming Basketball Podcast, EP 53 (2024)* – [Spotify](https://open.spotify.com/episode/5pypmh4u1JGWX3xgNpnj3W)
 
 Ultimately, that’s what modern coaching is all about —  
 not teaching the game we remember, but designing the game our players will create.
@@ -540,11 +536,20 @@ where structure meets freedom, and science meets creativity.
 ---
 
 *References:*  
-- Seifert, L. & Davids, K. (2017). *Ecological Dynamics: A Theoretical Framework for Understanding Sport
-Performance, Physical Education and Physical Activity.*  [ResearchGate](https://www.researchgate.net/publication/236177149_An_Ecological_Dynamics_Approach_to_Skill_Acquisition_Implications_for_Development_of_Talent_in_Sport)
-- Newell, K. M. (1986). *Constraints on the Development of Coordination.*  
-- Davids, K. et al. (2012). *Ecological Dynamics as a Framework for Understanding Skill Acquisition.*  
-- Cassidy, J. (2021). *Different Approaches to Skill Acquisition.* [Skilled Athleticism Blog](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)  
-- Bonfigli, T. (2019). *Applying CLA to Basketball Shooting*.  
-- Sarama, A. & Klusemann, M. (2024). *Transforming Basketball Podcast*, EP31: *How Basketball Coaches Can Create a Culture of Learning with the CLA.* [Spotify Podcast](https://open.spotify.com/episode/0h5Tim3n1oDj8k78xWbTS9)
+- **Seifert, L., & Davids, K.** (2017). *Ecological Dynamics: A Theoretical Framework for Understanding Sport Performance, Physical Education, and Physical Activity.*  
+  In K. Davids, R. Hristovski, D. Araújo, N. Balagué, & C. Button (Eds.), *Complex Systems in Sport* (pp. 45–68). Routledge.  
+  [ResearchGate](https://www.researchgate.net/publication/236177149_An_Ecological_Dynamics_Approach_to_Skill_Acquisition_Implications_for_Development_of_Talent_in_Sport)
+- **Newell, K. M.** (1986). *Constraints on the Development of Coordination.*  
+  In M. G. Wade & H. T. A. Whiting (Eds.), *Motor Development in Children: Aspects of Coordination and Control* (pp. 341–360). Springer.
+- **Cassidy, J.** (2021). *Different Approaches to Skill Acquisition.*  
+  [Skilled Athleticism Blog](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
+- **Bonfigli, T.** (2019). *Applying the Constraints-Led Approach to Basketball Shooting.*  
+  *Journal of Coaching Science* (unofficial preprint).  
+  [ResearchGate](https://www.travispbonfigli.com/uploads/1/3/5/4/135482300/msu-sp19-travispbonfigli-kin868-mod5-project2-04192019.pdf)
+- **Sarama, A., & Klusemann, M.** (2024). *Transforming Basketball Podcast*, Episode 31: *How Basketball Coaches Can Create a Culture of Learning with the CLA.*  
+  [Spotify](https://open.spotify.com/episode/0h5Tim3n1oDj8k78xWbTS9)
+- **Vaz, G.** (2025). *The Transforming Basketball Podcast*, Episode 136: *Traditional vs. CLA Drills.*  
+  [Spotify](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
+- **Thomas, G., & Sarama, A.** (2024). *The Transforming Basketball Podcast*, Episode 82: *What the CLA Is and Isn’t (Part 2).*  
+  [Spotify](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
 
