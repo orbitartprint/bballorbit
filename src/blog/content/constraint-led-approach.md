@@ -88,13 +88,10 @@ From rote learning to genuine understanding.
 The revolution begins the moment we stop chasing flawless form  
 and start creating environments where learning feels like the game itself.
 
-
 <div class="my-10">
-  <div class="border-l-4 border-[#f57520] bg-[#0e0e0e] p-4 rounded-md shadow-sm">
-    <div class="text-sm text-muted-foreground">
-      💡 <strong class="text-foreground">Signs of the Old Coaching Paradigm:</strong><br />
-      Static drills • Coach-led correction • Isolated repetition • Control over discovery
-    </div>
+  <div class="protip mb-8">
+    💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
+    Static drills • Coach-led correction • Isolated repetition • Control over discovery
   </div>
 
   <div class="flex items-center justify-center">
@@ -106,7 +103,7 @@ and start creating environments where learning feels like the game itself.
         <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
       </div>
 
-      <div class="text-primary text-4xl md:text-5xl font-bold">arrow</div>
+      <div class="text-primary text-4xl md:text-5xl font-bold">→</div>
 
       <div class="flex flex-col items-center">
         <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
@@ -117,7 +114,6 @@ and start creating environments where learning feels like the game itself.
     </div>
   </div>
 </div>
-
 
 ## II. The Science Behind the CLA: Ecological Dynamics
 
