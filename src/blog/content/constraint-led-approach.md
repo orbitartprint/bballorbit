@@ -106,7 +106,7 @@ and start creating environments where learning feels like the game itself.
 
 The **Constraint-Led Approach (CLA)** is not a random collection of coaching tricks — it’s built on a deep scientific foundation called **Ecological Dynamics**.  
 
-This framework merges two fields of research: **Ecological Psychology**, which studies how humans perceive and act in their environments, and **Dynamical Systems Theory (DST)**, which explains how complex systems — like the human body — self-organize without a central command.
+This framework merges two fields of research: **Ecological Psychology**, which studies how humans perceive and act in their environments, and [Dynamical Systems Theory (DST)](https://en.wikipedia.org/wiki/Dynamical_systems_theory), which explains how complex systems — like the human body — self-organize without a central command.
 
 <div className="infobox-blue">
   <h4>Ecological Dynamics</h4>
@@ -133,7 +133,6 @@ Learning, from this perspective, happens as players *adapt their behavior* to th
 
 Each constraint doesn’t dictate behavior — it **invites** certain actions while limiting others, creating a constantly shifting web of possibilities.
 
-As summarized by Davids et al. (2012), skill is “the continuous functional adaptation of behavior to a set of interacting constraints.”  
 This is the scientific engine behind the CLA — not repetition, but adaptation.
 
 ---
@@ -207,7 +206,7 @@ This new role requires creativity, curiosity, and humility — trusting the proc
   <p>The <strong>Constraint-Led Approach (CLA)</strong> builds on decades of movement science — redefining skill as a <em>living, adaptive process</em> shaped by the dynamic interaction of <strong>player, task, and environment</strong>.</p>
   <p>When we remove that interaction, we remove the very conditions under which skill emerges. “Clean drills” may look organized, but without context or decision-making, they don’t survive real games.</p>
   <p><strong>The real question:</strong> How do we design practices where perception, action, and decision-making stay connected — where <strong>adaptability, creativity, and intelligence</strong> thrive?</p>
-  <p><em>Let's move theory to practice: how the CLA turns these ideas into practice design that teaches itself.</em></p>
+  <p><em>Let's move from theory to practice: how the CLA turns these ideas into practice design that teaches itself.</em></p>
 </div>
 
 ---
@@ -261,10 +260,10 @@ Here are three principles that turn rules into learning tools:
 <div className="infobox">
   <h4>When to Add a Constraint</h4>
   <p>
-    Add a constraint when:  
-- You’re giving the same correction more than twice.  
-- Players are succeeding mechanically but failing in real play.  
-- The drill looks clean but feels disconnected from the game.  
+    Add a constraint when:<br>
+- You’re giving the same correction more than twice.  <br>
+- Players are succeeding mechanically but failing in real play.  <br>
+- The drill looks clean but feels disconnected from the game.  <br>
 That’s your signal to change the <strong>environment</strong>, not the <strong>instruction</strong>.
   </p>
 </div>
@@ -280,7 +279,9 @@ But in its pure form, it’s sterile — no defense, no decisions, no perception
 Now, reimagine it as a **3v2 Continuous Transition Game**.  
 Each possession starts from the same spacing concept, but now players must *read defenders, find space, and transition instantly* when the ball changes sides.  
 Suddenly, everything that was missing — decisions, timing, communication — emerges naturally.  
-That’s the Constraint-Led version: structure without scripting.
+
+🎥 **Watch: Transform Boring Basketball Drills Into Game-Changing Challenges**  
+[![Transform Boring Basketball Drills Into Game-Changing Challenges](https://img.youtube.com/vi/gAilQm-XMm0/hqdefault.jpg)](https://youtu.be/gAilQm-XMm0)
 
 ---
 
@@ -315,15 +316,20 @@ As coach George Vaz put it in [The Transforming Basketball Podcast, EP 132 (2025
 
 A Constraint-Led practice doesn’t look cleaner — it looks *smarter*.  
 It embraces variability, decision-making, and context to mirror the chaos of real basketball.  
-Coaches stop “running drills” and start *shaping learning environments*.  
+Coaches stop “running drills” and start *shaping learning environments*.
 
-In the next chapter, we’ll explore how this philosophy comes alive in **Small-Sided Games and Constraint Systems** — where the game itself becomes the teacher.
+<div class="infobox">
+  <h3>📘 Summary: The Scientific Core of Modern Coaching</h3>
+  <p>A Constraint-Led practice doesn’t look cleaner — it looks <strong>smarter</strong>.<br>
+It embraces variability, decision-making, and context to mirror the chaos of real basketball.<br>
+Coaches stop “running drills” and start <strong>shaping learning environments</strong>.</p>
+</div>
 
 ---
 
-# V. Real-World Transformation – My Journey with the CLA
+# IV. Real-World Transformation – My Journey with the CLA
 
-> “Good coaching isn’t about control — it’s about curiosity.”
+> Good coaching isn’t about control — it’s about curiosity.
 
 Like most coaches, I started the traditional way:  
 line-up layups, 3-man weaves, static dribbling drills — the routines everyone knew.  
@@ -336,7 +342,7 @@ That’s when it hit me: *we were practicing movement, not solving problems.*
 
 ## Discovering a New Lens
 
-During the COVID lockdowns, I finally had time to rethink my coaching.  
+It was time to rethink my coaching.  
 I dove into podcasts, research papers, and online discussions — and that’s when I came across **Alex Sarama** and *Transforming Basketball*.  
 
 The **Constraint-Led Approach** first seemed chaotic, even risky.  
@@ -355,8 +361,10 @@ The energy was different. Instead of repeating the same motion over and over, th
 
 ---
 
-> 💡 **Coaching Insight:**  
-> Start small. One constraint per drill is often enough to change behavior.
+<div class="infobox">
+  <h3>💡 Coaching Insight</h3>
+  <p>Start small. One constraint per drill is often enough to change behavior.</p>
+</div>
 
 ---
 
@@ -392,13 +400,13 @@ My job wasn’t to tell them what to do — it was to **design an environment wh
 
 ---
 
-> ![Learning in action — discovery through design.](path/to/your-image.webp)
+![Learning in Action](/lovable-uploads/constraint-led-approach.webp)
 
-> “They didn’t need more instruction. They needed better problems.”
+> They didn’t need more instruction. They needed better problems.
 
 ---
 
-## VII. Challenges & Misconceptions – Overcoming Resistance to the CLA
+## V. Challenges & Misconceptions – Overcoming Resistance to the CLA
 
 Every coaching revolution faces resistance — and the Constraint-Led Approach is no different.  
 For decades, the “traditional” way has shaped how we think about teaching the game: clear instructions, fixed progressions, and technical drills before gameplay.  
@@ -410,17 +418,21 @@ When a new approach challenges those habits, skepticism is natural.
 
 This is the most common misconception — and perhaps the hardest to let go of.  
 Many coaches believe players must *first* master the fundamentals in isolation before they’re “ready” to play.  
-But as the *Transforming Basketball Podcast* notes in **Episode 45 – “Why Basketball Fundamentals Are Outdated”**, this logic is backward:
+But as the *Transforming Basketball Podcast* notes in [Episode 45 – “Why Basketball Fundamentals Are Outdated”](https://open.spotify.com/episode/0yIZ5E8vddVOzlI2MSZ4oh), this logic is backward:
 
-> “When we train skills outside of the game, we’re practicing movements without the problems those movements were designed to solve.”
+> When we train skills outside of the game, we’re practicing movements without the problems those movements were designed to solve.
 
 Fundamentals aren’t ingredients to be pre-taught; they *emerge* from solving problems within the game.  
 A child doesn’t learn balance by studying physics — they learn by moving.  
 In the same way, players develop dribbling, passing, and finishing skills by *using* them to achieve goals under realistic constraints.  
 
-That doesn’t mean we throw beginners into chaos. It means we design environments where success is possible and meaningful.  
-For example, use simplified small-sided games like **Dribble Tag**, where players learn spacing, evasion, and body control naturally.  
-Or set simple constraints — such as limiting dribbles or requiring one pass before scoring — that scale challenge and create immediate success experiences.  
+That doesn’t mean we throw beginners into chaos. It means we design environments where success is possible and meaningful.
+
+<div class="infobox">
+  <h3>Example</h3>
+  <p>Use simplified small-sided games like <strong>Dribble Tag</strong>, where players learn spacing, evasion, and body control naturally.<br>
+    Or set simple constraints — such as defender starts behind offense — that scale challenge and create immediate success experiences.</p>
+</div>
 
 ---
 
@@ -430,7 +442,7 @@ It does — because basketball *is* chaotic.
 Traditional drills hide that complexity behind order and repetition, but games reveal it.  
 The goal isn’t to eliminate chaos, but to *organize it through design*.  
 
-As discussed in **Episode 53 – “How to Overcome Challenges Implementing the CLA”**, chaos is the raw material of learning.  
+As discussed in [The Transforming Basketball Podcast, EP 53: “How to Overcome Challenges Implementing the CLA”](https://open.spotify.com/episode/5pypmh4u1JGWX3xgNpnj3W), chaos is the raw material of learning.  
 Within well-designed constraints, players learn to adapt, self-organize, and find stability — a concept known as *attractor states* in skill-acquisition science.  
 What looks messy is actually a sign of *deep learning in progress*.
 
@@ -445,12 +457,16 @@ Invite parents or assistants to observe, show before-and-after clips, or walk th
 
 ---
 
-> 💡 **INFOBOX — Practical Tips for a Smooth CLA Transition**
-> - Start small: one CLA drill per practice.  
-> - Explain the *why* behind every constraint.  
-> - Use visuals or short clips to show transfer to real games.  
-> - Involve parents and assistants early.  
-> - Gather feedback, reflect, and adjust continuously.  
+<div class="infobox">
+  <h3>💡 Practical Tips for a Smooth CLA Transition</h3>
+  <p> - Start small: one CLA drill per practice.<br>
+    - Explain the *why* behind every constraint.<br>
+    - Use visuals or short clips to show transfer to real games.<br>
+    - Involve parents and assistants early.<br>
+    - Gather feedback, reflect, and adjust continuously.
+  </p>
+</div>
+ 
 
 ---
 
@@ -458,15 +474,15 @@ The Constraint-Led Approach isn’t a dogma — it’s a framework.
 It doesn’t demand that you abandon structure; it invites you to redesign it.  
 As one episode concludes:
 
-> “Skill acquisition isn’t theory vs practice — it’s science that helps us design better practice.”  
-> *(Transforming Basketball Podcast, Ep. 53)*
+> Skill acquisition isn’t theory vs practice — it’s science that helps us design better practice.
+> [The Transforming Basketball Podcast, EP 53](https://open.spotify.com/episode/5pypmh4u1JGWX3xgNpnj3W)
 
 Ultimately, that’s what modern coaching is all about —  
 not teaching the game we remember, but designing the game our players will create.
 
 ---
 
-## VIII. The Future of Coaching – From Instructor to Designer
+## VI. The Future of Coaching – From Instructor to Designer
 
 The future of coaching isn’t about louder commands or more drills — it’s about **designing environments** that let learning emerge.  
 
@@ -482,7 +498,7 @@ In this modern model, the coach becomes a *learning architect*.
 Each constraint, each rule, each tweak to a drill is a deliberate design choice — an experiment in behavior.  
 Coaching shifts from *telling* to *testing*: creating environments that shape decision-making and invite discovery.  
 
-> “The Constraint-Led Approach doesn’t limit creativity — it designs for it.”  
+> The Constraint-Led Approach doesn’t limit creativity — it designs for it.
 > *(Transforming Basketball Podcast, paraphrased)*
 
 ---
@@ -495,22 +511,24 @@ This balance of freedom and structure turns the gym into a living lab for growth
 
 ---
 
-> 💡 **INFOBOX — Quick Summary: What to Remember from the CLA Revolution**
->
-> 🧠 **1. Skill is adaptive, not mechanical.**  
-> Movements emerge from the interaction between player, task, and environment.  
->
-> 🎯 **2. The coach designs, not dictates.**  
-> Replace instructions with environments that guide discovery.  
->
-> ⚙️ **3. Variability is essential.**  
-> Each rep should challenge perception and decision-making, not repeat perfection.  
->
-> 💬 **4. Learning is messy — and that’s okay.**  
-> Embrace the chaos — it’s the sign that real understanding is forming.  
->
-> ❤️ **5. The goal isn’t control — it’s connection.**  
-> Between players, minds, and the game itself.  
+<div class="infobox">
+  <h3>💡 Quick Summary: What to Remember from the CLA Revolution</h3>
+  <p><strong>1. Skill is adaptive, not mechanical.</strong><br>
+    Movements emerge from the interaction between player, task, and environment.
+  </p>
+  <p><strong>2. The coach designs, not dictates.</strong><br>
+    Replace instructions with environments that guide discovery.
+  </p>
+  <p><strong>3. Variability is essential.</strong><br>
+    Each rep should challenge perception and decision-making, not repeat perfection.
+  </p>
+  <p><strong>4. Learning is messy — and that’s okay.</strong><br>
+    Embrace the chaos — it’s the sign that real understanding is forming.
+  </p>
+  <p><strong>5. The goal isn’t control — it’s connection.</strong><br>
+    Between players, minds, and the game itself.
+  </p>
+</div>
 
 ---
 
