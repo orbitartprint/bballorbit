@@ -69,9 +69,9 @@ But control kills discovery.
 Modern coaches are no longer dictators of technique — they’re **architects of learning environments**.  
 As Jordan Cassidy wrote in *Different Approaches to Skill Acquisition* (2021):
 
-> “The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
-> but an architect who designs learning environments that allow solutions to emerge.”  
-> — [Different Approaches to Skill Acquisition, Jordan Cassidy (2021)](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
+> The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
+> but an architect who designs learning environments that allow solutions to emerge.
+— [Different Approaches to Skill Acquisition, Jordan Cassidy (2021)](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
 
 ---
 
@@ -95,40 +95,9 @@ and start creating environments where learning feels like the game itself.
     Static drills • Coach-led correction • Isolated repetition • Control over discovery
 </div>
 
-<div class="w-full flex flex-col items-center justify-center py-10">
-  <!-- Title -->
-  <h3 class="text-2xl font-semibold text-foreground mb-6 text-center">
-    From Instructor to Environment Designer
-  </h3>
+![oldrole_newrole](/lovable-uploads/oldrole-newrole.webp)
 
-  <div class="relative flex items-center justify-between w-full max-w-3xl px-6">
-    <!-- Instructor -->
-    <div class="flex flex-col items-center">
-      <div class="bg-[#f57520]/20 border border-[#f57520]/40 rounded-full w-32 h-32 flex items-center justify-center shadow-md">
-        <span class="text-[#f57520] font-semibold">Instructor</span>
-      </div>
-      <p class="mt-3 text-muted-foreground text-sm text-center max-w-[8rem]">
-        Gives instructions and corrects errors
-      </p>
-    </div>
-
-    <div class="flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" class="w-24 text-[#2d32f1]">
-        <path d="M0 10 H85 L75 5 M85 10 L75 15" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" />
-      </svg>
-    </div>
-
-    <div class="flex flex-col items-center">
-      <div class="bg-[#2d32f1]/20 border border-[#2d32f1]/50 rounded-full w-32 h-32 flex items-center justify-center shadow-md">
-        <span class="text-[#2d32f1] font-semibold text-center">Environment Designer</span>
-      </div>
-      <p class="mt-3 text-muted-foreground text-sm text-center max-w-[8rem]">
-        Shapes conditions to let solutions emerge
-      </p>
-    </div>
-  </div>
-</div>
-
+---
 
 ## II. The Science Behind the CLA: Ecological Dynamics
 
@@ -136,11 +105,17 @@ and start creating environments where learning feels like the game itself.
 > — adapted from Seifert & Davids (2017)
 
 The **Constraint-Led Approach (CLA)** is not a random collection of coaching tricks — it’s built on a deep scientific foundation called **Ecological Dynamics**.  
+
 This framework merges two fields of research: **Ecological Psychology**, which studies how humans perceive and act in their environments, and **Dynamical Systems Theory (DST)**, which explains how complex systems — like the human body — self-organize without a central command.
 
-At its core, Ecological Dynamics views every player as a **dynamic system** that continuously adapts to their surroundings.  
+<div className="infobox-blue">
+  <h4>Ecological Dynamics</h4>
+  <p>
+    At its core, Ecological Dynamics views every player as a <strong>dynamic system</strong> that continuously adapts to their surroundings.  
 Movement isn’t something stored in the brain and executed on command — it *emerges* in real time as players interact with defenders, space, and task demands.  
-Skill, therefore, is not the memorization of a technique — it’s a **functional adaptation** to a constantly changing environment.
+Skill, therefore, is not the memorization of a technique — it’s a <strong>functional adaptation</strong> to a constantly changing environment.
+  </p>
+</div>
 
 ---
 
@@ -210,10 +185,9 @@ In this framework, the coach’s job changes fundamentally.
 Rather than being the sole source of answers, the coach becomes a **designer of learning environments**.  
 Each constraint — a rule, a space, a number of players — becomes a teaching tool.
 
-As summarized by Jordan Cassidy (2021) in *Different Approaches to Skill Acquisition*:  
-> “The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
-> but an architect who designs learning environments that allow solutions to emerge.”  
-> ([source](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review))
+As summarized by Jordan Cassidy (2021) in [Different Approaches to Skill Acquisitio](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review):  
+> The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
+> but an architect who designs learning environments that allow solutions to emerge.
 
 This new role requires creativity, curiosity, and humility — trusting the process instead of the script.
 
@@ -221,16 +195,13 @@ This new role requires creativity, curiosity, and humility — trusting the proc
 
 ### Summary: The Scientific Core of Modern Coaching
 
-The Constraint-Led Approach stands on the shoulders of decades of research in human movement science.
-It redefines skill not as a set of technical templates, but as a living, adaptive process — shaped by the dynamic interaction of player, task, and environment.
-
-When we remove that interaction, we remove the very conditions under which skill emerges.
-Practicing in isolation might look clean, organized, and productive — but without context, decisions, or pressure, it teaches coordination that doesn’t survive real games.
-
-So the question becomes: if “clean drills” don’t create real learning, how should we design environments that do?
-How can we create practices where perception, action, and decision-making are inseparable — and where adaptability, creativity, and intelligence thrive?
-
-In the next chapter, we’ll move from theory to practice — exploring how the CLA framework transforms the way we design drills, structure practices, and develop smarter players through interaction, not instruction.
+<div class="infobox">
+  <h3>📘 Summary: The Scientific Core of Modern Coaching</h3>
+  <p>The <strong>Constraint-Led Approach (CLA)</strong> builds on decades of movement science — redefining skill as a <em>living, adaptive process</em> shaped by the dynamic interaction of <strong>player, task, and environment</strong>.</p>
+  <p>When we remove that interaction, we remove the very conditions under which skill emerges. “Clean drills” may look organized, but without context or decision-making, they don’t survive real games.</p>
+  <p><strong>The real question:</strong> How do we design practices where perception, action, and decision-making stay connected — where <strong>adaptability, creativity, and intelligence</strong> thrive?</p>
+  <p><em>Let's move theory to practice: how the CLA turns these ideas into practice design that teaches itself.</em></p>
+</div>
 
 <!-- 🟠 INFOBOX IDEA:
 Title: "Infobox 1 – The Three Constraints at a Glance"
@@ -253,10 +224,10 @@ Game simulation	Constraint manipulation
 Teacher = facilitator	Coach = environment designer -->
 ---
 
-## IV. From Theory to Practice – Designing CLA Environments
+## III. From Theory to Practice – Designing CLA Environments
 
-> “The purpose of manipulating constraints is to guide behavior — that’s essentially why we do it.”  
-> — *The Transforming Basketball Podcast, EP132: Effective Constraint Manipulation*
+> The purpose of manipulating constraints is to guide behavior — that’s essentially why we do it.
+> — The Transforming Basketball Podcast, EP132: Effective Constraint Manipulation
 
 ---
 
@@ -563,7 +534,8 @@ where structure meets freedom, and science meets creativity.
 ---
 
 *References:*  
-- Seifert, L. & Davids, K. (2017). *Ecological Dynamics and the Acquisition of Movement Skills.*  
+- Seifert, L. & Davids, K. (2017). *Ecological Dynamics: A Theoretical Framework for Understanding Sport
+Performance, Physical Education and Physical Activity.*  [ResearchGate](https://www.researchgate.net/publication/236177149_An_Ecological_Dynamics_Approach_to_Skill_Acquisition_Implications_for_Development_of_Talent_in_Sport)
 - Newell, K. M. (1986). *Constraints on the Development of Coordination.*  
 - Davids, K. et al. (2012). *Ecological Dynamics as a Framework for Understanding Skill Acquisition.*  
 - Cassidy, J. (2021). *Different Approaches to Skill Acquisition.* [Skilled Athleticism Blog](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)  
