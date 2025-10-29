@@ -88,32 +88,47 @@ From rote learning to genuine understanding.
 The revolution begins the moment we stop chasing flawless form  
 and start creating environments where learning feels like the game itself.
 
-<div class="my-10">
-  <div class="protip mb-8">
-    💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
+---
+
+<div className="protip">
+  💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
     Static drills • Coach-led correction • Isolated repetition • Control over discovery
-  </div>
+</div>
 
-  <div class="flex items-center justify-center">
-    <div class="flex items-center space-x-6 md:space-x-10">
-      <div class="flex flex-col items-center">
-        <div class="w-28 h-28 rounded-full border-2 border-primary flex items-center justify-center bg-[#111] text-white font-semibold text-center">
-          Instructor
-        </div>
-        <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
+<div class="w-full flex flex-col items-center justify-center py-10">
+  <!-- Title -->
+  <h3 class="text-2xl font-semibold text-foreground mb-6 text-center">
+    From Instructor to Environment Designer
+  </h3>
+
+  <div class="relative flex items-center justify-between w-full max-w-3xl px-6">
+    <!-- Instructor -->
+    <div class="flex flex-col items-center">
+      <div class="bg-[#f57520]/20 border border-[#f57520]/40 rounded-full w-32 h-32 flex items-center justify-center shadow-md">
+        <span class="text-[#f57520] font-semibold">Instructor</span>
       </div>
+      <p class="mt-3 text-muted-foreground text-sm text-center max-w-[8rem]">
+        Gives instructions and corrects errors
+      </p>
+    </div>
 
-      <div class="text-primary text-4xl md:text-5xl font-bold">→</div>
+    <div class="flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" class="w-24 text-[#2d32f1]">
+        <path d="M0 10 H85 L75 5 M85 10 L75 15" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
 
-      <div class="flex flex-col items-center">
-        <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
-          Environment<br />Designer
-        </div>
-        <span class="mt-2 text-sm text-muted-foreground">New Role</span>
+    <div class="flex flex-col items-center">
+      <div class="bg-[#2d32f1]/20 border border-[#2d32f1]/50 rounded-full w-32 h-32 flex items-center justify-center shadow-md">
+        <span class="text-[#2d32f1] font-semibold text-center">Environment Designer</span>
       </div>
+      <p class="mt-3 text-muted-foreground text-sm text-center max-w-[8rem]">
+        Shapes conditions to let solutions emerge
+      </p>
     </div>
   </div>
 </div>
+
 
 ## II. The Science Behind the CLA: Ecological Dynamics
 
