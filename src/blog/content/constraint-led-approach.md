@@ -146,11 +146,11 @@ When coaches modify constraints, players discover efficient movement solutions *
 For example: reducing dribble limits, adjusting space, or adding defenders changes the *information landscape*, prompting players to reorganize their movement patterns.  
 This is what makes CLA so powerful — the coach doesn’t *tell* players what to do; the environment *shows* them what works.
 
+![Self-Organization](/lovable-uploads/self-organization.webp)
+
 The scientific roots of this idea come directly from DST:  
 systems under the right constraints spontaneously settle into stable yet flexible patterns.  
 In basketball terms, the right challenge reveals the right solution.
-
-![Self-Organization](/lovable-uploads/self-organization.webp)
 
 ---
 
@@ -182,6 +182,8 @@ movement coordination emerges “through the interaction between the organism an
 This is why the CLA feels so different — it aligns coaching with how the brain and body actually learn.  
 Instead of controlling behavior, it creates conditions where learning *self-emerges*.
 
+![Games Based Approach vs CLA](/lovable-uploads/ssg-vs-cla.webp)
+
 ---
 
 ### The Coach as Designer
@@ -190,13 +192,13 @@ In this framework, the coach’s job changes fundamentally.
 Rather than being the sole source of answers, the coach becomes a **designer of learning environments**.  
 Each constraint — a rule, a space, a number of players — becomes a teaching tool.
 
+![Coach as Designer](/lovable-uploads/coach-as-designer.webp)
+
 As summarized by Jordan Cassidy (2021) in [Different Approaches to Skill Acquisition](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review):  
 > The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
 > but an architect who designs learning environments that allow solutions to emerge.
 
 This new role requires creativity, curiosity, and humility — trusting the process instead of the script.
-
-![Games Based Approach vs CLA](/lovable-uploads/ssg-vs-cla.webp)
 
 ---
 
@@ -259,13 +261,16 @@ Here are three principles that turn rules into learning tools:
 
 ---
 
-📦 **Infobox: When to Add a Constraint**
-
-Add a constraint when:  
+<div className="infobox">
+  <h4>When to Add a Constraint</h4>
+  <p>
+    Add a constraint when:  
 - You’re giving the same correction more than twice.  
 - Players are succeeding mechanically but failing in real play.  
 - The drill looks clean but feels disconnected from the game.  
-That’s your signal to change the *environment*, not the *instruction*.
+That’s your signal to change the <strong>environment</strong>, not the <strong>instruction</strong>.
+  </p>
+</div>
 
 ---
 
@@ -304,8 +309,8 @@ To make the jump from theory to practice, keep these rules close:
 - **Explain the goal, not the movement.** Let players find *how* to achieve it.  
 - **Observe and adapt.** The environment gives you the feedback — not the drill diagram.
 
-As coach George Vaz put it in *The Transforming Basketball Podcast* (EP 132, 2025):  
-> “Instead of overloading players with explanations, build environments that make the behaviors part of the game.”
+As coach George Vaz put it in [The Transforming Basketball Podcast, EP 132 (2025)](https://open.spotify.com/episode/5KLyAcpIUifmKjFFk7VBYW):  
+> Instead of overloading players with explanations, build environments that make the behaviors part of the game.
 
 ---
 
