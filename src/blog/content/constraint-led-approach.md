@@ -5,7 +5,7 @@
 
 ---
 
-<div class="infobox">
+<div className="infobox">
   <h4>Intro</h4>
   <p>
     A quiet revolution is now reshaping the game: the <strong>Constraint-Led Approach (CLA)</strong>, a science-backed framework that views learning not as repetition, but as interaction.  
@@ -71,7 +71,7 @@ As Jordan Cassidy wrote in *Different Approaches to Skill Acquisition* (2021):
 
 > “The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
 > but an architect who designs learning environments that allow solutions to emerge.”  
-> — [*Different Approaches to Skill Acquisition, Jordan Cassidy (2021)*](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
+> — [Different Approaches to Skill Acquisition, Jordan Cassidy (2021)](https://www.skilledathleticism.com/post/different-approaches-to-skill-acquisition-msc-literature-review)
 
 ---
 
@@ -83,43 +83,42 @@ From perfection to adaptation.
 From rote learning to genuine understanding.
 
 > The Constraint-Led Approach doesn’t just make you better — it makes basketball feel like basketball again.  
-> — [*The Transforming Basketball Podcast, EP 82 (2024)*](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
+> — [The Transforming Basketball Podcast, EP 82 (2024)](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
 
 The revolution begins the moment we stop chasing flawless form  
 and start creating environments where learning feels like the game itself.
 
----
 
-<div class="protip">
-  💡 <strong>Signs of the Old Coaching Paradigm:</strong><br>
-  Static drills • Coach-led correction • Isolated repetition • Control over discovery
-</div>
+<div class="my-10">
+  <div class="protip mb-8">
+    💡 <strong>Signs of the Old Coaching Paradigm:</strong><br />
+    Static drills • Coach-led correction • Isolated repetition • Control over discovery
+  </div>
 
-<!-- VISUAL PLACEHOLDER: Instructor → Environment Designer -->
-<div class="flex items-center justify-center my-10">
-  <div class="flex items-center space-x-6 md:space-x-10">
-    <!-- Left Circle -->
-    <div class="flex flex-col items-center">
-      <div class="w-28 h-28 rounded-full border-2 border-primary flex items-center justify-center bg-[#111] text-white font-semibold text-center">
-        Instructor
+  <div class="flex items-center justify-center">
+    <div class="flex items-center space-x-6 md:space-x-10">
+      <!-- Left Circle -->
+      <div class="flex flex-col items-center">
+        <div class="w-28 h-28 rounded-full border-2 border-primary flex items-center justify-center bg-[#111] text-white font-semibold text-center">
+          Instructor
+        </div>
+        <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
       </div>
-      <span class="mt-2 text-sm text-muted-foreground">Old Role</span>
-    </div>
 
-    <div class="text-primary text-4xl md:text-5xl font-bold">
-      →
-    </div>
+      <!-- Arrow (no HTML comment) -->
+      <div class="text-primary text-4xl md:text-5xl font-bold">→</div>
 
-    <div class="flex flex-col items-center">
-      <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
-        Environment<br />Designer
+      <!-- Right Circle -->
+      <div class="flex flex-col items-center">
+        <div class="w-28 h-28 rounded-full border-2 border-blue-500 flex items-center justify-center bg-[#111] text-white font-semibold text-center">
+          Environment<br />Designer
+        </div>
+        <span class="mt-2 text-sm text-muted-foreground">New Role</span>
       </div>
-      <span class="mt-2 text-sm text-muted-foreground">New Role</span>
     </div>
   </div>
 </div>
 
----
 
 ## II. The Science Behind the CLA: Ecological Dynamics
 
