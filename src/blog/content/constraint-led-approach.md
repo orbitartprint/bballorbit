@@ -361,7 +361,7 @@ The energy was different. Instead of repeating the same motion over and over, th
 
 ---
 
-<div class="infobox">
+<div class="protip">
   <h3>💡 Coaching Insight</h3>
   <p>Start small. One constraint per drill is often enough to change behavior.</p>
 </div>
