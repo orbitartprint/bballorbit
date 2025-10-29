@@ -40,7 +40,7 @@ But once you remove context, you remove the *problem* the skill was meant to sol
 As coach George Vaz explained in *The Transforming Basketball Podcast* (EP 136, 2025):
 
 > We’ve been practicing moves without the problem those moves were designed to solve.  
-[The Transforming Basketball Podcast, EP 136 (2025)](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
+> [The Transforming Basketball Podcast, EP 136 (2025)](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
 
 That single line exposes the flaw: traditional training treats movement as choreography, not problem-solving.  
 Players learn to repeat — not to adapt — and their technique collapses under real defensive pressure.
@@ -114,6 +114,7 @@ This framework merges two fields of research: **Ecological Psychology**, which s
     At its core, it views every player as a <strong>dynamic system</strong> that continuously adapts to their surroundings.
     
 Movement isn’t something stored in the brain and executed on command — it <strong>emerges</strong> in real time as players interact with defenders, space, and task demands.  
+
 Skill, therefore, is not the memorization of a technique — it’s a <strong>functional adaptation</strong> to a constantly changing environment.
   </p>
 </div>
@@ -129,6 +130,7 @@ One of the key insights from this framework comes from Karl Newell (1986), who d
 3. **Environmental Constraints** – external conditions such as lighting, noise, temperature, or court dimensions.
 
 Learning, from this perspective, happens as players *adapt their behavior* to the continuous interaction of these three constraint types.  
+
 Each constraint doesn’t dictate behavior — it **invites** certain actions while limiting others, creating a constantly shifting web of possibilities.
 
 As summarized by Davids et al. (2012), skill is “the continuous functional adaptation of behavior to a set of interacting constraints.”  
@@ -147,6 +149,8 @@ This is what makes CLA so powerful — the coach doesn’t *tell* players what t
 The scientific roots of this idea come directly from DST:  
 systems under the right constraints spontaneously settle into stable yet flexible patterns.  
 In basketball terms, the right challenge reveals the right solution.
+
+![Self-Organization](/lovable-uploads/self-organization.webp)
 
 ---
 
@@ -192,6 +196,8 @@ As summarized by Jordan Cassidy (2021) in [Different Approaches to Skill Acquisi
 
 This new role requires creativity, curiosity, and humility — trusting the process instead of the script.
 
+![Games Based Approach vs CLA](/lovable-uploads/ssg-vs-cla.webp)
+
 ---
 
 <div class="infobox">
@@ -202,25 +208,6 @@ This new role requires creativity, curiosity, and humility — trusting the proc
   <p><em>Let's move theory to practice: how the CLA turns these ideas into practice design that teaches itself.</em></p>
 </div>
 
-<!-- 🟠 INFOBOX IDEA:
-Title: "Infobox 1 – The Three Constraints at a Glance"
-Content: Type	Description	Basketball Example
-Individual (Player)	Physical, cognitive, or emotional characteristics	Fatigue, height, motivation
-Task	Rules, goals, or tools that define the activity	1v1 to the rim, time limit, scoring rule
-Environmental	External conditions	Space, crowd noise, lighting, floor size -->
-
-<!-- 🟠 INFOBOX IDEA:
-Self-Organization Explained Simply
-Constraints  →  Perception  →  Action  →  Feedback  →  Adaptation -->
-
-<!-- 🟠 INFOBOX IDEA:The CLA vs. Games-Based Approach
-Eine Gegenüberstellung (vergleichend wie eine Infografik):
-
-Games-Based Approach	Constraint-Led Approach
-Focus on fun & tactics	Focus on skill emergence
-Mostly intuitive	Scientifically grounded
-Game simulation	Constraint manipulation
-Teacher = facilitator	Coach = environment designer -->
 ---
 
 ## III. From Theory to Practice – Designing CLA Environments
