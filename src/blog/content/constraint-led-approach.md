@@ -40,7 +40,7 @@ But once you remove context, you remove the *problem* the skill was meant to sol
 As coach George Vaz explained in *The Transforming Basketball Podcast* (EP 136, 2025):
 
 > We’ve been practicing moves without the problem those moves were designed to solve.  
-> — [The Transforming Basketball Podcast, EP 136 (2025)](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
+[The Transforming Basketball Podcast, EP 136 (2025)](https://open.spotify.com/episode/4Cd7J3twcAEk0Jabh655ep)
 
 That single line exposes the flaw: traditional training treats movement as choreography, not problem-solving.  
 Players learn to repeat — not to adapt — and their technique collapses under real defensive pressure.
