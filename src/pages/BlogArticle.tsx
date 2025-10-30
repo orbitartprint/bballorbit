@@ -51,8 +51,8 @@ const BlogArticle = () => {
   }
 
   const currentIndex = blogArticles.findIndex((a) => a.slug === slug);
-  const prevArticle = currentIndex > 0 ? blogArticles[currentIndex - 1] : null;
-  const nextArticle = currentIndex < blogArticles.length - 1 ? blogArticles[currentIndex + 1] : null;
+  const nextArticle = currentIndex > 0 ? blogArticles[currentIndex - 1] : null;
+  const prevArticle = currentIndex < blogArticles.length - 1 ? blogArticles[currentIndex + 1] : null;
   const relatedArticles = getRelatedArticles(article.slug);
 
   return (
