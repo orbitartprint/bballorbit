@@ -216,16 +216,18 @@ const BlogArticle = () => {
                   {prevArticle && (
                     <Link
                       to={`/blog/${prevArticle.slug}`}
-                      className="group flex items-center gap-3 w-1/2 hover:bg-muted/40 transition-all rounded-xl p-3"
+                      className="group flex items-center gap-3 w-1/2 hover:bg-muted/50 transition-all duration-300 rounded-xl p-3"
                     >
-                      <img
-                        src={prevArticle.heroImage}
-                        alt={prevArticle.title}
-                        className="w-20 h-20 object-cover rounded-lg"
-                      />
+                      <div className="relative overflow-hidden rounded-lg">
+                        <img
+                          src={prevArticle.heroImage}
+                          alt={prevArticle.title}
+                          className="w-20 h-20 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:brightness-110"
+                        />
+                      </div>
                       <div>
-                        <p className="text-xs text-muted-foreground">← Previous Article</p>
-                        <h3 className="text-sm font-semibold group-hover:text-primary line-clamp-2">
+                        <p className="text-xs text-muted-foreground mb-1">← Older Article</p>
+                        <h3 className="text-sm font-semibold group-hover:text-primary transition-colors duration-300 line-clamp-2">
                           {prevArticle.title}
                         </h3>
                       </div>
@@ -235,19 +237,21 @@ const BlogArticle = () => {
                   {nextArticle && (
                     <Link
                       to={`/blog/${nextArticle.slug}`}
-                      className="group flex items-center justify-end gap-3 w-1/2 hover:bg-muted/40 transition-all rounded-xl p-3 text-right"
+                      className="group flex items-center justify-end gap-3 w-1/2 hover:bg-muted/50 transition-all duration-300 rounded-xl p-3 text-right"
                     >
                       <div>
-                        <p className="text-xs text-muted-foreground">Next Article →</p>
-                        <h3 className="text-sm font-semibold group-hover:text-primary line-clamp-2">
+                        <p className="text-xs text-muted-foreground mb-1">Newer Article →</p>
+                        <h3 className="text-sm font-semibold group-hover:text-primary transition-colors duration-300 line-clamp-2">
                           {nextArticle.title}
                         </h3>
                       </div>
-                      <img
-                        src={nextArticle.heroImage}
-                        alt={nextArticle.title}
-                        className="w-20 h-20 object-cover rounded-lg"
-                      />
+                      <div className="relative overflow-hidden rounded-lg">
+                        <img
+                          src={nextArticle.heroImage}
+                          alt={nextArticle.title}
+                          className="w-20 h-20 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:brightness-110"
+                        />
+                      </div>
                     </Link>
                   )}
                 </div>
