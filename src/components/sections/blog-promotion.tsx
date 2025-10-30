@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import courtTexture from "@/assets/court-trans.webp"; // optional, sonst mit URL
+import courtTexture from "@/lovable-uploads/court-trans.webp";
 
 const BlogPromotion = () => {
   return (
