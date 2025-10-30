@@ -16,8 +16,8 @@ const BlogPromotion = () => {
         >
           {/* Left Column - Text with BG image behind "Discover..." */}
           <div className="relative">
-            {/* Hintergrund NUR hinter dem Text */}
-            <div className="pointer-events-none select-none absolute inset-0 -z-10 flex justify-center">
+            {/* Hintergrundbild */}
+            <div className="pointer-events-none select-none absolute inset-0 z-0 flex justify-center">
               <img
                 src="/lovable-uploads/court-trans.webp"
                 alt=""
@@ -27,16 +27,18 @@ const BlogPromotion = () => {
                 className="max-w-[560px] w-full object-contain opacity-20 translate-y-8"
               />
             </div>
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              🧠 Stay Ahead of the Game
-            </h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Discover detailed breakdowns, practical strategies, and modern coaching insights in the Basketball Orbit Blog. 
-              Every post helps you coach smarter and build better teams.
-            </p>
+          
+            {/* Text-Inhalt (über Bild) */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                🧠 Stay Ahead of the Game
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Discover detailed breakdowns, practical strategies, and modern coaching insights in the Basketball Orbit Blog. 
+                Every post helps you coach smarter and build better teams.
+              </p>
+            </div>
           </div>
-
           {/* Right Column - CTA */}
           <div className="flex justify-center md:justify-start">
             <Link to="/blog">
