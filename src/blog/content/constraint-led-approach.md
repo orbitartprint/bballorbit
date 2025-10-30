@@ -240,12 +240,12 @@ Here are three principles that turn rules into learning tools:
    Overloading players with multiple new variables kills exploration.  
    One clear adjustment is enough to shift behavior.
 
-2. **Affordances over Instructions** –  
+2. **Affordances over Instructions**  
    Create situations where the right action becomes *obvious*.  
    Want players to attack space faster? Reward early paint touches.  
    Want more communication? Only score after three connected passes.
 
-3. **Feedback Loops** –  
+3. **Feedback Loops**  
    When you notice yourself correcting the same issue repeatedly, it’s a sign that the environment isn’t doing the teaching.  
    Adjust the setup so players receive feedback *through play*, not your voice.
 
@@ -255,11 +255,11 @@ Here are three principles that turn rules into learning tools:
   <h4>When to Add a Constraint</h4>
   <p>
     Add a constraint when:
-    <ol>
+    <ul>
       <li>You’re giving the same correction more than twice.</li>
       <li>Players are succeeding mechanically but failing in real play.</li>
       <li>The drill looks clean but feels disconnected from the game.</li>
-    </ol>
+    </ul>
     That’s your signal to change the <strong>environment</strong>, not the <strong>instruction</strong>.
   </p>
 </div>
@@ -288,7 +288,7 @@ Remove the perception — for example, by running drills without defenders — a
 
 CLA practice design always protects this link.  
 Players must see, decide, and act within the same rep.  
-That’s why even the simplest constraint — “offense scores only off the second pass” — changes everything: it forces scanning, anticipation, and coordinated timing, not rote execution.
+That’s why even the simplest constraint — “offense can score only after a paint touch” — changes everything: it forces scanning, movement, and coordinated timing, not rote execution.
 
 ---
 
@@ -447,11 +447,14 @@ Invite parents or assistants to observe, show before-and-after clips, or walk th
 
 <div class="infobox">
   <h3>💡 Practical Tips for a Smooth CLA Transition</h3>
-  <p> - Start small: one CLA drill per practice.<br>
-    - Explain the *why* behind every constraint.<br>
-    - Use visuals or short clips to show transfer to real games.<br>
-    - Involve parents and assistants early.<br>
-    - Gather feedback, reflect, and adjust continuously.
+  <p> 
+    <ul>
+      <li>Start small: one CLA drill per practice.</li>
+      <li>Explain the *why* behind every constraint.</li>
+      <li>Use visuals or short clips to show transfer to real games.</li>
+      <li>Involve parents and assistants early.</li>
+      <li>Gather feedback, reflect, and adjust continuously.</li>
+    </ul>
   </p>
 </div>
  
