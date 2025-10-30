@@ -209,20 +209,43 @@ const BlogArticle = () => {
                 </Card>
 
                 {/* Navigation to Previous/Next Articles */}
-                <div className="mt-8 pt-8 border-t border-border flex justify-between">
-                  {blogArticles.findIndex(a => a.slug === slug) < blogArticles.length - 1 && (
-                    <Button variant="outline" asChild>
-                      <Link to={`/blog/${blogArticles[blogArticles.findIndex(a => a.slug === slug) + 1].slug}`}>
-                        ← Previous Article
-                      </Link>
-                    </Button>
+                <div className="mt-12 pt-8 border-t border-border flex justify-between gap-4">
+                  {prevArticle && (
+                    <Link
+                      to={`/blog/${prevArticle.slug}`}
+                      className="group flex items-center gap-3 w-1/2 hover:bg-muted/40 transition-all rounded-xl p-3"
+                    >
+                      <img
+                        src={prevArticle.image}
+                        alt={prevArticle.title}
+                        className="w-20 h-20 object-cover rounded-lg"
+                      />
+                      <div>
+                        <p className="text-xs text-muted-foreground">← Previous Article</p>
+                        <h3 className="text-sm font-semibold group-hover:text-primary line-clamp-2">
+                          {prevArticle.title}
+                        </h3>
+                      </div>
+                    </Link>
                   )}
-                  {blogArticles.findIndex(a => a.slug === slug) > 0 && (
-                    <Button variant="outline" asChild className="ml-auto">
-                      <Link to={`/blog/${blogArticles[blogArticles.findIndex(a => a.slug === slug) - 1].slug}`}>
-                        Next Article →
-                      </Link>
-                    </Button>
+                
+                  {nextArticle && (
+                    <Link
+                      to={`/blog/${nextArticle.slug}`}
+                      className="group flex items-center justify-end gap-3 w-1/2 hover:bg-muted/40 transition-all rounded-xl p-3 text-right"
+                    >
+                      <div>
+                        <p className="text-xs text-muted-foreground">Next Article →</p>
+                        <h3 className="text-sm font-semibold group-hover:text-primary line-clamp-2">
+                          {nextArticle.title}
+                        </h3>
+                      </div>
+                      <img
+                        src={nextArticle.image}
+                        alt={nextArticle.title}
+                        className="w-20 h-20 object-cover rounded-lg"
+                      />
+                    </Link>
                   )}
                 </div>
               </article>
