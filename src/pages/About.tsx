@@ -55,22 +55,26 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
-                <div>
-                  <div className="absolute inset-0 -left-4 -right-4 opacity-12">
+                <div className="relative">
+                  {/* Hintergrundbild */}
+                  <div className="absolute inset-0 z-0 flex justify-center">
                     <img 
                       src="/lovable-uploads/court-trans.webp" 
                       alt="Basketball court texture" 
-                      className="w-full h-full object-cover"
+                      className="max-w-[600px] w-full opacity-20 object-contain"
                     />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    Hi, I'm Chris – Welcome to Basketball Orbit! Basketball has been a huge part of my life. 
-                    Growing up in Germany, I fell in love with the game and have been lucky to play it for most of my life. 
-                    Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels—from beginners to experienced athletes.
-                  </p>
+                
+                  {/* Text-Inhalt */}
+                  <div className="relative z-10">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                      Hi, I'm Chris – Welcome to Basketball Orbit! Basketball has been a huge part of my life. 
+                      Growing up in Germany, I fell in love with the game and have been lucky to play it for most of my life. 
+                      Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels—from beginners to experienced athletes.
+                    </p>
+                  </div>
                 </div>
-
                 <div>
                   <h3 className="text-2xl font-semibold mb-4 text-primary">Why Basketball Orbit</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
