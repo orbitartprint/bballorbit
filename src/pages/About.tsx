@@ -55,14 +55,14 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
-                <div className="absolute inset-0 -left-4 -right-4 opacity-12">
-                  <img 
-                    src="/lovable-uploads/court-trans.webp" 
-                    alt="Basketball court texture" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
                 <div>
+                  <div className="absolute inset-0 -left-4 -right-4 opacity-12">
+                    <img 
+                      src="/lovable-uploads/court-trans.webp" 
+                      alt="Basketball court texture" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     Hi, I'm Chris – Welcome to Basketball Orbit! Basketball has been a huge part of my life. 
