@@ -170,14 +170,19 @@ const BlogArticle = () => {
                     remarkPlugins={[remarkGfm, remarkMath]}
                     rehypePlugins={[rehypeRaw, rehypeSlug, rehypeKatex]}
                     components={{
-                      a: ({ node, ...props }) => (
-                        <a
-                          {...props}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline"
-                        />
-                      ),
+                      a: ({ href, children }) => {
+                        const isExternal = href && !href.startsWith("/") && !href.includes("bballorbit.com");
+                        return (
+                          <a
+                            href={href}
+                            target={isExternal ? "_blank" : undefined}
+                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            className="text-primary hover:underline"
+                          >
+                            {children}
+                          </a>
+                        );
+                      },
                     }}
                   >
                     {article.content}
