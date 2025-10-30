@@ -213,6 +213,7 @@ const BlogArticle = () => {
 
                 {/* Navigation to Previous/Next Articles */}
                 <div className="mt-12 pt-8 border-t border-border flex justify-between gap-4">
+                  {/* Previous Article (lower index) */}
                   {prevArticle && (
                     <Link
                       to={`/blog/${prevArticle.slug}`}
@@ -226,7 +227,7 @@ const BlogArticle = () => {
                         />
                       </div>
                       <div>
-                        <p className="text-xs text-muted-foreground mb-1">← Older Article</p>
+                        <p className="text-xs text-muted-foreground mb-1">← Previous Article</p>
                         <h3 className="text-sm font-semibold group-hover:text-primary transition-colors duration-300 line-clamp-2">
                           {prevArticle.title}
                         </h3>
@@ -234,13 +235,14 @@ const BlogArticle = () => {
                     </Link>
                   )}
                 
+                  {/* Next Article (higher index) */}
                   {nextArticle && (
                     <Link
                       to={`/blog/${nextArticle.slug}`}
                       className="group flex items-center justify-end gap-3 w-1/2 hover:bg-muted/50 transition-all duration-300 rounded-xl p-3 text-right"
                     >
                       <div>
-                        <p className="text-xs text-muted-foreground mb-1">Newer Article →</p>
+                        <p className="text-xs text-muted-foreground mb-1">Next Article →</p>
                         <h3 className="text-sm font-semibold group-hover:text-primary transition-colors duration-300 line-clamp-2">
                           {nextArticle.title}
                         </h3>
