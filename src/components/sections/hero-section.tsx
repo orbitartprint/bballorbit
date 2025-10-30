@@ -12,7 +12,6 @@ const HeroSection = () => {
         alt="Basketball Training Hall"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
         loading="eager"
-        fetchPriority="high"
       />
       {/* Gradient unten */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#252525]" />
