@@ -60,7 +60,7 @@ const About = () => {
                   <div className="relative z-10">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
                     {/* Hintergrundbild */}
-                    <div className="absolute inset-0 z-0 flex justify-center">
+                    <div className="absolute inset-0 z-0 flex justify-center translate-y-20">
                       <img 
                         src="/lovable-uploads/court-trans.webp" 
                         alt="Basketball court texture" 
