@@ -24,9 +24,8 @@ Players stood in lines, repeated the same moves, and perfected technique in sile
 
 It *looked* productive — but it built players who could perform in practice, not in games.
 
-Now, that era is quietly ending.  
+That era is quietly ending as a new generation of coaches questions everything — from the purpose of drills to the coach’s role itself.
 
-A new generation of coaches is questioning everything — from the purpose of drills to the coach’s role itself.  
 At the heart of this transformation stands the **Constraint-Led Approach (CLA)** — a science-based framework redefining how humans learn movement and decision-making.
 
 ---
@@ -50,9 +49,7 @@ Players learn to repeat — not to adapt — and their technique collapses under
 ### The Illusion of Mastery
 
 Perfect mechanics feel like progress — but often they’re *false learning*.  
-Repetition without variability breeds fragility.  
-
-Real learning happens when players must *adjust* — when mistakes aren’t punished but explored.
+Repetition without variability breeds fragility — real learning begins when mistakes are explored, not punished.
 
 The **CLA** flips this logic: instead of avoiding chaos, it uses it.  
 Every constraint — spacing, time, defenders — becomes a tool to shape perception and decision-making.  
@@ -72,8 +69,7 @@ Lines and order make coaches appear “in charge,” while game-like learning fe
     Static drills • Coach-led correction • Isolated repetition • Control over discovery
 </div>
 
-But control kills discovery.  
-Modern coaches are no longer dictators of technique — they’re **architects of learning environments**.  
+Yet control kills discovery — modern coaches aren’t dictators of technique but **architects of learning environments**.  
 As Jordan Cassidy wrote in *Different Approaches to Skill Acquisition* (2021):
 
 > The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
@@ -106,7 +102,7 @@ and start creating environments where learning feels like the game itself.
 > Skill doesn’t live in the player — it lives in the interaction between the player and the environment.  
 > — adapted from Seifert & Davids (2017)
 
-The **Constraint-Led Approach (CLA)** is not a random collection of coaching tricks — it’s built on a deep scientific foundation called **Ecological Dynamics**.  
+The **Constraint-Led Approach (CLA)** is built on a deep scientific foundation called **Ecological Dynamics**.  
 
 This framework merges two fields of research: **Ecological Psychology**, which studies how humans perceive and act in their environments, and [Dynamical Systems Theory (DST)](https://en.wikipedia.org/wiki/Dynamical_systems_theory), which explains how complex systems — like the human body — self-organize without a central command.
 
@@ -131,9 +127,7 @@ One of the key insights from this framework comes from Karl Newell (1986), who d
 2. **Task Constraints** – the specific goals, rules, and equipment involved in a game situation.  
 3. **Environmental Constraints** – external conditions such as lighting, noise, temperature, or court dimensions.
 
-Learning, from this perspective, happens as players *adapt their behavior* to the continuous interaction of these three constraint types.  
-
-Each constraint doesn’t dictate behavior — it **invites** certain actions while limiting others, creating a constantly shifting web of possibilities.
+Learning happens as players*adapt* to the continuous interaction of these constraints — each one **inviting** certain actions while limiting others.
 
 This is the scientific engine behind the CLA — not repetition, but adaptation.
 
@@ -165,7 +159,7 @@ This idea leads to one of the most beautiful concepts in ecological psychology: 
 A passing lane “invites” a pass; a gap “invites” a drive.  
 Great players aren’t faster thinkers — they are *more attuned* to affordances.
 
-The role of the coach, therefore, is not to prescribe exact techniques but to design environments where useful affordances become visible and can be explored.
+The coach’s role is to design environments where useful affordances become visible.
 
 ---
 
@@ -199,7 +193,7 @@ As summarized by Jordan Cassidy (2021) in [Different Approaches to Skill Acquisi
 > The effective coach is no longer an autocratic instructor giving continuous verbal direction,  
 > but an architect who designs learning environments that allow solutions to emerge.
 
-This new role requires creativity, curiosity, and humility — trusting the process instead of the script.
+This role demands creativity and trust in the process.
 
 ---
 
@@ -231,9 +225,7 @@ The art lies in creating that design so that the right behaviors emerge *without
 In a Constraint-Led session, rules aren’t restrictions — they’re invitations.  
 Each constraint (whether **Individual**, **Task**, or **Environmental**) shapes how players interact with the game.  
 
-Rather than forcing specific techniques, constraints encourage players to *adapt* and self-organize their solutions.
-
-When the coach changes a rule, a space, or a scoring condition, the environment itself becomes the teacher.  
+Constraints encourage players to *adapt* and *self-organize* — when the coach adjusts rules, space, or scoring, the environment becomes the teacher. 
 
 That’s why experienced CLA coaches often say: *“If you find yourself repeating the same cue — add a constraint instead.”*
 
@@ -249,7 +241,7 @@ Here are three principles that turn rules into learning tools:
    One clear adjustment is enough to shift behavior.
 
 2. **Affordances over Instructions** –  
-   Instead of telling players what to do, create a situation where the right action is *obvious*.  
+   Create situations where the right action becomes *obvious*.  
    Want players to attack space faster? Reward early paint touches.  
    Want more communication? Only score after three connected passes.
 
@@ -262,11 +254,12 @@ Here are three principles that turn rules into learning tools:
 <div class="infobox">
   <h4>When to Add a Constraint</h4>
   <p>
-    Add a constraint when:<br>
-- You’re giving the same correction more than twice.  <br>
-- Players are succeeding mechanically but failing in real play.  <br>
-- The drill looks clean but feels disconnected from the game.  <br>
-
+    Add a constraint when:
+    <ol>
+      <li>You’re giving the same correction more than twice.</li>
+      <li>Players are succeeding mechanically but failing in real play.</li>
+      <li>The drill looks clean but feels disconnected from the game.</li>
+    </ol>
     That’s your signal to change the <strong>environment</strong>, not the <strong>instruction</strong>.
   </p>
 </div>
@@ -276,8 +269,7 @@ Here are three principles that turn rules into learning tools:
 ### From Drills to Games: One Practical Example
 
 Let’s take one of the most common drills in basketball — the **3-Man Weave**.  
-Traditionally, it’s used for passing, running lanes, and conditioning.  
-But in its pure form, it’s sterile — no defense, no decisions, no perception-action link.
+Traditionally used for passing and conditioning — but in its pure form, it’s sterile: no defense, no decisions, no perception-action link.
 
 Now, reimagine it as a **3v2 Continuous Transition Game**.  
 Each possession starts from the same spacing concept, but now players must *read defenders, find space, and transition instantly* when the ball changes sides.  
@@ -308,7 +300,7 @@ To make the jump from theory to practice, keep these rules close:
 - **Stay representative.** Keep defenders, targets, and time pressure in the design.  
 - **Rotate constraints.** Fresh challenges keep perception alive.  
 - **Explain the goal, not the movement.** Let players find *how* to achieve it.  
-- **Observe and adapt.** The environment gives you the feedback — not the drill diagram.
+- **Observe and adapt.** Let the environment give the feedback, not your voice.
 
 As coach George Vaz put it in [The Transforming Basketball Podcast, EP 132 (2025)](https://open.spotify.com/episode/5KLyAcpIUifmKjFFk7VBYW):  
 > Instead of overloading players with explanations, build environments that make the behaviors part of the game.
@@ -468,7 +460,6 @@ Invite parents or assistants to observe, show before-and-after clips, or walk th
 
 The Constraint-Led Approach isn’t a dogma — it’s a framework.  
 It doesn’t demand that you abandon structure; it invites you to redesign it.  
-As one episode concludes:
 
 > Skill acquisition isn’t theory vs practice — it’s science that helps us design better practice.  
 > — *The Transforming Basketball Podcast, EP 53 (2024)* – [Spotify](https://open.spotify.com/episode/5pypmh4u1JGWX3xgNpnj3W)
@@ -482,8 +473,8 @@ not teaching the game we remember, but designing the game our players will creat
 
 The future of coaching isn’t about louder commands or more drills — it’s about **designing environments** that let learning emerge.  
 
-For too long, coaches believed progress came from control: fixing mistakes, demonstrating perfection, explaining every detail.  
-But real growth doesn’t come from repetition — it comes from **adaptation**.  
+For too long, coaches equated progress with control — fixing, perfecting, explaining.
+Real growth, however, comes from **adaptation**.  
 The Constraint-Led Approach (CLA) unites science, intuition, and creativity to form a new kind of coaching: one that builds thinkers, not followers.
 
 ---
@@ -491,8 +482,7 @@ The Constraint-Led Approach (CLA) unites science, intuition, and creativity to f
 ### The Coach as Designer
 
 In this modern model, the coach becomes a *learning architect*.  
-Each constraint, each rule, each tweak to a drill is a deliberate design choice — an experiment in behavior.  
-Coaching shifts from *telling* to *testing*: creating environments that shape decision-making and invite discovery.  
+Every constraint, rule, and tweak becomes a design experiment — coaching shifts from *telling* to *testing*, shaping decision-making through discovery.  
 
 > The Constraint-Led Approach doesn’t limit creativity — it designs for it.
 > *(Transforming Basketball Podcast, paraphrased)*
@@ -501,8 +491,7 @@ Coaching shifts from *telling* to *testing*: creating environments that shape de
 
 ### The Art of Letting Go
 
-True mastery lies in letting go of control.  
-The best coaches don’t force answers — they *listen* to what the game and the players reveal.  
+True mastery lies in letting go — great coaches don’t force answers but listen to what the game reveals.  
 This balance of freedom and structure turns the gym into a living lab for growth.
 
 ---
