@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import courtTexture from "@/lovable-uploads/court-trans.webp";
 
 const BlogPromotion = () => {
   return (
@@ -10,7 +9,7 @@ const BlogPromotion = () => {
       {/* Hintergrundbild nur hinter dem Textbereich */}
       <div className="absolute inset-0 flex justify-start items-center">
         <img
-          src={courtTexture}
+          src="/lovable-uploads/court-trans.webp"
           alt="Basketball court texture"
           loading="lazy"
           decoding="async"
