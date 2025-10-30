@@ -216,7 +216,7 @@ const BlogArticle = () => {
                       className="group flex items-center gap-3 w-1/2 hover:bg-muted/40 transition-all rounded-xl p-3"
                     >
                       <img
-                        src={prevArticle.image}
+                        src={prevArticle.heroImage}
                         alt={prevArticle.title}
                         className="w-20 h-20 object-cover rounded-lg"
                       />
@@ -241,7 +241,7 @@ const BlogArticle = () => {
                         </h3>
                       </div>
                       <img
-                        src={nextArticle.image}
+                        src={nextArticle.heroImage}
                         alt={nextArticle.title}
                         className="w-20 h-20 object-cover rounded-lg"
                       />
