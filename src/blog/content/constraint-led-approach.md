@@ -93,7 +93,7 @@ and start creating environments where learning feels like the game itself.
 
 ---
 
-![Diagram: Old role ‘Instructor’ → New role ‘Environment Designer](/lovable-uploads/oldrole-newrole.webp)
+![Diagram: Traditional Coaching Approach vs. Constraint-Led Coaching Approach](/lovable-uploads/traditional-vs-cla.webp)
 
 ---
 
