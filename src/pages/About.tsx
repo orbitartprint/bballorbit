@@ -70,7 +70,7 @@ const About = () => {
                     <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                       Hi, I'm Chris – Welcome to Basketball Orbit! Basketball has been a huge part of my life. 
                       Growing up in Germany, I fell in love with the game and have been lucky to play it for most of my life. 
-                      Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels—from beginners to experienced athletes.
+                      Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels, from beginners to experienced athletes.
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ const About = () => {
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     On my YouTube channel, I focus on practical drills, modern concepts, and strategies for youth and senior teams alike. 
                     My goal is simple: to help you grow as a coach and take your team to the next level. 
-                    Basketball is about more than just winning — it's about teamwork, resilience, and having fun. 
+                    Basketball is about more than just winning. It's about teamwork, resilience, and having fun. 
                     Join me on this journey, and let's build stronger teams together.
                   </p>
                 </div>
