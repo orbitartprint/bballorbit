@@ -1,6 +1,6 @@
 # Mastering the Zoom Action: The Most Versatile Trigger in Modern 5-Out Offense
 
-> The Zoom Action is less a rigid play and more a trigger - it creates space, forces decisions, and opens simple, high-percentage finishing opportunities. When taught as a principle, not a script, it becomes a staple of game-realistic offense.
+> The Zoom Action is less a rigid play and more a trigger. It creates space, forces decisions, and opens simple, high-percentage finishing opportunities. When taught as a principle, not a script, it becomes a staple of game-realistic offense.
 
 The Zoom Action is one of those moves that looks simple on paper but unlocks a dozen scoring options when the details are right. In modern 5-out offenses it works as a *trigger* - a sequence that creates a defensive reaction and a clear read for your ballhandler and off-ball players. In this article you’ll get the concept, the reasoning, and practical drills (with video) so you can teach it the way your players will use it in games.
 
@@ -8,7 +8,7 @@ The Zoom Action is one of those moves that looks simple on paper but unlocks a d
 
 ## What is the Zoom Action?
 
-**The Zoom Action** is a two-step offensive trigger that combines a down screen and a handoff - giving the offense two chances to create separation before the defense can react.
+**The Zoom Action** is a two-step offensive trigger that combines a down screen and a handoff, giving the offense two chances to create separation before the defense can react.
 
 It starts with an **off-ball screen** (often a down screen), allowing the cutter to shake their defender and move toward the ball. As that happens, the ballhandler - typically on the wing or corner - steps toward the cutter and executes a **dribble handoff (DHO)**.
 
@@ -38,7 +38,7 @@ This combination forces the defender to fight through **two actions in quick suc
 ## Reading the Defense – Four Options After the Handoff
 
 Once the receiver comes off the handoff, the read is everything.  
-These four simple options cover nearly every situation - teach players to recognize them and react without hesitation.
+These four simple options cover nearly every situation. Teach players to recognize them and react without hesitation.
 
 <!-- Option 1 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center my-10">
@@ -143,13 +143,13 @@ These four simple options cover nearly every situation - teach players to recogn
 - **It gets your shooter the ball on the move with built-in separation.** Perfect for modern offenses where speed and decision-making matter more than set positions.
 - **It creates natural gaps and spacing for drives and kickouts.** The movement stretches help-side defenders and opens clean passing lanes.
 - **It easily flows into further actions** - re-screens, slips, or post entries - making it a seamless part of a motion or 5-out offense.
-- **It works without restricting creativity.** If you run a 5-Out Motion Offense, the Zoom Action is one of the cleanest ways to start breaking down a defense - without taking away freedom or spontaneity.
+- **It works without restricting creativity.** If you run a 5-Out Motion Offense, the Zoom Action is one of the cleanest ways to start breaking down a defense, without taking away freedom or spontaneity.
 
 ---
 
 ## Variations of the Zoom Action
 
-The Zoom Action is adaptable — the same principle yields different advantages depending on alignment and the number of screens.  
+The Zoom Action is adaptable. The same principle yields different advantages depending on alignment and the number of screens.  
 Below are three commonly used variations and the tactical rationale for each.
 
 <!-- Variation 1: Staggered Zoom -->
@@ -201,7 +201,7 @@ Below are three commonly used variations and the tactical rationale for each.
       This central alignment opens up both sides of the court and makes defensive help rotations much harder.
     </p>
     <p class="text-sm text-muted-foreground">
-      <em>Tactical note:</em> With open space on both sides, defenders can’t load up on the strong side - allowing free choice for drive or kick.
+      <em>Tactical note:</em> With open space on both sides, defenders can’t load up on the strong side, allowing free choice for drive or kick.
     </p>
   </div>
 </div>
@@ -222,7 +222,7 @@ Below are three commonly used variations and the tactical rationale for each.
   <!-- Text (right) -->
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
-      The <strong>Horns Zoom</strong> begins from a Horns alignment — with two players at the elbows.
+      The <strong>Horns Zoom</strong> begins from a Horns alignment with two players at the elbows.
     </p>
     <p class="text-base leading-relaxed mb-2">
       The point guard enters the ball to one big, then clears to the side to set up the next action.
@@ -238,7 +238,7 @@ Below are three commonly used variations and the tactical rationale for each.
 
 ## Inbound Plays Using the Zoom Action
 
-The Zoom Action also works great for inbound plays — whether from the **baseline** or the **sideline**.  
+The Zoom Action also works great for inbound plays, whether from the **baseline** or the **sideline**.  
 These quick-hitter options use the same principles to create instant motion and confusion for the defense.
 
 <!-- Variation 1: Baseline Out of Bounds (BLOB) -->
@@ -293,7 +293,7 @@ These quick-hitter options use the same principles to create instant motion and 
 
 ## Counters and Wrinkles
 
-No action works every time - and that’s exactly why we build **counters and wrinkles** into our Zoom setup.  
+No action works every time. And that’s exactly why we build **counters and wrinkles** into our Zoom setup.  
 Here are three simple adjustments you can use when the defense starts reading your base action.
 <div class="text-center text-muted-foreground mt-4">
   <em>Each counter keeps the defense guessing — and ensures the Zoom Action never feels predictable.</em>
@@ -364,7 +364,7 @@ Here are three simple adjustments you can use when the defense starts reading yo
   <div class="w-full">
     <p class="text-base leading-relaxed mb-2">
       When the defense is focused on the screen or switches too early, the screener can fake the screen and slip straight to the basket.
-      The timing of this movement often catches defenders ball-watching — creating an uncontested layup.
+      The timing of this movement often catches defenders ball-watching, creating an uncontested layup.
     </p>
     <p class="text-sm text-muted-foreground">
       <em>Tactical note:</em> Use the slip sparingly - it’s most effective when the defense expects contact on the screen.
@@ -383,7 +383,7 @@ Here are three simple adjustments you can use when the defense starts reading yo
 
 ## Drills to Teach the Zoom Action
 
-Teaching the **Zoom Action** isn’t about memorizing steps - it’s about helping players *feel* the timing, spacing, and rhythm of the action.  
+Teaching the **Zoom Action** isn’t about memorizing steps. It’s about helping players *feel* the timing, spacing, and rhythm of the action.  
 These three small-sided drills turn the concept into game-realistic reps your players can learn from immediately.
 
 ---
@@ -400,7 +400,7 @@ These three small-sided drills turn the concept into game-realistic reps your pl
   <div>
     <p class="text-base leading-relaxed mb-2">
       Start with a ball handler on the baseline and a receiver on the wing. The offense passes to the wing and follows the pass into a handoff while guarded by a defender.
-      From there, it’s live 1v1 play - the ball handler can drive, pull up, or reject the screen.<br />
+      From there, it’s live 1v1 play. The ball handler can drive, pull up, or reject the screen.<br />
     </p>
     <p class="text-base leading-relaxed mb-2">
       To adjust the difficulty, limit the dribbles, allow re-screens, or change how the defender guards the action.
