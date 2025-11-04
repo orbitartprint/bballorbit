@@ -2,7 +2,7 @@
 
 > A bad transition is still better than a perfect half-court set.
 
-Every coach talks about playing fast - but few teams actually do.  
+Every coach talks about playing fast, but few teams actually do.  
 Transition isn’t just about speed; it’s about **reaction**, **intention**, and **freedom**.  
 When your team learns to push the ball, attack early, and make quick decisions, everything changes - the energy, the confidence, and the way your players see the game.
 
@@ -20,7 +20,7 @@ They look for their point guard, check the floor, slow down.
 In that moment, the advantage is already gone.
 
 The truth is simple:
-> The fastest team doesn’t always win - but the team that reacts fastest usually does.
+> The fastest team doesn’t always win, but the team that reacts fastest usually does.
 
 Transition gives you:
 - **Early advantages** before the defense sets.
@@ -65,7 +65,7 @@ It creates an instant incentive — players sprint without me saying a word.
 
 ### 2. Create Defensive Disadvantages
 When possession changes, the last player to touch the ball on offense must first touch the sideline before defending.  
-For a few seconds, the offense has a **numbers advantage** — but only if they react quickly.  
+For a few seconds, the offense has a **numbers advantage**, but only if they react quickly.  
 It’s a natural way to train urgency.
 
 ### 3. Add Smart Constraints
@@ -91,7 +91,7 @@ Here are a few takeaways you can apply right away:
 - **Encourage freedom:** Let players read the game, not memorize routes.
 - **Reinforce spacing:** Wide corners open driving lanes and early passing options.
 - **Reward speed:** Use your scoring system or other constraints to teach behavior naturally.
-- **Avoid stopping drills:** Let mistakes flow — speed improves through repetition, not explanation.
+- **Avoid stopping drills:** Let mistakes flow! Speed improves through repetition, not explanation.
 
 ---
 
@@ -104,7 +104,7 @@ When your team learns to turn every rebound, steal, or inbound into an attack, y
 - Faster decision-making  
 - More fun for everyone involved
 
-It’s the fastest way to play better basketball - and the most enjoyable way to coach it.
+It’s the fastest way to play better basketball, and the most enjoyable way to coach it.
 
 ---
 
