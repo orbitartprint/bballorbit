@@ -21,7 +21,7 @@ import { constraintLedApproach } from '../blog/article-data/constraint-led-appro
 export const blogArticles: BlogArticle[] = [
   transitionOffense,
   zoomAction,
-  constraintLedApproach,
+  //constraintLedApproach,
   // Add more articles here as you create them
 ].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
