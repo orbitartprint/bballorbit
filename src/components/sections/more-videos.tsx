@@ -4,6 +4,10 @@ const MoreVideos = () => {
   // 🔸 Hier brauchst du nur die Video-IDs und Titel anzugeben
   const videos = [
     {
+      id: "rTVDgsR5cV0",
+      title: "How to Teach the Zoom Action – 3 Game-Realistic Drills"
+    },
+    {
       id: "u7dRADmLkZ4",
       title: "Why Every Coach Should Be Running This 5-Out Entry – Zoom Action"
     },
@@ -11,10 +15,7 @@ const MoreVideos = () => {
       id: "YVFqsTxJxQ0",
       title: "How to Dominate with the 3-2 Zone Defense - Complete Guide"
     },
-    {
-      id: "9th4smk0MR0",
-      title: "Stop Practicing Shots You’ll Never Take – Do These 5 Drills Instead"
-    }
+
   ];
 
   return (
