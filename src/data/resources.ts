@@ -19,6 +19,7 @@ export const resources: Resource[] = [
     category: "Offense",
     type: "Free",
     link: "https://guide.bballorbit.com/early-offense-triggers",
+    uid: "3cf2bf3df5",
     filePath: "/pdfs/early-offense-triggers.pdf",
   },
   {
