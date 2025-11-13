@@ -5,8 +5,8 @@ const VideoSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   // 🔸 Hier änderst du nur diese eine Zeile:
-  const videoId = "rTVDgsR5cV0";
-  const videoTitle ="How to Teach the Zoom Action – 3 Game-Realistic Drills";
+  const videoId = "v6WQI4eV7aI";
+  const videoTitle ="10 Offensive Triggers to Create an Early Advantage in Your 5-Out Offense";
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
