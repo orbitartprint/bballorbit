@@ -12,6 +12,16 @@ export interface Resource {
 
 export const resources: Resource[] = [
   {
+    id: "early-offense",
+    title: "Early Offense Triggers",
+    description: "10x Early Offense Triggers for 5-Out.",
+    image: "/lovable-uploads/early-offense-pdf.webp",
+    category: "Offense",
+    type: "Free",
+    link: "https://guide.bballorbit.com/early",
+    filePath: "/pdfs/early-offense-triggers.pdf",
+  },
+  {
     id: "zoom-action",
     title: "Zoom Action",
     description: "A complete guide to the Zoom Action.",
