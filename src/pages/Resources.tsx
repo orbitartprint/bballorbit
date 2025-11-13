@@ -36,6 +36,38 @@ const Resources = () => {
     script.remove();
   };
 }, []);
+  useEffect(() => {
+  // Alle eindeutigen UIDs aus den Resources holen
+  const formUids = Array.from(
+    new Set(
+      resources
+        .filter((r) => r.uid)
+        .map((r) => r.uid as string)
+    )
+  );
+
+  formUids.forEach((uid) => {
+    const SCRIPT_ID = `convertkit-script-${uid}`;
+    if (document.getElementById(SCRIPT_ID)) return;
+
+    const script = document.createElement("script");
+    script.id = SCRIPT_ID;
+    script.async = true;
+    script.dataset.uid = uid;
+    script.src = `https://bballorbit.kit.com/${uid}/index.js`;
+
+    document.body.appendChild(script);
+  });
+
+  // optionales Cleanup
+  return () => {
+    formUids.forEach((uid) => {
+      const SCRIPT_ID = `convertkit-script-${uid}`;
+      const el = document.getElementById(SCRIPT_ID);
+      if (el) el.remove();
+    });
+  };
+}, []);
   
   const [typeFilter, setTypeFilter] = useState<"All" | "Free" | "Paid">("All");
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("All");
@@ -196,9 +228,19 @@ const Resources = () => {
                       <CardDescription className="text-muted-foreground mb-4 line-clamp-2">
                         {resource.description}
                       </CardDescription>
-                      <Button 
+                      <Button
                         className="w-full shadow-orange transition-smooth hover:scale-105"
-                        onClick={() => window.open(resource.link, '_blank')}
+                        data-uid={resource.uid}
+                        onClick={() => {
+                          // Wenn KEIN ConvertKit-Modal hinterlegt ist (kein uid),
+                          // oder es eine Paid-Resource ist -> wie bisher Link öffnen
+                          if (!resource.uid || resource.type === "Paid") {
+                            window.open(resource.link, "_blank");
+                          }
+                          // Wenn uid vorhanden UND Free:
+                          // ConvertKit fängt den Klick über data-uid ab und öffnet das Modal.
+                          // Kein window.open nötig.
+                        }}
                       >
                         {resource.type === "Free" ? (
                           <>
