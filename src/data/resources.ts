@@ -18,7 +18,7 @@ export const resources: Resource[] = [
     image: "/lovable-uploads/early-offense-pdf.webp",
     category: "Offense",
     type: "Free",
-    link: "https://guide.bballorbit.com/early",
+    link: "https://guide.bballorbit.com/early-offense-triggers",
     filePath: "/pdfs/early-offense-triggers.pdf",
   },
   {
