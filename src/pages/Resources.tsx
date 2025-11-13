@@ -66,7 +66,7 @@ const Resources = () => {
                 {/* Basketball Court Background */}
                 <div className="absolute inset-0 -left-1 -right-1 opacity-15">
                   <img 
-                    src="/lovable-uploads/court-trans.png" 
+                    src="/lovable-uploads/court-trans.webp" 
                     alt="Basketball court texture" 
                     className="w-full h-full object-cover"
                   />
