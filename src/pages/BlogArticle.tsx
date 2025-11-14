@@ -1,5 +1,5 @@
 // src/pages/BlogArticle.tsx
-
+import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter } from "lucide-react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
@@ -30,6 +30,36 @@ const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = blogArticles.find((a) => a.slug === slug);
   const [isHeroImageModalOpen, setIsHeroImageModalOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const shareUrl = `https://www.bballorbit.com/blog/${article.slug}`;
+  const shareText = `${article.title} – via Basketball Orbit`;
+  
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error("Failed to copy link", error);
+    }
+  };
+  
+  const handleNativeShare = async () => {
+    try {
+      if ((navigator as any).share) {
+        await (navigator as any).share({
+          title: article.title,
+          text: shareText,
+          url: shareUrl,
+        });
+      } else {
+        await handleCopyLink();
+      }
+    } catch (error) {
+      // User canceled share – kein Problem, einfach ignorieren
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -112,6 +142,92 @@ const BlogArticle = () => {
                     ))}
                   </div>
                 </header>
+
+                {/* Share Bar */}
+                <div className="mb-6 flex flex-wrap items-center gap-3">
+                  <span className="text-sm text-muted-foreground">
+                    Share this article:
+                  </span>
+
+                  {/* Native Share Button (Mobile / unterstützte Browser) */}
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleNativeShare}
+                    className="flex items-center gap-2"
+                  >
+                    <Share2 className="h-4 w-4" />
+                    Share
+                  </Button>
+
+                  {/* X / Twitter */}
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+                    <a
+                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                        shareText
+                      )}&url=${encodeURIComponent(shareUrl)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Twitter className="h-4 w-4" />
+                      X
+                    </a>
+                  </Button>
+
+                  {/* Facebook */}
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+                    <a
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                        shareUrl
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Facebook className="h-4 w-4" />
+                      Facebook
+                    </a>
+                  </Button>
+
+                  {/* Email */}
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+                    <a
+                      href={`mailto:?subject=${encodeURIComponent(
+                        article.title
+                      )}&body=${encodeURIComponent(
+                        `${shareText}\n\n${shareUrl}`
+                      )}`}
+                    >
+                      <Mail className="h-4 w-4" />
+                      Email
+                    </a>
+                  </Button>
+
+                  {/* Copy Link */}
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleCopyLink}
+                    className="flex items-center gap-2"
+                  >
+                    <Link2 className="h-4 w-4" />
+                    {copied ? "Copied!" : "Copy link"}
+                  </Button>
+                </div>
 
                 {/* Hero Image */}
                 <Dialog open={isHeroImageModalOpen} onOpenChange={setIsHeroImageModalOpen}>
