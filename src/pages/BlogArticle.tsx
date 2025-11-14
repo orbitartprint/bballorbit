@@ -61,6 +61,86 @@ const BlogArticle = () => {
     }
   };
 
+  const renderShareBar = () => (
+    <div className="mb-6 flex flex-wrap items-center gap-3">
+      <span className="text-sm text-muted-foreground">
+        Share this article:
+      </span>
+  
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={handleNativeShare}
+        className="flex items-center gap-2"
+      >
+        <Share2 className="h-4 w-4" />
+        {copied ? "Link copied!" : "Share"}
+      </Button>
+  
+      <Button
+        asChild
+        variant="outline"
+        size="sm"
+        className="flex items-center gap-2"
+      >
+        <a
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            shareText
+          )}&url=${encodeURIComponent(shareUrl)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Twitter className="h-4 w-4" />
+          X
+        </a>
+      </Button>
+  
+      <Button
+        asChild
+        variant="outline"
+        size="sm"
+        className="flex items-center gap-2"
+      >
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+            shareUrl
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Facebook className="h-4 w-4" />
+          Facebook
+        </a>
+      </Button>
+  
+      <Button
+        asChild
+        variant="outline"
+        size="sm"
+        className="flex items-center gap-2"
+      >
+        <a
+          href={`mailto:?subject=${encodeURIComponent(
+            article.title
+          )}&body=${encodeURIComponent(`${shareText}\n\n${shareUrl}`)}`}
+        >
+          <Mail className="h-4 w-4" />
+          Email
+        </a>
+      </Button>
+  
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={handleCopyLink}
+        className="flex items-center gap-2"
+      >
+        <Link2 className="h-4 w-4" />
+        {copied ? "Copied!" : "Copy link"}
+      </Button>
+    </div>
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
@@ -143,91 +223,7 @@ const BlogArticle = () => {
                   </div>
                 </header>
 
-                {/* Share Bar */}
-                <div className="mb-6 flex flex-wrap items-center gap-3">
-                  <span className="text-sm text-muted-foreground">
-                    Share this article:
-                  </span>
-
-                  {/* Native Share Button (Mobile / unterstützte Browser) */}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleNativeShare}
-                    className="flex items-center gap-2"
-                  >
-                    <Share2 className="h-4 w-4" />
-                    Share
-                  </Button>
-
-                  {/* X / Twitter */}
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-2"
-                  >
-                    <a
-                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                        shareText
-                      )}&url=${encodeURIComponent(shareUrl)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Twitter className="h-4 w-4" />
-                      X
-                    </a>
-                  </Button>
-
-                  {/* Facebook */}
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-2"
-                  >
-                    <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                        shareUrl
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Facebook className="h-4 w-4" />
-                      Facebook
-                    </a>
-                  </Button>
-
-                  {/* Email */}
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-2"
-                  >
-                    <a
-                      href={`mailto:?subject=${encodeURIComponent(
-                        article.title
-                      )}&body=${encodeURIComponent(
-                        `${shareText}\n\n${shareUrl}`
-                      )}`}
-                    >
-                      <Mail className="h-4 w-4" />
-                      Email
-                    </a>
-                  </Button>
-
-                  {/* Copy Link */}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleCopyLink}
-                    className="flex items-center gap-2"
-                  >
-                    <Link2 className="h-4 w-4" />
-                    {copied ? "Copied!" : "Copy link"}
-                  </Button>
-                </div>
+                {renderShareBar()}
 
                 {/* Hero Image */}
                 <Dialog open={isHeroImageModalOpen} onOpenChange={setIsHeroImageModalOpen}>
@@ -326,6 +322,8 @@ const BlogArticle = () => {
                     </div>
                   </CardContent>
                 </Card>
+
+                {renderShareBar()}
 
                 {/* Navigation to Previous/Next Articles */}
                 <div className="mt-12 pt-8 border-t border-border flex justify-between gap-4">
