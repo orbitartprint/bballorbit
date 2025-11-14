@@ -132,7 +132,7 @@ const Resources = () => {
                     <div className="flex items-center gap-3">
                       <TrendingUp className="h-6 w-6 text-[#f57520]" />
                       <div>
-                        <div className="text-2xl font-bold text-[#f57520]">98%</div>
+                        <div className="text-2xl font-bold text-[#f57520]">99%</div>
                         <div className="text-xs text-gray-300">Satisfaction Rate</div>
                       </div>
                     </div>
