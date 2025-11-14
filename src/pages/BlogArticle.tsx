@@ -20,6 +20,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
+import ShareBar from "@/components/ShareBar";
 import {
   Dialog,
   DialogContent,
@@ -30,116 +31,6 @@ const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = blogArticles.find((a) => a.slug === slug);
   const [isHeroImageModalOpen, setIsHeroImageModalOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  const shareUrl = `https://www.bballorbit.com/blog/${article.slug}`;
-  const shareText = `${article.title} – via Basketball Orbit`;
-  
-  const handleCopyLink = async () => {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (error) {
-      console.error("Failed to copy link", error);
-    }
-  };
-  
-  const handleNativeShare = async () => {
-    try {
-      if ((navigator as any).share) {
-        await (navigator as any).share({
-          title: article.title,
-          text: shareText,
-          url: shareUrl,
-        });
-      } else {
-        await handleCopyLink();
-      }
-    } catch (error) {
-      // User canceled share – kein Problem, einfach ignorieren
-    }
-  };
-
-  const renderShareBar = () => (
-    <div className="mb-6 flex flex-wrap items-center gap-3">
-      <span className="text-sm text-muted-foreground">
-        Share this article:
-      </span>
-  
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={handleNativeShare}
-        className="flex items-center gap-2"
-      >
-        <Share2 className="h-4 w-4" />
-        {copied ? "Link copied!" : "Share"}
-      </Button>
-  
-      <Button
-        asChild
-        variant="outline"
-        size="sm"
-        className="flex items-center gap-2"
-      >
-        <a
-          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-            shareText
-          )}&url=${encodeURIComponent(shareUrl)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Twitter className="h-4 w-4" />
-          X
-        </a>
-      </Button>
-  
-      <Button
-        asChild
-        variant="outline"
-        size="sm"
-        className="flex items-center gap-2"
-      >
-        <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-            shareUrl
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Facebook className="h-4 w-4" />
-          Facebook
-        </a>
-      </Button>
-  
-      <Button
-        asChild
-        variant="outline"
-        size="sm"
-        className="flex items-center gap-2"
-      >
-        <a
-          href={`mailto:?subject=${encodeURIComponent(
-            article.title
-          )}&body=${encodeURIComponent(`${shareText}\n\n${shareUrl}`)}`}
-        >
-          <Mail className="h-4 w-4" />
-          Email
-        </a>
-      </Button>
-  
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={handleCopyLink}
-        className="flex items-center gap-2"
-      >
-        <Link2 className="h-4 w-4" />
-        {copied ? "Copied!" : "Copy link"}
-      </Button>
-    </div>
-  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -223,7 +114,7 @@ const BlogArticle = () => {
                   </div>
                 </header>
 
-                {renderShareBar()}
+                <ShareBar title={article.title} slug={article.slug} />
 
                 {/* Hero Image */}
                 <Dialog open={isHeroImageModalOpen} onOpenChange={setIsHeroImageModalOpen}>
@@ -323,7 +214,9 @@ const BlogArticle = () => {
                   </CardContent>
                 </Card>
 
-                {renderShareBar()}
+                <div className="mt-8">
+                  <ShareBar title={article.title} slug={article.slug} />
+                </div>
 
                 {/* Navigation to Previous/Next Articles */}
                 <div className="mt-12 pt-8 border-t border-border flex justify-between gap-4">
