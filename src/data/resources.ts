@@ -30,6 +30,7 @@ export const resources: Resource[] = [
     category: "Offense",
     type: "Free",
     link: "https://guide.bballorbit.com/zoom",
+    uid: "628b98c673",
     filePath: "/pdfs/zoom-action.pdf",
   },
   {
@@ -40,6 +41,7 @@ export const resources: Resource[] = [
     category: "Defense",
     type: "Free",
     link: "https://guide.bballorbit.com/runandjump",
+    uid: "046e109887",
     filePath: "/pdfs/run-and-jump-defense.pdf",
   },
 ];
