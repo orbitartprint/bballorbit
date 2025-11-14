@@ -82,7 +82,17 @@ const FreeResources = () => {
                     className="border-border bg-card hover:shadow-orange transition-smooth hover:scale-105"
                   >
                     <CardHeader className="p-0">
-                      <div className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
+                      <div
+                        className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center overflow-hidden cursor-pointer"
+                        onClick={() => {
+                          // Button-Link selektieren und auslösen
+                          const link = document.querySelector(
+                            `a[data-resource-id="${resource.id}"]`
+                          ) as HTMLAnchorElement | null;
+                      
+                          link?.click();
+                        }}
+                      >
                         <img 
                           src={resource.image} 
                           alt={resource.title}
@@ -102,6 +112,7 @@ const FreeResources = () => {
                         asChild
                       >
                         <a 
+                          data-resource-id={resource.id}
                           href={resource.filePath || resource.link} 
                           download={resource.filePath ? `${resource.title}.pdf` : undefined}
                           target={resource.filePath ? undefined : "_blank"}
