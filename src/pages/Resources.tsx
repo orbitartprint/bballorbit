@@ -230,7 +230,7 @@ const Resources = () => {
                       </CardDescription>
                       <Button
                         className="w-full shadow-orange transition-smooth hover:scale-105"
-                        data-uid={resource.uid}
+                        data-formkit-toggle={resource.uid}
                         onClick={() => {
                           // Wenn KEIN ConvertKit-Modal hinterlegt ist (kein uid),
                           // oder es eine Paid-Resource ist -> wie bisher Link öffnen
