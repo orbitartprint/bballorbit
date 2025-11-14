@@ -207,14 +207,17 @@ const Resources = () => {
                     <CardHeader className="p-0">
                       <div
                         className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                        // Bild soll Modal triggern, wenn uid vorhanden ist
-                        data-formkit-toggle={resource.uid ?? undefined}
                         onClick={() => {
-                          // Wenn kein Modal hinterlegt oder Paid -> Link öffnen
-                          if (!resource.uid || resource.type === "Paid") {
+                          if (resource.uid && resource.type === "Free") {
+                            // Klick an das Element weiterreichen, das das Modal triggert (Button)
+                            const trigger = document.querySelector(
+                              `[data-formkit-toggle="${resource.uid}"]`
+                            ) as HTMLElement | null;
+                            trigger?.click();
+                          } else {
+                            // Kein Modal: Link normal öffnen
                             window.open(resource.link, "_blank");
                           }
-                          // Wenn uid vorhanden & Free -> ConvertKit übernimmt über data-formkit-toggle
                         }}
                       >
                         <img 
@@ -247,10 +250,13 @@ const Resources = () => {
                         className="w-full shadow-orange transition-smooth hover:scale-105"
                         data-formkit-toggle={resource.uid ?? undefined}
                         onClick={() => {
+                          // Nur wenn KEIN Modal hinterlegt ist (kein uid) oder Paid:
+                          // -> Link normal öffnen
                           if (!resource.uid || resource.type === "Paid") {
                             window.open(resource.link, "_blank");
                           }
-                          // Mit uid & Free: ConvertKit zeigt Modal
+                          // Wenn uid vorhanden & Free:
+                          // -> nichts tun, ConvertKit fängt den Klick über data-formkit-toggle ab
                         }}
                       >
                         {resource.type === "Free" ? (
