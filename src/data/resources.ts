@@ -18,9 +18,8 @@ export const resources: Resource[] = [
     image: "/lovable-uploads/early-offense-pdf.webp",
     category: "Offense",
     type: "Free",
-    //link: "https://guide.bballorbit.com/early-offense-triggers",
-    link: "https://bballorbit.kit.com/3cf2bf3df5"data-formkit-toggle="3cf2bf3df5",
-    //uid: "3cf2bf3df5",
+    link: "https://guide.bballorbit.com/early-offense-triggers",
+    uid: "3cf2bf3df5",
     filePath: "/pdfs/early-offense-triggers.pdf",
   },
   {
