@@ -1,7 +1,14 @@
 name: Deploy to GitHub Pages
 
 on:
+  # manueller Start bleibt möglich
   workflow_dispatch:
+
+  # geplanter Deploy: jeden Sonntag 16:00 UTC
+  # = 17:00 deutsche Zeit im Winter (CET)
+  # = 18:00 deutsche Zeit im Sommer (CEST)
+  schedule:
+    - cron: "0 16 * * 0"
 
 jobs:
   deploy:
