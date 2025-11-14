@@ -200,9 +200,20 @@ const Resources = () => {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredResources.map((resource) => (
-                  <Card 
-                    key={resource.id} 
-                    className="border-border bg-card hover:shadow-orange transition-smooth hover:scale-105"
+                  <Card
+                    key={resource.id}
+                    className="border-border bg-card hover:shadow-orange transition-smooth hover:scale-105 cursor-pointer"
+                    data-formkit-toggle={resource.uid ?? undefined}
+                    onClick={() => {
+                      // Wenn kein Modal-UID hinterlegt ist ODER Paid-Produkt:
+                      // -> ganz normal den Link öffnen
+                      if (!resource.uid || resource.type === "Paid") {
+                        window.open(resource.link, "_blank");
+                      }
+                      // Wenn uid vorhanden und Free:
+                      // -> ConvertKit fängt den Klick über data-formkit-toggle ab
+                      //    und öffnet das Modal, kein window.open nötig.
+                    }}
                   >
                     <CardHeader className="p-0">
                       <div className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
@@ -228,19 +239,11 @@ const Resources = () => {
                       <CardDescription className="text-muted-foreground mb-4 line-clamp-2">
                         {resource.description}
                       </CardDescription>
+                  
+                      {/* Button ist jetzt nur noch optische CTA, kein eigener onClick */}
                       <Button
+                        type="button"
                         className="w-full shadow-orange transition-smooth hover:scale-105"
-                        data-formkit-toggle={resource.uid}
-                        onClick={() => {
-                          // Wenn KEIN ConvertKit-Modal hinterlegt ist (kein uid),
-                          // oder es eine Paid-Resource ist -> wie bisher Link öffnen
-                          if (!resource.uid || resource.type === "Paid") {
-                            window.open(resource.link, "_blank");
-                          }
-                          // Wenn uid vorhanden UND Free:
-                          // ConvertKit fängt den Klick über data-uid ab und öffnet das Modal.
-                          // Kein window.open nötig.
-                        }}
                       >
                         {resource.type === "Free" ? (
                           <>
