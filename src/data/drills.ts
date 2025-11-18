@@ -16,7 +16,7 @@ export interface Drill {
 export const drills: Drill[] = [
   {
     id: "1v1-kick-out-shooting",
-    title: "1v1 Kick Out Shooting",
+    title: "1v1 Kick-Out Shooting",
     subtitle: "Competitive shooting under pressure",
     focusArea: "Shooting",
     mainGoal: "Develop shooting consistency under pressure and decision making",
