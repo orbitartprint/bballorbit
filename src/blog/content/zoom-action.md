@@ -451,7 +451,7 @@ These three small-sided drills turn the concept into game-realistic reps your pl
     </p>
     <p class="text-base leading-relaxed mb-2">
       Add constraints like rotating positions or limiting the playable space to increase creativity and decision speed.
-      This drill connects directly with the <em>Constraint Led Approach (CLA)</em>, making it ideal for modern player development.
+      This drill connects directly with the <em>Constraints-Led Approach (CLA)</em>, making it ideal for modern player development.
     </p>
   </div>
 </div>
@@ -498,7 +498,7 @@ Also, check related content:
 
 You’ve now got a solid understanding of the Zoom Action - one of the most
 effective entry triggers for a 5-Out motion offense when coached as a principle.<br /><br />
-When you combine it with small-sided games and a constraint-led approach, your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
+When you combine it with small-sided games and a constraints-led approach, your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
 
 
 *Written by Chris Bernhard — Basketball Orbit*  
