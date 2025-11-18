@@ -1,4 +1,4 @@
-# The Constraint-Led Approach Revolution: Rethinking How We Coach Basketball
+# The Constraints-Led Approach Revolution: Rethinking How We Coach Basketball
 ### How Science, Creativity, and Game Reality Are Transforming Player Development
 
 > We don’t teach the move — we teach the mind that creates it.
@@ -8,7 +8,7 @@
 <div class="infobox">
   <h4>Intro</h4>
   <p>
-    A quiet revolution is now reshaping the game: the <strong>Constraint-Led Approach (CLA)</strong>, a science-backed framework that views learning not as repetition, but as interaction.  
+    A quiet revolution is now reshaping the game: the <strong>Constraints-Led Approach (CLA)</strong>, a science-backed framework that views learning not as repetition, but as interaction.  
 
    In this article, we explore how the CLA challenges traditional coaching, explains the science behind real skill development, and shows how modern coaches can design practices that build smarter, more adaptable players, without losing the joy of the game.
   </p>
@@ -26,7 +26,7 @@ It *looked* productive, but it built players who could perform in practice, not 
 
 That era is quietly ending as a new generation of coaches questions everything — from the purpose of drills to the coach’s role itself.
 
-At the heart of this transformation stands the **Constraint-Led Approach (CLA)**: a science-based framework redefining how humans learn movement and decision-making.
+At the heart of this transformation stands the **Constraints-Led Approach (CLA)**: a science-based framework redefining how humans learn movement and decision-making.
 
 ---
 
@@ -85,7 +85,7 @@ We’re moving from *telling* players what to do to *designing* situations where
 From perfection to adaptation.  
 From rote learning to genuine understanding.
 
-> The Constraint-Led Approach doesn’t just make you better — it makes basketball feel like basketball again.  
+> The Constraints-Led Approach doesn’t just make you better — it makes basketball feel like basketball again.  
 > — *The Transforming Basketball Podcast, EP 82 (2024)* – [Spotify](https://open.spotify.com/episode/5YpmLweh5pcwmrowsyL0GB)
 
 The revolution begins the moment we stop chasing flawless form  
@@ -93,7 +93,7 @@ and start creating environments where learning feels like the game itself.
 
 ---
 
-![Diagram: Traditional Coaching Approach vs. Constraint-Led Coaching Approach](/lovable-uploads/traditional-vs-cla.webp)
+![Diagram: Traditional Coaching Approach vs. Constraints-Led Coaching Approach](/lovable-uploads/traditional-vs-cla.webp)
 
 ---
 
@@ -102,7 +102,7 @@ and start creating environments where learning feels like the game itself.
 > Skill doesn’t live in the player — it lives in the interaction between the player and the environment.  
 > — adapted from Seifert & Davids (2017)
 
-The **Constraint-Led Approach (CLA)** is built on a deep scientific foundation called **Ecological Dynamics**.  
+The **Constraints-Led Approach (CLA)** is built on a deep scientific foundation called **Ecological Dynamics**.  
 
 This framework merges two fields of research: **Ecological Psychology**, which studies how humans perceive and act in their environments, and [Dynamical Systems Theory (DST)](https://en.wikipedia.org/wiki/Dynamical_systems_theory), which explains how complex systems — like the human body — self-organize without a central command.
 
@@ -177,7 +177,7 @@ movement coordination emerges “through the interaction between the organism an
 This is why the CLA feels so different. It aligns coaching with how the brain and body actually learn.  
 Instead of controlling behavior, it creates conditions where learning *self-emerges*.
 
-![Games Based Approach vs Constraint-Led Approach](/lovable-uploads/ssg-vs-cla.webp)
+![Games Based Approach vs Constraints-Led Approach](/lovable-uploads/ssg-vs-cla.webp)
 
 ---
 
@@ -199,9 +199,9 @@ This role demands creativity and trust in the process.
 
 <div class="infobox">
   <h3>📘 Summary: The Scientific Core of Modern Coaching</h3>
-  <p>The <strong>Constraint-Led Approach (CLA)</strong> builds on decades of movement science, redefining skill as a <em>living, adaptive process</em> shaped by the dynamic interaction of <strong>player, task, and environment</strong>.</p>
+  <p>The <strong>Constraints-Led Approach (CLA)</strong> builds on decades of movement science, redefining skill as a <em>living, adaptive process</em> shaped by the dynamic interaction of <strong>player, task, and environment</strong>.</p>
   <p>Practicing in isolation might look clean, organized, and productive, but without context, decisions, or pressure, it teaches coordination that doesn’t survive real games.</p>
-  <p>The <strong>Constraint-Led Approach</strong> reminds us that learning is not about memorizing technique — it’s about interacting with the game itself.</p>
+  <p>The <strong>Constraints-Led Approach</strong> reminds us that learning is not about memorizing technique — it’s about interacting with the game itself.</p>
 </div>
 
 ---
@@ -213,7 +213,7 @@ This role demands creativity and trust in the process.
 
 ---
 
-The Constraint-Led Approach lives or dies in practice design.  
+The Constraints-Led Approach lives or dies in practice design.  
 Theory alone doesn’t change how players learn — the gym does.  
 
 The art lies in creating that design so that the right behaviors emerge *without* having to be commanded.
@@ -222,7 +222,7 @@ The art lies in creating that design so that the right behaviors emerge *without
 
 ### The Role of Constraints
 
-In a Constraint-Led session, rules aren’t restrictions — they’re invitations.  
+In a Constraints-Led session, rules aren’t restrictions — they’re invitations.  
 Each constraint (whether **Individual**, **Task**, or **Environmental**) shapes how players interact with the game.  
 
 Constraints encourage players to *adapt* and *self-organize*. When the coach adjusts rules, space, or scoring, the environment becomes the teacher. 
@@ -309,7 +309,7 @@ As coach George Vaz put it in [The Transforming Basketball Podcast, EP 132 (2025
 
 <div class="infobox">
   <h3>📘 Summary</h3>
-  <p>A Constraint-Led practice doesn’t look cleaner — it looks <strong>smarter</strong>.<br>
+  <p>A Constraints-Led practice doesn’t look cleaner — it looks <strong>smarter</strong>.<br>
 It embraces variability, decision-making, and context to mirror the chaos of real basketball.<br>
 Coaches stop “running drills” and start <strong>shaping learning environments</strong>.</p>
 </div>
@@ -334,7 +334,7 @@ That’s when it hit me: *we were practicing movement, not solving problems.*
 It was time to rethink my coaching.  
 I dove into podcasts, research papers, and online discussions — and that’s when I came across **Alex Sarama** and *Transforming Basketball*.  
 
-The **Constraint-Led Approach** first seemed chaotic, even risky.  
+The **Constraints-Led Approach** first seemed chaotic, even risky.  
 But its message stuck: learning happens *through* the game, not *before* it.  
 Over time I learned to trust the process.  
 
@@ -396,7 +396,7 @@ My job wasn’t to tell them what to do — it was to **design an environment wh
 
 ## V. Challenges & Misconceptions – Overcoming Resistance to the CLA
 
-Every coaching revolution faces resistance. The Constraint-Led Approach is no different.  
+Every coaching revolution faces resistance. The Constraints-Led Approach is no different.  
 For decades, the “traditional” way has shaped how we think about teaching the game: clear instructions, fixed progressions, and technical drills before gameplay.  
 When a new approach challenges those habits, skepticism is natural.
 
@@ -461,7 +461,7 @@ Invite parents or assistants to observe, show before-and-after clips, or walk th
 
 ---
 
-The Constraint-Led Approach isn’t a dogma — it’s a framework.  
+The Constraints-Led Approach isn’t a dogma — it’s a framework.  
 It doesn’t demand that you abandon structure; it invites you to redesign it.  
 
 > Skill acquisition isn’t theory vs practice — it’s science that helps us design better practice.  
@@ -478,7 +478,7 @@ The future of coaching isn’t about louder commands or more drills — it’s a
 
 For too long, coaches equated progress with control — fixing, perfecting, explaining.
 Real growth, however, comes from **adaptation**.  
-The Constraint-Led Approach (CLA) unites science, intuition, and creativity to form a new kind of coaching: one that builds thinkers, not followers.
+The Constraints-Led Approach (CLA) unites science, intuition, and creativity to form a new kind of coaching: one that builds thinkers, not followers.
 
 ---
 
@@ -487,7 +487,7 @@ The Constraint-Led Approach (CLA) unites science, intuition, and creativity to f
 In this modern model, the coach becomes a *learning architect*.  
 Every constraint, rule, and tweak becomes a design experiment. Coaching shifts from *telling* to *testing*, shaping decision-making through discovery.  
 
-> The Constraint-Led Approach doesn’t limit creativity — it designs for it.
+> The Constraints-Led Approach doesn’t limit creativity — it designs for it.
 > *(Transforming Basketball Podcast, paraphrased)*
 
 ---
