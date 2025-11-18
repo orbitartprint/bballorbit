@@ -5,9 +5,9 @@ import articleContent from '../content/constraint-led-approach.md?raw';
 
 export const constraintLedApproach = {
   slug: "constraint-led-approach",
-  title: "The Constraint-Led Approach Revolution: Rethinking How We Coach Basketball",
+  title: "The Constraints-Led Approach Revolution: Rethinking How We Coach Basketball",
   excerpt:
-    "Discover how modern coaching is shifting from control to creativity. The Constraint-Led Approach (CLA) blends science, intuition, and real-game learning — transforming how players think, adapt, and perform.",
+    "Discover how modern coaching is shifting from control to creativity. The Constraints-Led Approach (CLA) blends science, intuition, and real-game learning — transforming how players think, adapt, and perform.",
   author: "Chris Bernhard",
   category: "Coaching Philosophy",
   tags: [
