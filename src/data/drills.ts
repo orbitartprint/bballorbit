@@ -35,7 +35,7 @@ export const drills: Drill[] = [
     ],
     thumbnail: "/lovable-uploads/2v2-corner-drive-1.webp",
     videoMp4: "/videos/2v2-corner-drive.mp4",
-    images: ["/lovable-uploads/2v2-corner-drive-1.webp","2v2-corner-drive-2.webp"],
+    images: ["/lovable-uploads/2v2-corner-drive-1.webp","/lovable-uploads/2v2-corner-drive-2.webp"],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Shooting", "Decision Making", "Passing"],
   },
