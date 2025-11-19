@@ -83,7 +83,9 @@ const DrillTemplate = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{drill.focusArea}</p>
+                  <p className="text-muted-foreground">{Array.isArray(drill.focusArea) 
+                              ? drill.focusArea.join(", ") 
+                              : drill.focusArea}</p>
                 </CardContent>
               </Card>
 
