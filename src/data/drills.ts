@@ -2,7 +2,7 @@ export interface Drill {
   id: string;
   title: string;
   subtitle?: string;
-  focusArea: string;
+  focusArea: string | string[];
   mainGoal: string;
   description: string[];
   constraints?: string[];
