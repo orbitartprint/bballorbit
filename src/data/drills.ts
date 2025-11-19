@@ -15,6 +15,31 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "2v2-corner-drive",
+    title: "2v2 Corner Drive",
+    subtitle: "Competitive shooting under pressure",
+    focusArea: "Shooting",
+    mainGoal: "Force a paint touch and create a high-quality finish or kick-out against help defense.",
+    description: [
+      "The ball handler and primary defender start in the corner, both outside the 3-point line. This gives the attacker an initial driving advantage.",
+      "The attacker must penetrate and achieve a paint touch before attempting a finish.",
+      "A second defender waits under the basket, ready to help as the attacker enters the lane.",
+      "The defender immediately follows the pass and closes out hard to contest the shot.",
+      "A second attacker stands in the opposite corner, positioned for a kick-out pass.",
+      "Once the paint touch occurs, the drill becomes fully live 2v2."
+    ],
+    constraints: [
+      "Award extra points for made 3-pointers after the kick-out.",
+      "Second defender may only help from inside the paint — no early cheating.",
+      "Play in a reduced space (below FT line extended) for tighter spacing decisions.",
+    ],
+    thumbnail: "/lovable-uploads/2v2-corner-drive-1.webp",
+    videoMp4: "/videos/2v2-corner-drive.mp4",
+    images: ["/lovable-uploads/2v2-corner-drive-1.webp","2v2-corner-drive-2.webp"],
+    // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
+    tags: ["Shooting", "Decision Making", "Passing"],
+  },
+  {
     id: "1v1-kick-out-shooting",
     title: "1v1 Kick-Out Shooting",
     subtitle: "Competitive shooting under pressure",
@@ -101,6 +126,6 @@ export const getAllTags = (): string[] => {
   return Array.from(tags).sort();
 };
 
-export const focusAreas = ["All", "Shooting", "Defense", "Offense", "Transition", "Conditioning"] as const;
+export const focusAreas = ["All", "Shooting", "Finishing", "Defense", "Offense", "Transition", "Conditioning", "Decision Making"] as const;
 
 export type FocusAreaFilter = typeof focusAreas[number];
