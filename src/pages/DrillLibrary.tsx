@@ -38,7 +38,10 @@ const DrillLibrary = () => {
   };
 
   const filteredDrills = drills.filter((drill) => {
-    const matchesFocus = focusFilter === "All" || drill.focusArea === focusFilter;
+    const matchesFocus = focusFilter === "All" || 
+      (Array.isArray(drill.focusArea) 
+        ? drill.focusArea.includes(focusFilter)
+        : drill.focusArea === focusFilter);
     const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => drill.tags.includes(tag));
     return matchesFocus && matchesTags;
   });
@@ -218,7 +221,11 @@ const DrillLibrary = () => {
                       <div className="flex items-center gap-3 text-sm text-muted-foreground mt-2">
                         <div className="flex items-center gap-1">
                           <Target className="w-4 h-4 text-primary" />
-                          <span>{drill.focusArea}</span>
+                          <span>
+                            {Array.isArray(drill.focusArea) 
+                              ? drill.focusArea.join(", ") 
+                              : drill.focusArea}
+                          </span>
                         </div>
                       </div>
                       <CardDescription className="line-clamp-2 mt-3">

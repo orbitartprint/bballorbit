@@ -7,6 +7,7 @@ export interface Resource {
   type: "Free" | "Paid";
   price?: string;
   link: string;
+  uid?: string;
   filePath?: string; // Local PDF file path for free resources
 }
 
