@@ -18,7 +18,7 @@ export const drills: Drill[] = [
     id: "2v2-corner-drive",
     title: "2v2 Corner Drive",
     subtitle: "Competitive shooting under pressure",
-    focusArea: "Shooting",
+    focusArea: ["Shooting","Defense","Offense"],
     mainGoal: "Force a paint touch and create a high-quality finish or kick-out against help defense.",
     description: [
       "The ball handler and primary defender start in the corner, both outside the 3-point line. This gives the attacker an initial driving advantage.",
@@ -126,6 +126,6 @@ export const getAllTags = (): string[] => {
   return Array.from(tags).sort();
 };
 
-export const focusAreas = ["All", "Shooting", "Finishing", "Defense", "Offense", "Transition", "Conditioning", "Decision Making"] as const;
+export const focusAreas = ["All", "Shooting", "Defense", "Offense", "Transition", "Conditioning"] as const;
 
 export type FocusAreaFilter = typeof focusAreas[number];
