@@ -5,7 +5,7 @@ export const zoomAction = {
   slug: "zoom-action",
   title: "Mastering the Zoom Action: The Most Versatile Trigger in Modern 5-Out Offense",
   excerpt:
-    "Discover how the Zoom Action creates space, triggers decisions and unlocks high-percentage offense. Learn the principles, coaching cues and drills — plus a complete PDF guide to master it with small-sided games and the constraint-led approach.",
+    "Discover how the Zoom Action creates space, triggers decisions and unlocks high-percentage offense. Learn the principles, coaching cues and drills — plus a complete PDF guide to master it with small-sided games and the constraints-led approach.",
   author: "Chris Bernhard",
   category: "Offense",
   tags: [
@@ -13,7 +13,7 @@ export const zoomAction = {
     "5-Out",
     "Basketball Drills",
     "Small-Sided Games",
-    "Constraint Led Approach",
+    "Constraints Led Approach",
     "Offensive Concepts"
   ],
   heroImage: "/lovable-uploads/zoom-action-hero.webp",
