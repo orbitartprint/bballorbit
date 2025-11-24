@@ -525,6 +525,9 @@ where structure meets freedom, and science meets creativity.
 
 **Don’t teach the move — teach the mind that creates it.**
 
+*Written by Chris Bernhard — Basketball Orbit*  
+*© 2025 Basketball Orbit*
+
 ---
 
 *References:*  
