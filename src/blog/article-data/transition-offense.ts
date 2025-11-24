@@ -14,7 +14,7 @@ export const transitionOffense = {
     "Transition Offense",
     "Fast Break",
     "Coaching Philosophy",
-    "Constraint Led Approach",
+    "Constraints Led Approach",
     "Modern Basketball"
   ],
   heroImage: "/lovable-uploads/transition-offense-hero.webp",
