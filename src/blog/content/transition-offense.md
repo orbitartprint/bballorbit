@@ -75,7 +75,7 @@ When playing 4v4 or 5v5, I use rules that emphasize tempo:
 - ✅ This forces players to **push the ball** themselves.
 - ✅ It teaches wings to **sprint early** — there’s no reason to wait in the backcourt.
 
-This approach, known as the [Constraints-Led Approach (CLA)](/blog/constraint-led-approach), builds implicit learning.  
+This approach, known as the [Constraints-Led Approach (CLA)](/blog/constraints-led-approach), builds implicit learning.  
 Players adapt and find solutions on their own, without rigid instructions.  
 It creates creative, confident decision-makers - exactly what you want in modern basketball.
 
