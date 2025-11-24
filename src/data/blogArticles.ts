@@ -15,13 +15,13 @@ export interface BlogArticle {
 
 import { transitionOffense } from '../blog/article-data/transition-offense';
 import { zoomAction } from '../blog/article-data/zoom-action';
-import { constraintLedApproach } from '../blog/article-data/constraint-led-approach';
+import { constraintsLedApproach } from '../blog/article-data/constraints-led-approach';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
   transitionOffense,
   zoomAction,
-  //constraintLedApproach,
+  //constraintsLedApproach,
   // Add more articles here as you create them
 ].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
