@@ -451,7 +451,7 @@ These three small-sided drills turn the concept into game-realistic reps your pl
     </p>
     <p class="text-base leading-relaxed mb-2">
       Add constraints like rotating positions or limiting the playable space to increase creativity and decision speed.
-      This drill connects directly with the [Constraints-Led Approach (CLA)](/blog/constraints-led-approach), making it ideal for modern player development.
+      This drill connects directly with the <a href="/blog/constraints-led-approach">Constraints-Led Approach (CLA)</a>, making it ideal for modern player development.
     </p>
   </div>
 </div>
