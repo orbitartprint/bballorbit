@@ -388,7 +388,7 @@ My job wasn’t to tell them what to do — it was to **design an environment wh
 
 ---
 
-![Learning in Action - Young Kids playing Basketball in the Gym](/lovable-uploads/constraint-led-approach.webp)
+![Learning in Action - Young Kids playing Basketball in the Gym](/lovable-uploads/constraints-led-approach.webp)
 
 > They didn’t need more instruction. They needed better problems.
 
