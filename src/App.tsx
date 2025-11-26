@@ -21,6 +21,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Shop = lazy(() => import("./pages/Shop"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
+const SsgPlaybook = lazy(() => import("./pages/SsgPlaybook"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ function App() {
               <Route path="/affiliate" element={<Affiliate />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/ssg-playbook" element={<SsgPlaybook />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
