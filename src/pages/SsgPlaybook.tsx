@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 
 const SsgPlaybook = () => {
   return (
@@ -206,6 +208,203 @@ const SsgPlaybook = () => {
           </div>
         </div>
       </section>
+
+      {/* Fascination Bullets Section */}
+      <section className="bg-[#050816] py-16 lg:py-24">
+        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+          <div className="space-y-10">
+            {/* Headline */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f5f5] text-center">
+              Inside the Playbook, You Will Discover…
+            </h2>
+
+            {/* Fascination Bullets */}
+            <div className="space-y-6 max-w-3xl mx-auto pt-6">
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
+                  The exact SSG framework I use to build player IQ, spacing and decision-making — in any age group.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
+                  A drill variation that forces players to make real decisions every 1–2 seconds — no more scripted patterns.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
+                  The competitive scoring rules that turn every drill into a high-intensity challenge players love.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
+                  The #1 spacing constraint that fixes overcrowded offenses in under 5 minutes.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
+                  How to turn every defensive stop into an instant fast break — building speed, spacing and "go-mode" instincts without ever explicitly coaching it.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
+                  My go-to SSG for teams that struggle with ball pressure — teaches toughness without shouting.
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center pt-8">
+              <Button 
+                size="lg"
+                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
+              >
+                Download the Playbook Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What You Get Section */}
+      <section className="bg-[#111111] py-16 lg:py-24">
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+          <div className="space-y-10">
+            {/* Headline */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f5f5] text-center">
+              What's Inside the Ultimate SSG Playbook?
+            </h2>
+
+            {/* Paragraph */}
+            <p className="text-lg md:text-xl text-[#f5f5f5]/80 text-center leading-relaxed max-w-3xl mx-auto">
+              A complete game-based training system built around spacing, decision-making, player IQ and competitive habits.
+            </p>
+
+            {/* Bullets */}
+            <div className="space-y-4 max-w-3xl mx-auto">
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  100+ game-like small-sided games for all phases of the game
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Clear coaching points for every SSG
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Variations, constraints & progressions for each drill
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  High-quality court diagrams for instant clarity
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Categorized system: offense, defense, transition, spacing, 1v1, 2v2, 3v3, advantage/disadvantage
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Perfect for youth, club and school programs
+                </p>
+              </div>
+            </div>
+
+            {/* Image Preview Gallery */}
+            <div className="pt-8">
+              <h3 className="text-2xl font-bold text-[#f5f5f5] text-center mb-8">
+                Preview Pages
+              </h3>
+              <ImageGallery />
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center pt-8">
+              <Button 
+                size="lg"
+                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
+              >
+                Download the Playbook Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+const ImageGallery = () => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  
+  const images = [
+    { id: 1, label: "Preview Image 1" },
+    { id: 2, label: "Preview Image 2" },
+    { id: 3, label: "Preview Image 3" },
+    { id: 4, label: "Preview Image 4" },
+    { id: 5, label: "Preview Image 5" },
+  ];
+
+  return (
+    <>
+      {/* Desktop: Horizontal Gallery */}
+      <div className="hidden md:grid md:grid-cols-5 gap-4">
+        {images.map((image) => (
+          <Dialog key={image.id}>
+            <DialogTrigger asChild>
+              <button
+                className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/10 to-[#2d32f1]/10 rounded-lg border-2 border-[#f5f5f5]/20 hover:border-[#f57520] transition-all cursor-pointer flex items-center justify-center group"
+                onClick={() => setSelectedImage(image.id)}
+              >
+                <span className="text-[#f5f5f5]/60 group-hover:text-[#f5f5f5] transition-colors text-sm text-center px-2">
+                  {image.label}
+                </span>
+              </button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl bg-[#111111] border-[#f5f5f5]/20">
+              <div className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-lg flex items-center justify-center">
+                <span className="text-[#f5f5f5] text-2xl">{image.label}</span>
+              </div>
+            </DialogContent>
+          </Dialog>
+        ))}
+      </div>
+
+      {/* Mobile: Stacked Vertical Gallery */}
+      <div className="md:hidden space-y-4">
+        {images.map((image) => (
+          <Dialog key={image.id}>
+            <DialogTrigger asChild>
+              <button
+                className="w-full aspect-[3/4] bg-gradient-to-br from-[#f57520]/10 to-[#2d32f1]/10 rounded-lg border-2 border-[#f5f5f5]/20 hover:border-[#f57520] transition-all cursor-pointer flex items-center justify-center"
+                onClick={() => setSelectedImage(image.id)}
+              >
+                <span className="text-[#f5f5f5]/60 text-sm">{image.label}</span>
+              </button>
+            </DialogTrigger>
+            <DialogContent className="max-w-[90vw] bg-[#111111] border-[#f5f5f5]/20">
+              <div className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-lg flex items-center justify-center">
+                <span className="text-[#f5f5f5] text-xl">{image.label}</span>
+              </div>
+            </DialogContent>
+          </Dialog>
+        ))}
+      </div>
     </>
   );
 };
