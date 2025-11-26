@@ -14,21 +14,21 @@ const SsgPlaybook = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-[#f8f8f8] pt-[120px] pb-20">
+      <section className="min-h-screen bg-[#111111] pt-[120px] pb-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#111111]">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#f5f5f5]">
                   The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-[#1e1e1e] font-medium leading-relaxed">
+                <p className="text-xl md:text-2xl text-[#f5f5f5]/90 font-medium leading-relaxed">
                   Teach decision-making, player IQ, and game intensity with 100+ ready-to-use small-sided games for every age group.
                 </p>
                 
-                <p className="text-lg text-[#1e1e1e]/80 font-medium">
+                <p className="text-lg text-[#f5f5f5]/70 font-medium">
                   Turn Every Practice Into Real Basketball.
                 </p>
               </div>
@@ -43,7 +43,7 @@ const SsgPlaybook = () => {
                 </Button>
 
                 {/* Micro-Trust Elements */}
-                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-sm text-[#1e1e1e]/70">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-sm text-[#f5f5f5]/60">
                   <div className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-[#f57520]" />
                     <span>30,000+ coaches trust Basketball Orbit</span>
@@ -62,7 +62,7 @@ const SsgPlaybook = () => {
 
             {/* Right Content - Playbook Mockup */}
             <div className="relative">
-              <div className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl shadow-2xl flex items-center justify-center border-2 border-[#f57520]/20">
+              <div className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl shadow-2xl flex items-center justify-center border-2 border-[#f57520]/30">
                 <div className="text-center space-y-4 p-8">
                   <div className="w-20 h-20 mx-auto bg-[#f57520] rounded-full flex items-center justify-center">
                     <svg
@@ -80,14 +80,56 @@ const SsgPlaybook = () => {
                       />
                     </svg>
                   </div>
-                  <p className="text-2xl font-bold text-[#111111]">
+                  <p className="text-2xl font-bold text-[#f5f5f5]">
                     Playbook Mockup
                   </p>
-                  <p className="text-[#1e1e1e]/60">
+                  <p className="text-[#f5f5f5]/60">
                     100+ Game-Like Drills
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Launch Offer Section */}
+      <section className="bg-[#050816] py-16 lg:py-24">
+        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+          <div className="text-center space-y-8">
+            {/* Headline */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f5f5]">
+              Limited Time Launch Price
+            </h2>
+
+            {/* Paragraph */}
+            <p className="text-lg md:text-xl text-[#f5f5f5]/80 leading-relaxed max-w-2xl mx-auto">
+              For the launch of The Ultimate SSG Playbook, you can get full access for a special price of $27. After the launch period, the regular price will be $47.
+            </p>
+
+            {/* Price Display */}
+            <div className="flex items-center justify-center gap-6 py-6">
+              <div className="text-[#f5f5f5]/50 text-2xl line-through">
+                $47
+              </div>
+              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#f57520]">
+                $27 <span className="text-2xl md:text-3xl text-[#f5f5f5]/70">Launch Price</span>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="space-y-3">
+              <Button 
+                size="lg"
+                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
+              >
+                Download the Playbook Now
+              </Button>
+
+              {/* Subtext */}
+              <p className="text-sm text-[#f5f5f5]/50">
+                The launch price is available for a limited time only.
+              </p>
             </div>
           </div>
         </div>
