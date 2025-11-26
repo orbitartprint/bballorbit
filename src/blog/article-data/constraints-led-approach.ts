@@ -21,7 +21,7 @@ export const constraintsLedApproach = {
   heroImageAlt: "Coach guiding basketball players in a dynamic practice setting",
   readTimeMinutes: calculateReadTime(articleContent),
   content: articleContent,
-  publishDate: "2025-10-31",
+  publishDate: "2025-11-30",
   featured: true,
   youtubeUrl: "",
   related: [
