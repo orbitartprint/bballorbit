@@ -134,6 +134,78 @@ const SsgPlaybook = () => {
           </div>
         </div>
       </section>
+
+      {/* Problem / Pain Section */}
+      <section className="bg-[#111111] py-16 lg:py-24">
+        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+          <div className="space-y-10">
+            {/* Headline */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f5f5] text-center">
+              Stop Wasting Time on Drills That Don't Transfer to Games.
+            </h2>
+
+            {/* Body Copy */}
+            <div className="space-y-4 text-center">
+              <p className="text-lg md:text-xl text-[#f5f5f5]/70 leading-relaxed">
+                Most youth teams struggle because traditional drills don't teach real decisions, spacing or game flow.
+              </p>
+              <p className="text-lg md:text-xl text-[#f5f5f5]/70 leading-relaxed">
+                Players stand still. Practices feel repetitive. Transition never clicks.
+              </p>
+              <p className="text-lg md:text-xl text-[#f5f5f5]/70 leading-relaxed">
+                And coaches spend hours searching for drills — only to realize they still don't fit together.
+              </p>
+              <p className="text-xl md:text-2xl text-[#f5f5f5] font-semibold pt-4">
+                This playbook fixes all of that.
+              </p>
+            </div>
+
+            {/* Bullet List */}
+            <div className="space-y-4 max-w-2xl mx-auto pt-6">
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Real basketball situations, not scripted patterns
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Instant engagement and game speed
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Players learn through decisions, not explanations
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Zero theory overload — just plug-and-play SSGs
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                <p className="text-lg text-[#f5f5f5]/80">
+                  Perfect for every age group and every level
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center pt-8">
+              <Button 
+                size="lg"
+                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
+              >
+                Download the Playbook Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
