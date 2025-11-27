@@ -1,9 +1,13 @@
 import { Helmet } from "react-helmet";
 import { Check } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import PrimaryButton from "@/components/ssg-playbook/PrimaryButton";
 import BonusSection from "@/components/ssg-playbook/BonusSection";
+import ValueStackSection from "@/components/ssg-playbook/ValueStackSection";
+import TestimonialsSection from "@/components/ssg-playbook/TestimonialsSection";
+import FounderSection from "@/components/ssg-playbook/FounderSection";
 
 const SsgPlaybook = () => {
   const navigate = useNavigate();
@@ -340,6 +344,15 @@ const SsgPlaybook = () => {
 
       {/* Bonus Section */}
       <BonusSection />
+
+      {/* Value Stack Section */}
+      <ValueStackSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Founder Section */}
+      <FounderSection />
     </>
   );
 };
@@ -399,7 +412,6 @@ const ImageGallery = () => {
             </DialogContent>
           </Dialog>
         ))}
-        <Footer />
       </div>
     </>
   );
