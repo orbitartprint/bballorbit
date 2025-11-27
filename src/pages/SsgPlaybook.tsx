@@ -139,7 +139,7 @@ const SsgPlaybook = () => {
       </section>
 
       {/* Problem / Pain Section */}
-      <section className="bg-[#1e2d5c] py-14 lg:py-20">
+      <section className="bg-[#0b1020] py-14 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="space-y-10">
             {/* Headline */}
