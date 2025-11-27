@@ -118,7 +118,7 @@ export const drills: Drill[] = [
   },
   {
     id: "1v1-catch-and-shoot",
-    title: "1v1 Catch and-Shoot",
+    title: "1v1 Catch and Shoot",
     subtitle: "Shooting with Decision Making under Pressure",
     focusArea: "Shooting",
     mainGoal: "Create maximum separation from a trailing defender and get into a catch-and-shoot or drive under pressure.",
