@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet";
-import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
+import PrimaryButton from "@/components/ssg-playbook/PrimaryButton";
+import BonusSection from "@/components/ssg-playbook/BonusSection";
 
 const SsgPlaybook = () => {
   return (
@@ -16,7 +17,7 @@ const SsgPlaybook = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-[#111111] pt-[120px] pb-20">
+      <section className="min-h-screen bg-[#111111] pt-[120px] pb-14">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
@@ -37,12 +38,9 @@ const SsgPlaybook = () => {
 
               {/* CTA Button */}
               <div className="space-y-4">
-                <Button 
-                  size="lg"
-                  className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
-                >
+                <PrimaryButton>
                   Get the Playbook Now
-                </Button>
+                </PrimaryButton>
 
                 {/* Micro-Trust Elements */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-sm text-[#f5f5f5]/60">
@@ -96,7 +94,7 @@ const SsgPlaybook = () => {
       </section>
 
       {/* Launch Offer Section */}
-      <section className="bg-[#050816] py-16 lg:py-24">
+      <section className="bg-[#050816] py-14 lg:py-20 border-t border-[#f57520]/20">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="text-center space-y-8">
             {/* Headline */}
@@ -121,12 +119,9 @@ const SsgPlaybook = () => {
 
             {/* CTA Button */}
             <div className="space-y-3">
-              <Button 
-                size="lg"
-                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
-              >
+              <PrimaryButton>
                 Download the Playbook Now
-              </Button>
+              </PrimaryButton>
 
               {/* Subtext */}
               <p className="text-sm text-[#f5f5f5]/50">
@@ -138,7 +133,7 @@ const SsgPlaybook = () => {
       </section>
 
       {/* Problem / Pain Section */}
-      <section className="bg-[#111111] py-16 lg:py-24">
+      <section className="bg-[#0b1020] py-14 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="space-y-10">
             {/* Headline */}
@@ -163,54 +158,53 @@ const SsgPlaybook = () => {
             </div>
 
             {/* Bullet List */}
-            <div className="space-y-4 max-w-2xl mx-auto pt-6">
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Real basketball situations, not scripted patterns
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Instant engagement and game speed
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Players learn through decisions, not explanations
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Zero theory overload — just plug-and-play SSGs
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Perfect for every age group and every level
-                </p>
+            <div className="bg-[#111827] rounded-xl p-6 md:p-8 border border-[#f5f5f5]/10 max-w-2xl mx-auto">
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Real basketball situations, not scripted patterns
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Instant engagement and game speed
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Players learn through decisions, not explanations
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Zero theory overload — just plug-and-play SSGs
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Perfect for every age group and every level
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <div className="text-center pt-8">
-              <Button 
-                size="lg"
-                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
-              >
+            <div className="text-center pt-4">
+              <PrimaryButton>
                 Download the Playbook Now
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
         </div>
       </section>
 
       {/* Fascination Bullets Section */}
-      <section className="bg-[#050816] py-16 lg:py-24">
+      <section className="bg-[#050816] py-14 lg:py-20 border-t border-[#2d32f1]/20">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="space-y-10">
             {/* Headline */}
@@ -221,37 +215,37 @@ const SsgPlaybook = () => {
             {/* Fascination Bullets */}
             <div className="space-y-6 max-w-3xl mx-auto pt-6">
               <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-3" />
                 <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
                   The exact SSG framework I use to build player IQ, spacing and decision-making — in any age group.
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-3" />
                 <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
                   A drill variation that forces players to make real decisions every 1–2 seconds — no more scripted patterns.
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-3" />
                 <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
                   The competitive scoring rules that turn every drill into a high-intensity challenge players love.
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-3" />
                 <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
                   The #1 spacing constraint that fixes overcrowded offenses in under 5 minutes.
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-3" />
                 <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
                   How to turn every defensive stop into an instant fast break — building speed, spacing and "go-mode" instincts without ever explicitly coaching it.
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-2" />
+                <div className="w-2 h-2 bg-[#f57520] rounded-full flex-shrink-0 mt-3" />
                 <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
                   My go-to SSG for teams that struggle with ball pressure — teaches toughness without shouting.
                 </p>
@@ -259,20 +253,17 @@ const SsgPlaybook = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="text-center pt-8">
-              <Button 
-                size="lg"
-                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
-              >
+            <div className="text-center pt-4">
+              <PrimaryButton>
                 Download the Playbook Now
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
         </div>
       </section>
 
       {/* What You Get Section */}
-      <section className="bg-[#111111] py-16 lg:py-24">
+      <section className="bg-[#0b1020] py-14 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
           <div className="space-y-10">
             {/* Headline */}
@@ -286,42 +277,44 @@ const SsgPlaybook = () => {
             </p>
 
             {/* Bullets */}
-            <div className="space-y-4 max-w-3xl mx-auto">
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  100+ game-like small-sided games for all phases of the game
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Clear coaching points for every SSG
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Variations, constraints & progressions for each drill
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  High-quality court diagrams for instant clarity
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Categorized system: offense, defense, transition, spacing, 1v1, 2v2, 3v3, advantage/disadvantage
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
-                <p className="text-lg text-[#f5f5f5]/80">
-                  Perfect for youth, club and school programs
-                </p>
+            <div className="bg-[#111827] rounded-xl p-6 md:p-8 border border-[#f5f5f5]/10 max-w-3xl mx-auto">
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    100+ game-like small-sided games for all phases of the game
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Clear coaching points for every SSG
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Variations, constraints & progressions for each drill
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    High-quality court diagrams for instant clarity
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Categorized system: offense, defense, transition, spacing, 1v1, 2v2, 3v3, advantage/disadvantage
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
+                  <p className="text-lg text-[#f5f5f5]/80">
+                    Perfect for youth, club and school programs
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -334,17 +327,17 @@ const SsgPlaybook = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="text-center pt-8">
-              <Button 
-                size="lg"
-                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full"
-              >
+            <div className="text-center pt-4">
+              <PrimaryButton>
                 Download the Playbook Now
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Bonus Section */}
+      <BonusSection />
     </>
   );
 };
