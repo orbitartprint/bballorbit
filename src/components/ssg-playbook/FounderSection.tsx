@@ -8,7 +8,13 @@ const FounderSection = () => {
           {/* Left: Founder Image Placeholder */}
           <div className="order-2 lg:order-1">
             <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl border-2 border-[#f5f5f5]/20 flex items-center justify-center">
-              <span className="text-[#f5f5f5]/60 text-lg">Founder Image</span>
+              <img 
+                src="/assets/chris-photo-1.webp" 
+                alt="Chris - Basketball Orbit Founder"
+                loading="lazy"
+                decoding="async"
+                className="rounded-lg shadow-orange w-80 h-96 object-cover"
+              />
             </div>
           </div>
 
@@ -19,7 +25,7 @@ const FounderSection = () => {
             </h2>
 
             <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
-              Christian Bernhard is a youth coach, content creator and founder of Basketball Orbit. With over 20,000 subscribers and millions of views, his modern, game-based approach has helped thousands of coaches bring more decision-making, player IQ and real-game habits into their practices.
+              Chris Bernhard is a youth coach, content creator and founder of Basketball Orbit. With over 20,000 subscribers and millions of views, his modern, game-based approach has helped thousands of coaches bring more decision-making, player IQ and real-game habits into their practices.
             </p>
 
             <PrimaryButton>
