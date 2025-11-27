@@ -25,7 +25,7 @@ const FounderSection = () => {
             </h2>
 
             <p className="text-lg text-[#f5f5f5]/80 leading-relaxed">
-              Chris Bernhard is a youth coach, content creator and founder of Basketball Orbit. With over 20,000 subscribers and millions of views, his modern, game-based approach has helped thousands of coaches bring more decision-making, player IQ and real-game habits into their practices.
+              Chris Bernhard is a youth coach, content creator and founder of Basketball Orbit. With over 30,000 subscribers and millions of views, his modern, game-based approach has helped thousands of coaches bring more decision-making, player IQ and real-game habits into their practices.
             </p>
 
             <PrimaryButton>
