@@ -116,6 +116,29 @@ export const drills: Drill[] = [
     images: ["/lovable-uploads/2v2-rolling-break-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
     tags: ["Transition", "Competition", "Conditioning", "Decision Making"],
   },
+  {
+    id: "1v1-catch-and-shoot",
+    title: "1v1 Catch and-Shoot",
+    subtitle: "Shooting with Decision Making under Pressure",
+    focusArea: "Shooting",
+    mainGoal: "Create maximum separation from a trailing defender and get into a catch-and-shoot or drive under pressure.",
+    description: [
+      "The shooter starts at the 3-point line, while the defender waits below the free throw line.",
+      "An additional passer waits at the free-throw to feed the shooter.",
+      "The shooter may only start once the defender starts moving around one of the cones at the elbow, then moves lateral to create maximum distance.",
+      "The shooter receives the ball from the passer and goes for a catch-and-shoot 3 while the defender tries to contest the shot.",
+      "The shooter must use speed, angles, and quick footwork to gain separation.",
+    ],
+    constraints: [
+      "Allow the shooter to choose drive or shoot.",
+      "Vary the cone positions to change chase angles and timing.",
+      "Limit the shoter to two dribbles when driving.",
+    ],
+    thumbnail: "/lovable-uploads/1v1-catch-and-shoot.webp",
+    videoMp4: "/videos/1v1-catch-and-shoot.mp4",
+    //images: ["/lovable-uploads/2v2-rolling-break-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
+    tags: ["Shooting", "Decision Making"],
+  },
   
 ];
 
