@@ -132,11 +132,11 @@ export const drills: Drill[] = [
     constraints: [
       "Allow the shooter to choose drive or shoot.",
       "Vary the cone positions to change chase angles and timing.",
-      "Limit the shoter to two dribbles when driving.",
+      "Limit the shooter to two dribbles when driving.",
     ],
     thumbnail: "/lovable-uploads/1v1-catch-and-shoot.webp",
     videoMp4: "/videos/1v1-catch-and-shoot.mp4",
-    //images: ["/lovable-uploads/2v2-rolling-break-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
+    images: ["/lovable-uploads/1v1-catch-and-shoot.webp"],
     tags: ["Shooting", "Decision Making"],
   },
   
