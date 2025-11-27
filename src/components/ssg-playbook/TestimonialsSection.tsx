@@ -4,15 +4,15 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       text: "I used many of Chris' concepts — including his 5-Out principles and SSG ideas — with my 4th & 5th graders and the transformation was unbelievable. All kids were involved, no boring drills, and we went undefeated in my first year coaching. His game-like approach really works.",
-      author: "Coach A., USA",
+      author: "Coach Carlos, USA",
     },
     {
       text: "Christian's drills and explanations are so clear that I keep coming back to study them. The game-like variations helped me overhaul my practices and keep my players engaged. This is some of the best modern coaching material online.",
-      author: "Coach M., U14",
+      author: "Coach Robert, U14",
     },
     {
       text: "Christian's game-based approach stands out. Clear explanations, great animations and drills that are methodically structured and truly game-realistic. His SSG philosophy has improved my understanding of how to teach real decisions.",
-      author: "Coach T., Germany",
+      author: "Coach Thomas, Germany",
     },
     {
       text: "This playbook gave me more clarity in one week than years of random drill searching. Every SSG is well structured and easy to run. It completely changed how I plan my practices.",
