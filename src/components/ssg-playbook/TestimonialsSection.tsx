@@ -3,7 +3,7 @@ import PrimaryButton from "./PrimaryButton";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      text: "I used many of Christian's concepts — including his 5-Out principles and SSG ideas — with my 4th & 5th graders and the transformation was unbelievable. All kids were involved, no boring drills, and we went undefeated in my first year coaching. His game-like approach really works.",
+      text: "I used many of Chris' concepts — including his 5-Out principles and SSG ideas — with my 4th & 5th graders and the transformation was unbelievable. All kids were involved, no boring drills, and we went undefeated in my first year coaching. His game-like approach really works.",
       author: "Coach A., USA",
     },
     {
