@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bballorbit.com/</loc>
-    <lastmod>2025-11-05</lastmod>
+    <lastmod>2025-11-30</lastmod>
   </url>
   <url>
     <loc>https://bballorbit.com/drills/</loc>
-    <lastmod>2025-11-05</lastmod>
+    <lastmod>2025-11-30</lastmod>
   </url>
   <url>
     <loc>https://bballorbit.com/blog/</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://bballorbit.com/resources/</loc>
-    <lastmod>2025-11-05</lastmod>
+    <lastmod>2025-11-30</lastmod>
   </url>
   <url>
     <loc>https://bballorbit.com/terms/</loc>
@@ -46,17 +46,22 @@
   </url>
   <url>
     <loc>https://bballorbit.com/blog/transition-offense</loc>
-    <lastmod>2025-11-05</lastmod>
+    <lastmod>2025-11-30</lastmod>
   </url>
   <url>
     <loc>https://bballorbit.com/blog/zoom-action</loc>
-    <lastmod>2025-11-05</lastmod>
+    <lastmod>2025-11-30</lastmod>
   </url>
   <url>
-    <loc>https://bballorbit.com/blog/constraint-led-approach</loc>
-    <lastmod>2025-11-05</lastmod>
+    <loc>https://bballorbit.com/blog/constraints-led-approach</loc>
+    <lastmod>2025-11-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bballorbit.com/blog/ssg-playbook</loc>
+    <lastmod>2025-11-30</lastmod>
   </url>
 </urlset>
+
 
 
 
