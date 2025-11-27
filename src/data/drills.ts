@@ -136,7 +136,7 @@ export const drills: Drill[] = [
     ],
     thumbnail: "/lovable-uploads/1v1-catch-and-shoot.webp",
     videoMp4: "/videos/1v1-catch-and-shoot.mp4",
-    images: ["/lovable-uploads/1v1-catch-and-shoot.webp"],
+    //images: ["/lovable-uploads/1v1-catch-and-shoot.webp"],
     tags: ["Shooting", "Decision Making"],
   },
   
