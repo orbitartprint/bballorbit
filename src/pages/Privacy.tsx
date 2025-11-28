@@ -24,7 +24,7 @@ const Privacy = () => {
           </h1>
           
           <p className="text-lg text-muted-foreground mb-8">
-            <strong>Last updated September 30, 2025</strong>
+            <strong>Last updated November 30, 2025</strong>
           </p>
 
           <div className="space-y-6 text-foreground">
