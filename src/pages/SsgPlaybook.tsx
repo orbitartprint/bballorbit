@@ -48,7 +48,7 @@ const SsgPlaybook = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-center">
                 <PrimaryButton>
                   Get the Playbook Now
                 </PrimaryButton>
@@ -131,7 +131,7 @@ const SsgPlaybook = () => {
             {/* CTA Button */}
             <div className="space-y-3">
               <PrimaryButton>
-                Download the Playbook Now
+                Get the Playbook Now
               </PrimaryButton>
 
               {/* Subtext */}
@@ -207,7 +207,7 @@ const SsgPlaybook = () => {
             {/* CTA Button */}
             <div className="text-center pt-4">
               <PrimaryButton>
-                Download the Playbook Now
+                Get the Playbook Now
               </PrimaryButton>
             </div>
           </div>
@@ -266,7 +266,7 @@ const SsgPlaybook = () => {
             {/* CTA Button */}
             <div className="text-center pt-4">
               <PrimaryButton>
-                Download the Playbook Now
+                Get the Playbook Now
               </PrimaryButton>
             </div>
           </div>
@@ -340,7 +340,7 @@ const SsgPlaybook = () => {
             {/* CTA Button */}
             <div className="text-center pt-4">
               <PrimaryButton>
-                Download the Playbook Now
+                Get the Playbook Now
               </PrimaryButton>
             </div>
           </div>
