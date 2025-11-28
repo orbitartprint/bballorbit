@@ -1,4 +1,5 @@
 import PrimaryButton from "./PrimaryButton";
+import chrisPhoto1 from "@/assets/chris-photo-1.webp";
 
 const FounderSection = () => {
   return (
@@ -9,7 +10,7 @@ const FounderSection = () => {
           <div className="order-2 lg:order-1">
             <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl border-2 border-[#f5f5f5]/20 flex items-center justify-center">
               <img 
-                src="/assets/chris-photo-1.webp" 
+                src={chrisPhoto1}
                 alt="Chris - Basketball Orbit Founder"
                 loading="lazy"
                 decoding="async"
