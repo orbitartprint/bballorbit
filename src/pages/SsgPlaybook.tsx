@@ -8,6 +8,8 @@ import BonusSection from "@/components/ssg-playbook/BonusSection";
 import ValueStackSection from "@/components/ssg-playbook/ValueStackSection";
 import TestimonialsSection from "@/components/ssg-playbook/TestimonialsSection";
 import FounderSection from "@/components/ssg-playbook/FounderSection";
+import FAQSection from "@/components/ssg-playbook/FAQSection";
+import FinalCTASection from "@/components/ssg-playbook/FinalCTASection";
 
 const SsgPlaybook = () => {
   const navigate = useNavigate();
@@ -353,6 +355,12 @@ const SsgPlaybook = () => {
 
       {/* Founder Section */}
       <FounderSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Final CTA Section */}
+      <FinalCTASection />
     </>
   );
 };
