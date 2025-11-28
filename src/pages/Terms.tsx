@@ -87,6 +87,81 @@ const Terms = () => {
               </p>
             </section>
 
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">Sale of Digital Products (PDF Downloads)</h2>
+              <p className="text-base leading-relaxed mb-4">
+                (1) Delivery of Digital Content<br>
+                All products offered are digital content delivered electronically. After completing a purchase, the buyer receives immediate access to the download link via email. No physical goods will be shipped.<br>
+                (2) Responsibility of the Buyer<br>
+                The buyer is responsible for providing a valid email address and ensuring that emails can be received successfully.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">Waiver of the Right of Withdrawal (EU Customers)</h2>
+              <p className="text-base leading-relaxed mb-4">
+                (1) Loss of Withdrawal Rights
+                Digital products that are not supplied on a physical medium are subject to the provisions of EU Directive 2011/83/EU. By purchasing a digital product and accessing the download link, the buyer expressly agrees that the delivery of the digital content begins before the end of the statutory withdrawal period. The buyer acknowledges that this results in the loss of the right of withdrawal in accordance with Article 16(m) of the Directive.
+                
+                (2) Explicit Consent During Checkout
+                Before completing the purchase, the buyer confirms by checking a required box that they agree to the immediate delivery of the digital content and that they understand they lose their right to withdraw from the purchase.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">License and Permitted Use</h2>
+              <p className="text-base leading-relaxed mb-4">
+                (1) Personal License
+                With the purchase of a digital product, the buyer is granted a simple, non-exclusive, non-transferable license for personal and non-commercial use.
+                
+                (2) Prohibited Uses
+                The following actions are explicitly prohibited:
+                
+                Sharing, forwarding or distributing the digital files to third parties
+                
+                Uploading, publishing or making the content publicly available
+                
+                Reselling, renting, lending or sublicensing the product
+                
+                Copying or reproducing the content beyond personal use
+                
+                (3) Intellectual Property
+                All content is protected by copyright. Any infringement may lead to legal action.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">Pricing, Taxes and Small Business Status</h2>
+              <p className="text-base leading-relaxed mb-4">
+                (1) Small Business Regulation
+                The seller operates under the German Small Business Regulation (Section 19 UStG). No VAT will be shown on invoices. All prices displayed are final prices.
+                
+                (2) Currency and Payment Processing
+                All prices are shown in the currency specified during checkout. Payment is processed securely through ConvertKit Commerce and Stripe.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">Refunds</h2>
+              <p className="text-base leading-relaxed mb-4">
+                (1) Refund Eligibility
+                Due to the immediate delivery of digital content and the loss of the statutory withdrawal right, all sales are final.
+                
+                (2) Voluntary Refunds (Goodwill Policy)
+                The seller may, at their sole discretion, offer refunds in special cases (e.g., duplicate purchase, technical issues). There is no legal entitlement to such refunds.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">Refunds</h2>
+              <p className="text-base leading-relaxed mb-4">
+                (1) Payment Processing
+                Payments are processed through ConvertKit Commerce and Stripe. Their terms and policies apply in addition to these Terms of Service.
+                (2) Digital Delivery
+                The delivery of the digital product is handled automatically by ConvertKit immediately after successful payment.
+              </p>
+            </section>
+
             <div className="mt-12 pt-8 border-t border-border">
               <button
                 onClick={() => navigate('/')}
