@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import { Check } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import PrimaryButton from "@/components/ssg-playbook/PrimaryButton";
@@ -14,11 +13,9 @@ import FAQSection from "@/components/ssg-playbook/FAQSection";
 import FinalCTASection from "@/components/ssg-playbook/FinalCTASection";
 
 const SsgPlaybook = () => {
-  const navigate = useNavigate();
   useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
     <>
-      <Navigation />
       <Helmet>
         <title>The Ultimate SSG Playbook - Basketball Orbit</title>
         <meta
@@ -26,6 +23,8 @@ const SsgPlaybook = () => {
           content="100+ competitive, game-like small-sided games to teach decision-making, player IQ, and game intensity for every age group."
         />
       </Helmet>
+
+      <Navigation />
 
       {/* Hero Section */}
       <section className="min-h-screen bg-[#111111] pt-[120px] pb-14">
