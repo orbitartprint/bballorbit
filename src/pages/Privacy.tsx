@@ -132,17 +132,18 @@ const Privacy = () => {
               <div><a href="#whoshare" className="text-primary hover:text-primary/80 underline">4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a></div>
               <div><a href="#cookies" className="text-primary hover:text-primary/80 underline">5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></div>
               <div><a href="#newsletter" className="text-primary hover:text-primary/80 underline">6. NEWSLETTER</a></div>
-              <div><a href="#hosting" className="text-primary hover:text-primary/80 underline">7. HOSTING OF THE WEBSITE</a></div>
-              <div><a href="#inforetain" className="text-primary hover:text-primary/80 underline">8. HOW LONG DO WE KEEP YOUR INFORMATION?</a></div>
-              <div><a href="#infominors" className="text-primary hover:text-primary/80 underline">9. DO WE COLLECT INFORMATION FROM MINORS?</a></div>
-              <div><a href="#privacyrights" className="text-primary hover:text-primary/80 underline">10. WHAT ARE YOUR PRIVACY RIGHTS?</a></div>
-              <div><a href="#DNT" className="text-primary hover:text-primary/80 underline">11. CONTROLS FOR DO-NOT-TRACK FEATURES</a></div>
-              <div><a href="#uslaws" className="text-primary hover:text-primary/80 underline">12. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></div>
-              <div><a href="#downloads" className="text-primary hover:text-primary/80 underline">13. DOWNLOADS AND ONLINE SHOP</a></div>
-              <div><a href="#policyupdates" className="text-primary hover:text-primary/80 underline">14. DO WE MAKE UPDATES TO THIS NOTICE?</a></div>
-              <div><a href="#contact" className="text-primary hover:text-primary/80 underline">15. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></div>
-              <div><a href="#request" className="text-primary hover:text-primary/80 underline">16. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a></div>
-              <div><a href="#SSL" className="text-primary hover:text-primary/80 underline">17. SSL/TLS ENCRYPTION</a></div>
+              <div><a href="#convertkitstripe" className="text-primary hover:text-primary/80 underline">7. DIGITAL PRODUCT SALES VIA CONVERTKIT & STRIPE</a></div>
+              <div><a href="#hosting" className="text-primary hover:text-primary/80 underline">8. HOSTING OF THE WEBSITE</a></div>
+              <div><a href="#inforetain" className="text-primary hover:text-primary/80 underline">9. HOW LONG DO WE KEEP YOUR INFORMATION?</a></div>
+              <div><a href="#infominors" className="text-primary hover:text-primary/80 underline">10. DO WE COLLECT INFORMATION FROM MINORS?</a></div>
+              <div><a href="#privacyrights" className="text-primary hover:text-primary/80 underline">11. WHAT ARE YOUR PRIVACY RIGHTS?</a></div>
+              <div><a href="#DNT" className="text-primary hover:text-primary/80 underline">12. CONTROLS FOR DO-NOT-TRACK FEATURES</a></div>
+              <div><a href="#uslaws" className="text-primary hover:text-primary/80 underline">13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></div>
+              <div><a href="#downloads" className="text-primary hover:text-primary/80 underline">14. DOWNLOADS AND ONLINE SHOP</a></div>
+              <div><a href="#policyupdates" className="text-primary hover:text-primary/80 underline">15. DO WE MAKE UPDATES TO THIS NOTICE?</a></div>
+              <div><a href="#contact" className="text-primary hover:text-primary/80 underline">16. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></div>
+              <div><a href="#request" className="text-primary hover:text-primary/80 underline">17. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a></div>
+              <div><a href="#SSL" className="text-primary hover:text-primary/80 underline">18. SSL/TLS ENCRYPTION</a></div>
             </div>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infocollect">
@@ -345,9 +346,75 @@ const Privacy = () => {
               <a href="https://convertkit.com/privacy" target="_blank">https://convertkit.com/privacy</a>.
               <br/>
             </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="convertkitstripe">
+              7. DIGITAL PRODUCT SALES VIA CONVERTKIT & STRIPE
+            </h2>
+            
+            <p className="mb-4">
+              <strong><em>In Short:</em></strong> <em>When you purchase a digital product from us, your data is processed by ConvertKit Commerce and Stripe to complete your order, deliver your files, and comply with legal obligations.</em>
+            </p>
+            
+            <p className="mb-4">
+              We use ConvertKit Commerce (ConvertKit LLC, Boise, ID, USA) to manage digital product sales, process orders, and deliver digital downloads. ConvertKit may process the following data when you purchase a product:
+            </p>
+            
+            <ul className="list-disc ml-6 mb-4 space-y-1">
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Payment confirmation and transaction details</li>
+              <li>IP address</li>
+              <li>Purchase history and download activity</li>
+            </ul>
+            
+            <p className="mb-4">
+              The legal basis for this processing is Art. 6 (1) lit. b GDPR (performance of a contract) and Art. 6 (1) lit. c GDPR (legal obligations, such as tax documentation).
+            </p>
+            
+            <p className="mb-4">
+              ConvertKit stores data on servers located in the USA. ConvertKit relies on Standard Contractual Clauses (SCCs) pursuant to Art. 46 GDPR to ensure adequate data protection.
+              For more information, please refer to ConvertKit’s Privacy Policy:
+              <a href="https://convertkit.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                https://convertkit.com/privacy
+              </a>.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Stripe Payment Processing</h3>
+            
+            <p className="mb-4">
+              Payments for digital products are processed through Stripe (Stripe Inc., San Francisco, CA, USA), which acts as the secure payment gateway for ConvertKit Commerce.
+              Stripe may process the following data:
+            </p>
+            
+            <ul className="list-disc ml-6 mb-4 space-y-1">
+              <li>Payment method information (credit card, Apple Pay, Google Pay)</li>
+              <li>Billing address</li>
+              <li>Name and email address</li>
+              <li>Transaction metadata</li>
+              <li>Device and technical information for fraud prevention</li>
+            </ul>
+            
+            <p className="mb-4">
+              The legal basis for this processing is Art. 6 (1) lit. b GDPR (performance of a contract). Stripe complies with PCI-DSS security standards.
+              For further details, see Stripe’s Privacy Policy:
+              <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                https://stripe.com/privacy
+              </a>.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Digital Product Delivery</h3>
+            
+            <p className="mb-4">
+              After a successful purchase, the digital product (such as a PDF or downloadable file) is delivered automatically via ConvertKit Commerce. 
+              We store purchase and download information to fulfill your order and meet legal obligations, particularly tax and accounting retention requirements.
+            </p>
+            
+            <p className="mb-4">
+              Data processing for digital downloads is based on Art. 6 (1) lit. b GDPR (contract performance) and Art. 6 (1) lit. c GDPR (legal compliance).
+            </p>
             
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="hosting">
-              7. HOSTING OF THE WEBSITE
+              8. HOSTING OF THE WEBSITE
             </h2>
             <p className="mb-4">
               Our website is hosted on the servers of GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA).
@@ -359,7 +426,7 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="inforetain">
-              8. HOW LONG DO WE KEEP YOUR INFORMATION?
+              9. HOW LONG DO WE KEEP YOUR INFORMATION?
             </h2>
             <p className="mb-4">
               <strong><em>In Short:</em></strong> <em>We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice unless otherwise required by law.</em>
@@ -372,7 +439,7 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infominors">
-              9. DO WE COLLECT INFORMATION FROM MINORS?
+              10. DO WE COLLECT INFORMATION FROM MINORS?
             </h2>
             <p className="mb-4">
               <strong><em>In Short:</em></strong> <em>We do not knowingly collect data from or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction.</em>
@@ -382,7 +449,7 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="privacyrights">
-              10. WHAT ARE YOUR PRIVACY RIGHTS?
+              11. WHAT ARE YOUR PRIVACY RIGHTS?
             </h2>
             <p className="mb-4">
               <strong><em>In Short:</em></strong> <em>Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.</em>
@@ -417,7 +484,7 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="DNT">
-              11. CONTROLS FOR DO-NOT-TRACK FEATURES
+              12. CONTROLS FOR DO-NOT-TRACK FEATURES
             </h2>
             <p className="mb-4">
               Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT") feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.
@@ -427,7 +494,7 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="uslaws">
-              12. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
+              13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
             </h2>
             <p className="mb-4">
               <strong><em>In Short:</em></strong> <em>If you are a resident of, you may have the right to request access to and receive details about the personal information we maintain about you and how we have processed it, correct inaccuracies, get a copy of, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. More information is provided below.</em>
@@ -572,7 +639,7 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="downloads">
-              13. DOWNLOADS AND ONLINE SHOP
+              14. DOWNLOADS AND ONLINE SHOP
             </h2>
             <p>
               We offer digital content (such as PDF guides and digital products) as well as physical items (such as T-shirts and basketball equipment) for download or purchase on our website.
@@ -597,7 +664,7 @@ const Privacy = () => {
             <br/>
             
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="policyupdates">
-              14. DO WE MAKE UPDATES TO THIS NOTICE?
+              15. DO WE MAKE UPDATES TO THIS NOTICE?
             </h2>
             <p className="mb-4">
               <em><strong>In Short:</strong> Yes, we will update this notice as necessary to stay compliant with relevant laws.</em>
@@ -607,14 +674,14 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="contact">
-              15. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+              16. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
             </h2>
             <p className="mb-4">
               If you have questions or comments about this notice, you may email us at info[at]bballorbit.com
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="request">
-              16. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
+              17. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
             </h2>
             <p className="mb-4">
               Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please fill out and submit our{" "}
@@ -624,7 +691,7 @@ const Privacy = () => {
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="SSL">
-              17. SSL/TLS ENCRYPTION
+              18. SSL/TLS ENCRYPTION
             </h2>
             <p className="mb-4">
               This site uses SSL/TLS encryption for security reasons and to protect the transmission of confidential content, such as orders or inquiries you send to us as the site operator. You can recognize an encrypted connection by the change in the browser's address line from "http://" to "https://" and by the lock symbol in your browser bar. When SSL/TLS encryption is activated, the data you transmit to us cannot be read by third parties.
