@@ -3,6 +3,8 @@ import { Check } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Navigation from "@/components/ui/navigation";
+import Footer from "@/components/ui/footer";
 import PrimaryButton from "@/components/ssg-playbook/PrimaryButton";
 import BonusSection from "@/components/ssg-playbook/BonusSection";
 import ValueStackSection from "@/components/ssg-playbook/ValueStackSection";
@@ -16,6 +18,7 @@ const SsgPlaybook = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
     <>
+      <Navigation />
       <Helmet>
         <title>The Ultimate SSG Playbook - Basketball Orbit</title>
         <meta
@@ -361,6 +364,8 @@ const SsgPlaybook = () => {
 
       {/* Final CTA Section */}
       <FinalCTASection />
+
+      <Footer />
     </>
   );
 };
