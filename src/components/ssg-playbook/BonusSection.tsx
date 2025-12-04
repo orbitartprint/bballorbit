@@ -4,13 +4,13 @@ const bonuses = [
   {
     number: 1,
     title: "The Constraint Master List",
-    description: "25+ proven constraints to instantly increase decision-making, spacing and intensity.",
+    description: "50+ proven constraints to instantly increase decision-making, spacing and intensity.",
     value: 19,
   },
   {
     number: 2,
     title: "The SSG Warm-Up Blueprint",
-    description: "10 warm-up SSGs extracted and formatted for instant use — high-energy starts in every session.",
+    description: "17 warm-up SSGs extracted and formatted for instant use — high-energy starts in every session.",
     value: 12,
   },
   {
@@ -22,7 +22,7 @@ const bonuses = [
   {
     number: 4,
     title: "Transition SSG Mini-Pack",
-    description: "5 transition-focused SSGs curated for building automatic fast-break instincts.",
+    description: "10 transition-focused SSGs curated for building automatic fast-break instincts.",
     value: 14,
   },
 ];
