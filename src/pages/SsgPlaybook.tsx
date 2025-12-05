@@ -11,6 +11,7 @@ import TestimonialsSection from "@/components/ssg-playbook/TestimonialsSection";
 import FounderSection from "@/components/ssg-playbook/FounderSection";
 import FAQSection from "@/components/ssg-playbook/FAQSection";
 import FinalCTASection from "@/components/ssg-playbook/FinalCTASection";
+import ImageGallery from "@/components/ssg-playbook/ImageGallery";
 
 const SsgPlaybook = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
@@ -372,98 +373,6 @@ const SsgPlaybook = () => {
       <FinalCTASection />
 
       <Footer />
-    </>
-  );
-};
-
-const ImageGallery = () => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  
-  const images = [
-    { id: 1, label: "Preview Image 1" },
-    { id: 2, label: "Preview Image 2" },
-    { id: 3, label: "Preview Image 3" },
-    { id: 4, label: "Preview Image 4" },
-    { id: 5, label: "Preview Image 5" },
-  ];
-
-  const goToNext = () => {
-    if (selectedIndex === null) return;
-    setSelectedIndex((selectedIndex + 1) % images.length);
-  };
-
-  const goToPrev = () => {
-    if (selectedIndex === null) return;
-    setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
-  };
-
-  return (
-    <>
-      {/* Desktop: Horizontal Gallery */}
-      <div className="hidden md:grid md:grid-cols-5 gap-4">
-        {images.map((image, index) => (
-          <button
-            key={image.id}
-            className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/10 to-[#2d32f1]/10 rounded-lg border-2 border-[#f5f5f5]/20 hover:border-[#f57520] transition-all cursor-pointer flex items-center justify-center group"
-            onClick={() => setSelectedIndex(index)}
-          >
-            <span className="text-[#f5f5f5]/60 group-hover:text-[#f5f5f5] transition-colors text-sm text-center px-2">
-              {image.label}
-            </span>
-          </button>
-        ))}
-      </div>
-
-      {/* Mobile: Stacked Vertical Gallery */}
-      <div className="md:hidden space-y-4">
-        {images.map((image, index) => (
-          <button
-            key={image.id}
-            className="w-full aspect-[3/4] bg-gradient-to-br from-[#f57520]/10 to-[#2d32f1]/10 rounded-lg border-2 border-[#f5f5f5]/20 hover:border-[#f57520] transition-all cursor-pointer flex items-center justify-center"
-            onClick={() => setSelectedIndex(index)}
-          >
-            <span className="text-[#f5f5f5]/60 text-sm">{image.label}</span>
-          </button>
-        ))}
-      </div>
-
-      {/* Lightbox Modal */}
-      <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && setSelectedIndex(null)}>
-        <DialogContent className="max-w-4xl bg-[#111111] border-[#f5f5f5]/20">
-          {selectedIndex !== null && (
-            <div className="relative">
-              <div className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-lg flex items-center justify-center">
-                <span className="text-[#f5f5f5] text-2xl">{images[selectedIndex].label}</span>
-              </div>
-              
-              {/* Navigation Buttons */}
-              <button
-                onClick={goToPrev}
-                className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#111111]/80 hover:bg-[#f57520] rounded-full flex items-center justify-center text-[#f5f5f5] transition-colors"
-                aria-label="Previous image"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m15 18-6-6 6-6"/>
-                </svg>
-              </button>
-              <button
-                onClick={goToNext}
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#111111]/80 hover:bg-[#f57520] rounded-full flex items-center justify-center text-[#f5f5f5] transition-colors"
-                aria-label="Next image"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m9 18 6-6-6-6"/>
-                </svg>
-              </button>
-              
-              {/* Image Counter */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[#f5f5f5]/70 text-sm">
-                {selectedIndex + 1} / {images.length}
-              </div>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
     </>
   );
 };
