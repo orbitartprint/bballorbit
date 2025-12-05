@@ -56,8 +56,13 @@ const FAQSection = () => {
           </Accordion>
 
           <div className="text-center pt-4">
-            <PrimaryButton>
-              Download the Playbook Now
+            <PrimaryButton asChild className="convertkit-button">
+              <a
+                href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+                data-commerce
+              >
+                Get the Playbook Now
+              </a>
             </PrimaryButton>
           </div>
         </div>
