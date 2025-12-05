@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
-import { Download, ShoppingCart, Users, Globe, TrendingUp } from "lucide-react";
+import { Download, ShoppingCart, Book, Users, Globe, TrendingUp } from "lucide-react";
 import { resources, categories, type CategoryFilter, type Resource } from "@/data/resources";
 
 const Resources = () => {
@@ -266,8 +266,8 @@ const Resources = () => {
                           </>
                         ) : (
                           <>
-                            <ShoppingCart className="w-4 h-4 mr-2" />
-                            Buy Now
+                            <Book className="w-4 h-4 mr-2" />
+                            See What's Inside
                           </>
                         )}
                       </Button>
