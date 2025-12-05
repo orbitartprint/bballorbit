@@ -13,6 +13,17 @@ export interface Resource {
 
 export const resources: Resource[] = [
   {
+    id: "ssg-playbook",
+    title: "The Ultimate SSG Playbook",
+    description: "100+ Competitive, Game-Like Drills.",
+    image: "/lovable-uploads/playbook-ssg-thumbnail.webp",
+    category: "Offense",
+    type: "Paid",
+    link: "https://guide.bballorbit.com/ssg-playbook",
+    //uid: "3cf2bf3df5",
+    //filePath: "/pdfs/early-offense-triggers.pdf",
+  },
+  {
     id: "early-offense",
     title: "Early Offense Triggers",
     description: "10x Early Offense Triggers for 5-Out.",
