@@ -17,7 +17,7 @@ export const resources: Resource[] = [
     title: "The Ultimate SSG Playbook",
     description: "100+ Competitive, Game-Like Drills and SSGs.",
     image: "/lovable-uploads/playbook-ssg-thumbnail.webp",
-    category: "Offense",
+    category: "SSGs",
     type: "Paid",
     link: "/ssg-playbook",
     price: "$27",
@@ -59,5 +59,5 @@ export const resources: Resource[] = [
   },
 ];
 
-export const categories = ["All", "Shooting", "Offense", "Defense", "Conditioning", "Tools"] as const;
+export const categories = ["All", "Shooting", "Offense", "Defense", "Conditioning", "SSGs", "Tools"] as const;
 export type CategoryFilter = typeof categories[number];
