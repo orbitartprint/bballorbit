@@ -83,26 +83,6 @@ const SsgPlaybook = () => {
                       alt="The Ultimate SSG Playbook Mockup"
                       className="w-full h-full object-cover"
                     />
-                
-                    {/* Hover Glare Effect */}
-                    <div className="pointer-events-none absolute inset-0">
-                      <div
-                        className="
-                          absolute
-                          -inset-1
-                          bg-gradient-to-tr
-                          from-white/30 via-white/10 to-transparent
-                          opacity-0
-                          group-hover:opacity-60
-                          group-hover:translate-x-10
-                          transform
-                          rotate-6
-                          transition-all
-                          duration-700
-                          ease-out
-                        "
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
