@@ -14,10 +14,14 @@ const FinalCTASection = () => {
           </p>
 
           <div className="space-y-4 pt-4">
-            <PrimaryButton>
-              Download the Playbook Now
+            <PrimaryButton asChild className="convertkit-button">
+              <a
+                href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+                data-commerce
+              >
+                Get the Playbook Now
+              </a>
             </PrimaryButton>
-
             <p className="text-sm text-[#f5f5f5]/50 italic">
               P.S. The launch price of $27 is only available for a limited time.
             </p>
