@@ -311,7 +311,7 @@ const SsgPlaybook = () => {
                 <div className="flex items-start gap-4">
                   <Check className="w-6 h-6 text-[#f57520] flex-shrink-0 mt-1" />
                   <p className="text-lg text-[#f5f5f5]/80">
-                    Categorized system: offense, defense, transition, spacing, 1v1, 2v2, 3v3, advantage/disadvantage
+                    Categorized system: warm-Up, finishing, dribbling, shooting, rebounding, defense, transition, screening, advantage/disadvantage
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
