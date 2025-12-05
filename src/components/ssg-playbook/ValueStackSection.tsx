@@ -52,8 +52,10 @@ const ValueStackSection = () => {
 
           {/* CTA Button */}
           <div className="text-center">
-            <PrimaryButton>
-              Download the Playbook Now
+            <PrimaryButton asChild className="convertkit-button">
+              <a href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout" data-commerce>
+                Get the Playbook Now
+              </a>
             </PrimaryButton>
           </div>
         </div>
