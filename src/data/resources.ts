@@ -20,7 +20,7 @@ export const resources: Resource[] = [
     category: "Offense",
     type: "Paid",
     link: "/ssg-playbook",
-    price: "27$",
+    price: "$27",
     //uid: "3cf2bf3df5",
     //filePath: "/pdfs/early-offense-triggers.pdf",
   },
