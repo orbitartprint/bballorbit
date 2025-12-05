@@ -30,12 +30,12 @@ const ImageGallery = () => {
           <button
             key={image.id}
             onClick={() => setSelectedIndex(index)}
-            className="aspect-[3/4] overflow-hidden rounded-lg border-2 border-[#f5f5f5]/20 hover:border-[#f57520] transition-all group"
+            className="overflow-hidden rounded-xl border border-[#f5f5f5]/20 bg-[#111111] hover:border-[#f57520] transition-all group"
           >
             <img
               src={image.src}
               alt={image.label}
-              className="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
+              className="w-full h-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </button>
         ))}
