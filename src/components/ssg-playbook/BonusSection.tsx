@@ -74,7 +74,7 @@ const BonusSection = () => {
               href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
               data-commerce
             >
-              Download the Playbook Now
+              Get the Playbook Now
             </a>
           </PrimaryButton>
           </div>
