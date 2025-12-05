@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Slot } from "@radix-ui/react-slot";
 
 interface PrimaryButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  asChild?: boolean;
 }
 
 const PrimaryButton = ({ children, className, onClick }: PrimaryButtonProps) => {
