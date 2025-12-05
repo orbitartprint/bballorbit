@@ -216,7 +216,7 @@ const Resources = () => {
                             trigger?.click();
                           } else {
                             // Kein Modal: Link normal öffnen
-                            window.open(resource.link);
+                            window.location.href = resource.link;
                           }
                         }}
                       >
