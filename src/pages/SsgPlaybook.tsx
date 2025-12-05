@@ -49,8 +49,13 @@ const SsgPlaybook = () => {
 
               {/* CTA Button */}
               <div className="space-y-4 text-center">
-                <PrimaryButton>
-                  Get the Playbook Now
+                <PrimaryButton asChild className="convertkit-button">
+                  <a
+                    href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+                    data-commerce
+                  >
+                    Get the Playbook Now
+                  </a>
                 </PrimaryButton>
 
                 {/* Micro-Trust Elements */}
@@ -117,10 +122,14 @@ const SsgPlaybook = () => {
 
             {/* CTA Button */}
             <div className="space-y-3">
-              <PrimaryButton>
-                Get the Playbook Now
+              <PrimaryButton asChild className="convertkit-button">
+                <a
+                  href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+                  data-commerce
+                >
+                  Get the Playbook Now
+                </a>
               </PrimaryButton>
-
               {/* Subtext */}
               <p className="text-sm text-[#f5f5f5]/50">
                 The launch price is available for a limited time only.
@@ -193,10 +202,14 @@ const SsgPlaybook = () => {
 
             {/* CTA Button */}
             <div className="text-center pt-4">
-              <PrimaryButton>
-                Get the Playbook Now
+              <PrimaryButton asChild className="convertkit-button">
+                <a
+                  href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+                  data-commerce
+                >
+                  Get the Playbook Now
+                </a>
               </PrimaryButton>
-            </div>
           </div>
         </div>
       </section>
@@ -252,8 +265,13 @@ const SsgPlaybook = () => {
 
             {/* CTA Button */}
             <div className="text-center pt-4">
-              <PrimaryButton>
-                Get the Playbook Now
+              <PrimaryButton asChild className="convertkit-button">
+                <a
+                  href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+                  data-commerce
+                >
+                  Get the Playbook Now
+                </a>
               </PrimaryButton>
             </div>
           </div>
@@ -326,8 +344,13 @@ const SsgPlaybook = () => {
 
             {/* CTA Button */}
             <div className="text-center pt-4">
-              <PrimaryButton>
-                Get the Playbook Now
+              <PrimaryButton asChild className="convertkit-button">
+                <a
+                  href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+                  data-commerce
+                >
+                  Get the Playbook Now
+                </a>
               </PrimaryButton>
             </div>
           </div>
