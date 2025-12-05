@@ -69,9 +69,14 @@ const BonusSection = () => {
 
           {/* CTA Button */}
           <div className="text-center pt-4">
-            <PrimaryButton>
+            <PrimaryButton asChild className="convertkit-button">
+            <a
+              href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout"
+              data-commerce
+            >
               Download the Playbook Now
-            </PrimaryButton>
+            </a>
+          </PrimaryButton>
           </div>
         </div>
       </div>
