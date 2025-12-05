@@ -62,13 +62,13 @@ const ImageGallery = () => {
       <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && setSelectedIndex(null)}>
         <DialogContent className="max-w-4xl bg-[#111111] border-[#f5f5f5]/20">
           {selectedIndex !== null && (
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img
                 src={images[selectedIndex].src}
                 alt={images[selectedIndex].label}
-                className="w-full rounded-lg"
+                className="max-h-[80vh] w-auto object-contain rounded-lg"
               />
-
+        
               {/* Prev Button */}
               <button
                 onClick={goToPrev}
@@ -76,7 +76,7 @@ const ImageGallery = () => {
               >
                 ‹
               </button>
-
+        
               {/* Next Button */}
               <button
                 onClick={goToNext}
@@ -84,7 +84,7 @@ const ImageGallery = () => {
               >
                 ›
               </button>
-
+        
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[#f5f5f5]/70 text-sm">
                 {selectedIndex + 1} / {images.length}
               </div>
