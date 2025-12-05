@@ -81,7 +81,7 @@ const SsgPlaybook = () => {
                   <div className="group relative aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl shadow-2xl border-2 border-[#f57520]/30 overflow-hidden">
                     {/* Mockup Image */}
                     <img
-                      src="/lovable-uploads/mockup-main.webp"
+                      src="/lovable-uploads/mockup-main-trans-price.webp"
                       alt="The Ultimate SSG Playbook Mockup"
                       className="w-full h-full object-cover"
                     />
