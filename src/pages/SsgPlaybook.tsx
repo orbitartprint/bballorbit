@@ -201,6 +201,7 @@ const SsgPlaybook = () => {
                   Get the Playbook Now
                 </a>
               </PrimaryButton>
+            </div>
           </div>
         </div>
       </section>
