@@ -14,9 +14,7 @@ import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Download, ShoppingCart, Book, Users, Globe, TrendingUp } from "lucide-react";
 import { resources, categories, type CategoryFilter, type Resource } from "@/data/resources";
-import { useRouter } from "next/router";
 
-const router = useRouter();
 const Resources = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   useEffect(() => {
@@ -218,7 +216,7 @@ const Resources = () => {
                             trigger?.click();
                           } else {
                             // Kein Modal: Link normal öffnen
-                            router.push(resource.link);
+                            window.open(resource.link);
                           }
                         }}
                       >
