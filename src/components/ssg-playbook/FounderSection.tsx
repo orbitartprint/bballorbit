@@ -29,8 +29,10 @@ const FounderSection = () => {
               Chris Bernhard is a youth coach, content creator and founder of Basketball Orbit. With over 30,000 subscribers and millions of views, his modern, game-based approach has helped thousands of coaches bring more decision-making, player IQ and real-game habits into their practices.
             </p>
 
-            <PrimaryButton>
-              Download the Playbook Now
+            <PrimaryButton asChild className="convertkit-button">
+              <a href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout" data-commerce>
+                Get the Playbook Now
+              </a>
             </PrimaryButton>
           </div>
         </div>
