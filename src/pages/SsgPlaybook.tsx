@@ -73,29 +73,36 @@ const SsgPlaybook = () => {
             {/* Right Content - Playbook Mockup */}
             <div className="relative">
               <div className="aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl shadow-2xl flex items-center justify-center border-2 border-[#f57520]/30">
-                <div className="text-center space-y-4 p-8">
-                  <div className="w-20 h-20 mx-auto bg-[#f57520] rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                {/* Right Content - Playbook Mockup */}
+                <div className="relative">
+                  <div className="group relative aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl shadow-2xl border-2 border-[#f57520]/30 overflow-hidden">
+                    {/* Mockup Image */}
+                    <img
+                      src="/lovable-uploads/mockup-main.webp"
+                      alt="The Ultimate SSG Playbook Mockup"
+                      className="w-full h-full object-cover"
+                    />
+                
+                    {/* Hover Glare Effect */}
+                    <div className="pointer-events-none absolute inset-0">
+                      <div
+                        className="
+                          absolute
+                          -inset-1
+                          bg-gradient-to-tr
+                          from-white/30 via-white/10 to-transparent
+                          opacity-0
+                          group-hover:opacity-60
+                          group-hover:translate-x-10
+                          transform
+                          rotate-6
+                          transition-all
+                          duration-700
+                          ease-out
+                        "
                       />
-                    </svg>
+                    </div>
                   </div>
-                  <p className="text-2xl font-bold text-[#f5f5f5]">
-                    Playbook Mockup
-                  </p>
-                  <p className="text-[#f5f5f5]/60">
-                    100+ Game-Like Drills
-                  </p>
                 </div>
               </div>
             </div>
