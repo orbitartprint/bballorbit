@@ -67,6 +67,14 @@ const BonusSection = () => {
             ))}
           </div>
 
+          {/* Bonus Mockup Image */}
+          <div className="text-center text-[#f5f5f5]/80 font-semibold tracking-wide text-sm uppercase mb-4">
+            The Complete Bonus Bundle (Included Free)
+          </div>
+          <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-[#f57520]/30 bg-gradient-to-br from-[#f57520]/10 to-[#2d32f1]/10 mt-10 mb-4">
+            <img src="/lovable-uploads/mockup-bonus.webp" className="w-full h-auto object-cover" alt="Bonus Bundle Mockup" />
+          </div>
+
           {/* CTA Button */}
           <div className="text-center pt-4">
             <PrimaryButton asChild className="convertkit-button">
