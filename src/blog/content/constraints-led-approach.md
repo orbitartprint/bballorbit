@@ -168,7 +168,7 @@ The coach’s role is to design environments where useful affordances become vis
 The CLA is often mistaken for simply “playing games at practice.”  
 But unlike a **Games-Based Approach**, which focuses mostly on tactical awareness and fun, the CLA uses **scientific manipulation of constraints** to drive *specific learning outcomes*.  
 
-Every small-sided game, spacing change, or scoring rule acts as a deliberate design choice to shape behavior.  
+Every [small-sided game](/ssg-playbook), spacing change, or scoring rule acts as a deliberate design choice to shape behavior.  
 In short: it’s not chaos — it’s *controlled chaos*.
 
 As summarized in *Applying CLA to Basketball Shooting* (2019):  
@@ -418,7 +418,7 @@ That doesn’t mean we throw beginners into chaos. It means we design environmen
 
 <div class="infobox">
   <h3>Example</h3>
-  <p>Use simplified small-sided games like <strong>Dribble Tag</strong>, where players learn spacing, evasion, and body control naturally.<br>
+  <p>Use simplified <a href="/ssg-playbook">small-sided games</a> like <strong>Dribble Tag</strong>, where players learn spacing, evasion, and body control naturally.<br>
     Or set simple constraints — such as defender starts behind offense — that scale challenge and create immediate success experiences.</p>
 </div>
 
@@ -467,14 +467,14 @@ It doesn’t demand that you abandon structure; it invites you to redesign it.
 > Skill acquisition isn’t theory vs practice — it’s science that helps us design better practice.  
 > — *The Transforming Basketball Podcast, EP 53 (2024)* – [Spotify](https://open.spotify.com/episode/5pypmh4u1JGWX3xgNpnj3W)
 
-Ultimately, that’s what modern coaching is all about: 
+Ultimately, that’s what [modern coaching](/ssg-playbook) is all about: 
 not teaching the game we remember, but designing the game our players will create.
 
 ---
 
 ## VI. The Future of Coaching – From Instructor to Designer
 
-The future of coaching isn’t about louder commands or more drills — it’s about **designing environments** that let learning emerge.  
+The future of coaching isn’t about louder commands or more [drills](/drills) — it’s about **designing environments** that let learning emerge.  
 
 For too long, coaches equated progress with control — fixing, perfecting, explaining.
 Real growth, however, comes from **adaptation**.  
@@ -524,6 +524,22 @@ The future of basketball coaching lives at the intersection of evidence and emot
 where structure meets freedom, and science meets creativity.  
 
 **Don’t teach the move — teach the mind that creates it.**
+
+---
+
+<div class="infobox">
+  <h4>Ready to turn these ideas into real training?</h4>
+  <p>
+    If you want to move beyond traditional drills and design practices that actually build decision-making, spacing and player IQ, I created a complete resource that puts the CLA into action:
+
+👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a>
+
+A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
+
+<a href="/ssg-playbook">Learn more</a>
+  </p>
+</div>
+
 
 *Written by Chris Bernhard — Basketball Orbit*  
 *© 2025 Basketball Orbit*
