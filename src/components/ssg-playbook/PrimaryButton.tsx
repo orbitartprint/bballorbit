@@ -9,18 +9,19 @@ interface PrimaryButtonProps {
   asChild?: boolean;
 }
 
-const PrimaryButton = ({ children, className, onClick }: PrimaryButtonProps) => {
+const PrimaryButton = ({ children, className, onClick, asChild }: PrimaryButtonProps) => {
+  const Comp = asChild ? Slot : Button;
+
   return (
-    <Button
-      size="lg"
+    <Comp
       onClick={onClick}
       className={cn(
-        "bg-[#f57520] hover:bg-[#f57520]/90 hover:shadow-lg hover:shadow-[#f57520]/20 text-white font-bold text-lg px-8 py-6 h-auto rounded-xl transition-all duration-200",
+        "bg-[#f57520] hover:bg-[#f57520]/90 hover:shadow-lg hover:shadow-[#f57520]/20 text-white font-bold text-lg px-8 py-6 h-auto rounded-xl transition-all duration-200 inline-flex items-center justify-center",
         className
       )}
     >
       {children}
-    </Button>
+    </Comp>
   );
 };
 
