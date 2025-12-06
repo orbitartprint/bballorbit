@@ -99,9 +99,9 @@ const HeroSection = () => {
               At Basketball Orbit, we build <span className="text-[#f57520] font-semibold">smarter players</span> —
               not through endless repetition, but through real decisions.
               Every drill here is a {" "}
-              <Link to="/ssg-playbook" className="text-[#2d32f1] font-semibold hover:underline underline-offset-2">small-sided 
+              <Link to="/ssg-playbook" className="text-[#2d32f1] font-semibold hover:underline underline-offset-2">small-sided game 
               </Link>
-              {" "} game designed around the {" "}
+              {" "} designed around the {" "}
               <Link to="/blog/constraints-led-approach" className="text-[#2d32f1] font-semibold hover:underline underline-offset-2">Constraints-Led Approach 
               </Link>
               {" "} to teach the game — not just the moves.
