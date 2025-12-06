@@ -3,7 +3,7 @@ export interface Resource {
   title: string;
   description: string;
   image: string;
-  category: "Shooting" | "Offense" | "Defense" | "Conditioning" | "Tools";
+  category: "Shooting" | "Offense" | "Defense" | "Conditioning" | "SSGs" | "Tools";
   type: "Free" | "Paid";
   price?: string;
   link: string;
