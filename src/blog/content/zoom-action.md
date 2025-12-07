@@ -485,7 +485,7 @@ These progressive [small-sided drills](/ssg-playbook) teach players to make read
 ## Downloadable Guide & Resources
 
 If you want the **complete Zoom Action guide** (full diagrams, step-by-step progressions), grab the free PDF here:  
-👉 **Complete Zoom Action Guide (free PDF)** — https://guide.bballorbit.com/zoom
+👉 [**Complete Zoom Action Guide (free PDF)**](https://guide.bballorbit.com/zoom)
 
 Also, check related content:
 - [Transition Offense — full breakdown](/blog/transition-offense)  
