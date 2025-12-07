@@ -536,7 +536,7 @@ where structure meets freedom, and science meets creativity.
 
 A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
 
-<a href="/ssg-playbook">Learn more</a>
+<a href="/ssg-playbook">→ Learn more</a>
   </p>
 </div>
 
