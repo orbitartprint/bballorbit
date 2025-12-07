@@ -384,7 +384,7 @@ Here are three simple adjustments you can use when the defense starts reading yo
 ## Drills to Teach the Zoom Action
 
 Teaching the **Zoom Action** isn’t about memorizing steps. It’s about helping players *feel* the timing, spacing, and rhythm of the action.  
-These three small-sided drills turn the concept into game-realistic reps your players can learn from immediately.
+These three [small-sided drills](/ssg-playbook) turn the concept into game-realistic reps your players can learn from immediately.
 
 ---
 
@@ -461,7 +461,7 @@ These three small-sided drills turn the concept into game-realistic reps your pl
 ### 🔍 Conclusion
 
 If you want your team to *own* the Zoom Action, don’t over-explain it - let them **experience** it.  
-These progressive small-sided drills teach players to make reads, react faster, and execute the action at game speed.
+These progressive [small-sided drills](/ssg-playbook) teach players to make reads, react faster, and execute the action at game speed.
 > **Important:** These drills intentionally prioritize decision-making and spacing can be perfectly aligned with the CLA.
 
 ---
@@ -498,7 +498,16 @@ Also, check related content:
 
 You’ve now got a solid understanding of the Zoom Action - one of the most
 effective entry triggers for a 5-Out motion offense when coached as a principle.<br /><br />
-When you combine it with small-sided games and a constraints-led approach, your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
+When you combine it with [small-sided games](/ssg-playbook) and a [constraints-led approach](/blog/constraints-led-approach), your players learn to *create* and *exploit* space rather than just run plays. That’s how good teams keep the ball moving, punish lazy rotations, and get high percentage shots consistently.
+
+---
+
+## Want your Zoom Action to create more advantages?
+
+Teach the reads behind the action — not just the action itself.
+My Ultimate SSG Playbook gives you 100+ drills that train timing, spacing, and real decision-making.
+
+👉 [Get The Ultimate SSG Playbook](/ssg-playbbok)
 
 
 *Written by Chris Bernhard — Basketball Orbit*  
