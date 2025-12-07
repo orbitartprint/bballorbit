@@ -126,7 +126,7 @@ You’ll get access to drills, templates, and practical tools to help your team 
 
 A full framework for developing transition instincts through purposeful constraints — not scripted patterns.
 
-<a href="/ssg-playbook">Learn more</a>
+<a href="/ssg-playbook">→ Learn more</a>
   </p>
 </div>
 
