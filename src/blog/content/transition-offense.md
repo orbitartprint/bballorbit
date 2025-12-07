@@ -77,7 +77,7 @@ When playing 4v4 or 5v5, I use rules that emphasize tempo:
 
 This approach, known as the [Constraints-Led Approach (CLA)](/blog/constraints-led-approach), builds implicit learning.  
 Players adapt and find solutions on their own, without rigid instructions.  
-It creates creative, confident decision-makers - exactly what you want in modern basketball.
+It creates creative, confident decision-makers - exactly what you want in [modern basketball](/ssg-playbook).
 
 🎥 **Watch: 4 Drills to Train Transition Offense**  
 [![Transition Drills](https://img.youtube.com/vi/DTqeh4D-agI/hqdefault.jpg)](https://youtu.be/DTqeh4D-agI)
@@ -114,6 +114,21 @@ Ready to bring more tempo into your practices?
 👉 [Get all my free coaching PDFs and drills here](/resources)
 
 You’ll get access to drills, templates, and practical tools to help your team play faster — and smarter.
+
+---
+
+<div class="infobox">
+  <h4>Want game-like drills that build faster transition automatically?</h4>
+  <p>
+    If you're ready to take this a step further, I created a complete resource with 100+ small-sided games that teach the habits you want in transition — speed, spacing, advantage creation, and instant decision-making.
+
+👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a>
+
+A full framework for developing transition instincts through purposeful constraints — not scripted patterns.
+
+<a href="/ssg-playbook">Learn more</a>
+  </p>
+</div>
 
 ---
 
