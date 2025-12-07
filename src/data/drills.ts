@@ -15,6 +15,31 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "chase-the-shooter",
+    title: "Chase the Shooter",
+    subtitle: "Create separation and shoot under pressure",
+    focusArea: ["Shooting"],
+    mainGoal: "Train shooters to create separation, sprint into space, and knock down shots while a trailing defender applies late pressure.",
+    description: [
+      "A shooter and defender start at designated cone-marked positions in the half court, with the shooter holding a small head start.",
+      "The drill begins when the shooter takes off toward a shooting spot.",
+      "Upon arrival, the shooter receives a pass from a passer and take a shot while being chased by the defender, who tries to contest late.",
+      "The emphasis is on speed into the shot, balance under pressure, and decision-making if the defender recovers quickly."
+    ],
+    constraints: [
+      "Vary starting positions to change angles, distance, and level of advantage.",
+      "Allow the shooter to drive instead of shooting, but assign fewer points to drives than to jump shots.",
+      "Remove the passer and require the shooter to dribble into a pull-up instead of catching and shooting.",
+      "Permit the shooter to fake before starting, forcing the defender to react.",
+      "The defender begins with both hands behind their back and may raise their hands for only 1 second to contest the shot. After that, they must defend without using their hands."
+    ],
+    thumbnail: "/lovable-uploads/chase-the-shooter-1.webp",
+    videoMp4: "/videos/chase-the-shooter.mp4",
+    images: ["/lovable-uploads/chase-the-shooter-1.webp","/lovable-uploads/chase-the-shooter-2.webp"],
+    // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
+    tags: ["Shooting"],
+  },
+  {
     id: "2v2-corner-drive",
     title: "2v2 Corner Drive",
     subtitle: "Competitive shooting under pressure",
