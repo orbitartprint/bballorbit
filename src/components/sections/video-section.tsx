@@ -5,8 +5,8 @@ const VideoSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   // 🔸 Hier änderst du nur diese eine Zeile:
-  const videoId = "v6WQI4eV7aI";
-  const videoTitle ="10 Offensive Triggers to Create an Early Advantage in Your 5-Out Offense";
+  const videoId = "dtNQNdSTcRg";
+  const videoTitle ="The Drill Format You’re Not Using - But Make Your Players Elite";
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
