@@ -502,8 +502,6 @@ When you combine it with [small-sided games](/ssg-playbook) and a [constraints-l
 
 ---
 
-👉 [Get The Ultimate SSG Playbook](/ssg-playbbok)
-
 <div class="infobox" style="display:flex; gap:20px; align-items:center;">
   <!-- Left Text -->
   <div style="flex:2;">
@@ -513,7 +511,7 @@ When you combine it with [small-sided games](/ssg-playbook) and a [constraints-l
       My Ultimate SSG Playbook gives you 100+ drills that train timing, spacing, and real decision-making.
     </p>
     <p>
-      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a><br>
+      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook</a><br>
       A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
     </p>
     <p>
