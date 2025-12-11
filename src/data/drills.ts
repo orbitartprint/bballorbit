@@ -15,6 +15,32 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "escape-warm-up-1v1",
+    title: "Escape Warm-Up (1v1)",
+    subtitle: "Quick reactions, agility, and evasion under pressure",
+    focusArea: ["Warm Up", "Conditioning"],
+    mainGoal: "Improve first-step quickness and evasive movement while training the defender to react explosively and protect space.",
+    description: [
+      "One offensive player (the runner) starts on the baseline.",
+      "A defender (the tagger) stands at the free-throw line, holding a ball with both hands.",
+      "Two cones are placed to the left and right of the defender.",
+      "The drill begins when the runner initiates movement. The runner must try to reach either cone without being tagged by the tagger’s ball.",
+      "The tagger may only tag using the ball held with two hands — no reaching or swinging with arms allowed.",
+    ],
+    constraints: [
+      "The runner must dribble while escaping (adds complexity and ball control).",
+      "Vary the distance and positioning of the cones to change difficulty.",
+      "Move the tagger’s starting position (wider, narrower, angled).",
+      "Add a time limit (e.g., reach a cone within 4 seconds).",
+      "The runner must perform at least one cross over (behind the back / between the legs)."
+    ],
+    thumbnail: "/lovable-uploads/escape-warm-up-1v1.webp",
+    videoMp4: "/videos/escape-warm-up-1v1.mp4",
+    images: ["/lovable-uploads/escape-warm-up-1v1.webp",],
+    // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
+    tags: ["Warm Up", "Competition", "Agility", "1v1"],
+  },
+  {
     id: "chase-the-shooter",
     title: "Chase the Shooter",
     subtitle: "Create separation and shoot under pressure",
@@ -62,7 +88,7 @@ export const drills: Drill[] = [
     videoMp4: "/videos/2v2-corner-drive.mp4",
     images: ["/lovable-uploads/2v2-corner-drive-1.webp","/lovable-uploads/2v2-corner-drive-2.webp"],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
-    tags: ["Shooting", "Decision Making", "Passing"],
+    tags: ["Shooting", "Decision Making", "Passing", "2v2"],
   },
   {
     id: "1v1-kick-out-shooting",
@@ -88,7 +114,7 @@ export const drills: Drill[] = [
     videoMp4: "/videos/1v1-kick-out.mp4",
     // images: ["/lovable-uploads/basketball-fundamentals-hero.webp"],
     youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
-    tags: ["Shooting", "Competition", "Individual", "Skill Development", "Decision Making"],
+    tags: ["Shooting", "Competition", "Individual", "Skill Development", "Decision Making", "1v1"],
   },
   {
     id: "2v2-baseline-reload",
@@ -114,7 +140,7 @@ export const drills: Drill[] = [
     thumbnail: "/lovable-uploads/2v2-baseline-reload.webp",
     videoMp4: "/videos/2v2-baseline-reload.mp4",
     images: ["/lovable-uploads/2v2-baseline-reload-c1.webp","/lovable-uploads/2v2-baseline-reload-c2.webp"],
-    tags: ["Transition", "Competition", "Conditioning", "Decision Making"],
+    tags: ["Transition", "Competition", "Conditioning", "Decision Making", "2v2"],
   },
   {
     id: "2v2-rolling-break",
@@ -139,7 +165,7 @@ export const drills: Drill[] = [
     thumbnail: "/lovable-uploads/2v2-rolling-break.webp",
     videoMp4: "/videos/2v2-rolling-break.mp4",
     images: ["/lovable-uploads/2v2-rolling-break-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
-    tags: ["Transition", "Competition", "Conditioning", "Decision Making"],
+    tags: ["Transition", "Competition", "Conditioning", "Decision Making", "2v2"],
   },
   {
     id: "1v1-catch-and-shoot",
@@ -162,7 +188,7 @@ export const drills: Drill[] = [
     thumbnail: "/lovable-uploads/1v1-catch-and-shoot.webp",
     videoMp4: "/videos/1v1-catch-and-shoot.mp4",
     //images: ["/lovable-uploads/1v1-catch-and-shoot.webp"],
-    tags: ["Shooting", "Decision Making"],
+    tags: ["Shooting", "Decision Making", "1v1"],
   },
   
 ];
@@ -174,6 +200,6 @@ export const getAllTags = (): string[] => {
   return Array.from(tags).sort();
 };
 
-export const focusAreas = ["All", "Shooting", "Defense", "Offense", "Transition", "Conditioning"] as const;
+export const focusAreas = ["All", "Warm Up", "Shooting", "Defense", "Offense", "Transition", "Conditioning"] as const;
 
 export type FocusAreaFilter = typeof focusAreas[number];
