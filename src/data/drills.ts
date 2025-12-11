@@ -15,7 +15,7 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
-    id: "escape-warm-up-1v1",
+    id: "1v1-escape-warm-up",
     title: "Escape Warm-Up (1v1)",
     subtitle: "Quick reactions, agility, and evasion under pressure",
     focusArea: ["Warm Up", "Conditioning"],
@@ -34,9 +34,9 @@ export const drills: Drill[] = [
       "Add a time limit (e.g., reach a cone within 4 seconds).",
       "The runner must perform at least one cross over (behind the back / between the legs)."
     ],
-    thumbnail: "/lovable-uploads/escape-warm-up-1v1.webp",
-    videoMp4: "/videos/escape-warm-up-1v1.mp4",
-    images: ["/lovable-uploads/escape-warm-up-1v1.webp",],
+    thumbnail: "/lovable-uploads/1v1-escape-warm-up.webp",
+    videoMp4: "/videos/1v1-escape-warm-up.mp4",
+    images: ["/lovable-uploads/1v1-escape-warm-up.webp",],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Warm Up", "Competition", "Agility", "1v1"],
   },
