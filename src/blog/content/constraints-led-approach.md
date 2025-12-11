@@ -527,17 +527,28 @@ where structure meets freedom, and science meets creativity.
 
 ---
 
-<div class="infobox">
-  <h4>Ready to turn these ideas into real training?</h4>
-  <p>
-    If you want to move beyond traditional drills and design practices that actually build decision-making, spacing and player IQ, I created a complete resource that puts the CLA into action:
+<div class="infobox" style="display:flex; gap:20px; align-items:center;">
+  <!-- Left Text -->
+  <div style="flex:2;">
+    <h4>Ready to turn these ideas into real training?</h4>
+    <p>
+      If you want to move beyond traditional drills and design practices that actually build decision-making,
+      spacing and player IQ, I created a complete resource that puts the CLA into action:
+    </p>
+    <p>
+      👉 <a href="/ssg-playbook"><strong>The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</strong></a><br>
+      A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
+    </p>
 
-👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a>
+    <p>
+      <a href="/ssg-playbook">→ Learn more</a>
+    </p>
+  </div>
 
-A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
-
-<a href="/ssg-playbook">→ Learn more</a>
-  </p>
+  <!-- Right Mockup -->
+  <div style="flex:1; padding:10px 0;">
+    <img src="/lovable-uploads/mockup-main-trans.webp" alt="SSG Playbook Mockup" style="width:100%; height:auto; object-fit:contain; border-radius:12px;">
+  </div>
 </div>
 
 
