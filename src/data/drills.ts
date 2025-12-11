@@ -16,7 +16,7 @@ export interface Drill {
 export const drills: Drill[] = [
   {
     id: "1v1-escape-warm-up",
-    title: "Escape Warm-Up (1v1)",
+    title: "Tag & Escape Warm-Up (1v1)",
     subtitle: "Quick reactions, agility, and evasion under pressure",
     focusArea: ["Warm Up", "Conditioning"],
     mainGoal: "Improve first-step quickness and evasive movement while training the defender to react explosively and protect space.",
