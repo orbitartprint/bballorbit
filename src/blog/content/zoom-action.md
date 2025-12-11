@@ -485,7 +485,7 @@ These progressive [small-sided drills](/ssg-playbook) teach players to make read
 ## Downloadable Guide & Resources
 
 If you want the **complete Zoom Action guide** (full diagrams, step-by-step progressions), grab the free PDF here:  
-👉 [**Complete Zoom Action Guide (free PDF)**](https://guide.bballorbit.com/zoom)
+👉 [Complete Zoom Action Guide (free PDF)](https://guide.bballorbit.com/zoom)
 
 Also, check related content:
 - [Transition Offense — full breakdown](/blog/transition-offense)  
@@ -502,12 +502,35 @@ When you combine it with [small-sided games](/ssg-playbook) and a [constraints-l
 
 ---
 
-## Want your Zoom Action to create more advantages?
-
-Teach the reads behind the action — not just the action itself.
-My Ultimate SSG Playbook gives you 100+ drills that train timing, spacing, and real decision-making.
-
 👉 [Get The Ultimate SSG Playbook](/ssg-playbbok)
+
+<div class="infobox" style="display:flex; gap:20px; align-items:center;">
+  <!-- Left Text -->
+  <div style="flex:2;">
+    <h4>Want your Zoom Action to create more advantages?</h4>
+    <p>
+      Teach the reads behind the action — not just the action itself.
+      My Ultimate SSG Playbook gives you 100+ drills that train timing, spacing, and real decision-making.
+    </p>
+    <p>
+      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a><br>
+      A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
+    </p>
+    <p>
+      <a href="/ssg-playbook">→ Learn more</a>
+    </p>
+  </div>
+  <!-- Right Mockup -->
+  <div style="flex:1; min-width:200px; padding:10px 0;">
+    <a href="/ssg-playbook">
+      <img 
+        src="/lovable-uploads/mockup-main-trans.webp"
+        alt="SSG Playbook Mockup"
+        style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
+      >
+    </a>
+  </div>
+</div>
 
 
 *Written by Chris Bernhard — Basketball Orbit*  
