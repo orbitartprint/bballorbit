@@ -539,15 +539,19 @@ where structure meets freedom, and science meets creativity.
       👉 <a href="/ssg-playbook"><strong>The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</strong></a><br>
       A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
     </p>
-
     <p>
       <a href="/ssg-playbook">→ Learn more</a>
     </p>
   </div>
-
   <!-- Right Mockup -->
-  <div style="flex:1; padding:10px 0;">
-    <img src="/lovable-uploads/mockup-main-trans.webp" alt="SSG Playbook Mockup" style="width:100%; height:auto; object-fit:contain; border-radius:12px;">
+  <div style="flex:1; min-width:200px; padding:10px 0;">
+    <a href="/ssg-playbook">
+      <img 
+        src="/lovable-uploads/mockup-main.webp"
+        alt="SSG Playbook Mockup"
+        style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
+      >
+    </a>
   </div>
 </div>
 
