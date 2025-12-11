@@ -536,7 +536,7 @@ where structure meets freedom, and science meets creativity.
       spacing and player IQ, I created a complete resource that puts the CLA into action:
     </p>
     <p>
-      👉 <a href="/ssg-playbook"><strong>The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</strong></a><br>
+      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a><br>
       A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
     </p>
     <p>
