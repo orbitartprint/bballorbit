@@ -117,17 +117,32 @@ You’ll get access to drills, templates, and practical tools to help your team 
 
 ---
 
-<div class="infobox">
-  <h4>Want game-like drills that build faster transition automatically?</h4>
-  <p>
-    If you're ready to take this a step further, I created a complete resource with 100+ small-sided games that teach the habits you want in transition — speed, spacing, advantage creation, and instant decision-making.
-
-👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a>
-
-A full framework for developing transition instincts through purposeful constraints — not scripted patterns.
-
-<a href="/ssg-playbook">→ Learn more</a>
-  </p>
+<div class="infobox" style="display:flex; gap:20px; align-items:center;">
+  <!-- Left Text -->
+  <div style="flex:2;">
+    <h4>Ready to turn these ideas into real training?</h4>
+    <p>
+      If you want to move beyond traditional drills and design practices that actually build decision-making,
+      spacing and player IQ, I created a complete resource that puts the CLA into action:
+    </p>
+    <p>
+      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a><br>
+      A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
+    </p>
+    <p>
+      <a href="/ssg-playbook">→ Learn more</a>
+    </p>
+  </div>
+  <!-- Right Mockup -->
+  <div style="flex:1; min-width:200px; padding:10px 0;">
+    <a href="/ssg-playbook">
+      <img 
+        src="/lovable-uploads/mockup-main-trans.webp"
+        alt="SSG Playbook Mockup"
+        style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
+      >
+    </a>
+  </div>
 </div>
 
 ---
