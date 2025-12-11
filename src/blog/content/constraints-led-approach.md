@@ -547,7 +547,7 @@ where structure meets freedom, and science meets creativity.
   <div style="flex:1; min-width:200px; padding:10px 0;">
     <a href="/ssg-playbook">
       <img 
-        src="/lovable-uploads/mockup-main.webp"
+        src="/lovable-uploads/mockup-main-trans.webp"
         alt="SSG Playbook Mockup"
         style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
       >
