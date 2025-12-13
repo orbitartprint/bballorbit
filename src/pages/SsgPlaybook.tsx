@@ -83,6 +83,8 @@ const SsgPlaybook = () => {
                     <img
                       src="/lovable-uploads/mockup-main-trans-price.webp"
                       alt="The Ultimate SSG Playbook Mockup"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </div>
