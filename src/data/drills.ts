@@ -15,6 +15,31 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "1v1-corner-skip-closeout",
+    title: "1v1 Corner Skip Closeout",
+    subtitle: "Sprint recovery, closeout technique, and immediate decision-making",
+    focusArea: ["Shooting","Defense"],
+    mainGoal: "Train defenders to sprint into controlled closeouts after ball movement, while offensive players learn to attack or shoot decisively under pressure.",
+    description: [
+      "A defender starts with the ball in one corner and passes it to a passer/coach at the free-throw line.",
+      "As soon as the pass is made, the defender sprints across to the opposite corner to prepare for a closeout.",
+      "The passer quickly skips the ball to that opposite corner, where an offensive player receives the pass.",
+      "The defender arrives on the catch and plays a live 1v1 closeout situation, focusing on balance, angles, and recovery speed.",
+      "The possession continues until a shot, drive, or stop.",
+    ],
+    constraints: [
+      "Change the starting positions of the defender, offensive player, and/or passer to vary angles and timing.",
+      "Limit the offensive player to two dribbles maximum.",
+      "Allow the offensive player to use the passer for a give-and-go if the initial advantage disappears.",
+      "Expand the drill into 2v2 by adding a help defender and a second offensive player.",
+    ],
+    thumbnail: "/lovable-uploads/1v1-corner-skip-closeout.webp",
+    videoMp4: "/videos/1v1-corner-skip-closeout.mp4",
+    images: ["/lovable-uploads/1v1-corner-skip-closeout-1.webp","/lovable-uploads/1v1-corner-skip-closeout-2.webp"],
+    // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
+    tags: ["Shooting", "Closeout", "Decision Making", "1v1"],
+  },
+  {
     id: "1v1-escape-warm-up",
     title: "Tag & Escape Warm-Up (1v1)",
     subtitle: "Quick reactions, agility, and evasion under pressure",
