@@ -35,7 +35,7 @@ const LatestBlogPosts = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.4}}
             >
               <Link to={`/blog/${post.slug}`}>
                 <div className="group bg-[#0d0d0d] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#f57520] border-2 border-transparent h-full flex flex-col">
@@ -44,6 +44,8 @@ const LatestBlogPosts = () => {
                     <img
                       src={post.heroImage}
                       alt={post.heroImageAlt}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     {/* Category Badge */}
