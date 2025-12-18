@@ -201,11 +201,11 @@ const DrillLibrary = () => {
                     className="group overflow-hidden border-border bg-card hover:shadow-xl hover:shadow-primary/20 hover:scale-105 transition-all duration-300"
                   >
                     <Link to={`/drills/${drill.id}`} className="block">
-                      <div className="aspect-video w-full overflow-hidden bg-muted cursor-pointer">
+                      <div className="aspect-video w-full overflow-hidden bg-muted cursor-pointer flex items-center justify-center">
                         <img
                           src={drill.thumbnail || "/lovable-uploads/1v1-kick-out.webp"}
                           alt={drill.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     </Link>
