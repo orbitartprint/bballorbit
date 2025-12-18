@@ -5,7 +5,7 @@ import articleContent from '../content/small-sided-games-vs-traditional-drills.m
 
 export const smallSidedGamesVsTraditionalDrills = {
   slug: "small-sided-games-vs-traditional-drills",
-  title: "Why I Stopped Running Traditional Drills – And How Small-Sided Games Transformed My Practices",
+  title: "Why I Stopped Running Traditional Drills – And What I Do Instead",
   excerpt:
     "Why traditional basketball drills often fail to transfer to games — and how small-sided games help coaches design practices that develop real decision-making, spacing, and player IQ.",
   author: "Chris Bernhard",
