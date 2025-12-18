@@ -39,6 +39,7 @@ const About = () => {
                   <img 
                     src={chrisPhoto1} 
                     alt="Chris - Basketball Orbit Founder"
+                    title:"Chris - Basketball Orbit Founder"
                     loading="lazy"
                     decoding="async"
                     className="rounded-lg shadow-orange w-80 h-96 object-cover"
@@ -63,7 +64,9 @@ const About = () => {
                     <div className="absolute inset-0 z-0 flex justify-center translate-y-10">
                       <img 
                         src="/lovable-uploads/court-trans.webp" 
-                        alt="Basketball court texture" 
+                        alt="Basketball court texture"
+                        loading="lazy"
+                        decoding="async"
                         className="max-w-[600px] w-full opacity-20 object-contain"
                       />
                     </div>
@@ -98,6 +101,7 @@ const About = () => {
                   <img 
                     src={chrisPhoto2} 
                     alt="Chris coaching on basketball court"
+                    title="Chris coaching on basketball court"
                     loading="lazy"
                     decoding="async"
                     className="rounded-lg shadow-blue w-80 h-96 object-cover"
