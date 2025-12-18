@@ -39,7 +39,6 @@ const About = () => {
                   <img 
                     src={chrisPhoto1} 
                     alt="Chris - Basketball Orbit Founder"
-                    title="Chris - Basketball Orbit Founder"
                     loading="lazy"
                     decoding="async"
                     className="rounded-lg shadow-orange w-80 h-96 object-cover"
@@ -55,37 +54,39 @@ const About = () => {
         <section className="py-10 lg:py-16 bg-card/50">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <div className="space-y-8">
-                <div className="relative">    
-                  {/* Text-Inhalt */}
-                  <div className="relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
-                    {/* Hintergrundbild */}
-                    <div className="absolute inset-0 z-0 flex justify-center translate-y-10">
-                      <img 
-                        src="/lovable-uploads/court-trans.webp" 
-                        alt="Basketball court texture"
-                        loading="lazy"
-                        decoding="async"
-                        className="max-w-[600px] w-full opacity-20 object-contain"
-                      />
-                    </div>
-                    <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                      Hi, I'm Chris – Welcome to Basketball Orbit! Basketball has been a huge part of my life. 
-                      Growing up in Germany, I fell in love with the game and have been lucky to play it for most of my life. 
-                      Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels, from beginners to experienced athletes.
-                    </p>
-                  </div>
+              {/* Linke Spalte: Texte & Hintergrundgrafik */}
+              <div className="space-y-8 relative"> 
+                
+                {/* Hintergrundgrafik (Basketball Court) - Sauber positioniert */}
+                <div className="absolute inset-0 z-0 flex justify-center items-center pointer-events-none overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/court-trans.webp" 
+                    alt="Basketball court texture" 
+                    loading="lazy"
+                    decoding="async"
+                    className="max-w-[600px] w-full opacity-10 object-contain translate-y-10"
+                  />
                 </div>
-                <div>
+        
+                {/* Text-Inhalt (über der Grafik) */}
+                <div className="relative z-10">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    Hi, I'm Chris – Welcome to Basketball Orbit! Basketball has been a huge part of my life. 
+                    Growing up in Germany, I fell in love with the game and have been lucky to play it for most of my life. 
+                    Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels, from beginners to experienced athletes.
+                  </p>
+                </div>
+        
+                <div className="relative z-10">
                   <h3 className="text-2xl font-semibold mb-4 text-primary">Why Basketball Orbit</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     Coaching can be challenging — planning practices, teaching concepts, and motivating players isn't always easy. 
                     That's why I started Basketball Orbit: to share the strategies and tools I've learned to help coaches like you create confident, successful teams.
                   </p>
                 </div>
-
-                <div>
+        
+                <div className="relative z-10">
                   <h3 className="text-2xl font-semibold mb-4 text-primary">What You'll Get Here</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     On my YouTube channel, I focus on practical drills, modern concepts, and strategies for youth and senior teams alike. 
@@ -95,7 +96,8 @@ const About = () => {
                   </p>
                 </div>
               </div>
-
+        
+              {/* Rechte Spalte: Foto von Chris */}
               <div className="flex justify-center lg:justify-start lg:sticky lg:top-8">
                 <div className="relative">
                   <img 
@@ -109,6 +111,7 @@ const About = () => {
                   <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-blue rounded-full opacity-20"></div>
                 </div>
               </div>
+              
             </div>
           </div>
         </section>
@@ -205,7 +208,7 @@ const About = () => {
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Get free drills and coaching insights delivered to your inbox.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg" asChild>
                 <Link to="/resources">
                    Subscribe to Newsletter
                 </Link>
