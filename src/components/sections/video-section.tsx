@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Play } from "lucide-react";
 
 const VideoSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [marketingAllowed, setMarketingAllowed] = useState(true);
+
+  useEffect(() => {
+    const allowed =
+      !(window as any).cookieyes?.consent ||
+      (window as any).cookieyes?.consent?.marketing !== false;
+  
+    setMarketingAllowed(allowed);
+  }, []);
 
   // 🔸 Hier änderst du nur diese eine Zeile:
   const videoId = "dtNQNdSTcRg";
@@ -10,7 +19,7 @@ const VideoSection = () => {
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
     <section className="py-6 lg:py-10 bg-card">
@@ -25,7 +34,7 @@ const VideoSection = () => {
 
           {/* ✅ Lazy YouTube Embed mit Cookie Consent Check */}
           <div className="relative aspect-video rounded-xl overflow-hidden shadow-glow bg-black">
-            {window.cookieyes && window.cookieyes.consent && window.cookieyes.consent.marketing === false ? (
+            {!marketingAllowed ? (
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black/80 p-6">
                 <p className="mb-4 text-lg">
                   ⚠️ This video is blocked because marketing cookies are disabled.
@@ -46,7 +55,8 @@ const VideoSection = () => {
                 <img
                   src={thumbnailUrl}
                   alt={videoTitle}
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Wenn kein HD-Thumbnail existiert, nutze die HQ-Version
