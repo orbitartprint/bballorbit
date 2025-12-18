@@ -17,7 +17,7 @@ export const smallSidedGamesVsTraditionalDrills = {
     "Modern Basketball Coaching",
     "Player Development",
   ],
-  heroImage: "/lovable-uploads/traditional-vs-game-reality-hero.webp",
+  heroImage: "/lovable-uploads/small-sided-games-vs-traditional-drills-hero.webp",
   heroImageAlt: "Girls playing basketball 1-on-1 in a gym",
   readTimeMinutes: calculateReadTime(articleContent),
   content: articleContent,
