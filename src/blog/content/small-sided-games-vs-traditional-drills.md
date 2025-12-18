@@ -18,7 +18,7 @@ In reality, the problem was how we trained.
 <div class="infobox">
   <h4>What this Article is About</h4>
   <p>
-    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how <a href="/ssg-playbook">small-sided games</a> can bridge the gap between practice and real basketball.
+    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how small-sided games can bridge the gap between practice and real basketball.
   </p>
 </div>
 
@@ -93,7 +93,7 @@ That question changed everything.
 
 ## 4. What Small-Sided Games Actually Train
 
-[Small-sided games](/ssg-playbook) (SSGs) don’t just “add fun” to practice.  
+Small-sided games (SSGs) don’t just “add fun” to practice.  
 They change **what players are learning**.
 
 In SSGs, players train:  
@@ -210,7 +210,7 @@ I apply this transformation mindset across my entire practice design —
 from finishing drills to offensive and defensive concepts.
 
 👉 You’ll find many of these game-like progressions in my  
-(Drill Library)[/drills],  
+[Drill Library](/drills),  
 where every drill is built around real decisions, pressure, and game context.
 
 > The goal isn’t to invent better drills — it’s to turn drills into games.
