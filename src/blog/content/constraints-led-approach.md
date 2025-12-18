@@ -275,9 +275,6 @@ Now, reimagine it as a **3v2 Continuous Transition Game**.
 Each possession starts from the same spacing concept, but now players must *read defenders, find space, and transition instantly* when the ball changes sides.  
 Suddenly, everything that was missing — decisions, timing, communication — emerges naturally.  
 
-🎥 **Watch: Transform Boring Basketball Drills Into Game-Changing Challenges**  
-[![Transform Boring Basketball Drills Into Game-Changing Challenges](https://img.youtube.com/vi/gAilQm-XMm0/hqdefault.jpg)](https://youtu.be/gAilQm-XMm0)
-
 ---
 
 ### Designing for Perception–Action Coupling
