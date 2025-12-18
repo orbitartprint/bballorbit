@@ -1,8 +1,9 @@
 # Why I Stopped Running Traditional Drills – And What I Do Instead
-### How To Transform Traditional Drills Into Game-Like Small-Sided Games That Transfer To Real Basketball
+### How to Transform Traditional Drills into Game-Like Small-Sided Games that Transfer to Real Basketball
 
-> My players looked great in drills.
+> My players looked great in drills.  
 > Calm. Controlled. Precise.
+>
 > Then game day came — and everything fell apart.
 
 They missed reads they had “mastered” in practice.  
@@ -15,7 +16,7 @@ In reality, the problem was how we trained.
 ---
 
 <div class="infobox">
-  <h4>What this article is about</h4>
+  <h4>What this Article is About</h4>
   <p>
     This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how [small-sided games](/ssg-playbook) can bridge the gap between practice and real basketball.
   </p>
@@ -53,10 +54,10 @@ And basketball is never played without context.
 
 In real games, players must:
 
-- read defenders
-- adapt to space
-- make decisions under time pressure
-- live with consequences
+- **read** defenders
+- **adapt** to space
+- **make decisions** under time pressure
+- **live with consequences**
 
 In most drills, they don’t.
 
@@ -66,7 +67,7 @@ but the moment a defender takes away the obvious option, that “perfect” skil
 >Skills don’t fail in games — decisions do.
 
 This is why players often look worse in games than in practice.
-We trained the movement, but not the problem the movement was meant to solve.
+We trained the movement, but not the **problem the movement was meant to solve**.
 
 *(If you want the deeper learning theory behind this, I break it down in detail in my article on the [Constraints-Led Approach](/blog/constraints-led-approach))*
 
@@ -84,21 +85,23 @@ and started asking *“Does this situation exist in basketball?”*
 
 That question changed everything.
 
+![Learning in Action - Young Kids playing Basketball in the Gym](/lovable-uploads/small-sided-games-vs-traditional-drills.webp)
+
 ---
 
 ## 4. What Small-Sided Games Actually Train
 
-Small-sided games (SSGs) don’t just “add fun” to practice.  
-They change what players are learning.
+[Small-sided games](/ssg-playbook) (SSGs) don’t just “add fun” to practice.  
+They change **what players are learning**.
 
 In SSGs, players train:  
-- technique under pressure
+- technique **under pressure**
 - perception and scanning
 - decision-making
 - spacing and timing
 - communication
 
-And they train all of it at the same time.
+And they train all of it **at the same time**.
 
 That’s the key difference.
 
@@ -108,7 +111,7 @@ That’s the key difference.
 
 This is where most coaches get stuck.
 
-They think switching to small-sided games means throwing away all drills.  
+They think switching to small-sided games means **throwing away all drills**.  
 It doesn’t.
 
 > Don’t delete your drills — evolve them.
@@ -117,7 +120,7 @@ It doesn’t.
 
 
 The structure stays.  
-But now players must read, decide, and adapt.
+But now players must **read, decide, and adapt**.
 
 This is where real transfer begins.
 
@@ -126,16 +129,16 @@ This is where real transfer begins.
 
 ---
 
-![Learning in Action - Young Kids playing Basketball in the Gym](/lovable-uploads/traditional-vs-game-reality.webp)
-
----
-
 ## 6. The 3 Rules That Make Any Small-Sided Game Work
 
 If you remember only one thing, remember this:
 
-<div class="protip"> 
-<strong>Every effective SSG includes:</strong><br /> 1️⃣ A defender<br /> 2️⃣ A decision<br /> 3️⃣ A consequence </div>
+<div class="infobox">
+  <h4>Every effective SSG includes:</h4>
+  <p>
+    <strong>Every effective SSG includes:</strong><br /> 1️⃣ A defender<br /> 2️⃣ A decision<br /> 3️⃣ A consequence
+  </p>
+</div>
 
 Remove one of these, and learning drops instantly.
 
@@ -174,7 +177,6 @@ When players struggle, I don’t explain more —
 <div class="infobox">
   <h4>Key Takeaways</h4>
   <p>
-    Add a constraint when:
     <ul>
       <li>Traditional drills don’t fail — they just don’t finish the job</li>
       <li>Small-sided games create real transfer</li>
@@ -182,7 +184,6 @@ When players struggle, I don’t explain more —
       <li>Learning looks messy — and that’s okay</li>
       <li>Practice should feel like the game</li>
     </ul>
-    That’s your signal to change the <strong>environment</strong>, not the <strong>instruction</strong>.
   </p>
 </div>
 
