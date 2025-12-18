@@ -10,8 +10,10 @@ const HeroSection = () => {
       <img
         src="/lovable-uploads/arena-1.webp"
         alt="Basketball Training Hall"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
         loading="eager"
+        fetchpriority="high"
+        decoding="async"
       />
       {/* Gradient unten */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#252525]" />
@@ -34,6 +36,8 @@ const HeroSection = () => {
               src={logoImg} 
               alt="Basketball Orbit" 
               className="h-24 md:h-32 w-auto"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
