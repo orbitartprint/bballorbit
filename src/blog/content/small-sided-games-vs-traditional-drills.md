@@ -18,7 +18,7 @@ In reality, the problem was how we trained.
 <div class="infobox">
   <h4>What this Article is About</h4>
   <p>
-    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how small-sided games can bridge the gap between practice and real basketball.
+    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how **small-sided games** can bridge the gap between practice and real basketball.
   </p>
 </div>
 
@@ -188,11 +188,13 @@ In this video, I explain the exact mindset behind that process — how to enhanc
 
   <!-- Small-Sided Game -->
   <div style="flex:1; min-width:260px;">
-    <img 
-      src="/lovable-uploads/1v1-catch-and-shoot.webp" 
-      alt="1v1 Catch and Shoot Small-Sided Game"
-      style="width:100%; border-radius:12px;"
-    />
+    <a href="/drills/1v1-catch-and-shoot" target="_blank">
+      <img 
+        src="/lovable-uploads/1v1-catch-and-shoot.webp" 
+        alt="1v1 Chase and Shoot Small-Sided Game"
+        style="width:100%; border-radius:12px;"
+      />
+    </a>
     <p><strong>Small-Sided Game: 1v1 Catch-and-Shoot</strong></p>
     <ul>
       <li>Shot vs drive decision</li>
@@ -217,9 +219,14 @@ where every drill is built around real decisions, pressure, and game context.
 
 ---
 
-## 6. The 3 Rules That Make Any Small-Sided Game Work
+## 6. The 3 Principles That Make Any Small-Sided Game Work
 
-If you remember only one thing, remember this:
+Once you start transforming drills into games, a new question appears:  
+*Why do some small-sided games work immediately — while others fall flat?*
+
+Over time, I noticed a simple pattern.  
+Effective small-sided games don’t rely on complexity.  
+They rely on **three consistent principles**.
 
 <div class="infobox">
   <h4>Every effective SSG includes:</h4>
@@ -229,6 +236,16 @@ If you remember only one thing, remember this:
 </div>
 
 Remove one of these, and learning drops instantly.
+
+Without a defender, there is no pressure.  
+Without a decision, there is no thinking.  
+Without a consequence, there is no reason to adapt.
+
+These principles don’t limit creativity — they **create it**.  
+They give players a problem worth solving, again and again, under slightly different conditions.
+
+And once these elements are in place, coaching becomes easier.  
+Instead of correcting every mistake, you can let the game do the teaching.
 
 ---
 
