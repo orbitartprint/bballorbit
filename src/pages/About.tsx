@@ -39,7 +39,7 @@ const About = () => {
                   <img 
                     src={chrisPhoto1} 
                     alt="Chris - Basketball Orbit Founder"
-                    title:"Chris - Basketball Orbit Founder"
+                    title="Chris - Basketball Orbit Founder"
                     loading="lazy"
                     decoding="async"
                     className="rounded-lg shadow-orange w-80 h-96 object-cover"
