@@ -415,7 +415,7 @@ That doesn’t mean we throw beginners into chaos. It means we design environmen
 
 <div class="infobox">
   <h3>Example</h3>
-  <p>Use simplified <a href="/ssg-playbook">small-sided games</a> like <strong>Dribble Tag</strong>, where players learn spacing, evasion, and body control naturally.<br>
+  <p>Use simplified small-sided games like <strong>Dribble Tag</strong>, where players learn spacing, evasion, and body control naturally.<br>
     Or set simple constraints — such as defender starts behind offense — that scale challenge and create immediate success experiences.</p>
 </div>
 
@@ -464,7 +464,7 @@ It doesn’t demand that you abandon structure; it invites you to redesign it.
 > Skill acquisition isn’t theory vs practice — it’s science that helps us design better practice.  
 > — *The Transforming Basketball Podcast, EP 53 (2024)* – [Spotify](https://open.spotify.com/episode/5pypmh4u1JGWX3xgNpnj3W)
 
-Ultimately, that’s what [modern coaching](/ssg-playbook) is all about: 
+Ultimately, that’s what **modern coaching** is all about: 
 not teaching the game we remember, but designing the game our players will create.
 
 ---
