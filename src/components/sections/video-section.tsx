@@ -19,8 +19,16 @@ const VideoSection = () => {
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-
+  const [thumbnailUrl, setThumbnailUrl] = useState(
+      `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+    );
+    
+    useEffect(() => {
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      setThumbnailUrl(
+        `https://img.youtube.com/vi/${videoId}/${isDesktop ? "maxresdefault" : "hqdefault"}.jpg`
+      );
+    }, [videoId]);
   return (
     <section className="py-6 lg:py-10 bg-card">
       <div className="container mx-auto px-4 lg:px-8">
@@ -59,7 +67,7 @@ const VideoSection = () => {
                   decoding="async"
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    // Wenn kein HD-Thumbnail existiert, nutze die HQ-Version
+                    // Fallback auf hq, falls maxres nicht existiert
                     e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                   }}
                 />
