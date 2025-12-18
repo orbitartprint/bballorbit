@@ -48,6 +48,8 @@ Traditional drills remove exactly the elements that define basketball:
 
 And basketball is never played without context.
 
+![Graphic - Traditional Drills vs. Game Reality](/lovable-uploads/traditional-vs-game-reality.webp)
+
 ---
 
 ## 2. Why Traditional Drills Don’t Transfer to Games
@@ -69,7 +71,7 @@ but the moment a defender takes away the obvious option, that “perfect” skil
 This is why players often look worse in games than in practice.
 We trained the movement, but not the **problem the movement was meant to solve**.
 
-*(If you want the deeper learning theory behind this, I break it down in detail in my article on the [Constraints-Led Approach](/blog/constraints-led-approach))*
+*(If you want the deeper learning theory behind this, I break it down in detail in my article on the [Constraints-Led Approach](/blog/constraints-led-approach).)*
 
 ---
 
@@ -116,16 +118,58 @@ It doesn’t.
 
 > Don’t delete your drills — evolve them.
 
-**Examples:**
+This shift doesn’t require completely new drills.  
+In fact, most traditional drills can be transformed with just a few small changes.
+
+In this video, I explain the exact mindset behind that process — how to enhance every drill instead of replacing it.
+
+🎥 **Watch: Transform Boring Basketball Drills Into Game-Changing Challenges**  
+[![Transform Boring Basketball Drills Into Game-Changing Challenges](https://img.youtube.com/vi/gAilQm-XMm0/hqdefault.jpg)](https://youtu.be/gAilQm-XMm0)
+
+### Example 1: From 3-Man Weave to a 2v1 Advantage Game
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:24px 0;">
+  <!-- Traditional Drill -->
+  <div style="flex:1; min-width:260px;">
+    <img 
+      src="/lovable-uploads/3-man-weave.webp" 
+      alt="3-Man Weave Drill"
+      style="width:100%; border-radius:12px;"
+    />
+    <p><strong>Traditional Drill: 3-Man Weave</strong></p>
+    <ul>
+      <li>Passing rhythm without defenders</li>
+      <li>No real reads or reactions</li>
+      <li>Fixed movement patterns</li>
+    </ul>
+  </div>
+
+  <!-- Arrow (optional visual cue) -->
+  <div style="display:flex; align-items:center; font-size:32px; opacity:0.5;">
+    →
+  </div>
+
+  <!-- Small-Sided Game -->
+  <div style="flex:1; min-width:260px;">
+    <img 
+      src="/lovable-uploads/2v1-advantage-game.webp" 
+      alt="2v1 Advantage Small-Sided Game"
+      style="width:100%; border-radius:12px;"
+    />
+    <p><strong>Small-Sided Game: 2v1 Advantage</strong></p>
+    <ul>
+      <li>Real numerical advantage</li>
+      <li>Reads against a live defender</li>
+      <li>Decisions with immediate consequences</li>
+    </ul>
+  </div>
+</div>
 
 
 The structure stays.  
 But now players must **read, decide, and adapt**.
 
 This is where real transfer begins.
-
-🎥 **Watch: Transform Boring Basketball Drills Into Game-Changing Challenges**  
-[![Transform Boring Basketball Drills Into Game-Changing Challenges](https://img.youtube.com/vi/gAilQm-XMm0/hqdefault.jpg)](https://youtu.be/gAilQm-XMm0)
 
 ---
 
@@ -136,7 +180,7 @@ If you remember only one thing, remember this:
 <div class="infobox">
   <h4>Every effective SSG includes:</h4>
   <p>
-    <strong>Every effective SSG includes:</strong><br /> 1️⃣ A defender<br /> 2️⃣ A decision<br /> 3️⃣ A consequence
+    1️⃣ A defender<br /> 2️⃣ A decision<br /> 3️⃣ A consequence
   </p>
 </div>
 
