@@ -211,8 +211,7 @@ But now players must **read, decide, and adapt**.
 I apply this transformation mindset across my entire practice design —  
 from finishing drills to offensive and defensive concepts.
 
-👉 You’ll find many of these game-like progressions in my  
-[Drill Library](/drills),  
+👉 You’ll find many of these game-like progressions in my [Drill Library](/drills),  
 where every drill is built around real decisions, pressure, and game context.
 
 > The goal isn’t to invent better drills — it’s to turn drills into games.
