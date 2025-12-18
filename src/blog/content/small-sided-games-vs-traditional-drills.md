@@ -18,7 +18,7 @@ In reality, the problem was how we trained.
 <div class="infobox">
   <h4>What this Article is About</h4>
   <p>
-    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how [small-sided games](/ssg-playbook) can bridge the gap between practice and real basketball.
+    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how <a href="/ssg-playbook">small-sided games</a> can bridge the gap between practice and real basketball.
   </p>
 </div>
 
@@ -138,14 +138,13 @@ In this video, I explain the exact mindset behind that process — how to enhanc
     />
     <p><strong>Traditional Drill: 3-Man Weave</strong></p>
     <ul>
-      <li>Passing rhythm without defenders</li>
       <li>No real reads or reactions</li>
       <li>Fixed movement patterns</li>
     </ul>
   </div>
 
   <!-- Arrow (optional visual cue) -->
-  <div style="display:flex; align-items:center; font-size:32px; opacity:0.5;">
+  <div style="display:flex; align-items:center; font-size:36px;">
     →
   </div>
 
@@ -158,9 +157,47 @@ In this video, I explain the exact mindset behind that process — how to enhanc
     />
     <p><strong>Small-Sided Game: 2v1 Advantage</strong></p>
     <ul>
-      <li>Real numerical advantage</li>
       <li>Reads against a live defender</li>
       <li>Decisions with immediate consequences</li>
+    </ul>
+  </div>
+</div>
+
+### Example 2: From Catch & Shoot to 1v1 Chase and Shoot
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:24px 0;">
+  <!-- Traditional Drill -->
+  <div style="flex:1; min-width:260px;">
+    <img 
+      src="/lovable-uploads/catch-and-shoot.webp" 
+      alt="Catch and Shoot Drill"
+      style="width:100%; border-radius:12px;"
+    />
+    <p><strong>Traditional Drill: Catch & Shoot</strong></p>
+    <ul>
+      <li>Perfect timing, no pressure</li>
+      <li>No closeout or shot selection</li>
+      <li>Same shot every repetition</li>
+    </ul>
+  </div>
+
+  <!-- Arrow -->
+  <div style="display:flex; align-items:center; font-size:36px;">
+    →
+  </div>
+
+  <!-- Small-Sided Game -->
+  <div style="flex:1; min-width:260px;">
+    <img 
+      src="/lovable-uploads/1v1-catch-and-shoot.webp" 
+      alt="1v1 Catch and Shoot Small-Sided Game"
+      style="width:100%; border-radius:12px;"
+    />
+    <p><strong>Small-Sided Game: 1v1 Catch-and-Shoot</strong></p>
+    <ul>
+      <li>Shot vs drive decision</li>
+      <li>Reading defender speed and angle</li>
+      <li>Realistic shot quality</li>
     </ul>
   </div>
 </div>
@@ -169,7 +206,14 @@ In this video, I explain the exact mindset behind that process — how to enhanc
 The structure stays.  
 But now players must **read, decide, and adapt**.
 
-This is where real transfer begins.
+I apply this transformation mindset across my entire practice design —  
+from finishing drills to offensive and defensive concepts.
+
+👉 You’ll find many of these game-like progressions in my  
+(Drill Library)[/drills],  
+where every drill is built around real decisions, pressure, and game context.
+
+> The goal isn’t to invent better drills — it’s to turn drills into games.
 
 ---
 
