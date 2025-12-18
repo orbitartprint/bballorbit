@@ -18,7 +18,7 @@ In reality, the problem was how we trained.
 <div class="infobox">
   <h4>What this Article is About</h4>
   <p>
-    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how **small-sided games** can bridge the gap between practice and real basketball.
+    This is not an attack on fundamentals.<br /> It’s about <strong>why traditional drills alone don’t transfer</strong> — and how <strong>small-sided games</strong> can bridge the gap between practice and real basketball.
   </p>
 </div>
 
