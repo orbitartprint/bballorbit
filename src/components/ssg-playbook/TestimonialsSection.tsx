@@ -10,9 +10,13 @@ const TestimonialsSection = () => {
       text: "Christian's drills and explanations are so clear that I keep coming back to study them. The game-like variations helped me overhaul my practices and keep my players engaged. This is some of the best modern coaching material online.",
       author: "Coach Robert, U14",
     },
+    //{
+    //  text: "Christian's game-based approach stands out. Clear explanations, great animations and drills that are methodically structured and truly game-realistic. His SSG philosophy has improved my understanding of how to teach real decisions.",
+    //  author: "Coach Thomas, Germany",
+    //},
     {
-      text: "Christian's game-based approach stands out. Clear explanations, great animations and drills that are methodically structured and truly game-realistic. His SSG philosophy has improved my understanding of how to teach real decisions.",
-      author: "Coach Thomas, Germany",
+      text: "A highly structured and clearly explained (with diagrams) document. Very useful and inspirational in preparing my team practices. Exactly what I was looking for. Thanks coach.",
+      author: "Serge, Coach U16 Triple Threat (Haarlem - NL)",
     },
     {
       text: "This playbook gave me more clarity in one week than years of random drill searching. Every SSG is well structured and easy to run. It completely changed how I plan my practices.",
