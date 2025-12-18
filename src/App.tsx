@@ -41,11 +41,7 @@ function App() {
           <PageTrackingWrapper />
           {/* ✅ Suspense sorgt für Lazy Loading */}
           <Suspense
-            fallback={
-              <div className="flex justify-center items-center h-screen text-lg text-gray-500">
-                Loading...
-              </div>
-            }
+            fallback={<div className="p-6 text-sm text-muted-foreground">Loading…</div>}
           >
             <Routes>
               <Route path="/" element={<Index />} />
