@@ -1,4 +1,4 @@
-// src/blog/article-data/constraint-led-approach.ts
+// src/blog/article-data/constraints-led-approach.ts
 
 import { calculateReadTime } from '../../utils/blogHelpers';
 import articleContent from '../content/constraints-led-approach.md?raw';
