@@ -17,13 +17,19 @@ const BlogCard = ({ article, featured = false }: BlogCardProps) => {
   return (
     <Card className={`h-full flex flex-col bg-card/50 backdrop-blur border-border hover:border-primary/50 transition-all duration-300 ${featured ? 'lg:col-span-3' : ''}`}>
       <Link to={`/blog/${article.slug}`} className="block">
-        <div className="relative overflow-hidden rounded-t-lg">
+        <div className={`relative overflow-hidden rounded-t-lg ${featured ? "bg-muted flex items-center justify-center h-[400px]" : "h-48"}`}>
           <img
             src={article.heroImage}
             alt={article.heroImageAlt}
-            className={`w-full object-cover transition-transform duration-300 hover:scale-105 ${featured ? 'h-[400px]' : 'h-48'}`}
+            loading="lazy"
+            decoding="async"
+            className={`w-full transition-transform duration-300 hover:scale-105 ${
+              featured
+                ? "max-w-full max-h-full object-contain"
+                : "h-full object-cover"
+            }`}
             onError={(e) => {
-              e.currentTarget.src = '/placeholder.svg';
+              e.currentTarget.src = "/placeholder.svg";
             }}
           />
           <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
