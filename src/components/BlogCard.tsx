@@ -17,7 +17,7 @@ const BlogCard = ({ article, featured = false }: BlogCardProps) => {
   return (
     <Card className={`h-full flex flex-col bg-card/50 backdrop-blur border-border hover:border-primary/50 transition-all duration-300 ${featured ? 'lg:col-span-3' : ''}`}>
       <Link to={`/blog/${article.slug}`} className="block">
-        <div className={`relative overflow-hidden rounded-t-lg ${featured ? "bg-muted flex items-center justify-center h-[400px]" : "h-48"}`}>
+        <div className="relative overflow-hidden rounded-t-lg">
           <img
             src={article.heroImage}
             alt={article.heroImageAlt}
@@ -25,13 +25,19 @@ const BlogCard = ({ article, featured = false }: BlogCardProps) => {
             decoding="async"
             className={`w-full transition-transform duration-300 hover:scale-105 ${
               featured
-                ? "max-w-full max-h-full object-contain"
-                : "h-full object-cover"
+                ? "h-[400px] object-cover object-[50%_20%]"
+                : "h-48 object-cover"
             }`}
             onError={(e) => {
               e.currentTarget.src = "/placeholder.svg";
             }}
           />
+        
+          {/* Gradient Overlay (nur für featured) */}
+          {featured && (
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background/80 to-transparent" />
+          )}
+        
           <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
             {article.category}
           </Badge>
