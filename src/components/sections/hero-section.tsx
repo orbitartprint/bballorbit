@@ -10,7 +10,7 @@ const HeroSection = () => {
       <img
         src="/lovable-uploads/arena-1.webp"
         alt="Basketball Training Hall"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-75"
         loading="eager"
         fetchpriority="high"
         decoding="async"
