@@ -31,10 +31,48 @@ const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = blogArticles.find((a) => a.slug === slug);
   const [isHeroImageModalOpen, setIsHeroImageModalOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+  useEffect(() => {
+    const container = document.querySelector("#article-content");
+    if (!container) return;
+  
+    const images = Array.from(container.querySelectorAll("img"));
+  
+    const handlers = images.map((img) => {
+      // Cursor UX
+      img.style.cursor = "zoom-in";
+  
+      const handler = () => {
+        const src = img.getAttribute("src");
+        if (src) setLightboxImage(src);
+      };
+  
+      img.addEventListener("click", handler);
+      return { img, handler };
+    });
+  
+    return () => {
+      handlers.forEach(({ img, handler }) => {
+        img.removeEventListener("click", handler);
+      });
+    };
+  }, [slug]);
+  useEffect(() => {
+    if (!lightboxImage) return;
+  
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setLightboxImage(null);
+      }
+    };
+  
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [lightboxImage]);
 
   if (!article) {
     return (
@@ -282,6 +320,19 @@ const BlogArticle = () => {
             </aside>
           </div>
         </div>
+        {lightboxImage && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+            onClick={() => setLightboxImage(null)}
+          >
+            <img
+              src={lightboxImage}
+              alt="Expanded graphic"
+              className="max-w-full max-h-full rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()} // verhindert Schließen beim Klick aufs Bild selbst
+            />
+          </div>
+        )}
         <Footer />
       </div>
     </>
