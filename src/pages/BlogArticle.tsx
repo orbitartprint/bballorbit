@@ -2,7 +2,7 @@
 
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -313,7 +313,7 @@ const BlogArticle = () => {
 
             {/* Sidebar */}
             <aside className="lg:col-span-1 space-y-8 self-start">
-              <div className="hidden lg:block">
+              <div className="hidden lg:block sticky top-24">
                 <TableOfContents containerSelector="#article-content" />
               </div>
               <RelatedArticles articles={relatedArticles} />
@@ -325,12 +325,26 @@ const BlogArticle = () => {
             className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
             onClick={() => setLightboxImage(null)}
           >
-            <img
-              src={lightboxImage}
-              alt="Expanded graphic"
-              className="max-w-full max-h-full rounded-lg shadow-2xl"
-              onClick={(e) => e.stopPropagation()} // verhindert Schließen beim Klick aufs Bild selbst
-            />
+            <div className="relative max-w-[95vw] max-h-[90vh]">
+              <button
+                type="button"
+                aria-label="Close image"
+                className="absolute -top-3 -right-3 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 shadow-lg"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLightboxImage(null);
+                }}
+              >
+                <X className="w-5 h-5" />
+              </button>
+        
+              <img
+                src={lightboxImage}
+                alt="Expanded graphic"
+                className="max-w-[95vw] max-h-[90vh] rounded-lg shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
           </div>
         )}
         <Footer />
