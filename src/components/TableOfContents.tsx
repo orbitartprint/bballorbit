@@ -14,10 +14,10 @@ const TableOfContents = () => {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const article = document.querySelector("article");
-    if (!article) return;
-
-    const headingElements = article.querySelectorAll("h2, h3");
+    const container = document.querySelector("#article-content");
+    if (!container) return;
+    
+    const headingElements = container.querySelectorAll("h2, h3");
     const headingsList: Heading[] = [];
 
     headingElements.forEach((heading, index) => {
