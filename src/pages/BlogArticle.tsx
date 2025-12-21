@@ -146,13 +146,8 @@ const BlogArticle = () => {
                   </DialogContent>
                 </Dialog>
 
-                {/* Table of Contents (Mobile) */}
-                <div className="lg:hidden mb-8">
-                  <TableOfContents containerSelector="#article-content" />
-                </div>
-
                 {/* Article Content */}
-                <div id="article-content" className="prose prose-lg prose-invert max-w-none
+                <div className="prose prose-lg prose-invert max-w-none
                   prose-headings:text-foreground prose-headings:font-bold prose-headings:scroll-mt-24
                   prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-4
                   prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
@@ -274,9 +269,7 @@ const BlogArticle = () => {
 
             {/* Sidebar */}
             <aside className="lg:col-span-1 space-y-8">
-              <div className="hidden lg:block">
-                <TableOfContents containerSelector="#article-content" />
-              </div>
+              <TableOfContents />
               <RelatedArticles articles={relatedArticles} />
             </aside>
           </div>
