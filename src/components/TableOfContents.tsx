@@ -59,7 +59,7 @@ const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps
   if (headings.length === 0) return null;
 
   return (
-    <Card className="bg-card/50 backdrop-blur border-border">
+    <Card className="lg:sticky lg:top-24 bg-card/50 backdrop-blur border-border">
       <CardHeader>
         <CardTitle className="text-lg">Table of Contents</CardTitle>
       </CardHeader>
