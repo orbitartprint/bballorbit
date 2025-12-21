@@ -123,7 +123,7 @@ In fact, most traditional drills can be transformed with just a few small change
 
 In this video, I explain the exact mindset behind that process — how to enhance every drill instead of replacing it.
 
-🎥 **Watch: Transform Boring Basketball Drills Into Game-Changing Challenges**  
+🎥 **Watch:** [Transform Boring Basketball Drills Into Game-Changing Challenges](https://youtu.be/gAilQm-XMm0)
 [![Transform Boring Basketball Drills Into Game-Changing Challenges](https://img.youtube.com/vi/gAilQm-XMm0/hqdefault.jpg)](https://youtu.be/gAilQm-XMm0)
 
 ### Example 1: From 3-Man Weave to a 2v1 Advantage Game
