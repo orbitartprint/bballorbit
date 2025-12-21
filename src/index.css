@@ -137,36 +137,40 @@ All colors MUST be HSL.
   /* 🟧 Orange Info Box (z. B. für Key Takeaways, Tipps) */
   .infobox {
     @apply border border-[#f57520]/40 bg-[#111111] rounded-xl p-6 shadow-lg mt-8 mb-8;
+  }
+  
+  /* NUR Infoboxen mit genau zwei direkten div-Kindern werden zweispaltig */
+  .infobox:has(> div + div) {
     display: flex;
     gap: 20px;
     align-items: center;
   }
   
   /* Text-Spalte */
-  .infobox > div:first-child {
+  .infobox:has(> div + div) > div:first-child {
     flex: 2;
-    min-width: 0; /* extrem wichtig für Mobile */
+    min-width: 0;
   }
   
   /* Bild-Spalte */
-  .infobox > div:last-child {
+  .infobox:has(> div + div) > div:last-child {
     flex: 1;
     min-width: 200px;
   }
   
-  /* Mobile Layout */
+  /* Mobile Layout nur für zweispaltige Infoboxen */
   @media (max-width: 768px) {
-    .infobox {
+    .infobox:has(> div + div) {
       flex-direction: column;
       align-items: stretch;
     }
   
-    .infobox > div:last-child {
+    .infobox:has(> div + div) > div:last-child {
       min-width: 0;
       width: 100%;
     }
   
-    .infobox img {
+    .infobox:has(> div + div) img {
       max-width: 320px;
       margin: 0 auto;
       display: block;
