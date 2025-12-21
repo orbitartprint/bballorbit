@@ -313,8 +313,10 @@ const BlogArticle = () => {
 
             {/* Sidebar */}
             <aside className="lg:col-span-1 space-y-8 self-start">
-              <div className="hidden lg:block sticky top-24">
-                <TableOfContents containerSelector="#article-content" />
+              <div className="hidden lg:block">
+                <div className="sticky top-24 max-h-[calc(100vh-6rem)] overflow-auto">
+                  <TableOfContents containerSelector="#article-content" />
+                </div>
               </div>
               <RelatedArticles articles={relatedArticles} />
             </aside>
