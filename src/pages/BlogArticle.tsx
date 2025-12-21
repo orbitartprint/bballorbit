@@ -2,7 +2,7 @@
 
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter, X } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,48 +31,10 @@ const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = blogArticles.find((a) => a.slug === slug);
   const [isHeroImageModalOpen, setIsHeroImageModalOpen] = useState(false);
-  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
-  useEffect(() => {
-    const container = document.querySelector("#article-content");
-    if (!container) return;
-  
-    const images = Array.from(container.querySelectorAll("img"));
-  
-    const handlers = images.map((img) => {
-      // Cursor UX
-      img.style.cursor = "zoom-in";
-  
-      const handler = () => {
-        const src = img.getAttribute("src");
-        if (src) setLightboxImage(src);
-      };
-  
-      img.addEventListener("click", handler);
-      return { img, handler };
-    });
-  
-    return () => {
-      handlers.forEach(({ img, handler }) => {
-        img.removeEventListener("click", handler);
-      });
-    };
-  }, [slug]);
-  useEffect(() => {
-    if (!lightboxImage) return;
-  
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setLightboxImage(null);
-      }
-    };
-  
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [lightboxImage]);
 
   if (!article) {
     return (
@@ -190,8 +152,7 @@ const BlogArticle = () => {
                 </div>
 
                 {/* Article Content */}
-                <div id="article-content"
-                  className="prose prose-lg prose-invert max-w-none
+                <div id="article-content" className="prose prose-lg prose-invert max-w-none
                   prose-headings:text-foreground prose-headings:font-bold prose-headings:scroll-mt-24
                   prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-4
                   prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
@@ -312,42 +273,14 @@ const BlogArticle = () => {
             </div>
 
             {/* Sidebar */}
-            <aside className="lg:col-span-1 space-y-8 self-start">
-              <div className="hidden lg:block sticky top-24">
+            <aside className="lg:col-span-1 space-y-8">
+              <div className="hidden lg:block">
                 <TableOfContents containerSelector="#article-content" />
               </div>
-            
               <RelatedArticles articles={relatedArticles} />
             </aside>
           </div>
         </div>
-        {lightboxImage && (
-          <div
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
-            onClick={() => setLightboxImage(null)}
-          >
-            <div className="relative max-w-[95vw] max-h-[90vh]">
-              <button
-                type="button"
-                aria-label="Close image"
-                className="absolute -top-3 -right-3 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 shadow-lg"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setLightboxImage(null);
-                }}
-              >
-                <X className="w-5 h-5" />
-              </button>
-        
-              <img
-                src={lightboxImage}
-                alt="Expanded graphic"
-                className="max-w-[95vw] max-h-[90vh] rounded-lg shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
-              />
-            </div>
-          </div>
-        )}
         <Footer />
       </div>
     </>
