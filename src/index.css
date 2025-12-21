@@ -84,14 +84,16 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-montserrat;
-    overflow-x: hidden;
-  }
-  
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* hierhin verschieben */
   }
+  
+  body {
+    @apply bg-background text-foreground font-montserrat;
+    overflow-x: visible; /* oder einfach entfernen */
+  }
+
 }
 
 @layer components {
