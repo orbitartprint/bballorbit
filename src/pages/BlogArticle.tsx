@@ -112,7 +112,7 @@ const BlogArticle = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />
-        <div className="container mx-auto px-4 pt-12 pb-8 md:pt-20 md:pb-10">
+        <div className="container mx-auto px-4 pt-20 pb-8 md:pt-20 md:pb-10">
           <Button variant="ghost" className="mb-6" asChild>
             <Link to="/blog">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
