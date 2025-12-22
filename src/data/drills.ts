@@ -40,7 +40,7 @@ export const drills: Drill[] = [
     images: ["/lovable-uploads/2v2-pick-and-roll-variations.webp","/lovable-uploads/2v2-pick-and-roll-variations-2.webp"],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: [
-      "Pick & Roll", "On-Ball Screen", "2v2", "Decision Making", "Ball Screen Reads", "Reject", "Roll", "Pop", "Slip", "Screen Defense"]
+      "Pick & Roll", "On-Ball Screen", "2v2", "Decision Making", "Ball Screen Reads", "Screen Defense"]
   },
   {
     id: "1v1-corner-skip-closeout",
