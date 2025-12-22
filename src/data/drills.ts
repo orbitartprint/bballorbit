@@ -15,6 +15,34 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "2v2-pick-and-roll-variations",
+    title: "2v2 Pick & Roll Variations",
+    subtitle: "Constraint-based 2v2 to train reads: reject, roll, pop, slip + different coverages",
+    focusArea: ["Offense", "Decision Making"],
+    mainGoal:
+      "Improve ball-handler and screener decision making in the on-ball screen game by manipulating coverage and finishing constraints (reject / use screen, roll / pop / slip, finish vs. help).",
+    description: [
+      "Set up 2 offensive players at the three-point line: a ball-handler (screen receiver) and a screener. The on-ball defender guards the ball-handler. The screener’s defender starts under the rim.",
+      "The screener sets an on-ball screen for the ball-handler. The ball-handler attacks immediately (initially a 2v1) and looks to score or create an advantage.",
+      "As soon as an offensive player enters the paint, the second defender (starting under the rim) is allowed to actively defend—turning the action into live 2v2.",
+      "Play until a score, stop, or defensive rebound. Reset quickly and rotate roles/positions."
+    ],
+    constraints: [
+      "Coverage constraints (choose one): On-ball defender must go OVER every time / must go UNDER every time / must ICE (force sideline) every time.",
+      "Finish constraints (choose one): Offense can only score with layups OR threes / Offense must finish in 0–1 dribbles after the catch on the roll/pop.",
+      "Help defender constraints (starting under rim): cannot jump / must keep one hand behind the back / must stay inside the restricted area until paint entry / may start moving when the screen is set.",
+      "Offense option constraints (choose one): Ball-handler must REJECT the screen on the first rep / must USE the screen on the first rep; screener must ROLL every time / must POP every time / must SLIP every time.",
+      "Add a time pressure: Shot must happen within 4 seconds after the screen.",
+      "Progression: Start with help defender 'limited' (static/no jump), then gradually remove limitations to increase realism."
+    ],
+    thumbnail: "/lovable-uploads/2v2-pick-and-roll-variations.webp",
+    videoMp4: "/videos/2v2-pick-and-roll-variations.mp4",
+    images: ["/lovable-uploads/2v2-pick-and-roll-variations.webp","/lovable-uploads/2v2-pick-and-roll-variations-2.webp"],
+    // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
+    tags: [
+      "Pick & Roll", "On-Ball Screen", "2v2", "Decision Making", "Ball Screen Reads", "Reject", "Roll", "Pop", "Slip", "Screen Defense"]
+  },
+  {
     id: "1v1-corner-skip-closeout",
     title: "1v1 Corner Skip Closeout",
     subtitle: "Sprint recovery, closeout technique, and immediate decision-making",
