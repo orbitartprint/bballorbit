@@ -15,6 +15,64 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "2v1-bullet-pass",
+    title: "2v1 Bullet Pass",
+    subtitle: "Fast 2v1 that forces instant spacing + a quick, accurate pass under pressure",
+    focusArea: ["Offense", "Passing", "Spacing"],
+    mainGoal:
+      "Train quick spacing and a high-quality 'bullet pass' to beat a recovering defender, while teaching the defender to read and choose between stopping the pass or protecting the rim.",
+    description: [
+      "Three players line up in a straight line at the three-point line (same lane), one behind another.",
+      "Back player = ball-handler (O1). In front of him stands an off-ball attacker (O2). In front of O2 stands the defender (X1) facing the basket.",
+      "The rep starts when O1 begins dribbling forward. At that moment, O2 and X1 are allowed to move as well.",
+      "It becomes a live 2v1. The two offensive players must immediately create good spacing (two lanes) and attack fast.",
+      "The defender must read the situation and decide: deny the pass (take away the lane) or protect the rim.",
+      "Play until a score or stop, then rotate roles."
+    ],
+    constraints: [
+      "Mandatory pass: The ball-handler is NOT allowed to finish. He must pass for the final shot.",
+      "Limited dribbles: Ball-handler has max 1–2 dribbles before he must pass.",
+      "Finish constraint (optional): Offense must finish with a layup (no pull-ups).",
+      "Start swap: Off-ball attacker (O2) and defender (X1) switch starting positions to change angles and reads.",
+      "Initiator variation: Change who triggers the drill (e.g., O2 moves first, then O1 can dribble; or X1 moves first to simulate a late recovery).",
+      "Passing focus: Count only 'bullet passes' (on time, on target). If the pass floats or is late, it’s an automatic stop / no point."
+    ],
+    thumbnail: "/lovable-uploads/2v1-bullet-pass.webp",
+    videoMp4: "/videos/2v1-bullet-pass.mp4",
+    images: ["/lovable-uploads/2v1-bullet-pass.webp", "/lovable-uploads/2v1-bullet-pass-2.webp"],
+    // youtubeUrl: "",
+    tags: ["2v1", "Passing", "Spacing", "Finishing"]
+  },
+  {
+    id: "2v3-cone-race",
+    title: "2v3 Cone Race",
+    subtitle: "Transition-based 2v3 SSG to train early advantage recognition and decision making",
+    focusArea: ["Offense", "Spacing", "Transition"],
+    mainGoal:
+      "Teach offensive players to recognize and exploit temporary advantages under time pressure, while training defenders to recover, communicate, and stop the ball after a delayed start.",
+    description: [
+      "All players start on the baseline. There are 2 offensive players (one ball-handler, one off-ball) and 3 defenders.",
+      "In the half court, each player has one designated cone that they must run around before fully entering the play.",
+      "The drill starts when the ball-handler moves. At that moment, all players sprint to their assigned cone, circle it, and then re-enter the court.",
+      "After clearing their cone, the game becomes live and is played as a 2v3 small-sided game.",
+      "By adjusting the cone placement, the coach can create different game situations: a short-term offensive advantage, immediate ball pressure, or a strong spacing challenge for the offense.",
+      "The offense must make quick, decisive reads before the numerical disadvantage becomes overwhelming. If they hesitate, the defense recovers and gains control of the possession."
+    ],
+    constraints: [
+      "Cone placement – temporary advantage: Place defensive cones farther away to give the offense a brief 2v1 or advantage window after the start.",
+      "Cone placement – ball pressure: Place two defensive cones close to the ball-handler’s path to create immediate pressure and force early decisions.",
+      "Spacing constraint: Both offensive players start very close together and must immediately spread to different lanes (corner / slot / dunker spot).",
+      "Finishing constraint: Offense must attempt a shot within 5–6 seconds after the first offensive player clears their cone.",
+      "Defensive focus: Defense must stop the ball without fouling; add a rule that the first defender back cannot switch assignments until the second defender recovers.",
+      "Progression: Allow the offense to play freely at first, then limit dribbles (max 3) or restrict scoring to layups and paint finishes."
+    ],
+    thumbnail: "/lovable-uploads/2v3-cone-race.webp",
+    videoMp4: "/videos/2v3-cone-race.mp4",
+    images: ["/lovable-uploads/2v3-cone-race-1.webp", "/lovable-uploads/2v3-cone-race-2.webp"],
+    // youtubeUrl: "",
+    tags: ["2v3", "Numerical Disadvantage", "Decision Making", "Transition", "Spacing"]
+  },
+  {
     id: "2v2-sandwich",
     title: "2v2 Sandwich",
     subtitle: "Quick-start 2v2 that forces spacing + defensive communication from a tight alignment",
@@ -282,6 +340,6 @@ export const getAllTags = (): string[] => {
   return Array.from(tags).sort();
 };
 
-export const focusAreas = ["All", "Warm Up", "Shooting", "Defense", "Offense", "Transition", "Conditioning", "Spacing"] as const;
+export const focusAreas = ["All", "Warm Up", "Shooting", "Defense", "Offense", "Transition", "Conditioning", "Spacing", "Passing"] as const;
 
 export type FocusAreaFilter = typeof focusAreas[number];
