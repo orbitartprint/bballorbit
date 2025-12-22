@@ -12,7 +12,7 @@ const HeroSection = () => {
         alt="Basketball Training Hall"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-75"
         loading="eager"
-        fetchpriority="high"
+        fetchPriority="high"
         decoding="async"
       />
       {/* Gradient unten */}

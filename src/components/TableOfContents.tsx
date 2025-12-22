@@ -9,15 +9,19 @@ interface Heading {
   level: number;
 }
 
-const TableOfContents = () => {
+interface TableOfContentsProps {
+  containerSelector?: string;
+}
+
+const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps) => {
   const [headings, setHeadings] = useState<Heading[]>([]);
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const article = document.querySelector("article");
-    if (!article) return;
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
 
-    const headingElements = article.querySelectorAll("h2, h3");
+    const headingElements = container.querySelectorAll("h2, h3");
     const headingsList: Heading[] = [];
 
     headingElements.forEach((heading, index) => {
@@ -48,7 +52,7 @@ const TableOfContents = () => {
     headingElements.forEach((heading) => observer.observe(heading));
 
     return () => observer.disconnect();
-  }, []);
+  }, [containerSelector]);
 
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
@@ -60,7 +64,7 @@ const TableOfContents = () => {
   if (headings.length === 0) return null;
 
   return (
-    <Card className="sticky top-24 bg-card/50 backdrop-blur border-border">
+    <Card className="bg-card/50 backdrop-blur border-border">
       <CardHeader>
         <CardTitle className="text-lg">Table of Contents</CardTitle>
       </CardHeader>
