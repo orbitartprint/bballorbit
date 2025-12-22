@@ -9,25 +9,22 @@ interface Heading {
   level: number;
 }
 
-interface TableOfContentsProps {
-  containerSelector?: string; // z.B. "#article-content"
-}
-
-const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps) => {
+const TableOfContents = () => {
   const [headings, setHeadings] = useState<Heading[]>([]);
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const container = document.querySelector(containerSelector);
-    if (!container) return;
+    const article = document.querySelector("article");
+    if (!article) return;
 
-    const headingElements = container.querySelectorAll("h2, h3");
+    const headingElements = article.querySelectorAll("h2, h3");
     const headingsList: Heading[] = [];
 
     headingElements.forEach((heading, index) => {
       const id = heading.id || `heading-${index}`;
-      if (!heading.id) heading.id = id;
-
+      if (!heading.id) {
+        heading.id = id;
+      }
       headingsList.push({
         id,
         text: heading.textContent || "",
@@ -40,7 +37,9 @@ const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveId(entry.target.id);
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
         });
       },
       { rootMargin: "-100px 0px -66%" }
@@ -49,17 +48,19 @@ const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps
     headingElements.forEach((heading) => observer.observe(heading));
 
     return () => observer.disconnect();
-  }, [containerSelector]);
+  }, []);
 
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   if (headings.length === 0) return null;
 
   return (
-    <Card className="lg:sticky lg:top-24 bg-card/50 backdrop-blur border-border">
+    <Card className="sticky top-24 bg-card/50 backdrop-blur border-border">
       <CardHeader>
         <CardTitle className="text-lg">Table of Contents</CardTitle>
       </CardHeader>
