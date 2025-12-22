@@ -311,7 +311,7 @@ const BlogArticle = () => {
             </div>
 
             {/* Sidebar */}
-            <aside className="lg:col-span-1 space-y-8 self-start">
+            <aside className="lg:col-span-1">
               <div className="hidden lg:block sticky top-24">
                 <TableOfContents containerSelector="#article-content" />
               </div>
