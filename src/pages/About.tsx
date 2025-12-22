@@ -98,7 +98,7 @@ const About = () => {
               </div>
         
               {/* Rechte Spalte: Foto von Chris */}
-              <div className="flex justify-center lg:justify-start lg:sticky lg:top-8">
+              <div className="flex justify-center lg:justify-start lg:sticky lg:top-16">
                 <div className="relative">
                   <img 
                     src={chrisPhoto2} 
