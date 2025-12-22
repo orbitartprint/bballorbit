@@ -32,9 +32,9 @@ export const drills: Drill[] = [
     constraints: [
       "Mandatory pass: The ball-handler is NOT allowed to finish. He must pass for the final shot.",
       "Limited dribbles: Ball-handler has max 1–2 dribbles before he must pass.",
-      "Finish constraint (optional): Offense must finish with a layup (no pull-ups).",
+      "Finish constraint: Offense must finish with a layup (no pull-ups).",
       "Start swap: Off-ball attacker (O2) and defender (X1) switch starting positions to change angles and reads.",
-      "Initiator variation: Change who triggers the drill (e.g., O2 moves first, then O1 can dribble; or X1 moves first to simulate a late recovery).",
+      "Initiator variation: Change who triggers the drill (e.g., O2 moves first, then O1 can dribble; or X1 moves first).",
       "Passing focus: Count only 'bullet passes' (on time, on target). If the pass floats or is late, it’s an automatic stop / no point."
     ],
     thumbnail: "/lovable-uploads/2v1-bullet-pass.webp",
