@@ -15,6 +15,35 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "2v2-sandwich",
+    title: "2v2 Sandwich",
+    subtitle: "Quick-start 2v2 that forces spacing + defensive communication from a tight alignment",
+    focusArea: ["Offense", "Defense", "Spacing"],
+    mainGoal:
+      "Train immediate spacing and advantage creation on offense while forcing defenders to communicate, match up, and contain the ball in a live 2v2 situation.",
+    description: [
+      "Line up 4 players on the three-point line in one straight line. The two middle players are offense (O1 with the ball, O2 without the ball). The two outside players are defense (X1 on one end, X2 on the other end).",
+      "The rep starts as soon as the designated trigger player moves (default: the ball-handler). Once the trigger moves, all four players are live and it becomes a normal 2v2.",
+      "Offense must instantly create proper spacing (avoid standing on the same line / same lane), play with pace, and look to create an advantage with cuts, re-spacing, or screens.",
+      "Defense must talk early (match up, call switches if needed, help positions) and contain the first drive without losing the weak-side offensive player.",
+      "Play until a score, stop, or defensive rebound. Reset quickly and rotate positions/roles."
+    ],
+    constraints: [
+      "Trigger variations: Start on the movement of (a) ball-handler, (b) offensive player without the ball, (c) X1, or (d) X2. (Pick one and run 3–5 reps.)",
+      "Finishing constraint: Offense must finish with a layup (no jump shots). Progression: allow only layups + free throws on fouls, then add threes.",
+      "Spacing rule: On the catch or after the first drive, the off-ball offensive player must 're-space' to a clear window (corner/slot/dunker spot) — no standing within 2 meters of the ball.",
+      "Screens allowed: Offense may set on-ball screens.",
+      "Defensive communication constraint: Defense must call out coverage on every screen (e.g., 'switch', 'stay', 'ice') — if silent, offense automatically gets 1 point.",
+      "Dribble constraint: Ball-handler has max 3 dribbles before a shot or a pass.",
+      "Time pressure: Shot must happen within 4 seconds after the trigger movement."
+    ],
+    thumbnail: "/lovable-uploads/2v2-sandwich.webp",
+    videoMp4: "/videos/2v2-sandwich.mp4",
+    images: ["/lovable-uploads/2v2-sandwich.webp", "/lovable-uploads/2v2-sandwich-2.webp"],
+    // youtubeUrl: "",
+    tags: ["2v2", "Spacing", "Communication", "Decision Making", "Help Defense"]
+  },
+  {
     id: "2v2-pick-and-roll-variations",
     title: "2v2 Pick & Roll Variations",
     subtitle: "Constraint-based 2v2 to train reads: reject, roll, pop, slip + different coverages",
@@ -253,6 +282,6 @@ export const getAllTags = (): string[] => {
   return Array.from(tags).sort();
 };
 
-export const focusAreas = ["All", "Warm Up", "Shooting", "Defense", "Offense", "Transition", "Conditioning"] as const;
+export const focusAreas = ["All", "Warm Up", "Shooting", "Defense", "Offense", "Transition", "Conditioning", "Spacing"] as const;
 
 export type FocusAreaFilter = typeof focusAreas[number];
