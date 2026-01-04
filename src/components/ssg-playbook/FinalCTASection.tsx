@@ -23,7 +23,7 @@ const FinalCTASection = () => {
               </a>
             </PrimaryButton>
             <p className="text-sm text-[#f5f5f5]/50 italic">
-              P.S. The launch price of $27 is only available for a limited time.
+              Instant digital download. Lifetime access.
             </p>
           </div>
         </div>
