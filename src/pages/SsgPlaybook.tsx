@@ -128,7 +128,7 @@ const SsgPlaybook = () => {
               </PrimaryButton>
               {/* Subtext */}
               <p className="text-sm text-[#f5f5f5]/50">
-                The launch price is available for a limited time only.
+                The launch price offer ends on January 12, 2026.
               </p>
             </div>
           </div>
