@@ -81,7 +81,7 @@ const SsgPlaybook = () => {
                   <div className="group relative aspect-[3/4] bg-gradient-to-br from-[#f57520]/20 to-[#2d32f1]/20 rounded-2xl shadow-2xl border-2 border-[#f57520]/30 overflow-hidden">
                     {/* Mockup Image */}
                     <img
-                      src="/lovable-uploads/mockup-main-trans-price.webp"
+                      src="/lovable-uploads/mockup-main-trans-price-39.webp"
                       alt="The Ultimate SSG Playbook Mockup"
                       loading="lazy"
                       decoding="async"
@@ -101,21 +101,19 @@ const SsgPlaybook = () => {
           <div className="text-center space-y-8">
             {/* Headline */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f5f5]">
-              Limited Time Launch Price
+              Full Access to the Ultimate SSG Playbook
             </h2>
 
             {/* Paragraph */}
             <p className="text-lg md:text-xl text-[#f5f5f5]/80 leading-relaxed max-w-2xl mx-auto">
-              For the launch of The Ultimate SSG Playbook, you can get full access for a special price of $27. After the launch period, the regular price will be $47.
+              Get lifetime access to the complete SSG system, including all bonus PDFs and future updates.<br><br>
+              This playbook is designed to help coaches build practices that feel like real basketball — with better decisions, spacing, and intensity.
             </p>
 
             {/* Price Display */}
             <div className="flex items-center justify-center gap-6 py-6">
-              <div className="text-[#f5f5f5]/50 text-2xl line-through">
-                $47
-              </div>
               <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#f57520]">
-                $27 <span className="text-2xl md:text-3xl text-[#f5f5f5]/70">Launch Price</span>
+                $39
               </div>
             </div>
 
@@ -128,7 +126,7 @@ const SsgPlaybook = () => {
               </PrimaryButton>
               {/* Subtext */}
               <p className="text-sm text-[#f5f5f5]/50">
-                The launch price offer ends on January 12, 2026.
+                Instant digital download. Lifetime access.
               </p>
             </div>
           </div>
