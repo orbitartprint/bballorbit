@@ -16,7 +16,7 @@ const ValueStackSection = () => {
         <div className="space-y-10">
           {/* Headline */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f5f5] text-center">
-            Get Over $111 in Modern Coaching Material — For Only $27 Today
+            A Complete Small-Sided Games System for Modern Basketball Coaching
           </h2>
 
           {/* Value Stack Card */}
@@ -36,16 +36,12 @@ const ValueStackSection = () => {
             {/* Totals */}
             <div className="mt-8 pt-6 border-t-2 border-[#f57520]/30 space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xl font-semibold text-[#f5f5f5]">Total Value:</span>
-                <span className="text-xl text-[#f5f5f5]/70 line-through">$111</span>
+                <span className="text-xl font-semibold text-[#f5f5f5]">Included Value:</span>
+                <span className="text-xl text-[#f5f5f5]/70">$111</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xl font-semibold text-[#f5f5f5]">Regular Price:</span>
-                <span className="text-xl text-[#f5f5f5]/70 line-through">$47</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-[#f5f5f5]">Launch Price:</span>
-                <span className="text-3xl font-bold text-[#f57520]">$27</span>
+                <span className="text-2xl font-bold text-[#f5f5f5]">Full Access Price:</span>
+                <span className="text-3xl font-bold text-[#f57520]">$39</span>
               </div>
             </div>
           </div>
