@@ -106,7 +106,7 @@ const SsgPlaybook = () => {
 
             {/* Paragraph */}
             <p className="text-lg md:text-xl text-[#f5f5f5]/80 leading-relaxed max-w-2xl mx-auto">
-              Get lifetime access to the complete SSG system, including all bonus PDFs and future updates.<br><br>
+              Get lifetime access to the complete SSG system, including all bonus PDFs and future updates.<br /><br />
               This playbook is designed to help coaches build practices that feel like real basketball — with better decisions, spacing, and intensity.
             </p>
 
