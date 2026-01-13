@@ -13,6 +13,17 @@ export interface Resource {
 
 export const resources: Resource[] = [
   {
+    id: "press-break",
+    title: "How to Break Any Press",
+    description: "A Principle-Based Framework.",
+    image: "/lovable-uploads/press-break-pdf.webp",
+    category: "Offense",
+    type: "Free",
+    link: "https://guide.bballorbit.com/press-break",
+    uid: "d8c8368400",
+    filePath: "/pdfs/how-to-break-any-press.pdf",
+  },
+  {
     id: "ssg-playbook",
     title: "The Ultimate SSG Playbook",
     description: "100+ Competitive, Game-Like Drills and SSGs.",
