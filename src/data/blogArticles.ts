@@ -17,6 +17,7 @@ import { transitionOffense } from '../blog/article-data/transition-offense';
 import { zoomAction } from '../blog/article-data/zoom-action';
 import { constraintsLedApproach } from '../blog/article-data/constraints-led-approach';
 import { smallSidedGamesVsTraditionalDrills } from '../blog/article-data/small-sided-games-vs-traditional-drills';
+import { howToPressBreak } from '../blog/article-data/how-to-press-break';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
@@ -24,6 +25,7 @@ export const blogArticles: BlogArticle[] = [
   zoomAction,
   constraintsLedApproach,
   smallSidedGamesVsTraditionalDrills,
+  howToPressBreak,
   // Add more articles here as you create them
 ].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
