@@ -83,6 +83,8 @@ Fast ball retrieval, quick inbounds, and early decisions can create advantages b
 > This principle isn’t about forcing tempo.  
 > It’s about **recognizing moments where going fast naturally puts the defense at a disadvantage**.
 
+---
+
 ## 2️⃣ Pass First, Dribble to Escape
 
 Press defenses want the ball on the floor.
@@ -94,12 +96,13 @@ Against pressure, the dribble should be used **to escape and create space**, not
 Retreat dribbles, strong pivots, and clear passing angles keep the ball alive and prevent panic decisions.
 
 <div class="md:w-1/2 flex justify-center">
-  <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-action-setup.webp" loop muted playsinline preload="none" loading="lazy">
+  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy">
     <source src="/videos/passes-beats-presses.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </div>
 
+---
 
 ## 3️⃣ Create Clear Spacing and Passing Lanes
 
@@ -143,6 +146,15 @@ Against zone presses in particular, a simple spacing reference works extremely w
   </div>
 </div>
 
+<div class="md:w-1/2 flex justify-center">
+  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy">
+    <source src="/videos/sms.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+---
+
 ## 4️⃣ Recognize and Attack the Advantage
 
 Breaking the press is not the goal.
@@ -156,6 +168,13 @@ Teams that can recognize these moments quickly can turn broken presses into:
 - and high-quality scoring opportunities.
 
 If the advantage isn’t there, the best teams don’t force it — they reset and create the next one.
+
+<div class="md:w-1/2 flex justify-center">
+  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy">
+    <source src="/videos/shot-selection.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ---
 
