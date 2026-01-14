@@ -21,7 +21,7 @@ const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps
     const container = document.querySelector(containerSelector);
     if (!container) return;
 
-    const headingElements = container.querySelectorAll("h2, h3");
+    const headingElements = container.querySelectorAll("h2");
     const headingsList: Heading[] = [];
 
     headingElements.forEach((heading, index) => {

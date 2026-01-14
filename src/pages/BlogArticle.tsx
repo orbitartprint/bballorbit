@@ -186,7 +186,7 @@ const BlogArticle = () => {
 
                 {/* Table of Contents (Mobile) */}
                 <div className="lg:hidden mb-8">
-                  <TableOfContents containerSelector="#article-content" />
+                  <TableOfContents key={slug} containerSelector="#article-content" />
                 </div>
 
                 {/* Article Content */}
@@ -313,7 +313,7 @@ const BlogArticle = () => {
             {/* Sidebar */}
             <aside className="lg:col-span-1">
               <div className="hidden lg:block sticky top-24">
-                <TableOfContents containerSelector="#article-content" />
+                <TableOfContents key={slug} containerSelector="#article-content" />
               </div>
             
               <RelatedArticles articles={relatedArticles} />
