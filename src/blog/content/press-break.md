@@ -57,7 +57,7 @@ This approach:
 - holds up when the defense adjusts,
 - and transfers directly from practice to games.
 
-💡 The goal is simple:
+💡 The goal is simple:  
 **prepare players to think under pressure, not memorize patterns**.
 
 ---
