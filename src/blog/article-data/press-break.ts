@@ -12,7 +12,6 @@ export const pressBreak = {
     "Press Break",
     "Full Court Press",
     "Basketball Strategy",
-    "Small-Sided Games",
     "Decision Making",
     "Spacing",
     "Transition Offense",
