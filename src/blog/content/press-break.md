@@ -96,7 +96,8 @@ Against pressure, the dribble should be used **to escape and create space**, not
 Retreat dribbles, strong pivots, and clear passing angles keep the ball alive and prevent panic decisions.
 
 <div class="md:w-1/2 flex justify-center">
-  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy">
+  <video class="rounded-xl shadow-lg" controls loop muted playsinline preload="metadata" loading="lazy"
+    style="width:100%; max-width:900px; border-radius:12px; cursor:pointer;">
     <source src="/videos/passes-beats-presses.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -147,7 +148,8 @@ Against zone presses in particular, a simple spacing reference works extremely w
 </div>
 
 <div class="md:w-1/2 flex justify-center">
-  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy">
+  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy"
+    style="width:100%; max-width:900px; border-radius:12px; cursor:pointer;">
     <source src="/videos/sms.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -170,7 +172,8 @@ Teams that can recognize these moments quickly can turn broken presses into:
 If the advantage isn’t there, the best teams don’t force it — they reset and create the next one.
 
 <div class="md:w-1/2 flex justify-center">
-  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy">
+  <video class="rounded-xl shadow-lg w-full md:w-auto" controls loop muted playsinline preload="metadata" loading="lazy"
+    style="width:100%; max-width:900px; cursor:pointer;">
     <source src="/videos/shot-selection.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
