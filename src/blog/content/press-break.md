@@ -36,12 +36,8 @@ They wait for the next instruction instead of reading the game.
 
 At that point, the press has already done its job.
 
-<div class="infobox">
-  <p>
-    Press defenses are designed to create chaos and speed up decisions.<br>
-    Set plays don’t survive chaos very well — <strong>principles do</strong>.
-  </p>
-</div>
+> Press defenses are designed to create chaos and speed up decisions.  
+> Set plays don’t survive chaos very well — **principles do**.
 
 ---
 
@@ -61,13 +57,7 @@ This approach:
 - holds up when the defense adjusts,
 - and transfers directly from practice to games.
 
-<div class="infobox">
-  <h3>💡 The goal is simple:</h3>
-  <p>
-    Prepare players to think under pressure, not memorize patterns.
-  </p>
-</div>
-
+💡 The goal is simple:
 **prepare players to think under pressure, not memorize patterns**.
 
 ---
@@ -102,6 +92,14 @@ Passing, on the other hand, forces the defense to move and communicate.
 
 Against pressure, the dribble should be used **to escape and create space**, not to advance the ball blindly.  
 Retreat dribbles, strong pivots, and clear passing angles keep the ball alive and prevent panic decisions.
+
+<div class="md:w-1/2 flex justify-center">
+  <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-action-setup.webp" loop muted playsinline preload="none" loading="lazy">
+    <source src="/videos/passes-beats-presses.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
 ## 3️⃣ Create Clear Spacing and Passing Lanes
 
@@ -145,7 +143,7 @@ Against zone presses in particular, a simple spacing reference works extremely w
   </div>
 </div>
 
-## 4⃣ Recognize and Attack the Advantage
+## 4️⃣ Recognize and Attack the Advantage
 
 Breaking the press is not the goal.
 
@@ -210,12 +208,12 @@ That gives the ball handler vision, room to operate, and the ability to read the
 <div class="flex flex-col md:flex-row items-start md:items-center gap-8 my-8">
   <!-- Left Column: Text -->
   <div class="md:w-1/2">
-    Key adjustments against man-to-man pressure:
+    <h3 class="text-2xl font-semibold mb-4">Key adjustments against man-to-man pressure:</h3>
     <ul class="list-decimal list-inside space-y-2 text-base leading-relaxed">
       <li>Clear the backcourt to create a true 1-on-1 situation</li>
       <li>Let the ball handler use the full width of the court</li>
       <li>Use the dribble to escape pressure, not to force progress</li>
-      <li>UAdd a simple drag screen only if needed — not as a set play</li>
+      <li>Add a simple drag screen only if needed — not as a set play</li>
     </ul>
   </div>
 
@@ -249,8 +247,7 @@ but the solutions are shared across the group, not isolated to the ball handler.
   <h3>💡 Coaching Reminder</h3>
   <p>
     When players understand <strong>why spacing and decisions matter</strong>,<br>
-    they don’t need a new press break every time the defense changes.
-
+    they don’t need a new press break every time the defense changes.<br><br>
     They simply adjust how they apply the same principles.
   </p>
 </div>
