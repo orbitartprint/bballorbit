@@ -129,7 +129,7 @@ Against zone presses in particular, a simple spacing reference works extremely w
   <!-- Left Column: Text -->
   <div class="md:w-1/2">
     <h3 class="text-2xl font-semibold mb-4">How it works</h3>
-    <ul class="list-decimal list-inside space-y-2 text-base leading-relaxed">
+    <ul class="list-inside space-y-2 text-base leading-relaxed">
       <li>One player [3] stays wide on the sideline.</li>
       <li>One player [2] flashes to the middle.</li>
       <li>One player [4] stays behind the play as a safety.</li>
@@ -228,7 +228,7 @@ That gives the ball handler vision, room to operate, and the ability to read the
   <!-- Left Column: Text -->
   <div class="md:w-1/2">
     <h3 class="text-2xl font-semibold mb-4">Key adjustments against man-to-man pressure:</h3>
-    <ul class="list-decimal list-inside space-y-2 text-base leading-relaxed">
+    <ul class="list-inside space-y-2 text-base leading-relaxed">
       <li>Clear the backcourt to create a true 1-on-1 situation</li>
       <li>Let the ball handler use the full width of the court</li>
       <li>Use the dribble to escape pressure, not to force progress</li>
