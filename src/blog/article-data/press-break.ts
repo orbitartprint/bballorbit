@@ -1,7 +1,7 @@
 import { calculateReadTime } from '../../utils/blogHelpers';
 import articleContent from '../content/press-break.md?raw';
 
-export const howToPressBreak = {
+export const pressBreak = {
   slug: "press-break",
   title: "How to Break Any Press in Basketball (Without Memorizing Plays)",
   excerpt:
