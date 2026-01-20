@@ -9,7 +9,7 @@ The first option is open.
 And then the trap comes — and the play is gone.
 
 > That’s because breaking a press is rarely a playbook problem.  
-> It’s a decision-making problem under pressure."
+> It’s a decision-making problem under pressure.
 
 In this article, I’ll walk you through a principle-based approach to breaking any full-court press — man-to-man or zone — and explain why focusing on principles and game-like training prepares your players far better than memorizing set plays.
 
@@ -202,7 +202,7 @@ That’s the difference between knowing a press break
 and **being able to break a press**.
 
 If you want to see how these principles are trained step by step using game-like situations,
-I walk through all the small-sided games in the full video breakdown here:
+I walk through all the small-sided games in the full video breakdown here:  
 👉 [Watch the video](https://youtu.be/I9q8LFG6rpk)
 
 ---
