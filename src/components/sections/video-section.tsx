@@ -14,8 +14,8 @@ const VideoSection = () => {
   }, []);
 
   // 🔸 Hier änderst du nur diese eine Zeile:
-  const videoId = "I9q8LFG6rpk";
-  const videoTitle ="How to Break a Press in Basketball: 4 Principles + Game-Like Drills";
+  const videoId = "TX8U5Zav8e4";
+  const videoTitle ="The Horns Offense Breakdown: Every Option From One Setup";
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
