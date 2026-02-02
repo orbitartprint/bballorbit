@@ -4,6 +4,10 @@ const MoreVideos = () => {
   // 🔸 Hier brauchst du nur die Video-IDs und Titel anzugeben
   const videos = [
     {
+      id: "I9q8LFG6rpk",
+      title: "How to Break a Press in Basketball: 4 Principles + Game-Like Drills"
+    },
+    {
       id: "dtNQNdSTcRg",
       title: "The Drill Format You’re Not Using - But Make Your Players Elite"
     },
@@ -11,11 +15,6 @@ const MoreVideos = () => {
       id: "v6WQI4eV7aI",
       title: "10 Offensive Triggers to Create an Advantage in Your 5-Out Offense"
     },
-    {
-      id: "rTVDgsR5cV0",
-      title: "How to Teach the Zoom Action – 3 Game-Realistic Drills"
-    },
-
   ];
 
   return (
