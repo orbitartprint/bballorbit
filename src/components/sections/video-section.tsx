@@ -15,6 +15,7 @@ const VideoSection = () => {
 
   // 🔸 Hier änderst du nur diese eine Zeile:
   const videoId = "TX8U5Zav8e4";
+  // const videoId = "01rcPig8FNg";
   const videoTitle ="The Horns Offense Breakdown: Every Option From One Setup";
 
   // Automatische URLs basierend auf videoId
