@@ -15,6 +15,34 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "2v2-paint-balance",
+    title: "2v2 Paint Balance",
+    subtitle: "Halfcourt 2v2 with defensive inside-outside rule and offensive spacing constraints",
+    focusArea: ["Offense", "Defense", "Spacing", "Shooting"],
+    mainGoal:
+      "Train offensive spacing and quick advantage creation under time pressure, while forcing the defense to constantly balance paint protection and perimeter pressure.",
+    description: [
+      "Play a live 2v2 in the half court.",
+      "Defensive rule: One defender must always be inside the paint (zone), and the other defender must always be outside the paint.",
+      "If one defender steps into the paint, the other defender must immediately leave it. They must constantly adjust their positioning to maintain inside-outside balance.",
+      "The offense plays normal 2v2 but must recognize which defender is protecting the paint and which one is pressuring outside.",
+      "The goal for the offense is to create quick advantages before the defense can properly rotate and rebalance.",
+      "Play until a score, stop, or shot-clock violation, then switch roles."
+    ],
+    constraints: [
+      "Offensive half restriction: One offensive player may only operate on the left side of the court, the other only on the right side (no crossing the middle).",
+      "Catch rule: Offensive players may only receive the ball outside the three-point line.",
+      "Scoring system: Three-pointers = 3 points; any 2-point field goal = 1 point (reward spacing and outside shooting).",
+      "Time constraint: Offense has 6–8 seconds to complete each possession.",
+      "Dribble limit (optional progression): Max 3 dribbles per player to increase ball movement and decision speed."
+    ],
+    thumbnail: "/lovable-uploads/2v2-paint-balance.webp",
+    videoMp4: "/videos/2v2-paint-balance.mp4",
+    images: ["/lovable-uploads/2v2-paint-balance.webp", "/lovable-uploads/2v2-paint-balance-2.webp"],
+    // youtubeUrl: "",
+    tags: ["2v2", "Spacing", "Defensive Rotation", "Decision Making", "Shooting"]
+  },
+  {
     id: "1v1-midline-gate-decision",
     title: "1v1 Midline Gate Decision",
     subtitle: "Full-court 1v1 with change-of-direction read after midline touch",
@@ -33,14 +61,13 @@ export const drills: Drill[] = [
       "Mandatory midline touch: Both players must clearly step on or cross the midline before attacking a basket.",
       "Finish constraint: Offense must finish with a layup (no pull-ups or threes).",
       "Dribble constraint: Ball-handler must use at least one change of direction (e.g., crossover, behind-the-back) after the midline touch.",
-      "Time pressure: Shot must occur within 6–8 seconds after the midline touch.",
+      "Time pressure: Shot must occur within 4 seconds after the midline touch.",
       "Angle variation: Move the cone gate slightly left or right to create different driving angles and defensive recovery paths.",
       "Progression: Allow defender to start half a step ahead to increase pressure and force more decisive change-of-direction moves."
     ],
     thumbnail: "/lovable-uploads/1v1-midline-gate-decision.webp",
     videoMp4: "/videos/1v1-midline-gate-decision.mp4",
-    images: ["/lovable-uploads/1v1-midline-gate-decision.webp", "/lovable-uploads/1v1-midline-gate-decision-2.webp"
-    ],
+    images: ["/lovable-uploads/1v1-midline-gate-decision.webp", "/lovable-uploads/1v1-midline-gate-decision-2.webp"],
     // youtubeUrl: "",
     tags: ["1v1", "Full Court", "Decision Making", "Finishing", "Transition", "On-Ball Defense"]
   },
