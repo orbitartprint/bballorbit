@@ -15,6 +15,36 @@ export interface Drill {
 
 export const drills: Drill[] = [
   {
+    id: "1v1-midline-gate-decision",
+    title: "1v1 Midline Gate Decision",
+    subtitle: "Full-court 1v1 with change-of-direction read after midline touch",
+    focusArea: ["Offense", "Defense", "Conditioning"],
+    mainGoal:
+      "Train change-of-pace and change-of-direction decisions for the ball-handler while developing defensive reaction speed, recovery angles, and containment in open space.",
+    description: [
+      "One ball-handler (O1) and one defender (X1) start next to each other behind the baseline. O1 has the ball.",
+      "At the opposite half (midcourt), two cones form a small gate on the midline. Both players must run forward and touch the midline (at least one foot on or beyond it).",
+      "The drill starts when the ball-handler moves. The defender can react immediately and sprint as well.",
+      "After touching the midline, the ball-handler can decide: continue forward and attack the far basket OR plant, change direction, and attack back to the original basket.",
+      "The defender must read the offensive decision, adjust angles, and defend live until the layup attempt.",
+      "Play until a score or defensive stop, then switch roles."
+    ],
+    constraints: [
+      "Mandatory midline touch: Both players must clearly step on or cross the midline before attacking a basket.",
+      "Finish constraint: Offense must finish with a layup (no pull-ups or threes).",
+      "Dribble constraint: Ball-handler must use at least one change of direction (e.g., crossover, behind-the-back) after the midline touch.",
+      "Time pressure: Shot must occur within 6–8 seconds after the midline touch.",
+      "Angle variation: Move the cone gate slightly left or right to create different driving angles and defensive recovery paths.",
+      "Progression: Allow defender to start half a step ahead to increase pressure and force more decisive change-of-direction moves."
+    ],
+    thumbnail: "/lovable-uploads/1v1-midline-gate-decision.webp",
+    videoMp4: "/videos/1v1-midline-gate-decision.mp4",
+    images: ["/lovable-uploads/1v1-midline-gate-decision.webp", "/lovable-uploads/1v1-midline-gate-decision-2.webp"
+    ],
+    // youtubeUrl: "",
+    tags: ["1v1", "Full Court", "Decision Making", "Finishing", "Transition", "On-Ball Defense"]
+  },
+  {
     id: "2v1-bullet-pass",
     title: "2v1 Bullet Pass",
     subtitle: "Fast 2v1 that forces instant spacing + a quick, accurate pass under pressure",
