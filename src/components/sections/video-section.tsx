@@ -14,10 +14,8 @@ const VideoSection = () => {
   }, []);
 
   // 🔸 Hier änderst du nur diese eine Zeile:
-  const videoId = "TX8U5Zav8e4";
-  // const videoId = "01rcPig8FNg";
-  const videoTitle ="The Horns Offense Breakdown: Every Option From One Setup";
-  // const videoTitle ="How to Attack Every Pick-and-Roll Coverage";
+  const videoId = "01rcPig8FNg";
+  const videoTitle ="How to Attack Every Pick-and-Roll Coverage";
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
