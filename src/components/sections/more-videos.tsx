@@ -3,10 +3,10 @@ import { Play } from "lucide-react";
 const MoreVideos = () => {
   // 🔸 Hier brauchst du nur die Video-IDs und Titel anzugeben
   const videos = [
-    //{
-    //  id: "TX8U5Zav8e4",
-    //  title: "The Horns Offense Breakdown: Every Option From One Setup"
-    //},
+    {
+      id: "TX8U5Zav8e4",
+      title: "The Horns Offense Breakdown: Every Option From One Setup"
+    },
     {
       id: "I9q8LFG6rpk",
       title: "How to Break a Press in Basketball: 4 Principles + Game-Like Drills"
@@ -14,10 +14,6 @@ const MoreVideos = () => {
     {
       id: "dtNQNdSTcRg",
       title: "The Drill Format You’re Not Using - But Make Your Players Elite"
-    },
-    {
-      id: "v6WQI4eV7aI",
-      title: "10 Offensive Triggers to Create an Advantage in Your 5-Out Offense"
     },
   ];
 
