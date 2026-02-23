@@ -12,17 +12,17 @@ export interface Resource {
 }
 
 export const resources: Resource[] = [
-  //{
-  //  id: "pnr-cheat-sheet",
-  //  title: "Pick & Roll Cheat Sheet",
-  //  description: "Offensive solutions vs common screen coverages.",
-  //  image: "/lovable-uploads/pnr-cheat-sheet-pdf.webp",
-  //  category: "Offense",
-  //  type: "Free",
-  //  link: "https://guide.bballorbit.com/pnr-cheat-sheet",
-  //  uid: "a45561de56",
-  //  filePath: "/pdfs/pnr-cheat-sheet.pdf",
-  //},
+  {
+    id: "pnr-cheat-sheet",
+    title: "Pick & Roll Cheat Sheet",
+    description: "Offensive solutions vs common screen coverages.",
+    image: "/lovable-uploads/pnr-cheat-sheet-pdf.webp",
+    category: "Offense",
+    type: "Free",
+    link: "https://guide.bballorbit.com/pnr-cheat-sheet",
+    uid: "a45561de56",
+    filePath: "/pdfs/pnr-cheat-sheet.pdf",
+  },
   {
     id: "press-break",
     title: "How to Break Any Press",
