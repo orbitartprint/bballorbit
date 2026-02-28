@@ -20,7 +20,7 @@ const Shop = () => {
       
       <Navigation />
       
-      <main className="flex-1 flex items-center justify-center min-h-[calc(100vh-80px)]">
+      <main className="flex-1 flex items-center justify-center min-h-[calc(100vh-80px)]" role="main">
         <div className="container mx-auto px-4 py-16">
           <div className="flex flex-col items-center justify-center text-center space-y-8 max-w-2xl mx-auto">
             {/* Basketball Icon */}
