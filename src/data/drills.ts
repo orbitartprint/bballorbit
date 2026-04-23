@@ -36,9 +36,9 @@ export const drills: Drill[] = [
       "Time constraint: Offense has 6–8 seconds to complete each possession.",
       "Dribble limit (optional progression): Max 3 dribbles per player to increase ball movement and decision speed."
     ],
-    thumbnail: "/lovable-uploads/2v2-paint-balance.webp",
+    thumbnail: "/drills/2v2-paint-balance.webp",
     videoMp4: "/videos/2v2-paint-balance.mp4",
-    images: ["/lovable-uploads/2v2-paint-balance.webp", "/lovable-uploads/2v2-paint-balance-2.webp"],
+    images: ["/drills/2v2-paint-balance.webp", "/drills/2v2-paint-balance-2.webp"],
     // youtubeUrl: "",
     tags: ["2v2", "Spacing", "Defensive Rotation", "Decision Making", "Shooting"]
   },
@@ -65,9 +65,9 @@ export const drills: Drill[] = [
       "Angle variation: Move the cone gate slightly left or right to create different driving angles and defensive recovery paths.",
       "Progression: Allow defender to start half a step ahead to increase pressure and force more decisive change-of-direction moves."
     ],
-    thumbnail: "/lovable-uploads/1v1-midline-gate-decision.webp",
+    thumbnail: "/drills/1v1-midline-gate-decision.webp",
     videoMp4: "/videos/1v1-midline-gate-decision.mp4",
-    images: ["/lovable-uploads/1v1-midline-gate-decision.webp", "/lovable-uploads/1v1-midline-gate-decision-2.webp"],
+    images: ["/drills/1v1-midline-gate-decision.webp", "/drills/1v1-midline-gate-decision-2.webp"],
     // youtubeUrl: "",
     tags: ["1v1", "Full Court", "Decision Making", "Finishing", "Transition", "On-Ball Defense"]
   },
@@ -94,9 +94,9 @@ export const drills: Drill[] = [
       "Initiator variation: Change who triggers the drill (e.g., O2 moves first, then O1 can dribble; or X1 moves first).",
       "Passing focus: Count only 'bullet passes' (on time, on target). If the pass floats or is late, it’s an automatic stop / no point."
     ],
-    thumbnail: "/lovable-uploads/2v1-bullet-pass.webp",
+    thumbnail: "/drills/2v1-bullet-pass.webp",
     videoMp4: "/videos/2v1-bullet-pass.mp4",
-    images: ["/lovable-uploads/2v1-bullet-pass.webp", "/lovable-uploads/2v1-bullet-pass-2.webp"],
+    images: ["/drills/2v1-bullet-pass.webp", "/drills/2v1-bullet-pass-2.webp"],
     // youtubeUrl: "",
     tags: ["2v1", "Passing", "Spacing", "Finishing"]
   },
@@ -123,9 +123,9 @@ export const drills: Drill[] = [
       "Defensive focus: Defense must stop the ball without fouling; add a rule that the first defender back cannot switch assignments until the second defender recovers.",
       "Progression: Allow the offense to play freely at first, then limit dribbles (max 3) or restrict scoring to layups and paint finishes."
     ],
-    thumbnail: "/lovable-uploads/2v3-cone-race.webp",
+    thumbnail: "/drills/2v3-cone-race.webp",
     videoMp4: "/videos/2v3-cone-race.mp4",
-    images: ["/lovable-uploads/2v3-cone-race-1.webp", "/lovable-uploads/2v3-cone-race-2.webp"],
+    images: ["/drills/2v3-cone-race-1.webp", "/drills/2v3-cone-race-2.webp"],
     // youtubeUrl: "",
     tags: ["2v3", "Numerical Disadvantage", "Decision Making", "Transition", "Spacing"]
   },
@@ -152,9 +152,9 @@ export const drills: Drill[] = [
       "Dribble constraint: Ball-handler has max 3 dribbles before a shot or a pass.",
       "Time pressure: Shot must happen within 4 seconds after the trigger movement."
     ],
-    thumbnail: "/lovable-uploads/2v2-sandwich.webp",
+    thumbnail: "/drills/2v2-sandwich.webp",
     videoMp4: "/videos/2v2-sandwich.mp4",
-    images: ["/lovable-uploads/2v2-sandwich.webp", "/lovable-uploads/2v2-sandwich-2.webp"],
+    images: ["/drills/2v2-sandwich.webp", "/drills/2v2-sandwich-2.webp"],
     // youtubeUrl: "",
     tags: ["2v2", "Spacing", "Communication", "Decision Making", "Help Defense"]
   },
@@ -179,9 +179,9 @@ export const drills: Drill[] = [
       "Add a time pressure: Shot must happen within 4 seconds after the screen.",
       "Progression: Start with help defender 'limited' (static/no jump), then gradually remove limitations to increase realism."
     ],
-    thumbnail: "/lovable-uploads/2v2-pick-and-roll-variations.webp",
+    thumbnail: "/drills/2v2-pick-and-roll-variations.webp",
     videoMp4: "/videos/2v2-pick-and-roll-variations.mp4",
-    images: ["/lovable-uploads/2v2-pick-and-roll-variations.webp","/lovable-uploads/2v2-pick-and-roll-variations-2.webp"],
+    images: ["/drills/2v2-pick-and-roll-variations.webp","/drills/2v2-pick-and-roll-variations-2.webp"],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: [
       "Pick & Roll", "On-Ball Screen", "2v2", "Decision Making", "Ball Screen Reads", "Screen Defense"]
@@ -205,9 +205,9 @@ export const drills: Drill[] = [
       "Allow the offensive player to use the passer for a give-and-go if the initial advantage disappears.",
       "Expand the drill into 2v2 by adding a help defender and a second offensive player.",
     ],
-    thumbnail: "/lovable-uploads/1v1-corner-skip-closeout.webp",
+    thumbnail: "/drills/1v1-corner-skip-closeout.webp",
     videoMp4: "/videos/1v1-corner-skip-closeout.mp4",
-    images: ["/lovable-uploads/1v1-corner-skip-closeout-1.webp","/lovable-uploads/1v1-corner-skip-closeout-2.webp"],
+    images: ["/drills/1v1-corner-skip-closeout-1.webp","/drills/1v1-corner-skip-closeout-2.webp"],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Shooting", "Closeout", "Decision Making", "1v1"],
   },
@@ -231,9 +231,9 @@ export const drills: Drill[] = [
       "Add a time limit (e.g., reach a cone within 4 seconds).",
       "The runner must perform at least one cross over (behind the back / between the legs)."
     ],
-    thumbnail: "/lovable-uploads/1v1-escape-warm-up.webp",
+    thumbnail: "/drills/1v1-escape-warm-up.webp",
     videoMp4: "/videos/1v1-escape-warm-up.mp4",
-    images: ["/lovable-uploads/1v1-escape-warm-up.webp",],
+    images: ["/drills/1v1-escape-warm-up.webp",],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Warm Up", "Competition", "Agility", "1v1"],
   },
@@ -256,9 +256,9 @@ export const drills: Drill[] = [
       "Permit the shooter to fake before starting, forcing the defender to react.",
       "The defender begins with both hands behind their back and may raise their hands for only 1 second to contest the shot. After that, they must defend without using their hands."
     ],
-    thumbnail: "/lovable-uploads/chase-the-shooter-1.webp",
+    thumbnail: "/drills/chase-the-shooter-1.webp",
     videoMp4: "/videos/chase-the-shooter.mp4",
-    images: ["/lovable-uploads/chase-the-shooter-1.webp","/lovable-uploads/chase-the-shooter-2.webp"],
+    images: ["/drills/chase-the-shooter-1.webp","/drills/chase-the-shooter-2.webp"],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Shooting"],
   },
@@ -281,9 +281,9 @@ export const drills: Drill[] = [
       "Second defender may only help from inside the paint — no early cheating.",
       "Play in a reduced space (below FT line extended) for tighter spacing decisions.",
     ],
-    thumbnail: "/lovable-uploads/2v2-corner-drive-1.webp",
+    thumbnail: "/drills/2v2-corner-drive-1.webp",
     videoMp4: "/videos/2v2-corner-drive.mp4",
-    images: ["/lovable-uploads/2v2-corner-drive-1.webp","/lovable-uploads/2v2-corner-drive-2.webp"],
+    images: ["/drills/2v2-corner-drive-1.webp","/drills/2v2-corner-drive-2.webp"],
     // youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Shooting", "Decision Making", "Passing", "2v2"],
   },
@@ -307,9 +307,9 @@ export const drills: Drill[] = [
       "Allow or disallow penetrations.",
       "Limit the number of passes or dribbles."
     ],
-    thumbnail: "/lovable-uploads/1v1-kick-out.webp",
+    thumbnail: "/drills/1v1-kick-out.webp",
     videoMp4: "/videos/1v1-kick-out.mp4",
-    // images: ["/lovable-uploads/basketball-fundamentals-hero.webp"],
+    // images: ["/drills/basketball-fundamentals-hero.webp"],
     youtubeUrl: "https://youtu.be/9th4smk0MR0?start=102",
     tags: ["Shooting", "Competition", "Individual", "Skill Development", "Decision Making", "1v1"],
   },
@@ -334,9 +334,9 @@ export const drills: Drill[] = [
       "Disallow passes within the backcourt to increase tempo and decision-making speed.",
       "Offensive player who last touched the ball must touch sideline before defending.",
     ],
-    thumbnail: "/lovable-uploads/2v2-baseline-reload.webp",
+    thumbnail: "/drills/2v2-baseline-reload.webp",
     videoMp4: "/videos/2v2-baseline-reload.mp4",
-    images: ["/lovable-uploads/2v2-baseline-reload-c1.webp","/lovable-uploads/2v2-baseline-reload-c2.webp"],
+    images: ["/drills/2v2-baseline-reload-c1.webp","/drills/2v2-baseline-reload-c2.webp"],
     tags: ["Transition", "Competition", "Conditioning", "Decision Making", "2v2"],
   },
   {
@@ -359,9 +359,9 @@ export const drills: Drill[] = [
       "Limit the time allowed for each offensive possession.",
       "Disallow passes within the backcourt to increase tempo and decision-making speed.",
     ],
-    thumbnail: "/lovable-uploads/2v2-rolling-break.webp",
+    thumbnail: "/drills/2v2-rolling-break.webp",
     videoMp4: "/videos/2v2-rolling-break.mp4",
-    images: ["/lovable-uploads/2v2-rolling-break-c1.webp","/lovable-uploads/2v2-rolling-break-c2.webp"],
+    images: ["/drills/2v2-rolling-break-c1.webp","/drills/2v2-rolling-break-c2.webp"],
     tags: ["Transition", "Competition", "Conditioning", "Decision Making", "2v2"],
   },
   {
@@ -382,9 +382,9 @@ export const drills: Drill[] = [
       "Vary the cone positions to change chase angles and timing.",
       "Limit the shooter to two dribbles when driving.",
     ],
-    thumbnail: "/lovable-uploads/1v1-catch-and-shoot.webp",
+    thumbnail: "/drills/1v1-catch-and-shoot.webp",
     videoMp4: "/videos/1v1-catch-and-shoot.mp4",
-    //images: ["/lovable-uploads/1v1-catch-and-shoot.webp"],
+    //images: ["/drills/1v1-catch-and-shoot.webp"],
     tags: ["Shooting", "Decision Making", "1v1"],
   },
   
