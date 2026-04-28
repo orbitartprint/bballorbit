@@ -28,6 +28,7 @@ const Footer = () => {
     { name: "Terms of Service", path: "/terms" },
     { name: "Affiliate Disclosure", path: "/affiliate" },
     { name: "Legal Notice", path: "/legal" },
+    { name: "Account & Data Deletion", path: "/data-deletion" },
   ];
 
   const quickLinks = [
@@ -107,11 +108,11 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              {/* Cookie Settings Button */}
+          
               <li>
                 <button
-                  data-cky-tag="preferences"
-                  className="text-muted-foreground hover:text-primary transition-smooth"
+                  type="button"
+                  className="cky-banner-element text-muted-foreground hover:text-primary transition-smooth"
                 >
                   Cookie Preferences
                 </button>
