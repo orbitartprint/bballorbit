@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { drills } from "@/data/drills";
 import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const DrillTemplate = () => {
   const { slug } = useParams<{ slug: string }>();
