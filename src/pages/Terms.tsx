@@ -16,6 +16,10 @@ const Terms = () => {
       <Helmet>
         <title>Terms of Service | Basketball Orbit</title>
         <meta name="description" content="Terms of Service for Basketball Orbit - basketball coaching content and educational resources." />
+        <meta property="og:title" content="Terms of Service | Basketball Orbit" />
+        <meta property="og:description" content="Terms of Service for Basketball Orbit - basketball coaching content and educational resources." />
+        <meta property="og:url" content="https://www.bballorbit.com/terms" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
       </Helmet>
       

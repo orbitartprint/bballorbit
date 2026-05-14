@@ -15,6 +15,10 @@ const Shop = () => {
       <Helmet>
         <title>Shop - Basketball Orbit</title>
         <meta name="description" content="Basketball Orbit shop coming soon. Stay tuned for exciting basketball training products and resources." />
+        <meta property="og:title" content="Shop - Basketball Orbit" />
+        <meta property="og:description" content="Basketball Orbit shop coming soon. Stay tuned for exciting basketball training products and resources." />
+        <meta property="og:url" content="https://www.bballorbit.com/shop" />
+        <meta property="og:type" content="website" />
         <link rel="canonical" href="https://bballorbit.com/shop" />
       </Helmet>
       

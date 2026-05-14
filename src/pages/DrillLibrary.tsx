@@ -54,6 +54,10 @@ const DrillLibrary = () => {
           name="description"
           content="Explore modern game-based drills that challenge players through real decisions — not scripted movements - and level up your practices. Filter by skill focus, or keyword to find what you need."
         />
+        <meta property="og:title" content="Basketball Drill Library - Basketball Orbit" />
+        <meta property="og:description" content="Explore modern, game-like drills to level up your practices. Filter by skill focus or keyword to find what you need." />
+        <meta property="og:url" content="https://www.bballorbit.com/drills" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

@@ -48,6 +48,10 @@ const DrillTemplate = () => {
       <Helmet>
         <title>{drill.title} - Basketball Orbit</title>
         <meta name="description" content={drill.description.join(" ")} />
+        <meta property="og:title" content={`${drill.title} - Basketball Orbit`} />
+        <meta property="og:description" content={drill.description.join(" ")} />
+        <meta property="og:url" content={`https://www.bballorbit.com/drills/${drill.id}`} />
+        <meta property="og:type" content="article" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
