@@ -83,6 +83,10 @@ const Resources = () => {
       <Helmet>
         <title>Free & Premium Coaching Resources - Basketball Orbit</title>
         <meta name="description" content="Browse all Basketball Orbit coaching PDFs and resources. Get free drills or explore premium toolkits to elevate your coaching." />
+        <meta property="og:title" content="Free & Premium Coaching Resources - Basketball Orbit" />
+        <meta property="og:description" content="Browse all Basketball Orbit coaching PDFs and resources. Get free drills or explore premium toolkits to elevate your coaching." />
+        <meta property="og:url" content="https://www.bballorbit.com/resources" />
+        <meta property="og:type" content="website" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

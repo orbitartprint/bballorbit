@@ -23,6 +23,10 @@ const SsgPlaybook = () => {
           name="description"
           content="100+ competitive, game-like small-sided games to teach decision-making, player IQ, and game intensity for every age group."
         />
+        <meta property="og:title" content="The Ultimate SSG Playbook - Basketball Orbit" />
+        <meta property="og:description" content="100+ competitive, game-like small-sided games to teach decision-making, player IQ, and game intensity for every age group." />
+        <meta property="og:url" content="https://www.bballorbit.com/ssg-playbook" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <Navigation />

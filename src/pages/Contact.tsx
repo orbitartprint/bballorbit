@@ -82,6 +82,10 @@ const Contact = () => {
           name="description"
           content="Have questions about drills, plays, or coaching strategies? Contact Basketball Orbit. Chris is here to help coaches develop better players."
         />
+        <meta property="og:title" content="Contact Basketball Orbit – Get in Touch with Chris" />
+        <meta property="og:description" content="Have questions about drills, plays, or coaching strategies? Contact Basketball Orbit. Chris is here to help coaches develop better players." />
+        <meta property="og:url" content="https://www.bballorbit.com/contact" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

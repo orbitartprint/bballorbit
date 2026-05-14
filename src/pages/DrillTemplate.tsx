@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { drills } from "@/data/drills";
 import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const DrillTemplate = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -48,6 +48,10 @@ const DrillTemplate = () => {
       <Helmet>
         <title>{drill.title} - Basketball Orbit</title>
         <meta name="description" content={drill.description.join(" ")} />
+        <meta property="og:title" content={`${drill.title} - Basketball Orbit`} />
+        <meta property="og:description" content={drill.description.join(" ")} />
+        <meta property="og:url" content={`https://www.bballorbit.com/drills/${drill.id}`} />
+        <meta property="og:type" content="article" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

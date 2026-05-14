@@ -23,6 +23,10 @@ const Index = () => {
           name="description"
           content="Your go-to hub for modern basketball coaching: small-sided games, constraint-led approach, and ready-to-use drills and resources."
         />
+        <meta property="og:title" content="Basketball Orbit — Modern Drills. Smarter Coaching. Better Players." />
+        <meta property="og:description" content="Your go-to hub for modern basketball coaching: small-sided games, constraint-led approach, and ready-to-use drills and resources." />
+        <meta property="og:url" content="https://www.bballorbit.com" />
+        <meta property="og:type" content="website" />
         {/* Organization Schema */}
         <script type="application/ld+json">
           {JSON.stringify({

@@ -16,6 +16,10 @@ const About = () => {
       <Helmet>
         <title>About Chris - Basketball Orbit | Modern Coaching Strategies</title>
         <meta name="description" content="Meet Chris, the founder of Basketball Orbit. Learn about his journey in basketball coaching and his mission to help coaches worldwide build stronger teams." />
+        <meta property="og:title" content="About Chris - Basketball Orbit | Modern Coaching Strategies" />
+        <meta property="og:description" content="Meet Chris, the founder of Basketball Orbit. Learn about his journey in basketball coaching and his mission to help coaches worldwide build stronger teams." />
+        <meta property="og:url" content="https://www.bballorbit.com/about" />
+        <meta property="og:type" content="website" />
       </Helmet>
       
       <Navigation />
