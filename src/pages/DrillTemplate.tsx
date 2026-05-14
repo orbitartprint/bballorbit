@@ -16,6 +16,8 @@ const DrillTemplate = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
+  useEffect(() => {window.scrollTo(0, 0);}, []);
+
   if (!drill) {
     return <Navigate to="/drills" replace />;
   }
@@ -40,8 +42,6 @@ const DrillTemplate = () => {
   const currentIndex = sameCategoryDrills.findIndex(d => d.id === drill.id);
   const previousDrill = currentIndex > 0 ? sameCategoryDrills[currentIndex - 1] : null;
   const nextDrill = currentIndex < sameCategoryDrills.length - 1 ? sameCategoryDrills[currentIndex + 1] : null;
-
-  useEffect(() => {window.scrollTo(0, 0);}, []);
 
   return (
     <>
