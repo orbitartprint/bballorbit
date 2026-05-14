@@ -41,6 +41,8 @@ const DrillTemplate = () => {
   const previousDrill = currentIndex > 0 ? sameCategoryDrills[currentIndex - 1] : null;
   const nextDrill = currentIndex < sameCategoryDrills.length - 1 ? sameCategoryDrills[currentIndex + 1] : null;
 
+  useEffect(() => {window.scrollTo(0, 0);}, []);
+
   return (
     <>
       <Helmet>
