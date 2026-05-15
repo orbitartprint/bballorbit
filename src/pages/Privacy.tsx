@@ -1,43 +1,47 @@
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Helmet } from "react-helmet";
-import { useNavigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const Privacy = () => {
-  const navigate = useNavigate();
-  useEffect(() => {window.scrollTo(0, 0);}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Privacy Policy - Basketball Orbit</title>
-        <meta name="description" content="Privacy Policy for Basketball Orbit - Learn how we protect your privacy and handle your data." />
+        <meta
+          name="description"
+          content="Privacy Policy for Basketball Orbit - Learn how we protect your privacy and handle your data."
+        />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="container mx-auto px-4 pt-24 pb-12 max-w-4xl">
         <div className="max-w-none">
           <h1 className="text-4xl font-bold text-foreground mb-8">
             PRIVACY POLICY
           </h1>
-          
+
           <p className="text-lg text-muted-foreground mb-8">
-            <strong>Last updated November 30, 2025</strong>
+            <strong>Last updated May 15, 2026</strong>
           </p>
 
           <div className="space-y-6 text-foreground">
             <p>
-              This Privacy Notice for Bballorbit.com ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we might access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when you use our services ("<strong>Services</strong>"), including when you:
+              This Privacy Notice for Basketball Orbit and the Basketball Orbit Practice Planner ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") describes how and why we may access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when you use our services ("<strong>Services</strong>"), including when you:
             </p>
-            
+
             <ul className="list-disc pl-6 space-y-2">
               <li>
                 Visit our website at{" "}
-                <a 
-                  href="https://www.bballorbit.com" 
-                  target="_blank" 
+                <a
+                  href="https://www.bballorbit.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary/80 underline"
                 >
@@ -45,81 +49,76 @@ const Privacy = () => {
                 </a>{" "}
                 or any website of ours that links to this Privacy Notice
               </li>
-              <li>Engage with us in other related ways, including any sales, marketing, or events</li>
+              <li>
+                Create or use an account in the Basketball Orbit Practice Planner
+              </li>
+              <li>
+                Save practice plans, use support features, enable sharing links, or use optional AI-assisted planning features
+              </li>
+              <li>
+                Engage with us in other related ways, including downloads, purchases, marketing, or events
+              </li>
             </ul>
 
             <p>
-              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services.
+              <strong>Controller.</strong> The controller responsible for the processing described in this Privacy Notice is Christian Bernhard, Hitzhofener Strasse 5b, 85080 Gaimersheim, Germany, email:{" "}
+              <a
+                href="mailto:info@bballorbit.com"
+                className="text-primary hover:text-primary/80 underline"
+              >
+                info@bballorbit.com
+              </a>
+              .
+            </p>
+
+            <p>
+              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="summary">
               SUMMARY OF KEY POINTS
             </h2>
-            
+
             <p className="italic">
-              <strong>This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our{" "}
-              <a href="#toc" className="text-primary hover:text-primary/80 underline">
-                table of contents
-              </a>{" "}
-              below to find the section you are looking for.</strong>
+              <strong>
+                This summary provides key points from our Privacy Notice, but you can find more detail by using the{" "}
+                <a href="#toc" className="text-primary hover:text-primary/80 underline">
+                  table of contents
+                </a>{" "}
+                below.
+              </strong>
             </p>
 
             <div className="space-y-4">
               <div>
-                <strong>What personal information do we process?</strong> When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. Learn more about{" "}
-                <a href="#personalinfo" className="text-primary hover:text-primary/80 underline">
-                  personal information you disclose to us
-                </a>.
+                <strong>What personal information do we process?</strong> We process information that you provide, information generated when you use the Services, and limited information received from third parties when you choose certain features such as Google Sign-In.
               </div>
-
               <div>
-                <strong>Do we process any sensitive personal information?</strong> Some of the information may be considered "special" or "sensitive" in certain jurisdictions, for example your racial or ethnic origins, sexual orientation, and religious beliefs. We do not process sensitive personal information.
+                <strong>Do we process sensitive personal information?</strong> We do not ask for or intentionally require sensitive personal information. Please do not include sensitive information in free-text fields unless it is necessary for your request.
               </div>
-
               <div>
-                <strong>Do we collect any information from third parties?</strong> We do not collect any information from third parties.
+                <strong>Do we collect information from third parties?</strong> Yes. If you choose Google Sign-In, we receive authentication information from Google, such as your email address, name, and profile image depending on your Google account settings.
               </div>
-
               <div>
-                <strong>How do we process your information?</strong> We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. Learn more about{" "}
-                <a href="#infouse" className="text-primary hover:text-primary/80 underline">
-                  how we process your information
-                </a>.
+                <strong>How do we process your information?</strong> We process information to provide and secure the Services, create and manage accounts, save practice plans, answer support requests, provide optional AI-assisted features, process orders, communicate with you, and comply with legal obligations.
               </div>
-
               <div>
-                <strong>In what situations and with which parties do we share personal information?</strong> We may share information in specific situations and with specific third parties. Learn more about{" "}
-                <a href="#whoshare" className="text-primary hover:text-primary/80 underline">
-                  when and with whom we share your personal information
-                </a>.
+                <strong>With whom do we share personal information?</strong> We share information with service providers only where needed to operate the Services, such as hosting, authentication, database, email, payment, analytics, and AI providers.
               </div>
-
               <div>
-                <strong>What are your rights?</strong> Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about{" "}
-                <a href="#privacyrights" className="text-primary hover:text-primary/80 underline">
-                  your privacy rights
-                </a>.
+                <strong>What are your rights?</strong> Depending on where you live, you may have rights to access, correct, delete, restrict, object to, or receive a copy of your personal information.
               </div>
-
               <div>
-                <strong>How do you exercise your rights?</strong> The easiest way to exercise your rights is by submitting a{" "}
-                <a 
-                  href="https://app.termly.io/notify/f69196c9-12f7-47d9-ac5f-6417f99de468" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <strong>How do you exercise your rights?</strong> Contact us at{" "}
+                <a
+                  href="mailto:info@bballorbit.com"
                   className="text-primary hover:text-primary/80 underline"
                 >
-                  data subject access request
-                </a>, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
+                  info@bballorbit.com
+                </a>
+                . We will consider and act upon your request in accordance with applicable data protection laws.
               </div>
             </div>
-
-            <p>
-              Want to learn more about what we do with any information we collect?{" "}
-              <a href="#toc" className="text-primary hover:text-primary/80 underline">
-                Review the Privacy Notice in full
-              </a>.
-            </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="toc">
               TABLE OF CONTENTS
@@ -128,22 +127,23 @@ const Privacy = () => {
             <div className="space-y-2">
               <div><a href="#infocollect" className="text-primary hover:text-primary/80 underline">1. WHAT INFORMATION DO WE COLLECT?</a></div>
               <div><a href="#infouse" className="text-primary hover:text-primary/80 underline">2. HOW DO WE PROCESS YOUR INFORMATION?</a></div>
-              <div><a href="#legalbases" className="text-primary hover:text-primary/80 underline">3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?</a></div>
+              <div><a href="#legalbases" className="text-primary hover:text-primary/80 underline">3. WHAT LEGAL BASES DO WE RELY ON?</a></div>
               <div><a href="#whoshare" className="text-primary hover:text-primary/80 underline">4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a></div>
-              <div><a href="#cookies" className="text-primary hover:text-primary/80 underline">5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></div>
-              <div><a href="#newsletter" className="text-primary hover:text-primary/80 underline">6. NEWSLETTER</a></div>
-              <div><a href="#convertkitstripe" className="text-primary hover:text-primary/80 underline">7. DIGITAL PRODUCT SALES VIA CONVERTKIT & STRIPE</a></div>
-              <div><a href="#hosting" className="text-primary hover:text-primary/80 underline">8. HOSTING OF THE WEBSITE</a></div>
-              <div><a href="#inforetain" className="text-primary hover:text-primary/80 underline">9. HOW LONG DO WE KEEP YOUR INFORMATION?</a></div>
-              <div><a href="#infominors" className="text-primary hover:text-primary/80 underline">10. DO WE COLLECT INFORMATION FROM MINORS?</a></div>
-              <div><a href="#privacyrights" className="text-primary hover:text-primary/80 underline">11. WHAT ARE YOUR PRIVACY RIGHTS?</a></div>
-              <div><a href="#DNT" className="text-primary hover:text-primary/80 underline">12. CONTROLS FOR DO-NOT-TRACK FEATURES</a></div>
-              <div><a href="#uslaws" className="text-primary hover:text-primary/80 underline">13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></div>
-              <div><a href="#downloads" className="text-primary hover:text-primary/80 underline">14. DOWNLOADS AND ONLINE SHOP</a></div>
-              <div><a href="#policyupdates" className="text-primary hover:text-primary/80 underline">15. DO WE MAKE UPDATES TO THIS NOTICE?</a></div>
-              <div><a href="#contact" className="text-primary hover:text-primary/80 underline">16. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></div>
-              <div><a href="#request" className="text-primary hover:text-primary/80 underline">17. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a></div>
-              <div><a href="#SSL" className="text-primary hover:text-primary/80 underline">18. SSL/TLS ENCRYPTION</a></div>
+              <div><a href="#transfers" className="text-primary hover:text-primary/80 underline">5. INTERNATIONAL DATA TRANSFERS</a></div>
+              <div><a href="#cookies" className="text-primary hover:text-primary/80 underline">6. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></div>
+              <div><a href="#planner" className="text-primary hover:text-primary/80 underline">7. PRACTICE PLANNER APP AND ORBIT AI</a></div>
+              <div><a href="#newsletter" className="text-primary hover:text-primary/80 underline">8. NEWSLETTER</a></div>
+              <div><a href="#convertkitstripe" className="text-primary hover:text-primary/80 underline">9. DIGITAL PRODUCT SALES VIA CONVERTKIT & STRIPE</a></div>
+              <div><a href="#hosting" className="text-primary hover:text-primary/80 underline">10. HOSTING OF THE SERVICES</a></div>
+              <div><a href="#inforetain" className="text-primary hover:text-primary/80 underline">11. HOW LONG DO WE KEEP YOUR INFORMATION?</a></div>
+              <div><a href="#infominors" className="text-primary hover:text-primary/80 underline">12. DO WE COLLECT INFORMATION FROM MINORS?</a></div>
+              <div><a href="#privacyrights" className="text-primary hover:text-primary/80 underline">13. WHAT ARE YOUR PRIVACY RIGHTS?</a></div>
+              <div><a href="#DNT" className="text-primary hover:text-primary/80 underline">14. CONTROLS FOR DO-NOT-TRACK FEATURES</a></div>
+              <div><a href="#uslaws" className="text-primary hover:text-primary/80 underline">15. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></div>
+              <div><a href="#policyupdates" className="text-primary hover:text-primary/80 underline">16. DO WE MAKE UPDATES TO THIS NOTICE?</a></div>
+              <div><a href="#contact" className="text-primary hover:text-primary/80 underline">17. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></div>
+              <div><a href="#request" className="text-primary hover:text-primary/80 underline">18. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a></div>
+              <div><a href="#SSL" className="text-primary hover:text-primary/80 underline">19. SSL/TLS ENCRYPTION</a></div>
             </div>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infocollect">
@@ -157,354 +157,298 @@ const Privacy = () => {
             <p><strong><em>In Short:</em></strong> <em>We collect personal information that you provide to us.</em></p>
 
             <p>
-              We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.
+              We collect personal information that you voluntarily provide when you interact with our Services, create an account, contact us, subscribe to communications, download resources, make purchases, or use app features.
             </p>
 
             <p>
-              <strong>Personal Information Provided by You.</strong> The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following:
+              <strong>Personal Information Provided by You.</strong> Depending on how you use the Services, this may include:
             </p>
 
             <ul className="list-disc pl-6 space-y-2">
-              <li>Contact information (such as your name and email address, when subscribing to our newsletter or downloading free resources)</li>
-              <li>Account or authentication data (if you create an account in the future)</li>
-              <li>Purchase information (such as billing details and shipping information for physical or digital products)</li>
+              <li>Contact information, such as your name and email address</li>
+              <li>Account and authentication data, such as your email address, login method, and account identifiers</li>
+              <li>Profile data, such as your full name and any profile image you choose to upload</li>
+              <li>Practice Planner content, such as saved practice plans, titles, goals, notes, segments, selected drills, favorites, and shared-practice settings</li>
+              <li>Support data, such as your message, category, subject, and information you include when contacting us</li>
+              <li>Purchase data, such as order history, billing information, and payment-related records for digital or physical products</li>
+              <li>Newsletter and marketing preferences</li>
+              <li>AI feature input, such as prompts or additional instructions you submit when you choose to use Orbit AI</li>
             </ul>
+
             <p>
-              <strong>Sensitive Information.</strong> We do not process sensitive information.
+              <strong>Sensitive Information.</strong> We do not ask for or intentionally require sensitive personal information. Please avoid including sensitive personal information in support messages, notes, or AI prompts unless it is necessary for your request. If you choose to provide such information, we may process it only as needed to handle the relevant request.
             </p>
+
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+              Information collected from third parties
+            </h3>
+
             <p>
-              All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
+              If you choose to sign in with Google, we receive information from Google that is necessary to authenticate your account, such as your email address, name, and profile image, depending on your Google account settings.
             </p>
+
             <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
               Information automatically collected
             </h3>
 
-            <p><strong><em>In Short:</em></strong> <em>Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Services.</em></p>
+            <p><strong><em>In Short:</em></strong> <em>Some technical information is collected automatically when you use the Services.</em></p>
 
             <p>
-              We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes.
+              We automatically collect certain technical information when you visit, use, or navigate the Services. This may include your IP address, browser type, device characteristics, operating system, language preferences, referring URLs, pages viewed, timestamps, and technical event data needed for security, delivery, diagnostics, analytics, and abuse prevention.
             </p>
 
-            <p>Like many businesses, we also collect information through cookies and similar technologies.</p>
-
-            <p>The information we collect includes:</p>
-
-            <ul className="list-disc pl-6 space-y-4">
-              <li>
-                <em>Log and Usage Data.</em> Log and usage data is service-related, diagnostic, usage, and performance information our servers automatically collect when you access or use our Services and which we record in log files. Depending on how you interact with us, this log data may include your IP address, device information, browser type, and settings and information about your activity in the Services (such as the date/time stamps associated with your usage, pages and files viewed, searches, and other actions you take such as which features you use), device event information (such as system activity, error reports (sometimes called "crash dumps"), and hardware settings).
-              </li>
-              <li>
-                <em>Device Data.</em> We collect device data such as information about your computer, phone, tablet, or other device you use to access the Services. Depending on the device used, this device data may include information such as your IP address (or proxy server), device and application identification numbers, location, browser type, hardware model, Internet service provider and/or mobile carrier, operating system, and system configuration information.
-              </li>
-              <li>
-                <em>Location Data.</em> We collect location data such as information about your device's location, which can be either precise or imprecise. How much information we collect depends on the type and settings of the device you use to access the Services. For example, we may use GPS and other technologies to collect geolocation data that tells us your current location (based on your IP address). You can opt out of allowing us to collect this information either by refusing access to the information or by disabling your Location setting on your device. However, if you choose to opt out, you may not be able to use certain aspects of the Services.
-              </li>
-            </ul>
+            <p>
+              When you contact support through the Practice Planner, we may also process technical context such as your browser or device information to help investigate the request.
+            </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infouse">
               2. HOW DO WE PROCESS YOUR INFORMATION?
             </h2>
-            <p><strong><em>In Short:</em></strong> <em>We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law.
-               We process the personal information for the following purposes listed below.
-               We may also process your information for other purposes
-               only with your prior explicit consent.</em>
+
+            <p><strong><em>In Short:</em></strong> <em>We process your information to provide, secure, maintain, and improve the Services and to comply with law.</em></p>
+
+            <p>
+              We process personal information for the following purposes:
             </p>
-            <strong>
-               We process your personal information for a variety of reasons, depending on how you interact with our Services, including:
-            </strong>
+
             <ul className="list-disc pl-6 space-y-4">
-              <li>
-                <strong>To save or protect an individual's vital interest.</strong>
-                We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.
-              </li>
-            </ul>
-            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="legalbases">
-              3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
-            </h2>
-            <p className="mb-2">
-              <em><strong>In Short:</strong> We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e., legal basis) to do so under applicable law, like with your consent, to comply with laws, to provide you with services to enter into or fulfill our contractual obligations, to protect your rights, or to fulfill our legitimate business interests.</em>
-            </p>
-              
-            <p className="mb-2"><em><strong><u>If you are located in the EU or UK, this section applies to you.</u></strong></em></p>
-            <p className="mb-2">The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases to process your personal information:</p>
-            <ul className="list-disc ml-6 mb-4 space-y-1">
-              <li>
-                <strong>Consent.</strong> We may process your information if you have given us permission (i.e., consent) to use your personal information for a specific purpose. You can withdraw your consent at any time. Learn more about{" "}
-                <a href="#withdrawconsent" className="text-blue-600 underline">withdrawing your consent</a>.
-              </li>
-              <li>
-                <strong>Legal Obligations.</strong> We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.
-              </li>
-              <li>
-                <strong>Vital Interests.</strong> We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.
-              </li>
+              <li><strong>To create and manage user accounts.</strong> This includes registration, login, password reset, profile management, and authentication.</li>
+              <li><strong>To provide the Practice Planner.</strong> This includes saving plans, sections, notes, selected drills, favorites, sharing settings, and related app functionality.</li>
+              <li><strong>To provide support.</strong> This includes answering questions, handling bug reports, and responding to feedback or feature requests.</li>
+              <li><strong>To provide optional Orbit AI features.</strong> This includes processing the practice-plan context and prompts needed to generate the requested review, suggestion, or plan output.</li>
+              <li><strong>To process orders and downloads.</strong> This includes payment handling, delivery of digital products, and order administration.</li>
+              <li><strong>To send newsletters or marketing communications where you have consented.</strong></li>
+              <li><strong>To maintain security and prevent abuse.</strong> This includes rate limiting, fraud prevention, troubleshooting, and protection of our Services.</li>
+              <li><strong>To understand and improve our Services.</strong> This includes analytics and advertising measurement where legally permitted and, where required, based on your consent.</li>
+              <li><strong>To comply with legal obligations and protect legal claims.</strong></li>
             </ul>
 
-            <p className="mb-2"><strong><u><em>If you are located in Canada, this section applies to you.</em></u></strong></p>
-            <p className="mb-4">
-              We may process your information if you have given us specific permission (i.e., express consent) to use your personal information for a specific purpose, or in situations where your permission can be inferred (i.e., implied consent). You can{" "}
-              <a href="#withdrawconsent" className="text-blue-600 underline">withdraw your consent</a> at any time.
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="legalbases">
+              3. WHAT LEGAL BASES DO WE RELY ON?
+            </h2>
+
+            <p className="mb-2">
+              <em><strong>In Short:</strong> We process personal information only when we have a valid legal basis to do so.</em>
             </p>
-            <p className="mb-2">In some exceptional cases, we may be legally permitted under applicable law to process your information without your consent, including, for example:</p>
-            <ul className="list-disc ml-6 mb-4 space-y-1">
-              <li>If collection is clearly in the interests of an individual and consent cannot be obtained in a timely way</li>
-              <li>For investigations and fraud detection and prevention</li>
-              <li>For business transactions provided certain conditions are met</li>
-              <li>If it is contained in a witness statement and the collection is necessary to assess, process, or settle an insurance claim</li>
-              <li>For identifying injured, ill, or deceased persons and communicating with next of kin</li>
-              <li>If we have reasonable grounds to believe an individual has been, is, or may be victim of financial abuse</li>
-              <li>If it is reasonable to expect collection and use with consent would compromise the availability or the accuracy of the information and the collection is reasonable for purposes related to investigating a breach of an agreement or a contravention of the laws of Canada or a province</li>
-              <li>If disclosure is required to comply with a subpoena, warrant, court order, or rules of the court relating to the production of records</li>
-              <li>If it was produced by an individual in the course of their employment, business, or profession and the collection is consistent with the purposes for which the information was produced</li>
-              <li>If the collection is solely for journalistic, artistic, or literary purposes</li>
-              <li>If the information is publicly available and is specified by the regulations</li>
-              <li>We may disclose de-identified information for approved research or statistics projects, subject to ethics oversight and confidentiality commitments</li>
+
+            <p className="mb-2">
+              If you are located in the European Economic Area, the United Kingdom, or Switzerland, we rely on the following legal bases where applicable:
+            </p>
+
+            <ul className="list-disc ml-6 mb-4 space-y-2">
+              <li>
+                <strong>Performance of a contract.</strong> We process account, authentication, profile, practice-plan, sharing, order, and support data where necessary to provide the Services you request or to take steps before entering into a contract.
+              </li>
+              <li>
+                <strong>Consent.</strong> We rely on your consent for newsletters and, where required, for non-essential cookies, analytics, and advertising technologies. You can withdraw consent at any time with effect for the future.
+              </li>
+              <li>
+                <strong>Legitimate interests.</strong> We may process information where necessary for legitimate interests such as service security, fraud and abuse prevention, diagnostics, product improvement, and establishing or defending legal claims, provided those interests are not overridden by your rights and freedoms.
+              </li>
+              <li>
+                <strong>Legal obligations.</strong> We process information where necessary to comply with accounting, tax, consumer, or other legal requirements.
+              </li>
+              <li>
+                <strong>Vital interests.</strong> In exceptional cases, we may process information where necessary to protect the vital interests of a person.
+              </li>
             </ul>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="whoshare">
               4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
             </h2>
-            <p className="mb-4">
-              <strong><em>In Short:</em></strong> <em>We may share information in specific situations described in this section and/or with the following third parties.</em>
+
+            <p><strong><em>In Short:</em></strong> <em>We share personal information only where needed to operate the Services, comply with law, or protect rights.</em></p>
+
+            <p>
+              We may share personal information with the following categories of recipients:
             </p>
-            <p className="mb-2">We may need to share your personal information in the following situations:</p>
-            <ul className="list-disc ml-6 mb-4">
+
+            <ul className="list-disc pl-6 space-y-4">
               <li>
-                <strong>Business Transfers.</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
+                <strong>Supabase.</strong> We use Supabase for app authentication, database functions, storage, and backend services used by the Practice Planner.
+              </li>
+              <li>
+                <strong>Google.</strong> We use Google for optional Google Sign-In, Google Analytics, Google Tag Manager, Google AdSense, and the Gemini API used by optional Orbit AI features.
+              </li>
+              <li>
+                <strong>Resend.</strong> We use Resend to send support-related emails generated from contact requests.
+              </li>
+              <li>
+                <strong>Kit / ConvertKit and Stripe.</strong> We use these providers where applicable for newsletters, commerce, checkout, payment processing, digital product delivery, and related order administration.
+              </li>
+              <li>
+                <strong>Hosting and infrastructure providers.</strong> Depending on which part of the Services you use, this may include GitHub Pages and Cloudflare.
+              </li>
+              <li>
+                <strong>Professional advisers, authorities, or business counterparties.</strong> We may disclose information where required by law, to protect legal rights, or in connection with a merger, sale, financing, or similar business transaction.
               </li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="cookies">
-              5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
+            <p>
+              We do not sell your personal information.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="transfers">
+              5. INTERNATIONAL DATA TRANSFERS
             </h2>
-            <p className="mb-4">
-              <strong><em>In Short:</em></strong> <em>We may use cookies and other tracking technologies to collect and store your information.</em>
-            </p>
-            <p className="mb-4">
-              We may use cookies and similar tracking technologies (like web beacons and pixels) to gather information when you interact with our Services. Some online tracking technologies help us maintain the security of our Services, prevent crashes, fix bugs, save your preferences, and assist with basic site functions.
-            </p>
-            <p className="mb-4">
-              We also permit third parties and service providers to use online tracking technologies on our Services for analytics and advertising, including to help manage and display advertisements, to tailor advertisements to your interests, or to send abandoned shopping cart reminders (depending on your communication preferences). The third parties and service providers use their technology to provide advertising about products and services tailored to your interests which may appear either on our Services or on other websites.
-            </p>
-            <p className="mb-4">
-              To the extent these online tracking technologies are deemed to be a "sale"/"sharing" (which includes targeted advertising, as defined under the applicable laws) under applicable US state laws, you can opt out of these online tracking technologies by submitting a request as described below under section "{" "}
-              <a href="#uslaws" className="text-blue-600 underline">DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a>"
-            </p>
-            <p className="mb-4">Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice.</p>
 
-            <h3 className="text-lg font-bold mb-2 text-black">5.1 GOOGLE ANALYTICS</h3>
+            <p><strong><em>In Short:</em></strong> <em>Some service providers may process personal information outside your country of residence.</em></p>
+
+            <p>
+              Some recipients listed above may process personal information in countries outside the European Economic Area, the United Kingdom, or Switzerland, including the United States. Where personal information is transferred internationally, we use a lawful transfer mechanism as required, such as an adequacy decision, the EU-US Data Privacy Framework where applicable, Standard Contractual Clauses approved by the European Commission, the UK addendum, or other appropriate safeguards.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="cookies">
+              6. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
+            </h2>
+
+            <p><strong><em>In Short:</em></strong> <em>We use essential browser storage and, where permitted, analytics or advertising technologies.</em></p>
+
+            <p>
+              We use essential cookies and browser storage where necessary to provide requested functionality, such as keeping you signed in, completing account flows, remembering basic interface preferences, and maintaining service security.
+            </p>
+
+            <p>
+              We may also use analytics and advertising technologies, such as Google Analytics, Google Tag Manager, and Google AdSense, to understand website usage and measure or display advertising. Where required by law, these non-essential technologies are activated only after you have given consent. You can withdraw consent at any time through the available consent settings.
+            </p>
+
+            <h3 className="text-lg font-bold mb-2 text-foreground">6.1 Google Analytics</h3>
             <p className="mb-4">
-              We use Google Analytics to understand how our website is used and to improve its functionality. Google Analytics collects data about your Browse activity, including the pages you visit, the links you click, and your IP address (which is anonymized). This data is used to generate reports on website traffic and user behavior. Google Analytics uses cookies to collect this data. You can manage your cookie preferences and opt-out of personalized advertising through Google's Ad Settings. For more information on how Google Analytics handles data, please refer to Google's{" "}
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+              We use Google Analytics to understand how our website is used and to improve its functionality. Depending on your consent settings, Google Analytics may process information about pages viewed, interactions, browser or device data, and IP-derived information. For more information, please refer to Google's{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
                 Privacy Policy
-              </a>{" "}
-              and{" "}
-              <a href="https://business.safety.google/adsservices/processorterms/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                Google Analytics's Data Processing Terms
-              </a>.
+              </a>
+              .
             </p>
 
-            <h3 className="text-lg font-bold mb-2 text-black">5.2 GOOGLE ADSENSE</h3>
+            <h3 className="text-lg font-bold mb-2 text-foreground">6.2 Google AdSense</h3>
             <p className="mb-4">
-              We use Google AdSense to display advertising on our website. Google and its partners use cookies to serve ads based on your prior visits to our website and other websites. You can opt out of personalized advertising by visiting Google's{" "}
-              <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+              We may use Google AdSense to display advertising on our website. Where required, advertising cookies and similar technologies are used only after your consent. You can manage personalized advertising settings through Google's{" "}
+              <a
+                href="https://adssettings.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
                 Ad Settings
-              </a>. We also use cookies and device identifiers to personalize your experience and analyze ad performance. You can manage your cookie preferences on our site or through your browser settings. We are committed to protecting your privacy and comply with all relevant data privacy laws.
+              </a>
+              .
             </p>
-            <h3 className="text-lg font-bold mb-2 text-black">5.3 YOUTUBE EMBEDS</h3>
-            <p className="mb-4">
-              Our website embeds videos from YouTube. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. 
-              When you visit a page containing a YouTube video, a connection to YouTube’s servers is established. 
-              The YouTube server is informed which of our pages you have visited.
-              <br/>
-              If you are logged into your YouTube account, Google may associate your browsing behavior directly with your personal profile. 
-              You can prevent this by logging out of your YouTube account beforehand. 
-              The use of YouTube is in the interest of presenting our online content in an appealing way and making content easier to understand 
-              (Art. 6 (1) lit. f GDPR).
-              <br/>
-              Further information can be found in Google’s Privacy Policy: 
-              <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.
-            </p>
+
+            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="planner">
+              7. PRACTICE PLANNER APP AND ORBIT AI
+            </h2>
+
+            <p><strong><em>In Short:</em></strong> <em>The Practice Planner stores the information needed to provide your account and planning workflow. Orbit AI is optional.</em></p>
+
+            <ul className="list-disc pl-6 space-y-4">
+              <li>
+                <strong>Account and profile.</strong> If you create an account, we process the account information needed to provide login and profile functionality. If you upload a profile image, that image is stored and may be accessible through the image URL used to display it in the app.
+              </li>
+              <li>
+                <strong>Saved practice plans.</strong> We store the practice content you create, including plan titles, dates, goals, segments, notes, drills, favorites, and related settings so you can return to and edit your work.
+              </li>
+              <li>
+                <strong>Shared practice links.</strong> If you choose to enable a sharing link, anyone who receives that link may be able to view the shared practice until you disable sharing or delete the practice.
+              </li>
+              <li>
+                <strong>Orbit AI.</strong> If you choose to use Orbit AI, we process the relevant plan context, the prompt or instructions you provide, generated outputs, and usage metadata needed to provide the requested AI feature, improve reliability, enforce limits, and prevent abuse. Orbit AI is designed to support coaching decisions, not to make legal or similarly significant decisions about you.
+              </li>
+            </ul>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="newsletter">
-              6. NEWSLETTER
+              8. NEWSLETTER
             </h2>
-            <p className="mb-4">
-              We offer you the opportunity to subscribe to our newsletter to receive regular updates on basketball training, coaching tips, and new offers. 
-              For this purpose, we use the service provider ConvertKit (ConvertKit LLC, 750 W Bannock St #761, Boise, ID 83701, USA).
-              <br/>
-              When registering for the newsletter, the following data will be collected and stored by ConvertKit:
-              <ul className="list-disc ml-6 mb-4 space-y-1">
-                <li>Name (if provided)</li>
-                <li>Email address</li>
-                <li>Time of registration (Double Opt-In process)</li>
-              </ul>
-              Processing is based on your consent in accordance with Art. 6 (1) lit. a GDPR. 
-              You may revoke your consent at any time with effect for the future by unsubscribing via the link provided in each newsletter. 
-              ConvertKit may store data on servers located in the USA. A Data Processing Agreement (DPA) in accordance with Art. 28 GDPR has been concluded with ConvertKit to ensure compliance with European data protection standards.
-              For more information, please see ConvertKit’s Privacy Policy:
-              <a href="https://convertkit.com/privacy" target="_blank">https://convertkit.com/privacy</a>.
-              <br/>
+
+            <p>
+              If you subscribe to our newsletter, we process your email address and related subscription information to send you updates, resources, and marketing communications. Processing is based on your consent under Art. 6 (1) lit. a GDPR. You may withdraw your consent at any time with effect for the future by using the unsubscribe link in any newsletter email.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="convertkitstripe">
-              7. DIGITAL PRODUCT SALES VIA CONVERTKIT & STRIPE
+              9. DIGITAL PRODUCT SALES VIA CONVERTKIT & STRIPE
             </h2>
-            
-            <p className="mb-4">
-              <strong><em>In Short:</em></strong> <em>When you purchase a digital product from us, your data is processed by ConvertKit Commerce and Stripe to complete your order, deliver your files, and comply with legal obligations.</em>
+
+            <p><strong><em>In Short:</em></strong> <em>When you purchase a digital product from us, your data is processed to complete the order, deliver files, and comply with legal obligations.</em></p>
+
+            <p>
+              When you purchase products or downloads, we may process your name, email address, order details, billing information, payment status, and delivery information. Payment data is processed by the relevant payment provider. The legal basis is Art. 6 (1) lit. b GDPR for contract performance and Art. 6 (1) lit. c GDPR for legal retention duties.
             </p>
-            
-            <p className="mb-4">
-              We use ConvertKit Commerce (ConvertKit LLC, Boise, ID, USA) to manage digital product sales, process orders, and deliver digital downloads. ConvertKit may process the following data when you purchase a product:
-            </p>
-            
-            <ul className="list-disc ml-6 mb-4 space-y-1">
-              <li>Name</li>
-              <li>Email address</li>
-              <li>Payment confirmation and transaction details</li>
-              <li>IP address</li>
-              <li>Purchase history and download activity</li>
-            </ul>
-            
-            <p className="mb-4">
-              The legal basis for this processing is Art. 6 (1) lit. b GDPR (performance of a contract) and Art. 6 (1) lit. c GDPR (legal obligations, such as tax documentation).
-            </p>
-            
-            <p className="mb-4">
-              ConvertKit stores data on servers located in the USA. ConvertKit relies on Standard Contractual Clauses (SCCs) pursuant to Art. 46 GDPR to ensure adequate data protection.
-              For more information, please refer to ConvertKit’s Privacy Policy:
-              <a href="https://convertkit.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                https://convertkit.com/privacy
-              </a>.
-            </p>
-            
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Stripe Payment Processing</h3>
-            
-            <p className="mb-4">
-              Payments for digital products are processed through Stripe (Stripe Inc., San Francisco, CA, USA), which acts as the secure payment gateway for ConvertKit Commerce.
-              Stripe may process the following data:
-            </p>
-            
-            <ul className="list-disc ml-6 mb-4 space-y-1">
-              <li>Payment method information (credit card, Apple Pay, Google Pay)</li>
-              <li>Billing address</li>
-              <li>Name and email address</li>
-              <li>Transaction metadata</li>
-              <li>Device and technical information for fraud prevention</li>
-            </ul>
-            
-            <p className="mb-4">
-              The legal basis for this processing is Art. 6 (1) lit. b GDPR (performance of a contract). Stripe complies with PCI-DSS security standards.
-              For further details, see Stripe’s Privacy Policy:
-              <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                https://stripe.com/privacy
-              </a>.
-            </p>
-            
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Digital Product Delivery</h3>
-            
-            <p className="mb-4">
-              After a successful purchase, the digital product (such as a PDF or downloadable file) is delivered automatically via ConvertKit Commerce. 
-              We store purchase and download information to fulfill your order and meet legal obligations, particularly tax and accounting retention requirements.
-            </p>
-            
-            <p className="mb-4">
-              Data processing for digital downloads is based on Art. 6 (1) lit. b GDPR (contract performance) and Art. 6 (1) lit. c GDPR (legal compliance).
-            </p>
-            
+
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="hosting">
-              8. HOSTING OF THE WEBSITE
+              10. HOSTING OF THE SERVICES
             </h2>
-            <p className="mb-4">
-              Our website is hosted on the servers of GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA).
-              When you visit our website, technical data (e.g., IP address, browser type, operating system) may automatically be collected by GitHub 
-              in order to ensure the operation of the site and to maintain stability and security.
-              Processing is based on Art. 6 (1) lit. f GDPR (legitimate interest in a secure and efficient provision of our website).
-              For more information, please see GitHub's Privacy Statement:
-              <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.
+
+            <p>
+              Our website and app use third-party hosting and infrastructure services. The public website may be delivered through GitHub Pages, while app assets and related delivery infrastructure may use Cloudflare. These providers may process technical data such as IP addresses, browser information, and request metadata to deliver the Services securely and reliably.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="inforetain">
-              9. HOW LONG DO WE KEEP YOUR INFORMATION?
+              11. HOW LONG DO WE KEEP YOUR INFORMATION?
             </h2>
-            <p className="mb-4">
-              <strong><em>In Short:</em></strong> <em>We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice unless otherwise required by law.</em>
-            </p>
-            <p className="mb-4">
-              We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).
-            </p>
-            <p className="mb-4">
-              When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.
-            </p>
+
+            <p><strong><em>In Short:</em></strong> <em>We keep personal information only for as long as needed for the relevant purpose or as required by law.</em></p>
+
+            <ul className="list-disc pl-6 space-y-4">
+              <li><strong>Account, profile, favorites, and saved practice-plan data:</strong> until you delete the relevant content or request account deletion, unless a longer retention period is required for legal reasons.</li>
+              <li><strong>Shared practice links:</strong> until you disable sharing or delete the relevant practice.</li>
+              <li><strong>Support messages:</strong> generally up to 24 months after the last substantive communication, unless longer retention is necessary for legal claims or obligations.</li>
+              <li><strong>Orbit AI requests, generated outputs, suggestions, and related usage metadata:</strong> generally up to 12 months, unless a shorter or longer period is necessary for deletion requests, security, abuse prevention, or legal obligations.</li>
+              <li><strong>Newsletter subscription data:</strong> until you unsubscribe or withdraw consent, subject to limited suppression records needed to respect opt-out requests.</li>
+              <li><strong>Order, invoice, and accounting records:</strong> for the statutory retention period, usually up to 10 years under applicable German commercial and tax law.</li>
+              <li><strong>Technical logs:</strong> for as long as necessary for security, delivery, diagnostics, and abuse prevention, generally no longer than 30 days unless a longer period is needed to investigate an incident or comply with law.</li>
+            </ul>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="infominors">
-              10. DO WE COLLECT INFORMATION FROM MINORS?
+              12. DO WE COLLECT INFORMATION FROM MINORS?
             </h2>
-            <p className="mb-4">
-              <strong><em>In Short:</em></strong> <em>We do not knowingly collect data from or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction.</em>
-            </p>
-            <p className="mb-4">
-              We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at info[at]bballorbit.com.
+
+            <p>
+              We do not knowingly collect personal information from children under 16 years of age, or any higher minimum age required by local law, without the required consent. If we learn that we have collected personal information from a child unlawfully, we will take reasonable steps to delete it.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="privacyrights">
-              11. WHAT ARE YOUR PRIVACY RIGHTS?
+              13. WHAT ARE YOUR PRIVACY RIGHTS?
             </h2>
-            <p className="mb-4">
-              <strong><em>In Short:</em></strong> <em>Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.</em>
+
+            <p>
+              Depending on your location, you may have rights to request access to personal information, rectification, erasure, restriction of processing, data portability, objection to certain processing, and withdrawal of consent where processing is based on consent. You may also have the right to lodge a complaint with a competent supervisory authority.
             </p>
-            <p className="mb-4">
-              In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. If a decision that produces legal or similarly significant effects is made solely by automated means, we will inform you, explain the main factors, and offer a simple way to request human review. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section "{" "}
-              <a href="#contact" className="text-blue-600 underline">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>" below.
-            </p>
-            <p className="mb-4">
-              We will consider and act upon any request in accordance with applicable data protection laws. If you are located in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to complain to your{" "}
-              <a href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                 Member State data protection authority
-              </a>{" "}
-              or{" "}
-              <a href="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                UK data protection authority
-              </a>.
-            </p>
-            <p className="mb-4">
-              If you are located in Switzerland, you may contact the{" "}
-              <a href="https://www.edoeb.admin.ch/edoeb/en/home.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                Federal Data Protection and Information Commissioner
-              </a>.
-            </p>
-              
-            <p className="mb-4" id="withdrawconsent">
-              <strong><u>Withdrawing your consent:</u></strong> If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "{" "}
-              <a href="#contact" className="text-blue-600 underline">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>" below.
-            </p>
-            <p className="mb-4">
-              However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent.
+
+            <p>
+              To exercise your rights, contact us at{" "}
+              <a
+                href="mailto:info@bballorbit.com"
+                className="text-primary hover:text-primary/80 underline"
+              >
+                info@bballorbit.com
+              </a>
+              .
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="DNT">
-              12. CONTROLS FOR DO-NOT-TRACK FEATURES
+              14. CONTROLS FOR DO-NOT-TRACK FEATURES
             </h2>
-            <p className="mb-4">
-              Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT") feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.
-            </p>
-            <p className="mb-4">
-              California law requires us to let you know how we respond to web browser DNT signals. Because there currently is not an industry or legal standard for recognizing or honoring DNT signals, we do not respond to them at this time.
+
+            <p>
+              Some browsers offer "Do Not Track" signals. Because there is no uniform standard for recognizing or implementing these signals, we do not currently respond to them in a standardized way. Where required, your choices for non-essential cookies are handled through the consent tools made available on our Services.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="uslaws">
-              13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
+              15. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
             </h2>
-            <p className="mb-4">
-              <strong><em>In Short:</em></strong> <em>If you are a resident of, you may have the right to request access to and receive details about the personal information we maintain about you and how we have processed it, correct inaccuracies, get a copy of, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. More information is provided below.</em>
+
+            <p>
+              If you are a resident of certain US states, you may have additional rights under applicable state privacy laws, including rights to know, access, correct, delete, obtain a copy of, or opt out of certain processing of your personal information.
             </p>
 
-            <h3 className="text-lg font-bold mb-2 text-black">Categories of Personal Information We Collect</h3>
-            <p className="mb-4">
-              The table below shows the categories of personal information we have collected in the past twelve (12) months. The table includes illustrative examples of each category and does not reflect the personal information we collect from you. For a comprehensive inventory of all personal information we process, please refer to the section "{" "}
-              <a href="#infocollect" className="text-blue-600 underline">WHAT INFORMATION DO WE COLLECT?</a>"
-            </p>
+            <h3 className="text-lg font-bold mb-2 text-foreground">
+              Categories of Personal Information We Collect
+            </h3>
 
             <div className="overflow-x-auto mb-4">
               <table className="w-full border-collapse border border-gray-300">
@@ -518,188 +462,125 @@ const Privacy = () => {
                 <tbody>
                   <tr>
                     <td className="border border-gray-300 p-2">A. Identifiers</td>
-                    <td className="border border-gray-300 p-2">Contact details, such as real name, alias, postal address, telephone or mobile contact number, unique personal identifier, online identifier, Internet Protocol address, email address, and account name</td>
-                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                    <td className="border border-gray-300 p-2">Name, email address, account identifiers, IP address</td>
+                    <td className="border border-gray-300 p-2 text-center">YES</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">B. Protected classification characteristics under state or federal law</td>
-                    <td className="border border-gray-300 p-2">Gender, age, date of birth, race and ethnicity, national origin, marital status, and other demographic data</td>
+                    <td className="border border-gray-300 p-2">B. Protected classification characteristics</td>
+                    <td className="border border-gray-300 p-2">Age, race, ethnicity, marital status, and similar protected characteristics</td>
                     <td className="border border-gray-300 p-2 text-center">NO</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 p-2">C. Commercial information</td>
-                    <td className="border border-gray-300 p-2">Transaction information, purchase history, financial details, and payment information</td>
-                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                    <td className="border border-gray-300 p-2">Order history, purchase records, billing-related information</td>
+                    <td className="border border-gray-300 p-2 text-center">YES</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 p-2">D. Biometric information</td>
-                    <td className="border border-gray-300 p-2">Fingerprints and voiceprints</td>
+                    <td className="border border-gray-300 p-2">Fingerprints, faceprints, voiceprints</td>
                     <td className="border border-gray-300 p-2 text-center">NO</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">E. Internet or other similar network activity</td>
-                    <td className="border border-gray-300 p-2">Browsing history, search history, online behavior, interest data, and interactions with our and other websites, applications, systems, and advertisements</td>
-                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                    <td className="border border-gray-300 p-2">E. Internet or similar network activity</td>
+                    <td className="border border-gray-300 p-2">Usage data, page interactions, browser and device information</td>
+                    <td className="border border-gray-300 p-2 text-center">YES</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 p-2">F. Geolocation data</td>
-                    <td className="border border-gray-300 p-2">Device location</td>
+                    <td className="border border-gray-300 p-2">Precise device location</td>
                     <td className="border border-gray-300 p-2 text-center">NO</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">G. Audio, electronic, sensory, or similar information</td>
-                    <td className="border border-gray-300 p-2">Images and audio, video or call recordings created in connection with our business activities</td>
-                    <td className="border border-gray-300 p-2 text-center">NO</td>
+                    <td className="border border-gray-300 p-2">G. Audio, electronic, visual, or similar information</td>
+                    <td className="border border-gray-300 p-2">Profile images you choose to upload</td>
+                    <td className="border border-gray-300 p-2 text-center">YES</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 p-2">H. Professional or employment-related information</td>
-                    <td className="border border-gray-300 p-2">Business contact details in order to provide you our Services at a business level or job title, work history, and professional qualifications if you apply for a job with us</td>
+                    <td className="border border-gray-300 p-2">Job title, work history, professional qualifications</td>
                     <td className="border border-gray-300 p-2 text-center">NO</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">I. Education Information</td>
-                    <td className="border border-gray-300 p-2">Student records and directory information</td>
+                    <td className="border border-gray-300 p-2">I. Education information</td>
+                    <td className="border border-gray-300 p-2">Student records or directory information</td>
                     <td className="border border-gray-300 p-2 text-center">NO</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">J. Inferences drawn from collected personal information</td>
-                    <td className="border border-gray-300 p-2">Inferences drawn from any of the collected personal information listed above to create a profile or summary about, for example, an individual's preferences and characteristics</td>
+                    <td className="border border-gray-300 p-2">J. Inferences</td>
+                    <td className="border border-gray-300 p-2">Profiles or predictions about personal preferences or characteristics</td>
                     <td className="border border-gray-300 p-2 text-center">NO</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">K. Sensitive personal Information</td>
-                    <td className="border border-gray-300 p-2"></td>
+                    <td className="border border-gray-300 p-2">K. Sensitive personal information</td>
+                    <td className="border border-gray-300 p-2">Sensitive categories under applicable law</td>
                     <td className="border border-gray-300 p-2 text-center">NO</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <p className="mb-2">We may also collect other personal information outside of these categories through instances where you interact with us in person, online, or by phone or mail in the context of:</p>
-            <ul className="list-disc ml-6 mb-4 space-y-1">
-              <li>Receiving help through our customer support channels;</li>
-              <li>Participation in customer surveys or contests; and</li>
-              <li>Facilitation in the delivery of our Services and to respond to your inquiries.</li>
-            </ul>
-
-            <h3 className="text-lg font-bold mb-2 text-black">Sources of Personal Information</h3>
-            <p className="mb-4">
-              Learn more about the sources of personal information we collect in "{" "}
-              <a href="#infocollect" className="text-blue-600 underline">WHAT INFORMATION DO WE COLLECT?</a>"
-            </p>
-
-            <h3 className="text-lg font-bold mb-2 text-black">How We Use and Share Personal Information</h3>
-            <p className="mb-4">
-              Learn more about how we use your personal information in the section, "{" "}
-              <a href="#infouse" className="text-blue-600 underline">HOW DO WE PROCESS YOUR INFORMATION?</a>"
-            </p>
-            <p className="mb-4">
-              <strong>Will your information be shared with anyone else?</strong>
-            </p>
-            <p className="mb-4">
-              We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, "{" "}
-              <a href="#whoshare" className="text-blue-600 underline">WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a>"
-            </p>
-            <p className="mb-4">
-              We may use your personal information for our own business purposes, such as for undertaking internal research for technological development and demonstration. This is not considered to be "selling" of your personal information.
-            </p>
-            <p className="mb-4">
-              We have not disclosed, sold, or shared any personal information to third parties for a business or commercial purpose in the preceding twelve (12) months. We will not sell or share personal information in the future belonging to website visitors, users, and other consumers.
-            </p>
-
-            <h3 className="text-lg font-bold mb-2 text-black">Your Rights</h3>
-            <p className="mb-2">You have rights under certain US state data protection laws. However, these rights are not absolute, and in certain cases, we may decline your request as permitted by law. These rights include:</p>
-            <ul className="list-disc ml-6 mb-4 space-y-1">
-              <li><strong>Right to know</strong> whether or not we are processing your personal data</li>
-              <li><strong>Right to access</strong> your personal data</li>
-              <li><strong>Right to correct</strong> inaccuracies in your personal data</li>
-              <li><strong>Right to request</strong> the deletion of your personal data</li>
-              <li><strong>Right to obtain a copy</strong> of the personal data you previously shared with us</li>
-              <li><strong>Right to non-discrimination</strong> for exercising your rights</li>
-              <li><strong>Right to opt out</strong> of the processing of your personal data if it is used for targeted advertising, the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")</li>
-            </ul>
-
-            <h3 className="text-lg font-bold mb-2 text-black">How to Exercise Your Rights</h3>
-            <p className="mb-4">
-              To exercise these rights, you can contact us by submitting our{" "}
-              <a href="https://www.bballorbit.com/contact" target="_blank" className="text-blue-600 underline">
-                contact formular
-              </a>, by emailing us at info[at]bballorbit.com, or by referring to the contact details at the bottom of this document.
-            </p>
-            <p className="mb-4">
-              Under certain US state data protection laws, you can designate an authorized agent to make a request on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with applicable laws.
-            </p>
-
-            <h3 className="text-lg font-bold mb-2 text-black">Request Verification</h3>
-            <p className="mb-4">
-              Upon receiving your request, we will need to verify your identity to determine you are the same person about whom we have the information in our system. We will only use personal information provided in your request to verify your identity or authority to make the request. However, if we cannot verify your identity from the information already maintained by us, we may request that you provide additional information for the purposes of verifying your identity and for security or fraud-prevention purposes.
-            </p>
-            <p className="mb-4">
-              If you submit the request through an authorized agent, we may need to collect additional information to verify your identity before processing your request and the agent will need to provide a written and signed permission from you to submit such request on your behalf.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="downloads">
-              14. DOWNLOADS AND ONLINE SHOP
-            </h2>
             <p>
-              We offer digital content (such as PDF guides and digital products) as well as physical items (such as T-shirts and basketball equipment) for download or purchase on our website.
+              We do not sell personal information. If you consent to advertising cookies, certain identifiers and internet or network activity information may be disclosed to advertising partners in a way that may be considered "sharing" under some US state privacy laws. You can opt out by adjusting your consent settings where available.
             </p>
-            When ordering or downloading such products, the following personal data may be processed:
-            <ul>
-              <li>Name</li>
-              <li>Email address</li>
-              <li>Payment details (only for paid products)</li>
-              <li>Order history</li>
-            </ul>
-            <br/>
-            Data processing is carried out exclusively for the purpose of fulfilling the contract (Art. 6 (1) lit. b GDPR) 
-            and to comply with legal obligations (e.g., tax retention obligations pursuant to Art. 6 (1) lit. c GDPR).
-            <br/>
-            For payment processing, we may use external payment service providers (e.g., PayPal, Stripe). 
-            Your data will only be passed on to the extent necessary for the payment process. 
-            Please also refer to the privacy policies of the respective payment providers.
-            <br/>
-            For free downloads (such as freebies), processing is based on your consent in accordance with Art. 6 (1) lit. a GDPR 
-            in connection with our newsletter offering.
-            <br/>
-            
+
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="policyupdates">
-              15. DO WE MAKE UPDATES TO THIS NOTICE?
+              16. DO WE MAKE UPDATES TO THIS NOTICE?
             </h2>
-            <p className="mb-4">
-              <em><strong>In Short:</strong> Yes, we will update this notice as necessary to stay compliant with relevant laws.</em>
-            </p>
-            <p className="mb-4">
-              We may update this Privacy Notice from time to time. The updated version will be indicated by an updated "Revised" date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.
+
+            <p>
+              Yes. We may update this Privacy Notice from time to time to reflect legal, technical, or operational changes. The updated version will be indicated by a revised date at the top of this page.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="contact">
-              16. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+              17. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
             </h2>
-            <p className="mb-4">
-              If you have questions or comments about this notice, you may email us at info[at]bballorbit.com
+
+            <p>
+              If you have questions or comments about this Privacy Notice, you may contact:
             </p>
 
+            <div className="space-y-1">
+              <p>Christian Bernhard</p>
+              <p>Hitzhofener Strasse 5b</p>
+              <p>85080 Gaimersheim</p>
+              <p>Germany</p>
+              <p>
+                Email:{" "}
+                <a
+                  href="mailto:info@bballorbit.com"
+                  className="text-primary hover:text-primary/80 underline"
+                >
+                  info@bballorbit.com
+                </a>
+              </p>
+            </div>
+
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="request">
-              17. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
+              18. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
             </h2>
-            <p className="mb-4">
-              Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please fill out and submit our{" "}
-              <a href="https://www.bballorbit.com/contact" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                contact formular
-              </a>.
+
+            <p>
+              You may request access to, correction of, or deletion of your personal information, or exercise other applicable privacy rights, by contacting us at{" "}
+              <a
+                href="mailto:info@bballorbit.com"
+                className="text-primary hover:text-primary/80 underline"
+              >
+                info@bballorbit.com
+              </a>
+              . We may need to verify your identity before completing a request.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6" id="SSL">
-              18. SSL/TLS ENCRYPTION
+              19. SSL/TLS ENCRYPTION
             </h2>
-            <p className="mb-4">
-              This site uses SSL/TLS encryption for security reasons and to protect the transmission of confidential content, such as orders or inquiries you send to us as the site operator. You can recognize an encrypted connection by the change in the browser's address line from "http://" to "https://" and by the lock symbol in your browser bar. When SSL/TLS encryption is activated, the data you transmit to us cannot be read by third parties.
+
+            <p>
+              This site uses SSL/TLS encryption to protect the transmission of confidential content, such as account, support, or order information you send to us. You can recognize an encrypted connection by "https://" in the browser address bar and the lock symbol in your browser.
             </p>
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
