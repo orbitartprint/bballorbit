@@ -118,7 +118,7 @@ const DrillLibrary = () => {
                     <div className="max-h-[300px] overflow-y-auto">
                       <button
                         onClick={() => toggleTag("all")}
-                        className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
+                        className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-transparent focus-visible:bg-accent transition-colors"
                       >
                         <Check
                           className={`mr-2 h-4 w-4 flex-shrink-0 text-primary ${
@@ -131,7 +131,7 @@ const DrillLibrary = () => {
                         <button
                           key={tag}
                           onClick={() => toggleTag(tag)}
-                          className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-accent transition-colors"
+                          className="relative flex w-full cursor-pointer select-none items-center text-left rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent focus:bg-transparent focus-visible:bg-accent transition-colors"
                         >
                           <Check
                             className={`mr-2 h-4 w-4 flex-shrink-0 text-primary ${
