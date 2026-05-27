@@ -28,7 +28,7 @@ const Privacy = () => {
           </h1>
 
           <p className="text-lg text-muted-foreground mb-8">
-            <strong>Last updated May 20, 2026</strong>
+            <strong>Last updated May 26, 2026</strong>
           </p>
 
           <div className="space-y-6 text-foreground">
@@ -120,7 +120,11 @@ const Privacy = () => {
                 >
                   info@bballorbit.com
                 </a>
-                . We will handle requests in accordance with applicable law.
+                , use the Practice Planner in-app deletion flow under Profile &rarr; Account & Data &rarr; Delete Account, or submit a verified deletion request through our{" "}
+                <a href="/data-deletion" className="text-primary hover:text-primary/80 underline">
+                  Data Deletion page
+                </a>
+                . Website deletion requests require email verification before deletion starts.
               </div>
             </div>
 
@@ -301,7 +305,7 @@ const Privacy = () => {
                 <strong>CookieYes or similar consent tools.</strong> We may use a consent management tool to record and manage cookie and tracking preferences.
               </li>
               <li>
-                <strong>Resend.</strong> We may use Resend or a similar provider for transactional or support-related emails.
+                <strong>Resend.</strong> We may use Resend or a similar provider for transactional emails, including account, support, security, and deletion verification emails.
               </li>
               <li>
                 <strong>Cloudflare.</strong> We may use Cloudflare for DNS, CDN, security, delivery, deployment, or app hosting infrastructure.
@@ -333,6 +337,10 @@ const Privacy = () => {
 
             <p>
               You may be redirected to, or interact with, a Freemius checkout, overlay, or customer portal to complete payments, manage billing details, view invoices, change plans, or cancel a subscription. We do not store full payment card details on our own servers.
+            </p>
+
+            <p>
+              If you delete your Practice Planner account and a Freemius subscription or app access record is linked to that account, we handle subscription and access cancellation as part of the deletion workflow. Freemius may retain billing, invoice, tax, accounting, refund, fraud-prevention, chargeback, or dispute records where legally required or permitted.
             </p>
 
             <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
@@ -514,6 +522,7 @@ const Privacy = () => {
               <li><strong>Order, invoice, and accounting records:</strong> for the statutory retention period, usually up to 10 years under applicable German commercial and tax law.</li>
               <li><strong>Newsletter subscription data:</strong> until you unsubscribe or withdraw consent, subject to limited suppression records needed to respect opt-out requests.</li>
               <li><strong>Support messages:</strong> generally up to 24 months after the last substantive communication, unless longer retention is necessary for legal claims, security, or unresolved issues.</li>
+              <li><strong>Deletion requests:</strong> when an account deletion is completed, we keep only a minimal deletion record for audit, security, and operational purposes. This record does not retain the plain email address in the deletion job.</li>
               <li><strong>Technical logs:</strong> for as long as necessary for security, delivery, diagnostics, and abuse prevention, generally no longer than 30 days unless a longer period is needed to investigate an incident or comply with law.</li>
               <li><strong>Backups:</strong> deleted information may remain in encrypted or protected backups for a limited period until backups are overwritten or deleted according to our backup cycle.</li>
             </ul>
@@ -561,7 +570,11 @@ const Privacy = () => {
               >
                 info@bballorbit.com
               </a>
-              . We may need to verify your identity before completing a request.
+              . If you want to delete a Practice Planner account, you can also use the in-app flow under Profile &rarr; Account & Data &rarr; Delete Account, or submit a verified request through our{" "}
+              <a href="/data-deletion" className="text-primary hover:text-primary/80 underline">
+                Data Deletion page
+              </a>
+              . Website deletion requests require email verification before deletion starts.
             </p>
 
             <p>
@@ -698,7 +711,7 @@ const Privacy = () => {
             </h2>
 
             <p>
-              You may review or update certain account information directly in the Practice Planner account area where available. You may also request access to, correction of, deletion of, restriction of, or portability of your personal information by contacting us at{" "}
+              You may review or update certain account information directly in the Practice Planner account area where available. If you can still log in to the Practice Planner, you can delete your account under Profile &rarr; Account & Data &rarr; Delete Account. You may also request access to, correction of, deletion of, restriction of, or portability of your personal information by contacting us at{" "}
               <a
                 href="mailto:info@bballorbit.com"
                 className="text-primary hover:text-primary/80 underline"
@@ -709,14 +722,22 @@ const Privacy = () => {
             </p>
 
             <p>
-              For account and data deletion information, you may also visit our{" "}
+              For website-based account and data deletion requests, visit our{" "}
               <a
                 href="/data-deletion"
                 className="text-primary hover:text-primary/80 underline"
               >
                 Data Deletion page
               </a>
-              . We may need to verify your identity before completing a request. Some information may be retained where required by law, for security, fraud prevention, dispute resolution, accounting, tax, or legitimate business purposes.
+              . The website form asks for your email address and sends a verification link. Deletion starts only after you confirm through that email link, and the form does not reveal whether an account exists.
+            </p>
+
+            <p>
+              Account deletion may include Practice Planner account and profile data, saved practice plans, practice sections, app content and notes, app usage data where applicable, app storage files where applicable, email subscriber records where possible, and support or contact records linked to the verified email where possible. We keep a minimal deletion record for audit and security purposes without retaining the plain email address in the deletion job.
+            </p>
+
+            <p>
+              Some information may remain where legally required or necessary, including payment, invoice, tax, accounting, refund, fraud-prevention, dispute, legal-claim, security-log, and backup records. Freemius may retain billing or invoice records for Practice Planner subscriptions where legally required.
             </p>
 
             <p>

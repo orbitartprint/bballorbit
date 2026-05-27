@@ -34,7 +34,7 @@ const Terms = () => {
       <main className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-16 pt-20 max-w-4xl">
           <h1 className="text-4xl font-bold text-foreground mb-4">Terms of Service</h1>
-          <p className="text-sm text-muted-foreground mb-8">Last updated: May 20, 2026</p>
+          <p className="text-sm text-muted-foreground mb-8">Last updated: May 26, 2026</p>
 
           <div className="space-y-8 text-muted-foreground">
             <section>
@@ -365,7 +365,7 @@ const Terms = () => {
               <p className="text-base leading-relaxed mb-4">
                 Our collection and use of personal data is described in our{' '}
                 <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>. If you want to request deletion of your account
-                or personal data, please follow the instructions on our{' '}
+                or personal data, you can use the in-app deletion flow where available or follow the instructions on our{' '}
                 <a href="/data-deletion" className="text-primary hover:underline">Data Deletion</a> page or contact us at{' '}
                 <a href="mailto:info@bballorbit.com" className="text-primary hover:underline">info@bballorbit.com</a>.
               </p>
@@ -403,9 +403,10 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">20. Termination and Suspension</h2>
               <p className="text-base leading-relaxed mb-4">
-                You may stop using the Service at any time. Paid subscriptions must be canceled through the billing management options made
-                available to you or through the payment provider's customer portal. Deleting your account does not automatically cancel a paid
-                subscription unless the billing provider or our app explicitly confirms cancellation.
+                You may stop using the Service at any time. Paid subscriptions can be canceled through the billing management options made
+                available to you, through the payment provider's customer portal, or as part of an account deletion flow where our app confirms
+                that the linked subscription or app access has been canceled. Billing, invoice, tax, refund, fraud-prevention, or dispute records
+                may still be retained by the payment provider where legally required.
               </p>
               <p className="text-base leading-relaxed mb-4">
                 We may suspend or terminate access if you violate these Terms, create legal or security risk, fail to pay amounts due, abuse the
