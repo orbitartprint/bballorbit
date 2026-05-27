@@ -22,7 +22,10 @@ jobs:
 
       - run: npm install
 
-      - run: npm run build
+      - name: Build
+        run: npm run build
+        env:
+          VITE_ACCOUNT_DELETION_REQUEST_URL: ${{ vars.VITE_ACCOUNT_DELETION_REQUEST_URL }}
       
       - name: Pre-render routes
         run: node scripts/prerender.js
