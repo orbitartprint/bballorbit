@@ -164,51 +164,25 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">7. Refund Policy</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">7. Refunds, Cancellations and Withdrawal</h2>
               <p className="text-base leading-relaxed mb-4">
-                Practice Planner subscriptions sold through Freemius are covered by a 7-day Satisfaction Guarantee. If, within 7 days after your
-                purchase, the product does not work as expected, a feature you reasonably expected is missing, or you experience a technical issue
-                that we cannot resolve, we will consider offering a 100% refund.
+                Refunds, cancellations, renewal handling, statutory withdrawal rights, and the electronic withdrawal function are explained in our{' '}
+                <a href="https://app.bballorbit.com/refund" className="text-primary hover:underline">Refund & Cancellation Policy</a>.
               </p>
               <p className="text-base leading-relaxed mb-4">
-                To request a refund, contact{' '}
-                <a href="mailto:info@bballorbit.com" className="text-primary hover:underline">info@bballorbit.com</a> within the valid refund
-                period and include a reasonable explanation of the issue. We may try to resolve the issue first. If we cannot resolve it in a
-                way that reasonably satisfies you, we will process a refund in accordance with the applicable Freemius refund process.
+                Payments, invoices, taxes, subscriptions, and refunds may be handled by Freemius or another checkout provider shown during
+                purchase. Checkout-specific terms, refund information, and consumer notices shown by the payment provider may apply in addition to
+                these Terms.
               </p>
               <p className="text-base leading-relaxed mb-4">
-                Refund requests based only on a change of mind, lack of use, accidental renewal after the refund period, or requests without a
-                reasonable explanation are not covered by this refund policy. This does not limit any mandatory consumer rights that cannot be
-                excluded by law.
-              </p>
-              <p className="text-base leading-relaxed mb-4">
-                For one-time digital downloads or other digital products, the refund terms shown at checkout apply. Because digital content may
-                be delivered immediately, refunds for downloaded or accessed digital products may be limited unless there is a technical issue,
-                duplicate purchase, missing delivery, or another reason we accept under the applicable checkout policy.
+                You can submit a withdrawal declaration through our{' '}
+                <a href="https://app.bballorbit.com/withdrawal" className="text-primary hover:underline">electronic withdrawal function</a>. Any voluntary refund policy
+                applies in addition to, and does not limit, mandatory consumer rights that cannot be excluded by law.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">8. Digital Products, Downloads and Right of Withdrawal</h2>
-              <p className="text-base leading-relaxed mb-4">
-                Some Basketball Orbit products are digital content delivered electronically, such as PDFs, coaching guides, drill packs,
-                templates, or downloadable resources. No physical goods are shipped unless expressly stated otherwise.
-              </p>
-              <p className="text-base leading-relaxed mb-4">
-                For digital content or digital services that are supplied immediately, you may be asked during checkout to consent to immediate
-                delivery or immediate access and to acknowledge that you may lose any statutory right of withdrawal once performance has begun,
-                to the extent permitted by applicable law. Any voluntary refund policy, such as the 7-day Satisfaction Guarantee for eligible
-                subscriptions, applies in addition to and does not limit mandatory consumer rights.
-              </p>
-              <p className="text-base leading-relaxed mb-4">
-                You are responsible for providing a valid email address and ensuring that download links, login emails, transactional emails, or
-                billing emails can be received. If delivery fails, contact us at{' '}
-                <a href="mailto:info@bballorbit.com" className="text-primary hover:underline">info@bballorbit.com</a>.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">9. License and Permitted Use</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">8. License and Permitted Use</h2>
               <p className="text-base leading-relaxed mb-4">
                 Unless expressly stated otherwise, Basketball Orbit content, downloads, drills, templates, PDFs, videos, graphics, text, and
                 coaching materials are provided under a limited, non-exclusive, non-transferable license for your personal coaching, educational,
@@ -228,7 +202,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">10. User Content and Media Uploads</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">9. User Content and Media Uploads</h2>
               <p className="text-base leading-relaxed mb-4">
                 You may be able to create, enter, upload, or store content in the Service, such as practice plans, notes, custom drills, coaching
                 cues, templates, images, audio, video, or other media (&quot;User Content&quot;). You retain ownership of your User Content.
@@ -252,7 +226,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">11. AI-Assisted Features</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">10. AI-Assisted Features</h2>
               <p className="text-base leading-relaxed mb-4">
                 Orbit AI and related AI-assisted features may help generate, improve, summarize, structure, or optimize basketball practice
                 plans, coaching cues, drills, season plans, templates, or related content. AI output can be incomplete, inaccurate, unsuitable,
@@ -277,7 +251,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">12. Coaching, Health and Safety Disclaimer</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">11. Coaching, Health and Safety Disclaimer</h2>
               <p className="text-base leading-relaxed mb-4">
                 Basketball activities involve inherent risks, including injury. Our drills, practice plans, videos, and coaching ideas are for
                 educational purposes and must be adapted to the specific participants, facility, equipment, supervision, weather, floor conditions,
@@ -291,7 +265,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">13. Acceptable Use</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">12. Acceptable Use</h2>
               <p className="text-base leading-relaxed mb-4">
                 You agree not to misuse the Service. In particular, you must not:
               </p>
@@ -311,7 +285,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">14. Newsletter, Emails and Communications</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">13. Newsletter, Emails and Communications</h2>
               <p className="text-base leading-relaxed mb-4">
                 If you subscribe to our newsletter, download a resource, create an account, or purchase a product, we may send you emails related
                 to that action. These may include educational coaching content, product updates, account emails, onboarding emails, billing notices,
@@ -324,7 +298,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">15. Third-Party Services</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">14. Third-Party Services</h2>
               <p className="text-base leading-relaxed mb-4">
                 The Service may rely on third-party providers for hosting, authentication, database services, storage, email delivery, payment
                 processing, billing management, analytics, AI processing, and other functionality. These providers may include Freemius, Supabase,
@@ -343,7 +317,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">16. Availability, Changes and Data Backups</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">15. Availability, Changes and Data Backups</h2>
               <p className="text-base leading-relaxed mb-4">
                 We aim to provide a reliable Service, but we do not guarantee uninterrupted availability, error-free operation, or permanent
                 availability of every feature. Maintenance, updates, third-party outages, security incidents, capacity limits, or technical issues
@@ -361,7 +335,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">17. Privacy and Data Deletion</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">16. Privacy and Data Deletion</h2>
               <p className="text-base leading-relaxed mb-4">
                 Our collection and use of personal data is described in our{' '}
                 <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>. If you want to request deletion of your account
@@ -377,7 +351,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">18. Limitation of Liability</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">17. Limitation of Liability</h2>
               <p className="text-base leading-relaxed mb-4">
                 To the fullest extent permitted by applicable law, Basketball Orbit is not liable for indirect, incidental, special, consequential,
                 punitive, or loss-of-profit damages, loss of data, loss of business opportunity, coaching decisions, team performance outcomes, or
@@ -392,7 +366,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">19. Indemnity</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">18. Indemnity</h2>
               <p className="text-base leading-relaxed mb-4">
                 To the extent permitted by applicable law, you agree to indemnify and hold Basketball Orbit harmless from claims, losses, damages,
                 liabilities, costs, and expenses arising from your unlawful use of the Service, your breach of these Terms, your User Content, your
@@ -401,7 +375,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">20. Termination and Suspension</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">19. Termination and Suspension</h2>
               <p className="text-base leading-relaxed mb-4">
                 You may stop using the Service at any time. Paid subscriptions can be canceled through the billing management options made
                 available to you, through the payment provider's customer portal, or as part of an account deletion flow where our app confirms
@@ -416,7 +390,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">21. Consumer Dispute Resolution</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">20. Consumer Dispute Resolution</h2>
               <p className="text-base leading-relaxed mb-4">
                 We are not willing and not obliged to participate in dispute resolution proceedings before a consumer arbitration board under the
                 German Consumer Dispute Resolution Act (Verbraucherstreitbeilegungsgesetz - VSBG).
@@ -424,7 +398,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">22. Governing Law and Jurisdiction</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">21. Governing Law and Jurisdiction</h2>
               <p className="text-base leading-relaxed mb-4">
                 These Terms are governed by the laws of Germany, excluding conflict-of-law rules, unless mandatory consumer protection laws provide
                 otherwise. If you are a consumer, this choice of law does not deprive you of mandatory protections of the country in which you
@@ -437,7 +411,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">23. Changes to These Terms</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">22. Changes to These Terms</h2>
               <p className="text-base leading-relaxed mb-4">
                 We may update these Terms from time to time. The updated version will be posted on this page with a new &quot;Last updated&quot; date.
                 Material changes may also be communicated by email, in-app notice, or other reasonable means where appropriate. Your continued use
@@ -447,7 +421,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">24. Contact</h2>
+              <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">23. Contact</h2>
               <p className="text-base leading-relaxed mb-4">
                 For questions about these Terms, refunds, billing, support, or account matters, contact us at{' '}
                 <a href="mailto:info@bballorbit.com" className="text-primary hover:underline">info@bballorbit.com</a>.
