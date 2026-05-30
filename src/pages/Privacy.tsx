@@ -31,7 +31,7 @@ const Privacy = () => {
             <strong>Last updated May 26, 2026</strong>
           </p>
 
-          <div className="space-y-6 text-foreground">
+          <div className="space-y-6 text-muted-foreground">
             <p>
               This Privacy Policy for Basketball Orbit and the BballOrbit Practice Planner ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") explains how we collect, use, store, share, and protect personal information when you use our websites, digital products, newsletter, and the Basketball Orbit Practice Planner app, including Orbit AI features (together, the "<strong>Services</strong>").
             </p>
