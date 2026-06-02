@@ -52,6 +52,21 @@ const DrillTemplate = () => {
         <meta property="og:description" content={drill.description.join(" ")} />
         <meta property="og:url" content={`https://www.bballorbit.com/drills/${drill.id}`} />
         <meta property="og:type" content="article" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: drill.title,
+            description: drill.mainGoal,
+            image: drill.thumbnail.startsWith("http") ? drill.thumbnail : `https://www.bballorbit.com${drill.thumbnail}`,
+            step: drill.description.map((step, i) => ({
+              "@type": "HowToStep",
+              name: `Step ${i + 1}`,
+              text: step
+            })),
+            totalTime: "PT10M"
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">

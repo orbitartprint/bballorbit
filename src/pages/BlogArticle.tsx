@@ -109,6 +109,32 @@ const BlogArticle = () => {
         <meta name="twitter:description" content={article.excerpt} />
         <meta name="twitter:image" content={article.heroImage} />
         <link rel="canonical" href={`https://www.bballorbit.com/blog/${article.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: article.title,
+            description: article.excerpt,
+            image: article.heroImage.startsWith("http") ? article.heroImage : `https://www.bballorbit.com${article.heroImage}`,
+            datePublished: article.publishDate,
+            author: {
+              "@type": "Person",
+              name: "Chris"
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Basketball Orbit",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.bballorbit.com/logo.png"
+              }
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://www.bballorbit.com/blog/${article.slug}`
+            }
+          })}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />

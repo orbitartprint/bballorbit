@@ -86,6 +86,38 @@ const Contact = () => {
         <meta property="og:description" content="Have questions about drills, plays, or coaching strategies? Contact Basketball Orbit. Chris is here to help coaches develop better players." />
         <meta property="og:url" content="https://www.bballorbit.com/contact" />
         <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Do you offer free coaching resources?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes! You can download free PDFs, join the newsletter, and check out the Basketball Orbit YouTube channel for drills and strategies."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Can I use your drills with my youth team?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Absolutely. My drills are designed for different age groups and levels, from beginners to experienced players."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Do you collaborate with other coaches or brands?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, I'm open to collaborations with coaches, teams, or basketball brands."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
