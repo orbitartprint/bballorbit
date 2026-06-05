@@ -97,7 +97,7 @@ Retreat dribbles, strong pivots, and clear passing angles keep the ball alive an
 
 <div class="w-full flex justify-center">
   <video class="rounded-xl shadow-lg w-full max-w-4xl" controls loop muted playsinline preload="metadata" loading="lazy">
-    <source src="/videos/passes-beats-presses.mp4" type="video/mp4" />
+    <source src="/videos-blog/passes-beats-presses.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </div>
@@ -148,7 +148,7 @@ Against zone presses in particular, a simple spacing reference works extremely w
 
 <div class="w-full flex justify-center">
   <video class="rounded-xl shadow-lg w-full max-w-4xl" controls loop muted playsinline preload="metadata" loading="lazy">
-    <source src="/videos/sms.mp4" type="video/mp4" />
+    <source src="/videos-blog/sms.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </div>
@@ -171,7 +171,7 @@ If the advantage isn’t there, the best teams don’t force it — they reset a
 
 <div class="w-full flex justify-center">
   <video class="rounded-xl shadow-lg w-full max-w-4xl" controls loop muted playsinline preload="metadata" loading="lazy">
-    <source src="/videos/shot-selection.mp4" type="video/mp4" />
+    <source src="/videos-blog/shot-selection.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </div>
