@@ -144,7 +144,7 @@ const BlogArticle = () => {
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
             </Link>
           </Button>
-          <div className="grid grid-cols-1 items-start lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div className="lg:col-span-3">
               <article className="bg-card/50 backdrop-blur p-6 md:p-8 rounded-lg border border-border">
                 {/* Header */}
@@ -236,7 +236,7 @@ const BlogArticle = () => {
                   prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:p-4 prose-pre:rounded-lg prose-pre:my-6 prose-pre:overflow-x-auto
                   prose-pre:code:bg-transparent prose-pre:code:p-0 prose-pre:code:text-foreground
                   prose-img:rounded-lg prose-img:my-6 prose-img:shadow-lg prose-img:border prose-img:border-border
-                  [&_iframe]:aspect-video [&_iframe]:h-auto [&_iframe]:rounded-lg
+                  [&_iframe]:w-full [&_iframe]:aspect-video [&_iframe]:h-auto [&_iframe]:rounded-lg
                   [&_video]:max-w-full [&_video]:h-auto
                   prose-hr:border-border prose-hr:my-8
                   prose-table:w-full prose-table:my-6 prose-table:border-collapse
@@ -339,7 +339,7 @@ const BlogArticle = () => {
             </div>
 
             {/* Sidebar */}
-            <aside className="lg:col-span-1 lg:self-start">
+            <aside className="lg:col-span-1">
               <div className="hidden lg:block sticky top-24">
                 <TableOfContents key={slug} containerSelector="#article-content" />
               </div>

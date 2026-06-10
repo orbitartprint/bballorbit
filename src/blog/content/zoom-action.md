@@ -70,7 +70,7 @@ These four simple options cover nearly every situation. Teach players to recogni
   <!-- Video (left) -->
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Catch and Shoot</h4>
-    <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-2.webp">
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-option-2.webp">
       <source src="/videos-blog/zoom-option-2.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -94,7 +94,7 @@ These four simple options cover nearly every situation. Teach players to recogni
   <!-- Video (left) -->
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Pick and Roll</h4>
-    <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-3.webp">
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-option-3.webp">
       <source src="/videos-blog/zoom-option-3.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -118,7 +118,7 @@ These four simple options cover nearly every situation. Teach players to recogni
   <!-- Video (left) -->
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Rescreen</h4>
-    <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-4.webp">
+    <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-option-4.webp">
       <source src="/videos-blog/zoom-option-4.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
