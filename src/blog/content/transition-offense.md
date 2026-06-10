@@ -29,7 +29,7 @@ Transition gives you:
 - **Fun and freedom** that players love.
 
 🎥 **Watch the full video breakdown:**  
-[![Transition Offense Breakdown](https://img.youtube.com/vi/WIUktpk29iI/hqdefault.jpg)](https://youtu.be/WIUktpk29iI)
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/WIUktpk29iI" title="Transition Offense Breakdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
