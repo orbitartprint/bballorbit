@@ -14,6 +14,96 @@ export type Database = {
   }
   public: {
     Tables: {
+      account_deletion_jobs: {
+        Row: {
+          auth_delete_status: string | null
+          completed_at: string | null
+          created_at: string
+          db_cleanup_status: string | null
+          email_hash: string
+          failed_at: string | null
+          freemius_cancelled_at: string | null
+          freemius_status: string | null
+          freemius_subscription_id: string | null
+          id: string
+          kit_deleted_at: string | null
+          kit_status: string | null
+          kit_subscriber_id: string | null
+          last_error: string | null
+          manual_action_reason: string | null
+          manual_action_required: boolean
+          metadata: Json
+          processing_started_at: string | null
+          request_source: string
+          requested_at: string
+          retained_data_note: string | null
+          status: string
+          storage_deleted_count: number
+          storage_status: string | null
+          updated_at: string
+          user_id: string | null
+          verified_at: string | null
+        }
+        Insert: {
+          auth_delete_status?: string | null
+          completed_at?: string | null
+          created_at?: string
+          db_cleanup_status?: string | null
+          email_hash: string
+          failed_at?: string | null
+          freemius_cancelled_at?: string | null
+          freemius_status?: string | null
+          freemius_subscription_id?: string | null
+          id?: string
+          kit_deleted_at?: string | null
+          kit_status?: string | null
+          kit_subscriber_id?: string | null
+          last_error?: string | null
+          manual_action_reason?: string | null
+          manual_action_required?: boolean
+          metadata?: Json
+          processing_started_at?: string | null
+          request_source: string
+          requested_at?: string
+          retained_data_note?: string | null
+          status?: string
+          storage_deleted_count?: number
+          storage_status?: string | null
+          updated_at?: string
+          user_id?: string | null
+          verified_at?: string | null
+        }
+        Update: {
+          auth_delete_status?: string | null
+          completed_at?: string | null
+          created_at?: string
+          db_cleanup_status?: string | null
+          email_hash?: string
+          failed_at?: string | null
+          freemius_cancelled_at?: string | null
+          freemius_status?: string | null
+          freemius_subscription_id?: string | null
+          id?: string
+          kit_deleted_at?: string | null
+          kit_status?: string | null
+          kit_subscriber_id?: string | null
+          last_error?: string | null
+          manual_action_reason?: string | null
+          manual_action_required?: boolean
+          metadata?: Json
+          processing_started_at?: string | null
+          request_source?: string
+          requested_at?: string
+          retained_data_note?: string | null
+          status?: string
+          storage_deleted_count?: number
+          storage_status?: string | null
+          updated_at?: string
+          user_id?: string | null
+          verified_at?: string | null
+        }
+        Relationships: []
+      }
       account_deletion_requests: {
         Row: {
           email: string | null
@@ -43,6 +133,65 @@ export type Database = {
           user_id?: string | null
         }
         Relationships: []
+      }
+      account_deletion_verifications: {
+        Row: {
+          consumed_at: string | null
+          created_at: string
+          deletion_job_id: string | null
+          email: string
+          email_hash: string | null
+          expires_at: string
+          id: string
+          last_error: string | null
+          request_source: string
+          requested_at: string
+          status: string
+          token_hash: string
+          updated_at: string
+          verified_at: string | null
+        }
+        Insert: {
+          consumed_at?: string | null
+          created_at?: string
+          deletion_job_id?: string | null
+          email: string
+          email_hash?: string | null
+          expires_at: string
+          id?: string
+          last_error?: string | null
+          request_source?: string
+          requested_at?: string
+          status?: string
+          token_hash: string
+          updated_at?: string
+          verified_at?: string | null
+        }
+        Update: {
+          consumed_at?: string | null
+          created_at?: string
+          deletion_job_id?: string | null
+          email?: string
+          email_hash?: string | null
+          expires_at?: string
+          id?: string
+          last_error?: string | null
+          request_source?: string
+          requested_at?: string
+          status?: string
+          token_hash?: string
+          updated_at?: string
+          verified_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "account_deletion_verifications_deletion_job_id_fkey"
+            columns: ["deletion_job_id"]
+            isOneToOne: false
+            referencedRelation: "account_deletion_jobs"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       ai_requests: {
         Row: {
@@ -170,6 +319,7 @@ export type Database = {
         Row: {
           action: string
           ai_request_id: string | null
+          cached_input_tokens: number | null
           created_at: string
           estimated_cost: number | null
           id: string
@@ -177,12 +327,14 @@ export type Database = {
           model: string | null
           output_tokens: number | null
           practice_id: string | null
+          provider_latency_ms: number | null
           total_tokens: number | null
           user_id: string
         }
         Insert: {
           action: string
           ai_request_id?: string | null
+          cached_input_tokens?: number | null
           created_at?: string
           estimated_cost?: number | null
           id?: string
@@ -190,12 +342,14 @@ export type Database = {
           model?: string | null
           output_tokens?: number | null
           practice_id?: string | null
+          provider_latency_ms?: number | null
           total_tokens?: number | null
           user_id: string
         }
         Update: {
           action?: string
           ai_request_id?: string | null
+          cached_input_tokens?: number | null
           created_at?: string
           estimated_cost?: number | null
           id?: string
@@ -203,6 +357,7 @@ export type Database = {
           model?: string | null
           output_tokens?: number | null
           practice_id?: string | null
+          provider_latency_ms?: number | null
           total_tokens?: number | null
           user_id?: string
         }
@@ -222,6 +377,66 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      app_admins: {
+        Row: {
+          created_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      billing_webhook_events: {
+        Row: {
+          error_message: string | null
+          event_name: string
+          id: string
+          payload: Json
+          processed_at: string
+          processing_status: string
+          provider: string
+          provider_event_id: string | null
+          provider_license_id: string | null
+          provider_subscription_id: string | null
+          provider_user_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          error_message?: string | null
+          event_name: string
+          id?: string
+          payload: Json
+          processed_at?: string
+          processing_status?: string
+          provider?: string
+          provider_event_id?: string | null
+          provider_license_id?: string | null
+          provider_subscription_id?: string | null
+          provider_user_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          error_message?: string | null
+          event_name?: string
+          id?: string
+          payload?: Json
+          processed_at?: string
+          processing_status?: string
+          provider?: string
+          provider_event_id?: string | null
+          provider_license_id?: string | null
+          provider_subscription_id?: string | null
+          provider_user_id?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
       }
       contact_messages: {
         Row: {
@@ -324,6 +539,65 @@ export type Database = {
           video_url?: string | null
         }
         Relationships: []
+      }
+      external_erasure_tasks: {
+        Row: {
+          action: string
+          attempted_at: string | null
+          completed_at: string | null
+          created_at: string
+          deletion_job_id: string
+          email_hash: string | null
+          external_id: string | null
+          id: string
+          last_error: string | null
+          manual_instructions: string | null
+          metadata: Json
+          provider: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          action: string
+          attempted_at?: string | null
+          completed_at?: string | null
+          created_at?: string
+          deletion_job_id: string
+          email_hash?: string | null
+          external_id?: string | null
+          id?: string
+          last_error?: string | null
+          manual_instructions?: string | null
+          metadata?: Json
+          provider: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          action?: string
+          attempted_at?: string | null
+          completed_at?: string | null
+          created_at?: string
+          deletion_job_id?: string
+          email_hash?: string | null
+          external_id?: string | null
+          id?: string
+          last_error?: string | null
+          manual_instructions?: string | null
+          metadata?: Json
+          provider?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "external_erasure_tasks_deletion_job_id_fkey"
+            columns: ["deletion_job_id"]
+            isOneToOne: false
+            referencedRelation: "account_deletion_jobs"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       favorite_drills: {
         Row: {
@@ -595,6 +869,7 @@ export type Database = {
           notes: string | null
           player_count: number | null
           practice_date: string | null
+          reflections: string | null
           share_token: string
           title: string
           topic: string | null
@@ -613,6 +888,7 @@ export type Database = {
           notes?: string | null
           player_count?: number | null
           practice_date?: string | null
+          reflections?: string | null
           share_token?: string
           title: string
           topic?: string | null
@@ -631,6 +907,7 @@ export type Database = {
           notes?: string | null
           player_count?: number | null
           practice_date?: string | null
+          reflections?: string | null
           share_token?: string
           title?: string
           topic?: string | null
@@ -644,6 +921,9 @@ export type Database = {
           avatar_url: string | null
           created_at: string
           email: string | null
+          email_marketing: boolean
+          email_preferences_updated_at: string | null
+          email_product_updates: boolean
           full_name: string | null
           id: string
           updated_at: string
@@ -652,6 +932,9 @@ export type Database = {
           avatar_url?: string | null
           created_at?: string
           email?: string | null
+          email_marketing?: boolean
+          email_preferences_updated_at?: string | null
+          email_product_updates?: boolean
           full_name?: string | null
           id: string
           updated_at?: string
@@ -660,9 +943,57 @@ export type Database = {
           avatar_url?: string | null
           created_at?: string
           email?: string | null
+          email_marketing?: boolean
+          email_preferences_updated_at?: string | null
+          email_product_updates?: boolean
           full_name?: string | null
           id?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      subscription_cancellation_feedback: {
+        Row: {
+          created_at: string
+          current_period_end: string | null
+          id: string
+          note: string | null
+          plan_id: string | null
+          provider: string | null
+          provider_license_id: string | null
+          provider_subscription_id: string | null
+          reason: string
+          source: string
+          status: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          current_period_end?: string | null
+          id?: string
+          note?: string | null
+          plan_id?: string | null
+          provider?: string | null
+          provider_license_id?: string | null
+          provider_subscription_id?: string | null
+          reason: string
+          source?: string
+          status?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          current_period_end?: string | null
+          id?: string
+          note?: string | null
+          plan_id?: string | null
+          provider?: string | null
+          provider_license_id?: string | null
+          provider_subscription_id?: string | null
+          reason?: string
+          source?: string
+          status?: string | null
+          user_id?: string
         }
         Relationships: []
       }
@@ -756,11 +1087,317 @@ export type Database = {
         }
         Relationships: []
       }
+      usage_events: {
+        Row: {
+          created_at: string
+          credits_used: number
+          event_type: string
+          id: string
+          metadata: Json
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          credits_used?: number
+          event_type: string
+          id?: string
+          metadata?: Json
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          credits_used?: number
+          event_type?: string
+          id?: string
+          metadata?: Json
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_ai_credit_periods: {
+        Row: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          period_end: string
+          period_start: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          ai_credits_used?: number
+          created_at?: string
+          id?: string
+          period_end: string
+          period_start: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          ai_credits_used?: number
+          created_at?: string
+          id?: string
+          period_end?: string
+          period_start?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_email_sync: {
+        Row: {
+          created_at: string
+          kit_last_synced_at: string | null
+          kit_subscriber_id: string | null
+          kit_sync_error: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          kit_last_synced_at?: string | null
+          kit_subscriber_id?: string | null
+          kit_sync_error?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          kit_last_synced_at?: string | null
+          kit_subscriber_id?: string | null
+          kit_sync_error?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_email_sync_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_storage_usage: {
+        Row: {
+          storage_bytes_used: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          storage_bytes_used?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          storage_bytes_used?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_subscriptions: {
+        Row: {
+          cancel_at_period_end: boolean
+          created_at: string
+          current_period_end: string | null
+          current_period_start: string | null
+          id: string
+          plan_id: string
+          provider: string
+          provider_customer_id: string | null
+          provider_license_id: string | null
+          provider_metadata: Json
+          provider_plan_id: string | null
+          provider_pricing_id: string | null
+          provider_subscription_id: string | null
+          provider_user_id: string | null
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          cancel_at_period_end?: boolean
+          created_at?: string
+          current_period_end?: string | null
+          current_period_start?: string | null
+          id?: string
+          plan_id?: string
+          provider?: string
+          provider_customer_id?: string | null
+          provider_license_id?: string | null
+          provider_metadata?: Json
+          provider_plan_id?: string | null
+          provider_pricing_id?: string | null
+          provider_subscription_id?: string | null
+          provider_user_id?: string | null
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          cancel_at_period_end?: boolean
+          created_at?: string
+          current_period_end?: string | null
+          current_period_start?: string | null
+          id?: string
+          plan_id?: string
+          provider?: string
+          provider_customer_id?: string | null
+          provider_license_id?: string | null
+          provider_metadata?: Json
+          provider_plan_id?: string | null
+          provider_pricing_id?: string | null
+          provider_subscription_id?: string | null
+          provider_user_id?: string | null
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_usage_monthly: {
+        Row: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          pdf_exports_used: number
+          updated_at: string
+          usage_month: string
+          user_id: string
+        }
+        Insert: {
+          ai_credits_used?: number
+          created_at?: string
+          id?: string
+          pdf_exports_used?: number
+          updated_at?: string
+          usage_month: string
+          user_id: string
+        }
+        Update: {
+          ai_credits_used?: number
+          created_at?: string
+          id?: string
+          pdf_exports_used?: number
+          updated_at?: string
+          usage_month?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
+      add_billing_months: {
+        Args: { p_months?: number; p_start: string }
+        Returns: string
+      }
+      assert_can_create_practice_plan: { Args: never; Returns: undefined }
+      can_create_practice_plan: { Args: never; Returns: boolean }
+      can_export_pdf: { Args: never; Returns: boolean }
+      can_upload_media: { Args: { p_upload_bytes: number }; Returns: boolean }
+      can_use_ai_credits: {
+        Args: { p_required_credits: number; p_user_id: string }
+        Returns: boolean
+      }
+      can_use_ai_credits_in_current_period: {
+        Args: { p_required_credits: number; p_user_id: string }
+        Returns: boolean
+      }
+      ensure_user_storage_usage: {
+        Args: { p_user_id: string }
+        Returns: {
+          storage_bytes_used: number
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_storage_usage"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      get_ai_credit_period_bounds: {
+        Args: { p_now?: string; p_user_id: string }
+        Returns: {
+          monthly_limit: number
+          period_end: string
+          period_start: string
+          plan_id: string
+        }[]
+      }
+      get_ai_credit_usage_snapshot: {
+        Args: { p_user_id: string }
+        Returns: {
+          credits_remaining: number
+          credits_used: number
+          monthly_limit: number
+          period_start: string
+          plan_id: string
+          reset_at: string
+        }[]
+      }
+      get_current_ai_credit_usage: {
+        Args: never
+        Returns: {
+          credits_remaining: number
+          credits_used: number
+          monthly_limit: number
+          period_start: string
+          plan_id: string
+          reset_at: string
+        }[]
+      }
+      get_current_month_start: { Args: never; Returns: string }
+      get_effective_media_storage_limit_bytes: {
+        Args: { p_user_id: string }
+        Returns: number
+      }
+      get_effective_practice_plan_limit: {
+        Args: { p_user_id: string }
+        Returns: number
+      }
+      get_or_create_current_ai_credit_period: {
+        Args: { p_user_id: string }
+        Returns: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          period_end: string
+          period_start: string
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_ai_credit_periods"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      get_or_create_current_month_usage: {
+        Args: { p_user_id: string }
+        Returns: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          pdf_exports_used: number
+          updated_at: string
+          usage_month: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_usage_monthly"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
       get_shared_practice: {
         Args: { share_token_param: string }
         Returns: {
@@ -775,6 +1412,7 @@ export type Database = {
           notes: string | null
           player_count: number | null
           practice_date: string | null
+          reflections: string | null
           share_token: string
           title: string
           topic: string | null
@@ -841,9 +1479,133 @@ export type Database = {
           isSetofReturn: true
         }
       }
+      has_paid_subscription_access: {
+        Args: {
+          p_current_period_end?: string
+          p_now?: string
+          p_plan_id: string
+          p_status: string
+        }
+        Returns: boolean
+      }
+      hash_normalized_email: { Args: { p_email: string }; Returns: string }
+      initialize_user_billing: {
+        Args: { p_user_id: string }
+        Returns: undefined
+      }
       owns_practice: {
         Args: { _practice_id: string; _user_id: string }
         Returns: boolean
+      }
+      record_ai_credit_usage: {
+        Args: {
+          p_credits_used: number
+          p_event_type: string
+          p_metadata?: Json
+          p_user_id: string
+        }
+        Returns: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          period_end: string
+          period_start: string
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_ai_credit_periods"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      record_ai_usage: {
+        Args: {
+          p_credits_used: number
+          p_event_type: string
+          p_metadata?: Json
+          p_user_id: string
+        }
+        Returns: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          pdf_exports_used: number
+          updated_at: string
+          usage_month: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_usage_monthly"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      record_media_delete: {
+        Args: { p_deleted_bytes: number; p_metadata?: Json }
+        Returns: {
+          storage_bytes_used: number
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_storage_usage"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      record_media_upload: {
+        Args: { p_metadata?: Json; p_upload_bytes: number }
+        Returns: {
+          storage_bytes_used: number
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_storage_usage"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      record_pdf_export: {
+        Args: { p_metadata?: Json }
+        Returns: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          pdf_exports_used: number
+          updated_at: string
+          usage_month: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_usage_monthly"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      reset_current_ai_credit_usage: {
+        Args: { p_user_id: string }
+        Returns: {
+          ai_credits_used: number
+          created_at: string
+          id: string
+          period_end: string
+          period_start: string
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_ai_credit_periods"
+          isOneToOne: true
+          isSetofReturn: false
+        }
       }
     }
     Enums: {

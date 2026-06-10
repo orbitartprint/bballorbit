@@ -502,9 +502,9 @@ When you combine it with [small-sided games](/ssg-playbook) and a [constraints-l
 
 ---
 
-<div class="infobox" style="display:flex; gap:20px; align-items:center;">
+<div class="infobox flex flex-col md:flex-row gap-5 items-center">
   <!-- Left Text -->
-  <div style="flex:2;">
+  <div class="w-full md:flex-[2]">
     <h4>Want your Zoom Action to create more advantages?</h4>
     <p>
       Teach the reads behind the action — not just the action itself.
@@ -519,12 +519,12 @@ When you combine it with [small-sided games](/ssg-playbook) and a [constraints-l
     </p>
   </div>
   <!-- Right Mockup -->
-  <div style="flex:1; min-width:200px; padding:10px 0;">
+  <div class="w-full md:flex-1 md:min-w-[200px] py-2">
     <a href="/ssg-playbook">
       <img 
         src="/lovable-uploads/mockup-main-trans.webp"
         alt="SSG Playbook Mockup"
-        style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
+        class="w-full h-auto object-contain rounded-xl cursor-pointer"
       >
     </a>
   </div>
