@@ -80,7 +80,7 @@ Players adapt and find solutions on their own, without rigid instructions.
 It creates creative, confident decision-makers - exactly what you want in [modern basketball](/ssg-playbook).
 
 🎥 **Watch: 4 Drills to Train Transition Offense**  
-[![Transition Drills](https://img.youtube.com/vi/DTqeh4D-agI/hqdefault.jpg)](https://youtu.be/DTqeh4D-agI)
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/DTqeh4D-agI" title="Transition Drills" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
