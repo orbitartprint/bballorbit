@@ -29,7 +29,7 @@ This combination forces the defender to fight through **two actions in quick suc
   <!-- Right Column: Video -->
   <div class="md:w-1/2 flex justify-center">
     <video class="rounded-xl shadow-lg w-full md:w-auto" controls poster="/lovable-uploads/zoom-action-setup.webp">
-      <source src="/videos/zoom-action.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-action.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -46,7 +46,7 @@ These four simple options cover nearly every situation. Teach players to recogni
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Dribble Drive</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-option-1.webp">
-      <source src="/videos/zoom-option-1.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-option-1.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -71,7 +71,7 @@ These four simple options cover nearly every situation. Teach players to recogni
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Catch and Shoot</h4>
     <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-2.webp">
-      <source src="/videos/zoom-option-2.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-option-2.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -95,7 +95,7 @@ These four simple options cover nearly every situation. Teach players to recogni
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Pick and Roll</h4>
     <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-3.webp">
-      <source src="/videos/zoom-option-3.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-option-3.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -119,7 +119,7 @@ These four simple options cover nearly every situation. Teach players to recogni
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Rescreen</h4>
     <video class="rounded-xl shadow-lg w-full max-w-x" controls poster="/lovable-uploads/zoom-option-4.webp">
-      <source src="/videos/zoom-option-4.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-option-4.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -158,7 +158,7 @@ Below are three commonly used variations and the tactical rationale for each.
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Staggered Zoom</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-staggered.webp">
-      <source src="/videos/zoom-staggered.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-staggered.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -186,7 +186,7 @@ Below are three commonly used variations and the tactical rationale for each.
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Middle Zoom</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-middle.webp">
-      <source src="/videos/zoom-middle.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-middle.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -214,7 +214,7 @@ Below are three commonly used variations and the tactical rationale for each.
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Horns Zoom</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-horns.webp">
-      <source src="/videos/zoom-horns.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-horns.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -247,7 +247,7 @@ These quick-hitter options use the same principles to create instant motion and 
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">BLOB – Baseline Out of Bounds</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-blob.webp">
-      <source src="/videos/zoom-blob.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-blob.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -272,7 +272,7 @@ These quick-hitter options use the same principles to create instant motion and 
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">SLOB – Sideline Out of Bounds</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-slob.webp">
-      <source src="/videos/zoom-slob.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-slob.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -305,7 +305,7 @@ Here are three simple adjustments you can use when the defense starts reading yo
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Backdoor Cut on a Switch</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-backdoor.webp">
-      <source src="/videos/zoom-backdoor.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-backdoor.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -341,7 +341,7 @@ Here are three simple adjustments you can use when the defense starts reading yo
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Handoff by the Screener</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-screener.webp">
-      <source src="/videos/zoom-screener.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-screener.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -355,7 +355,7 @@ Here are three simple adjustments you can use when the defense starts reading yo
   <div class="w-full flex flex-col justify-center items-center">
     <h4 class="text-lg font-semibold mb-3 text-[#f57520]">Slip or Basket Cut by the Screener</h4>
     <video class="rounded-xl shadow-lg w-full max-w-xl" controls poster="/lovable-uploads/zoom-slip.webp">
-      <source src="/videos/zoom-slip.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-slip.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -393,7 +393,7 @@ These three [small-sided drills](/ssg-playbook) turn the concept into game-reali
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
   <div>
     <video width="100%" controls poster="/lovable-uploads/zoom-1v1.webp">
-      <source src="/videos/zoom-1v1.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-1v1.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -426,7 +426,7 @@ These three [small-sided drills](/ssg-playbook) turn the concept into game-reali
   </div>
   <div>
     <video width="100%" controls poster="/lovable-uploads/zoom-2v2.webp">
-      <source src="/videos/zoom-2v2.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-2v2.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -439,7 +439,7 @@ These three [small-sided drills](/ssg-playbook) turn the concept into game-reali
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
   <div>
     <video width="100%" controls poster="/lovable-uploads/zoom-3v3.webp">
-      <source src="/videos/zoom-3v3.mp4" type="video/mp4" />
+      <source src="/videos-blog/zoom-3v3.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>

@@ -14,6 +14,110 @@ export interface Drill {
 }
 
 export const drills: Drill[] = [
+   {
+    id: "1v1-chair-chase-shooting",
+    title: "1v1 Chair Chase Shooting",
+    subtitle: "A competitive shooting drill that creates rushed, game-like shots while forcing the shooter to make a decision.",
+    focusArea: ["Offense", "Shooting"],
+    mainGoal:
+      "Help players take game-like shots under pressure by reading the recovering defender and deciding whether to shoot or attack the basket.",
+    description: [
+      "One offensive player starts with a ball at the top, while one defender starts opposite him. Between them, place one or two chairs or cones.",
+      "The defender starts the drill by choosing one side and running around the chairs.",
+      "The ball handler reacts to the defender’s movement and creates enough space to take a shot before the defender can recover.",
+      "This drill focuses on rushed, game-like shooting situations. The shot should feel slightly uncomfortable, but still realistic.",
+      "You can start with a basic pull-up jumper from outside the paint or outside the three-point line.",
+      "By adding a second offensive player, you can also create a catch-and-shoot situation. To keep the decision-making element, allow the shooter to drive if the shot is not open." ,
+    ],
+    constraints: [
+      "Only shots are allowed in the basic version.", "Use one chair for a quicker read or two chairs to give the shooter a small head start.",
+      "Require the shot to be taken from outside the paint or outside the three-point line.",
+      "Add a second offensive player to create a catch-and-shoot situation.",
+      "Allow the shooter to drive if the shot is not open.",
+      "Use scoring rules to guide decisions: three-pointers count as 3 points, while layups and mid-range shots count as 1 point.",
+    ],
+    thumbnail: "/drills/1v1-chair-chase-shooting.webp",
+    videoMp4: "/videos/1v1-chair-chase-shooting.mp4",
+    images: ["/drills/1v1-chair-chase-shooting-1.webp", "/drills/1v1-chair-chase-shooting-2.webp"],
+    tags: ["1v1", "Shooting", "Agility", "Decision Making"]
+   },
+   {
+    id: "1v1-chair-chase-passing",
+    title: "1v1 Chair Chase Passing",
+    subtitle: "A decision-making passing drill that creates quick reads, catch-and-drive situations, handoffs, and give-and-go actions.",
+    focusArea: ["Offense", "Passing"],
+    mainGoal:
+      "Help players improve their passing decisions, creating an advantage, and connecting the pass to a game-like action.",
+    description: [
+      "One offensive player starts with a ball at the top, while one defender starts opposite him. Between them, place one or two chairs or cones.",
+      "Add a second offensive player behind the defender. This player can start with the ball to create different passing situations.",
+      "The defender starts the drill by choosing one side and running around the chair or chairs. The offense has to read the movement and react accordingly.",
+      "One option is that Player 1 can only catch the ball outside the three-point line. This creates a catch-and-drive situation and forces him to attack immediately after the catch.",
+      "You can also turn it into a dribble handoff, where Player 1 cuts toward the edge of the paint, receives the handoff, and attacks the basket.",
+      "Another option is a give-and-go situation. Player 1 starts with the ball, passes to his teammate out of the dribble, and receives the ball back outside the paint."
+      ],
+    constraints: [
+      "Player 1 can only catch the ball outside the three-point line.",
+      "Use a dribble handoff to create a tighter read and a quicker attack.",
+      "Player 1 has the ball and must execute a give and go.",
+      "Limit the number of dribbles after the catch to force quicker decisions.",
+      "Add a time limit to create more pressure.",
+      "Vary the players’ starting positions.",
+      "Vary the type of pass."
+    ],
+    thumbnail: "/drills/1v1-chair-chase-passing.webp",
+    videoMp4: "/videos/1v1-chair-chase-passing.mp4",
+    images: ["/drills/1v1-chair-chase-passing-1.webp", "/drills/1v1-chair-chase-passing-2.webp"],
+    tags: ["1v1", "Passing", "Agility", "2v1"]
+   },
+   {
+    id: "1v1-chair-chase-finishing",
+    title: "1v1 Chair Chase Finishing",
+    subtitle: "A competitive finishing drill that forces the ball handler to attack under pressure and finish against a recovering defender.",
+    focusArea: ["Offense", "Finishing"],
+    mainGoal:
+      "Help players improve their finishing by attacking the basket quickly, reading the recovering defender, and choosing the right type of finish.",
+    description: [
+      "One offensive player starts with a ball at the top, while one defender starts opposite him. Between them, place one or two chairs or cones.",
+      "The defender starts the drill by choosing one side and running around the chairs.",
+      "The defender is trying recover and defends the basket like in a real game situation.",
+      "You can add different finishing tasks or a second defender under the basket to create more pressure and force better decisions around the rim."
+    ],
+    constraints: [
+      "Give the ball handler specific finishing tasks, such as finishing without the backboard, jumping off two feet, or finishing on the opposite side of the rim.",
+      "Add a second defender under the basket to create a 1v2 finishing situation.",
+      "Limit the second defender by not allowing him to jump or by making him stay inside the charging circle.",
+      "The second defender can also start under the basket and must touch outside the paint with both feet before he is allowed to defend."
+    ],
+    thumbnail: "/drills/1v1-chair-chase-finishing.webp",
+    videoMp4: "/videos/1v1-chair-chase-finishing.mp4",
+    images: ["/drills/1v1-chair-chase-finishing-1.webp", "/drills/1v1-chair-chase-finishing-2.webp"],
+    tags: ["1v1", "Finishing", "Agility", "1v2"]
+   },
+   {
+    id: "1v1-chair-chase-warmup",
+    title: "1v1 Chair Chase Warm Up",
+    subtitle: "A simple and competitive warm-up drill that forces players to react, move quickly, and make fast decisions.",
+    focusArea: ["Warm Up"],
+    mainGoal:
+      "Help players warm up in a competitive and game-like way while reacting to the defender’s movement and making quick decisions with the ball.",
+    description: [
+      "One offensive player starts with a ball at the top, while one defender starts opposite him. Between them, place one or two chairs or cones.",
+      "The defender starts the drill by choosing one side and running around the chairs. The goal for the defender is to tag the ball handler before he finishes.",
+      "This version is designed as a warm-up, so the focus is on movement, reaction, ball handling, and decision-making rather than scoring."
+    ],
+    constraints: [
+      "Use one chair for a quicker read or two chairs to create more space and movement.",
+      "Move the chairs closer together to reduce space or farther apart to increase space.",
+      "The ball handler can start stationary or already dribbling.",
+      "The defender can also start with a ball and must keep the dribble alive while trying to tag the offensive player.",
+      "Change the starting positions of the players and chairs to create different movement patterns."
+    ],
+    thumbnail: "/drills/1v1-chair-chase-warmup.webp",
+    videoMp4: "/videos/1v1-chair-chase-warmup.mp4",
+    images: ["/drills/1v1-chair-chase-warmup-1.webp", "/drills/1v1-chair-chase-warmup-2.webp"],
+    tags: ["1v1", "Warm Up", "Agility", "Competition"]
+  },
   {
     id: "2v2-paint-balance",
     title: "2v2 Paint Balance",
@@ -46,7 +150,7 @@ export const drills: Drill[] = [
     id: "1v1-midline-gate-decision",
     title: "1v1 Midline Gate Decision",
     subtitle: "Full-court 1v1 with change-of-direction read after midline touch",
-    focusArea: ["Offense", "Defense", "Conditioning"],
+    focusArea: ["Offense", "Defense", "Conditioning", "Finishing"],
     mainGoal:
       "Train change-of-pace and change-of-direction decisions for the ball-handler while developing defensive reaction speed, recovery angles, and containment in open space.",
     description: [
@@ -75,7 +179,7 @@ export const drills: Drill[] = [
     id: "2v1-bullet-pass",
     title: "2v1 Bullet Pass",
     subtitle: "Fast 2v1 that forces instant spacing + a quick, accurate pass under pressure",
-    focusArea: ["Offense", "Passing", "Spacing"],
+    focusArea: ["Offense", "Passing", "Spacing", "Finishing"],
     mainGoal:
       "Train quick spacing and a high-quality 'bullet pass' to beat a recovering defender, while teaching the defender to read and choose between stopping the pass or protecting the rim.",
     description: [
@@ -104,7 +208,7 @@ export const drills: Drill[] = [
     id: "2v3-cone-race",
     title: "2v3 Cone Race",
     subtitle: "Transition-based 2v3 SSG to train early advantage recognition and decision making",
-    focusArea: ["Offense", "Spacing", "Transition"],
+    focusArea: ["Offense", "Spacing", "Transition", "Finishing"],
     mainGoal:
       "Teach offensive players to recognize and exploit temporary advantages under time pressure, while training defenders to recover, communicate, and stop the ball after a delayed start.",
     description: [
@@ -127,7 +231,7 @@ export const drills: Drill[] = [
     videoMp4: "/videos/2v3-cone-race.mp4",
     images: ["/drills/2v3-cone-race-1.webp", "/drills/2v3-cone-race-2.webp"],
     // youtubeUrl: "",
-    tags: ["2v3", "Numerical Disadvantage", "Decision Making", "Transition", "Spacing"]
+    tags: ["2v3", "Numerical Disadvantage", "Decision Making", "Transition", "Spacing", "Finishing"]
   },
   {
     id: "2v2-sandwich",
@@ -397,6 +501,6 @@ export const getAllTags = (): string[] => {
   return Array.from(tags).sort();
 };
 
-export const focusAreas = ["All", "Warm Up", "Shooting", "Defense", "Offense", "Transition", "Conditioning", "Spacing", "Passing"] as const;
+export const focusAreas = ["All", "Warm Up", "Shooting", "Defense", "Offense", "Transition", "Conditioning", "Spacing", "Passing", "Finishing"] as const;
 
 export type FocusAreaFilter = typeof focusAreas[number];
