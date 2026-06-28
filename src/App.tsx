@@ -18,7 +18,6 @@ const Legal = lazy(() => import("./pages/Legal"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Affiliate = lazy(() => import("./pages/Affiliate"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Shop = lazy(() => import("./pages/Shop"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
 const SsgPlaybook = lazy(() => import("./pages/SsgPlaybook"));
@@ -58,7 +57,6 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/affiliate" element={<Affiliate />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/shop" element={<Shop />} />
               <Route path="/ssg-playbook" element={<SsgPlaybook />} />
               <Route path="/data-deletion" element={<DataDeletion />} />
               <Route path="*" element={<NotFound />} />

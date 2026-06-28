@@ -16,7 +16,6 @@ Basketball Orbit helps coaches and players train smarter with evidence-based dri
 - [/blog](/blog): Basketball coaching blog covering tactics, training methods, and game analysis.
 - [/blog/press-break](/blog/press-break): Sample article — breaking the press and transition offense strategies.
 - [/blog/constraints-led-approach](/blog/constraints-led-approach): Sample article — using constraints to accelerate player development.
-- [/shop](/shop): Digital products and coaching materials available for purchase.
 - [/ssg-playbook](/ssg-playbook): The SSG Playbook — a comprehensive guide to small-sided games for basketball coaches.
 - [/contact](/contact): Contact form and inquiry page for coaching questions and collaborations.
 - [/terms](/terms): Terms of service and usage conditions.

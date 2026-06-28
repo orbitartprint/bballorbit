@@ -12,7 +12,6 @@ const routes = [
   '/free-resources',
   '/about',
   '/blog',
-  '/shop',
   '/contact',
   '/privacy',
   '/legal',
