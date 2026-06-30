@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Youtube, Instagram, Twitter, Facebook } from "lucide-react";
+import { ExternalLink, Youtube, Instagram, Twitter, Facebook } from "lucide-react";
 import logoImg from "@/assets/basketball-orbit-logo.webp";
 
 declare global {
@@ -33,6 +33,7 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Drill Library", path: "/drills" },
+    { name: "Practice Planner", href: "https://app.bballorbit.com/" },
     { name: "Blog", path: "/blog" },
     { name: "Resources", path: "/resources" },
     { name: "About", path: "/about" },
@@ -83,12 +84,25 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-muted-foreground hover:text-primary transition-smooth"
-                  >
-                    {link.name}
-                  </Link>
+                  {"href" in link ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${link.name} (opens in a new tab)`}
+                      className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-smooth"
+                    >
+                      {link.name}
+                      <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="text-muted-foreground hover:text-primary transition-smooth"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
