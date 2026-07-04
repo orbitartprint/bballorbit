@@ -1,405 +1,101 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { Link, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { ArrowLeft, ExternalLink, RefreshCw, Target, Users } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { drills } from "@/data/drills";
-import { ArrowLeft, Target, Award, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { fetchPublicDrill, type PublicDrill } from "@/data/publicDrills";
+
+const APP_URL = "https://app.bballorbit.com";
+
+const DetailShell = ({ children }: { children: React.ReactNode }) => (
+  <div className="min-h-screen bg-background"><Navigation /><main className="pt-24 pb-24 md:pb-16"><div className="container mx-auto px-4 lg:px-8 max-w-6xl">{children}</div></main><Footer /></div>
+);
+
+const CoachingList = ({ title, items }: { title: string; items: string[] }) => items.length > 0 ? (
+  <Card className="border-border bg-card">
+    <CardHeader><CardTitle className="text-xl">{title}</CardTitle></CardHeader>
+    <CardContent><ul className="space-y-3">{items.map((item, index) => <li key={`${title}-${index}`} className="flex gap-3 text-muted-foreground"><span className="font-semibold text-primary">{index + 1}.</span><span className="whitespace-pre-line">{item}</span></li>)}</ul></CardContent>
+  </Card>
+) : null;
+
+const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: boolean }) => {
+  const href = `${APP_URL}/practice/new?addLibraryItem=${encodeURIComponent(drill.id)}`;
+  return (
+    <div className={mobile ? "fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden" : "rounded-xl border border-primary/30 bg-primary/5 p-5"}>
+      <Button asChild size="lg" className="w-full">
+        <a href={href}>Start a Practice with this Drill <ExternalLink className="ml-2 h-4 w-4" /></a>
+      </Button>
+      {!mobile && <p className="mt-2 text-center text-xs text-muted-foreground">Opens the Basketball Orbit Practice Planner with this drill already added.</p>}
+    </div>
+  );
+};
 
 const DrillTemplate = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const drill = drills.find((d) => d.id === slug);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const { slug = "" } = useParams();
+  useEffect(() => { window.scrollTo(0, 0); }, [slug]);
+  const { data: drill, isLoading, isError, refetch } = useQuery({
+    queryKey: ["public-drill", slug], queryFn: () => fetchPublicDrill(slug), retry: 1, staleTime: 5 * 60 * 1000,
+  });
 
-  useEffect(() => {window.scrollTo(0, 0);}, []);
+  if (isLoading) return <DetailShell><Skeleton className="h-10 w-44 mb-8" /><Skeleton className="h-16 max-w-3xl mx-auto mb-10" /><div className="grid gap-8 md:grid-cols-2"><Skeleton className="aspect-video rounded-xl" /><Skeleton className="h-72 rounded-xl" /></div></DetailShell>;
+  if (isError) return <DetailShell><div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-8 text-center"><h1 className="text-2xl font-bold">This drill could not be loaded.</h1><p className="mt-2 text-muted-foreground">Please try again in a moment.</p><Button className="mt-5 gap-2" onClick={() => void refetch()}><RefreshCw className="h-4 w-4" />Try again</Button></div></DetailShell>;
+  if (!drill) return (
+    <><Helmet><title>Drill not found - Basketball Orbit</title><meta name="robots" content="noindex" /></Helmet><DetailShell><div className="mx-auto max-w-lg py-20 text-center"><h1 className="text-3xl font-bold">Drill not found</h1><p className="mt-3 text-muted-foreground">This drill may have been unpublished or the link is no longer valid.</p><Button asChild variant="outline" className="mt-6"><Link to="/drills"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link></Button></div></DetailShell></>
+  );
 
-  if (!drill) {
-    return <Navigate to="/drills" replace />;
-  }
-
-  // Convert YouTube URL to embed format
-  const getEmbedUrl = (url?: string) => {
-    if (!url) return null;
-    if (url.includes("embed/")) return url;
-    if (url.includes("watch?v=")) {
-      return url.replace("watch?v=", "embed/");
-    }
-    if (url.includes("youtu.be/")) {
-      return url.replace("youtu.be/", "youtube.com/embed/");
-    }
-    return url;
-  };
-
-  const embedUrl = getEmbedUrl(drill.youtubeUrl);
-
-  // Get drills from the same category
-  const sameCategoryDrills = drills.filter(d => d.focusArea === drill.focusArea);
-  const currentIndex = sameCategoryDrills.findIndex(d => d.id === drill.id);
-  const previousDrill = currentIndex > 0 ? sameCategoryDrills[currentIndex - 1] : null;
-  const nextDrill = currentIndex < sameCategoryDrills.length - 1 ? sameCategoryDrills[currentIndex + 1] : null;
-
+  const canonicalUrl = `https://bballorbit.com/drills/${drill.slug}`;
+  const structuredSteps = drill.phases.length > 0 ? drill.phases : [{ title: "Overview", notes: drill.description }];
   return (
     <>
       <Helmet>
         <title>{drill.title} - Basketball Orbit</title>
-        <meta name="description" content={drill.description.join(" ")} />
+        <meta name="description" content={(drill.excerpt || drill.description).slice(0, 170)} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={`${drill.title} - Basketball Orbit`} />
-        <meta property="og:description" content={drill.description.join(" ")} />
-        <meta property="og:url" content={`https://www.bballorbit.com/drills/${drill.id}`} />
-        <meta property="og:type" content="article" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            name: drill.title,
-            description: drill.mainGoal,
-            image: drill.thumbnail.startsWith("http") ? drill.thumbnail : `https://www.bballorbit.com${drill.thumbnail}`,
-            step: drill.description.map((step, i) => ({
-              "@type": "HowToStep",
-              name: `Step ${i + 1}`,
-              text: step
-            })),
-            totalTime: "PT10M"
-          })}
-        </script>
+        <meta property="og:description" content={(drill.excerpt || drill.description).slice(0, 200)} />
+        <meta property="og:url" content={canonicalUrl} />
+        {drill.thumbnailUrl && <meta property="og:image" content={drill.thumbnailUrl} />}
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: drill.title, description: drill.excerpt, image: drill.thumbnailUrl ?? undefined, step: structuredSteps.map((phase) => ({ "@type": "HowToStep", name: phase.title, text: phase.notes })) })}</script>
       </Helmet>
+      <DetailShell>
+        <Link to="/drills" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link>
+        <div className="text-center mb-10">
+          <div className="mb-4 flex flex-wrap justify-center gap-2">{drill.categories.map((category) => <Badge key={category.slug} className="bg-primary/15 text-primary border-primary/30">{category.label}</Badge>)}</div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">{drill.title}</h1>
+          {drill.excerpt && <p className="mt-5 text-lg text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">{drill.excerpt}</p>}
+        </div>
 
-      <div className="min-h-screen bg-background">
-        <Navigation />
-        
-        <main className="pt-24 pb-16">
-          <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-            {/* Back Button */}
-            <Link to="/drills">
-              <Button variant="ghost" className="mb-8 text-muted-foreground hover:text-foreground">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Drill Library
-              </Button>
-            </Link>
-
-            {/* Title + Subtitle */}
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-                {drill.title}
-              </h1>
-              {drill.subtitle && (
-                <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                  {drill.subtitle}
-                </p>
-              )}
-            </div>
-
-            {/* Focus Area & Main Goal */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <Card className="bg-[#0e0e0e] border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-white font-bold">
-                    <Target className="w-5 h-5 text-primary" />
-                    Focus Area
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{Array.isArray(drill.focusArea) 
-                              ? drill.focusArea.join(", ") 
-                              : drill.focusArea}</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-[#0e0e0e] border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-white font-bold">
-                    <Award className="w-5 h-5 text-primary" />
-                    Main Goal
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{drill.mainGoal}</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Media + Description */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-              {/* Left Column: Video/Images */}
-              <div className="space-y-6">
-                {drill.videoMp4 && (
-                <div className="relative w-full rounded-xl overflow-hidden shadow-lg bg-black">
-                  {!isVideoPlaying ? (
-                    <button
-                      className="relative w-full rounded-xl overflow-hidden bg-black group"
-                      onClick={() => {
-                        setIsVideoPlaying(true);
-                        setTimeout(() => videoRef.current?.play(), 150);
-                      }}
-                      aria-label="Play video"
-                    >
-                      {/* Thumbnail */}
-                      <img
-                        src={drill.thumbnail}
-                        alt={`${drill.title} - preview`}
-                        loading="lazy"
-                        className="w-full h-auto object-contain bg-black transition-transform duration-300 group-hover:scale-105"
-                        style={{ aspectRatio: "auto" }}
-                      />
-              
-                      {/* Overlay mit Play Icon */}
-                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="white"
-                          className="w-20 h-20 opacity-90"
-                        >
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </button>
-                  ) : (
-                    <video
-                      ref={videoRef}
-                      src={drill.videoMp4}
-                      controls
-                      className="w-full h-auto object-contain bg-black rounded-xl"
-                      poster={drill.thumbnail}
-                      preload="metadata"
-                      playsInline
-                      onEnded={(e) => e.currentTarget.pause()} // bleibt beim letzten Frame stehen
-                    >
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
-                </div>
-              )}
-                
-                {drill.images && drill.images.length > 0 && (
-                <div
-                  className={`grid gap-4 ${
-                    drill.images.length === 1
-                      ? "grid-cols-1"
-                      : drill.images.length === 2
-                      ? "grid-cols-2"
-                      : "grid-cols-3"
-                  }`}
-                >
-                  {drill.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="rounded-lg overflow-hidden shadow-md cursor-pointer group relative"
-                      onClick={() => setSelectedIndex(index)}
-                    >
-                      <img
-                        src={image}
-                        alt={`${drill.title} - Image ${index + 1}`}
-                        loading="lazy"
-                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
-                    </div>
-                  ))}
-                </div>
-              )}
-              
-              {/* ✅ Lightbox Overlay mit Navigation */}
-              {selectedIndex !== null && (
-                <div
-                  className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-                  onClick={() => setSelectedIndex(null)}
-                >
-                  <div
-                    className="relative flex items-center justify-center w-full h-full"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {/* ❌ Schließen-Button */}
-                    <button
-                      onClick={() => setSelectedIndex(null)}
-                      className="absolute top-6 right-6 text-white hover:text-[#f57520] transition-colors"
-                      aria-label="Close"
-                    >
-                      <X size={32} />
-                    </button>
-              
-                    {/* ◀️ Zurück */}
-                    <button
-                      onClick={() =>
-                        setSelectedIndex(
-                          selectedIndex > 0 ? selectedIndex - 1 : drill.images.length - 1
-                        )
-                      }
-                      className="absolute left-4 md:left-10 text-white hover:text-[#f57520] transition-colors"
-                      aria-label="Previous"
-                    >
-                      <ChevronLeft size={48} />
-                    </button>
-              
-                    {/* 🖼 Bildanzeige */}
-                    <img
-                      src={drill.images[selectedIndex]}
-                      alt={`${drill.title} - Full view`}
-                      className="max-w-5xl max-h-[90vh] rounded-lg shadow-2xl object-contain"
-                    />
-              
-                    {/* ▶️ Weiter */}
-                    <button
-                      onClick={() =>
-                        setSelectedIndex(
-                          selectedIndex < drill.images.length - 1 ? selectedIndex + 1 : 0
-                        )
-                      }
-                      className="absolute right-4 md:right-10 text-white hover:text-[#f57520] transition-colors"
-                      aria-label="Next"
-                    >
-                      <ChevronRight size={48} />
-                    </button>
-                  </div>
-                </div>
-              )}
-              </div>
-
-              {/* Right Column: Description */}
-              <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">Drill Description</h2>
-                <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
-                  {drill.description.map((step, i) => (
-                    <li key={i} className="text-base leading-relaxed">
-                      {step}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-
-            {/* Constraints Section */}
-            {drill.constraints && drill.constraints.length > 0 && (
-              <div className="mb-12">
-                <div className="flex items-center gap-2 mb-6">
-                  <h2 className="text-3xl font-bold text-foreground">Constraints</h2>
-                  <div className="relative group">
-                    <button
-                      className="text-[#f57520] hover:text-white focus:outline-none"
-                      aria-label="What are Constraints?"
-                    >
-                      ℹ️
-                    </button>
-                    <div
-                      className="absolute z-10 hidden group-hover:block w-72 md:w-96 bg-black text-white text-sm rounded-lg p-4 shadow-lg top-6 left-1/2 -translate-x-1/2"
-                    >
-                      <p>
-                        Constraints are small, intentional rules or limitations used to shape player behavior 
-                        and decision-making during practice. Instead of giving step-by-step instructions, 
-                        coaches use constraints to let players discover effective solutions on their own — 
-                        improving game understanding and adaptability.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-            
-                <Card className="bg-card border-border">
-                  <CardContent className="pt-6">
-                    <ol className="space-y-3">
-                      {drill.constraints.map((constraint, i) => (
-                        <li
-                          key={i}
-                          className="text-base leading-relaxed text-muted-foreground flex items-start"
-                        >
-                          <span className="font-semibold text-primary mr-2 min-w-[2.5rem]">
-                            C{i + 1}.
-                          </span>
-                          <span>{constraint}</span>
-                        </li>
-                      ))}
-                    </ol>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
-
-            {/* Optional YouTube Video */}
-            {embedUrl && (
-              <div className="mb-12">
-                <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">
-                  Watch the drill in action
-                </h3>
-                <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
-                  <iframe
-                    src={embedUrl}
-                    title="YouTube video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* Tags */}
-            <div className="mb-12">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {drill.tags.map((tag) => (
-                  <Badge key={tag} className="bg-primary/20 text-primary border-primary/30 hover:bg-primary/30">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            {/* Drill Navigation */}
-            {(previousDrill || nextDrill) && (
-              <div className="mt-12 pt-8 border-t border-border">
-                <div className="flex justify-between items-center gap-4">
-                  {previousDrill ? (
-                    <Link 
-                      to={`/drills/${previousDrill.id}`}
-                      className="group flex items-center gap-2 text-muted-foreground hover:text-[#f57520] transition-colors"
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                      <div className="text-left">
-                        <div className="text-xs uppercase tracking-wide mb-1">Previous Drill</div>
-                        <div className="font-medium">{previousDrill.title}</div>
-                      </div>
-                    </Link>
-                  ) : (
-                    <div />
-                  )}
-                  
-                  {nextDrill ? (
-                    <Link 
-                      to={`/drills/${nextDrill.id}`}
-                      className="group flex items-center gap-2 text-muted-foreground hover:text-[#f57520] transition-colors ml-auto"
-                    >
-                      <div className="text-right">
-                        <div className="text-xs uppercase tracking-wide mb-1">Next Drill</div>
-                        <div className="font-medium">{nextDrill.title}</div>
-                      </div>
-                      <ChevronRight className="w-5 h-5" />
-                    </Link>
-                  ) : (
-                    <div />
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* Bottom Back Button */}
-            <div className="mt-12 pt-8 border-t border-border text-center">
-              <Link to="/drills">
-                <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Back to Drill Library
-                </Button>
-              </Link>
-            </div>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,.75fr)] lg:items-start mb-12">
+          <div className="space-y-8">
+            {drill.thumbnailUrl && <div className="overflow-hidden rounded-xl border border-border bg-black shadow-xl"><img src={drill.thumbnailUrl} alt={`${drill.title} basketball drill diagram`} className="w-full object-contain" /></div>}
+            {drill.description && <section><h2 className="text-3xl font-bold mb-5">Drill Overview</h2><div className="whitespace-pre-line text-base leading-7 text-muted-foreground">{drill.description}</div></section>}
           </div>
-        </main>
+          <aside className="space-y-5 lg:sticky lg:top-24">
+            <Card className="border-border bg-card"><CardContent className="pt-6 space-y-4">
+              {drill.practiceSectionType && <div className="flex items-start gap-3"><Target className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Practice segment</div><div className="capitalize text-sm text-muted-foreground">{drill.practiceSectionType}</div></div></div>}
+              {drill.playerCountMin && <div className="flex items-start gap-3"><Users className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Players</div><div className="text-sm text-muted-foreground">From {drill.playerCountMin} players</div></div></div>}
+              {(drill.ageGroup || drill.difficulty) && <div className="flex flex-wrap gap-2">{drill.ageGroup && <Badge variant="secondary">{drill.ageGroup}</Badge>}{drill.difficulty && <Badge variant="secondary" className="capitalize">{drill.difficulty}</Badge>}</div>}
+              <div className="flex flex-wrap gap-2">{drill.tags.map((tag) => <Badge key={tag} variant="outline">{tag}</Badge>)}</div>
+            </CardContent></Card>
+            <PracticeCta drill={drill} />
+          </aside>
+        </div>
 
-        <Footer />
-      </div>
+        {drill.phases.length > 0 && <section className="mb-12"><h2 className="text-3xl font-bold mb-6">Drill Phases</h2><div className="space-y-4">{drill.phases.map((phase, index) => <Card key={`${phase.title}-${index}`} className="border-border bg-card"><CardContent className="pt-6"><div className="flex gap-4"><span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{index + 1}</span><div><h3 className="text-lg font-semibold">{phase.title}</h3>{phase.notes && <p className="mt-2 whitespace-pre-line leading-7 text-muted-foreground">{phase.notes}</p>}</div></div></CardContent></Card>)}</div></section>}
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <CoachingList title="Rules" items={drill.coaching.rules} /><CoachingList title="Coaching Cues" items={drill.coaching.coachingCues} />
+          <CoachingList title="Constraints" items={drill.coaching.constraints} /><CoachingList title="Progressions" items={drill.coaching.progressions} />
+          <CoachingList title="Regressions" items={drill.coaching.regressions} /><CoachingList title="Variations" items={drill.coaching.variations} />
+        </div>
+        <PracticeCta drill={drill} mobile />
+      </DetailShell>
     </>
   );
 };

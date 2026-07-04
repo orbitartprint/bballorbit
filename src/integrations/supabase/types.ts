@@ -952,6 +952,72 @@ export type Database = {
         }
         Relationships: []
       }
+      public_library_pages: {
+        Row: {
+          ai_profile_error: string | null
+          ai_profile_status: string
+          ai_profiled_at: string | null
+          cache_status: string
+          cached_payload: Json
+          created_at: string
+          id: string
+          kind: string
+          last_error: string | null
+          library_item_id: string
+          public_path: string
+          public_slug: string
+          rendered_at: string | null
+          rendered_html: string | null
+          seo_description: string | null
+          seo_title: string
+          thumbnail_path: string | null
+          updated_at: string
+          version_id: string
+        }
+        Insert: {
+          ai_profile_error?: string | null
+          ai_profile_status?: string
+          ai_profiled_at?: string | null
+          cache_status?: string
+          cached_payload?: Json
+          created_at?: string
+          id?: string
+          kind: string
+          last_error?: string | null
+          library_item_id: string
+          public_path: string
+          public_slug: string
+          rendered_at?: string | null
+          rendered_html?: string | null
+          seo_description?: string | null
+          seo_title: string
+          thumbnail_path?: string | null
+          updated_at?: string
+          version_id: string
+        }
+        Update: {
+          ai_profile_error?: string | null
+          ai_profile_status?: string
+          ai_profiled_at?: string | null
+          cache_status?: string
+          cached_payload?: Json
+          created_at?: string
+          id?: string
+          kind?: string
+          last_error?: string | null
+          library_item_id?: string
+          public_path?: string
+          public_slug?: string
+          rendered_at?: string | null
+          rendered_html?: string | null
+          seo_description?: string | null
+          seo_title?: string
+          thumbnail_path?: string | null
+          updated_at?: string
+          version_id?: string
+        }
+        Relationships: []
+      }
       subscription_cancellation_feedback: {
         Row: {
           created_at: string
