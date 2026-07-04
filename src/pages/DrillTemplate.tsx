@@ -29,9 +29,11 @@ const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: b
   return (
     <div className={mobile ? "fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden" : "rounded-xl border border-primary/30 bg-primary/5 p-5"}>
       <Button asChild size="lg" className="w-full">
-        <a href={href}>Start a Practice with this Drill <ExternalLink className="ml-2 h-4 w-4" /></a>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          Start a Practice with this Drill <ExternalLink className="ml-2 h-4 w-4" />
+        </a>
       </Button>
-      {!mobile && <p className="mt-2 text-center text-xs text-muted-foreground">Opens the Basketball Orbit Practice Planner with this drill already added.</p>}
+      {!mobile && <p className="mt-2 text-center text-xs text-muted-foreground">Opens the Basketball Orbit Practice Planner in a new tab with this drill already added.</p>}
     </div>
   );
 };
