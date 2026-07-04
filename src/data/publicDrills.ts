@@ -1,8 +1,10 @@
 import { z } from "zod";
 import { supabase, SUPABASE_URL } from "@/integrations/supabase/client";
+import { parsePublicDiagram } from "@/features/creator/publicDiagram";
+import type { DiagramState } from "@/features/creator/types";
 
 const categorySchema = z.object({ slug: z.string().min(1), label: z.string().min(1) });
-const phaseSchema = z.object({ title: z.string().default("Phase"), notes: z.string().default("") });
+const phaseSchema = z.object({ title: z.string().default("Phase"), notes: z.string().default(""), notesDocument: z.unknown().nullable().optional() });
 const coachingSchema = z.object({
   rules: z.array(z.string()).default([]), coachingCues: z.array(z.string()).default([]),
   constraints: z.array(z.string()).default([]), progressions: z.array(z.string()).default([]),
@@ -12,6 +14,8 @@ const coachingSchema = z.object({
 const payloadSchema = z.object({
   contractVersion: z.number().optional(), libraryItemId: z.string().uuid(), versionId: z.string().uuid(),
   kind: z.literal("drill"), title: z.string().min(1), description: z.string().nullable().optional(),
+  descriptionDocument: z.unknown().nullable().optional(),
+  diagramDocument: z.unknown().nullable().optional(),
   excerpt: z.string().nullable().optional(), slug: z.string().min(1), tags: z.array(z.string()).default([]),
   categories: z.array(categorySchema).optional(), canonicalTags: z.array(z.string()).default([]),
   courtScope: z.string().nullable().optional(), playerCountMin: z.number().nullable().optional(),
@@ -30,10 +34,11 @@ const publicPageSchema = z.object({
 export type PublicDrillCategory = z.infer<typeof categorySchema>;
 export type PublicDrillPhase = z.infer<typeof phaseSchema>;
 export type PublicDrill = {
-  id: string; versionId: string; slug: string; title: string; description: string; excerpt: string;
+  id: string; versionId: string; slug: string; title: string; description: string; descriptionDocument: unknown; excerpt: string;
   tags: string[]; categories: PublicDrillCategory[]; thumbnailUrl: string | null; courtScope: string | null;
   playerCountMin: number | null; difficulty: string | null; ageGroup: string | null;
   practiceSectionType: string | null; phases: PublicDrillPhase[];
+  diagram: DiagramState | null;
   coaching: { rules: string[]; coachingCues: string[]; constraints: string[]; progressions: string[]; regressions: string[]; variations: string[] };
   publishedAt: string | null;
 };
@@ -57,14 +62,16 @@ const mapPublicPage = (value: unknown): PublicDrill | null => {
   const categories = payload.categories?.length ? payload.categories : payload.canonicalTags.map((slug) => ({ slug, label: categoryLabel(slug) }));
   const coaching = coachingSchema.parse(payload.coaching ?? {});
   const description = payload.description?.trim() || row.seo_description?.trim() || "";
+  const tags = dedupe([...categories.map((category) => category.label), ...payload.tags]);
   return {
     id: payload.libraryItemId, versionId: payload.versionId, slug: payload.slug, title: payload.title,
-    description, excerpt: payload.excerpt?.trim() || description.slice(0, 240),
-    tags: dedupe([...categories.map((category) => category.label), ...payload.tags]), categories,
+    description, descriptionDocument: payload.descriptionDocument ?? null, excerpt: payload.excerpt?.trim() || description.slice(0, 240),
+    tags, categories,
     thumbnailUrl: storageUrl(payload.thumbnailPath ?? row.thumbnail_path), courtScope: payload.courtScope ?? null,
     playerCountMin: payload.playerCountMin ?? null, difficulty: payload.difficulty ?? null,
     ageGroup: payload.ageGroup ?? null, practiceSectionType: payload.practiceSectionType ?? null,
     phases: payload.phases ?? [],
+    diagram: parsePublicDiagram(payload.diagramDocument, { title: payload.title, description, descriptionDocument: payload.descriptionDocument, tags }),
     coaching: { rules: coaching.rules ?? [], coachingCues: coaching.coachingCues ?? [], constraints: coaching.constraints ?? [], progressions: coaching.progressions ?? [], regressions: coaching.regressions ?? [], variations: coaching.variations ?? [] },
     publishedAt: payload.publishedAt ?? row.rendered_at,
   };

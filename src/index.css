@@ -8,6 +8,22 @@
 }
 
 @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800 900;
+  font-display: swap;
+  src: url('./assets/fonts/Inter-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400 800;
@@ -142,6 +158,47 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  .public-court-diagram {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .rich-text-content p {
+    margin: 0;
+  }
+
+  .rich-text-content p + p,
+  .rich-text-content :is(ul, ol) + p,
+  .rich-text-content p + :is(ul, ol) {
+    margin-top: 0.5rem;
+  }
+
+  .rich-text-content ul,
+  .rich-text-content ol {
+    margin: 0.5rem 0;
+    padding-left: 1.4rem;
+  }
+
+  .rich-text-content ul {
+    list-style: disc;
+  }
+
+  .rich-text-content ol {
+    list-style: decimal;
+  }
+
+  .rich-text-content li {
+    padding-left: 0.15rem;
+  }
+
+  .rich-text-content li > p {
+    display: inline;
+  }
+
+  .rich-text-preview {
+    max-height: 4.5rem;
+    overflow: hidden;
+  }
+
   .hero-gradient {
     background: var(--gradient-hero);
   }

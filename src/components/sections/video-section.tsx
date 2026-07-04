@@ -14,8 +14,8 @@ const VideoSection = () => {
   }, []);
 
   // 🔸 Hier änderst du nur diese eine Zeile:
-  const videoId = "01rcPig8FNg";
-  const videoTitle ="How to Attack Every Pick-and-Roll Coverage";
+  const videoId = "BvXR1cZFKtQ";
+  const videoTitle ="The One Basketball Drill You Can Use for Almost Everything";
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;

@@ -13,7 +13,7 @@ const APP_URL = "https://app.bballorbit.com/";
 const benefits = [
   {
     icon: PencilRuler,
-    title: "Create clear drills",
+    title: "Create clear drills and plays",
     description: "Turn your ideas into court diagrams players can understand.",
   },
   {
@@ -31,7 +31,7 @@ const benefits = [
 const PracticePlannerPromotion = () => {
   return (
     <section
-      className="relative isolate overflow-hidden border-y border-white/5 bg-[#080808] py-20 md:py-28"
+      className="relative isolate overflow-hidden border-y border-white/5 bg-[#080808] pb-20 pt-14 md:pb-28 md:pt-20"
       aria-labelledby="practice-planner-heading"
     >
       <div
@@ -57,12 +57,12 @@ const PracticePlannerPromotion = () => {
               id="practice-planner-heading"
               className="text-3xl font-bold leading-tight text-white md:text-4xl xl:text-5xl"
             >
-              From drill idea to practice plan—
-              <span className="text-gradient-orange">all in one place.</span>
+              From drill idea to practice plan —
+              <span className="text-gradient-orange"> all in one place.</span>
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-gray-300">
-              Create visual drills, organize complete sessions, and refine every detail before you step on the court.
+              Create visual drills and plays, organize complete sessions, and refine every detail before you step on the court.
             </p>
 
             <div className="mt-8 space-y-5">

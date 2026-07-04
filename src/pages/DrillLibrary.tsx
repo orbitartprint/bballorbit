@@ -5,7 +5,8 @@ import { useQuery } from "@tanstack/react-query";
 import { Check, ChevronDown, RefreshCw, Target, X } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { RichTextRenderer } from "@/components/RichTextRenderer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -112,10 +113,17 @@ const DrillLibrary = () => {
                     </Link>
                     <CardHeader>
                       <CardTitle className="text-xl text-foreground">{drill.title}</CardTitle>
-                      <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                        {drill.categories.map((category) => <span key={category.slug} className="inline-flex items-center gap-1"><Target className="w-4 h-4 text-primary" />{category.label}</span>)}
-                      </div>
-                      <CardDescription className="line-clamp-3 mt-2 whitespace-pre-line">{drill.excerpt}</CardDescription>
+                      {drill.categories.length > 0 && (
+                        <div className="flex items-start gap-1.5 text-sm text-muted-foreground">
+                          <Target className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                          <span>{drill.categories.map((category) => category.label).join(", ")}</span>
+                        </div>
+                      )}
+                      <RichTextRenderer
+                        document={drill.descriptionDocument}
+                        fallbackText={drill.description}
+                        className="rich-text-preview mt-2 text-sm text-muted-foreground"
+                      />
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="flex flex-wrap gap-2">{drill.tags.slice(0, 4).map((tag) => <Badge key={tag} variant="secondary" className="text-xs">{tag}</Badge>)}</div>

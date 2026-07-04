@@ -4,16 +4,16 @@ const MoreVideos = () => {
   // 🔸 Hier brauchst du nur die Video-IDs und Titel anzugeben
   const videos = [
     {
+      id: "01rcPig8FNg",
+      title: "How to Attack Every Pick-and-Roll Coverage"
+    },
+    {
       id: "TX8U5Zav8e4",
       title: "The Horns Offense Breakdown: Every Option From One Setup"
     },
     {
       id: "I9q8LFG6rpk",
       title: "How to Break a Press in Basketball: 4 Principles + Game-Like Drills"
-    },
-    {
-      id: "dtNQNdSTcRg",
-      title: "The Drill Format You’re Not Using - But Make Your Players Elite"
     },
   ];
 

@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, ExternalLink, RefreshCw, Target, Users } from "lucide-react";
+import { ArrowLeft, ExternalLink, Play, RefreshCw, Target, Users } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +10,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchPublicDrill, type PublicDrill } from "@/data/publicDrills";
+import { RichTextRenderer } from "@/components/RichTextRenderer";
+import { AnimationViewerDialog } from "@/features/creator/AnimationViewerDialog";
+import { buildAnimationTimeline } from "@/features/creator/animation";
+import { CourtSvg } from "@/features/creator/court/CourtSvg";
+import { cn } from "@/lib/utils";
 
 const APP_URL = "https://app.bballorbit.com";
 
@@ -40,10 +45,15 @@ const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: b
 
 const DrillTemplate = () => {
   const { slug = "" } = useParams();
+  const [animationOpen, setAnimationOpen] = useState(false);
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
   const { data: drill, isLoading, isError, refetch } = useQuery({
     queryKey: ["public-drill", slug], queryFn: () => fetchPublicDrill(slug), retry: 1, staleTime: 5 * 60 * 1000,
   });
+  const canAnimate = useMemo(() => {
+    if (!drill?.diagram) return false;
+    return buildAnimationTimeline(drill.diagram, drill.diagram.activePhaseId, "all").totalMs > 0;
+  }, [drill?.diagram]);
 
   if (isLoading) return <DetailShell><Skeleton className="h-10 w-44 mb-8" /><Skeleton className="h-16 max-w-3xl mx-auto mb-10" /><div className="grid gap-8 md:grid-cols-2"><Skeleton className="aspect-video rounded-xl" /><Skeleton className="h-72 rounded-xl" /></div></DetailShell>;
   if (isError) return <DetailShell><div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-8 text-center"><h1 className="text-2xl font-bold">This drill could not be loaded.</h1><p className="mt-2 text-muted-foreground">Please try again in a moment.</p><Button className="mt-5 gap-2" onClick={() => void refetch()}><RefreshCw className="h-4 w-4" />Try again</Button></div></DetailShell>;
@@ -68,28 +78,62 @@ const DrillTemplate = () => {
       <DetailShell>
         <Link to="/drills" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link>
         <div className="text-center mb-10">
-          <div className="mb-4 flex flex-wrap justify-center gap-2">{drill.categories.map((category) => <Badge key={category.slug} className="bg-primary/15 text-primary border-primary/30">{category.label}</Badge>)}</div>
+          <div className="mb-4 flex flex-wrap justify-center gap-2">{drill.categories.map((category) => <Badge key={category.slug} variant="secondary">{category.label}</Badge>)}</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">{drill.title}</h1>
-          {drill.excerpt && <p className="mt-5 text-lg text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">{drill.excerpt}</p>}
+          {(drill.description || drill.descriptionDocument) && (
+            <RichTextRenderer document={drill.descriptionDocument} fallbackText={drill.description} className="mx-auto mt-5 max-w-3xl text-left text-base leading-7 text-muted-foreground md:text-lg" />
+          )}
+          {canAnimate && <Button type="button" variant="outline" className="mt-6" onClick={() => setAnimationOpen(true)}><Play className="h-4 w-4" />Play Animation</Button>}
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,.75fr)] lg:items-start mb-12">
-          <div className="space-y-8">
-            {drill.thumbnailUrl && <div className="overflow-hidden rounded-xl border border-border bg-black shadow-xl"><img src={drill.thumbnailUrl} alt={`${drill.title} basketball drill diagram`} className="w-full object-contain" /></div>}
-            {drill.description && <section><h2 className="text-3xl font-bold mb-5">Drill Overview</h2><div className="whitespace-pre-line text-base leading-7 text-muted-foreground">{drill.description}</div></section>}
-          </div>
+          <section>
+            <h2 className="mb-6 text-3xl font-bold">Drill Phases</h2>
+            {drill.diagram ? (
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                {drill.diagram.phases.map((phase, index) => (
+                  <article key={phase.id} className="space-y-3">
+                    <h3 className="text-sm font-semibold text-muted-foreground">{phase.title || `Phase ${index + 1}`}</h3>
+                    <div className="flex h-[320px] items-center justify-center overflow-hidden rounded-xl border border-border bg-background md:h-[360px]">
+                      <CourtSvg
+                        template={drill.diagram!.court.template}
+                        size={drill.diagram!.court.size}
+                        theme={drill.diagram!.court.theme}
+                        showGrid={false}
+                        margin={drill.diagram!.court.margin}
+                        elementScale={drill.diagram!.court.elementScale}
+                        fillViewportBackground
+                        interactive={false}
+                        phase={phase}
+                        selection={null}
+                        draftActionStart={null}
+                        className={cn("public-court-diagram bg-transparent shadow-none", drill.diagram!.court.size === "full-horizontal" ? "h-auto max-h-full w-full" : "h-full w-auto max-w-full")}
+                        onCourtPointerDown={() => undefined}
+                        onEntityPointerDown={() => undefined}
+                        onPointerMove={() => undefined}
+                        onPointerUp={() => undefined}
+                      />
+                    </div>
+                    {phase.notes && <RichTextRenderer document={phase.notesDocument} fallbackText={phase.notes} className="rounded-xl border border-border bg-muted/20 p-4 text-sm leading-relaxed text-muted-foreground" />}
+                  </article>
+                ))}
+              </div>
+            ) : drill.thumbnailUrl ? (
+              <div className="overflow-hidden rounded-xl border border-border bg-black shadow-xl"><img src={drill.thumbnailUrl} alt={`${drill.title} basketball drill diagram`} className="w-full object-contain" /></div>
+            ) : (
+              <p className="rounded-xl border border-border bg-muted/20 p-5 text-muted-foreground">Phase diagrams will be available after this drill is republished.</p>
+            )}
+          </section>
           <aside className="space-y-5 lg:sticky lg:top-24">
             <Card className="border-border bg-card"><CardContent className="pt-6 space-y-4">
               {drill.practiceSectionType && <div className="flex items-start gap-3"><Target className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Practice segment</div><div className="capitalize text-sm text-muted-foreground">{drill.practiceSectionType}</div></div></div>}
               {drill.playerCountMin && <div className="flex items-start gap-3"><Users className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Players</div><div className="text-sm text-muted-foreground">From {drill.playerCountMin} players</div></div></div>}
-              {(drill.ageGroup || drill.difficulty) && <div className="flex flex-wrap gap-2">{drill.ageGroup && <Badge variant="secondary">{drill.ageGroup}</Badge>}{drill.difficulty && <Badge variant="secondary" className="capitalize">{drill.difficulty}</Badge>}</div>}
-              <div className="flex flex-wrap gap-2">{drill.tags.map((tag) => <Badge key={tag} variant="outline">{tag}</Badge>)}</div>
+              {(drill.ageGroup || drill.difficulty) && <div className="flex flex-wrap gap-2">{drill.ageGroup && <Badge variant="outline">{drill.ageGroup}</Badge>}{drill.difficulty && <Badge variant="outline" className="capitalize">{drill.difficulty}</Badge>}</div>}
+              <div className="flex flex-wrap gap-2">{drill.tags.map((tag) => <Badge key={tag} variant="secondary">{tag}</Badge>)}</div>
             </CardContent></Card>
             <PracticeCta drill={drill} />
           </aside>
         </div>
-
-        {drill.phases.length > 0 && <section className="mb-12"><h2 className="text-3xl font-bold mb-6">Drill Phases</h2><div className="space-y-4">{drill.phases.map((phase, index) => <Card key={`${phase.title}-${index}`} className="border-border bg-card"><CardContent className="pt-6"><div className="flex gap-4"><span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{index + 1}</span><div><h3 className="text-lg font-semibold">{phase.title}</h3>{phase.notes && <p className="mt-2 whitespace-pre-line leading-7 text-muted-foreground">{phase.notes}</p>}</div></div></CardContent></Card>)}</div></section>}
 
         <div className="grid gap-6 md:grid-cols-2">
           <CoachingList title="Rules" items={drill.coaching.rules} /><CoachingList title="Coaching Cues" items={drill.coaching.coachingCues} />
@@ -97,6 +141,7 @@ const DrillTemplate = () => {
           <CoachingList title="Regressions" items={drill.coaching.regressions} /><CoachingList title="Variations" items={drill.coaching.variations} />
         </div>
         <PracticeCta drill={drill} mobile />
+        {drill.diagram && <AnimationViewerDialog diagram={drill.diagram} itemKind="drill" open={animationOpen} onOpenChange={setAnimationOpen} />}
       </DetailShell>
     </>
   );
