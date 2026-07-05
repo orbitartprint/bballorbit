@@ -76,14 +76,16 @@ const DrillTemplate = () => {
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: drill.title, description: drill.excerpt, image: drill.thumbnailUrl ?? undefined, step: structuredSteps.map((phase) => ({ "@type": "HowToStep", name: phase.title, text: phase.notes })) })}</script>
       </Helmet>
       <DetailShell>
-        <Link to="/drills" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link>
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+          <Link to="/drills" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link>
+          {canAnimate && <Button type="button" variant="outline" onClick={() => setAnimationOpen(true)}><Play className="h-4 w-4" />Play Animation</Button>}
+        </div>
         <div className="text-center mb-10">
           <div className="mb-4 flex flex-wrap justify-center gap-2">{drill.categories.map((category) => <Badge key={category.slug} variant="secondary">{category.label}</Badge>)}</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">{drill.title}</h1>
           {(drill.description || drill.descriptionDocument) && (
             <RichTextRenderer document={drill.descriptionDocument} fallbackText={drill.description} className="mx-auto mt-5 max-w-3xl text-left text-base leading-7 text-muted-foreground md:text-lg" />
           )}
-          {canAnimate && <Button type="button" variant="outline" className="mt-6" onClick={() => setAnimationOpen(true)}><Play className="h-4 w-4" />Play Animation</Button>}
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,.75fr)] lg:items-start mb-12">
@@ -114,7 +116,7 @@ const DrillTemplate = () => {
                         onPointerUp={() => undefined}
                       />
                     </div>
-                    {phase.notes && <RichTextRenderer document={phase.notesDocument} fallbackText={phase.notes} className="rounded-xl border border-border bg-muted/20 p-4 text-sm leading-relaxed text-muted-foreground" />}
+                    {(phase.notes || phase.notesDocument) && <RichTextRenderer document={phase.notesDocument} fallbackText={phase.notes} className="rounded-xl border border-border bg-muted/20 p-4 text-sm leading-relaxed text-muted-foreground" />}
                   </article>
                 ))}
               </div>
