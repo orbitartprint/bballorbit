@@ -118,18 +118,16 @@ const DrillTemplate = () => {
                   </article>
                 ))}
               </div>
-            ) : drill.thumbnailUrl ? (
-              <div className="overflow-hidden rounded-xl border border-border bg-black shadow-xl"><img src={drill.thumbnailUrl} alt={`${drill.title} basketball drill diagram`} className="w-full object-contain" /></div>
             ) : (
               <p className="rounded-xl border border-border bg-muted/20 p-5 text-muted-foreground">Phase diagrams will be available after this drill is republished.</p>
             )}
           </section>
           <aside className="space-y-5 lg:sticky lg:top-24">
-            <Card className="border-border bg-card"><CardContent className="pt-6 space-y-4">
+            <Card className="border-border bg-card"><CardHeader className="pb-3"><CardTitle className="text-xl">Drill details</CardTitle></CardHeader><CardContent className="space-y-4">
               {drill.practiceSectionType && <div className="flex items-start gap-3"><Target className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Practice segment</div><div className="capitalize text-sm text-muted-foreground">{drill.practiceSectionType}</div></div></div>}
               {drill.playerCountMin && <div className="flex items-start gap-3"><Users className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Players</div><div className="text-sm text-muted-foreground">From {drill.playerCountMin} players</div></div></div>}
               {(drill.ageGroup || drill.difficulty) && <div className="flex flex-wrap gap-2">{drill.ageGroup && <Badge variant="outline">{drill.ageGroup}</Badge>}{drill.difficulty && <Badge variant="outline" className="capitalize">{drill.difficulty}</Badge>}</div>}
-              <div className="flex flex-wrap gap-2">{drill.tags.map((tag) => <Badge key={tag} variant="secondary">{tag}</Badge>)}</div>
+              {drill.tags.length > 0 && <div className="border-t border-border pt-4"><div className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Focus areas</div><div className="flex flex-wrap gap-2">{drill.tags.map((tag) => <Badge key={tag} variant="secondary">{tag}</Badge>)}</div></div>}
             </CardContent></Card>
             <PracticeCta drill={drill} />
           </aside>

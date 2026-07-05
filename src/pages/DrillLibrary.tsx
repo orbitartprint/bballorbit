@@ -14,6 +14,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchPublicDrills, getPublicDrillCategories, getPublicDrillTags } from "@/data/publicDrills";
+import { CourtSvg } from "@/features/creator/court/CourtSvg";
+import { cn } from "@/lib/utils";
 
 const DrillLibrary = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -108,7 +110,26 @@ const DrillLibrary = () => {
                   <Card key={drill.id} className="group overflow-hidden border-border bg-card hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
                     <Link to={`/drills/${drill.slug}`} className="block">
                       <div className="aspect-video w-full overflow-hidden bg-muted flex items-center justify-center">
-                        {drill.thumbnailUrl ? <img src={drill.thumbnailUrl} alt={`${drill.title} basketball drill diagram`} loading="lazy" className="h-full w-full object-contain group-hover:scale-[1.02] transition-transform duration-300" /> : <Target className="h-12 w-12 text-primary/50" />}
+                        {drill.diagram ? (
+                          <CourtSvg
+                            template={drill.diagram.court.template}
+                            size={drill.diagram.court.size}
+                            theme={drill.diagram.court.theme}
+                            showGrid={false}
+                            margin={drill.diagram.court.margin}
+                            elementScale={drill.diagram.court.elementScale}
+                            fillViewportBackground
+                            interactive={false}
+                            phase={drill.diagram.phases[0]}
+                            selection={null}
+                            draftActionStart={null}
+                            className={cn("public-court-diagram pointer-events-none h-full max-h-full max-w-full bg-transparent shadow-none transition-transform duration-300 group-hover:scale-[1.02]", drill.diagram.court.size === "full-horizontal" ? "h-auto w-full" : "w-auto")}
+                            onCourtPointerDown={() => undefined}
+                            onEntityPointerDown={() => undefined}
+                            onPointerMove={() => undefined}
+                            onPointerUp={() => undefined}
+                          />
+                        ) : <Target className="h-12 w-12 text-primary/50" aria-label="Diagram pending republish" />}
                       </div>
                     </Link>
                     <CardHeader>

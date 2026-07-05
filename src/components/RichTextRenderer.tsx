@@ -1,49 +1,12 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { normalizeRichTextDocument, type RichTextDocument, type RichTextNode } from "@/features/creator/richText";
 
-type RichTextMark = { type: "bold" | "italic" | "underline" };
-type RichTextNode = {
-  type: "doc" | "paragraph" | "bulletList" | "orderedList" | "listItem" | "text" | "hardBreak";
-  text?: string;
-  marks?: RichTextMark[];
-  content?: RichTextNode[];
+const hasVisibleContent = (node: RichTextNode): boolean => {
+  if (node.type === "text") return Boolean(node.text?.trim());
+  if (node.type === "hardBreak") return false;
+  return (node.content ?? []).some(hasVisibleContent);
 };
-
-const nodeTypes = new Set<RichTextNode["type"]>(["doc", "paragraph", "bulletList", "orderedList", "listItem", "text", "hardBreak"]);
-const markTypes = new Set<RichTextMark["type"]>(["bold", "italic", "underline"]);
-
-const sanitizeNode = (value: unknown, root = false): RichTextNode | null => {
-  if (!value || typeof value !== "object") return null;
-  const candidate = value as { type?: unknown; text?: unknown; marks?: unknown; content?: unknown };
-  if (typeof candidate.type !== "string" || !nodeTypes.has(candidate.type as RichTextNode["type"])) return null;
-  const type = candidate.type as RichTextNode["type"];
-  if ((root && type !== "doc") || (!root && type === "doc")) return null;
-  if (type === "hardBreak") return { type };
-  if (type === "text") {
-    if (typeof candidate.text !== "string") return null;
-    const marks = Array.isArray(candidate.marks)
-      ? candidate.marks.flatMap((mark) => {
-        const markType = mark && typeof mark === "object" ? (mark as { type?: unknown }).type : null;
-        return typeof markType === "string" && markTypes.has(markType as RichTextMark["type"])
-          ? [{ type: markType as RichTextMark["type"] }]
-          : [];
-      })
-      : undefined;
-    return { type, text: candidate.text, marks };
-  }
-  const content = Array.isArray(candidate.content)
-    ? candidate.content.map((child) => sanitizeNode(child)).filter((child): child is RichTextNode => Boolean(child))
-    : undefined;
-  return { type, content };
-};
-
-const fallbackDocument = (text: string): RichTextNode => ({
-  type: "doc",
-  content: text.replace(/\r\n?/g, "\n").split("\n").map((line) => ({
-    type: "paragraph",
-    content: line ? [{ type: "text", text: line }] : undefined,
-  })),
-});
 
 const renderNode = (node: RichTextNode, key: string): ReactNode => {
   if (node.type === "text") {
@@ -64,7 +27,9 @@ const renderNode = (node: RichTextNode, key: string): ReactNode => {
   return <>{children}</>;
 };
 
-export const RichTextRenderer = ({ document, fallbackText = "", className }: { document?: unknown; fallbackText?: string; className?: string }) => {
-  const normalized = sanitizeNode(document, true) ?? fallbackDocument(fallbackText);
-  return <div className={cn("rich-text-content", className)}>{(normalized.content ?? []).map((node, index) => renderNode(node, `rich-${index}`))}</div>;
+export const RichTextRenderer = ({ document, fallbackText = "", className }: { document?: RichTextDocument | null | unknown; fallbackText?: string; className?: string }) => {
+  const normalized = normalizeRichTextDocument(document, fallbackText);
+  const visibleContent = [...(normalized.content ?? [])];
+  while (visibleContent.length > 0 && !hasVisibleContent(visibleContent[visibleContent.length - 1])) visibleContent.pop();
+  return <div className={cn("rich-text-content", className)}>{visibleContent.map((node, index) => renderNode(node, `rich-${index}`))}</div>;
 };
