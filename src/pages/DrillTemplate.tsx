@@ -76,9 +76,8 @@ const DrillTemplate = () => {
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: drill.title, description: drill.excerpt, image: drill.thumbnailUrl ?? undefined, step: structuredSteps.map((phase) => ({ "@type": "HowToStep", name: phase.title, text: phase.notes })) })}</script>
       </Helmet>
       <DetailShell>
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+        <div className="mb-8 flex items-center">
           <Link to="/drills" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link>
-          {canAnimate && <Button type="button" variant="outline" onClick={() => setAnimationOpen(true)}><Play className="h-4 w-4" />Play Animation</Button>}
         </div>
         <div className="text-center mb-10">
           <div className="mb-4 flex flex-wrap justify-center gap-2">{drill.categories.map((category) => <Badge key={category.slug} variant="secondary">{category.label}</Badge>)}</div>
@@ -86,6 +85,7 @@ const DrillTemplate = () => {
           {(drill.description || drill.descriptionDocument) && (
             <RichTextRenderer document={drill.descriptionDocument} fallbackText={drill.description} className="mx-auto mt-5 max-w-3xl text-left text-base leading-7 text-muted-foreground md:text-lg" />
           )}
+          {canAnimate && <Button type="button" className="mt-6" onClick={() => setAnimationOpen(true)}><Play className="h-4 w-4" />Play Animation</Button>}
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,.75fr)] lg:items-start mb-12">
