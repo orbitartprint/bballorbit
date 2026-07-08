@@ -527,25 +527,25 @@ where structure meets freedom, and science meets creativity.
 <div class="infobox" style="display:flex; gap:20px; align-items:center;">
   <!-- Left Text -->
   <div style="flex:2;">
-    <h4>Ready to turn these ideas into real training?</h4>
+    <h4>Ready to turn these ideas into a real practice plan?</h4>
     <p>
-      If you want to move beyond traditional drills and design practices that actually build decision-making,
-      spacing and player IQ, I created a complete resource that puts the CLA into action:
+      If you want to move beyond disconnected drills and design practices that actually build decision-making,
+      spacing, and player IQ, the Basketball Orbit Practice Planner helps you turn those principles into a complete session:
     </p>
     <p>
-      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a><br>
-      A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
+      👉 <a href="https://app.bballorbit.com/">Basketball Orbit Practice Planner</a><br>
+      Create visual drills, organize complete practices, add constraints and coaching notes, and refine the plan with Orbit AI before you step on the court.
     </p>
     <p>
-      <a href="/ssg-playbook">→ Learn more</a>
+      <a href="https://app.bballorbit.com/">→ Build your next practice</a>
     </p>
   </div>
   <!-- Right Mockup -->
   <div style="flex:1; min-width:200px; padding:10px 0;">
-    <a href="/ssg-playbook">
+    <a href="https://app.bballorbit.com/">
       <img 
-        src="/lovable-uploads/mockup-main-trans.webp"
-        alt="SSG Playbook Mockup"
+        src="/lovable-uploads/mockup-app-trans.webp"
+        alt="Basketball Orbit Practice Planner app mockup"
         style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
       >
     </a>
