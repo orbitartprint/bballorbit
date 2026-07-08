@@ -544,7 +544,7 @@ where structure meets freedom, and science meets creativity.
   <div style="flex:1; min-width:200px; padding:10px 0;">
     <a href="https://app.bballorbit.com/">
       <img 
-        src="/lovable-uploads/mockup-app-trans.webp"
+        src="/lovable-uploads/mockup-app-trans-2.webp"
         alt="Basketball Orbit Practice Planner app mockup"
         style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
       >

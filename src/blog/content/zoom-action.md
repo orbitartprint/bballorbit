@@ -505,25 +505,25 @@ When you combine it with [small-sided games](/ssg-playbook) and a [constraints-l
 <div class="infobox flex flex-col md:flex-row gap-5 items-center">
   <!-- Left Text -->
   <div class="w-full md:flex-[2]">
-    <h4>Want your Zoom Action to create more advantages?</h4>
+    <h4>Want to build better Zoom Action reps into practice?</h4>
     <p>
       Teach the reads behind the action — not just the action itself.
-      My Ultimate SSG Playbook gives you 100+ drills that train timing, spacing, and real decision-making.
+      The Basketball Orbit Practice Planner helps you turn those details into a complete session with visual drills, constraints, and coaching notes.
     </p>
     <p>
-      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook</a><br>
-      A full system of small-sided games that teach the game through problems, not patterns — including ready-to-use constraints and progressions for every age group.
+      👉 <a href="https://app.bballorbit.com/">Basketball Orbit Practice Planner</a><br>
+      Create the drill, organize the practice flow, and refine your teaching points with Orbit AI before you step on the court.
     </p>
     <p>
-      <a href="/ssg-playbook">→ Learn more</a>
+      <a href="https://app.bballorbit.com/">→ Build your next practice</a>
     </p>
   </div>
   <!-- Right Mockup -->
   <div class="w-full md:flex-1 md:min-w-[200px] py-2">
-    <a href="/ssg-playbook">
+    <a href="https://app.bballorbit.com/">
       <img 
-        src="/lovable-uploads/mockup-main-trans.webp"
-        alt="SSG Playbook Mockup"
+        src="/lovable-uploads/mockup-app-trans-2.webp"
+        alt="Basketball Orbit Practice Planner app mockup"
         class="w-full h-auto object-contain rounded-xl cursor-pointer"
       >
     </a>

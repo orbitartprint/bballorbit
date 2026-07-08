@@ -120,24 +120,24 @@ You’ll get access to drills, templates, and practical tools to help your team 
 <div class="infobox" style="display:flex; gap:20px; align-items:center;">
   <!-- Left Text -->
   <div style="flex:2;">
-    <h4>Want game-like drills that build faster transition automatically?</h4>
+    <h4>Want to build faster transition into your next practice?</h4>
     <p>
-      If you're ready to take this a step further, I created a complete resource with 100+ small-sided games that teach the habits you want in transition — speed, spacing, advantage creation, and instant decision-making.
+      If you're ready to take this a step further, the Basketball Orbit Practice Planner helps you turn transition concepts into a complete session with clear drills, timings, constraints, and coaching notes.
     </p>
     <p>
-      👉 <a href="/ssg-playbook">The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills</a><br>
-      A full framework for developing transition instincts through purposeful constraints — not scripted patterns.
+      👉 <a href="https://app.bballorbit.com/">Basketball Orbit Practice Planner</a><br>
+      Create visual drills, organize your practice flow, and refine the plan with Orbit AI before your team steps on the court.
     </p>
     <p>
-      <a href="/ssg-playbook">→ Learn more</a>
+      <a href="https://app.bballorbit.com/">→ Build your next practice</a>
     </p>
   </div>
   <!-- Right Mockup -->
   <div style="flex:1; min-width:200px; padding:10px 0;">
-    <a href="/ssg-playbook">
+    <a href="https://app.bballorbit.com/">
       <img 
-        src="/lovable-uploads/mockup-main-trans.webp"
-        alt="SSG Playbook Mockup"
+        src="/lovable-uploads/mockup-app-trans-2.webp"
+        alt="Basketball Orbit Practice Planner app mockup"
         style="width:100%; height:auto; object-fit:contain; border-radius:12px; cursor:pointer;"
       >
     </a>
