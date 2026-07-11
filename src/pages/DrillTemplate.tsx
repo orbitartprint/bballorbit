@@ -44,7 +44,7 @@ const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: b
 };
 
 const CopyAndEditCta = ({ drill }: { drill: PublicDrill }) => {
-  const href = `${APP_URL}/drills/${encodeURIComponent(drill.slug)}?copyAndEdit=1`;
+  const href = `${APP_URL}/creator/copy/${encodeURIComponent(drill.id)}`;
   return (
     <Button asChild variant="outline" size="lg" className="w-full border-primary bg-black text-foreground hover:bg-primary/10 hover:text-foreground">
       <a href={href} target="_blank" rel="noopener noreferrer">
@@ -136,6 +136,7 @@ const DrillTemplate = () => {
             )}
           </section>
           <aside className="space-y-5">
+            <CopyAndEditCta drill={drill} />
             <div className="space-y-5 lg:sticky lg:top-24">
               <Card className="border-border bg-card"><CardHeader className="pb-3"><CardTitle className="text-xl">Drill details</CardTitle></CardHeader><CardContent className="space-y-4">
                 {drill.practiceSectionType && <div className="flex items-start gap-3"><Target className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Practice segment</div><div className="capitalize text-sm text-muted-foreground">{drill.practiceSectionType}</div></div></div>}
@@ -145,7 +146,6 @@ const DrillTemplate = () => {
               </CardContent></Card>
               <PracticeCta drill={drill} />
             </div>
-            <CopyAndEditCta drill={drill} />
           </aside>
         </div>
 
