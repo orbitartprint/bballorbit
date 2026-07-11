@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, Copy, ExternalLink, Play, RefreshCw, Target, Users } from "lucide-react";
+import { ArrowLeft, ExternalLink, Play, RefreshCw, Target, Users } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Badge } from "@/components/ui/badge";
@@ -31,13 +31,13 @@ const CoachingList = ({ title, items }: { title: string; items: string[] }) => i
 
 const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: boolean }) => {
   const practiceHref = `${APP_URL}/practice/new?addLibraryItem=${encodeURIComponent(drill.id)}`;
-  const copyAndEditHref = `${APP_URL}/creator/new?copyFrom=${encodeURIComponent(drill.id)}`;
+  const copyAndEditHref = `${APP_URL}/creator/${encodeURIComponent(drill.id)}`;
   return (
     <div className={mobile ? "fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden" : "rounded-xl border border-primary/30 bg-primary/5 p-5"}>
       {!mobile && (
         <Button asChild variant="outline" size="lg" className="mb-3 w-full border-primary bg-black text-foreground hover:bg-primary/10 hover:text-foreground">
           <a href={copyAndEditHref} target="_blank" rel="noopener noreferrer">
-            <Copy className="mr-2 h-4 w-4" />Copy & Edit this Drill <ExternalLink className="ml-2 h-4 w-4" />
+            Copy & Edit this Drill <ExternalLink className="ml-2 h-4 w-4" />
           </a>
         </Button>
       )}
