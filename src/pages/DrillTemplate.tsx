@@ -31,8 +31,16 @@ const CoachingList = ({ title, items }: { title: string; items: string[] }) => i
 
 const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: boolean }) => {
   const practiceHref = `${APP_URL}/practice/new?addLibraryItem=${encodeURIComponent(drill.id)}`;
+  const copyAndEditHref = `${APP_URL}/creator/new?copyFrom=${encodeURIComponent(drill.id)}`;
   return (
     <div className={mobile ? "fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden" : "rounded-xl border border-primary/30 bg-primary/5 p-5"}>
+      {!mobile && (
+        <Button asChild variant="outline" size="lg" className="mb-3 w-full border-primary bg-black text-foreground hover:bg-primary/10 hover:text-foreground">
+          <a href={copyAndEditHref} target="_blank" rel="noopener noreferrer">
+            <Copy className="mr-2 h-4 w-4" />Copy & Edit this Drill <ExternalLink className="ml-2 h-4 w-4" />
+          </a>
+        </Button>
+      )}
       <Button asChild size="lg" className="w-full">
         <a href={practiceHref} target="_blank" rel="noopener noreferrer">
           Start a Practice with this Drill <ExternalLink className="ml-2 h-4 w-4" />
@@ -40,17 +48,6 @@ const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: b
       </Button>
       {!mobile && <p className="mt-2 text-center text-xs text-muted-foreground">Opens the Basketball Orbit Practice Planner in a new tab with this drill already added.</p>}
     </div>
-  );
-};
-
-const CopyAndEditCta = ({ drill }: { drill: PublicDrill }) => {
-  const href = `${APP_URL}/creator/copy/${encodeURIComponent(drill.id)}`;
-  return (
-    <Button asChild variant="outline" size="lg" className="w-full border-primary bg-black text-foreground hover:bg-primary/10 hover:text-foreground">
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <Copy className="mr-2 h-4 w-4" />Copy & Edit this Drill <ExternalLink className="ml-2 h-4 w-4" />
-      </a>
-    </Button>
   );
 };
 
@@ -136,7 +133,6 @@ const DrillTemplate = () => {
             )}
           </section>
           <aside className="space-y-5">
-            <CopyAndEditCta drill={drill} />
             <div className="space-y-5 lg:sticky lg:top-24">
               <Card className="border-border bg-card"><CardHeader className="pb-3"><CardTitle className="text-xl">Drill details</CardTitle></CardHeader><CardContent className="space-y-4">
                 {drill.practiceSectionType && <div className="flex items-start gap-3"><Target className="mt-0.5 h-5 w-5 text-primary" /><div><div className="text-sm font-semibold">Practice segment</div><div className="capitalize text-sm text-muted-foreground">{drill.practiceSectionType}</div></div></div>}
