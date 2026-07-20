@@ -16,7 +16,7 @@ Imagine your team struggled to attack closeouts in the last game. You find four 
 
 Players stay busy, yet the learning does not build from one segment to the next. Coaches end up giving different corrections in every drill. When practice ends, everyone has worked hard, but it is difficult to say what actually improved.
 
-> A drill answers, “What are we doing?” A practice plan must also answer, “Why this, why now, and what should it lead to?”
+> A drill answers, “What are we doing?” A practice plan must also answer, “Why this, why now, and what should it lead to?
 
 The goal is not to stop collecting drills. It is to give each drill a job inside a larger structure.
 
@@ -296,7 +296,7 @@ Then put the whole session somewhere you can see and improve it as one connected
   <div class="w-full md:flex-1 md:min-w-[200px] py-2">
     <a href="https://app.bballorbit.com/">
       <img
-        src="/lovable-uploads/practice-builder.webp"
+        src="/lovable-uploads/mockup-app-trans-2.webp"
         alt="Basketball Orbit Practice Builder with a structured 75-minute practice"
         class="w-full h-auto object-contain rounded-xl cursor-pointer"
       />
