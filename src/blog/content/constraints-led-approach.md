@@ -127,7 +127,7 @@ One of the key insights from this framework comes from Karl Newell (1986), who d
 2. **Task Constraints** – the specific goals, rules, and equipment involved in a game situation.  
 3. **Environmental Constraints** – external conditions such as lighting, noise, temperature, or court dimensions.
 
-Learning happens as players*adapt* to the continuous interaction of these constraints — each one **inviting** certain actions while limiting others.
+Learning happens as players *adapt* to the continuous interaction of these constraints — each one **inviting** certain actions while limiting others.
 
 This is the scientific engine behind the CLA — not repetition, but adaptation.
 
