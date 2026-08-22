@@ -44,7 +44,7 @@ const fetchPublicDrills = async () => {
   return rows;
 };
 
-const staticRoutes = ["/", "/drills", "/resources", "/free-resources", "/about", "/blog", "/contact", "/privacy", "/legal", "/terms", "/affiliate", "/blog/transition-offense", "/blog/zoom-action", "/blog/constraints-led-approach", "/blog/small-sided-games-vs-traditional-drills", "/blog/press-break", "/ssg-playbook"];
+const staticRoutes = ["/", "/drills", "/resources", "/free-resources", "/about", "/blog", "/contact", "/privacy", "/data-deletion", "/legal", "/terms", "/affiliate", "/blog/transition-offense", "/blog/zoom-action", "/blog/constraints-led-approach", "/blog/small-sided-games-vs-traditional-drills", "/blog/press-break", "/ssg-playbook"];
 const sitemapRoutes = [...staticRoutes];
 
 const main = async () => {
