@@ -14,8 +14,8 @@ const VideoSection = () => {
   }, []);
 
   // 🔸 Hier änderst du nur diese eine Zeile:
-  const videoId = "BvXR1cZFKtQ";
-  const videoTitle ="The One Basketball Drill You Can Use for Almost Everything";
+  const videoId = "s4CsyR3EpJs";
+  const videoTitle ="Tagging Up Explained: Offensive Rebounding Without Sacrificing Transition";
 
   // Automatische URLs basierend auf videoId
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;

@@ -19,9 +19,11 @@ import { constraintsLedApproach } from '../blog/article-data/constraints-led-app
 import { smallSidedGamesVsTraditionalDrills } from '../blog/article-data/small-sided-games-vs-traditional-drills';
 import { pressBreak } from '../blog/article-data/press-break';
 import { basketballPracticePlanning } from '../blog/article-data/basketball-practice-planning';
+import { taggingUp } from '../blog/article-data/tagging-up';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
+  taggingUp,
   basketballPracticePlanning,
   transitionOffense,
   zoomAction,
