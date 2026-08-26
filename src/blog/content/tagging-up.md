@@ -169,15 +169,26 @@ Start small enough that players can feel the position, then add the rebound, tra
 
 ### Stage 1: 1v1 High-Side and Scrum
 
-**Setup:** Place one offensive player and one defender in a common shot location. A coach shoots from the perimeter.
-
-**Action:** On the release, the offensive player steps forward, finds the high hip, and scrums legally. Both players compete through the rebound.
-
-**Score:** One point for an offensive rebound. One point for the defense if it secures the ball and gets beyond half court under control. No point for the offense if the high side was missed, even if the rebound was won.
-
-**Observe:** First-step direction, contact point, arms under and up, and whether the offensive player stays above the tag.
-
-**Progression:** Allow the defender to leak out occasionally. The offensive player must recognize "they go, you go" and stay connected.
+<div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start my-6">
+  <figure class="w-full max-w-sm mx-auto md:mx-0 md:w-2/5 lg:w-1/3 md:flex-none">
+    <img
+      src="/lovable-uploads/tagging-up-drill-1v1.webp"
+      alt="1v1 Tagging Up drill diagram: the coach shoots while the offensive player moves to the defender's high side before both compete for the rebound"
+      class="w-full h-auto rounded-xl"
+      loading="lazy"
+    />
+    <figcaption class="text-sm text-muted-foreground mt-3 mb-0">
+      The coach shoots; the offensive player wins the high side before both players compete for the rebound.
+    </figcaption>
+  </figure>
+  <div class="w-full md:flex-1">
+    <p><strong>Setup:</strong> Place one offensive player and one defender in a common shot location. A coach shoots from the perimeter.</p>
+    <p><strong>Action:</strong> On the release, the offensive player steps forward, finds the high hip, and scrums legally. Both players compete through the rebound.</p>
+    <p><strong>Score:</strong> One point for an offensive rebound. One point for the defense if it secures the ball and gets beyond half court under control. No point for the offense if the high side was missed, even if the rebound was won.</p>
+    <p><strong>Observe:</strong> First-step direction, contact point, arms under and up, and whether the offensive player stays above the tag.</p>
+    <p><strong>Progression:</strong> Allow the defender to leak out occasionally. The offensive player must recognize "they go, you go" and stay connected.</p>
+  </div>
+</div>
 
 ### Stage 2: 2v2 Through the Rebound
 
