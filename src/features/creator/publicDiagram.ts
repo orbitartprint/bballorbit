@@ -73,6 +73,6 @@ export const parsePublicDiagram = (value: unknown, metadata: { title: string; de
   return {
     schemaVersion: 1,
     metadata: { title: metadata.title, description: metadata.description, descriptionDocument: metadata.descriptionDocument as DiagramState["metadata"]["descriptionDocument"], tags: metadata.tags },
-    court: result.data.court, phases, activePhaseId: phases[0]?.id ?? "",
+    court: result.data.court as DiagramState["court"], phases, activePhaseId: phases[0]?.id ?? "",
   };
 };
