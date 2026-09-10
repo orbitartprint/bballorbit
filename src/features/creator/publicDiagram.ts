@@ -64,7 +64,7 @@ const normalizeActions = (actions: z.infer<typeof actionSchema>[]): DiagramActio
 export const parsePublicDiagram = (value: unknown, metadata: { title: string; description: string; descriptionDocument: unknown; tags: string[] }): DiagramState | null => {
   const result = documentSchema.safeParse(value);
   if (!result.success) return null;
-  const phases = result.data.phases.map((phase): DiagramPhase => ({
+  const phases = result.data.phases.map((phase) => ({
     ...phase, players: phase.players as DiagramPhase["players"], balls: (phase.balls ?? []) as DiagramPhase["balls"],
     ball: (phase.ball ?? null) as DiagramPhase["ball"],
     actions: normalizeActions(phase.actions), objects: phase.objects as DiagramPhase["objects"],
