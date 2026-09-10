@@ -65,8 +65,9 @@ export const parsePublicDiagram = (value: unknown, metadata: { title: string; de
   const result = documentSchema.safeParse(value);
   if (!result.success) return null;
   const phases = result.data.phases.map((phase): DiagramPhase => ({
-    ...phase, players: phase.players, balls: phase.balls ?? [], ball: phase.ball ?? null,
-    actions: normalizeActions(phase.actions), objects: phase.objects,
+    ...phase, players: phase.players as DiagramPhase["players"], balls: (phase.balls ?? []) as DiagramPhase["balls"],
+    ball: (phase.ball ?? null) as DiagramPhase["ball"],
+    actions: normalizeActions(phase.actions), objects: phase.objects as DiagramPhase["objects"],
     notesDocument: phase.notesDocument as DiagramPhase["notesDocument"],
   }));
   return {
