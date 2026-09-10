@@ -43,7 +43,7 @@ const normalizeAction = (action: z.infer<typeof actionSchema>): DiagramAction =>
   ...action, shape: action.shape ?? "straight", actorId: action.actorId ?? null, receiverId: action.receiverId ?? null,
   startAnchorActionId: action.startAnchorActionId ?? null, handoffActorActionId: action.handoffActorActionId ?? null,
   handoffReceiverActionId: action.handoffReceiverActionId ?? null, endTarget: action.endTarget ?? null,
-});
+} as DiagramAction);
 
 const normalizeActions = (actions: z.infer<typeof actionSchema>[]): DiagramAction[] => {
   const normalized = actions.map(normalizeAction);
