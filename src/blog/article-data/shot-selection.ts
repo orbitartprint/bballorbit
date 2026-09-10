@@ -16,7 +16,7 @@ export const shotSelection = {
     "Small-Sided Games",
     "Practice Design"
   ],
-  heroImage: "/lovable-uploads/shot-selection-hero.webp",
+  heroImage: "/lovable-uploads/shot-selection-hero-v2.webp",
   heroImageAlt: "Basketball player rising into a contested jump shot during a game",
   readTimeMinutes: calculateReadTime(articleContent),
   content: articleContent,
