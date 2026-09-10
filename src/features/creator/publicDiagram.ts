@@ -69,7 +69,7 @@ export const parsePublicDiagram = (value: unknown, metadata: { title: string; de
     ball: (phase.ball ?? null) as DiagramPhase["ball"],
     actions: normalizeActions(phase.actions), objects: phase.objects as DiagramPhase["objects"],
     notesDocument: phase.notesDocument as DiagramPhase["notesDocument"],
-  }));
+  })) as DiagramPhase[];
   return {
     schemaVersion: 1,
     metadata: { title: metadata.title, description: metadata.description, descriptionDocument: metadata.descriptionDocument as DiagramState["metadata"]["descriptionDocument"], tags: metadata.tags },
