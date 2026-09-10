@@ -43,7 +43,7 @@ const normalizeAction = (action: z.infer<typeof actionSchema>): DiagramAction =>
   ...action, shape: action.shape ?? "straight", actorId: action.actorId ?? null, receiverId: action.receiverId ?? null,
   startAnchorActionId: action.startAnchorActionId ?? null, handoffActorActionId: action.handoffActorActionId ?? null,
   handoffReceiverActionId: action.handoffReceiverActionId ?? null, endTarget: action.endTarget ?? null,
-});
+} as DiagramAction);
 
 const normalizeActions = (actions: z.infer<typeof actionSchema>[]): DiagramAction[] => {
   const normalized = actions.map(normalizeAction);
@@ -64,14 +64,15 @@ const normalizeActions = (actions: z.infer<typeof actionSchema>[]): DiagramActio
 export const parsePublicDiagram = (value: unknown, metadata: { title: string; description: string; descriptionDocument: unknown; tags: string[] }): DiagramState | null => {
   const result = documentSchema.safeParse(value);
   if (!result.success) return null;
-  const phases = result.data.phases.map((phase): DiagramPhase => ({
-    ...phase, players: phase.players, balls: phase.balls ?? [], ball: phase.ball ?? null,
-    actions: normalizeActions(phase.actions), objects: phase.objects,
+  const phases = result.data.phases.map((phase) => ({
+    ...phase, players: phase.players as DiagramPhase["players"], balls: (phase.balls ?? []) as DiagramPhase["balls"],
+    ball: (phase.ball ?? null) as DiagramPhase["ball"],
+    actions: normalizeActions(phase.actions), objects: phase.objects as DiagramPhase["objects"],
     notesDocument: phase.notesDocument as DiagramPhase["notesDocument"],
-  }));
+  })) as DiagramPhase[];
   return {
     schemaVersion: 1,
     metadata: { title: metadata.title, description: metadata.description, descriptionDocument: metadata.descriptionDocument as DiagramState["metadata"]["descriptionDocument"], tags: metadata.tags },
-    court: result.data.court, phases, activePhaseId: phases[0]?.id ?? "",
+    court: result.data.court as DiagramState["court"], phases, activePhaseId: phases[0]?.id ?? "",
   };
 };

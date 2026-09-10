@@ -10,7 +10,7 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.5"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
@@ -204,6 +204,8 @@ export type Database = {
           model: string | null
           output: Json | null
           practice_id: string | null
+          result_status: string | null
+          result_status_updated_at: string | null
           status: string
           system_prompt_version: string | null
           user_id: string
@@ -219,6 +221,8 @@ export type Database = {
           model?: string | null
           output?: Json | null
           practice_id?: string | null
+          result_status?: string | null
+          result_status_updated_at?: string | null
           status?: string
           system_prompt_version?: string | null
           user_id: string
@@ -234,6 +238,8 @@ export type Database = {
           model?: string | null
           output?: Json | null
           practice_id?: string | null
+          result_status?: string | null
+          result_status_updated_at?: string | null
           status?: string
           system_prompt_version?: string | null
           user_id?: string
@@ -393,6 +399,117 @@ export type Database = {
         }
         Relationships: []
       }
+      billing_health_issue_resolutions: {
+        Row: {
+          id: string
+          issue_fingerprint: string
+          issue_key: string
+          issue_type: string
+          resolution_source: string
+          resolved_at: string
+          resolved_by: string | null
+        }
+        Insert: {
+          id?: string
+          issue_fingerprint: string
+          issue_key: string
+          issue_type: string
+          resolution_source?: string
+          resolved_at?: string
+          resolved_by?: string | null
+        }
+        Update: {
+          id?: string
+          issue_fingerprint?: string
+          issue_key?: string
+          issue_type?: string
+          resolution_source?: string
+          resolved_at?: string
+          resolved_by?: string | null
+        }
+        Relationships: []
+      }
+      billing_subscription_sources: {
+        Row: {
+          created_at: string
+          current_period_end: string | null
+          current_period_start: string | null
+          environment: string
+          external_base_plan_id: string | null
+          external_customer_id: string | null
+          external_license_id: string | null
+          external_pricing_id: string | null
+          external_product_id: string | null
+          external_subscription_id: string | null
+          external_user_id: string | null
+          grants_access: boolean
+          id: string
+          latest_event_at: string | null
+          latest_event_id: string | null
+          plan_id: string
+          provider: string
+          provider_metadata: Json
+          source_key: string
+          status: string
+          store: string
+          updated_at: string
+          user_id: string
+          will_renew: boolean | null
+        }
+        Insert: {
+          created_at?: string
+          current_period_end?: string | null
+          current_period_start?: string | null
+          environment?: string
+          external_base_plan_id?: string | null
+          external_customer_id?: string | null
+          external_license_id?: string | null
+          external_pricing_id?: string | null
+          external_product_id?: string | null
+          external_subscription_id?: string | null
+          external_user_id?: string | null
+          grants_access?: boolean
+          id?: string
+          latest_event_at?: string | null
+          latest_event_id?: string | null
+          plan_id: string
+          provider: string
+          provider_metadata?: Json
+          source_key: string
+          status: string
+          store: string
+          updated_at?: string
+          user_id: string
+          will_renew?: boolean | null
+        }
+        Update: {
+          created_at?: string
+          current_period_end?: string | null
+          current_period_start?: string | null
+          environment?: string
+          external_base_plan_id?: string | null
+          external_customer_id?: string | null
+          external_license_id?: string | null
+          external_pricing_id?: string | null
+          external_product_id?: string | null
+          external_subscription_id?: string | null
+          external_user_id?: string | null
+          grants_access?: boolean
+          id?: string
+          latest_event_at?: string | null
+          latest_event_id?: string | null
+          plan_id?: string
+          provider?: string
+          provider_metadata?: Json
+          source_key?: string
+          status?: string
+          store?: string
+          updated_at?: string
+          user_id?: string
+          will_renew?: boolean | null
+        }
+        Relationships: []
+      }
       billing_webhook_events: {
         Row: {
           error_message: string | null
@@ -465,81 +582,6 @@ export type Database = {
         }
         Relationships: []
       }
-      drills: {
-        Row: {
-          age_group_max: number | null
-          age_group_min: number | null
-          category: string | null
-          coaching_cues: string | null
-          created_at: string
-          difficulty: string | null
-          duration_minutes: number | null
-          equipment: string | null
-          id: string
-          image_url: string | null
-          instructions: string | null
-          is_published: boolean
-          max_players: number | null
-          min_players: number | null
-          objective: string | null
-          setup: string | null
-          short_description: string | null
-          subcategory: string | null
-          title: string
-          updated_at: string
-          variations: string | null
-          video_url: string | null
-        }
-        Insert: {
-          age_group_max?: number | null
-          age_group_min?: number | null
-          category?: string | null
-          coaching_cues?: string | null
-          created_at?: string
-          difficulty?: string | null
-          duration_minutes?: number | null
-          equipment?: string | null
-          id?: string
-          image_url?: string | null
-          instructions?: string | null
-          is_published?: boolean
-          max_players?: number | null
-          min_players?: number | null
-          objective?: string | null
-          setup?: string | null
-          short_description?: string | null
-          subcategory?: string | null
-          title: string
-          updated_at?: string
-          variations?: string | null
-          video_url?: string | null
-        }
-        Update: {
-          age_group_max?: number | null
-          age_group_min?: number | null
-          category?: string | null
-          coaching_cues?: string | null
-          created_at?: string
-          difficulty?: string | null
-          duration_minutes?: number | null
-          equipment?: string | null
-          id?: string
-          image_url?: string | null
-          instructions?: string | null
-          is_published?: boolean
-          max_players?: number | null
-          min_players?: number | null
-          objective?: string | null
-          setup?: string | null
-          short_description?: string | null
-          subcategory?: string | null
-          title?: string
-          updated_at?: string
-          variations?: string | null
-          video_url?: string | null
-        }
-        Relationships: []
-      }
       external_erasure_tasks: {
         Row: {
           action: string
@@ -599,147 +641,590 @@ export type Database = {
           },
         ]
       }
-      favorite_drills: {
+      library_item_ai_profiles: {
+        Row: {
+          age_group: string | null
+          age_group_max: number | null
+          age_group_min: number | null
+          canonical_tags: string[]
+          catalog_revision: number
+          coaching_cues: string[]
+          constraints: string[]
+          court_scope: string
+          created_at: string
+          difficulty: string | null
+          duration_minutes: number | null
+          equipment: string[]
+          focus_areas: string[]
+          freeform_tags: string[]
+          id: string
+          kind: string
+          library_item_id: string
+          library_item_version_id: string
+          main_goal: string | null
+          phase_summaries: Json
+          player_count_max: number | null
+          player_count_min: number | null
+          practice_section_type: string | null
+          profile_hash: string | null
+          progressions: string[]
+          published_at: string
+          rules: string[]
+          search_vector: unknown
+          summary: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          age_group?: string | null
+          age_group_max?: number | null
+          age_group_min?: number | null
+          canonical_tags?: string[]
+          catalog_revision: number
+          coaching_cues?: string[]
+          constraints?: string[]
+          court_scope: string
+          created_at?: string
+          difficulty?: string | null
+          duration_minutes?: number | null
+          equipment?: string[]
+          focus_areas?: string[]
+          freeform_tags?: string[]
+          id?: string
+          kind: string
+          library_item_id: string
+          library_item_version_id: string
+          main_goal?: string | null
+          phase_summaries?: Json
+          player_count_max?: number | null
+          player_count_min?: number | null
+          practice_section_type?: string | null
+          profile_hash?: string | null
+          progressions?: string[]
+          published_at: string
+          rules?: string[]
+          search_vector?: unknown
+          summary: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          age_group?: string | null
+          age_group_max?: number | null
+          age_group_min?: number | null
+          canonical_tags?: string[]
+          catalog_revision?: number
+          coaching_cues?: string[]
+          constraints?: string[]
+          court_scope?: string
+          created_at?: string
+          difficulty?: string | null
+          duration_minutes?: number | null
+          equipment?: string[]
+          focus_areas?: string[]
+          freeform_tags?: string[]
+          id?: string
+          kind?: string
+          library_item_id?: string
+          library_item_version_id?: string
+          main_goal?: string | null
+          phase_summaries?: Json
+          player_count_max?: number | null
+          player_count_min?: number | null
+          practice_section_type?: string | null
+          profile_hash?: string | null
+          progressions?: string[]
+          published_at?: string
+          rules?: string[]
+          search_vector?: unknown
+          summary?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "library_item_ai_profiles_library_item_id_fkey"
+            columns: ["library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_items"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "library_item_ai_profiles_version_belongs_to_item_fk"
+            columns: ["library_item_version_id", "library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id", "library_item_id"]
+          },
+        ]
+      }
+      library_item_tags: {
         Row: {
           created_at: string
-          drill_id: string
-          id: string
-          user_id: string
+          library_item_id: string
+          tag_id: string
         }
         Insert: {
           created_at?: string
-          drill_id: string
-          id?: string
-          user_id: string
+          library_item_id: string
+          tag_id: string
         }
         Update: {
           created_at?: string
-          drill_id?: string
+          library_item_id?: string
+          tag_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "library_item_tags_library_item_id_fkey"
+            columns: ["library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_items"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "library_item_tags_tag_id_fkey"
+            columns: ["tag_id"]
+            isOneToOne: false
+            referencedRelation: "library_tags"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      library_item_versions: {
+        Row: {
+          change_note: string | null
+          created_at: string
+          created_by: string | null
+          document_hash: string | null
+          document_json: Json
+          id: string
+          library_item_id: string
+          schema_version: number
+          summary: string | null
+          thumbnail_path: string | null
+          updated_at: string
+          version_number: number
+        }
+        Insert: {
+          change_note?: string | null
+          created_at?: string
+          created_by?: string | null
+          document_hash?: string | null
+          document_json: Json
           id?: string
+          library_item_id: string
+          schema_version?: number
+          summary?: string | null
+          thumbnail_path?: string | null
+          updated_at?: string
+          version_number: number
+        }
+        Update: {
+          change_note?: string | null
+          created_at?: string
+          created_by?: string | null
+          document_hash?: string | null
+          document_json?: Json
+          id?: string
+          library_item_id?: string
+          schema_version?: number
+          summary?: string | null
+          thumbnail_path?: string | null
+          updated_at?: string
+          version_number?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "library_item_versions_library_item_id_fkey"
+            columns: ["library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      library_items: {
+        Row: {
+          age_group: string | null
+          age_group_max: number | null
+          age_group_min: number | null
+          archived_at: string | null
+          court_scope: string
+          created_at: string
+          current_version_id: string | null
+          description: string | null
+          difficulty: string | null
+          duration_minutes: number | null
+          equipment: string[]
+          favorite: boolean
+          focus_areas: string[]
+          id: string
+          is_shareable: boolean
+          kind: string
+          player_count_max: number | null
+          player_count_min: number | null
+          practice_section_type: string | null
+          published_at: string | null
+          published_by: string | null
+          published_version_id: string | null
+          search_keywords: string[]
+          search_vector: unknown
+          share_token: string
+          slug: string | null
+          source: string
+          title: string
+          updated_at: string
+          user_id: string
+          visibility: string
+        }
+        Insert: {
+          age_group?: string | null
+          age_group_max?: number | null
+          age_group_min?: number | null
+          archived_at?: string | null
+          court_scope?: string
+          created_at?: string
+          current_version_id?: string | null
+          description?: string | null
+          difficulty?: string | null
+          duration_minutes?: number | null
+          equipment?: string[]
+          favorite?: boolean
+          focus_areas?: string[]
+          id?: string
+          is_shareable?: boolean
+          kind: string
+          player_count_max?: number | null
+          player_count_min?: number | null
+          practice_section_type?: string | null
+          published_at?: string | null
+          published_by?: string | null
+          published_version_id?: string | null
+          search_keywords?: string[]
+          search_vector?: unknown
+          share_token?: string
+          slug?: string | null
+          source?: string
+          title: string
+          updated_at?: string
+          user_id: string
+          visibility?: string
+        }
+        Update: {
+          age_group?: string | null
+          age_group_max?: number | null
+          age_group_min?: number | null
+          archived_at?: string | null
+          court_scope?: string
+          created_at?: string
+          current_version_id?: string | null
+          description?: string | null
+          difficulty?: string | null
+          duration_minutes?: number | null
+          equipment?: string[]
+          favorite?: boolean
+          focus_areas?: string[]
+          id?: string
+          is_shareable?: boolean
+          kind?: string
+          player_count_max?: number | null
+          player_count_min?: number | null
+          practice_section_type?: string | null
+          published_at?: string | null
+          published_by?: string | null
+          published_version_id?: string | null
+          search_keywords?: string[]
+          search_vector?: unknown
+          share_token?: string
+          slug?: string | null
+          source?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+          visibility?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "library_items_current_version_belongs_to_item_fk"
+            columns: ["current_version_id", "id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id", "library_item_id"]
+          },
+          {
+            foreignKeyName: "library_items_current_version_fk"
+            columns: ["current_version_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "library_items_published_version_belongs_to_item_fk"
+            columns: ["published_version_id", "id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id", "library_item_id"]
+          },
+          {
+            foreignKeyName: "library_items_published_version_fk"
+            columns: ["published_version_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      library_tags: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          is_active: boolean
+          name: string
+          normalized_name: string
+          sort_order: number
+          synonyms: string[]
+          tag_type: string
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_active?: boolean
+          name: string
+          normalized_name: string
+          sort_order?: number
+          synonyms?: string[]
+          tag_type?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_active?: boolean
+          name?: string
+          normalized_name?: string
+          sort_order?: number
+          synonyms?: string[]
+          tag_type?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      media_asset_links: {
+        Row: {
+          asset_id: string
+          created_at: string
+          entity_id: string
+          entity_type: string
+          id: string
+          slot: string | null
+          user_id: string
+        }
+        Insert: {
+          asset_id: string
+          created_at?: string
+          entity_id: string
+          entity_type: string
+          id?: string
+          slot?: string | null
+          user_id: string
+        }
+        Update: {
+          asset_id?: string
+          created_at?: string
+          entity_id?: string
+          entity_type?: string
+          id?: string
+          slot?: string | null
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "favorite_drills_drill_id_fkey"
-            columns: ["drill_id"]
+            foreignKeyName: "media_asset_links_asset_id_fkey"
+            columns: ["asset_id"]
             isOneToOne: false
-            referencedRelation: "drills"
+            referencedRelation: "media_assets"
             referencedColumns: ["id"]
           },
         ]
       }
-      practice_drills: {
+      media_assets: {
         Row: {
+          bucket_id: string
           created_at: string
-          drill_id: string
+          display_name: string
           id: string
-          order_index: number
-          practice_id: string
+          media_type: string
+          mime_type: string
+          original_filename: string
+          size_bytes: number
+          source_context: string
+          status: string
+          storage_path: string
+          updated_at: string
+          user_id: string
         }
         Insert: {
+          bucket_id?: string
           created_at?: string
-          drill_id: string
+          display_name: string
           id?: string
-          order_index?: number
-          practice_id: string
+          media_type: string
+          mime_type: string
+          original_filename: string
+          size_bytes: number
+          source_context?: string
+          status?: string
+          storage_path: string
+          updated_at?: string
+          user_id: string
         }
         Update: {
+          bucket_id?: string
           created_at?: string
-          drill_id?: string
+          display_name?: string
           id?: string
-          order_index?: number
-          practice_id?: string
+          media_type?: string
+          mime_type?: string
+          original_filename?: string
+          size_bytes?: number
+          source_context?: string
+          status?: string
+          storage_path?: string
+          updated_at?: string
+          user_id?: string
         }
-        Relationships: [
-          {
-            foreignKeyName: "practice_drills_drill_id_fkey"
-            columns: ["drill_id"]
-            isOneToOne: false
-            referencedRelation: "drills"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "practice_drills_practice_id_fkey"
-            columns: ["practice_id"]
-            isOneToOne: false
-            referencedRelation: "practices"
-            referencedColumns: ["id"]
-          },
-        ]
+        Relationships: []
       }
-      practice_section_drills: {
+      playbooks: {
+        Row: {
+          age_group: string | null
+          created_at: string
+          description: string | null
+          document: Json
+          id: string
+          is_archived: boolean
+          is_shareable: boolean
+          season: string | null
+          share_token: string
+          tags: string[]
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          age_group?: string | null
+          created_at?: string
+          description?: string | null
+          document?: Json
+          id?: string
+          is_archived?: boolean
+          is_shareable?: boolean
+          season?: string | null
+          share_token?: string
+          tags?: string[]
+          title?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          age_group?: string | null
+          created_at?: string
+          description?: string | null
+          document?: Json
+          id?: string
+          is_archived?: boolean
+          is_shareable?: boolean
+          season?: string | null
+          share_token?: string
+          tags?: string[]
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      practice_section_items: {
         Row: {
           adaptation_notes: string | null
           created_at: string
-          custom_drill_data: Json | null
-          drill_id: string | null
-          drill_slug: string | null
-          drill_source: string
           duration_snapshot: number | null
           id: string
           is_ai_adapted: boolean
+          library_item_id: string
+          library_item_version_id: string
           order_index: number
           practice_id: string
           practice_section_id: string
-          title_snapshot: string | null
+          title_snapshot: string
           updated_at: string
           user_id: string
         }
         Insert: {
           adaptation_notes?: string | null
           created_at?: string
-          custom_drill_data?: Json | null
-          drill_id?: string | null
-          drill_slug?: string | null
-          drill_source?: string
           duration_snapshot?: number | null
           id?: string
           is_ai_adapted?: boolean
+          library_item_id: string
+          library_item_version_id: string
           order_index?: number
           practice_id: string
           practice_section_id: string
-          title_snapshot?: string | null
+          title_snapshot: string
           updated_at?: string
           user_id: string
         }
         Update: {
           adaptation_notes?: string | null
           created_at?: string
-          custom_drill_data?: Json | null
-          drill_id?: string | null
-          drill_slug?: string | null
-          drill_source?: string
           duration_snapshot?: number | null
           id?: string
           is_ai_adapted?: boolean
+          library_item_id?: string
+          library_item_version_id?: string
           order_index?: number
           practice_id?: string
           practice_section_id?: string
-          title_snapshot?: string | null
+          title_snapshot?: string
           updated_at?: string
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "practice_section_drills_drill_id_fkey"
-            columns: ["drill_id"]
+            foreignKeyName: "practice_section_items_library_item_id_fkey"
+            columns: ["library_item_id"]
             isOneToOne: false
-            referencedRelation: "drills"
+            referencedRelation: "library_items"
             referencedColumns: ["id"]
           },
           {
-            foreignKeyName: "practice_section_drills_practice_id_fkey"
+            foreignKeyName: "practice_section_items_practice_id_fkey"
             columns: ["practice_id"]
             isOneToOne: false
             referencedRelation: "practices"
             referencedColumns: ["id"]
           },
           {
-            foreignKeyName: "practice_section_drills_section_practice_fkey"
+            foreignKeyName: "practice_section_items_section_practice_fk"
             columns: ["practice_section_id", "practice_id"]
             isOneToOne: false
             referencedRelation: "practice_sections"
             referencedColumns: ["id", "practice_id"]
+          },
+          {
+            foreignKeyName: "practice_section_items_version_belongs_to_item_fk"
+            columns: ["library_item_version_id", "library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id", "library_item_id"]
           },
         ]
       }
@@ -870,9 +1355,10 @@ export type Database = {
           player_count: number | null
           practice_date: string | null
           reflections: string | null
+          reflections_document: Json | null
           share_token: string
+          tags: string[]
           title: string
-          topic: string | null
           updated_at: string
           user_id: string
         }
@@ -889,9 +1375,10 @@ export type Database = {
           player_count?: number | null
           practice_date?: string | null
           reflections?: string | null
+          reflections_document?: Json | null
           share_token?: string
+          tags?: string[]
           title: string
-          topic?: string | null
           updated_at?: string
           user_id: string
         }
@@ -908,9 +1395,10 @@ export type Database = {
           player_count?: number | null
           practice_date?: string | null
           reflections?: string | null
+          reflections_document?: Json | null
           share_token?: string
+          tags?: string[]
           title?: string
-          topic?: string | null
           updated_at?: string
           user_id?: string
         }
@@ -924,6 +1412,11 @@ export type Database = {
           email_marketing: boolean
           email_preferences_updated_at: string | null
           email_product_updates: boolean
+          first_practice_onboarding_completed_at: string | null
+          first_practice_onboarding_skipped_at: string | null
+          first_practice_onboarding_source: string | null
+          first_practice_onboarding_started_at: string | null
+          first_practice_onboarding_status: string
           full_name: string | null
           id: string
           updated_at: string
@@ -935,6 +1428,11 @@ export type Database = {
           email_marketing?: boolean
           email_preferences_updated_at?: string | null
           email_product_updates?: boolean
+          first_practice_onboarding_completed_at?: string | null
+          first_practice_onboarding_skipped_at?: string | null
+          first_practice_onboarding_source?: string | null
+          first_practice_onboarding_started_at?: string | null
+          first_practice_onboarding_status?: string
           full_name?: string | null
           id: string
           updated_at?: string
@@ -946,6 +1444,11 @@ export type Database = {
           email_marketing?: boolean
           email_preferences_updated_at?: string | null
           email_product_updates?: boolean
+          first_practice_onboarding_completed_at?: string | null
+          first_practice_onboarding_skipped_at?: string | null
+          first_practice_onboarding_source?: string | null
+          first_practice_onboarding_started_at?: string | null
+          first_practice_onboarding_status?: string
           full_name?: string | null
           id?: string
           updated_at?: string
@@ -1016,7 +1519,106 @@ export type Database = {
           updated_at?: string
           version_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "public_library_pages_library_item_id_fkey"
+            columns: ["library_item_id"]
+            isOneToOne: true
+            referencedRelation: "library_items"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "public_library_pages_version_belongs_to_item_fk"
+            columns: ["version_id", "library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id", "library_item_id"]
+          },
+          {
+            foreignKeyName: "public_library_pages_version_id_fkey"
+            columns: ["version_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      public_library_publish_jobs: {
+        Row: {
+          attempts: number
+          completed_at: string | null
+          created_at: string
+          id: string
+          job_type: string
+          last_error: string | null
+          library_item_id: string
+          public_page_id: string
+          requested_by: string | null
+          requested_slug: string
+          status: string
+          updated_at: string
+          version_id: string
+        }
+        Insert: {
+          attempts?: number
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          job_type?: string
+          last_error?: string | null
+          library_item_id: string
+          public_page_id: string
+          requested_by?: string | null
+          requested_slug: string
+          status?: string
+          updated_at?: string
+          version_id: string
+        }
+        Update: {
+          attempts?: number
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          job_type?: string
+          last_error?: string | null
+          library_item_id?: string
+          public_page_id?: string
+          requested_by?: string | null
+          requested_slug?: string
+          status?: string
+          updated_at?: string
+          version_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_library_publish_jobs_library_item_id_fkey"
+            columns: ["library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_items"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "public_library_publish_jobs_public_page_id_fkey"
+            columns: ["public_page_id"]
+            isOneToOne: false
+            referencedRelation: "public_library_pages"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "public_library_publish_jobs_version_belongs_to_item_fk"
+            columns: ["version_id", "library_item_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id", "library_item_id"]
+          },
+          {
+            foreignKeyName: "public_library_publish_jobs_version_id_fkey"
+            columns: ["version_id"]
+            isOneToOne: false
+            referencedRelation: "library_item_versions"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       subscription_cancellation_feedback: {
         Row: {
@@ -1153,6 +1755,75 @@ export type Database = {
         }
         Relationships: []
       }
+      unconfirmed_signup_cleanup_config: {
+        Row: {
+          cron_secret_hash: string
+          singleton: boolean
+          updated_at: string
+        }
+        Insert: {
+          cron_secret_hash: string
+          singleton?: boolean
+          updated_at?: string
+        }
+        Update: {
+          cron_secret_hash?: string
+          singleton?: boolean
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      unconfirmed_signup_retention: {
+        Row: {
+          created_at: string
+          deletion_attempts: number
+          deletion_last_attempt_at: string | null
+          email_hash: string
+          last_error: string | null
+          protected_until: string | null
+          protection_reason: string | null
+          reminder_attempts: number
+          reminder_first_attempt_at: string | null
+          reminder_last_attempt_at: string | null
+          reminder_provider_message_id: string | null
+          reminder_sent_at: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          deletion_attempts?: number
+          deletion_last_attempt_at?: string | null
+          email_hash: string
+          last_error?: string | null
+          protected_until?: string | null
+          protection_reason?: string | null
+          reminder_attempts?: number
+          reminder_first_attempt_at?: string | null
+          reminder_last_attempt_at?: string | null
+          reminder_provider_message_id?: string | null
+          reminder_sent_at?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          deletion_attempts?: number
+          deletion_last_attempt_at?: string | null
+          email_hash?: string
+          last_error?: string | null
+          protected_until?: string | null
+          protection_reason?: string | null
+          reminder_attempts?: number
+          reminder_first_attempt_at?: string | null
+          reminder_last_attempt_at?: string | null
+          reminder_provider_message_id?: string | null
+          reminder_sent_at?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       usage_events: {
         Row: {
           created_at: string
@@ -1205,6 +1876,30 @@ export type Database = {
           id?: string
           period_end?: string
           period_start?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_creator_preferences: {
+        Row: {
+          created_at: string
+          last_court_settings: Json | null
+          tag_history: string[]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          last_court_settings?: Json | null
+          tag_history?: string[]
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          last_court_settings?: Json | null
+          tag_history?: string[]
           updated_at?: string
           user_id?: string
         }
@@ -1363,9 +2058,23 @@ export type Database = {
         Returns: string
       }
       assert_can_create_practice_plan: { Args: never; Returns: undefined }
+      can_attach_library_item_version: {
+        Args: { item_id: string; version_id: string }
+        Returns: boolean
+      }
+      can_create_library_item: { Args: never; Returns: boolean }
       can_create_practice_plan: { Args: never; Returns: boolean }
       can_export_pdf: { Args: never; Returns: boolean }
+      can_manage_library_item: { Args: { item_id: string }; Returns: boolean }
+      can_read_user_media_object: {
+        Args: { p_storage_path: string }
+        Returns: boolean
+      }
       can_upload_media: { Args: { p_upload_bytes: number }; Returns: boolean }
+      can_upload_reserved_user_media_object: {
+        Args: { p_actual_size_bytes: number; p_storage_path: string }
+        Returns: boolean
+      }
       can_use_ai_credits: {
         Args: { p_required_credits: number; p_user_id: string }
         Returns: boolean
@@ -1374,6 +2083,8 @@ export type Database = {
         Args: { p_required_credits: number; p_user_id: string }
         Returns: boolean
       }
+      can_view_library_item: { Args: { item_id: string }; Returns: boolean }
+      delete_media_asset: { Args: { p_asset_id: string }; Returns: undefined }
       ensure_user_storage_usage: {
         Args: { p_user_id: string }
         Returns: {
@@ -1384,6 +2095,67 @@ export type Database = {
         SetofOptions: {
           from: "*"
           to: "user_storage_usage"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      finalize_media_upload: {
+        Args: { p_asset_id: string }
+        Returns: {
+          bucket_id: string
+          created_at: string
+          display_name: string
+          id: string
+          media_type: string
+          mime_type: string
+          original_filename: string
+          size_bytes: number
+          source_context: string
+          status: string
+          storage_path: string
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "media_assets"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      finalize_public_library_publish: {
+        Args: {
+          p_cached_payload: Json
+          p_job_id: string
+          p_rendered_html: string
+          p_seo_description: string
+          p_seo_title: string
+          p_thumbnail_path: string
+        }
+        Returns: {
+          ai_profile_error: string | null
+          ai_profile_status: string
+          ai_profiled_at: string | null
+          cache_status: string
+          cached_payload: Json
+          created_at: string
+          id: string
+          kind: string
+          last_error: string | null
+          library_item_id: string
+          public_path: string
+          public_slug: string
+          rendered_at: string | null
+          rendered_html: string | null
+          seo_description: string | null
+          seo_title: string
+          thumbnail_path: string | null
+          updated_at: string
+          version_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "public_library_pages"
           isOneToOne: true
           isSetofReturn: false
         }
@@ -1420,6 +2192,10 @@ export type Database = {
         }[]
       }
       get_current_month_start: { Args: never; Returns: string }
+      get_effective_library_item_limit: {
+        Args: { p_user_id: string }
+        Returns: number
+      }
       get_effective_media_storage_limit_bytes: {
         Args: { p_user_id: string }
         Returns: number
@@ -1464,6 +2240,101 @@ export type Database = {
           isSetofReturn: false
         }
       }
+      get_shared_library_item: {
+        Args: { share_token_param: string }
+        Returns: {
+          age_group: string | null
+          age_group_max: number | null
+          age_group_min: number | null
+          archived_at: string | null
+          court_scope: string
+          created_at: string
+          current_version_id: string | null
+          description: string | null
+          difficulty: string | null
+          duration_minutes: number | null
+          equipment: string[]
+          favorite: boolean
+          focus_areas: string[]
+          id: string
+          is_shareable: boolean
+          kind: string
+          player_count_max: number | null
+          player_count_min: number | null
+          practice_section_type: string | null
+          published_at: string | null
+          published_by: string | null
+          published_version_id: string | null
+          search_keywords: string[]
+          search_vector: unknown
+          share_token: string
+          slug: string | null
+          source: string
+          title: string
+          updated_at: string
+          user_id: string
+          visibility: string
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "library_items"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
+      get_shared_library_item_tags: {
+        Args: { share_token_param: string }
+        Returns: {
+          name: string
+        }[]
+      }
+      get_shared_library_item_version: {
+        Args: { share_token_param: string }
+        Returns: {
+          change_note: string | null
+          created_at: string
+          created_by: string | null
+          document_hash: string | null
+          document_json: Json
+          id: string
+          library_item_id: string
+          schema_version: number
+          summary: string | null
+          thumbnail_path: string | null
+          updated_at: string
+          version_number: number
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "library_item_versions"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
+      get_shared_playbook: {
+        Args: { share_token_param: string }
+        Returns: {
+          age_group: string | null
+          created_at: string
+          description: string | null
+          document: Json
+          id: string
+          is_archived: boolean
+          is_shareable: boolean
+          season: string | null
+          share_token: string
+          tags: string[]
+          title: string
+          updated_at: string
+          user_id: string
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "playbooks"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
       get_shared_practice: {
         Args: { share_token_param: string }
         Returns: {
@@ -1479,9 +2350,10 @@ export type Database = {
           player_count: number | null
           practice_date: string | null
           reflections: string | null
+          reflections_document: Json | null
           share_token: string
+          tags: string[]
           title: string
-          topic: string | null
           updated_at: string
           user_id: string
         }[]
@@ -1492,28 +2364,91 @@ export type Database = {
           isSetofReturn: true
         }
       }
-      get_shared_practice_section_drills: {
+      get_shared_practice_library_item_versions: {
+        Args: { share_token_param: string }
+        Returns: {
+          change_note: string | null
+          created_at: string
+          created_by: string | null
+          document_hash: string | null
+          document_json: Json
+          id: string
+          library_item_id: string
+          schema_version: number
+          summary: string | null
+          thumbnail_path: string | null
+          updated_at: string
+          version_number: number
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "library_item_versions"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
+      get_shared_practice_library_items: {
+        Args: { share_token_param: string }
+        Returns: {
+          age_group: string | null
+          age_group_max: number | null
+          age_group_min: number | null
+          archived_at: string | null
+          court_scope: string
+          created_at: string
+          current_version_id: string | null
+          description: string | null
+          difficulty: string | null
+          duration_minutes: number | null
+          equipment: string[]
+          favorite: boolean
+          focus_areas: string[]
+          id: string
+          is_shareable: boolean
+          kind: string
+          player_count_max: number | null
+          player_count_min: number | null
+          practice_section_type: string | null
+          published_at: string | null
+          published_by: string | null
+          published_version_id: string | null
+          search_keywords: string[]
+          search_vector: unknown
+          share_token: string
+          slug: string | null
+          source: string
+          title: string
+          updated_at: string
+          user_id: string
+          visibility: string
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "library_items"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
+      get_shared_practice_section_items: {
         Args: { share_token_param: string }
         Returns: {
           adaptation_notes: string | null
           created_at: string
-          custom_drill_data: Json | null
-          drill_id: string | null
-          drill_slug: string | null
-          drill_source: string
           duration_snapshot: number | null
           id: string
           is_ai_adapted: boolean
+          library_item_id: string
+          library_item_version_id: string
           order_index: number
           practice_id: string
           practice_section_id: string
-          title_snapshot: string | null
+          title_snapshot: string
           updated_at: string
           user_id: string
         }[]
         SetofOptions: {
           from: "*"
-          to: "practice_section_drills"
+          to: "practice_section_items"
           isOneToOne: false
           isSetofReturn: true
         }
@@ -1559,9 +2494,69 @@ export type Database = {
         Args: { p_user_id: string }
         Returns: undefined
       }
+      is_orbit_admin: { Args: never; Returns: boolean }
       owns_practice: {
         Args: { _practice_id: string; _user_id: string }
         Returns: boolean
+      }
+      publish_library_item_to_orbit: {
+        Args: { item_id: string; requested_slug?: string; version_id?: string }
+        Returns: {
+          ai_profile_error: string | null
+          ai_profile_status: string
+          ai_profiled_at: string | null
+          cache_status: string
+          cached_payload: Json
+          created_at: string
+          id: string
+          kind: string
+          last_error: string | null
+          library_item_id: string
+          public_path: string
+          public_slug: string
+          rendered_at: string | null
+          rendered_html: string | null
+          seo_description: string | null
+          seo_title: string
+          thumbnail_path: string | null
+          updated_at: string
+          version_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "public_library_pages"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      raise_library_item_limit_reached: { Args: never; Returns: undefined }
+      recompute_user_subscription_projection: {
+        Args: { p_now?: string; p_user_id: string }
+        Returns: {
+          cancel_at_period_end: boolean
+          created_at: string
+          current_period_end: string | null
+          current_period_start: string | null
+          id: string
+          plan_id: string
+          provider: string
+          provider_customer_id: string | null
+          provider_license_id: string | null
+          provider_metadata: Json
+          provider_plan_id: string | null
+          provider_pricing_id: string | null
+          provider_subscription_id: string | null
+          provider_user_id: string | null
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_subscriptions"
+          isOneToOne: true
+          isSetofReturn: false
+        }
       }
       record_ai_credit_usage: {
         Args: {
@@ -1655,6 +2650,60 @@ export type Database = {
           isSetofReturn: false
         }
       }
+      release_media_upload: { Args: { p_asset_id: string }; Returns: undefined }
+      rename_media_asset: {
+        Args: { p_asset_id: string; p_display_name: string }
+        Returns: {
+          bucket_id: string
+          created_at: string
+          display_name: string
+          id: string
+          media_type: string
+          mime_type: string
+          original_filename: string
+          size_bytes: number
+          source_context: string
+          status: string
+          storage_path: string
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "media_assets"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      reserve_media_upload: {
+        Args: {
+          p_file_name: string
+          p_mime_type: string
+          p_size_bytes: number
+          p_source_context?: string
+        }
+        Returns: {
+          bucket_id: string
+          created_at: string
+          display_name: string
+          id: string
+          media_type: string
+          mime_type: string
+          original_filename: string
+          size_bytes: number
+          source_context: string
+          status: string
+          storage_path: string
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "media_assets"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
       reset_current_ai_credit_usage: {
         Args: { p_user_id: string }
         Returns: {
@@ -1672,6 +2721,92 @@ export type Database = {
           isOneToOne: true
           isSetofReturn: false
         }
+      }
+      resolve_billing_health_issue: {
+        Args: {
+          p_issue_fingerprint: string
+          p_issue_key: string
+          p_issue_type: string
+          p_resolved_by: string
+        }
+        Returns: {
+          id: string
+          issue_fingerprint: string
+          issue_key: string
+          issue_type: string
+          resolution_source: string
+          resolved_at: string
+          resolved_by: string | null
+        }
+        SetofOptions: {
+          from: "*"
+          to: "billing_health_issue_resolutions"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      save_library_item_version: {
+        Args: {
+          p_age_group: string
+          p_age_group_max: number
+          p_age_group_min: number
+          p_canonical_tag_slugs: string[]
+          p_change_note: string
+          p_court_scope: string
+          p_create_item: boolean
+          p_description: string
+          p_difficulty: string
+          p_document: Json
+          p_document_hash: string
+          p_duration_minutes: number
+          p_equipment: string[]
+          p_focus_areas: string[]
+          p_freeform_tags: string[]
+          p_item_id: string
+          p_kind: string
+          p_player_count_max: number
+          p_player_count_min: number
+          p_practice_section_type: string
+          p_search_keywords: string[]
+          p_title: string
+          p_version_id: string
+        }
+        Returns: {
+          item: Json
+          version: Json
+        }[]
+      }
+      search_orbit_library_ai_candidates: {
+        Args: {
+          excluded_item_ids?: string[]
+          result_limit?: number
+          search_text: string
+        }
+        Returns: {
+          age_group: string
+          canonical_tags: string[]
+          catalog_revision: number
+          coaching_cues: string[]
+          constraints: string[]
+          court_scope: string
+          difficulty: string
+          freeform_tags: string[]
+          library_item_id: string
+          library_item_version_id: string
+          main_goal: string
+          phase_summaries: Json
+          player_count_min: number
+          practice_section_type: string
+          relevance: number
+          slug: string
+          summary: string
+          title: string
+        }[]
+      }
+      slugify: { Args: { value: string }; Returns: string }
+      unpublish_library_item_from_orbit: {
+        Args: { item_id: string }
+        Returns: undefined
       }
     }
     Enums: {
@@ -1691,12 +2826,12 @@ export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1720,11 +2855,11 @@ export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1745,11 +2880,11 @@ export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1770,11 +2905,11 @@ export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
     | { schema: keyof DatabaseWithoutInternals },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  EnumName extends (DefaultSchemaEnumNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1787,11 +2922,11 @@ export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof DatabaseWithoutInternals },
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  CompositeTypeName extends (PublicCompositeTypeNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never) = never,
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }

@@ -266,7 +266,10 @@ export const CourtSvg = forwardRef<SVGSVGElement, CourtSvgProps>(
     const handlePointerMove = (event: PointerEvent<SVGSVGElement>) => {
       const textSelectionDrag = textSelectionDragRef.current;
       if (textSelectionDrag) {
-        const object = phase.objects.find((item) => item.id === textSelectionDrag.objectId && item.type === "text");
+        const object = phase.objects.find(
+          (item): item is Extract<typeof item, { type: "text" }> =>
+            item.id === textSelectionDrag.objectId && item.type === "text",
+        );
         if (!object) return;
         const displayPoint = pointerToDisplayPoint(event, event.currentTarget);
         const cursorIndex = getTextCursorIndex(
@@ -298,7 +301,7 @@ export const CourtSvg = forwardRef<SVGSVGElement, CourtSvgProps>(
       onPointerUp(event);
     };
 
-    const handleEntityPointerDown = (nextSelection: Exclude<Selection, null>, event: PointerEvent<SVGElement>) => {
+    const handleEntityPointerDown = (nextSelection: SelectionItem, event: PointerEvent<SVGElement>) => {
       const svg = event.currentTarget.ownerSVGElement;
       if (!svg) return;
       onEntityPointerDown(nextSelection, pointerToCourtPoint(event, svg), event);
