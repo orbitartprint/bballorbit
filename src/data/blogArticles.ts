@@ -20,9 +20,11 @@ import { smallSidedGamesVsTraditionalDrills } from '../blog/article-data/small-s
 import { pressBreak } from '../blog/article-data/press-break';
 import { basketballPracticePlanning } from '../blog/article-data/basketball-practice-planning';
 import { taggingUp } from '../blog/article-data/tagging-up';
+import { shotSelection } from '../blog/article-data/shot-selection';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
+  shotSelection,
   taggingUp,
   basketballPracticePlanning,
   transitionOffense,
