@@ -301,7 +301,7 @@ export const CourtSvg = forwardRef<SVGSVGElement, CourtSvgProps>(
       onPointerUp(event);
     };
 
-    const handleEntityPointerDown = (nextSelection: Exclude<Selection, null>, event: PointerEvent<SVGElement>) => {
+    const handleEntityPointerDown = (nextSelection: SelectionItem, event: PointerEvent<SVGElement>) => {
       const svg = event.currentTarget.ownerSVGElement;
       if (!svg) return;
       onEntityPointerDown(nextSelection, pointerToCourtPoint(event, svg), event);
