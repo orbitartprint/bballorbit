@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1280" viewBox="0 0 760 1280" role="img" aria-labelledby="title desc">
+  <title id="title">Tagging Up four-step chain</title>
+  <desc id="desc">Step forward on the shot, win the high side, scrum legally, and defend immediately.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1320"/>
+      <stop offset="1" stop-color="#111f32"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0l12 6-12 6z" fill="#f57520"/>
+    </marker>
+  </defs>
+  <rect width="760" height="1280" rx="32" fill="url(#bg)"/>
+  <text x="380" y="68" text-anchor="middle" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="4">TAGGING UP</text>
+  <text x="380" y="110" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">THE FOUR-STEP CHAIN</text>
+  <text x="380" y="148" text-anchor="middle" fill="#aeb8c6" font-family="Inter, Arial, sans-serif" font-size="28">Every link protects the next possession.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(54 190)">
+      <rect width="652" height="224" rx="25" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="72" cy="70" r="33" fill="#f57520"/><text x="72" y="81" text-anchor="middle" fill="#0b1320" font-size="32" font-weight="900">1</text>
+      <text x="130" y="65" fill="#fff" font-size="32" font-weight="800">STEP FORWARD</text>
+      <text x="130" y="103" fill="#b9c3d0" font-size="30">Move toward your tag</text>
+      <text x="130" y="137" fill="#b9c3d0" font-size="30">as the shot goes up.</text>
+      <path d="M326 153v38m0 0l-21-21m21 21l21-21" fill="none" stroke="#f57520" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M380 422v36" stroke="#f57520" stroke-width="7" marker-end="url(#arrow)"/>
+    <g transform="translate(54 470)">
+      <rect width="652" height="224" rx="25" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="72" cy="70" r="33" fill="#f57520"/><text x="72" y="81" text-anchor="middle" fill="#0b1320" font-size="32" font-weight="900">2</text>
+      <text x="130" y="65" fill="#fff" font-size="32" font-weight="800">WIN THE HIGH SIDE</text>
+      <text x="130" y="103" fill="#b9c3d0" font-size="30">Contact the hip closer</text>
+      <text x="130" y="137" fill="#b9c3d0" font-size="30">to half court.</text>
+      <circle cx="288" cy="178" r="28" fill="none" stroke="#fff" stroke-width="8"/>
+      <circle cx="356" cy="178" r="28" fill="none" stroke="#f57520" stroke-width="8"/>
+    </g>
+    <path d="M380 702v36" stroke="#f57520" stroke-width="7" marker-end="url(#arrow)"/>
+    <g transform="translate(54 750)">
+      <rect width="652" height="224" rx="25" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="72" cy="70" r="33" fill="#f57520"/><text x="72" y="81" text-anchor="middle" fill="#0b1320" font-size="32" font-weight="900">3</text>
+      <text x="130" y="65" fill="#fff" font-size="32" font-weight="800">SCRUM LEGALLY</text>
+      <text x="130" y="103" fill="#b9c3d0" font-size="30">Drive with the hips.</text>
+      <text x="130" y="137" fill="#b9c3d0" font-size="30">Arms under and up.</text>
+      <path d="M270 195c30-50 74-50 104 0m-90-25l-25-23m101 23l25-23" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <path d="M414 180h75" stroke="#f57520" stroke-width="9" marker-end="url(#arrow)"/>
+    </g>
+    <path d="M380 982v36" stroke="#f57520" stroke-width="7" marker-end="url(#arrow)"/>
+    <g transform="translate(54 1030)">
+      <rect width="652" height="204" rx="25" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="72" cy="70" r="33" fill="#f57520"/><text x="72" y="81" text-anchor="middle" fill="#0b1320" font-size="32" font-weight="900">4</text>
+      <text x="130" y="65" fill="#fff" font-size="32" font-weight="800">DEFEND IMMEDIATELY</text>
+      <text x="130" y="103" fill="#b9c3d0" font-size="30">Stay matched, slow ball,</text>
+      <text x="130" y="137" fill="#b9c3d0" font-size="30">and flood the middle.</text>
+      <path d="M256 180c44-42 110-48 171-12" fill="none" stroke="#f57520" stroke-width="9" marker-end="url(#arrow)"/>
+    </g>
+  </g>
+</svg>

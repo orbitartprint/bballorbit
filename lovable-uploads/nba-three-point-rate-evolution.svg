@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">The NBA three-point attempt rate rose from 3.1 percent to 42.1 percent</title>
+  <desc id="desc">Line chart showing selected NBA seasons: 3.1 percent in 1979-80, 22.2 percent in 2010-11, 28.5 percent in 2015-16, 39.2 percent in 2020-21, and 42.1 percent in 2024-25.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171a22"/>
+      <stop offset="1" stop-color="#08090d"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f57520" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#f57520" stop-opacity="0.01"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <text x="100" y="105" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="5">BASKETBALL ORBIT</text>
+  <text x="100" y="180" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">From novelty to core shot</text>
+  <text x="100" y="226" fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="26">Share of NBA field-goal attempts taken from three-point range</text>
+
+  <g stroke="#343944" stroke-width="1">
+    <line x1="140" y1="700" x2="1460" y2="700"/>
+    <line x1="140" y1="600" x2="1460" y2="600"/>
+    <line x1="140" y1="500" x2="1460" y2="500"/>
+    <line x1="140" y1="400" x2="1460" y2="400"/>
+    <line x1="140" y1="300" x2="1460" y2="300"/>
+  </g>
+  <g fill="#7f8795" font-family="Inter, Arial, sans-serif" font-size="18" text-anchor="end">
+    <text x="120" y="706">0%</text>
+    <text x="120" y="606">10%</text>
+    <text x="120" y="506">20%</text>
+    <text x="120" y="406">30%</text>
+    <text x="120" y="306">40%</text>
+  </g>
+
+  <path d="M190 669 L515 478 L820 415 L1125 308 L1430 279 L1430 700 L190 700 Z" fill="url(#area)"/>
+  <path d="M190 669 L515 478 L820 415 L1125 308 L1430 279" fill="none" stroke="#f57520" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <g fill="#11131a" stroke="#ff9a52" stroke-width="6">
+    <circle cx="190" cy="669" r="13"/>
+    <circle cx="515" cy="478" r="13"/>
+    <circle cx="820" cy="415" r="13"/>
+    <circle cx="1125" cy="308" r="13"/>
+    <circle cx="1430" cy="279" r="13"/>
+  </g>
+  <g fill="#fff" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="800" text-anchor="middle">
+    <text x="190" y="625">3.1%</text>
+    <text x="515" y="434">22.2%</text>
+    <text x="820" y="371">28.5%</text>
+    <text x="1125" y="264">39.2%</text>
+    <text x="1430" y="235">42.1%</text>
+  </g>
+  <g fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="21" text-anchor="middle">
+    <text x="190" y="748">1979-80</text>
+    <text x="515" y="748">2010-11</text>
+    <text x="820" y="748">2015-16</text>
+    <text x="1125" y="748">2020-21</text>
+    <text x="1430" y="748">2024-25</text>
+  </g>
+
+  <rect x="1050" y="490" width="380" height="130" rx="20" fill="#181c25" stroke="#3a404d"/>
+  <text x="1080" y="535" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="750">2024-25 milestone</text>
+  <text x="1080" y="573" fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="19">Midrange attempts fell below</text>
+  <text x="1080" y="603" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800">10% of all shots</text>
+
+  <text x="100" y="835" fill="#737b89" font-family="Inter, Arial, sans-serif" font-size="17">Selected seasons. Sources: NBA.com (2010-11 onward and 2024-25 midrange); Basketball-Reference (1979-80).</text>
+</svg>

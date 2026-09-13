@@ -1,0 +1,1 @@
+var e=`/assets/chris-photo-1-DVefubzo.webp`;export{e as t};
