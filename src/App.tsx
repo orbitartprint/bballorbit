@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import usePageTracking from "./hooks/usePageTracking";
+import RouteSeo from "./components/RouteSeo";
 
 // ✅ Lazy load all pages
 const Index = lazy(() => import("./pages/Index"));
@@ -38,6 +39,7 @@ function App() {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <RouteSeo />
           <PageTrackingWrapper />
           {/* ✅ Suspense sorgt für Lazy Loading */}
           <Suspense

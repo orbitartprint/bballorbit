@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { loadBlogArticles } from "./load-blog-articles.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const distPath = join(root, "dist");
@@ -25,7 +26,7 @@ const replaceMeta = (html, { title, description, canonical, image, jsonLd }) => 
   let result = html
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${safeTitle}</title>`)
     .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${safeDescription}" />`)
-    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${safeCanonical}" />`)
+    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${safeCanonical}" data-react-helmet="true" />`)
     .replace(/<meta property="og:title"[^>]*>/i, `<meta property="og:title" content="${safeTitle}" />`)
     .replace(/<meta property="og:description"[^>]*>/i, `<meta property="og:description" content="${safeDescription}" />`)
     .replace(/<meta property="og:url"[^>]*>/i, `<meta property="og:url" content="${safeCanonical}" />`);
@@ -44,18 +45,40 @@ const fetchPublicDrills = async () => {
   return rows;
 };
 
-const staticRoutes = ["/", "/drills", "/resources", "/free-resources", "/about", "/blog", "/contact", "/privacy", "/data-deletion", "/legal", "/terms", "/affiliate", "/blog/transition-offense", "/blog/zoom-action", "/blog/constraints-led-approach", "/blog/small-sided-games-vs-traditional-drills", "/blog/press-break", "/ssg-playbook"];
-const sitemapRoutes = [...staticRoutes];
+const staticRoutes = ["/", "/drills", "/resources", "/free-resources", "/about", "/blog", "/contact", "/privacy", "/data-deletion", "/legal", "/terms", "/affiliate", "/ssg-playbook"];
+// Keep the existing noindex policy for both pages, including before JS runs.
+const noindexRoutes = new Set(["/free-resources", "/privacy"]);
+const sitemapRoutes = staticRoutes.filter((route) => !noindexRoutes.has(route));
 
 const main = async () => {
+  const articles = await loadBlogArticles(root);
   const drills = await fetchPublicDrills();
   writeFileSync(join(distPath, "drill-library-snapshot.json"), JSON.stringify(drills), "utf8");
 
   for (const route of staticRoutes) {
-    const html = route === "/drills"
+    let html = route === "/drills"
       ? replaceMeta(baseHtml, { title: "Basketball Drill Library - Basketball Orbit", description: "Explore modern, game-like basketball drills and start a complete practice plan in seconds.", canonical: `${siteUrl}/drills` })
-      : baseHtml;
+      : baseHtml.replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${siteUrl}${route}" data-react-helmet="true" />`);
+    if (noindexRoutes.has(route)) {
+      html = html.replace("</head>", '<meta name="robots" content="noindex, nofollow" data-react-helmet="true" />\n</head>');
+    }
     writeRoute(route, html);
+  }
+
+  const articleSlugs = new Set();
+  for (const article of articles) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.slug) || articleSlugs.has(article.slug)) {
+      throw new Error(`Invalid or duplicate blog slug: ${article.slug}`);
+    }
+    articleSlugs.add(article.slug);
+    const route = `/blog/${article.slug}`;
+    writeRoute(route, replaceMeta(baseHtml, {
+      title: `${article.title} | Basketball Orbit`,
+      description: article.excerpt,
+      canonical: `${siteUrl}${route}`,
+      image: new URL(article.heroImage, siteUrl).href,
+    }));
+    sitemapRoutes.push(route);
   }
 
   for (const row of drills) {
@@ -75,7 +98,7 @@ const main = async () => {
   const now = new Date().toISOString().slice(0, 10);
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Array.from(new Set(sitemapRoutes)).map((route) => `  <url><loc>${escapeXml(`${siteUrl}${route === "/" ? "/" : route}`)}</loc><lastmod>${now}</lastmod></url>`).join("\n")}\n</urlset>\n`;
   writeFileSync(join(distPath, "sitemap.xml"), sitemap, "utf8");
-  console.log(`Prerendered ${staticRoutes.length} static routes and ${drills.length} published drills.`);
+  console.log(`Prerendered ${staticRoutes.length} static routes, ${articles.length} blog articles and ${drills.length} published drills.`);
 };
 
 main().catch((error) => { console.error(error); process.exitCode = 1; });
