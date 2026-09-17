@@ -21,6 +21,7 @@ import rehypeSlug from 'rehype-slug';
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import ShareBar from "@/components/ShareBar";
+import { ArticleAppLink } from "@/components/apps/ArticleAppLink";
 import {
   Dialog,
   DialogContent,
@@ -108,7 +109,7 @@ const BlogArticle = () => {
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.excerpt} />
         <meta name="twitter:image" content={article.heroImage} />
-        <link rel="canonical" href={`https://www.bballorbit.com/blog/${article.slug}`} />
+        <link rel="canonical" href={`https://bballorbit.com/blog/${article.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -131,7 +132,7 @@ const BlogArticle = () => {
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.bballorbit.com/blog/${article.slug}`
+              "@id": `https://bballorbit.com/blog/${article.slug}`
             }
           })}
         </script>
@@ -265,6 +266,8 @@ const BlogArticle = () => {
                     {article.content}
                   </ReactMarkdown>
                 </div>
+
+                {article.category === "Practice Planning" && <ArticleAppLink />}
 
                 {/* Author Bio */}
                 <Card className="mt-12 bg-card/30 border-border">

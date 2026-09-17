@@ -22,6 +22,9 @@ jobs:
 
       - run: npm install
 
+      - name: Verify public app store links before publishing
+        run: npm run check:app-distribution:release
+
       - name: Build
         run: npm run build
         env:
@@ -37,6 +40,9 @@ jobs:
 
       - name: Copy index.html to 404.html
         run: cp dist/index.html dist/404.html
+
+      - name: Verify indexable routes and noindex exclusions
+        run: node scripts/verify-seo.js
 
       - name: Debug build output
         run: |

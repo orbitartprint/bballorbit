@@ -167,7 +167,7 @@ const Terms = () => {
               <h2 className="text-2xl font-semibold text-foreground mt-12 mb-6">7. Refunds, Cancellations and Withdrawal</h2>
               <p className="text-base leading-relaxed mb-4">
                 Refunds, cancellations, renewal handling, statutory withdrawal rights, and the electronic withdrawal function are explained in our{' '}
-                <a href="https://app.bballorbit.com/refund" className="text-primary hover:underline">Refund & Cancellation Policy</a>.
+                <a href="https://app.bballorbit.com/refund" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Refund & Cancellation Policy</a>.
               </p>
               <p className="text-base leading-relaxed mb-4">
                 Payments, invoices, taxes, subscriptions, and refunds may be handled by Freemius or another checkout provider shown during
@@ -176,7 +176,7 @@ const Terms = () => {
               </p>
               <p className="text-base leading-relaxed mb-4">
                 You can submit a withdrawal declaration through our{' '}
-                <a href="https://app.bballorbit.com/withdrawal" className="text-primary hover:underline">electronic withdrawal function</a>. Any voluntary refund policy
+                <a href="https://app.bballorbit.com/withdrawal" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">electronic withdrawal function</a>. Any voluntary refund policy
                 applies in addition to, and does not limit, mandatory consumer rights that cannot be excluded by law.
               </p>
             </section>

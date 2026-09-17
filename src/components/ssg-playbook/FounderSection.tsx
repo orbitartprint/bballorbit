@@ -30,7 +30,7 @@ const FounderSection = () => {
             </p>
 
             <PrimaryButton asChild className="convertkit-button">
-              <a href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout" data-commerce>
+              <a href="https://guide.bballorbit.com/products/ssg-playbook?step=checkout" target="_blank" rel="noopener noreferrer" data-commerce>
                 Get the Playbook Now
               </a>
             </PrimaryButton>

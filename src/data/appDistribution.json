@@ -1,0 +1,19 @@
+{
+  "name": "Basketball Orbit Practice Planner",
+  "downloadPageUrl": "https://app.bballorbit.com/app",
+  "webAppUrl": "https://app.bballorbit.com/",
+  "stores": [
+    {
+      "id": "ios",
+      "name": "App Store",
+      "url": null,
+      "badge": "/app-assets/app-store.svg"
+    },
+    {
+      "id": "android",
+      "name": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.bballorbit.practiceplanner",
+      "badge": "/app-assets/google-play.png"
+    }
+  ]
+}

@@ -60,7 +60,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               asChild
-              className="text-lg px-8 py-6 shadow-orange transition-bounce hover:scale-105"
+              className="max-w-full whitespace-normal text-base sm:text-lg px-4 sm:px-8 py-6 shadow-orange transition-bounce hover:scale-105"
             >
               <Link to="/resources">
                 Get Free Coaching Resources

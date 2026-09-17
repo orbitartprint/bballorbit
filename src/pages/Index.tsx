@@ -9,6 +9,7 @@ import Testimonials from "@/components/sections/testimonials";
 import BlogPromotion from "@/components/sections/blog-promotion";
 import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import PracticePlannerPromotion from "@/components/sections/practice-planner-promotion";
+import AppAvailability from "@/components/sections/app-availability";
 import { Helmet } from "react-helmet";
 
 const Index = () => {
@@ -61,6 +62,7 @@ const Index = () => {
           <VideoSection />
           <WhyBballOrbit />
           <PracticePlannerPromotion />
+          <AppAvailability />
           <MoreVideos />
           <Testimonials />
           <BlogPromotion />

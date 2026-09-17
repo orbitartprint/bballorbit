@@ -9,6 +9,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node scripts/prerender-app-page.mjs",
+    "check:app-distribution": "node scripts/check-app-distribution.mjs",
+    "check:app-distribution:release": "node scripts/check-app-distribution.mjs --release",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

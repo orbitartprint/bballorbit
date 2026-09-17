@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ExternalLink, Youtube, Instagram, Twitter, Facebook } from "lucide-react";
 import logoImg from "@/assets/basketball-orbit-logo.webp";
+import { appDistribution } from "@/lib/appDistribution";
 
 declare global {
   interface Window {
@@ -34,6 +35,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "Drill Library", path: "/drills" },
     { name: "Practice Planner", href: "https://app.bballorbit.com/" },
+    { name: "Get the App", href: appDistribution.downloadPageUrl },
     { name: "Blog", path: "/blog" },
     { name: "Resources", path: "/resources" },
     { name: "About", path: "/about" },
@@ -68,6 +70,8 @@ const Footer = () => {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={social.label}
                     className="text-muted-foreground hover:text-primary transition-smooth"
                   >
