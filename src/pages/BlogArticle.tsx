@@ -108,7 +108,7 @@ const BlogArticle = () => {
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.excerpt} />
         <meta name="twitter:image" content={article.heroImage} />
-        <link rel="canonical" href={`https://www.bballorbit.com/blog/${article.slug}`} />
+        <link rel="canonical" href={`https://bballorbit.com/blog/${article.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -131,7 +131,7 @@ const BlogArticle = () => {
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.bballorbit.com/blog/${article.slug}`
+              "@id": `https://bballorbit.com/blog/${article.slug}`
             }
           })}
         </script>

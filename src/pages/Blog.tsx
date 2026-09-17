@@ -97,9 +97,9 @@ const Blog = () => {
         <meta name="description" content="Discover expert basketball tips, training techniques, and insights to improve your game. From fundamentals to advanced strategies." />
         <meta property="og:title" content="Basketball Orbit Blog - Tips, Training & Basketball Insights" />
         <meta property="og:description" content="Discover expert basketball tips, training techniques, and insights to improve your game. From fundamentals to advanced strategies." />
-        <meta property="og:url" content="https://www.bballorbit.com/blog" />
+        <meta property="og:url" content="https://bballorbit.com/blog" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://www.bballorbit.com/blog" />
+        <link rel="canonical" href="https://bballorbit.com/blog" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />

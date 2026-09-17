@@ -38,6 +38,9 @@ jobs:
       - name: Copy index.html to 404.html
         run: cp dist/index.html dist/404.html
 
+      - name: Verify indexable routes and noindex exclusions
+        run: node scripts/verify-seo.js
+
       - name: Debug build output
         run: |
           echo "Listing contents of the root directory..."
