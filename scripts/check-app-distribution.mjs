@@ -12,7 +12,7 @@ assert.deepEqual(distribution.stores.map(({ id }) => id), ["ios", "android"]);
 for (const store of distribution.stores) {
   await access(new URL(`public${store.badge}`, root));
   if (store.url === null) {
-    assert.ok(!release, `${store.name}: public URL is missing. Release blocked until Apple approval and URL verification.`);
+    assert.ok(!release, `${store.name}: public URL is missing. Configure and verify the public store listing before release.`);
     console.log(`${store.name}: intentionally inactive in the local preview.`);
     continue;
   }
@@ -21,7 +21,7 @@ for (const store of distribution.stores) {
   assert.equal(url.hostname, allowedHosts[store.id]);
   assert.equal(url.username + url.password, "");
   if (store.id === "ios") {
-    assert.match(url.pathname, /\/id[1-9]\d{6,}$/);
+    assert.match(url.pathname, /\/id6797312848$/, "Expected the verified BballOrbit Practice Planner App Store ID");
   } else {
     assert.equal(url.pathname, "/store/apps/details");
     assert.equal(url.searchParams.get("id"), "com.bballorbit.practiceplanner");

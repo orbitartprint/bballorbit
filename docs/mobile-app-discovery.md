@@ -10,10 +10,10 @@ QR generation and the full product/FAQ page are maintained only in the Practice 
 
 ## Configuration and release
 
-`src/data/appDistribution.json` supplies the store destinations. The Apple URL remains null until approval: the badge is accessible but inactive, with no invented URL. Set the verified iOS URL in both repositories before publication.
+`src/data/appDistribution.json` supplies the store destinations. Both stores are configured. The public Apple listing is `https://apps.apple.com/app/id6797312848` (BballOrbit Practice Planner, bundle ID `com.bballorbit.practiceplanner`), verified against Apple's catalog in Germany and the US on 2026-09-17. The country-neutral link lets Apple select the storefront. Keep this configuration in sync with the Practice Planner repository.
 
-`npm run check:app-distribution` allows the local placeholder. `npm run check:app-distribution:release` rejects missing/invalid store URLs and runs before this website's deployment. This is a structural guard, not a live availability check.
+`npm run check:app-distribution` validates the local configuration. `npm run check:app-distribution:release` rejects missing/invalid store URLs and runs before this website's deployment. This is a structural guard, not a live availability check.
 
 Desktop external links open a separate tab/window. Store navigation uses Android Chrome intents with an HTTPS fallback and standard Apple HTTPS links on Apple devices; native handoff depends on device/browser support.
 
-Official badge artwork must retain its proportions. Optional analytics reuse existing window.gtag without initializing a tracker. No ratings, launch banners, newsletter or temporary announcement is included. Keep changes local until the real Apple URL is configured.
+Official badge artwork must retain its proportions. Optional analytics reuse existing window.gtag without initializing a tracker. No ratings, launch banners, newsletter or temporary announcement is included. Apple approval no longer blocks the store-link configuration; publication remains a separate deployment step.
