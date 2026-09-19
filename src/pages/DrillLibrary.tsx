@@ -14,6 +14,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchPublicDrills, getPublicDrillCategories, getPublicDrillTags } from "@/data/publicDrills";
+import { PublicLibraryNotice } from "@/components/PublicLibraryNotice";
 import { CourtSvg } from "@/features/creator/court/CourtSvg";
 import { cn } from "@/lib/utils";
 
@@ -21,9 +22,11 @@ const DrillLibrary = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const { data: drills = [], isLoading, isError, refetch } = useQuery({
-    queryKey: ["public-drills"], queryFn: fetchPublicDrills, retry: 1, staleTime: 5 * 60 * 1000,
+  const { data, isLoading, isError, isFetching, refetch } = useQuery({
+    queryKey: ["public-drills"], queryFn: fetchPublicDrills, retry: 1, staleTime: 5 * 60 * 1000, refetchOnMount: "always",
   });
+
+  const drills = useMemo(() => data?.drills ?? [], [data]);
 
   const categories = useMemo(() => getPublicDrillCategories(drills), [drills]);
   const allTags = useMemo(() => getPublicDrillTags(drills), [drills]);
@@ -92,6 +95,7 @@ const DrillLibrary = () => {
           </div>
 
           <div className="container mx-auto px-4 lg:px-8">
+            {data?.source === "snapshot" && <PublicLibraryNotice isFetching={isFetching} onRetry={() => void refetch()} />}
             {isLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Loading drills">
                 {Array.from({ length: 6 }).map((_, index) => <Skeleton key={index} className="h-[430px] rounded-xl" />)}

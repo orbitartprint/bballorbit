@@ -14,7 +14,8 @@
     "check:app-distribution:release": "node scripts/check-app-distribution.mjs --release",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:public-library": "node --test scripts/public-library.test.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

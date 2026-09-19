@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { supabase, SUPABASE_URL } from "@/integrations/supabase/client";
+import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/integrations/supabase/config";
 import { parsePublicDiagram } from "@/features/creator/publicDiagram";
 import type { DiagramState } from "@/features/creator/types";
 
@@ -79,22 +79,47 @@ const mapPublicPage = (value: unknown): PublicDrill | null => {
 
 export const parsePublicDrills = (values: unknown[]): PublicDrill[] => values.map(mapPublicPage).filter((drill): drill is PublicDrill => Boolean(drill)).sort((a, b) => a.title.localeCompare(b.title));
 
-const fetchSnapshot = async () => {
-  const response = await fetch("/drill-library-snapshot.json", { cache: "no-cache" });
+export type PublicDrillLibrary = {
+  drills: PublicDrill[];
+  source: "live" | "snapshot";
+};
+
+const fetchSnapshot = async (): Promise<PublicDrillLibrary> => {
+  const response = await fetch("/drill-library-snapshot.json", {
+    cache: "no-cache",
+    signal: AbortSignal.timeout(10_000),
+  });
   if (!response.ok) throw new Error("The Drill Library is temporarily unavailable.");
   const value = await response.json();
   if (!Array.isArray(value)) throw new Error("The Drill Library snapshot is invalid.");
-  return parsePublicDrills(value);
+  return { drills: parsePublicDrills(value), source: "snapshot" };
 };
 
-export const fetchPublicDrills = async (): Promise<PublicDrill[]> => {
-  const { data, error } = await supabase.from("public_library_pages")
-    .select("library_item_id,version_id,public_slug,seo_title,seo_description,thumbnail_path,cached_payload,rendered_at")
-    .eq("kind", "drill").eq("cache_status", "published").order("seo_title", { ascending: true });
-  if (!error) return parsePublicDrills(data ?? []);
-  return fetchSnapshot();
+export const fetchPublicDrills = async (): Promise<PublicDrillLibrary> => {
+  // Public pages must not inherit a saved login: an invalid session otherwise
+  // turns this public request into a 401 and silently serves an older snapshot.
+  const endpoint = new URL("/rest/v1/public_library_pages", SUPABASE_URL);
+  endpoint.search = new URLSearchParams({
+    select: "library_item_id,version_id,public_slug,seo_title,seo_description,thumbnail_path,cached_payload,rendered_at",
+    kind: "eq.drill",
+    cache_status: "eq.published",
+    order: "seo_title.asc",
+  }).toString();
+  try {
+    const response = await fetch(endpoint, {
+      headers: { apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` },
+      credentials: "omit",
+      cache: "no-store",
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!response.ok) throw new Error("The latest drills could not be loaded.");
+    const rows = await response.json();
+    if (!Array.isArray(rows)) throw new Error("The Drill Library response is invalid.");
+    return { drills: parsePublicDrills(rows), source: "live" };
+  } catch {
+    return fetchSnapshot();
+  }
 };
 
-export const fetchPublicDrill = async (slug: string) => (await fetchPublicDrills()).find((drill) => drill.slug === slug) ?? null;
 export const getPublicDrillCategories = (drills: PublicDrill[]) => Array.from(new Map(drills.flatMap((drill) => drill.categories).map((category) => [category.slug, category])).values()).sort((a, b) => a.label.localeCompare(b.label));
 export const getPublicDrillTags = (drills: PublicDrill[]) => dedupe(drills.flatMap((drill) => drill.tags)).sort((a, b) => a.localeCompare(b));

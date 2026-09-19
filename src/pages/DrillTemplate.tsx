@@ -9,7 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { fetchPublicDrill, type PublicDrill } from "@/data/publicDrills";
+import { fetchPublicDrills, type PublicDrill } from "@/data/publicDrills";
+import { PublicLibraryNotice } from "@/components/PublicLibraryNotice";
 import { RichTextRenderer } from "@/components/RichTextRenderer";
 import { AnimationViewerDialog } from "@/features/creator/AnimationViewerDialog";
 import { buildAnimationTimeline } from "@/features/creator/animation";
@@ -55,16 +56,17 @@ const DrillTemplate = () => {
   const { slug = "" } = useParams();
   const [animationOpen, setAnimationOpen] = useState(false);
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
-  const { data: drill, isLoading, isError, refetch } = useQuery({
-    queryKey: ["public-drill", slug], queryFn: () => fetchPublicDrill(slug), retry: 1, staleTime: 5 * 60 * 1000,
+  const { data, isLoading, isError, isFetching, refetch } = useQuery({
+    queryKey: ["public-drills"], queryFn: fetchPublicDrills, retry: 1, staleTime: 5 * 60 * 1000, refetchOnMount: "always",
   });
+  const drill = data?.drills.find((item) => item.slug === slug);
   const canAnimate = useMemo(() => {
     if (!drill?.diagram) return false;
     return buildAnimationTimeline(drill.diagram, drill.diagram.activePhaseId, "all").totalMs > 0;
   }, [drill?.diagram]);
 
   if (isLoading) return <DetailShell><Skeleton className="h-10 w-44 mb-8" /><Skeleton className="h-16 max-w-3xl mx-auto mb-10" /><div className="grid gap-8 md:grid-cols-2"><Skeleton className="aspect-video rounded-xl" /><Skeleton className="h-72 rounded-xl" /></div></DetailShell>;
-  if (isError) return <DetailShell><div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-8 text-center"><h1 className="text-2xl font-bold">This drill could not be loaded.</h1><p className="mt-2 text-muted-foreground">Please try again in a moment.</p><Button className="mt-5 gap-2" onClick={() => void refetch()}><RefreshCw className="h-4 w-4" />Try again</Button></div></DetailShell>;
+  if (isError || (data?.source === "snapshot" && !drill)) return <DetailShell><div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-8 text-center"><h1 className="text-2xl font-bold">This drill could not be loaded.</h1><p className="mt-2 text-muted-foreground">Please try again in a moment.</p><Button className="mt-5 gap-2" onClick={() => void refetch()}><RefreshCw className="h-4 w-4" />Try again</Button></div></DetailShell>;
   if (!drill) return (
     <><Helmet><title>Drill not found - Basketball Orbit</title><meta name="robots" content="noindex" /></Helmet><DetailShell><div className="mx-auto max-w-lg py-20 text-center"><h1 className="text-3xl font-bold">Drill not found</h1><p className="mt-3 text-muted-foreground">This drill may have been unpublished or the link is no longer valid.</p><Button asChild variant="outline" className="mt-6"><Link to="/drills"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link></Button></div></DetailShell></>
   );
@@ -84,6 +86,7 @@ const DrillTemplate = () => {
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: drill.title, description: drill.excerpt, image: drill.thumbnailUrl ?? undefined, step: structuredSteps.map((phase) => ({ "@type": "HowToStep", name: phase.title, text: phase.notes })) })}</script>
       </Helmet>
       <DetailShell>
+        {data?.source === "snapshot" && <PublicLibraryNotice isFetching={isFetching} onRetry={() => void refetch()} />}
         <div className="mb-8 flex items-center">
           <Link to="/drills" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link>
         </div>
