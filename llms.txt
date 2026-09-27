@@ -1,0 +1,25 @@
+# Basketball Orbit
+
+> A coaching hub for modern basketball training built on small-sided games, constraint-led approaches, and ready-to-use drills.
+
+Basketball Orbit helps coaches and players train smarter with evidence-based drill designs, video demonstrations, and downloadable resources. The site emphasizes game-like scenarios, decision-making under pressure, and progressive skill development.
+
+## Pages
+
+- [/](/): Homepage showcasing featured drills, latest blog posts, video content, and testimonials.
+- [/drills](/drills): Drill library with filterable small-sided games and constraint-based training exercises.
+- [/drills/2v2-paint-balance](/drills/2v2-paint-balance): Sample drill — 2v2 Paint Balance with defensive inside-outside rules and offensive spacing constraints.
+- [/drills/1v1-midline-gate-decision](/drills/1v1-midline-gate-decision): Sample drill — full-court 1v1 change-of-direction read after midline touch.
+- [/resources](/resources): Coaching resources, guides, and tools for basketball development.
+- [/free-resources](/free-resources): Free downloadable content for coaches and players.
+- [/about](/about): About Basketball Orbit, the mission, and the founder.
+- [/blog](/blog): Basketball coaching blog covering tactics, training methods, and game analysis.
+- [/blog/press-break](/blog/press-break): Sample article — breaking the press and transition offense strategies.
+- [/blog/constraints-led-approach](/blog/constraints-led-approach): Sample article — using constraints to accelerate player development.
+- [/ssg-playbook](/ssg-playbook): The SSG Playbook — a comprehensive guide to small-sided games for basketball coaches.
+- [/contact](/contact): Contact form and inquiry page for coaching questions and collaborations.
+- [/terms](/terms): Terms of service and usage conditions.
+- [/privacy](/privacy): Privacy policy and data handling practices.
+- [/legal](/legal): Legal notice / Impressum.
+- [/affiliate](/affiliate): Affiliate program information and partnership details.
+- [/data-deletion](/data-deletion): Account and data deletion request instructions.
