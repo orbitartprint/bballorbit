@@ -158,7 +158,7 @@ const About = () => {
                     <p className="text-muted-foreground italic mb-4 leading-relaxed">
                       "This video is amazing! I have watched it over and over so I can use all of the different drill options! Very well done! Thanks, Coach!"
                     </p>
-                    <p className="text-primary font-semibold">— YouTube Subscriber</p>
+                    <p className="text-primary font-semibold">— YouTube Subscriber Kenneth</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-background border-primary/20">
@@ -166,7 +166,7 @@ const About = () => {
                     <p className="text-muted-foreground italic mb-4 leading-relaxed">
                       "I really appreciate your Videos, with them I plan my Trainings. You help me to be a better Coach. Great Videos 👍 Always looking forward for the next Video 😊"
                     </p>
-                    <p className="text-primary font-semibold">— Coach from Germany</p>
+                    <p className="text-primary font-semibold">— Coach Robert from Germany</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-background border-primary/20">
@@ -174,7 +174,7 @@ const About = () => {
                     <p className="text-muted-foreground italic mb-4 leading-relaxed">
                       "This is awesome! You've really helped me see that any basic drill can be continually modified and developed into something bigger and tougher. Thanks for taking the time to make these videos. I love the format."
                     </p>
-                    <p className="text-primary font-semibold">— Basketball Coach</p>
+                    <p className="text-primary font-semibold">— Coach Chad from the USA</p>
                   </CardContent>
                 </Card>
               </div>
