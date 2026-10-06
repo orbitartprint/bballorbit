@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Check, ChevronDown, RefreshCw, Target, X } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
+import DrillCreatorPromotion from "@/components/sections/drill-creator-promotion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RichTextRenderer } from "@/components/RichTextRenderer";
 import { Badge } from "@/components/ui/badge";
@@ -159,6 +160,7 @@ const DrillLibrary = () => {
               </div>
             )}
           </div>
+          <DrillCreatorPromotion />
         </main>
         <Footer />
       </div>
