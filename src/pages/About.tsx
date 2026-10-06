@@ -188,15 +188,15 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div className="bg-gradient-orange/10 rounded-lg p-8 border border-primary/20">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">30,000+</div>
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">31,000+</div>
                   <p className="text-muted-foreground">YouTube Subscribers</p>
                 </div>
                 <div className="bg-gradient-blue/10 rounded-lg p-8 border border-secondary/20">
-                  <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">3.1M</div>
+                  <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">3.2M</div>
                   <p className="text-muted-foreground">Views</p>
                 </div>
                 <div className="bg-gradient-orange/10 rounded-lg p-8 border border-primary/20">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">40+</div>
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
                   <p className="text-muted-foreground">Videos on Coaching Drills and Plays</p>
                 </div>
               </div>
