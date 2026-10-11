@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1500" viewBox="0 0 900 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Expected points make shot value visible</title>
+  <desc id="desc">Illustrative comparison: a rim finish at 65 percent yields 1.30 expected points, a three-pointer at 36 percent yields 1.08, and a long two at 42 percent yields 0.84.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171a22"/><stop offset="1" stop-color="#08090d"/></linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff9a52"/><stop offset="1" stop-color="#f57520"/></linearGradient>
+  </defs>
+  <rect width="900" height="1500" rx="32" fill="url(#bg)"/>
+  <text x="60" y="82" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="4">BASKETBALL ORBIT</text>
+  <text x="60" y="150" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">Expected points</text>
+  <text x="60" y="205" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">make value visible</text>
+  <text x="60" y="254" fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="32">Probability × point value = expected points</text>
+
+  <rect x="60" y="315" width="780" height="285" rx="26" fill="#20242d" stroke="#f57520" stroke-width="3"/>
+  <circle cx="145" cy="408" r="42" fill="url(#orange)"/>
+  <text x="145" y="423" text-anchor="middle" fill="#11131a" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900">+</text>
+  <text x="220" y="392" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Rim finish</text>
+  <text x="220" y="438" fill="#ffb47f" font-family="Inter, Arial, sans-serif" font-size="34">65% × 2 points</text>
+  <text x="710" y="430" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="65" font-weight="900">1.30</text>
+  <text x="710" y="470" text-anchor="middle" fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="28">expected points</text>
+  <text x="100" y="548" fill="#cdd2da" font-family="Inter, Arial, sans-serif" font-size="30">Highest example value</text>
+
+  <rect x="60" y="640" width="780" height="285" rx="26" fill="#20242d" stroke="#697386" stroke-width="2"/>
+  <circle cx="145" cy="733" r="42" fill="#303747" stroke="#8993a5" stroke-width="2"/>
+  <text x="145" y="748" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900">3</text>
+  <text x="220" y="717" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Three-pointer</text>
+  <text x="220" y="763" fill="#c2c8d2" font-family="Inter, Arial, sans-serif" font-size="34">36% × 3 points</text>
+  <text x="710" y="755" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="65" font-weight="900">1.08</text>
+  <text x="710" y="795" text-anchor="middle" fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="28">expected points</text>
+  <text x="100" y="873" fill="#cdd2da" font-family="Inter, Arial, sans-serif" font-size="30">Extra point offsets lower accuracy</text>
+
+  <rect x="60" y="965" width="780" height="285" rx="26" fill="#20242d" stroke="#8b5b36" stroke-width="2"/>
+  <circle cx="145" cy="1058" r="42" fill="#35281f" stroke="#a86d3b" stroke-width="2"/>
+  <text x="145" y="1073" text-anchor="middle" fill="#e2ad7c" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900">2</text>
+  <text x="220" y="1042" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Long two</text>
+  <text x="220" y="1088" fill="#d2a57d" font-family="Inter, Arial, sans-serif" font-size="34">42% × 2 points</text>
+  <text x="710" y="1080" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="65" font-weight="900">0.84</text>
+  <text x="710" y="1120" text-anchor="middle" fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="28">expected points</text>
+  <text x="100" y="1198" fill="#cdd2da" font-family="Inter, Arial, sans-serif" font-size="30">Accuracy does not offset point value</text>
+
+  <rect x="60" y="1300" width="780" height="125" rx="22" fill="#151821" stroke="#303644"/>
+  <text x="95" y="1348" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">BREAK-EVEN</text>
+  <text x="95" y="1390" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">A 36% three equals a 54% two.</text>
+  <text x="60" y="1470" fill="#7e8695" font-family="Inter, Arial, sans-serif" font-size="24">Illustrative rates. Use your own team data and context.</text>
+</svg>
