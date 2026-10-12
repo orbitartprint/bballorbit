@@ -10,7 +10,7 @@ export default function RouteSeo() {
 
   return (
     <Helmet>
-      <link rel="canonical" href={`https://bballorbit.com${path}`} />
+      <link rel="canonical" href={`https://bballorbit.com${path === "/" ? "/" : `${path}/`}`} />
       <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
     </Helmet>
   );

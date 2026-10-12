@@ -71,7 +71,7 @@ const DrillTemplate = () => {
     <><Helmet><title>Drill not found - Basketball Orbit</title><meta name="robots" content="noindex" /></Helmet><DetailShell><div className="mx-auto max-w-lg py-20 text-center"><h1 className="text-3xl font-bold">Drill not found</h1><p className="mt-3 text-muted-foreground">This drill may have been unpublished or the link is no longer valid.</p><Button asChild variant="outline" className="mt-6"><Link to="/drills"><ArrowLeft className="mr-2 h-4 w-4" />Back to Drill Library</Link></Button></div></DetailShell></>
   );
 
-  const canonicalUrl = `https://bballorbit.com/drills/${drill.slug}`;
+  const canonicalUrl = `https://bballorbit.com/drills/${drill.slug}/`;
   const structuredSteps = drill.phases.length > 0 ? drill.phases : [{ title: "Overview", notes: drill.description }];
   return (
     <>

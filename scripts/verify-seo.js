@@ -18,8 +18,8 @@ for (const path of ["free-resources", "privacy"]) {
 for (const article of articles) {
   const path = `blog/${article.slug}`;
   const html = htmlFor(path);
-  assert.match(sitemap, new RegExp(`<loc>https://bballorbit.com/${path}</loc>`));
-  assert.match(html, new RegExp(`<link rel="canonical" href="https://bballorbit.com/${path}"`));
+  assert.match(sitemap, new RegExp(`<loc>https://bballorbit.com/${path}/</loc>`));
+  assert.match(html, new RegExp(`<link rel="canonical" href="https://bballorbit.com/${path}/"`));
   assert.doesNotMatch(html, /<meta name="robots"[^>]*noindex/);
   assert.ok(html.includes(article.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;") + " | Basketball Orbit</title>"), `Missing article title for ${path}`);
 }
@@ -33,12 +33,14 @@ for (const slug of ["tagging-up", "basketball-practice-planning", "shot-selectio
 for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   const url = new URL(match[1]);
   assert.equal(url.origin, "https://bballorbit.com");
+  assert.ok(url.pathname.endsWith("/"), `Sitemap URL must target the final directory URL: ${url.href}`);
   const html = htmlFor(url.pathname.replace(/^\//, ""));
+  assert.ok(html.includes(`<link rel="canonical" href="${url.href}"`), `Canonical must match sitemap URL: ${url.href}`);
   assert.doesNotMatch(html, /<meta name="robots"[^>]*noindex/);
 }
 
 for (const path of ["about", "contact", "resources", "terms", "blog", "drills"]) {
-  assert.match(htmlFor(path), new RegExp(`<link rel="canonical" href="https://bballorbit.com/${path}"`));
+  assert.match(htmlFor(path), new RegExp(`<link rel="canonical" href="https://bballorbit.com/${path}/"`));
 }
 
 console.log(`SEO checks passed: ${articles.length} blog routes, all sitemap targets, noindex exclusions and page canonicals.`);

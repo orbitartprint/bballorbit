@@ -9,6 +9,8 @@ const baseHtml = readFileSync(join(distPath, "index.html"), "utf8");
 const supabaseUrl = process.env.VITE_SUPABASE_URL || "https://oxavwwowalaepqxygzkt.supabase.co";
 const supabaseKey = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94YXZ3d293YWxhZXBxeHlnemt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkwODgxODAsImV4cCI6MjA3NDY2NDE4MH0.3XWC9LomrGnCL7HVyw4GIfpqzzIrVYm5xW7S0dSeqe4";
 const siteUrl = "https://bballorbit.com";
+// GitHub Pages serves prerendered directory routes with a trailing slash.
+const canonicalForRoute = (route) => `${siteUrl}${route === "/" ? "/" : `${route.replace(/\/+$/, "")}/`}`;
 
 const escapeHtml = (value = "") => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const escapeXml = (value = "") => escapeHtml(value).replace(/'/g, "&apos;");
@@ -57,8 +59,8 @@ const main = async () => {
 
   for (const route of staticRoutes) {
     let html = route === "/drills"
-      ? replaceMeta(baseHtml, { title: "Basketball Drill Library - Basketball Orbit", description: "Explore modern, game-like basketball drills and start a complete practice plan in seconds.", canonical: `${siteUrl}/drills` })
-      : baseHtml.replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${siteUrl}${route}" data-react-helmet="true" />`);
+      ? replaceMeta(baseHtml, { title: "Basketball Drill Library - Basketball Orbit", description: "Explore modern, game-like basketball drills and start a complete practice plan in seconds.", canonical: canonicalForRoute("/drills") })
+      : baseHtml.replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${canonicalForRoute(route)}" data-react-helmet="true" />`);
     if (noindexRoutes.has(route)) {
       html = html.replace("</head>", '<meta name="robots" content="noindex, nofollow" data-react-helmet="true" />\n</head>');
     }
@@ -75,7 +77,7 @@ const main = async () => {
     writeRoute(route, replaceMeta(baseHtml, {
       title: `${article.title} | Basketball Orbit`,
       description: article.excerpt,
-      canonical: `${siteUrl}${route}`,
+      canonical: canonicalForRoute(route),
       image: new URL(article.heroImage, siteUrl).href,
     }));
     sitemapRoutes.push(route);
@@ -86,7 +88,7 @@ const main = async () => {
     const slug = row.public_slug;
     const title = payload.title || row.seo_title;
     const description = (payload.excerpt || payload.description || row.seo_description || "Basketball drill from Basketball Orbit.").slice(0, 240);
-    const canonical = `${siteUrl}/drills/${slug}`;
+    const canonical = canonicalForRoute(`/drills/${slug}`);
     const thumbnailPath = payload.thumbnailPath || row.thumbnail_path;
     const image = thumbnailPath ? (/^https?:\/\//i.test(thumbnailPath) ? thumbnailPath : `${supabaseUrl}/storage/v1/object/public/library-media/${thumbnailPath}`) : `${siteUrl}/og-image.webp`;
     const phases = Array.isArray(payload.phases) && payload.phases.length > 0 ? payload.phases : [{ title: "Overview", notes: payload.description || row.seo_description || "" }];
@@ -96,7 +98,7 @@ const main = async () => {
   }
 
   const now = new Date().toISOString().slice(0, 10);
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Array.from(new Set(sitemapRoutes)).map((route) => `  <url><loc>${escapeXml(`${siteUrl}${route === "/" ? "/" : route}`)}</loc><lastmod>${now}</lastmod></url>`).join("\n")}\n</urlset>\n`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Array.from(new Set(sitemapRoutes)).map((route) => `  <url><loc>${escapeXml(canonicalForRoute(route))}</loc><lastmod>${now}</lastmod></url>`).join("\n")}\n</urlset>\n`;
   writeFileSync(join(distPath, "sitemap.xml"), sitemap, "utf8");
   console.log(`Prerendered ${staticRoutes.length} static routes, ${articles.length} blog articles and ${drills.length} published drills.`);
 };

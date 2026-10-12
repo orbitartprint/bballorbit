@@ -46,8 +46,8 @@ const DrillLibrary = () => {
       <Helmet>
         <title>Basketball Drill Library - Basketball Orbit</title>
         <meta name="description" content="Explore modern, game-like basketball drills and start a complete practice plan in seconds." />
-        <link rel="canonical" href="https://bballorbit.com/drills" />
-        <meta property="og:url" content="https://bballorbit.com/drills" />
+        <link rel="canonical" href="https://bballorbit.com/drills/" />
+        <meta property="og:url" content="https://bballorbit.com/drills/" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />
