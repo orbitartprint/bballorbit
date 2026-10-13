@@ -102,15 +102,17 @@ const About = () => {
               </div>
         
               {/* Rechte Spalte: Foto von Chris */}
-              <div className="flex justify-center lg:justify-start lg:sticky lg:top-16">
-                <div className="relative">
+              <div className="flex min-w-0 justify-center lg:justify-start lg:sticky lg:top-16">
+                <div className="relative w-full max-w-lg">
                   <img 
                     src={chrisPhoto2} 
-                    alt="Chris coaching on basketball court"
-                    title="Chris coaching on basketball court"
+                    alt="Chris coaching his team during a basketball timeout"
+                    title="Chris coaching his team during a basketball timeout"
+                    width={1024}
+                    height={681}
                     loading="lazy"
                     decoding="async"
-                    className="rounded-lg shadow-blue w-80 h-96 object-cover"
+                    className="block h-auto w-full rounded-lg shadow-blue"
                   />
                   <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-blue rounded-full opacity-20"></div>
                 </div>
