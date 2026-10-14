@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { createServer } from "vite";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 
 // Load the same TypeScript module used by both pages, with the project's aliases.
 test("public Drill Library loads independently of login state and reports fallback", async (t) => {
@@ -17,6 +19,34 @@ test("public Drill Library loads independently of login state and reports fallba
       cached_payload: { title: "Relay Tag Warm-Up" }, rendered_at: null,
     };
     const json = (value, status = 200) => new Response(JSON.stringify(value), { status, headers: { "Content-Type": "application/json" } });
+
+    await t.test("embedded Creator images keep public diagrams available in every court orientation", async () => {
+      const { parsePublicDrills } = await server.ssrLoadModule("/src/data/publicDrills.ts");
+      const { CourtSvg } = await server.ssrLoadModule("/src/features/creator/court/CourtSvg.tsx");
+      const image = { dataUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l9sAAAAASUVORK5CYII=", assetId: "asset-1", name: "players-plank.png", pixelWidth: 1, pixelHeight: 1 };
+      for (const size of ["full-horizontal", "half", "full-vertical"]) {
+        const imageObject = { id: "image-1", type: "image", x: 4, y: 6, width: 12, height: 8, angle: 30, opacity: 0.6, image };
+        const source = { ...row, cached_payload: { title: row.seo_title, diagramDocument: {
+          court: { template: "fiba", size, theme: "hardwood", showGrid: false },
+          phases: [{ id: "phase-1", title: "Setup", players: [], actions: [], objects: [imageObject] }, { id: "phase-2", title: "Play", players: [], actions: [], objects: [] }],
+        } } };
+        const drill = parsePublicDrills([source])[0];
+        assert.ok(drill.diagram, "an image must not invalidate the entire public diagram");
+        assert.equal(drill.diagram.phases.length, 2);
+        assert.deepEqual(drill.diagram.phases[0].objects[0], imageObject);
+        const render = (phase) => renderToStaticMarkup(createElement(CourtSvg, { ...drill.diagram.court, phase, interactive: false, selection: null, draftActionStart: null }));
+        const markup = render(drill.diagram.phases[0]);
+        assert.match(markup, /<image /);
+        assert.ok(markup.includes(`href="${image.dataUrl}"`));
+        assert.match(markup, /rotate\(-30\)/);
+        assert.match(markup, /opacity="0.6"/);
+        assert.ok(markup.includes(size === "full-horizontal" ? 'width="12" height="8" opacity=' : 'width="8" height="12" opacity='));
+        assert.match(markup, /<title>players-plank.png<\/title>/);
+        assert.doesNotMatch(render(drill.diagram.phases[1]), /<image /);
+        assert.match(render({ ...drill.diagram.phases[0], objects: [{ ...imageObject, image: undefined }] }), />Image<\/text>/);
+        assert.match(render({ ...drill.diagram.phases[0], objects: [{ ...imageObject, image: { ...image, dataUrl: "https://example.com/expired.png" } }] }), /Image unavailable/);
+      }
+    });
 
     await t.test("requests only published drills with the public key, without cookies or cached responses", async () => {
       let calls = 0;

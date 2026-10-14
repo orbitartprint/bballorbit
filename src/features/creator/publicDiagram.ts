@@ -22,6 +22,11 @@ const actionSchema = z.object({
   color: z.string().optional(),
 }).passthrough();
 const objectSchema = z.union([
+  pointSchema.extend({
+    id: z.string(), type: z.literal("image"), width: z.number().finite().positive(), height: z.number().finite().positive(),
+    angle: z.number().finite().optional(), opacity: z.number().min(0).max(1).optional(),
+    image: z.object({ dataUrl: z.string(), assetId: z.string(), name: z.string(), pixelWidth: z.number().finite().positive(), pixelHeight: z.number().finite().positive() }).optional(),
+  }),
   pointSchema.extend({ id: z.string(), type: z.literal("cone"), label: z.string().optional(), color: z.string().optional(), size: z.number().optional() }),
   pointSchema.extend({ id: z.string(), type: z.literal("text"), text: z.string(), color: z.string().optional(), fontSize: z.number().optional(), bold: z.boolean().optional(), italic: z.boolean().optional(), underline: z.boolean().optional(), align: z.enum(["left", "center", "right", "justify"]).optional() }),
 ]);

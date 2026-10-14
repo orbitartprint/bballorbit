@@ -16,6 +16,8 @@ import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchPublicDrills, getPublicDrillCategories, getPublicDrillTags } from "@/data/publicDrills";
 import { PublicLibraryNotice } from "@/components/PublicLibraryNotice";
+import { CollectionPagination } from "@/components/CollectionPagination";
+import { useCollectionPagination } from "@/hooks/useCollectionPagination";
 import { CourtSvg } from "@/features/creator/court/CourtSvg";
 import { cn } from "@/lib/utils";
 
@@ -36,6 +38,7 @@ const DrillLibrary = () => {
     const matchesTags = selectedTags.length === 0 || selectedTags.some((tag) => drill.tags.includes(tag));
     return matchesCategory && matchesTags;
   }), [categoryFilter, drills, selectedTags]);
+  const pagination = useCollectionPagination(filteredDrills, "library", undefined, JSON.stringify([categoryFilter, selectedTags]));
 
   const toggleTag = (tag: string) => setSelectedTags((current) => current.includes(tag) ? current.filter((value) => value !== tag) : [...current, tag]);
   const clearFilters = () => { setCategoryFilter("all"); setSelectedTags([]); };
@@ -95,7 +98,7 @@ const DrillLibrary = () => {
             </div>
           </div>
 
-          <div className="container mx-auto px-4 lg:px-8">
+          <div ref={pagination.resultsRef} className="container mx-auto scroll-mt-24 px-4 lg:px-8">
             {data?.source === "snapshot" && <PublicLibraryNotice isFetching={isFetching} onRetry={() => void refetch()} />}
             {isLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Loading drills">
@@ -110,8 +113,9 @@ const DrillLibrary = () => {
             ) : filteredDrills.length === 0 ? (
               <div className="text-center py-16"><p className="text-lg text-muted-foreground">No drills match these filters.</p><Button variant="link" onClick={clearFilters}>Clear filters</Button></div>
             ) : (
+              <div className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredDrills.map((drill) => (
+                {pagination.items.map((drill) => (
                   <Card key={drill.id} className="group overflow-hidden border-border bg-card hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
                     <Link to={`/drills/${drill.slug}`} className="block">
                       <div className="aspect-video w-full overflow-hidden bg-muted flex items-center justify-center">
@@ -157,6 +161,8 @@ const DrillLibrary = () => {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+              <CollectionPagination {...pagination} />
               </div>
             )}
           </div>

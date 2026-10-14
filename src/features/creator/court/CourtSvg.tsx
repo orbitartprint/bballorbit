@@ -3,6 +3,7 @@ import { forwardRef, useRef, type PointerEvent } from "react";
 import { cn } from "@/lib/utils";
 import type { ActionPointRole, ActionShape as DiagramActionShape, ActionType, DiagramAction, DiagramBall, DiagramPhase, Player, Point, Selection, SelectionItem } from "../types";
 import { buildArcPath, getCourtView } from "./courtGeometry";
+import { CourtImage } from "./CourtImage";
 import type { CourtSize, CourtTemplate, CourtTheme } from "../types";
 
 type CourtSvgProps = {
@@ -463,6 +464,13 @@ export const CourtSvg = forwardRef<SVGSVGElement, CourtSvgProps>(
                   selected={isSelectionSelected(displaySelection, { type: "object", id: object.id })}
                   color={object.color}
                   size={object.size}
+                />
+              ) : object.type === "image" ? (
+                <CourtImage
+                  object={object}
+                  center={courtToDisplay({ x: object.x + object.width / 2, y: object.y + object.height / 2 })}
+                  courtSize={size}
+                  selected={isSelectionSelected(displaySelection, { type: "object", id: object.id })}
                 />
               ) : (
                 <TextObject

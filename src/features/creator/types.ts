@@ -76,7 +76,24 @@ export type DiagramAction = {
   color?: string;
 };
 
+export type DiagramImage = {
+  dataUrl: string;
+  assetId: string;
+  name: string;
+  pixelWidth: number;
+  pixelHeight: number;
+};
+
 export type DiagramObject =
+  | (Point & {
+      id: string;
+      type: "image";
+      width: number;
+      height: number;
+      angle?: number;
+      opacity?: number;
+      image?: DiagramImage;
+    })
   | (Point & {
       id: string;
       type: "cone";
