@@ -147,12 +147,21 @@ All colors MUST be HSL.
 
   html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
     overflow-x: hidden; /* hierhin verschieben */
   }
   
   body {
     @apply bg-background text-foreground font-montserrat;
     overflow-x: visible; /* oder einfach entfernen */
+  }
+
+  @supports (scrollbar-gutter: stable) {
+    /* The root gutter already reserves the scrollbar; Radix must not add a second gap. */
+    html body[data-scroll-locked] {
+      margin-right: 0 !important;
+      padding-right: 0 !important;
+    }
   }
 
 }

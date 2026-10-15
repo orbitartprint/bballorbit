@@ -267,8 +267,13 @@ export const getAnimationFramePhase = (timeline: AnimationTimeline, elapsedMs: n
 export const formatAnimationTime = (ms: number) => `${(ms / 1000).toFixed(1)}s`;
 
 export const getAnimationPlaybackStartMs = (timeline: AnimationTimeline) => {
-  const firstStep = timeline.steps.find((step) => step.enabled && step.sourceActionId);
-  return firstStep ? Math.max(0, firstStep.introStartMs ?? firstStep.startMs - blankHoldMs) : 0;
+  const firstSegment = timeline.segments[0];
+  if (!firstSegment) return 0;
+  const firstStep = firstSegment.steps.find((step) => step.enabled && step.sourceActionId);
+  // An opening still phase is part of the animation, even when later phases have actions.
+  return firstStep
+    ? Math.max(firstSegment.startMs, firstStep.introStartMs ?? firstStep.startMs - blankHoldMs)
+    : firstSegment.startMs;
 };
 
 export const getFullDrillPlaybackContext = (

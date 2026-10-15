@@ -1,4 +1,6 @@
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useLayoutEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useCollectionScrollRestoration } from "./useCollectionNavigation";
+import type { CollectionNavigationEntry } from "@/lib/collectionNavigation";
 
 export type CollectionPageSize = 20 | 50 | 100;
 export type CollectionPageScope = "library" | "practices" | "playbooks" | "uploads";
@@ -27,6 +29,7 @@ export const useCollectionPagination = <T,>(
   scope: CollectionPageScope,
   userId?: string,
   resetKey = "",
+  { ready = true, navigation }: { ready?: boolean; navigation?: CollectionNavigationEntry } = {},
 ) => {
   const storageKey = getCollectionPageSizeKey(scope, userId);
   const subscribe = useCallback((onChange: () => void) => {
@@ -46,27 +49,34 @@ export const useCollectionPagination = <T,>(
   const getSnapshot = useCallback(() => readSize(storageKey), [storageKey]);
   const pageSize = useSyncExternalStore(subscribe, getSnapshot, () => DEFAULT_PAGE_SIZE);
   const key = JSON.stringify([storageKey, pageSize, resetKey]);
-  const [position, setPosition] = useState({ key, page: 1 });
+  const entryId = navigation?.id ?? "";
+  const initialPage = navigation?.initialPage?.key === key ? navigation.initialPage.page : 1;
+  const [position, setPosition] = useState({ entryId, key, page: initialPage });
   const pageCount = Math.max(1, Math.ceil(items.length / pageSize));
-  const page = position.key === key ? Math.min(position.page, pageCount) : 1;
+  const requestedPage = position.entryId === entryId ? position.key === key ? position.page : 1 : initialPage;
+  const page = ready ? Math.min(requestedPage, pageCount) : requestedPage;
   const resultsRef = useRef<HTMLDivElement | null>(null);
   const scrollRequested = useRef(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Commit a clamp/reset so adding items later cannot revive an old page.
-    setPosition((current) => current.key === key && current.page === page ? current : { key, page });
+    setPosition((current) => current.entryId === entryId && current.key === key && current.page === page ? current : { entryId, key, page });
     if (scrollRequested.current) {
-      resultsRef.current?.scrollIntoView?.({ block: "start" });
+      window.scrollTo({ left: 0, top: 0, behavior: "instant" });
       scrollRequested.current = false;
     }
-  }, [key, page]);
+  }, [entryId, key, page]);
+  useLayoutEffect(() => { if (ready && navigation) navigation.snapshot.page = { key, page }; }, [ready, navigation, key, page]);
+  useCollectionScrollRestoration(navigation, ready, resultsRef, key);
 
   const setPage = (nextPage: number) => {
+    if (navigation) navigation.pending = false;
     scrollRequested.current = true;
-    setPosition({ key, page: Math.max(1, Math.min(nextPage, pageCount)) });
+    setPosition({ entryId, key, page: Math.max(1, Math.min(nextPage, pageCount)) });
   };
   const setPageSize = (value: number) => {
     if (!isCollectionPageSize(value) || value === pageSize) return;
+    if (navigation) navigation.pending = false;
     scrollRequested.current = true;
     fallbackSizes.set(storageKey, value);
     try {

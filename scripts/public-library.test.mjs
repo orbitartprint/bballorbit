@@ -20,6 +20,40 @@ test("public Drill Library loads independently of login state and reports fallba
     };
     const json = (value, status = 200) => new Response(JSON.stringify(value), { status, headers: { "Content-Type": "application/json" } });
 
+    await t.test("public drill search matches title, description, excerpt, tags and categories without case sensitivity", async () => {
+      const { parsePublicDrills, matchesPublicDrillSearch } = await server.ssrLoadModule("/src/data/publicDrills.ts");
+      const drill = parsePublicDrills([{ ...row, cached_payload: {
+        title: "1v1 High-Five Scramble", description: "Win a loose ball and attack the basket.", excerpt: "React to the coach's signal.",
+        tags: ["Finishing", "Agility"], categories: [{ slug: "small-sided-games", label: "Small-Sided Games" }],
+      } }])[0];
+      for (const query of ["", "   ", "  HIGH-FIVE  ", "LOOSE BALL", "coach's signal", "finishing", "agility", "Small-Sided Games", "small-sided-games"]) {
+        assert.equal(matchesPublicDrillSearch(drill, query), true, `Expected a search match for ${JSON.stringify(query)}`);
+      }
+      assert.equal(matchesPublicDrillSearch(drill, "unrelated drill"), false);
+    });
+
+    await t.test("full animation starts with opening still phases instead of skipping to the first action", async () => {
+      const { buildAnimationTimeline, getAnimationFramePhase, getAnimationPlaybackStartMs } = await server.ssrLoadModule("/src/features/creator/animation.ts");
+      const opening = { id: "setup", title: "Setup", players: [{ id: "player-1", kind: "offense", number: "1", x: 10, y: 0 }], actions: [], objects: [{ id: "setup-note", type: "text", x: 10, y: 5, text: "Opening still" }], notes: "" };
+      const moving = { ...opening, id: "movement", title: "Movement", objects: [], actions: [{ id: "cut-1", type: "cut", start: { x: 10, y: 0 }, end: { x: 15, y: 0 }, shape: "straight", actorId: "player-1" }] };
+      const diagram = { schemaVersion: 1, metadata: { title: "Still phase regression", description: "", tags: [] }, court: { template: "fiba", size: "full-horizontal", theme: "clean", showGrid: false }, phases: [opening, moving], activePhaseId: moving.id };
+      const timeline = buildAnimationTimeline(diagram, diagram.activePhaseId, "all");
+      assert.equal(getAnimationPlaybackStartMs(timeline), 0);
+      assert.equal(timeline.segments[0].endMs, 2000);
+      assert.ok(timeline.steps.some(step => step.enabled && step.sourceActionId));
+      assert.equal(getAnimationFramePhase(timeline, 0).id, opening.id);
+      assert.equal(getAnimationFramePhase(timeline, 1999).id, opening.id);
+      assert.deepEqual(getAnimationFramePhase(timeline, 1000).objects, opening.objects);
+      assert.equal(getAnimationFramePhase(timeline, 2001).id, moving.id);
+
+      const consecutive = buildAnimationTimeline({ ...diagram, phases: [opening, { ...opening, id: "second-still" }, moving] }, moving.id, "all");
+      assert.equal(getAnimationPlaybackStartMs(consecutive), 0);
+      assert.equal(getAnimationFramePhase(consecutive, 3000).id, "second-still");
+      assert.equal(getAnimationFramePhase(consecutive, 4001).id, moving.id);
+      assert.equal(getAnimationPlaybackStartMs(buildAnimationTimeline({ ...diagram, phases: [moving] }, moving.id, "phase")), 0);
+      assert.equal(getAnimationPlaybackStartMs(buildAnimationTimeline({ ...diagram, phases: [] }, "", "all")), 0);
+    });
+
     await t.test("embedded Creator images keep public diagrams available in every court orientation", async () => {
       const { parsePublicDrills } = await server.ssrLoadModule("/src/data/publicDrills.ts");
       const { CourtSvg } = await server.ssrLoadModule("/src/features/creator/court/CourtSvg.tsx");

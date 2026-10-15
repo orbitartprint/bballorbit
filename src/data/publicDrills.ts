@@ -79,6 +79,12 @@ const mapPublicPage = (value: unknown): PublicDrill | null => {
 
 export const parsePublicDrills = (values: unknown[]): PublicDrill[] => values.map(mapPublicPage).filter((drill): drill is PublicDrill => Boolean(drill)).sort((a, b) => a.title.localeCompare(b.title));
 
+export const matchesPublicDrillSearch = (drill: PublicDrill, query: string): boolean => {
+  const needle = query.trim().toLowerCase();
+  return !needle || [drill.title, drill.description, drill.excerpt, ...drill.tags, ...drill.categories.flatMap((category) => [category.label, category.slug])]
+    .join(" ").toLowerCase().includes(needle);
+};
+
 export type PublicDrillLibrary = {
   drills: PublicDrill[];
   source: "live" | "snapshot";

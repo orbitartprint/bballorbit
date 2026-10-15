@@ -1,8 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Check, ChevronDown, RefreshCw, Target, X } from "lucide-react";
+import { Check, ChevronDown, RefreshCw, Search, Target, X } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import DrillCreatorPromotion from "@/components/sections/drill-creator-promotion";
@@ -13,18 +13,21 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
-import { fetchPublicDrills, getPublicDrillCategories, getPublicDrillTags } from "@/data/publicDrills";
+import { fetchPublicDrills, getPublicDrillCategories, getPublicDrillTags, matchesPublicDrillSearch } from "@/data/publicDrills";
 import { PublicLibraryNotice } from "@/components/PublicLibraryNotice";
 import { CollectionPagination } from "@/components/CollectionPagination";
 import { useCollectionPagination } from "@/hooks/useCollectionPagination";
+import { useCollectionNavigation } from "@/hooks/useCollectionNavigation";
 import { CourtSvg } from "@/features/creator/court/CourtSvg";
 import { cn } from "@/lib/utils";
 
 const DrillLibrary = () => {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
-  const [categoryFilter, setCategoryFilter] = useState("all");
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const navigation = useCollectionNavigation("public-library", undefined, { query: "", categoryFilter: "all", selectedTags: [] as string[] });
+  const [query, setQuery] = navigation.field("query");
+  const [categoryFilter, setCategoryFilter] = navigation.field("categoryFilter");
+  const [selectedTags, setSelectedTags] = navigation.field("selectedTags");
   const { data, isLoading, isError, isFetching, refetch } = useQuery({
     queryKey: ["public-drills"], queryFn: fetchPublicDrills, retry: 1, staleTime: 5 * 60 * 1000, refetchOnMount: "always",
   });
@@ -36,13 +39,13 @@ const DrillLibrary = () => {
   const filteredDrills = useMemo(() => drills.filter((drill) => {
     const matchesCategory = categoryFilter === "all" || drill.categories.some((category) => category.slug === categoryFilter);
     const matchesTags = selectedTags.length === 0 || selectedTags.some((tag) => drill.tags.includes(tag));
-    return matchesCategory && matchesTags;
-  }), [categoryFilter, drills, selectedTags]);
-  const pagination = useCollectionPagination(filteredDrills, "library", undefined, JSON.stringify([categoryFilter, selectedTags]));
+    return matchesCategory && matchesTags && matchesPublicDrillSearch(drill, query);
+  }), [categoryFilter, drills, query, selectedTags]);
+  const pagination = useCollectionPagination(filteredDrills, "library", undefined, JSON.stringify([query, categoryFilter, selectedTags]), { ready: !isLoading, navigation: navigation.entry });
 
   const toggleTag = (tag: string) => setSelectedTags((current) => current.includes(tag) ? current.filter((value) => value !== tag) : [...current, tag]);
-  const clearFilters = () => { setCategoryFilter("all"); setSelectedTags([]); };
-  const hasFilters = categoryFilter !== "all" || selectedTags.length > 0;
+  const clearFilters = () => { setQuery(""); setCategoryFilter("all"); setSelectedTags([]); };
+  const hasFilters = query.trim().length > 0 || categoryFilter !== "all" || selectedTags.length > 0;
 
   return (
     <>
@@ -63,7 +66,27 @@ const DrillLibrary = () => {
           </div>
 
           <div className="container mx-auto px-4 lg:px-8 mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end max-w-4xl mx-auto">
+            <div className="mx-auto grid max-w-5xl grid-cols-1 items-end gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)]">
+              <div className="min-w-0">
+                <Label htmlFor="drill-search" className="mb-2 block text-sm text-muted-foreground">Search</Label>
+                <div className="relative">
+                  <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
+                  <Input
+                    id="drill-search"
+                    type="search"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    placeholder="Search by title, description, or tag..."
+                    autoComplete="off"
+                    className="border-border bg-card pl-10 pr-10 [&::-webkit-search-cancel-button]:appearance-none"
+                  />
+                  {query && (
+                    <button type="button" aria-label="Clear search" onClick={() => setQuery("")} className="absolute right-1 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                      <X className="h-4 w-4" aria-hidden="true" />
+                    </button>
+                  )}
+                </div>
+              </div>
               <div>
                 <Label htmlFor="category" className="text-sm text-muted-foreground mb-2 block">Category</Label>
                 <Select value={categoryFilter} onValueChange={setCategoryFilter}>
@@ -75,10 +98,13 @@ const DrillLibrary = () => {
                 </Select>
               </div>
               <div>
-                <Label className="text-sm text-muted-foreground mb-2 block">Tags</Label>
+                <div className="mb-2 flex h-5 items-center justify-between gap-2">
+                  <Label htmlFor="drill-tags" className="text-sm text-muted-foreground">Tags</Label>
+                  {hasFilters && <Button variant="link" onClick={clearFilters} className="h-5 gap-1 p-0 text-xs"><X className="h-3 w-3" aria-hidden="true" />Clear Filters</Button>}
+                </div>
                 <Popover>
                   <PopoverTrigger asChild>
-                    <Button variant="outline" role="combobox" className="w-full justify-between bg-card border-border hover:bg-card/70">
+                    <Button id="drill-tags" variant="outline" role="combobox" className="w-full justify-between bg-card border-border hover:bg-card/70">
                       {selectedTags.length === 0 ? "All Tags" : `${selectedTags.length} tag(s) selected`}
                       <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
                     </Button>
@@ -94,7 +120,6 @@ const DrillLibrary = () => {
                   </PopoverContent>
                 </Popover>
               </div>
-              <div>{hasFilters ? <Button variant="outline" onClick={clearFilters} className="w-full gap-2"><X className="h-4 w-4" />Clear Filters</Button> : <div className="h-10" />}</div>
             </div>
           </div>
 
