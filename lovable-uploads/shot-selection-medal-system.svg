@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shot selection medal system and ROB filter</title>
+  <desc id="desc">Gold shots include rim finishes and free throws, silver includes open catch-and-shoot threes, and bronze includes selected non-rim paint attempts and off-dribble threes. Every shot is filtered through Range, Open, and Balanced.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171a22"/>
+      <stop offset="1" stop-color="#08090d"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd36a"/><stop offset="1" stop-color="#dc9a16"/></linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4e9ef"/><stop offset="1" stop-color="#7e8997"/></linearGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d49a68"/><stop offset="1" stop-color="#7b431f"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <text x="100" y="105" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="5">BASKETBALL ORBIT</text>
+  <text x="100" y="180" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">Give players a visible shot hierarchy</text>
+  <text x="100" y="226" fill="#aab0bd" font-family="Inter, Arial, sans-serif" font-size="25">Medals define value. ROB checks whether the opportunity is actually ready.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="100" y="285" width="420" height="315" rx="28" fill="#211f19" stroke="#dca01f" stroke-width="3"/>
+    <rect x="590" y="285" width="420" height="315" rx="28" fill="#1d2129" stroke="#8993a2" stroke-width="2"/>
+    <rect x="1080" y="285" width="420" height="315" rx="28" fill="#211b18" stroke="#925b32" stroke-width="2"/>
+  </g>
+
+  <g>
+    <path d="M270 285l40 80 40-80" fill="#b37b10" opacity="0.8"/>
+    <circle cx="310" cy="370" r="48" fill="url(#gold)"/>
+    <text x="310" y="386" text-anchor="middle" fill="#2a1d05" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">1</text>
+    <text x="310" y="465" text-anchor="middle" fill="#ffd36a" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">GOLD</text>
+    <text x="310" y="516" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="24">Rim finishes</text>
+    <text x="310" y="554" text-anchor="middle" fill="#c7bfaa" font-family="Inter, Arial, sans-serif" font-size="22">Free throws</text>
+  </g>
+  <g>
+    <path d="M760 285l40 80 40-80" fill="#636d7a" opacity="0.8"/>
+    <circle cx="800" cy="370" r="48" fill="url(#silver)"/>
+    <text x="800" y="386" text-anchor="middle" fill="#20242d" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">2</text>
+    <text x="800" y="465" text-anchor="middle" fill="#d8dee7" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">SILVER</text>
+    <text x="800" y="516" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="24">Open catch-and-shoot 3s</text>
+    <text x="800" y="554" text-anchor="middle" fill="#aeb6c3" font-family="Inter, Arial, sans-serif" font-size="22">Created from advantage</text>
+  </g>
+  <g>
+    <path d="M1250 285l40 80 40-80" fill="#75421e" opacity="0.8"/>
+    <circle cx="1290" cy="370" r="48" fill="url(#bronze)"/>
+    <text x="1290" y="386" text-anchor="middle" fill="#24140b" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">3</text>
+    <text x="1290" y="465" text-anchor="middle" fill="#d49a68" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">BRONZE</text>
+    <text x="1290" y="516" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="24">Selected non-rim paint shots</text>
+    <text x="1290" y="554" text-anchor="middle" fill="#c19a7b" font-family="Inter, Arial, sans-serif" font-size="22">Off-dribble 3s / exceptions</text>
+  </g>
+
+  <path d="M310 620v38M800 620v38M1290 620v38" stroke="#4c5361" stroke-width="3" stroke-dasharray="8 8"/>
+  <rect x="100" y="660" width="1400" height="125" rx="26" fill="#151821" stroke="#373d49"/>
+  <text x="145" y="718" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">ROB FILTER</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <circle cx="540" cy="722" r="40" fill="#232936" stroke="#f57520" stroke-width="2"/>
+    <text x="540" y="732" text-anchor="middle" fill="#fff" font-size="32" font-weight="900">R</text>
+    <text x="595" y="730" fill="#fff" font-size="26" font-weight="700">Range</text>
+    <circle cx="850" cy="722" r="40" fill="#232936" stroke="#f57520" stroke-width="2"/>
+    <text x="850" y="732" text-anchor="middle" fill="#fff" font-size="32" font-weight="900">O</text>
+    <text x="905" y="730" fill="#fff" font-size="26" font-weight="700">Open</text>
+    <circle cx="1130" cy="722" r="40" fill="#232936" stroke="#f57520" stroke-width="2"/>
+    <text x="1130" y="732" text-anchor="middle" fill="#fff" font-size="32" font-weight="900">B</text>
+    <text x="1185" y="730" fill="#fff" font-size="26" font-weight="700">Balanced</text>
+  </g>
+  <text x="100" y="842" fill="#737b89" font-family="Inter, Arial, sans-serif" font-size="17">Adapt the hierarchy by player, level, coverage, score, and clock. Medal and ROB concepts adapted from Transforming Basketball.</text>
+</svg>
