@@ -96,7 +96,7 @@ const BlogArticle = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>{article.title} | Basketball Orbit</title>
         <meta name="description" content={article.excerpt} />
         <meta property="og:title" content={article.title} />

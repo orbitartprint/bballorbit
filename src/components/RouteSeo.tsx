@@ -13,7 +13,8 @@ export default function RouteSeo() {
   const image = absoluteImage(metadata.image);
 
   return (
-    <Helmet>
+    // Apply metadata before passive effects so analytics reads this route's title.
+    <Helmet defer={false}>
       <title>{metadata.title}</title>
       <meta name="description" content={metadata.description} />
       <link rel="canonical" href={canonical} />
