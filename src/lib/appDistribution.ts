@@ -1,3 +1,4 @@
+import { trackWebsiteEvent } from "./analytics";
 import distribution from "@/data/appDistribution.json";
 
 export const appDistribution = distribution;
@@ -19,10 +20,7 @@ export function trackAppLink(
   if (typeof window === "undefined") return;
 
   try {
-    const analytics = window as Window & {
-      gtag?: (command: string, event: string, parameters: Record<string, string>) => void;
-    };
-    analytics.gtag?.("event", destination === "ios" || destination === "android" ? "app_store_click" : "app_link_click", {
+    trackWebsiteEvent(destination === "ios" || destination === "android" ? "app_store_click" : "app_link_click", {
       app_destination: destination,
       app_placement: placement,
     });

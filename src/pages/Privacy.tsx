@@ -19,7 +19,7 @@ const Privacy = () => {
           </h1>
 
           <p className="text-lg text-muted-foreground mb-8">
-            <strong>Last updated May 26, 2026</strong>
+            <strong>Last updated October 29, 2026</strong>
           </p>
 
           <div className="space-y-6 text-muted-foreground">
@@ -299,7 +299,7 @@ const Privacy = () => {
                 <strong>Resend.</strong> We may use Resend or a similar provider for transactional emails, including account, support, security, and deletion verification emails.
               </li>
               <li>
-                <strong>Cloudflare.</strong> We may use Cloudflare for DNS, CDN, security, delivery, deployment, or app hosting infrastructure.
+                <strong>Cloudflare.</strong> We use Cloudflare for website delivery and security, including Turnstile on the website contact form. Turnstile processes technical browser and network signals to distinguish people from automated submissions. We verify its token on our server before accepting a message. See Cloudflare's <a href="https://www.cloudflare.com/turnstile-privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-primary underline">Turnstile Privacy Addendum</a>. Contact messages are stored in Supabase and a notification is sent to our support address through Resend. Short-lived abuse counters use a hashed network identifier; the contact queue does not store the plain IP address.
               </li>
               <li>
                 <strong>GitHub Pages.</strong> Parts of the public website may be hosted through GitHub Pages, which may process technical request data such as IP addresses and browser metadata for delivery and security.

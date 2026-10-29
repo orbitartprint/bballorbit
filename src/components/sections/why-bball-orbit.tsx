@@ -10,7 +10,7 @@ const WhyBballOrbit = () => {
     },
     {
       icon: Brain,
-      text: "Proven strategies for real-game success"
+      text: "Game-based strategies for your next practice"
     },
     {
       icon: FileText,
@@ -22,7 +22,7 @@ const WhyBballOrbit = () => {
     },
     {
       icon: Globe,
-      text: "Trusted by 30,000+ coaches worldwide"
+      text: "Built for youth basketball coaches"
     }
   ];
 

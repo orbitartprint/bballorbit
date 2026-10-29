@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   server: {
     host: "::",
     port: 8080,
@@ -16,4 +16,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   assetsInclude: ['**/*.md'],
+  build: {
+    copyPublicDir: !isSsrBuild,
+  },
 }));

@@ -1,4 +1,5 @@
-import { useCallback, useLayoutEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useBrowserLayoutEffect as useLayoutEffect } from "./useBrowserLayoutEffect";
+import { useCallback, useRef, useState, useSyncExternalStore } from "react";
 import { useCollectionScrollRestoration } from "./useCollectionNavigation";
 import type { CollectionNavigationEntry } from "@/lib/collectionNavigation";
 

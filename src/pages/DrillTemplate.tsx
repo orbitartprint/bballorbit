@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, ExternalLink, Play, RefreshCw, Target, Users } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
@@ -16,6 +16,8 @@ import { AnimationViewerDialog } from "@/features/creator/AnimationViewerDialog"
 import { buildAnimationTimeline } from "@/features/creator/animation";
 import { CourtSvg } from "@/features/creator/court/CourtSvg";
 import { cn } from "@/lib/utils";
+import { absoluteImage } from "@/lib/seo";
+import type { PublicDrillDetail } from "@/lib/pageBootstrap";
 
 const APP_URL = "https://app.bballorbit.com";
 
@@ -54,12 +56,18 @@ const PracticeCta = ({ drill, mobile = false }: { drill: PublicDrill; mobile?: b
 
 const DrillTemplate = () => {
   const { slug = "" } = useParams();
+  const queryClient = useQueryClient();
   const [animationOpen, setAnimationOpen] = useState(false);
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
   const { data, isLoading, isError, isFetching, refetch } = useQuery({
-    queryKey: ["public-drills"], queryFn: fetchPublicDrills, retry: 1, staleTime: 5 * 60 * 1000, refetchOnMount: "always",
+    queryKey: ["public-drill", slug],
+    queryFn: async (): Promise<PublicDrillDetail> => {
+      const library = await queryClient.fetchQuery({ queryKey: ["public-drills"], queryFn: fetchPublicDrills, staleTime: 5 * 60 * 1000 });
+      return { drill: library.drills.find((item) => item.slug === slug), source: library.source };
+    },
+    retry: 1, staleTime: 5 * 60 * 1000, refetchOnMount: "always",
   });
-  const drill = data?.drills.find((item) => item.slug === slug);
+  const drill = data?.drill;
   const canAnimate = useMemo(() => {
     if (!drill?.diagram) return false;
     return buildAnimationTimeline(drill.diagram, drill.diagram.activePhaseId, "all").totalMs > 0;
@@ -82,7 +90,10 @@ const DrillTemplate = () => {
         <meta property="og:title" content={`${drill.title} - Basketball Orbit`} />
         <meta property="og:description" content={(drill.excerpt || drill.description).slice(0, 200)} />
         <meta property="og:url" content={canonicalUrl} />
-        {drill.thumbnailUrl && <meta property="og:image" content={drill.thumbnailUrl} />}
+        <meta property="og:image" content={absoluteImage(drill.thumbnailUrl ?? undefined)} />
+        <meta name="twitter:title" content={`${drill.title} - Basketball Orbit`} />
+        <meta name="twitter:description" content={(drill.excerpt || drill.description).slice(0, 200)} />
+        <meta name="twitter:image" content={absoluteImage(drill.thumbnailUrl ?? undefined)} />
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: drill.title, description: drill.excerpt, image: drill.thumbnailUrl ?? undefined, step: structuredSteps.map((phase) => ({ "@type": "HowToStep", name: phase.title, text: phase.notes })) })}</script>
       </Helmet>
       <DetailShell>

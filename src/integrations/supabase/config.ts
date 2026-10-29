@@ -1,2 +1,12 @@
-export const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || "https://oxavwwowalaepqxygzkt.supabase.co";
-export const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94YXZ3d293YWxhZXBxeHlnemt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkwODgxODAsImV4cCI6MjA3NDY2NDE4MH0.3XWC9LomrGnCL7HVyw4GIfpqzzIrVYm5xW7S0dSeqe4";
+import configuration from "../../data/publicSupabaseConfig.json";
+
+export const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || configuration.url;
+export const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || configuration.publishableKey;
+// Frontend credentials must always be public. A privileged key must fail closed.
+const keyRole = (() => {
+  try { return JSON.parse(atob(SUPABASE_PUBLISHABLE_KEY.split(".")[1])).role; }
+  catch { return undefined; }
+})();
+if (SUPABASE_PUBLISHABLE_KEY.startsWith("sb_secret_") || keyRole === "service_role") {
+  throw new Error("A private Supabase key must never be used in the public website.");
+}

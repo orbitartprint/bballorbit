@@ -8,13 +8,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import TableOfContents from "@/components/TableOfContents";
+import { ArticleVideo } from "@/components/ConsentYouTube";
 import RelatedArticles from "@/components/RelatedArticles";
 import { blogArticles, getRelatedArticles } from "@/data/blogArticles";
 import { formatDate } from "@/utils/blogHelpers";
 import { useEffect, useState } from "react";
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import 'katex/dist/katex.min.css';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
@@ -125,7 +123,7 @@ const BlogArticle = () => {
           </Button>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div className="lg:col-span-3">
-              <article className="bg-card/50 backdrop-blur p-6 md:p-8 rounded-lg border border-border">
+              <article className="bg-card/50 backdrop-blur p-4 sm:p-6 md:p-8 rounded-lg border border-border">
                 {/* Header */}
                 <header className="mb-8">
                   <Badge className="mb-4 bg-primary text-primary-foreground">
@@ -137,18 +135,19 @@ const BlogArticle = () => {
                   <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-6">
                     <span className="flex items-center gap-2">
                       <User className="h-4 w-4" />
-                      Chris - Basketball Orbit
+                      <Link to="/about" rel="author" className="underline underline-offset-4">Chris Bernhard</Link>
                     </span>
                     <span className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
-                      {formatDate(article.publishDate)}
+                      <time dateTime={article.publishDate}>{formatDate(article.publishDate)}</time>
                     </span>
                     <span className="flex items-center gap-2">
                       <Clock className="h-4 w-4" />
                       {article.readTimeMinutes} min read
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">{article.excerpt}</p>
+                  <div className="hidden sm:flex flex-wrap gap-2">
                     {article.tags.map((tag) => (
                       <Badge key={tag} variant="outline">
                         {tag}
@@ -168,7 +167,7 @@ const BlogArticle = () => {
                         alt={article.heroImageAlt}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-auto max-h-[500px] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                        className="w-full h-44 sm:h-auto sm:max-h-[500px] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
                           e.currentTarget.src = '/placeholder.svg';
                         }}
@@ -190,9 +189,10 @@ const BlogArticle = () => {
                 </Dialog>
 
                 {/* Table of Contents (Mobile) */}
-                <div className="lg:hidden mb-8">
-                  <TableOfContents key={slug} containerSelector="#article-content" />
-                </div>
+                <details className="lg:hidden mb-6 rounded-lg border border-border p-4">
+                  <summary className="cursor-pointer font-semibold">On this page</summary>
+                  <div className="mt-3"><TableOfContents key={slug} containerSelector="#article-content" /></div>
+                </details>
 
                 {/* Article Content */}
                 <div id="article-content" className="prose prose-lg prose-invert max-w-none
@@ -223,9 +223,11 @@ const BlogArticle = () => {
                   prose-td:border prose-td:border-border prose-td:p-3
                   prose-tr:border-b prose-tr:border-border">
                   <ReactMarkdown
-                    remarkPlugins={[remarkGfm, remarkMath]}
-                    rehypePlugins={[rehypeRaw, rehypeSlug, rehypeKatex]}
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw, rehypeSlug]}
                     components={{
+                      iframe: ({ src, title }) => <ArticleVideo src={src} title={title} />,
+                      h1: ({ id, children }) => <h2 id={id}>{children}</h2>,
                       a: ({ href, children }) => {
                         const isExternal = href && !href.startsWith("/") && !href.includes("bballorbit.com");
                         return (
@@ -241,7 +243,7 @@ const BlogArticle = () => {
                       },
                     }}
                   >
-                    {article.content}
+                    {article.content.replace(/^# [^\r\n]*(?:\r?\n)+/, "")}
                   </ReactMarkdown>
                 </div>
 

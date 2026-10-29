@@ -1,9 +1,9 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { Routes, Route } from "react-router-dom";
 import usePageTracking from "./hooks/usePageTracking";
 import RouteSeo from "./components/RouteSeo";
 
@@ -26,22 +26,21 @@ const SsgPlaybook = lazy(() => import("./pages/SsgPlaybook"));
 const DataDeletion = lazy(() => import("./pages/DataDeletion"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-const queryClient = new QueryClient();
+import { createPageQueryClient, type PageBootstrap } from "./lib/pageBootstrap";
 
 function PageTrackingWrapper() {
   usePageTracking();
   return null;
 }
 
-function App() {
+function App({ bootstrap }: { bootstrap?: PageBootstrap }) {
+  const [queryClient] = useState(() => createPageQueryClient(bootstrap));
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
           <RouteSeo />
-          <PageTrackingWrapper />
           {/* ✅ Suspense sorgt für Lazy Loading */}
           <Suspense
             fallback={<div className="p-6 text-sm text-muted-foreground">Loading…</div>}
@@ -65,8 +64,8 @@ function App() {
               <Route path="/data-deletion" element={<DataDeletion />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <PageTrackingWrapper />
           </Suspense>
-        </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
