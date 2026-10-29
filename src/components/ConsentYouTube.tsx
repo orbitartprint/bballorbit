@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Play } from "lucide-react";
 import { useConsent } from "@/hooks/useConsent";
 
-export default function ConsentYouTube({ videoId, title, poster }: { videoId: string; title: string; poster?: string }) {
+export default function ConsentYouTube({ videoId, title, poster, posterSrcSet }: { videoId: string; title: string; poster?: string; posterSrcSet?: string }) {
   const [playing, setPlaying] = useState(false);
   const { advertisement } = useConsent();
   if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) return null;
   return <div className="relative aspect-video overflow-hidden rounded-xl bg-black shadow-glow not-prose">
     {advertisement && playing ? <iframe className="h-full w-full" src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`} title={title} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen /> : <>
-      {poster && <img src={poster} alt={title} loading="lazy" decoding="async" className="h-full w-full object-cover" />}
+      {poster && <img src={poster} srcSet={posterSrcSet} sizes="(min-width: 1024px) 896px, calc(100vw - 32px)" width={1280} height={720} alt={title} loading="lazy" decoding="async" className="h-full w-full object-cover" />}
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/65 px-4">
         {advertisement ? <button type="button" onClick={() => setPlaying(true)} className="flex items-center gap-2 rounded-lg bg-primary px-4 py-3 font-semibold text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label={`Play ${title}`}><Play aria-hidden="true" />Play video</button> : <>
           <p className="max-w-md text-xs text-white md:text-base">Allow marketing cookies to load this YouTube video. Loading it sends data to YouTube.</p>

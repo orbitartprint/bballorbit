@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ExternalLink, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImg from "@/assets/basketball-orbit-logo.webp";
+import logoImg from "@/assets/basketball-orbit-logo-display.webp";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +46,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 transition-smooth hover:scale-105">
             <img 
-              src={logoImg} 
+              src={logoImg}
+              width={320}
+              height={256}
               alt="Basketball Orbit" 
               className="h-10 w-auto"
               loading="eager"

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ExternalLink, Youtube, Instagram, Twitter, Facebook } from "lucide-react";
-import logoImg from "@/assets/basketball-orbit-logo.webp";
+import logoImg from "@/assets/basketball-orbit-logo-display.webp";
 import { appDistribution } from "@/lib/appDistribution";
 
 const Footer = () => {
@@ -39,7 +39,9 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src={logoImg} 
+                src={logoImg}
+              width={320}
+              height={256}
                 alt="Basketball Orbit" 
                 className="h-10 w-auto"
                 loading="lazy"

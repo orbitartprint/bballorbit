@@ -1,20 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, PlayCircle } from "lucide-react";
-import logoImg from "@/assets/basketball-orbit-logo.webp";
+import logoImg from "@/assets/basketball-orbit-logo-display.webp";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image */}
+      <picture>
+      <source media="(max-width: 767px)" srcSet="/optimized-home/arena-960.webp" />
       <img
-        src="/lovable-uploads/arena-1.webp"
+        src="/optimized-home/arena-1920.webp"
+        width={1920}
+        height={960}
         alt="Basketball Training Hall"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-75"
         loading="eager"
         fetchPriority="high"
         decoding="async"
       />
+      </picture>
       {/* Gradient unten */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#252525]" />
 
@@ -33,7 +38,9 @@ const HeroSection = () => {
           {/* Logo */}
           <div className="mb-4 flex justify-center py-10">
             <img 
-              src={logoImg} 
+              src={logoImg}
+              width={320}
+              height={256}
               alt="Basketball Orbit" 
               className="h-24 md:h-32 w-auto"
               loading="eager"
