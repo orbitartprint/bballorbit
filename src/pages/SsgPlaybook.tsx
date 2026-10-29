@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { Check } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useState, useEffect } from "react";
@@ -17,17 +16,6 @@ const SsgPlaybook = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
     <>
-      <Helmet>
-        <title>The Ultimate SSG Playbook - Basketball Orbit</title>
-        <meta
-          name="description"
-          content="100+ competitive, game-like small-sided games to teach decision-making, player IQ, and game intensity for every age group."
-        />
-        <meta property="og:title" content="The Ultimate SSG Playbook - Basketball Orbit" />
-        <meta property="og:description" content="100+ competitive, game-like small-sided games to teach decision-making, player IQ, and game intensity for every age group." />
-        <meta property="og:url" content="https://www.bballorbit.com/ssg-playbook" />
-        <meta property="og:type" content="website" />
-      </Helmet>
 
       <Navigation />
 
@@ -41,11 +29,11 @@ const SsgPlaybook = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#f5f5f5]">
                   The Ultimate SSG Playbook – 100+ Competitive, Game-Like Drills
                 </h1>
-                
+
                 <p className="text-xl md:text-2xl text-[#f5f5f5]/90 font-medium leading-relaxed">
                   Teach decision-making, player IQ, and game intensity with 100+ ready-to-use small-sided games for every age group.
                 </p>
-                
+
                 <p className="text-lg text-[#f5f5f5]/70 font-medium">
                   Turn Every Practice Into Real Basketball.
                 </p>
@@ -58,6 +46,8 @@ const SsgPlaybook = () => {
                     Get the Playbook Now
                   </a>
                 </PrimaryButton>
+
+                <p className="text-base font-medium text-[#f5f5f5]">$39 one-time purchase · Digital PDF</p>
 
                 {/* Micro-Trust Elements */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-sm text-[#f5f5f5]/60">

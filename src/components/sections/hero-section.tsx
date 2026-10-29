@@ -17,10 +17,10 @@ const HeroSection = () => {
       />
       {/* Gradient unten */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#252525]" />
-    
+
       {/* Optional: Dark Overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/60" />
-    
+
       {/* Optional: keep your geometric accents if you like */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full border-2 border-primary"></div>
@@ -36,7 +36,7 @@ const HeroSection = () => {
               src={logoImg} 
               alt="Basketball Orbit" 
               className="h-24 md:h-32 w-auto"
-              loading="lazy"
+              loading="eager"
               decoding="async"
             />
           </div>
@@ -67,7 +67,7 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            
+
             <Button 
               variant="secondary" 
               size="lg" 
@@ -84,15 +84,15 @@ const HeroSection = () => {
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border">
-              <h3 className="font-semibold text-lg mb-2 text-primary">Modern Drills</h3>
+              <p className="font-semibold text-lg mb-2 text-primary">Modern Drills</p>
               <p className="text-muted-foreground">Innovative training methods for today's game</p>
             </div>
             <div className="p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border">
-              <h3 className="font-semibold text-lg mb-2 text-primary">Easy to Implement</h3>
+              <p className="font-semibold text-lg mb-2 text-primary">Easy to Implement</p>
               <p className="text-muted-foreground">Step-by-step instructions for quick setup</p>
             </div>
             <div className="p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border">
-              <h3 className="font-semibold text-lg mb-2 text-primary">For Every Youth Coach</h3>
+              <p className="font-semibold text-lg mb-2 text-primary">For Every Youth Coach</p>
               <p className="text-muted-foreground">Suitable for all skill levels and age groups</p>
             </div>
           </div>

@@ -1,19 +1,15 @@
-import { readFileSync, writeFileSync, mkdirSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
-import { loadBlogArticles } from "./load-blog-articles.js";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { join, dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { loadSiteData } from "./load-blog-articles.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const distPath = join(root, "dist");
+const distPath = process.env.BBALLORBIT_DIST_DIR ? resolve(process.env.BBALLORBIT_DIST_DIR) : join(root, "dist");
 const baseHtml = readFileSync(join(distPath, "index.html"), "utf8");
-const supabaseUrl = process.env.VITE_SUPABASE_URL || "https://oxavwwowalaepqxygzkt.supabase.co";
-const supabaseKey = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94YXZ3d293YWxhZXBxeHlnemt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkwODgxODAsImV4cCI6MjA3NDY2NDE4MH0.3XWC9LomrGnCL7HVyw4GIfpqzzIrVYm5xW7S0dSeqe4";
-const siteUrl = "https://bballorbit.com";
-// GitHub Pages serves prerendered directory routes with a trailing slash.
-const canonicalForRoute = (route) => `${siteUrl}${route === "/" ? "/" : `${route.replace(/\/+$/, "")}/`}`;
-
 const escapeHtml = (value = "") => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const escapeXml = (value = "") => escapeHtml(value).replace(/'/g, "&apos;");
+const jsonForHtml = (value) => JSON.stringify(value).replace(/</g, "\\u003c");
+const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 const writeRoute = (route, html) => {
   const target = join(distPath, route === "/" ? "index.html" : `${route.replace(/^\//, "")}/index.html`);
@@ -21,86 +17,95 @@ const writeRoute = (route, html) => {
   writeFileSync(target, html, "utf8");
 };
 
-const replaceMeta = (html, { title, description, canonical, image, jsonLd }) => {
-  const safeTitle = escapeHtml(title);
-  const safeDescription = escapeHtml(description);
-  const safeCanonical = escapeHtml(canonical);
-  let result = html
-    .replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title data-react-helmet="true">${safeTitle}</title>`)
-    .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${safeDescription}" data-react-helmet="true" />`)
-    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${safeCanonical}" data-react-helmet="true" />`)
-    .replace(/<meta property="og:title"[^>]*>/i, `<meta property="og:title" content="${safeTitle}" data-react-helmet="true" />`)
-    .replace(/<meta property="og:description"[^>]*>/i, `<meta property="og:description" content="${safeDescription}" data-react-helmet="true" />`)
-    .replace(/<meta property="og:url"[^>]*>/i, `<meta property="og:url" content="${safeCanonical}" data-react-helmet="true" />`);
-  if (image) result = result.replace(/<meta property="og:image"[^>]*>/i, `<meta property="og:image" content="${escapeHtml(image)}" data-react-helmet="true" />`);
-  if (jsonLd) result = result.replace("</head>", `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, "\\u003c")}</script>\n</head>`);
-  return result;
+const setMeta = (html, attribute, name, value) => {
+  const pattern = new RegExp(`<meta\\s+${attribute}="${name}"[^>]*>`, "gi");
+  const tag = `<meta ${attribute}="${name}" content="${escapeHtml(value)}" data-react-helmet="true" />`;
+  return pattern.test(html) ? html.replace(pattern, tag) : html.replace("</head>", `${tag}\n</head>`);
 };
 
-const fetchPublicDrills = async () => {
-  const fields = "library_item_id,version_id,public_slug,seo_title,seo_description,thumbnail_path,cached_payload,rendered_at";
-  const endpoint = `${supabaseUrl}/rest/v1/public_library_pages?select=${fields}&kind=eq.drill&cache_status=eq.published&order=seo_title.asc`;
-  const response = await fetch(endpoint, { headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` } });
-  if (!response.ok) throw new Error(`Public Drill Library request failed (${response.status}).`);
-  const rows = await response.json();
-  if (!Array.isArray(rows) || rows.length === 0) throw new Error("Public Drill Library returned no published drills.");
-  return rows;
+const renderMetadata = (metadata, canonical, image, type = "website", jsonLd) => {
+  let html = baseHtml
+    .replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title data-react-helmet="true">${escapeHtml(metadata.title)}</title>`)
+    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${escapeHtml(canonical)}" data-react-helmet="true" />`);
+  for (const [attribute, name, value] of [
+    ["name", "description", metadata.description],
+    ["name", "robots", metadata.noindex ? "noindex, nofollow" : "index, follow"],
+    ["property", "og:title", metadata.title],
+    ["property", "og:description", metadata.description],
+    ["property", "og:url", canonical],
+    ["property", "og:type", type],
+    ["property", "og:image", image],
+    ["name", "twitter:title", metadata.title],
+    ["name", "twitter:description", metadata.description],
+    ["name", "twitter:image", image],
+  ]) html = setMeta(html, attribute, name, value);
+  if (jsonLd) html = html.replace("</head>", `<script type="application/ld+json" data-react-helmet="true">${jsonForHtml(jsonLd)}</script>\n</head>`);
+  return html;
 };
 
-const staticRoutes = ["/", "/drills", "/resources", "/free-resources", "/about", "/blog", "/contact", "/privacy", "/data-deletion", "/legal", "/terms", "/affiliate", "/ssg-playbook"];
-// Keep the existing noindex policy for both pages, including before JS runs.
-const noindexRoutes = new Set(["/free-resources", "/privacy"]);
-const sitemapRoutes = staticRoutes.filter((route) => !noindexRoutes.has(route));
+const lastModified = (value) => {
+  if (!value || !Number.isFinite(Date.parse(value))) return "";
+  return new Date(value).toISOString().slice(0, 10);
+};
 
 const main = async () => {
-  const articles = await loadBlogArticles(root);
-  const drills = await fetchPublicDrills();
+  const { articles, seo, publicConfig } = await loadSiteData(root);
+  const { SITE_URL, staticPageMetadata, canonicalForPath, absoluteImage, articleStructuredData } = seo;
+  const supabaseUrl = process.env.VITE_SUPABASE_URL || publicConfig.SUPABASE_URL;
+  const supabaseKey = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || publicConfig.SUPABASE_PUBLISHABLE_KEY;
+  const fields = "library_item_id,version_id,public_slug,seo_title,seo_description,thumbnail_path,cached_payload,rendered_at";
+  const endpoint = new URL("/rest/v1/public_library_pages", supabaseUrl);
+  endpoint.search = new URLSearchParams({ select: fields, kind: "eq.drill", cache_status: "eq.published", order: "seo_title.asc" }).toString();
+  const response = await fetch(endpoint, {
+    headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
+    signal: AbortSignal.timeout(20_000),
+  });
+  if (!response.ok) throw new Error(`Public Drill Library request failed (${response.status}).`);
+  const drills = await response.json();
+  if (!Array.isArray(drills) || drills.length === 0) throw new Error("No published drills received; refusing to publish an incomplete library.");
+
+  const sitemap = new Map();
+  const drillSlugs = new Set();
+  const articleSlugs = new Set();
   writeFileSync(join(distPath, "drill-library-snapshot.json"), JSON.stringify(drills), "utf8");
 
-  for (const route of staticRoutes) {
-    let html = route === "/drills"
-      ? replaceMeta(baseHtml, { title: "Basketball Drill Library - Basketball Orbit", description: "Explore modern, game-like basketball drills and start a complete practice plan in seconds.", canonical: canonicalForRoute("/drills") })
-      : baseHtml.replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${canonicalForRoute(route)}" data-react-helmet="true" />`);
-    if (noindexRoutes.has(route)) {
-      html = html.replace("</head>", '<meta name="robots" content="noindex, nofollow" data-react-helmet="true" />\n</head>');
-    }
-    writeRoute(route, html);
+  for (const [route, metadata] of Object.entries(staticPageMetadata)) {
+    writeRoute(route, renderMetadata(metadata, canonicalForPath(route), absoluteImage(metadata.image)));
+    if (!metadata.noindex) sitemap.set(route, "");
   }
 
-  const articleSlugs = new Set();
   for (const article of articles) {
-    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.slug) || articleSlugs.has(article.slug)) {
-      throw new Error(`Invalid or duplicate blog slug: ${article.slug}`);
-    }
+    if (!slugPattern.test(article.slug) || articleSlugs.has(article.slug)) throw new Error(`Invalid or duplicate article slug: ${article.slug}`);
     articleSlugs.add(article.slug);
     const route = `/blog/${article.slug}`;
-    writeRoute(route, replaceMeta(baseHtml, {
-      title: `${article.title} | Basketball Orbit`,
-      description: article.excerpt,
-      canonical: canonicalForRoute(route),
-      image: new URL(article.heroImage, siteUrl).href,
-    }));
-    sitemapRoutes.push(route);
+    writeRoute(route, renderMetadata({ title: `${article.title} | Basketball Orbit`, description: article.excerpt }, canonicalForPath(route), absoluteImage(article.heroImage), "article", articleStructuredData(article)));
+    sitemap.set(route, lastModified(article.updatedDate || article.publishDate));
   }
 
   for (const row of drills) {
-    const payload = row.cached_payload || {};
     const slug = row.public_slug;
+    if (!slugPattern.test(slug || "") || drillSlugs.has(slug)) throw new Error(`Invalid or duplicate drill slug: ${slug}`);
+    drillSlugs.add(slug);
+    const payload = row.cached_payload || {};
     const title = payload.title || row.seo_title;
-    const description = (payload.excerpt || payload.description || row.seo_description || "Basketball drill from Basketball Orbit.").slice(0, 240);
-    const canonical = canonicalForRoute(`/drills/${slug}`);
+    if (typeof title !== "string" || !title.trim()) throw new Error(`Missing drill title: ${slug}`);
+    const description = String(payload.excerpt || payload.description || row.seo_description || "Basketball drill from Basketball Orbit.").replace(/\s+/g, " ").trim().slice(0, 200);
     const thumbnailPath = payload.thumbnailPath || row.thumbnail_path;
-    const image = thumbnailPath ? (/^https?:\/\//i.test(thumbnailPath) ? thumbnailPath : `${supabaseUrl}/storage/v1/object/public/library-media/${thumbnailPath}`) : `${siteUrl}/og-image.webp`;
-    const phases = Array.isArray(payload.phases) && payload.phases.length > 0 ? payload.phases : [{ title: "Overview", notes: payload.description || row.seo_description || "" }];
+    const image = absoluteImage(thumbnailPath ? (/^https?:\/\//i.test(thumbnailPath) ? thumbnailPath : `${supabaseUrl}/storage/v1/object/public/library-media/${thumbnailPath}`) : undefined);
+    const phases = Array.isArray(payload.phases) && payload.phases.length ? payload.phases : [{ title: "Overview", notes: description }];
     const jsonLd = { "@context": "https://schema.org", "@type": "HowTo", name: title, description, image, step: phases.map((phase, index) => ({ "@type": "HowToStep", name: phase.title || `Phase ${index + 1}`, text: phase.notes || "" })) };
-    writeRoute(`/drills/${slug}`, replaceMeta(baseHtml, { title: `${title} - Basketball Orbit`, description, canonical, image, jsonLd }));
-    sitemapRoutes.push(`/drills/${slug}`);
+    const route = `/drills/${slug}`;
+    writeRoute(route, renderMetadata({ title: `${title} - Basketball Orbit`, description }, canonicalForPath(route), image, "website", jsonLd));
+    sitemap.set(route, lastModified(row.rendered_at));
   }
 
-  const now = new Date().toISOString().slice(0, 10);
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Array.from(new Set(sitemapRoutes)).map((route) => `  <url><loc>${escapeXml(canonicalForRoute(route))}</loc><lastmod>${now}</lastmod></url>`).join("\n")}\n</urlset>\n`;
-  writeFileSync(join(distPath, "sitemap.xml"), sitemap, "utf8");
-  console.log(`Prerendered ${staticRoutes.length} static routes, ${articles.length} blog articles and ${drills.length} published drills.`);
+  // GitHub Pages keeps real HTTP 404 responses for unknown paths.
+  const notFound = setMeta(baseHtml.replace(/<link rel="canonical"[^>]*>/i, "").replace(/<title[^>]*>[\s\S]*?<\/title>/i, '<title data-react-helmet="true">Page not found - Basketball Orbit</title>'), "name", "robots", "noindex, follow");
+  writeFileSync(join(distPath, "404.html"), notFound, "utf8");
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Array.from(sitemap, ([route, date]) => `  <url><loc>${escapeXml(canonicalForPath(route))}</loc>${date ? `<lastmod>${date}</lastmod>` : ""}</url>`).join("\n")}\n</urlset>\n`;
+  writeFileSync(join(distPath, "sitemap.xml"), xml, "utf8");
+  writeFileSync(join(distPath, "public-route-manifest.json"), JSON.stringify({ routes: [...sitemap.keys()], drillSlugs: [...drillSlugs], articleSlugs: [...articleSlugs] }, null, 2), "utf8");
+  console.log(`Generated metadata for ${Object.keys(staticPageMetadata).length} static routes, ${articles.length} articles and ${drills.length} published drills at ${SITE_URL}.`);
 };
 
 main().catch((error) => { console.error(error); process.exitCode = 1; });

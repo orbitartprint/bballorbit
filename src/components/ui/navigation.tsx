@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ExternalLink, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,26 @@ import logoImg from "@/assets/basketball-orbit-logo.webp";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => { setIsMenuOpen(false); }, [location.pathname]);
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const closeOnDesktop = () => { if (desktop.matches) setIsMenuOpen(false); };
+    document.addEventListener("keydown", closeOnEscape);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
+  }, [isMenuOpen]);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -16,7 +36,8 @@ const Navigation = () => {
     { name: "About", path: "/about" },
   ] as const;
 
-  const isActive = (path: string) => location.pathname === path;
+  const currentPath = location.pathname.replace(/\/+$/, "") || "/";
+  const isActive = (path: string) => currentPath === path || (path !== "/" && currentPath.startsWith(`${path}/`));
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -28,7 +49,7 @@ const Navigation = () => {
               src={logoImg} 
               alt="Basketball Orbit" 
               className="h-10 w-auto"
-              loading="lazy"
+              loading="eager"
             />
             <span className="font-bold text-xl hidden sm:block text-foreground">
               Basketball Orbit
@@ -58,6 +79,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
+                  aria-current={currentPath === item.path ? "page" : undefined}
                   className={`text-sm font-medium transition-smooth hover:text-primary ${
                     isActive(item.path) ? "text-primary" : "text-muted-foreground"
                   }`}
@@ -80,6 +102,11 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="sm"
+            ref={menuButtonRef}
+            type="button"
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -89,7 +116,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div id="mobile-navigation" className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => {
                 if ("href" in item) {
@@ -113,6 +140,7 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     to={item.path}
+                    aria-current={currentPath === item.path ? "page" : undefined}
                     className={`text-sm font-medium transition-smooth hover:text-primary ${
                       isActive(item.path) ? "text-primary" : "text-muted-foreground"
                     }`}

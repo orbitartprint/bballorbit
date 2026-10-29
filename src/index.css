@@ -74,7 +74,7 @@ All colors MUST be HSL.
     --basketball-orange: 22 95% 54%;
     --basketball-blue: 235 88% 56%;
     --basketball-white: 0 0% 100%;
-    
+
     /* Design System Mapping */
     --background: var(--basketball-black);
     --foreground: var(--basketball-white);
@@ -86,7 +86,7 @@ All colors MUST be HSL.
     --popover-foreground: var(--basketball-white);
 
     --primary: var(--basketball-orange);
-    --primary-foreground: var(--basketball-white);
+    --primary-foreground: var(--basketball-black);
 
     --secondary: var(--basketball-blue);
     --secondary-foreground: var(--basketball-white);
@@ -95,7 +95,7 @@ All colors MUST be HSL.
     --muted-foreground: 0 0% 70%;
 
     --accent: var(--basketball-orange);
-    --accent-foreground: var(--basketball-white);
+    --accent-foreground: var(--basketball-black);
 
     --destructive: 0 84% 60%;
     --destructive-foreground: var(--basketball-white);
@@ -105,17 +105,17 @@ All colors MUST be HSL.
     --ring: var(--basketball-orange);
 
     --radius: 0.75rem;
-    
+
     /* Custom gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--basketball-black)) 0%, hsl(0 0% 10%) 100%);
     --gradient-orange: linear-gradient(135deg, hsl(var(--basketball-orange)) 0%, hsl(18 100% 45%) 100%);
     --gradient-blue: linear-gradient(135deg, hsl(var(--basketball-blue)) 0%, hsl(225 95% 45%) 100%);
-    
+
     /* Shadows */
     --shadow-orange: 0 10px 30px -10px hsl(var(--basketball-orange) / 0.4);
     --shadow-blue: 0 10px 30px -10px hsl(var(--basketball-blue) / 0.4);
     --shadow-glow: 0 0 40px hsl(var(--basketball-orange) / 0.3);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -150,7 +150,7 @@ All colors MUST be HSL.
     scrollbar-gutter: stable;
     overflow-x: hidden; /* hierhin verschieben */
   }
-  
+
   body {
     @apply bg-background text-foreground font-montserrat;
     overflow-x: visible; /* oder einfach entfernen */
@@ -211,35 +211,35 @@ All colors MUST be HSL.
   .hero-gradient {
     background: var(--gradient-hero);
   }
-  
+
   .gradient-orange {
     background: var(--gradient-orange);
   }
-  
+
   .gradient-blue {
     background: var(--gradient-blue);
   }
-  
+
   .shadow-orange {
     box-shadow: var(--shadow-orange);
   }
-  
+
   .shadow-blue {
     box-shadow: var(--shadow-blue);
   }
-  
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
+
   .transition-bounce {
     transition: var(--transition-bounce);
   }
-  
+
   .text-gradient-orange {
     background: var(--gradient-orange);
     -webkit-background-clip: text;
@@ -251,50 +251,50 @@ All colors MUST be HSL.
   .infobox {
     @apply border border-[#f57520]/40 bg-[#111111] rounded-xl p-6 shadow-lg mt-8 mb-8;
   }
-  
+
   /* NUR Infoboxen mit genau zwei direkten div-Kindern werden zweispaltig */
   .infobox:has(> div + div) {
     display: flex;
     gap: 20px;
     align-items: center;
   }
-  
+
   /* Text-Spalte */
   .infobox:has(> div + div) > div:first-child {
     flex: 2;
     min-width: 0;
   }
-  
+
   /* Bild-Spalte */
   .infobox:has(> div + div) > div:last-child {
     flex: 1;
     min-width: 200px;
   }
-  
+
   /* Mobile Layout nur für zweispaltige Infoboxen */
   @media (max-width: 768px) {
     .infobox:has(> div + div) {
       flex-direction: column;
       align-items: stretch;
     }
-  
+
     .infobox:has(> div + div) > div:last-child {
       min-width: 0;
       width: 100%;
     }
-  
+
     .infobox:has(> div + div) img {
       max-width: 320px;
       margin: 0 auto;
       display: block;
     }
   }
-  
+
   /* Typography bleibt wie gehabt */
   .infobox h4 {
     @apply text-[#f57520] font-semibold mb-3;
   }
-  
+
   .infobox p {
     @apply text-muted-foreground leading-relaxed;
   }

@@ -9,13 +9,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node scripts/prerender-app-page.mjs",
+    "postbuild": "node scripts/prerender.js && node scripts/prerender-app-page.mjs && node scripts/verify-seo.js",
     "check:app-distribution": "node scripts/check-app-distribution.mjs",
     "check:app-distribution:release": "node scripts/check-app-distribution.mjs --release",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:public-library": "node --test scripts/public-library.test.mjs"
+    "test:public-library": "node --test scripts/public-library.test.mjs",
+    "test": "node --test scripts/public-library.test.mjs scripts/contact.test.mjs",
+    "test:contact": "node --test scripts/contact.test.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

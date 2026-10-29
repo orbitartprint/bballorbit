@@ -6,7 +6,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 
 // Load the same TypeScript module used by both pages, with the project's aliases.
 test("public Drill Library loads independently of login state and reports fallback", async (t) => {
-  const server = await createServer({ server: { middlewareMode: true, watch: null }, appType: "custom" });
+  const server = await createServer({ server: { middlewareMode: true, watch: null, hmr: false }, appType: "custom" });
   const originalFetch = globalThis.fetch;
   try {
     const { fetchPublicDrills } = await server.ssrLoadModule("/src/data/publicDrills.ts");

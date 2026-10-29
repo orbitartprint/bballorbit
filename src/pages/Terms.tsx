@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navigation from '@/components/ui/navigation';
 import Footer from '@/components/ui/footer';
-import { Helmet } from 'react-helmet';
 
 const Terms = () => {
   const navigate = useNavigate();
@@ -13,21 +12,6 @@ const Terms = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Terms of Service | Basketball Orbit</title>
-        <meta
-          name="description"
-          content="Terms of Service for Basketball Orbit, BballOrbit Practice Planner, subscriptions, digital coaching resources, and AI-assisted practice planning tools."
-        />
-        <meta property="og:title" content="Terms of Service | Basketball Orbit" />
-        <meta
-          property="og:description"
-          content="Terms of Service for Basketball Orbit, BballOrbit Practice Planner, subscriptions, digital coaching resources, and AI-assisted practice planning tools."
-        />
-        <meta property="og:url" content="https://www.bballorbit.com/terms" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
 
       <Navigation />
 

@@ -1,13 +1,16 @@
 import assert from "node:assert/strict";
 import { readFileSync, existsSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { loadBlogArticles } from "./load-blog-articles.js";
+import { loadSiteData } from "./load-blog-articles.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const dist = join(root, "dist");
+const dist = process.env.BBALLORBIT_DIST_DIR ? resolve(process.env.BBALLORBIT_DIST_DIR) : join(root, "dist");
 const sitemap = readFileSync(join(dist, "sitemap.xml"), "utf8");
-const articles = await loadBlogArticles(root);
+const { articles, seo } = await loadSiteData(root);
+const manifest = JSON.parse(readFileSync(join(dist, "public-route-manifest.json"), "utf8"));
+const snapshot = JSON.parse(readFileSync(join(dist, "drill-library-snapshot.json"), "utf8"));
+const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const htmlFor = (path) => readFileSync(join(dist, path, "index.html"), "utf8");
 
 for (const path of ["free-resources", "privacy"]) {
@@ -43,4 +46,29 @@ for (const path of ["about", "contact", "resources", "terms", "blog", "drills"])
   assert.match(htmlFor(path), new RegExp(`<link rel="canonical" href="https://bballorbit.com/${path}/"`));
 }
 
-console.log(`SEO checks passed: ${articles.length} blog routes, all sitemap targets, noindex exclusions and page canonicals.`);
+for (const [route, metadata] of Object.entries(seo.staticPageMetadata)) {
+  const html = htmlFor(route.replace(/^\//, ""));
+  assert.ok(html.includes(`${escapeHtml(metadata.title)}</title>`), `Wrong static title: ${route}`);
+  assert.ok(html.includes(`name="description" content="${escapeHtml(metadata.description)}"`), `Wrong static description: ${route}`);
+  assert.ok(html.includes(`name="twitter:title" content="${escapeHtml(metadata.title)}"`), `Wrong Twitter title: ${route}`);
+  assert.doesNotMatch(html, /@lovable_dev|SearchAction/);
+}
+
+assert.equal(new Set(manifest.drillSlugs).size, snapshot.length, "Every published drill must have exactly one generated route");
+for (const drill of snapshot) {
+  assert.ok(manifest.drillSlugs.includes(drill.public_slug), `Missing published drill: ${drill.public_slug}`);
+  const path = `drills/${drill.public_slug}`;
+  assert.ok(existsSync(join(dist, path, "index.html")), `Missing drill HTML: ${path}`);
+  assert.ok(sitemap.includes(`<loc>${seo.canonicalForPath(`/${path}`)}</loc>`), `Missing drill sitemap URL: ${path}`);
+}
+for (const article of articles) {
+  const html = htmlFor(`blog/${article.slug}`);
+  assert.ok(html.includes('"@type":"Article"'), `Missing Article schema before JavaScript: ${article.slug}`);
+  assert.ok(html.includes(`name="twitter:image" content="${escapeHtml(seo.absoluteImage(article.heroImage))}"`), `Wrong Twitter image: ${article.slug}`);
+}
+const notFound = readFileSync(join(dist, "404.html"), "utf8");
+assert.match(notFound, /name="robots" content="noindex, follow"/);
+assert.doesNotMatch(notFound, /rel="canonical"/);
+assert.ok(sitemap.includes(`<loc>${seo.SITE_URL}/</loc></url>`), "Static pages must not get a fictitious build-date lastmod");
+
+console.log(`SEO checks passed: ${articles.length} articles, ${snapshot.length} published drills, static metadata, social cards, canonicals, noindex and 404 fallback.`);
