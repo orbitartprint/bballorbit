@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 const BlogPromotion = () => {
   return (
@@ -30,8 +30,9 @@ const BlogPromotion = () => {
           
             {/* Text-Inhalt (über Bild) */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                🧠 Stay Ahead of the Game
+              <h2 className="flex items-start gap-3 text-3xl md:text-4xl font-bold text-white mb-4">
+                <BookOpen className="mt-1 h-7 w-7 shrink-0 text-primary md:h-8 md:w-8" aria-hidden="true" focusable="false" />
+                <span>Stay Ahead of the Game</span>
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
                 Discover detailed breakdowns, practical strategies, and modern coaching insights in the Basketball Orbit Blog. 
