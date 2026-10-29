@@ -75,7 +75,7 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
 
         <script type="application/ld+json">
           {JSON.stringify({

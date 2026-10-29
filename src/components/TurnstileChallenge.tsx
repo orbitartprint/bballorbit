@@ -1,16 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
 type TurnstileOptions = { sitekey: string; action: string; theme: "dark"; size: "flexible"; callback: (token: string) => void; "expired-callback": () => void; "error-callback": () => void };
-declare global { interface Window { turnstile?: { ready: (callback: () => void) => void; render: (container: HTMLElement, options: TurnstileOptions) => string; remove: (widget: string) => void }; } }
+declare global { interface Window { websiteTurnstileLoaded?: () => void; turnstile?: { render: (container: HTMLElement, options: TurnstileOptions) => string; remove: (widget: string) => void }; } }
 let loading: Promise<void> | undefined;
 function loadTurnstile() {
   if (window.turnstile) return Promise.resolve();
   if (loading) return loading;
   loading = new Promise<void>((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=websiteTurnstileLoaded";
     script.async = true;
-    script.onload = () => resolve();
+    // The vendor callback guarantees readiness for an asynchronously loaded script.
+    window.websiteTurnstileLoaded = () => resolve();
     script.onerror = () => { script.remove(); loading = undefined; reject(new Error("Anti-spam verification unavailable.")); };
     document.head.appendChild(script);
   });
@@ -27,10 +28,10 @@ export default function TurnstileChallenge({ siteKey, resetKey, onToken }: { sit
     let widget: string | undefined;
     onToken(""); setFailed(false);
     const failure = () => { if (!cancelled) { onToken(""); setFailed(true); } };
-    void loadTurnstile().then(() => window.turnstile?.ready(() => {
+    void loadTurnstile().then(() => {
       if (cancelled || !container.current) return;
       widget = window.turnstile!.render(container.current, { sitekey: siteKey, action: "website-contact", theme: "dark", size: "flexible", callback: token => { if (!cancelled) onToken(token); }, "expired-callback": () => { if (!cancelled) onToken(""); }, "error-callback": failure });
-    })).catch(failure);
+    }).catch(failure);
     return () => { cancelled = true; if (widget) window.turnstile?.remove(widget); };
   }, [siteKey, resetKey, retry, onToken]);
   if (!siteKey) return <p className="text-sm text-muted-foreground">The form is temporarily unavailable. Please email <a className="underline" href="mailto:info@bballorbit.com">info@bballorbit.com</a>.</p>;
