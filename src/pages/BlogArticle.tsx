@@ -2,6 +2,7 @@
 
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { absoluteImage, articleStructuredData } from "@/lib/seo";
 import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -40,22 +41,22 @@ const BlogArticle = () => {
   useEffect(() => {
     const container = document.querySelector("#article-content");
     if (!container) return;
-  
+
     const images = Array.from(container.querySelectorAll("img"));
-  
+
     const handlers = images.map((img) => {
       // Cursor UX
       img.style.cursor = "zoom-in";
-  
+
       const handler = () => {
         const src = img.getAttribute("src");
         if (src) setLightboxImage(src);
       };
-  
+
       img.addEventListener("click", handler);
       return { img, handler };
     });
-  
+
     return () => {
       handlers.forEach(({ img, handler }) => {
         img.removeEventListener("click", handler);
@@ -64,13 +65,13 @@ const BlogArticle = () => {
   }, [slug]);
   useEffect(() => {
     if (!lightboxImage) return;
-  
+
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setLightboxImage(null);
       }
     };
-  
+
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [lightboxImage]);
@@ -102,39 +103,16 @@ const BlogArticle = () => {
         <meta name="description" content={article.excerpt} />
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.excerpt} />
-        <meta property="og:image" content={article.heroImage} />
+        <meta property="og:image" content={absoluteImage(article.heroImage)} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Basketball Orbit" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.excerpt} />
-        <meta name="twitter:image" content={article.heroImage} />
+        <meta name="twitter:image" content={absoluteImage(article.heroImage)} />
         <link rel="canonical" href={`https://bballorbit.com/blog/${article.slug}/`} />
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: article.title,
-            description: article.excerpt,
-            image: article.heroImage.startsWith("http") ? article.heroImage : `https://www.bballorbit.com${article.heroImage}`,
-            datePublished: article.publishDate,
-            author: {
-              "@type": "Person",
-              name: "Chris"
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "Basketball Orbit",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://www.bballorbit.com/logo.png"
-              }
-            },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": `https://bballorbit.com/blog/${article.slug}/`
-            }
-          })}
+          {JSON.stringify(articleStructuredData(article))}
         </script>
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -315,7 +293,7 @@ const BlogArticle = () => {
                       </div>
                     </Link>
                   )}
-                
+
                   {/* Next Article (higher index) */}
                   {nextArticle && (
                     <Link
@@ -346,7 +324,7 @@ const BlogArticle = () => {
               <div className="hidden lg:block sticky top-24">
                 <TableOfContents key={slug} containerSelector="#article-content" />
               </div>
-            
+
               <RelatedArticles articles={relatedArticles} />
             </aside>
           </div>
@@ -368,7 +346,7 @@ const BlogArticle = () => {
               >
                 <X className="w-5 h-5" />
               </button>
-        
+
               <img
                 src={lightboxImage}
                 alt="Expanded graphic"

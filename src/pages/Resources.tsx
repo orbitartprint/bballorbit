@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,63 +11,13 @@ import {
 } from "@/components/ui/select";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
-import { Download, ShoppingCart, Book, Users, Globe, TrendingUp } from "lucide-react";
-import { resources, categories, type CategoryFilter, type Resource } from "@/data/resources";
+import { Link } from "react-router-dom";
+import KitSignupForm from "@/components/KitSignupForm";
+import { Download, Book, Users, Globe, TrendingUp } from "lucide-react";
+import { resources, categories, type CategoryFilter } from "@/data/resources";
 
 const Resources = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  useEffect(() => {
-  const SCRIPT_ID = 'convertkit-script-d0839f9f3a';
-  // avoid injecting twice
-  if (document.getElementById(SCRIPT_ID)) return;
-
-  const container = document.getElementById('convertkit-form-container') || document.body;
-  const script = document.createElement('script');
-  script.id = SCRIPT_ID;
-  script.async = true;
-  script.dataset.uid = 'd0839f9f3a';
-  script.src = 'https://bballorbit.kit.com/d0839f9f3a/index.js';
-
-  container.appendChild(script);
-
-  return () => {
-    // cleanup on unmount
-    script.remove();
-  };
-}, []);
-  useEffect(() => {
-  // Alle eindeutigen UIDs aus den Resources holen
-  const formUids = Array.from(
-    new Set(
-      resources
-        .filter((r) => r.uid)
-        .map((r) => r.uid as string)
-    )
-  );
-
-  formUids.forEach((uid) => {
-    const SCRIPT_ID = `convertkit-script-${uid}`;
-    if (document.getElementById(SCRIPT_ID)) return;
-
-    const script = document.createElement("script");
-    script.id = SCRIPT_ID;
-    script.async = true;
-    script.dataset.uid = uid;
-    script.src = `https://bballorbit.kit.com/${uid}/index.js`;
-
-    document.body.appendChild(script);
-  });
-
-  // optionales Cleanup
-  return () => {
-    formUids.forEach((uid) => {
-      const SCRIPT_ID = `convertkit-script-${uid}`;
-      const el = document.getElementById(SCRIPT_ID);
-      if (el) el.remove();
-    });
-  };
-}, []);
-  
   const [typeFilter, setTypeFilter] = useState<"All" | "Free" | "Paid">("All");
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("All");
 
@@ -80,23 +29,15 @@ const Resources = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Free & Premium Coaching Resources - Basketball Orbit</title>
-        <meta name="description" content="Browse all Basketball Orbit coaching PDFs and resources. Get free drills or explore premium toolkits to elevate your coaching." />
-        <meta property="og:title" content="Free & Premium Coaching Resources - Basketball Orbit" />
-        <meta property="og:description" content="Browse all Basketball Orbit coaching PDFs and resources. Get free drills or explore premium toolkits to elevate your coaching." />
-        <meta property="og:url" content="https://www.bballorbit.com/resources" />
-        <meta property="og:type" content="website" />
-      </Helmet>
-      
+
       <div className="min-h-screen bg-background">
         <Navigation />
-        
+
         <main className="pt-10 pb-14">
           {/* Hero Section - Two Column Layout */}
           <div className="container mx-auto px-6 lg:px-8 py-14">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              
+
               {/* Left Column - Text & Stats with Court Background */}
               <div className="relative bg-black text-white rounded-xl p-8 md:p-10 overflow-hidden">
                 {/* Basketball Court Background */}
@@ -107,16 +48,16 @@ const Resources = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
+
                 {/* Content */}
                 <div className="relative z-10">
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
                     Get Every Coaching Resource in One Place
                   </h1>
                   <p className="text-lg md:text-xl text-gray-200 mb-8">
-                    Join 30,000+ coaches worldwide and unlock all free PDFs instantly.
+                    Get practical coaching PDFs by email and join the Basketball Orbit newsletter.
                   </p>
-                  
+
                   {/* Stats */}
                   <div className="flex flex-wrap gap-6 mt-8">
                     <div className="flex items-center gap-3">
@@ -143,10 +84,10 @@ const Resources = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Right Column - ConvertKit Form */}
               <div className="flex flex-col justify-center items-center bg-black rounded-xl p-6">
-                <div id="convertkit-form-container" className="w-full max-w-md" />
+                <KitSignupForm />
               </div>
             </div>
           </div>
@@ -209,29 +150,11 @@ const Resources = () => {
                     className="border-border bg-card hover:shadow-orange transition-smooth hover:scale-105"
                   >
                     <CardHeader className="p-0">
-                      <div
-                        className="aspect-[4/3] bg-muted rounded-t-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                        onClick={() => {
-                          if (resource.uid && resource.type === "Free") {
-                            // Klick an das Element weiterreichen, das das Modal triggert (Button)
-                            const trigger = document.querySelector(
-                              `[data-formkit-toggle="${resource.uid}"]`
-                            ) as HTMLElement | null;
-                            trigger?.click();
-                          } else {
-                            // Kein Modal: Link normal öffnen
-                            window.location.href = resource.link;
-                          }
-                        }}
-                      >
-                        <img 
-                          src={resource.image} 
-                          alt={resource.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <a href={resource.link} className="block aspect-[4/3] overflow-hidden rounded-t-lg bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" aria-label={`Learn more about ${resource.title}`}>
+                        <img src={resource.image} alt={resource.title} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+                      </a>
                     </CardHeader>
-                
+
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-3">
                         <CardTitle className="text-xl text-card-foreground flex-1">
@@ -247,32 +170,16 @@ const Resources = () => {
                       <CardDescription className="text-muted-foreground mb-4 line-clamp-2">
                         {resource.description}
                       </CardDescription>
-                
-                      {/* Button: gleicher Trigger wie Bild */}
-                      <Button
-                        type="button"
-                        className="w-full shadow-orange transition-smooth hover:scale-105"
-                        data-formkit-toggle={resource.uid ?? undefined}
-                        onClick={() => {
-                          // Nur wenn KEIN Modal hinterlegt ist (kein uid) oder Paid:
-                          // -> Link normal öffnen
-                          if (!resource.uid || resource.type === "Paid") {
-                            window.open(resource.link, "_blank");
-                          }
-                          // Wenn uid vorhanden & Free:
-                          // -> nichts tun, ConvertKit fängt den Klick über data-formkit-toggle ab
-                        }}
-                      >
+
+                      <Button asChild className="w-full shadow-orange transition-smooth hover:scale-105">
                         {resource.type === "Free" ? (
-                          <>
-                            <Download className="w-4 h-4 mr-2" />
-                            Get Free PDF
-                          </>
+                          <a href={resource.link}>
+                            <Download className="mr-2 h-4 w-4" aria-hidden="true" />Get Free PDF
+                          </a>
                         ) : (
-                          <>
-                            <Book className="w-4 h-4 mr-2" />
-                            Learn More
-                          </>
+                          <Link to={resource.link}>
+                            <Book className="mr-2 h-4 w-4" aria-hidden="true" />Learn More
+                          </Link>
                         )}
                       </Button>
                     </CardContent>

@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { Check, ChevronDown, RefreshCw, Search, Target, X } from "lucide-react";
@@ -49,12 +48,7 @@ const DrillLibrary = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Basketball Drill Library - Basketball Orbit</title>
-        <meta name="description" content="Explore modern, game-like basketball drills and start a complete practice plan in seconds." />
-        <link rel="canonical" href="https://bballorbit.com/drills/" />
-        <meta property="og:url" content="https://bballorbit.com/drills/" />
-      </Helmet>
+
       <div className="min-h-screen bg-background">
         <Navigation />
         <main className="pt-12 pb-16">

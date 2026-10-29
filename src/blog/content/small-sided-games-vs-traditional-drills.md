@@ -188,16 +188,16 @@ In this video, I explain the exact mindset behind that process — how to enhanc
 
   <!-- Small-Sided Game -->
   <div style="flex:1; min-width:260px;">
-    <a href="/drills/1v1-catch-and-shoot" target="_blank">
+    <a href="/drills/1v1-cone-chase-shooting/">
       <img 
-        src="/lovable-uploads/1v1-catch-and-shoot.webp" 
-        alt="1v1 Chase and Shoot Small-Sided Game"
+        src="/lovable-uploads/1v1-cone-chase-shooting.png"
+        alt="Court diagram for the 1v1 Cone Chase Shooting drill"
         style="width:100%; border-radius:12px;"
       />
     </a>
-    <p><strong>Small-Sided Game: 1v1 Catch-and-Shoot</strong></p>
+    <p><strong>Game-Like Drill: 1v1 Cone Chase Shooting</strong></p>
     <ul>
-      <li>Shot vs drive decision</li>
+      <li>Catch and shoot under defensive pressure</li>
       <li>Reading defender speed and angle</li>
       <li>Realistic shot quality</li>
     </ul>

@@ -38,17 +38,13 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      console.log("Submitting contact form:", formData);
-
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
 
-      if (error) {
-        throw error;
+      if (error || data?.success !== true) {
+        throw error || new Error("The contact service did not confirm submission.");
       }
-
-      console.log("Email sent successfully:", data);
 
       setFormData({
         name: "",
@@ -62,8 +58,7 @@ const Contact = () => {
         description: "I'll get back to you soon.",
       });
 
-    } catch (error: any) {
-      console.error("Error sending message:", error);
+    } catch {
       toast({
         title: "Error sending message",
         description: `There was a problem sending your message. Please try again.`,
@@ -77,15 +72,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Basketball Orbit – Get in Touch with Chris</title>
-        <meta
-          name="description"
-          content="Have questions about drills, plays, or coaching strategies? Contact Basketball Orbit. Chris is here to help coaches develop better players."
-        />
-        <meta property="og:title" content="Contact Basketball Orbit – Get in Touch with Chris" />
-        <meta property="og:description" content="Have questions about drills, plays, or coaching strategies? Contact Basketball Orbit. Chris is here to help coaches develop better players." />
-        <meta property="og:url" content="https://www.bballorbit.com/contact" />
-        <meta property="og:type" content="website" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -153,6 +140,7 @@ const Contact = () => {
                       <Input
                         id="name"
                         name="name"
+                        maxLength={200}
                         placeholder="Your full name"
                         type="text"
                         value={formData.name}
@@ -166,6 +154,7 @@ const Contact = () => {
                       <Input
                         id="email"
                         name="email"
+                        maxLength={255}
                         placeholder="your.email@example.com"
                         type="email"
                         value={formData.email}
@@ -179,6 +168,7 @@ const Contact = () => {
                       <Input
                         id="subject"
                         name="subject"
+                        maxLength={500}
                         placeholder="What's this about?"
                         type="text"
                         value={formData.subject}
@@ -192,6 +182,7 @@ const Contact = () => {
                       <Textarea
                         id="message"
                         name="message"
+                        maxLength={10000}
                         placeholder="Tell me more about your question or feedback..."
                         rows={5}
                         value={formData.message}

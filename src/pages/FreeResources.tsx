@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -16,7 +15,7 @@ import { resources, categories, type CategoryFilter } from "@/data/resources";
 
 const FreeResources = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  
+
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("All");
 
   // Filter to only show free resources
@@ -28,15 +27,10 @@ const FreeResources = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Free Resources - Basketball Orbit</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="description" content="Exclusive free coaching resources for Basketball Orbit newsletter subscribers" />
-      </Helmet>
-      
+
       <div className="min-h-screen bg-background">
         <Navigation />
-        
+
         <main className="pt-10 pb-16">
           {/* Hero Section */}
           <div className="container mx-auto px-4 lg:px-8 text-center py-12">
@@ -89,7 +83,7 @@ const FreeResources = () => {
                           const link = document.querySelector(
                             `a[data-resource-id="${resource.id}"]`
                           ) as HTMLAnchorElement | null;
-                      
+
                           link?.click();
                         }}
                       >

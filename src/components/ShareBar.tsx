@@ -10,7 +10,7 @@ interface ShareBarProps {
 export default function ShareBar({ title, slug }: ShareBarProps) {
   const [copied, setCopied] = useState(false);
 
-  const shareUrl = `https://www.bballorbit.com/blog/${slug}`;
+  const shareUrl = `https://bballorbit.com/blog/${slug}/`;
   const shareText = `${title} – via Basketball Orbit`;
 
   const handleCopyLink = async () => {
@@ -25,8 +25,8 @@ export default function ShareBar({ title, slug }: ShareBarProps) {
 
   const handleNativeShare = async () => {
     try {
-      if ((navigator as any).share) {
-        await (navigator as any).share({
+      if (navigator.share) {
+        await navigator.share({
           title,
           text: shareText,
           url: shareUrl,

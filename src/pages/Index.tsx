@@ -10,7 +10,6 @@ import BlogPromotion from "@/components/sections/blog-promotion";
 import LatestBlogPosts from "@/components/sections/latest-blog-posts";
 import PracticePlannerPromotion from "@/components/sections/practice-planner-promotion";
 import AppAvailability from "@/components/sections/app-availability";
-import { Helmet } from "react-helmet";
 
 const Index = () => {
   useEffect(() => {
@@ -19,41 +18,6 @@ const Index = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Basketball Orbit — Modern Drills. Smarter Coaching. Better Players.</title>
-        <meta
-          name="description"
-          content="Your go-to hub for modern basketball coaching: small-sided games, constraint-led approach, and ready-to-use drills and resources."
-        />
-        <meta property="og:title" content="Basketball Orbit — Modern Drills. Smarter Coaching. Better Players." />
-        <meta property="og:description" content="Your go-to hub for modern basketball coaching: small-sided games, constraint-led approach, and ready-to-use drills and resources." />
-        <meta property="og:url" content="https://www.bballorbit.com" />
-        <meta property="og:type" content="website" />
-        {/* Organization Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Basketball Orbit",
-            url: "https://www.bballorbit.com",
-            logo: "https://www.bballorbit.com/logo.png",
-            sameAs: [
-              "https://www.youtube.com/@BasketballOrbit",
-              "https://www.instagram.com/basketball_orbit"
-            ]
-          })}
-        </script>
-        {/* WebSite Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "BballOrbit.com - Modern Drills. Smarter Coaching. Better Players.",
-            url: "https://www.bballorbit.com"
-            // Wenn du später eine Suche hast, kannst du "potentialAction" ergänzen
-          })}
-        </script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <Navigation />

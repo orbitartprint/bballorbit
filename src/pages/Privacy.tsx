@@ -1,6 +1,5 @@
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
-import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
 const Privacy = () => {
@@ -10,14 +9,6 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Privacy Policy - Basketball Orbit</title>
-        <meta
-          name="description"
-          content="Privacy Policy for Basketball Orbit and the BballOrbit Practice Planner."
-        />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
 
       <Navigation />
 

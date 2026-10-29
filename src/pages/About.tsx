@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
@@ -13,17 +12,9 @@ const About = () => {
   useEffect(() => {window.scrollTo(0, 0);}, []);
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>About Chris - Basketball Orbit | Modern Coaching Strategies</title>
-        <meta name="description" content="Meet Chris, the founder of Basketball Orbit. Learn about his journey in basketball coaching and his mission to help coaches worldwide build stronger teams." />
-        <meta property="og:title" content="About Chris - Basketball Orbit | Modern Coaching Strategies" />
-        <meta property="og:description" content="Meet Chris, the founder of Basketball Orbit. Learn about his journey in basketball coaching and his mission to help coaches worldwide build stronger teams." />
-        <meta property="og:url" content="https://www.bballorbit.com/about" />
-        <meta property="og:type" content="website" />
-      </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-10">
         {/* Hero Section */}
         <section className="py-10 lg:py-12">
@@ -60,7 +51,7 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               {/* Linke Spalte: Texte & Hintergrundgrafik */}
               <div className="space-y-8 relative"> 
-                
+
                 {/* Hintergrundgrafik (Basketball Court) - Sauber positioniert */}
                 <div className="absolute inset-0 z-0 flex justify-center items-center pointer-events-none overflow-hidden">
                   <img 
@@ -71,7 +62,7 @@ const About = () => {
                     className="max-w-[600px] w-full opacity-10 object-contain translate-y-10"
                   />
                 </div>
-        
+
                 {/* Text-Inhalt (über der Grafik) */}
                 <div className="relative z-10">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
@@ -81,7 +72,7 @@ const About = () => {
                     Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels, from beginners to experienced athletes.
                   </p>
                 </div>
-        
+
                 <div className="relative z-10">
                   <h3 className="text-2xl font-semibold mb-4 text-primary">Why Basketball Orbit</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -89,7 +80,7 @@ const About = () => {
                     That's why I started Basketball Orbit: to share the strategies and tools I've learned to help coaches like you create confident, successful teams.
                   </p>
                 </div>
-        
+
                 <div className="relative z-10">
                   <h3 className="text-2xl font-semibold mb-4 text-primary">What You'll Get Here</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
@@ -100,7 +91,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-        
+
               {/* Rechte Spalte: Foto von Chris */}
               <div className="flex min-w-0 justify-center lg:justify-start lg:sticky lg:top-16">
                 <div className="relative w-full max-w-lg">
@@ -117,7 +108,7 @@ const About = () => {
                   <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-blue rounded-full opacity-20"></div>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </section>
