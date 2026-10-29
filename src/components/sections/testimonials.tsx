@@ -1,80 +1,25 @@
-import { useState, useEffect } from "react";
-import { Quote } from "lucide-react";
+import { useState } from "react";
+import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import feedback from "@/data/coachingFeedback.json";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      text: "This video is amazing! I have watched it over and over so I can use all of the different drill options! Very well done! Thanks, Coach!",
-      author: "Coach Mike"
-    },
-    {
-      text: "I really appreciate your Videos, with them I plan my Trainings. You help me to be a better Coach. Great Videos 👍 Always looking forward for the next Video 😊",
-      author: "Sarah L."
-    },
-    {
-      text: "This is awesome! You've really helped me see that any basic drill can be continually modified and developed into something bigger and tougher. Thanks for taking the time to make these videos. I love the format.",
-      author: "Tom R."
-    }
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000); // Change every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="py-20 bg-[#0d0d0d]">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
-            What Coaches Are Saying
-          </h2>
-
-          <div className="relative min-h-[200px] flex items-center justify-center">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className={`absolute w-full text-center transition-all duration-700 ${
-                  index === currentIndex
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4 pointer-events-none"
-                }`}
-              >
-                <Quote className="w-12 h-12 text-[#f57520] mx-auto mb-6" />
-                <blockquote className="text-xl md:text-2xl text-gray-200 font-medium mb-6 italic">
-                  "{testimonial.text}"
-                </blockquote>
-                <cite className="text-gray-400 not-italic">
-                  — {testimonial.author}
-                </cite>
-              </div>
-            ))}
-          </div>
-
-          {/* Indicator Dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? "bg-[#f57520] w-8"
-                    : "bg-gray-600 hover:bg-gray-500"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+    <section className="py-20 bg-[#0d0d0d]" aria-labelledby="feedback-heading">
+      <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+        <h2 id="feedback-heading" className="text-3xl md:text-4xl font-bold text-white mb-10">What Coaches Are Saying</h2>
+        <div aria-live="polite" aria-atomic="true" className="min-h-[250px]">
+          <Quote aria-hidden="true" className="w-12 h-12 text-[#f57520] mx-auto mb-6" />
+          <blockquote className="text-xl md:text-2xl text-gray-200 font-medium mb-6 italic">“{feedback[currentIndex]}”</blockquote>
+          <p className="text-gray-400">— YouTube viewer</p>
+        </div>
+        <div className="flex justify-center items-center gap-2 mt-6" aria-label="Choose viewer feedback">
+          <button type="button" className="inline-flex items-center justify-center min-h-11 min-w-11 rounded-md hover:bg-white/10 focus-visible:outline focus-visible:outline-primary" aria-label="Previous testimonial" onClick={() => setCurrentIndex(index => (index + feedback.length - 1) % feedback.length)}><ChevronLeft aria-hidden="true" /></button>
+          {feedback.map((_, index) => <button type="button" key={index} onClick={() => setCurrentIndex(index)} aria-label={`Show testimonial ${index + 1}`} aria-pressed={index === currentIndex} className="inline-flex items-center justify-center min-h-11 min-w-11 rounded-md hover:bg-white/10 focus-visible:outline focus-visible:outline-primary"><span className={`h-3 rounded-full ${index === currentIndex ? "bg-[#f57520] w-8" : "bg-gray-600 w-3"}`} /></button>)}
+          <button type="button" className="inline-flex items-center justify-center min-h-11 min-w-11 rounded-md hover:bg-white/10 focus-visible:outline focus-visible:outline-primary" aria-label="Next testimonial" onClick={() => setCurrentIndex(index => (index + 1) % feedback.length)}><ChevronRight aria-hidden="true" /></button>
         </div>
       </div>
     </section>
   );
 };
-
 export default Testimonials;

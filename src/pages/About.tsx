@@ -4,6 +4,7 @@ import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate, Link } from "react-router-dom";
+import feedback from "@/data/coachingFeedback.json";
 import chrisPhoto1 from "@/assets/chris-photo-1.webp";
 import chrisPhoto2 from "@/assets/chris-photo-2.webp";
 
@@ -146,30 +147,14 @@ const About = () => {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Coaches Are Saying</h2>
               <div className="grid md:grid-cols-3 gap-8">
-                <Card className="bg-background border-primary/20">
-                  <CardContent className="p-6">
-                    <p className="text-muted-foreground italic mb-4 leading-relaxed">
-                      "This video is amazing! I have watched it over and over so I can use all of the different drill options! Very well done! Thanks, Coach!"
-                    </p>
-                    <p className="text-primary font-semibold">— YouTube Subscriber Kenneth</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-background border-primary/20">
-                  <CardContent className="p-6">
-                    <p className="text-muted-foreground italic mb-4 leading-relaxed">
-                      "I really appreciate your Videos, with them I plan my Trainings. You help me to be a better Coach. Great Videos 👍 Always looking forward for the next Video 😊"
-                    </p>
-                    <p className="text-primary font-semibold">— Coach Robert from Germany</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-background border-primary/20">
-                  <CardContent className="p-6">
-                    <p className="text-muted-foreground italic mb-4 leading-relaxed">
-                      "This is awesome! You've really helped me see that any basic drill can be continually modified and developed into something bigger and tougher. Thanks for taking the time to make these videos. I love the format."
-                    </p>
-                    <p className="text-primary font-semibold">— Coach Chad from the USA</p>
-                  </CardContent>
-                </Card>
+                {feedback.map((quote, index) => (
+                  <Card key={index} className="bg-background border-primary/20">
+                    <CardContent className="p-6">
+                      <blockquote className="text-muted-foreground italic mb-4 leading-relaxed">“{quote}”</blockquote>
+                      <p className="text-primary font-semibold">— YouTube viewer</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
@@ -181,16 +166,16 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div className="bg-gradient-orange/10 rounded-lg p-8 border border-primary/20">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">31,000+</div>
-                  <p className="text-muted-foreground">YouTube Subscribers</p>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-2">Video breakdowns</div>
+                  <p className="text-muted-foreground">See drills in action</p>
                 </div>
                 <div className="bg-gradient-blue/10 rounded-lg p-8 border border-secondary/20">
-                  <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">3.2M</div>
-                  <p className="text-muted-foreground">Views</p>
+                  <div className="text-2xl md:text-3xl font-bold text-secondary mb-2">Coaching articles</div>
+                  <p className="text-muted-foreground">Explore the ideas behind the drills</p>
                 </div>
                 <div className="bg-gradient-orange/10 rounded-lg p-8 border border-primary/20">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
-                  <p className="text-muted-foreground">Videos on Coaching Drills and Plays</p>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-2">Practice PDFs</div>
+                  <p className="text-muted-foreground">Take the ideas to your next session</p>
                 </div>
               </div>
             </div>

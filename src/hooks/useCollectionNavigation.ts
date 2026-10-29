@@ -1,4 +1,6 @@
-import { useLayoutEffect, useMemo, useState, type Dispatch, type RefObject, type SetStateAction } from "react";
+import { useBrowserLayoutEffect as useLayoutEffect } from "./useBrowserLayoutEffect";
+import { useHydrated } from "./useHydrated";
+import { useMemo, useState, type Dispatch, type RefObject, type SetStateAction } from "react";
 import { useLocation } from "react-router-dom";
 import { collectionNavigationKey, readCollectionNavigation, writeCollectionNavigation, type CollectionFilters, type CollectionNavigationEntry } from "@/lib/collectionNavigation";
 
@@ -9,16 +11,18 @@ const restoreFilters = <T extends CollectionFilters>(defaults: T, stored: Collec
 
 export function useCollectionNavigation<T extends CollectionFilters>(scope: string, userId: string | undefined, defaults: T, activeTab?: string) {
   const location = useLocation();
+  const hydrated = useHydrated();
   const tab = scope === "library" ? activeTab ?? (location.state as { libraryTab?: unknown } | null)?.libraryTab : undefined;
   const key = collectionNavigationKey(scope, userId, location.pathname, location.search, new URLSearchParams(location.search).get("tab") ?? tab);
   const entry = useMemo<CollectionNavigationEntry>(() => {
-    const saved = readCollectionNavigation(key, location.key);
-    return { id: `${key}:${location.key}`, storageKey: key, historyKey: location.key, snapshot: saved ?? { filters: {} }, initialPage: saved?.page, restoring: Boolean(saved?.scroll), pending: true, results: null };
-  }, [key, location.key]);
+    const saved = hydrated ? readCollectionNavigation(key, location.key) : null;
+    return { id: `${key}:${location.key}:${hydrated ? "client" : "ssr"}`, hydrated, storageKey: key, historyKey: location.key, snapshot: saved ?? { filters: {} }, initialPage: saved?.page, restoring: Boolean(saved?.scroll), pending: true, results: null };
+  }, [key, location.key, hydrated]);
   const [state, setState] = useState<{ id: string; filters: T }>(() => ({ id: entry.id, filters: restoreFilters(defaults, entry.snapshot.filters) }));
   const filters = state.id === entry.id ? state.filters : restoreFilters(defaults, entry.snapshot.filters);
-  useLayoutEffect(() => { entry.snapshot.filters = filters; });
+  useLayoutEffect(() => { if (hydrated) entry.snapshot.filters = filters; });
   useLayoutEffect(() => {
+    if (!hydrated) return;
     try { window.history.scrollRestoration = "manual"; } catch { /* Some WebViews do not expose this setting. */ }
     const capture = () => {
       if (entry.pending && entry.restoring) return;
@@ -27,7 +31,7 @@ export function useCollectionNavigation<T extends CollectionFilters>(scope: stri
     };
     window.addEventListener("pagehide", capture);
     return () => { window.removeEventListener("pagehide", capture); capture(); };
-  }, [entry]);
+  }, [entry, hydrated]);
   const field = <K extends keyof T>(name: K): [T[K], Dispatch<SetStateAction<T[K]>>] => [filters[name], (next) => {
     entry.pending = false;
     setState((current) => {
@@ -40,7 +44,7 @@ export function useCollectionNavigation<T extends CollectionFilters>(scope: stri
 
 export function useCollectionScrollRestoration(entry: CollectionNavigationEntry | undefined, ready: boolean, resultsRef: RefObject<HTMLDivElement>, pageKey: string) {
   useLayoutEffect(() => {
-    if (!entry) return;
+    if (!entry || entry.hydrated === false) return;
     const results = resultsRef.current;
     entry.results = results;
     if (!entry.pending) return;

@@ -3,17 +3,6 @@ import { ExternalLink, Youtube, Instagram, Twitter, Facebook } from "lucide-reac
 import logoImg from "@/assets/basketball-orbit-logo.webp";
 import { appDistribution } from "@/lib/appDistribution";
 
-declare global {
-  interface Window {
-    cookieyes?: {
-      resetConsent: () => void;
-      consent?: {
-        marketing?: boolean;
-      };
-    };
-  }
-}
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 

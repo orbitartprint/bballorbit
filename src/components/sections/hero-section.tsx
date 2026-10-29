@@ -52,7 +52,7 @@ const HeroSection = () => {
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Your go-to hub for modern youth basketball coaching.
+            Build your next practice with game-like drills, court diagrams, and practical coaching PDFs.
           </p>
 
           {/* CTA Buttons */}

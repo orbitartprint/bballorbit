@@ -7,13 +7,16 @@ on:
     branches: [main]
   repository_dispatch:
     types: [public-library-published]
-  # Daily fallback for public-library updates that do not touch the repository.
+  # A lightweight public metadata check; dependencies/build run only when needed.
   schedule:
-    - cron: "17 16 * * *"
+    - cron: "7,22,37,52 * * * *"
+
+permissions:
+  contents: read
 
 concurrency:
   group: website-production
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -26,18 +29,35 @@ jobs:
           node-version: '24'
           package-manager-cache: false
 
+      - name: Check for updated public drills
+        id: publication
+        if: github.event_name == 'schedule'
+        run: node scripts/check-publication.mjs
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+
       - run: npm ci
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
 
       - name: Verify public library loading
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm test
 
       - name: Verify TypeScript
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm run typecheck
 
+      - name: Check vulnerable dependencies
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
+        run: npm audit --audit-level=high
+
       - name: Verify public app store links before publishing
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm run check:app-distribution:release
 
       - name: Build
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm run build
         env:
           VITE_ACCOUNT_DELETION_REQUEST_URL: ${{ vars.VITE_ACCOUNT_DELETION_REQUEST_URL }}
@@ -45,9 +65,10 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
+        uses: peaceiris/actions-gh-pages@329bcc8f12caed2cefe5a5b80781499a6f3b361b # v4
         with:
-          github_token: ${{ secrets.GH_PAT }}
+          personal_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
           cname: bballorbit.com
           force_orphan: true

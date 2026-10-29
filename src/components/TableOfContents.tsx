@@ -54,13 +54,6 @@ const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps
     return () => observer.disconnect();
   }, [containerSelector]);
 
-  const handleClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   if (headings.length === 0) return null;
 
   return (
@@ -69,15 +62,16 @@ const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps
         <CardTitle className="text-lg">Table of Contents</CardTitle>
       </CardHeader>
       <CardContent>
-        <nav>
+        <nav aria-label="Article contents">
           <ul className="space-y-2 text-sm">
             {headings.map((heading) => (
               <li
                 key={heading.id}
                 style={{ paddingLeft: `${(heading.level - 2) * 1}rem` }}
               >
-                <button
-                  onClick={() => handleClick(heading.id)}
+                <a
+                  href={`#${heading.id}`}
+                  aria-current={activeId === heading.id ? "location" : undefined}
                   className={`text-left hover:text-primary transition-colors ${
                     activeId === heading.id
                       ? "text-primary font-medium"
@@ -85,7 +79,7 @@ const TableOfContents = ({ containerSelector = "article" }: TableOfContentsProps
                   }`}
                 >
                   {heading.text}
-                </button>
+                </a>
               </li>
             ))}
           </ul>

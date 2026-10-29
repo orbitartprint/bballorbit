@@ -5,6 +5,7 @@ export type CollectionNavigationSnapshot = {
   scroll?: { left: number; top: number; resultsHeight: number };
 };
 export type CollectionNavigationEntry = {
+  hydrated?: boolean;
   id: string;
   storageKey: string;
   historyKey: string;

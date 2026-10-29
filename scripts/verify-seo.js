@@ -10,19 +10,19 @@ const sitemap = readFileSync(join(dist, "sitemap.xml"), "utf8");
 const { articles, seo } = await loadSiteData(root);
 const manifest = JSON.parse(readFileSync(join(dist, "public-route-manifest.json"), "utf8"));
 const snapshot = JSON.parse(readFileSync(join(dist, "drill-library-snapshot.json"), "utf8"));
-const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
 const htmlFor = (path) => readFileSync(join(dist, path, "index.html"), "utf8");
 
 for (const path of ["free-resources", "privacy"]) {
   assert.doesNotMatch(sitemap, new RegExp(`/${path}(?:[</])`), `${path} must stay out of the sitemap`);
-  assert.match(htmlFor(path), /<meta name="robots" content="noindex, nofollow" data-react-helmet="true"\s*\/>/, `${path} must be noindex before JavaScript runs`);
+  assert.match(htmlFor(path), /<meta[^>]*name="robots" content="noindex, nofollow"/, `${path} must be noindex before JavaScript runs`);
 }
 
 for (const article of articles) {
   const path = `blog/${article.slug}`;
   const html = htmlFor(path);
   assert.match(sitemap, new RegExp(`<loc>https://bballorbit.com/${path}/</loc>`));
-  assert.match(html, new RegExp(`<link rel="canonical" href="https://bballorbit.com/${path}/"`));
+  assert.match(html, new RegExp(`rel="canonical" href="https://bballorbit.com/${path}/"`));
   assert.doesNotMatch(html, /<meta name="robots"[^>]*noindex/);
   assert.ok(html.includes(article.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;") + " | Basketball Orbit</title>"), `Missing article title for ${path}`);
 }
@@ -38,12 +38,12 @@ for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   assert.equal(url.origin, "https://bballorbit.com");
   assert.ok(url.pathname.endsWith("/"), `Sitemap URL must target the final directory URL: ${url.href}`);
   const html = htmlFor(url.pathname.replace(/^\//, ""));
-  assert.ok(html.includes(`<link rel="canonical" href="${url.href}"`), `Canonical must match sitemap URL: ${url.href}`);
+  assert.ok(html.includes(`rel="canonical" href="${url.href}"`), `Canonical must match sitemap URL: ${url.href}`);
   assert.doesNotMatch(html, /<meta name="robots"[^>]*noindex/);
 }
 
 for (const path of ["about", "contact", "resources", "terms", "blog", "drills"]) {
-  assert.match(htmlFor(path), new RegExp(`<link rel="canonical" href="https://bballorbit.com/${path}/"`));
+  assert.match(htmlFor(path), new RegExp(`rel="canonical" href="https://bballorbit.com/${path}/"`));
 }
 
 for (const [route, metadata] of Object.entries(seo.staticPageMetadata)) {
@@ -60,6 +60,11 @@ for (const drill of snapshot) {
   const path = `drills/${drill.public_slug}`;
   assert.ok(existsSync(join(dist, path, "index.html")), `Missing drill HTML: ${path}`);
   assert.ok(sitemap.includes(`<loc>${seo.canonicalForPath(`/${path}`)}</loc>`), `Missing drill sitemap URL: ${path}`);
+  const html = htmlFor(path);
+  for (const match of JSON.stringify(drill).matchAll(/\/drill-assets\/[a-f0-9]{64}\.(?:png|jpg|webp|gif)/g)) {
+    assert.ok(existsSync(join(dist, match[0])), `Missing shared court image: ${match[0]}`);
+    assert.ok(html.includes(`href="${match[0]}"`), `Shared court image must be rendered before JavaScript: ${path}`);
+  }
 }
 for (const article of articles) {
   const html = htmlFor(`blog/${article.slug}`);
@@ -72,3 +77,19 @@ assert.doesNotMatch(notFound, /rel="canonical"/);
 assert.ok(sitemap.includes(`<loc>${seo.SITE_URL}/</loc></url>`), "Static pages must not get a fictitious build-date lastmod");
 
 console.log(`SEO checks passed: ${articles.length} articles, ${snapshot.length} published drills, static metadata, social cards, canonicals, noindex and 404 fallback.`);
+
+for (const route of [...manifest.routes, "/privacy", "/free-resources"]) {
+  const html = htmlFor(route.replace(/^\//, ""));
+  assert.match(html, /<div id="root" data-prerendered="true">/);
+  assert.match(html, /<h1\b[^>]*>[\s\S]+?<\/h1>/, `Page body must be readable before JavaScript: ${route}`);
+  assert.equal((html.match(/<h1\b/g) || []).length, 1, `Exactly one main heading is required: ${route}`);
+  assert.doesNotMatch(html, /<iframe[^>]+(?:youtube\.com|youtube-nocookie\.com)/, `YouTube must wait for consent and a user click: ${route}`);
+  assert.match(html, /id="page-bootstrap" type="application\/json"/);
+}
+for (const article of articles) {
+  const html = htmlFor(`blog/${article.slug}`);
+  assert.ok(html.includes('id="article-content"'), `Missing rendered article: ${article.slug}`);
+  assert.match(html, /<h2\b/, `Missing article body headings: ${article.slug}`);
+}
+assert.match(notFound, /<h1\b/, "HTTP 404 must have readable content before JavaScript");
+console.log("Full HTML and hydration bootstrap checks passed.");

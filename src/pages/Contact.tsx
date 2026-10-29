@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,7 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, MessageSquare, HelpCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { CONTACT_SITE_KEY, submitWebsiteContact } from "@/lib/contact";
+import TurnstileChallenge from "@/components/TurnstileChallenge";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 
@@ -19,6 +20,10 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [company, setCompany] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [verificationReset, setVerificationReset] = useState(0);
+  const submission = useRef<{ fingerprint: string; requestId: string }>();
   const { toast } = useToast();
 
   useEffect(() => {
@@ -38,14 +43,11 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData,
-      });
-
-      if (error || data?.success !== true) {
-        throw error || new Error("The contact service did not confirm submission.");
-      }
-
+      const normalized = Object.fromEntries(Object.entries(formData).map(([name, value]) => [name, value.trim()])) as typeof formData;
+      const fingerprint = JSON.stringify(normalized);
+      if (submission.current?.fingerprint !== fingerprint) submission.current = { fingerprint, requestId: crypto.randomUUID() };
+      await submitWebsiteContact({ ...normalized, company, requestId: submission.current.requestId, turnstileToken });
+      submission.current = undefined;
       setFormData({
         name: "",
         email: "",
@@ -54,8 +56,8 @@ const Contact = () => {
       });
 
       toast({
-        title: "Thank you for your message!",
-        description: "I'll get back to you soon.",
+        title: "Message received — thank you!",
+        description: "Your message has been saved. I'll get back to you soon.",
       });
 
     } catch {
@@ -66,6 +68,8 @@ const Contact = () => {
       });
     } finally {
       setIsSubmitting(false);
+      setTurnstileToken("");
+      setVerificationReset(value => value + 1);
     }
   };
 
@@ -135,6 +139,10 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="absolute -left-[10000px] top-0" aria-hidden="true">
+                      <label htmlFor="contact-company">Leave this field empty</label>
+                      <input id="contact-company" name="company" type="text" autoComplete="off" tabIndex={-1} value={company} onChange={event => setCompany(event.target.value)} />
+                    </div>
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name</Label>
                       <Input
@@ -191,7 +199,8 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button className="w-full" type="submit" disabled={isSubmitting}>
+                    <TurnstileChallenge siteKey={CONTACT_SITE_KEY} resetKey={verificationReset} onToken={setTurnstileToken} />
+                    <Button className="w-full" type="submit" disabled={isSubmitting || !turnstileToken}>
                       <Mail className="h-4 w-4 mr-2" />
                       {isSubmitting ? "Sending message..." : "Send Message"}
                     </Button>
@@ -249,7 +258,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-medium text-foreground">Email Support</p>
-                        <p className="text-sm text-muted-foreground">info[at]bballorbit.com</p>
+                        <a className="text-sm text-muted-foreground underline underline-offset-4" href="mailto:info@bballorbit.com">info@bballorbit.com</a>
                       </div>
                     </div>
 

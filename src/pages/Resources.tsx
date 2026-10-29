@@ -63,22 +63,22 @@ const Resources = () => {
                     <div className="flex items-center gap-3">
                       <Users className="h-6 w-6 text-[#f57520]" />
                       <div>
-                        <div className="text-2xl font-bold text-[#f57520]">30,000+</div>
-                        <div className="text-xs text-gray-300">Coaches Worldwide</div>
+                        <div className="text-2xl font-bold text-[#f57520]">Practical PDFs</div>
+                        <div className="text-xs text-gray-300">Ready for practice</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <Globe className="h-6 w-6 text-[#f57520]" />
                       <div>
-                        <div className="text-2xl font-bold text-[#f57520]">50+</div>
-                        <div className="text-xs text-gray-300">Countries</div>
+                        <div className="text-2xl font-bold text-[#f57520]">Game-like drills</div>
+                        <div className="text-xs text-gray-300">Built around decisions</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <TrendingUp className="h-6 w-6 text-[#f57520]" />
                       <div>
-                        <div className="text-2xl font-bold text-[#f57520]">99%</div>
-                        <div className="text-xs text-gray-300">Satisfaction Rate</div>
+                        <div className="text-2xl font-bold text-[#f57520]">Clear diagrams</div>
+                        <div className="text-xs text-gray-300">Easy to follow</div>
                       </div>
                     </div>
                   </div>

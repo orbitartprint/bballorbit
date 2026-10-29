@@ -8,14 +8,18 @@ type CourtImageProps = {
   selected?: boolean;
 };
 
-// The Creator embeds optimized PNGs so published diagrams do not rely on signed URLs.
-const isEmbeddedCourtImage = (source: unknown): source is string =>
-  typeof source === "string" && source.length <= 550_000 && /^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(source);
+// Published builds deduplicate embedded raster images into immutable local assets.
+// Arbitrary URLs, SVG documents and traversal paths remain disallowed.
+const isPublishedCourtImage = (source: unknown): source is string =>
+  typeof source === "string" && source.length <= 550_000 && (
+    /^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(source) ||
+    /^\/drill-assets\/[a-f0-9]{64}\.(?:png|jpg|webp|gif)$/.test(source)
+  );
 
 export const CourtImage = ({ object, center, courtSize, selected = false }: CourtImageProps) => {
   const [failedSource, setFailedSource] = useState<string | null>(null);
   const source = object.image?.dataUrl;
-  const ready = isEmbeddedCourtImage(source) && source !== failedSource;
+  const ready = isPublishedCourtImage(source) && source !== failedSource;
   const width = courtSize === "full-horizontal" ? object.width : object.height;
   const height = courtSize === "full-horizontal" ? object.height : object.width;
   const labelScale = Math.min(1, width / 12, height / 8);

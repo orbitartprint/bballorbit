@@ -79,6 +79,11 @@ test("public Drill Library loads independently of login state and reports fallba
         assert.doesNotMatch(render(drill.diagram.phases[1]), /<image /);
         assert.match(render({ ...drill.diagram.phases[0], objects: [{ ...imageObject, image: undefined }] }), />Image<\/text>/);
         assert.match(render({ ...drill.diagram.phases[0], objects: [{ ...imageObject, image: { ...image, dataUrl: "https://example.com/expired.png" } }] }), /Image unavailable/);
+        const assetPath = `/drill-assets/${"a".repeat(64)}.png`;
+        assert.ok(render({ ...drill.diagram.phases[0], objects: [{ ...imageObject, image: { ...image, dataUrl: assetPath } }] }).includes(`href="${assetPath}"`), "build-generated shared raster images must remain visible");
+        for (const unsafe of ["/drill-assets/../image.png", `//example.com/${"a".repeat(64)}.png`, `/drill-assets/${"a".repeat(64)}.svg`, assetPath + "?redirect=1"]) {
+          assert.match(render({ ...drill.diagram.phases[0], objects: [{ ...imageObject, image: { ...image, dataUrl: unsafe } }] }), /Image unavailable/);
+        }
       }
     });
 

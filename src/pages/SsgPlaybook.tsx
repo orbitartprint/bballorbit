@@ -53,7 +53,7 @@ const SsgPlaybook = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-sm text-[#f5f5f5]/60">
                   <div className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-[#f57520]" />
-                    <span>30,000+ coaches trust Basketball Orbit</span>
+                    <span>Practical small-sided games for youth coaches</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-[#f57520]" />
