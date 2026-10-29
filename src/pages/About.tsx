@@ -147,15 +147,16 @@ const About = () => {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Coaches Are Saying</h2>
               <div className="grid md:grid-cols-3 gap-8">
-                {feedback.map((quote, index) => (
-                  <Card key={index} className="bg-background border-primary/20">
+                {feedback.testimonials.map((testimonial) => (
+                  <Card key={testimonial.id} className="bg-background border-primary/20">
                     <CardContent className="p-6">
-                      <blockquote className="text-muted-foreground italic mb-4 leading-relaxed">“{quote}”</blockquote>
-                      <p className="text-primary font-semibold">— YouTube viewer</p>
+                      <blockquote className="text-muted-foreground italic mb-4 leading-relaxed">“{testimonial.quote}”</blockquote>
+                      <p className="text-primary font-semibold">— {testimonial.name}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
+              <p className="mt-6 text-center text-sm text-muted-foreground">{feedback.attributionNote}</p>
             </div>
           </div>
         </section>
