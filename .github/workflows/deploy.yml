@@ -40,6 +40,10 @@ jobs:
       - run: npm ci
         if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
 
+      - name: Verify lint
+        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
+        run: npm run lint
+
       - name: Verify public library loading
         if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm test
