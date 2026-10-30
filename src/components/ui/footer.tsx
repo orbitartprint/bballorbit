@@ -41,7 +41,7 @@ const Footer = () => {
                 src={logoImg}
               width={320}
               height={256}
-                alt="Basketball Orbit" 
+                alt=""
                 className="h-10 w-auto"
                 loading="lazy"
               />

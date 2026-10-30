@@ -83,7 +83,7 @@ const PracticePlannerPromotion = () => {
               <Button
                 size="lg"
                 asChild
-                className="group h-14 bg-[#f57520] px-7 text-base font-bold text-white shadow-orange transition-all duration-300 hover:bg-[#ff8431] hover:shadow-[0_14px_38px_-12px_rgba(245,117,32,0.65)]"
+                className="group h-14 bg-[#f57520] px-7 text-base font-bold text-black shadow-orange transition-all duration-300 hover:bg-[#ff8431] hover:shadow-[0_14px_38px_-12px_rgba(245,117,32,0.65)]"
               >
                 <a
                   href={APP_URL}

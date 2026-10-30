@@ -315,7 +315,7 @@ All colors MUST be HSL.
   }
 
   .infobox-blue h4 {
-    @apply text-[#2d32f1] font-semibold mb-3;
+    @apply text-[#a5a9ff] font-semibold mb-3;
   }
 
   .infobox-blue p {
