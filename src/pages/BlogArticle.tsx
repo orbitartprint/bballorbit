@@ -3,7 +3,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { absoluteImage, articleStructuredData } from "@/lib/seo";
-import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter, X } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, User, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";

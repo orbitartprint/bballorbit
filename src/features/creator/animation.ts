@@ -113,7 +113,7 @@ const getMovementProgressAtTime = (
   const elapsedSeconds = Math.max(0, elapsedMs / 1000);
   const speed = normalMovementSpeed / durationMultiplierByKey[duration];
   const acceleration = (speed * speed) / (2 * movementEaseDistance);
-  let distance = 0;
+  let distance: number;
 
   if (pathLength >= 2 * movementEaseDistance) {
     const rampTime = speed / acceleration;

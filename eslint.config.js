@@ -18,7 +18,16 @@ export default tseslint.config(
       "react-refresh": reactRefresh,
     },
     rules: {
-      ...reactHooks.configs.recommended.rules,
+      // The SWC build does not use React Compiler. Enforce core hook correctness
+      // and runtime safety without imposing the compiler's optimization contract.
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/component-hook-factories": "error",
+      "react-hooks/error-boundaries": "error",
+      "react-hooks/globals": "error",
+      "react-hooks/purity": "error",
+      "react-hooks/set-state-in-render": "error",
+      "react-hooks/static-components": "error",
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "off",
     },
