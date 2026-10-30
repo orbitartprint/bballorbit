@@ -64,13 +64,22 @@
 @tailwind utilities;
 
 /* CookieYes renders outside the React root and supplies inline button colors. */
-body .cky-btn.cky-btn-accept {
+body .cky-btn:is(.cky-btn-accept, .cky-btn-reject, .cky-btn-preferences) {
   color: #000 !important;
   background-color: #f57520 !important;
 }
 
-body .cky-btn.cky-btn-accept:hover {
+body .cky-btn:is(.cky-btn-accept, .cky-btn-reject, .cky-btn-preferences):hover {
   background-color: #ff8431 !important;
+}
+
+body .cky-show-desc-btn,
+body .cky-dma-content-wrapper a {
+  color: #f57520 !important;
+}
+
+body .cky-always-active {
+  color: #4ade80 !important;
 }
 
 /* Basketball Orbit Design System
