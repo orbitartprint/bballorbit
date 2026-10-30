@@ -6,5 +6,5 @@ const data: { testimonials: Testimonial[]; attributionNote?: string } = source;
 // Older/local data may omit the optional note; attributions must remain transparent.
 export const coachingFeedback = {
   testimonials: data.testimonials,
-  attributionNote: data.attributionNote?.trim() || "Viewer comments from YouTube. Names are pseudonyms.",
+  attributionNote: data.attributionNote?.trim() || "Viewer comments from YouTube.",
 };
