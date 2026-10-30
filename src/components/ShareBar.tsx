@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Share2, Link2, Mail, Facebook, Twitter } from "lucide-react";
+import { Share2, Link2, Mail } from "lucide-react";
+import { Facebook, Twitter } from "@/components/BrandIcons";
 
 interface ShareBarProps {
   title: string;

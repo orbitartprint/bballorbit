@@ -14,7 +14,6 @@ const Testimonials = () => {
   const [reducedMotion, setReducedMotion] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [carouselRef, api] = useEmblaCarousel({ loop: true, duration: reducedMotion ? 0 : 25 });
-  apiRef.current = api;
   const [rotation] = useState(() => createCarouselRotation(() => apiRef.current?.scrollNext(reducedMotionRef.current)));
   const rotationState = useSyncExternalStore(rotation.subscribe, rotation.getSnapshot, rotation.getSnapshot);
 
@@ -45,6 +44,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     if (!api) return;
+    apiRef.current = api;
     const onSelect = () => { setCurrentIndex(api.selectedScrollSnap()); rotation.restart(); };
     const onPointerDown = () => rotation.stop();
     onSelect();
@@ -52,6 +52,7 @@ const Testimonials = () => {
     api.on("reInit", onSelect);
     api.on("pointerDown", onPointerDown);
     return () => {
+      apiRef.current = undefined;
       api.off("select", onSelect);
       api.off("reInit", onSelect);
       api.off("pointerDown", onPointerDown);

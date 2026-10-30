@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ExternalLink, Youtube, Instagram, Twitter, Facebook } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { Youtube, Instagram } from "@/components/BrandIcons";
 import logoImg from "@/assets/basketball-orbit-logo-display.webp";
 import { appDistribution } from "@/lib/appDistribution";
 
@@ -9,8 +10,6 @@ const Footer = () => {
   const socialLinks = [
     { icon: Youtube, href: "https://www.youtube.com/@basketballorbit", label: "YouTube" },
     { icon: Instagram, href: "https://www.instagram.com/basketball_orbit", label: "Instagram" },
-    /*{ icon: Twitter, href: "#", label: "Twitter" },*/
-    /*{ icon: Facebook, href: "#", label: "Facebook" },*/
   ];
 
   const legalLinks = [
@@ -42,7 +41,7 @@ const Footer = () => {
                 src={logoImg}
               width={320}
               height={256}
-                alt="Basketball Orbit" 
+                alt=""
                 className="h-10 w-auto"
                 loading="lazy"
               />

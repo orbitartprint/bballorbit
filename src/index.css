@@ -63,6 +63,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CookieYes renders outside the React root and supplies inline button colors. */
+body .cky-btn.cky-btn-accept {
+  color: #000 !important;
+  background-color: #f57520 !important;
+}
+
+body .cky-btn.cky-btn-accept:hover {
+  background-color: #ff8431 !important;
+}
+
 /* Basketball Orbit Design System
 All colors MUST be HSL.
 */
@@ -315,7 +325,7 @@ All colors MUST be HSL.
   }
 
   .infobox-blue h4 {
-    @apply text-[#2d32f1] font-semibold mb-3;
+    @apply text-[#a5a9ff] font-semibold mb-3;
   }
 
   .infobox-blue p {

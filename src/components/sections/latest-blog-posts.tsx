@@ -78,7 +78,7 @@ const LatestBlogPosts = () => {
                     <div className="mt-auto">
                       <Button 
                         variant="outline" 
-                        className="w-full border-[#f57520]/50 text-white hover:bg-[#f57520] hover:text-white hover:border-[#f57520] group-hover:bg-[#f57520] transition-all"
+                        className="w-full border-[#f57520]/50 text-white hover:bg-[#f57520] hover:text-black hover:border-[#f57520] group-hover:bg-[#f57520] group-hover:text-black transition-all"
                       >
                         Read More
                         <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />

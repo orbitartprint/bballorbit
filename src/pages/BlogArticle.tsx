@@ -3,7 +3,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { absoluteImage, articleStructuredData } from "@/lib/seo";
-import { ArrowLeft, Clock, Calendar, User, Share2, Link2, Mail, Facebook, Twitter, X } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, User, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -115,7 +115,7 @@ const BlogArticle = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />
-        <div className="container mx-auto px-4 pt-20 pb-8 md:pt-20 md:pb-10">
+        <main className="container mx-auto px-4 pt-20 pb-8 md:pt-20 md:pb-10">
           <Button variant="ghost" className="mb-6" asChild>
             <Link to="/blog">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
@@ -330,7 +330,7 @@ const BlogArticle = () => {
               <RelatedArticles articles={relatedArticles} />
             </aside>
           </div>
-        </div>
+        </main>
         {lightboxImage && (
           <div
             className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"

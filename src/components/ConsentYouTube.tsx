@@ -21,10 +21,12 @@ export default function ConsentYouTube({ videoId, title, poster, posterSrcSet }:
 }
 
 export function ArticleVideo({ src, title = "Basketball Orbit video" }: { src?: string; title?: string }) {
+  let videoId: string | undefined;
   try {
     const url = new URL(src || "");
     if (url.protocol !== "https:" || !["www.youtube.com", "www.youtube-nocookie.com", "youtube.com"].includes(url.hostname)) return null;
     const match = url.pathname.match(/^\/embed\/([A-Za-z0-9_-]{11})$/);
-    return match ? <ConsentYouTube key={match[1]} videoId={match[1]} title={title} /> : null;
+    videoId = match?.[1];
   } catch { return null; }
+  return videoId ? <ConsentYouTube key={videoId} videoId={videoId} title={title} /> : null;
 }

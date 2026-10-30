@@ -45,7 +45,7 @@ const BlogPromotion = () => {
             <Link to="/blog">
               <Button 
                 size="lg" 
-                className="bg-[#f57520] hover:bg-[#f57520]/90 text-white font-semibold px-8 py-6 text-lg group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#f57520]/30"
+                className="bg-[#f57520] hover:bg-[#f57520]/90 text-black font-semibold px-8 py-6 text-lg group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#f57520]/30"
               >
                 Explore the Blog
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
