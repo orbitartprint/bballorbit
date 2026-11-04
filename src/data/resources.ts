@@ -13,6 +13,17 @@ export interface Resource {
 
 export const resources: Resource[] = [
   {
+    id: "1-3-1-zone-defense",
+    title: "1-3-1 Zone Defense Cheat Sheet",
+    description: "Understand the 1-3-1 Zone – Know Who Goes Where.",
+    image: "/lovable-uploads/1-3-1-zone-defense-cheat-sheet-pdf.webp",
+    category: "Defense",
+    type: "Free",
+    link: "https://guide.bballorbit.com/1-3-1-zone-defense",
+    uid: "7b5895334e",
+    filePath: "/pdfs/1-3-1-zone-defense-guide.pdf",
+  },
+  {
     id: "pnr-cheat-sheet",
     title: "Pick & Roll Cheat Sheet",
     description: "Offensive solutions vs common screen coverages.",

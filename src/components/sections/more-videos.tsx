@@ -4,16 +4,16 @@ const MoreVideos = () => {
   // 🔸 Hier brauchst du nur die Video-IDs und Titel anzugeben
   const videos = [
     {
+      id: "s4CsyR3EpJs",
+      title: "Tagging Up Explained: Offensive Rebounding Without Sacrificing Transition"
+    },
+    {
       id: "BvXR1cZFKtQ",
       title: "The One Basketball Drill You Can Use for Almost Everything"
     },
     {
       id: "01rcPig8FNg",
       title: "THow to Attack Every Pick-and-Roll Coverage"
-    },
-    {
-      id: "TX8U5Zav8e4",
-      title: "The Horns Offense Breakdown: Every Option From One Setup"
     },
   ];
 
