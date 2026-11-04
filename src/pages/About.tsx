@@ -68,7 +68,7 @@ const About = () => {
                 <div className="relative z-10">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey</h2>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    Hi, I'm Chris – Welcome to Basketball Orbit! Basketball has been a huge part of my life. 
+                    Hi, I'm Chris Bernhard, the founder of Basketball Orbit — a coaching platform for basketball drills, practical resources, and the Practice Planner. Basketball has been a huge part of my life.
                     Growing up in Germany, I fell in love with the game and have been lucky to play it for most of my life. 
                     Over the years, my passion evolved into coaching, where I've worked with players and teams of all levels, from beginners to experienced athletes.
                   </p>

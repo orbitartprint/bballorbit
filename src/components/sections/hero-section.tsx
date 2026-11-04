@@ -49,6 +49,9 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
+          <p className="text-sm md:text-base font-semibold tracking-wide text-gray-200 mb-4">
+            Basketball Orbit · Basketball Coaching
+          </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="text-gradient-orange">Modern Practice.</span>
             <br />
