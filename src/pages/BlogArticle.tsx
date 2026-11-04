@@ -167,7 +167,7 @@ const BlogArticle = () => {
                         alt={article.heroImageAlt}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-44 sm:h-auto sm:max-h-[500px] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                        className={`w-full h-44 sm:h-auto sm:max-h-[500px] rounded-lg transition-transform duration-300 ${article.heroImageFit === 'contain' ? 'object-contain' : 'object-cover hover:scale-105'}`}
                         onError={(e) => {
                           e.currentTarget.src = '/placeholder.svg';
                         }}

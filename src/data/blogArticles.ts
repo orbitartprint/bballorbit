@@ -6,6 +6,7 @@ export interface BlogArticle {
   excerpt: string;
   heroImage: string;
   heroImageAlt: string;
+  heroImageFit?: 'cover' | 'contain';
   category: string;
   tags: string[];
   content: string;
@@ -21,9 +22,11 @@ import { pressBreak } from '../blog/article-data/press-break';
 import { basketballPracticePlanning } from '../blog/article-data/basketball-practice-planning';
 import { taggingUp } from '../blog/article-data/tagging-up';
 import { shotSelection } from '../blog/article-data/shot-selection';
+import { oneThreeOneZoneDefense } from '../blog/article-data/1-3-1-zone-defense';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
+  oneThreeOneZoneDefense,
   shotSelection,
   taggingUp,
   basketballPracticePlanning,
