@@ -5,7 +5,7 @@ export type PageMetadata = { title: string; description: string; image?: string;
 
 /** Shared by route metadata and the static build. */
 export const staticPageMetadata: Record<string, PageMetadata> = {
-  "/": { title: "Basketball Orbit — Modern Drills. Smarter Coaching. Better Players.", description: "Your go-to hub for modern basketball coaching: small-sided games, constraints-led coaching, and ready-to-use drills and resources." },
+  "/": { title: "Basketball Orbit | Drills, Coaching & Practice Planner", description: "Basketball Orbit: game-like basketball drills, small-sided games, coaching PDFs and the Practice Planner. Plan better practices and develop smarter players." },
   "/drills": { title: "Basketball Drill Library - Basketball Orbit", description: "Explore modern, game-like basketball drills, review court diagrams and coaching cues, and build your next practice." },
   "/resources": { title: "Free & Premium Coaching Resources - Basketball Orbit", description: "Browse Basketball Orbit coaching PDFs and resources. Get free guides or explore the Ultimate SSG Playbook for your next practice." },
   "/free-resources": { title: "Free Coaching Resources Library - Basketball Orbit", description: "Download the free Basketball Orbit coaching PDFs and guides.", noindex: true },
@@ -39,7 +39,7 @@ export const articleStructuredData = (article: ArticleSeoData) => ({
   "@context": "https://schema.org", "@type": "Article",
   headline: article.title, description: article.excerpt,
   image: absoluteImage(article.heroImage), datePublished: article.publishDate,
-  author: { "@type": "Person", name: "Chris Bernhard", url: canonicalForPath("/about") },
-  publisher: { "@type": "Organization", name: "Basketball Orbit", logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` } },
+  author: { "@type": "Person", "@id": `${canonicalForPath("/about")}#chris-bernhard`, name: "Chris Bernhard", url: canonicalForPath("/about") },
+  publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Basketball Orbit", logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` } },
   mainEntityOfPage: { "@type": "WebPage", "@id": canonicalForPath(`/blog/${article.slug}`) },
 });

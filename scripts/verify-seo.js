@@ -12,6 +12,23 @@ const manifest = JSON.parse(readFileSync(join(dist, "public-route-manifest.json"
 const snapshot = JSON.parse(readFileSync(join(dist, "drill-library-snapshot.json"), "utf8"));
 const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
 const htmlFor = (path) => readFileSync(join(dist, path, "index.html"), "utf8");
+const structuredDataFor = (html) => [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
+  .flatMap((match) => {
+    const data = JSON.parse(match[1]);
+    return data["@graph"] ?? [data];
+  });
+const homeStructuredData = structuredDataFor(htmlFor(""));
+const organizations = homeStructuredData.filter((item) => item["@type"] === "Organization");
+const websites = homeStructuredData.filter((item) => item["@type"] === "WebSite");
+assert.equal(organizations.length, 1, "The homepage must identify one organization");
+assert.equal(websites.length, 1, "The homepage must identify one website");
+const [organization] = organizations;
+const [website] = websites;
+assert.equal(organization.url, seo.canonicalForPath("/"));
+assert.equal(website.url, organization.url);
+assert.equal(website.publisher["@id"], organization["@id"], "Website and publisher identities must be connected");
+assert.equal(website.name, organization.name);
+assert.equal(website.alternateName, organization.alternateName);
 
 for (const path of ["free-resources", "privacy"]) {
   assert.doesNotMatch(sitemap, new RegExp(`/${path}(?:[</])`), `${path} must stay out of the sitemap`);
@@ -69,6 +86,9 @@ for (const drill of snapshot) {
 for (const article of articles) {
   const html = htmlFor(`blog/${article.slug}`);
   assert.ok(html.includes('"@type":"Article"'), `Missing Article schema before JavaScript: ${article.slug}`);
+  const articleData = structuredDataFor(html).find((item) => item["@type"] === "Article");
+  assert.equal(articleData.publisher["@id"], organization["@id"], `Article publisher must match the website organization: ${article.slug}`);
+  assert.equal(articleData.author["@id"], organization.founder["@id"], `Article author must match the documented founder: ${article.slug}`);
   assert.ok(html.includes(`name="twitter:image" content="${escapeHtml(seo.absoluteImage(article.heroImage))}"`), `Wrong Twitter image: ${article.slug}`);
 }
 const notFound = readFileSync(join(dist, "404.html"), "utf8");
