@@ -228,13 +228,14 @@ const BlogArticle = () => {
                     components={{
                       iframe: ({ src, title }) => <ArticleVideo src={src} title={title} />,
                       h1: ({ id, children }) => <h2 id={id}>{children}</h2>,
-                      a: ({ href, children }) => {
+                      a: ({ href, children, target, rel }) => {
                         const isExternal = href && !href.startsWith("/") && !href.includes("bballorbit.com");
+                        const linkTarget = target ?? (isExternal ? "_blank" : undefined);
                         return (
                           <a
                             href={href}
-                            target={isExternal ? "_blank" : undefined}
-                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            target={linkTarget}
+                            rel={linkTarget === "_blank" ? "noopener noreferrer" : rel}
                             className="text-primary hover:underline"
                           >
                             {children}

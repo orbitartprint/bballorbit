@@ -1,14 +1,10 @@
-The ball reaches the corner. Two defenders close around it. For a moment, the trap looks like the whole defense.
-
-But look inside. Who has the low post? Who takes the flash to the free-throw line? And who protects the basket if the passer throws over the front?
-
-Those three jobs determine whether a **1-3-1 zone defense** creates pressure or simply leaves someone open.
+The **1-3-1 zone defense** uses ball pressure and connected rotations to disrupt passing lanes. Its effectiveness depends on how the five defenders adjust their responsibilities as the ball moves.
 
 This guide explains the five roles, the ball-side rotations, the responses to inside catches, and the trade-offs behind the pressure. It follows the same coverage as the Basketball Orbit video and cheat sheet, with more detail on why each movement matters. It is a breakdown of how the system works, not a drill progression or installation plan.
 
 **Our main version:** contain the ball high on the floor, then hard-trap the baseline corner. Extended pressure and non-trapping corner coverage are separate choices, identified below.
 
-For a courtside reference, get the free [1-3-1 Zone Defense Cheat Sheet](https://guide.bballorbit.com/1-3-1-zone-defense). You can also find it in the [Basketball Orbit coaching resources](/resources).
+For a courtside reference, get the free <a href="https://guide.bballorbit.com/1-3-1-zone-defense" target="_blank" rel="noopener noreferrer">1-3-1 Zone Defense Cheat Sheet</a>. You can also find it in the [Basketball Orbit coaching resources](/resources).
 
 ## The setup: five roles, not five fixed spots
 
@@ -16,15 +12,13 @@ The starting shape is one defender above the three-point line, three across the 
 
 We use the same labels throughout:
 
-- **Top, X3:** steer the ball toward a sideline, obstruct the guard-to-guard reversal, and drop to the high post on a corner pass.
-- **Left wing, X2:** cover the left perimeter when the ball is there; protect the weak-side block when it is on the right.
-- **Right wing, X4:** perform the mirror-image job on the right.
-- **Middle, X5:** deny post entries, adjust with the offensive post, and become the first interior helper against penetration.
-- **Baseline, X1:** work between the ball-side block and the corner, cross underneath on a reversal, and prevent a baseline drive on the corner closeout.
+- **Top (X3):** steer the ball toward a sideline, obstruct the guard-to-guard reversal, and drop to the high post on a corner pass.
+- **Left wing (X2):** cover the left perimeter when the ball is there; protect the weak-side block when it is on the right.
+- **Right wing (X4):** perform the mirror-image job on the right.
+- **Middle (X5):** deny post entries, adjust with the offensive post, and become the first interior helper against penetration.
+- **Baseline (X1):** work between the ball-side block and the corner, cross underneath on a reversal, and prevent a baseline drive on the corner closeout.
 
 ![Five defensive roles in the 1-3-1: X3 at the top, X2 left, X4 right, X5 in the middle, and X1 near the basket](/lovable-uploads/1-3-1-zone-defense-roles.webp)
-
-**Reading the diagrams:** red Xs are defenders; white numbered circles are attackers. Red arrows show defensive movement, black dashed arrows show passes, and a black wavy line shows a dribble. Right and left mean the sides as you see them in the diagram, with the basket at the top. The defensive numbers identify roles here, not mandatory jersey numbers or offensive positions. Tap or click a diagram to enlarge it.
 
 The baseline role is particularly easy to misread. It does not automatically belong to the tallest player. That defender must repeatedly cover ground between corners, recognize inside threats, and communicate. A quick guard may fit it well. Size and strength are often more valuable in the middle, where the defender battles for post position.
 
@@ -164,7 +158,7 @@ An entry from the right reaches an attacker near the free-throw line. The receiv
 
 X5 contains from the basket side. X3 closes down from above to double the catch and encourage a pass back toward the top.
 
-Below them, **X1 and the left wing, X2, protect the two sides of the basket. X4 stays connected to the nearby right-side perimeter outlet.** Do not pull that wing into the same space as the double and leave the outlet unattended.
+Below them, **X1 and the left wing (X2) protect the two sides of the basket. X4 stays connected to the nearby right-side perimeter outlet.** Do not pull that wing into the same space as the double and leave the outlet unattended.
 
 If the ball goes back to the top, X3 recovers upward and X5 stays inside. If it skips to the left wing, X2 uses the curved closeout again.
 
@@ -275,11 +269,11 @@ If you are scouting an opponent, do not stop at “they play 1-3-1.” Watch the
 
 ## Watch the rotations and keep a quick reference
 
-The [animated 1-3-1 Zone Defense breakdown on YouTube](https://www.youtube.com/watch?v=FHlkZy5N5eo) walks through the same situations in motion. The video release is November 8, 2026; if you are reading before then, the diagrams above provide the complete explanation without it.
+The [animated 1-3-1 Zone Defense breakdown on YouTube](https://www.youtube.com/watch?v=FHlkZy5N5eo) walks through the same situations in motion.
 
 <iframe src="https://www.youtube-nocookie.com/embed/FHlkZy5N5eo" title="1-3-1 Zone Defense Explained: Rotations, Traps and Weaknesses" loading="lazy" allowfullscreen></iframe>
 
-For a shorter reference beside your notes, the free [1-3-1 Zone Defense Cheat Sheet](https://guide.bballorbit.com/1-3-1-zone-defense) puts the roles and rotations into a page-by-page guide. Use the article for the reasoning, the video for movement, and the PDF to find a specific situation quickly.
+For a shorter reference beside your notes, the free <a href="https://guide.bballorbit.com/1-3-1-zone-defense" target="_blank" rel="noopener noreferrer">1-3-1 Zone Defense Cheat Sheet</a> puts the roles and rotations into a page-by-page guide. Use the article for the reasoning, the video for movement, and the PDF to find a specific situation quickly.
 
 ## Draw the coverage for your team
 
@@ -289,7 +283,7 @@ Before turning a system into a practice, make its coverage choices explicit: whe
   <div class="w-full md:flex-[2]">
     <h3 class="mt-0 !text-primary">Make the rotations clear before you step on court</h3>
     <p>Use the Drill Creator in the Basketball Orbit app to draw your own 1-3-1 coverage, show the movement on a pass, and make your team's trapping choices visible.</p>
-    <p>The Practice Planner gives those visuals a place within your session, alongside the coaching cues and timing you want to keep in view.</p>
+    <p>The <a href="https://app.bballorbit.com/">Practice Planner</a> gives those visuals a place within your session, alongside the coaching cues and timing you want to keep in view.</p>
     <p><a href="https://app.bballorbit.com/">Draw your rotations in Basketball Orbit</a></p>
   </div>
   <div class="w-full md:flex-1 md:min-w-[200px] py-2">

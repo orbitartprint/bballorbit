@@ -20,5 +20,5 @@ export const oneThreeOneZoneDefense = {
     'Composite illustration of five basketball defenders in blue uniforms arranged in a 1-3-1 formation',
   readTimeMinutes: calculateReadTime(articleContent),
   content: articleContent,
-  publishDate: '2026-11-04',
+  publishDate: '2026-11-08',
 } satisfies BlogArticle;

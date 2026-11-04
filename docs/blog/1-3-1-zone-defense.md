@@ -7,7 +7,7 @@
 - Source: `src/blog/content/1-3-1-zone-defense.md`
 - Metadata: `src/blog/article-data/1-3-1-zone-defense.ts`
 - Registered in `src/data/blogArticles.ts`; category **Defense**.
-- Article date: November 4, 2026. This date does not schedule publication; the site includes registered articles when deployed.
+- Planned article date: Sunday, November 8, 2026, aligned with the video release. This date does not schedule publication; the site includes registered articles when deployed.
 - Language and scope: English US; explanations of this coverage, not general zone defense, drills, an installation plan, or a separate offense against it.
 
 The editorial source of truth is Chris's `Voice_Over_EN.md`, the current 20-page cheat sheet updated November 4, 2026, and his own diagrams. The article adds reasoning around the same assignments rather than combining different defensive systems. In particular, on the right-side high-post entry, **X3 + X5 double, X1 + X2 protect below, and X4 covers the nearby perimeter outlet**.
@@ -49,13 +49,20 @@ The 20 new assets total **792,706 bytes** (about 0.79 MB decimal). The hero is 2
 
 ## Links and release
 
-- PDF funnel: `https://guide.bballorbit.com/1-3-1-zone-defense` (HTTP 200 verified).
+- PDF funnel: `https://guide.bballorbit.com/1-3-1-zone-defense` (HTTP 200 verified); both article links open in a new tab with `noopener noreferrer`.
 - YouTube watch link: `https://www.youtube.com/watch?v=FHlkZy5N5eo`.
 - Player: `https://www.youtube-nocookie.com/embed/FHlkZy5N5eo`, through the existing consent component; no automatic third-party player load.
-- User-stated video release: Sunday, November 8, 2026. The article's wording remains accurate before and after release and does not rely on the video being playable yet.
+- User-stated article and video release: Sunday, November 8, 2026. No pre-release notice appears in the article.
 - No fabricated video upload date, duration, or VideoObject schema.
 - Internal contextual routes: `/resources`, `/blog/press-break`, `/blog/basketball-practice-planning`.
 - Final primary CTA: `https://app.bballorbit.com/`, tied to drawing coverage in the Drill Creator and organizing visuals, cues, and timing in the Practice Planner.
+- The words **Practice Planner** in the concluding paragraph also link to the app. YouTube links open in a new tab. The Markdown renderer preserves explicit link targets rather than discarding them for subdomain links.
+
+## Editorial revision
+
+- Replaced the opening scene and questions with a factual two-sentence introduction.
+- Changed role-plus-number references to parentheses, including the high-post explanation; standalone X-number references remain unchanged.
+- Removed the diagram legend and the video pre-release sentence as requested.
 
 ## Verification: November 4, 2026
 
