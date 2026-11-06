@@ -4,7 +4,7 @@ React 18, TypeScript, Vite and Tailwind website for https://bballorbit.com. The 
 
 Use Node 24 and `npm ci`. `npm run dev` starts local development. Before release, run `npm test`, `npm run typecheck`, `npm audit` and `npm run build`.
 
-The production build renders complete route HTML, public drill snapshots, metadata, structured data and a sitemap. Deploy only `dist`; `dist-ssr` is a build-time bundle. Production is published from GitHub Actions on `main`, with periodic checks for new public drills.
+The production build renders complete route HTML, public drill snapshots, metadata, structured data and a sitemap. Deploy only `dist`; `dist-ssr` is a build-time bundle. Production is published from GitHub Actions using the latest `main` every Sunday at 16:00 UTC (17:00 CET / 18:00 CEST), or by a manual workflow run. Published drills load live in the browser; generated HTML, the sitemap and the fallback snapshot refresh on deployment.
 
 See [website operations](docs/website-operations.md) for deployment, public-library synchronization, contact queue, consent, analytics and security headers. Public Supabase configuration and the Turnstile site key are deliberately public. Private server credentials must never be stored in `VITE_*` or committed.
 

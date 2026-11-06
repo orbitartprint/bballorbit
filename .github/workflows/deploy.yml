@@ -3,13 +3,10 @@ name: Deploy to GitHub Pages
 on:
   workflow_dispatch:
 
-  push:
-    branches: [main]
-  repository_dispatch:
-    types: [public-library-published]
-  # A lightweight public metadata check; dependencies/build run only when needed.
+  # Weekly production release: Sunday 16:00 UTC.
+  # Europe/Berlin: 17:00 in winter (CET), 18:00 in summer (CEST).
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "0 16 * * 0"
 
 permissions:
   contents: read
@@ -29,39 +26,24 @@ jobs:
           node-version: '24'
           package-manager-cache: false
 
-      - name: Check for updated public drills
-        id: publication
-        if: github.event_name == 'schedule'
-        run: node scripts/check-publication.mjs
-        env:
-          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
-
       - run: npm ci
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
 
       - name: Verify lint
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm run lint
 
       - name: Verify public library loading
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm test
 
       - name: Verify TypeScript
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm run typecheck
 
       - name: Check vulnerable dependencies
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm audit --audit-level=high
 
       - name: Verify public app store links before publishing
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm run check:app-distribution:release
 
       - name: Build
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         run: npm run build
         env:
           VITE_ACCOUNT_DELETION_REQUEST_URL: ${{ vars.VITE_ACCOUNT_DELETION_REQUEST_URL }}
@@ -69,7 +51,6 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
       - name: Deploy to GitHub Pages
-        if: github.event_name != 'schedule' || steps.publication.outputs.changed == 'true'
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
         with:
           personal_token: ${{ secrets.GH_PAT }}
