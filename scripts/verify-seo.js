@@ -17,7 +17,14 @@ const structuredDataFor = (html) => [...html.matchAll(/<script\b[^>]*type="appli
     const data = JSON.parse(match[1]);
     return data["@graph"] ?? [data];
   });
-const homeStructuredData = structuredDataFor(htmlFor(""));
+const homeHtml = htmlFor("");
+const featuredVideo = JSON.parse(readFileSync(join(root, "src/data/featuredVideo.json"), "utf8"));
+for (const width of [360, 720, 1280]) {
+  const poster = `/optimized-home/video-${featuredVideo.id}-${width}.webp`;
+  assert.ok(homeHtml.includes(poster), `Missing featured video poster in homepage HTML: ${poster}`);
+  assert.ok(existsSync(join(dist, poster)), `Missing featured video poster: ${poster}. Add the original and run scripts/optimize-home-images.py.`);
+}
+const homeStructuredData = structuredDataFor(homeHtml);
 const organizations = homeStructuredData.filter((item) => item["@type"] === "Organization");
 const websites = homeStructuredData.filter((item) => item["@type"] === "WebSite");
 assert.equal(organizations.length, 1, "The homepage must identify one organization");
