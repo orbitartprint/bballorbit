@@ -4,7 +4,7 @@ import { Youtube, Instagram } from "@/components/BrandIcons";
 import logoImg from "@/assets/basketball-orbit-logo-display.webp";
 import { appDistribution } from "@/lib/appDistribution";
 
-const Footer = () => {
+const Footer = ({ practicePlannerUrl = "https://app.bballorbit.com/" }: { practicePlannerUrl?: string }) => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -22,7 +22,7 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Drill Library", path: "/drills" },
-    { name: "Practice Planner", href: "https://app.bballorbit.com/" },
+    { name: "Practice Planner", href: practicePlannerUrl },
     { name: "Get the App", href: appDistribution.downloadPageUrl },
     { name: "Blog", path: "/blog" },
     { name: "Resources", path: "/resources" },

@@ -4,7 +4,10 @@ import { ExternalLink, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImg from "@/assets/basketball-orbit-logo-display.webp";
 
-const Navigation = () => {
+const Navigation = ({ signupUrl, practicePlannerUrl = "https://app.bballorbit.com/" }: {
+  signupUrl?: string;
+  practicePlannerUrl?: string;
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -32,12 +35,17 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Drill Library", path: "/drills" },
     { name: "Blog", path: "/blog" },
-    { name: "Practice Planner", href: "https://app.bballorbit.com/" },
+    { name: "Practice Planner", href: practicePlannerUrl },
     { name: "About", path: "/about" },
   ] as const;
 
   const currentPath = location.pathname.replace(/\/+$/, "") || "/";
   const isActive = (path: string) => currentPath === path || (path !== "/" && currentPath.startsWith(`${path}/`));
+  const primaryLink = (onClick?: () => void) => signupUrl ? (
+    <a href={signupUrl} referrerPolicy="no-referrer" onClick={onClick}>Start free</a>
+  ) : (
+    <Link to="/resources" onClick={onClick}>Get Free Drills</Link>
+  );
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -96,7 +104,7 @@ const Navigation = () => {
               asChild
               className="shadow-orange"
             >
-              <Link to="/resources">Get Free Drills</Link>
+              {primaryLink()}
             </Button>
           </div>
 
@@ -158,9 +166,7 @@ const Navigation = () => {
                 asChild
                 className="w-fit shadow-orange"
               >
-                <Link to="/resources" onClick={() => setIsMenuOpen(false)}>
-                  Get Free Drills
-                </Link>
+                {primaryLink(() => setIsMenuOpen(false))}
               </Button>
             </div>
           </div>
