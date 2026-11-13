@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr",
+    "build": "node scripts/build.mjs",
     "postbuild": "node scripts/prerender.js && node scripts/prerender-app-page.mjs && node scripts/verify-seo.js",
     "check:app-distribution": "node scripts/check-app-distribution.mjs",
     "check:app-distribution:release": "node scripts/check-app-distribution.mjs --release",

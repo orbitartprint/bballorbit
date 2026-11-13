@@ -14,7 +14,9 @@ def optimize(repo):
         print(f'{target}: {(repo/target).stat().st_size} bytes, {width}x{height}')
     for width in (960,1920): variant('public/lovable-uploads/arena-1.webp',f'public/optimized-home/arena-{width}.webp',width,70)
     video_id=json.loads((repo/'src/data/featuredVideo.json').read_text(encoding='utf-8'))['id']
-    for width in (360,720,1280): variant(f'public/lovable-uploads/video-{video_id}.jpg',f'public/optimized-home/video-{video_id}-{width}.webp',width,78)
+    video_source = f'public/lovable-uploads/video-{video_id}.jpg'
+    if (repo/video_source).is_file():
+        for width in (360,720,1280): variant(video_source,f'public/optimized-home/video-{video_id}-{width}.webp',width,78)
     variant('src/assets/basketball-orbit-logo.webp','src/assets/basketball-orbit-logo-display.webp',320,88)
 
 if __name__=='__main__':
