@@ -30,10 +30,11 @@ assert.equal(website.publisher["@id"], organization["@id"], "Website and publish
 assert.equal(website.name, organization.name);
 assert.equal(website.alternateName, organization.alternateName);
 
-for (const path of ["free-resources", "privacy"]) {
+for (const path of ["free-resources", "privacy", "pba"]) {
   assert.doesNotMatch(sitemap, new RegExp(`/${path}(?:[</])`), `${path} must stay out of the sitemap`);
   assert.match(htmlFor(path), /<meta[^>]*name="robots" content="noindex, nofollow"/, `${path} must be noindex before JavaScript runs`);
 }
+assert.ok(!manifest.routes.includes("/pba"), "The pilot page must stay out of the public route manifest");
 
 for (const article of articles) {
   const path = `blog/${article.slug}`;

@@ -49,6 +49,8 @@ jobs:
           VITE_ACCOUNT_DELETION_REQUEST_URL: ${{ vars.VITE_ACCOUNT_DELETION_REQUEST_URL }}
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          VITE_PBA_PILOT_START: ${{ vars.VITE_PBA_PILOT_START }}
+          VITE_PBA_PILOT_END: ${{ vars.VITE_PBA_PILOT_END }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4

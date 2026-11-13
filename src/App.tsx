@@ -9,6 +9,7 @@ import RouteSeo from "./components/RouteSeo";
 // ✅ Lazy load all pages
 const Index = lazy(() => import("./pages/Index"));
 const MobileApp = lazy(() => import("./pages/MobileApp"));
+const PbaPilot = lazy(() => import("./pages/PbaPilot"));
 const DrillTemplate = lazy(() => import("./pages/DrillTemplate"));
 const DrillLibrary = lazy(() => import("./pages/DrillLibrary"));
 const Resources = lazy(() => import("./pages/Resources"));
@@ -46,6 +47,7 @@ function App({ bootstrap }: { bootstrap?: PageBootstrap }) {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/app" element={<MobileApp />} />
+              <Route path="/pba" element={<PbaPilot />} />
               <Route path="/drills" element={<DrillLibrary />} />
               <Route path="/drills/:slug" element={<DrillTemplate />} />
               <Route path="/resources" element={<Resources />} />

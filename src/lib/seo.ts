@@ -5,6 +5,7 @@ export type PageMetadata = { title: string; description: string; image?: string;
 
 /** Shared by route metadata and the static build. */
 export const staticPageMetadata: Record<string, PageMetadata> = {
+  "/pba": { title: "Practice Planner for Philippine Basketball Coaches | Basketball Orbit", description: "Build game-like basketball practices with the Basketball Orbit Practice Planner.", noindex: true },
   "/": { title: "Basketball Orbit | Drills, Coaching & Practice Planner", description: "Basketball Orbit: game-like basketball drills, small-sided games, coaching PDFs and the Practice Planner. Plan better practices and develop smarter players." },
   "/drills": { title: "Basketball Drill Library - Basketball Orbit", description: "Explore modern, game-like basketball drills, review court diagrams and coaching cues, and build your next practice." },
   "/resources": { title: "Free & Premium Coaching Resources - Basketball Orbit", description: "Browse Basketball Orbit coaching PDFs and resources. Get free guides or explore the Ultimate SSG Playbook for your next practice." },
