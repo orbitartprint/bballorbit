@@ -9,6 +9,12 @@
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
       <path d="M0 0l12 6-12 6z" fill="#f57520"/>
     </marker>
+    <marker id="arrow-small" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0 0l8 4-8 4z" fill="#f57520"/>
+    </marker>
+    <marker id="arrow-small-white" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0 0l8 4-8 4z" fill="#fff"/>
+    </marker>
   </defs>
   <rect width="760" height="1280" rx="32" fill="url(#bg)"/>
   <text x="380" y="68" text-anchor="middle" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="4">TAGGING UP</text>
@@ -24,7 +30,7 @@
       <text x="130" y="137" fill="#b9c3d0" font-size="30">as the shot goes up.</text>
       <path d="M326 153v38m0 0l-21-21m21 21l21-21" fill="none" stroke="#f57520" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <path d="M380 422v36" stroke="#f57520" stroke-width="7" marker-end="url(#arrow)"/>
+    <path d="M380 422v36" stroke="#f57520" stroke-width="7" stroke-linecap="round"/>
     <g transform="translate(54 470)">
       <rect width="652" height="224" rx="25" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
       <circle cx="72" cy="70" r="33" fill="#f57520"/><text x="72" y="81" text-anchor="middle" fill="#0b1320" font-size="32" font-weight="900">2</text>
@@ -34,24 +40,34 @@
       <circle cx="288" cy="178" r="28" fill="none" stroke="#fff" stroke-width="8"/>
       <circle cx="356" cy="178" r="28" fill="none" stroke="#f57520" stroke-width="8"/>
     </g>
-    <path d="M380 702v36" stroke="#f57520" stroke-width="7" marker-end="url(#arrow)"/>
+    <path d="M380 702v36" stroke="#f57520" stroke-width="7" stroke-linecap="round"/>
     <g transform="translate(54 750)">
       <rect width="652" height="224" rx="25" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
       <circle cx="72" cy="70" r="33" fill="#f57520"/><text x="72" y="81" text-anchor="middle" fill="#0b1320" font-size="32" font-weight="900">3</text>
       <text x="130" y="65" fill="#fff" font-size="32" font-weight="800">SCRUM LEGALLY</text>
       <text x="130" y="103" fill="#b9c3d0" font-size="30">Drive with the hips.</text>
       <text x="130" y="137" fill="#b9c3d0" font-size="30">Arms under and up.</text>
-      <path d="M270 195c30-50 74-50 104 0m-90-25l-25-23m101 23l25-23" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
-      <path d="M414 180h75" stroke="#f57520" stroke-width="9" marker-end="url(#arrow)"/>
+      <circle cx="484" cy="164" r="11" fill="#17263a" stroke="#f57520" stroke-width="6"/>
+      <path d="M484 179v32m0 0l-16 12m16-12l17 12M482 187l-34-31m38 31l33-32" fill="none" stroke="#f57520" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="466" cy="164" r="12" fill="#17263a" stroke="#fff" stroke-width="6"/>
+      <path d="M466 179v32m0 0l-16 12m16-12l17 12M466 188l-24 17m24-17l24 17" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <path d="M380 982v36" stroke="#f57520" stroke-width="7" marker-end="url(#arrow)"/>
+    <path d="M380 982v36" stroke="#f57520" stroke-width="7" stroke-linecap="round"/>
     <g transform="translate(54 1030)">
       <rect width="652" height="204" rx="25" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
       <circle cx="72" cy="70" r="33" fill="#f57520"/><text x="72" y="81" text-anchor="middle" fill="#0b1320" font-size="32" font-weight="900">4</text>
       <text x="130" y="65" fill="#fff" font-size="32" font-weight="800">DEFEND IMMEDIATELY</text>
       <text x="130" y="103" fill="#b9c3d0" font-size="30">Stay matched, slow ball,</text>
       <text x="130" y="137" fill="#b9c3d0" font-size="30">and flood the middle.</text>
-      <path d="M256 180c44-42 110-48 171-12" fill="none" stroke="#f57520" stroke-width="9" marker-end="url(#arrow)"/>
+      <path d="M423 146v60" stroke="#fff" stroke-width="3" opacity=".62"/>
+      <circle cx="423" cy="176" r="28" fill="none" stroke="#fff" stroke-width="3" opacity=".72"/>
+      <circle cx="280" cy="176" r="12" fill="#17263a" stroke="#fff" stroke-width="6"/>
+      <circle cx="259" cy="176" r="7" fill="#f57520"/>
+      <path d="M259 169v14m-7-7h14" stroke="#0b1320" stroke-width="2" opacity=".75"/>
+      <path d="M302 165l21 22m0-22l-21 22" stroke="#f57520" stroke-width="6" stroke-linecap="round"/>
+      <path d="M393 177l20 21m0-21l-20 21" stroke="#f57520" stroke-width="6" stroke-linecap="round"/>
+      <path d="M393 151l20 21m0-21l-20 21" stroke="#f57520" stroke-width="6" stroke-linecap="round"/>
+      <path d="M466 165l21 22m0-22l-21 22" stroke="#f57520" stroke-width="6" stroke-linecap="round"/>
     </g>
   </g>
 </svg>
