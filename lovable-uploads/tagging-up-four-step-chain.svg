@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+  <title id="title">Tagging Up four-step chain</title>
+  <desc id="desc">Step forward on the shot, win the high side, scrum legally, and defend immediately.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1320"/>
+      <stop offset="1" stop-color="#111f32"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0l12 6-12 6z" fill="#f57520"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="720" rx="36" fill="url(#bg)"/>
+  <circle cx="1320" cy="86" r="180" fill="#f57520" opacity=".07"/>
+  <circle cx="90" cy="680" r="210" fill="#f57520" opacity=".05"/>
+  <text x="720" y="86" text-anchor="middle" fill="#f57520" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="4">TAGGING UP</text>
+  <text x="720" y="133" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">THE FOUR-STEP CHAIN</text>
+  <text x="720" y="174" text-anchor="middle" fill="#aeb8c6" font-family="Inter, Arial, sans-serif" font-size="22">Every link protects the rebound and the next possession.</text>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(68 232)">
+      <rect width="292" height="360" rx="28" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="58" cy="62" r="31" fill="#f57520"/>
+      <text x="58" y="73" text-anchor="middle" fill="#0b1320" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">1</text>
+      <path d="M72 154v66m0 0l-30-30m30 30l30-30" fill="none" stroke="#f57520" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="34" y="278" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">STEP FORWARD</text>
+      <text x="34" y="318" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">Move toward your tag</text>
+      <text x="34" y="344" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">as the shot goes up.</text>
+    </g>
+    <g transform="translate(404 232)">
+      <rect width="292" height="360" rx="28" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="58" cy="62" r="31" fill="#f57520"/>
+      <text x="58" y="73" text-anchor="middle" fill="#0b1320" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">2</text>
+      <circle cx="78" cy="183" r="41" fill="none" stroke="#fff" stroke-width="9"/>
+      <circle cx="166" cy="183" r="41" fill="none" stroke="#f57520" stroke-width="9"/>
+      <path d="M126 130v106" stroke="#f57520" stroke-width="6" stroke-dasharray="10 10"/>
+      <text x="34" y="278" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">WIN HIGH SIDE</text>
+      <text x="34" y="318" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">Contact the hip closer</text>
+      <text x="34" y="344" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">to half court.</text>
+    </g>
+    <g transform="translate(740 232)">
+      <rect width="292" height="360" rx="28" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="58" cy="62" r="31" fill="#f57520"/>
+      <text x="58" y="73" text-anchor="middle" fill="#0b1320" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">3</text>
+      <path d="M54 202c30-74 78-74 108 0m-92-38l-28-30m104 30l28-30" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <path d="M181 176h58" stroke="#f57520" stroke-width="10" stroke-linecap="round" marker-end="url(#arrow)"/>
+      <text x="34" y="278" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">SCRUM LEGALLY</text>
+      <text x="34" y="318" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">Drive with the hips.</text>
+      <text x="34" y="344" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">Keep arms under and up.</text>
+    </g>
+    <g transform="translate(1076 232)">
+      <rect width="292" height="360" rx="28" fill="#17263a" stroke="#2c3c51" stroke-width="2"/>
+      <circle cx="58" cy="62" r="31" fill="#f57520"/>
+      <text x="58" y="73" text-anchor="middle" fill="#0b1320" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900">4</text>
+      <path d="M52 210c34-76 114-91 184-31" fill="none" stroke="#f57520" stroke-width="11" stroke-linecap="round" marker-end="url(#arrow)"/>
+      <path d="M68 222h142" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+      <text x="34" y="278" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">DEFEND NOW</text>
+      <text x="34" y="318" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">Stay matched, slow ball,</text>
+      <text x="34" y="344" fill="#b9c3d0" font-family="Inter, Arial, sans-serif" font-size="19">and flood the middle.</text>
+    </g>
+  </g>
+
+  <path d="M368 412h26M704 412h26M1040 412h26" stroke="#f57520" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+</svg>
