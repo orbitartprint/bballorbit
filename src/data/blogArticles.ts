@@ -23,9 +23,11 @@ import { basketballPracticePlanning } from '../blog/article-data/basketball-prac
 import { taggingUp } from '../blog/article-data/tagging-up';
 import { shotSelection } from '../blog/article-data/shot-selection';
 import { oneThreeOneZoneDefense } from '../blog/article-data/1-3-1-zone-defense';
+import { hornsAction } from '../blog/article-data/horns-action';
 
 // Export array of all blog articles
 export const blogArticles: BlogArticle[] = [
+  hornsAction,
   oneThreeOneZoneDefense,
   shotSelection,
   taggingUp,
