@@ -6,7 +6,7 @@ export const hornsAction = {
   slug: 'horns-action',
   title: 'Horns Offense Explained: Actions, Reads, and Spacing',
   excerpt:
-    'Learn the Horns offense with clear diagrams for pick-and-roll, handoffs, split action, high-low, and Zoom, plus the spacing and reads behind each option.',
+    'One familiar setup. So many ways to hurt a defense. Discover why Horns is a go-to choice for coaches and how its simple spacing creates connected scoring threats.',
   category: 'Offense',
   tags: [
     'Horns Offense',
@@ -15,7 +15,7 @@ export const hornsAction = {
     'Pick and Roll',
     'Coaching Tips',
   ],
-  heroImage: '/lovable-uploads/horns-action-hero.webp',
+  heroImage: '/lovable-uploads/horns-action-hero-v2.webp',
   heroImageFit: 'contain',
   heroImageAlt:
     'Basketball player in a purple number 5 jersey holding the ball and signaling Horns with a raised hand',

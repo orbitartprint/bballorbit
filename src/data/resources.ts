@@ -13,6 +13,17 @@ export interface Resource {
 
 export const resources: Resource[] = [
   {
+    id: "horns-action",
+    title: "Horns Offense Guide",
+    description: "A practical coaching reference for the Horns Offense.",
+    image: "/lovable-uploads/horns-action-pdf.webp",
+    category: "Offense",
+    type: "Free",
+    link: "https://guide.bballorbit.com/horns",
+    uid: "baf90f3eba",
+    filePath: "/pdfs/horns-action.pdf",
+  },
+  {
     id: "1-3-1-zone-defense",
     title: "1-3-1 Zone Defense Cheat Sheet",
     description: "Understand the 1-3-1 Zone – Know Who Goes Where.",

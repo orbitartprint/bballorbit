@@ -1,4 +1,4 @@
-The **Horns offense** gives a team several ways to create an advantage from the same starting alignment: a ball handler at the top, two players at the elbows, and two in the corners. From there, the offense can flow into ball screens, handoffs, split cuts, high-low passes, and Zoom action.
+The **Horns offense** gives a team several ways to create an advantage from the same starting alignment: a ball handler at the top, two players at the elbows, and two in the corners. From there, the offense can flow into ball screens, Handoffs, Split Action, High-Low passes, and [Zoom Action](/blog/zoom-action).
 
 The coaching challenge is making those options connect. If both bigs roll into the same space, or the next screen arrives before the first action develops, a promising setup becomes a crowded possession.
 
@@ -30,7 +30,7 @@ Both entries begin from a recognizable shape. What happens after the entry depen
 
 The corners give those actions room. If their defenders help toward the lane, the offense can look for the pass out. If the corner players drift inward without a purpose, their defenders can help closer to the ball while recovering a shorter distance.
 
-## Pick-and-roll and pick-and-pop: coordinate the two bigs
+## Pick-and-Roll and Pick-and-Pop: coordinate the two bigs
 
 Both elbow players come up to screen on opposite sides of the on-ball defender. The ball handler can choose a direction, taking account of the defender's stance, the screen angle, and the matchup.
 
@@ -38,22 +38,22 @@ Both elbow players come up to screen on opposite sides of the on-ball defender. 
 
 After the handler uses a screen, the relationship between 4 and 5 creates the spacing.
 
-### Pick-and-roll
+### Pick-and-Roll
 
 In the first version below, **1 uses 4's screen, 4 rolls, and 5 pops out**. The roll threatens the rim. The pop gives the ball handler a perimeter outlet and asks the second big's defender to account for another space.
 
-### Pick-and-pop
+### Pick-and-Pop
 
 In the second version, **4 pops after screening and 5 dives**. The ball handler still has an interior target, but a different player provides it. This can suit a shooting screener and a stronger interior finisher on the opposite side.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
   <figure class="m-0">
-    <img src="/lovable-uploads/horns-pick-and-roll-2.webp" alt="Horns pick-and-roll: 1 uses 4's screen, 4 rolls to the basket, and 5 pops to the right perimeter" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
-    <figcaption class="text-sm leading-relaxed text-muted-foreground">Pick-and-roll: 4 attacks the rim while 5 creates the outside outlet.</figcaption>
+    <img src="/lovable-uploads/horns-pick-and-roll-2.webp" alt="Horns Pick-and-Roll: 1 uses 4's screen, 4 rolls to the basket, and 5 pops to the right perimeter" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
+    <figcaption class="text-sm leading-relaxed text-muted-foreground">Pick-and-Roll: 4 attacks the rim while 5 creates the outside outlet.</figcaption>
   </figure>
   <figure class="m-0">
-    <img src="/lovable-uploads/horns-pick-and-roll-3.webp" alt="Horns pick-and-pop: 4 moves out after screening while the opposite big, 5, cuts to the basket" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
-    <figcaption class="text-sm leading-relaxed text-muted-foreground">Pick-and-pop: 4 stays outside and 5 supplies the basket threat.</figcaption>
+    <img src="/lovable-uploads/horns-pick-and-roll-3.webp" alt="Horns Pick-and-Pop: 4 moves out after screening while the opposite big, 5, cuts to the basket" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
+    <figcaption class="text-sm leading-relaxed text-muted-foreground">Pick-and-Pop: 4 stays outside and 5 supplies the basket threat.</figcaption>
   </figure>
 </div>
 
@@ -61,9 +61,9 @@ In the second version, **4 pops after screening and 5 dives**. The ball handler 
 
 The handler then reads the coverage. A retreating defender may allow a drive or pull-up; a second defender committing to the ball may free the roller or popper. If a corner defender tags the roll, the corner pass becomes part of the decision. The alignment creates options, but it does not guarantee that any particular pass is open.
 
-## Re-screen or twist: make the second screen arrive on time
+## Re-Screen or Twist: make the second screen arrive on time
 
-When the first screen produces no clear advantage, the second big can screen the ball in the other direction. This continuation is often called a **Horns twist** or a re-screen by the second big.
+When the first screen produces no clear advantage, the second big can screen the ball in the other direction. This continuation is often called a **Horns Twist** or a Re-Screen by the second big.
 
 Here, 1 uses 4 first. As the handler comes out on the left, 5 arrives to change the angle of attack. The on-ball defender must navigate another screen while the defense reorganizes behind the first one.
 
@@ -82,28 +82,28 @@ Once 1 uses the second screen, 5 can roll. The initial screener, 4, fades out to
 
 Timing matters more than rushing through both screens. If 5 arrives too early, the screens crowd one another. If 5 arrives late, the defender can recover before facing the next problem. A useful cue is: **“Make the defender turn again.”**
 
-## Horns flare: free the first screener on the perimeter
+## Horns Flare: free the first screener on the perimeter
 
-The second big can also create an off-ball advantage. After 1 uses 4's ball screen, **5 sets a flare screen for 4**, who moves away from the ball to the perimeter.
+The second big can also create an off-ball advantage. After 1 uses 4's ball screen, **5 sets a Flare Screen for 4**, who moves away from the ball to the perimeter.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
   <figure class="m-0">
-    <img src="/lovable-uploads/horns-flare-screen-1.webp" alt="Horns flare begins with 1 attacking left off the first ball screen from 4" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
+    <img src="/lovable-uploads/horns-flare-screen-1.webp" alt="Horns Flare begins with 1 attacking left off the first ball screen from 4" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
     <figcaption class="text-sm leading-relaxed text-muted-foreground">The first ball screen draws attention toward 1's drive.</figcaption>
   </figure>
   <figure class="m-0">
-    <img src="/lovable-uploads/horns-flare-screen-2.webp" alt="5 sets a flare screen for 4 to move away from the ball toward the right perimeter" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
-    <figcaption class="text-sm leading-relaxed text-muted-foreground">5 frees 4 on the flare, then can dive to provide the inside option.</figcaption>
+    <img src="/lovable-uploads/horns-flare-screen-2.webp" alt="5 sets a Flare Screen for 4 to move away from the ball toward the right perimeter" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
+    <figcaption class="text-sm leading-relaxed text-muted-foreground">5 frees 4 on the Flare, then can dive to provide the inside option.</figcaption>
   </figure>
 </div>
 
-The passer looks across the floor for 4's catch-and-shoot opportunity. After setting the flare, 5 rolls toward the basket. That creates an inside response if the defense overcommits to the shooter.
+The passer looks across the floor for 4's catch-and-shoot opportunity. After setting the Flare Screen, 5 rolls toward the basket. That creates an inside response if the defense overcommits to the shooter.
 
-This variation fits a first screener who is a credible perimeter threat. The flare is less valuable if the defense can comfortably leave that player. Screen angle and separation still matter: drifting outward without using the screen gives the defender an easier recovery.
+This variation fits a first screener who is a credible perimeter threat. The Flare is less valuable if the defense can comfortably leave that player. Screen angle and separation still matter: drifting outward without using the screen gives the defender an easier recovery.
 
-## Double drag: use the screens in sequence
+## Double Drag: use the screens in sequence
 
-In the double-drag variation, the ball handler starts toward a wing and uses both screens in the same direction. The defender encounters one screen, then the next.
+In the Double Drag variation, the ball handler starts toward a wing and uses both screens in the same direction. The defender encounters one screen, then the next.
 
 In this example, 1 moves from right to left, passing 5's screen first and 4's second. **5 pops; 4 rolls.**
 
@@ -113,14 +113,14 @@ In this example, 1 moves from right to left, passing 5's screen first and 4's se
     <figcaption class="text-sm leading-relaxed text-muted-foreground">The guard uses 5 first, then 4, keeping the screens in one attacking direction.</figcaption>
   </figure>
   <figure class="m-0">
-    <img src="/lovable-uploads/horns-double-drag-2.webp" alt="Double-drag spacing with first screener 5 popping right and second screener 4 rolling to the rim" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
+    <img src="/lovable-uploads/horns-double-drag-2.webp" alt="Double Drag spacing with first screener 5 popping right and second screener 4 rolling to the rim" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
     <figcaption class="text-sm leading-relaxed text-muted-foreground">The first screener opens outside; the second creates the roll threat.</figcaption>
   </figure>
 </div>
 
 The guard should emerge with room to see the roller and the popper. Screens placed too close together can make the two defenders' jobs easier by putting everyone in the same space. The corner players stay connected to the action through their spacing and readiness for a kick-out.
 
-## Elbow handoff: pass and follow into the next advantage
+## Elbow Handoff: pass and follow into the next advantage
 
 Now move the ball to the elbow. **1 passes to 5 and follows for a handoff.** The elbow receiver steps toward the pass, secures the ball, and prepares the exchange while 4 begins the opposite-side cut.
 
@@ -146,17 +146,17 @@ If 4 is still cutting into the paint, 5 can pop to preserve a clear interior tar
   </figure>
   <figure class="m-0">
     <img src="/lovable-uploads/horns-handoff-4.webp" alt="Handoff continuations showing 4 clearing left and 5 able to roll inside or pop outside as 1 attacks" width="1200" height="1085" loading="lazy" decoding="async" class="w-full h-auto" />
-    <figcaption class="text-sm leading-relaxed text-muted-foreground">Roll and pop are alternatives. 5's choice must complement 4's location.</figcaption>
+    <figcaption class="text-sm leading-relaxed text-muted-foreground">Roll and Pop are alternatives. 5's choice must complement 4's location.</figcaption>
   </figure>
 </div>
 
 The common mistake is completing the exchange and then stopping. The handoff should lead directly into a drive, shot, pass, or another screening action while the defense is still adjusting.
 
-## Split action: a cut or flare after the elbow entry
+## Split Action: a Cut or Flare after the elbow entry
 
 After passing to 5, 1 can use an off-ball screen from 4. The elbow passer stays available to deliver the ball while the two teammates separate into different spaces.
 
-![1 enters to 5 at the right elbow to begin the Horns split action](/lovable-uploads/horns-split-1.webp)
+![1 enters to 5 at the right elbow to begin the Horns Split Action](/lovable-uploads/horns-split-1.webp)
 
 The two examples below show different responses. **1 can cut toward the basket off 4, or flare outside while 4 rolls.** The route depends on the action's intent and the defender's positioning.
 
@@ -175,9 +175,9 @@ The passer needs an angle to see both options. The cutter must set up the defend
 
 The useful coaching question is: **“Which space did the defender give you?”** That keeps the action connected to a read, even when the team calls a specific starting route.
 
-## High-low: use the elbow as a passing window
+## High-Low: use the elbow as a passing window
 
-The high-low variation puts one big at the elbow with the ball and the other close to the rim. After the entry to 5, **4 dives and establishes an inside seal**.
+The High-Low variation puts one big at the elbow with the ball and the other close to the rim. After the entry to 5, **4 dives and establishes an inside seal**.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
   <figure class="m-0">
@@ -196,7 +196,7 @@ The exchange between 1 and 2 adds movement away from the ball. It can make helpi
 
 ## Horns Zoom: connect a down screen with a handoff
 
-Horns also offers a natural entry into **Zoom action**. In this version, **1 enters to 4 at the left elbow, fakes the handoff, and clears left. On the opposite side, 5 down-screens for 3.**
+Horns also offers a natural entry into **Zoom Action**. In this version, **1 enters to 4 at the left elbow, fakes the handoff, and clears left. On the opposite side, 5 down-screens for 3.**
 
 Player 3 rises off the screen toward a dribble handoff from 4, who brings the ball across to meet the receiver. The defender must deal with the down screen and the exchange in quick succession.
 
@@ -213,7 +213,7 @@ Player 3 rises off the screen toward a dribble handoff from 4, who brings the ba
 
 The connection between the two actions creates the pressure. A long pause after the down screen gives the defender time to recover. An early handoff can leave the receiver too far away to use it effectively.
 
-Once 3 receives the ball, the familiar reads return: turn the corner, take an available shot, or move the ball when help commits. The [full Zoom Action guide](/blog/zoom-action) explores those continuations in more detail.
+Once 3 receives the ball, the familiar reads return: turn the corner, take an available shot, or move the ball when help commits. The <a href="https://guide.bballorbit.com/zoom" target="_blank" rel="noopener noreferrer">free Zoom Action PDF Guide</a> explores those continuations in more detail.
 
 ## The spacing and timing details that make Horns work
 
@@ -223,7 +223,7 @@ The variations share a few practical requirements:
 - **Keep the corners useful.** Their spacing stretches help, and their readiness matters when that help leaves.
 - **Use the screen before looking for the next action.** The handler's route and pace determine whether the defender has a problem to solve.
 - **Move as the ball arrives.** An elbow catch should lead into its cut, screen, or handoff without an unnecessary reset.
-- **Match the variation to the players.** A flare needs a credible receiver; high-low needs an inside seal and a passer who can read it.
+- **Match the variation to the players.** A Flare needs a credible receiver; High-Low needs an inside seal and a passer who can read it.
 - **Keep an outlet when the first option closes.** A reversal or connected second action can preserve the possession's advantage.
 
 You do not need to introduce every variation at once. Start with a ball-screen option and an elbow-entry option that fit your players. Add a continuation when the team understands the spacing behind those first choices. The [basketball practice-planning guide](/blog/basketball-practice-planning) can help connect that focus to the rest of your session; the [Drill Library](/drills) provides activities you can adapt to the reads you want to develop.
@@ -232,8 +232,8 @@ You do not need to introduce every variation at once. Start with a ball-screen o
 
 1. **Horns gives several entries from one alignment.** The two elbows and two corners create the starting spacing.
 2. **The bigs' movements must complement each other.** In the variations shown, an inside threat is paired with an outside option or clearance.
-3. **The second screen changes the problem.** A twist attacks a new angle; double drag uses consecutive screens in one direction.
-4. **Elbow entries involve the passer and cutters.** Handoffs, split action, and high-low all depend on movement around the catch.
+3. **The second screen changes the problem.** A Twist attacks a new angle; Double Drag uses consecutive screens in one direction.
+4. **Elbow entries involve the passer and cutters.** Handoffs, Split Action, and High-Low all depend on movement around the catch.
 5. **Zoom links two actions.** The down screen and handoff should arrive as one connected sequence.
 6. **The defense decides which option becomes available.** The setup supports the read; the players still have to make it.
 

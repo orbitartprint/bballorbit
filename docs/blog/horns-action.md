@@ -50,7 +50,7 @@ All files live in `public/lovable-uploads/`.
 | `horns-zoom-1.png` | `horns-zoom-1.webp` | Elbow entry to 4 |
 | `horns-zoom-2.png` | `horns-zoom-2.webp` | 5 screens 3 into 4's handoff |
 | `Thumbnail_Horns.jpg` | `horns-action-video-thumbnail.webp` | Locally hosted linked YouTube thumbnail |
-| `Horns.png` | `horns-action-hero.webp` | Horizontally extended hero |
+| `Horns.png` | `horns-action-hero-v2.webp` | Horizontally extended hero with corrected court and spectator boundary |
 
 The hero was edited with built-in Imagegen: extend the portrait horizontally to 16:9, preserve the player, gesture, ball, uniform and pose, and continue the softly blurred arena on both sides without sharp additional players. It is an AI-extended source image, not a new claimed documentary event. The original source remains untouched. The resulting hero is **1672 × 941** and uses `heroImageFit: 'contain'` to preserve the complete composition, including the hand signal and ball.
 
@@ -76,12 +76,28 @@ Expand the canvas horizontally to a wide 16:9 landscape image by adding realisti
 - All 37 existing website tests passed.
 - Production client/SSR build, HTML prerendering, hydration bootstrap checks and SEO verification passed for 10 articles and 43 published drills.
 - Desktop 1440 × 1000 and mobile 390 × 844 checked from the actual production build. No horizontal overflow; diagram pairs stack on mobile.
-- All 21 supplied diagrams appear exactly once and load at their original resolution. All 23 new WebP assets total **668,802 bytes** (about 669 KB).
+- All 21 supplied diagrams appear exactly once and load at their original resolution. The 23 active article WebP assets total **663,988 bytes** (about 664 KB), including the revised hero. The initial hero file is retained as an unused prior version.
 - H1 uniqueness, heading IDs, canonical, social image, PDF-link attributes, video-thumbnail link, final CTA, sitemap entry, blog-list registration, TOC navigation, and diagram lightbox tested.
 - Corrected a small renderer issue: explicit local `data-video-poster` markers are preserved, so clicking the local video thumbnail does not also open the image lightbox. Ordinary diagram enlargement remains intact.
 - Local browser QA blocks third-party scripts, including CookieYes and analytics. No local page errors or failed local requests were observed. No YouTube iframe is loaded by this linked-thumbnail article.
 - The only remaining release dependency is the explicitly prelinked Horns PDF landingpage and PDF.
 
 ## Delivery
+
+### Requested revisions: November 19, 2026
+
+- Replaced the article/social hero reference with `horns-action-hero-v2.webp` (1672 × 941; 104,622 bytes). Imagegen reconstructed a continuous low courtside barrier and a consistent hardwood plane, removing lower background seams and keeping the crowd behind the playing area. The original player and gesture remain the foreground focus.
+- The new filename prevents stale cached copies from masking the visual correction. The previous hero remains available as a prior version.
+- Changed the excerpt/subheading to: “One familiar setup. So many ways to hurt a defense. Discover why Horns is a go-to choice for coaches and how its simple spacing creates connected scoring threats.”
+- Capitalized option names consistently, including Pick-and-Roll, Pick-and-Pop, Re-Screen, Twist, Flare, Double Drag, Elbow Handoff, Split Action, High-Low, and Zoom Action. Verbs describing player movement remain natural sentence case.
+- “free Zoom Action PDF Guide” now links to `https://guide.bballorbit.com/zoom` in a new tab. The earlier introductory Zoom Action link remains a contextual link to the blog explanation.
+
+Hero correction prompt used with built-in Imagegen:
+
+```text
+Use case: precise background correction / compositing.
+Edit the provided wide basketball hero photograph. Preserve the foreground basketball player EXACTLY: same face, hair, body, purple LIONS number 5 uniform, tattoos, ball, hand gesture and fingers, position, size, crop, lighting and sharpness. Keep the existing wide 16:9 aspect ratio and dark photorealistic sports photography.
+Correct the arena background, especially its LOWER HALF. The current image has physically inconsistent joins near the lower left and lower right edges of the original portrait region: floor begins at different heights and spectators look as though they are seated on the playing surface. Remove those seams and reconstruct ONE continuous, physically plausible arena background across the ENTIRE width, including the area immediately behind the player. Use a clear continuous courtside boundary: spectators belong behind a low, dark courtside barrier or advertising board in tiered seating, with their bodies and feet fully behind it. The hardwood playing surface in the bottom foreground must be one uninterrupted plane with consistent perspective, texture and color from the far left edge through the center to the far right edge. There must be no vertical cutoff, no change in floor height at the old portrait boundaries, no spectators or chairs on the visible hardwood. A soft-focus low barrier can conceal mismatched lower crowd silhouettes. Match the depth of field and lighting of the upper background, which already looks good; keep upper background changes minimal. No additional sharp players, no new foreground people, no typography or new logos. Only the background should change. Make the lower transitions seamless and the court-versus-seating separation unmistakably realistic.
+```
 
 Integrated locally in the main website repository. No commit, push, or production deployment is authorized by this task. The registered article and assets will be included in the next normal site build/deployment.
