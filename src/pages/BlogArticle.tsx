@@ -40,7 +40,7 @@ const BlogArticle = () => {
     const container = document.querySelector("#article-content");
     if (!container) return;
 
-    const images = Array.from(container.querySelectorAll("img"));
+    const images = Array.from(container.querySelectorAll<HTMLImageElement>("img:not([data-video-poster])"));
 
     const handlers = images.map((img) => {
       // Cursor UX
@@ -227,6 +227,11 @@ const BlogArticle = () => {
                     rehypePlugins={[rehypeRaw, rehypeSlug]}
                     components={{
                       iframe: ({ src, title }) => <ArticleVideo src={src} title={title} />,
+                      img: ({ node, src, ...props }) => {
+                        const videoId = src?.match(/^https:\/\/(?:img\.youtube\.com|i\.ytimg\.com)\/vi(?:_webp)?\/([A-Za-z0-9_-]{11})\//)?.[1];
+                        const thumbnail = videoId ? __YOUTUBE_VIDEO_POSTERS__[videoId] : undefined;
+                        return <img {...props} src={thumbnail?.src ?? src} srcSet={thumbnail?.srcSet ?? props.srcSet} data-video-poster={videoId ? true : undefined} />;
+                      },
                       h1: ({ id, children }) => <h2 id={id}>{children}</h2>,
                       a: ({ href, children, target, rel }) => {
                         const isExternal = href && !href.startsWith("/") && !href.includes("bballorbit.com");

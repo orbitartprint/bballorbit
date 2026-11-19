@@ -6,11 +6,12 @@ export default function ConsentYouTube({ videoId, title, poster, posterSrcSet, s
   const [playing, setPlaying] = useState(false);
   const { advertisement } = useConsent();
   if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) return null;
+  const thumbnail = poster ? { src: poster, srcSet: posterSrcSet } : __YOUTUBE_VIDEO_POSTERS__[videoId];
   const player = advertisement && playing ? <iframe className="h-full w-full" src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`} title={title} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen /> : null;
-  if (poster || showCaption) return <figure className="not-prose">
+  if (thumbnail || showCaption) return <figure className="not-prose">
     <div className="relative aspect-video overflow-hidden rounded-xl bg-black shadow-glow">
       {player ?? <>
-        {poster && <img src={poster} srcSet={posterSrcSet} sizes="(min-width: 1024px) 896px, calc(100vw - 32px)" width={1280} height={720} alt={title} loading="lazy" decoding="async" className="h-full w-full object-cover" />}
+        {thumbnail && <img data-video-poster src={thumbnail.src} srcSet={thumbnail.srcSet} sizes="(min-width: 1024px) 896px, calc(100vw - 32px)" width={1280} height={720} alt={title} loading="lazy" decoding="async" className="h-full w-full object-cover" />}
         <button type="button" onClick={advertisement ? () => setPlaying(true) : undefined}
           className={`absolute inset-0 flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white ${advertisement ? "" : "cky-banner-element"}`}
           aria-label={advertisement ? `Play ${title}` : `Cookie preferences to play ${title}`}>

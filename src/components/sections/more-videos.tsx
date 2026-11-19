@@ -4,15 +4,15 @@ const MoreVideos = () => {
   // 🔸 Hier brauchst du nur die Video-IDs und Titel anzugeben
   const videos = [
     {
-      id: "s4CsyR3EpJs",
+      videoId: "s4CsyR3EpJs",
       title: "Tagging Up Explained: Offensive Rebounding Without Sacrificing Transition"
     },
     {
-      id: "BvXR1cZFKtQ",
+      videoId: "BvXR1cZFKtQ",
       title: "The One Basketball Drill You Can Use for Almost Everything"
     },
     {
-      id: "01rcPig8FNg",
+      videoId: "01rcPig8FNg",
       title: "THow to Attack Every Pick-and-Roll Coverage"
     },
   ];
@@ -28,9 +28,9 @@ const MoreVideos = () => {
 
         {/* ✅ Automatisch generierte Thumbnails & Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {videos.map(({ id, title }) => {
+          {videos.map(({ videoId: id, title }) => {
             const youtubeUrl = `https://youtu.be/${id}`;
-            const thumbnailUrl = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+            const thumbnail = __YOUTUBE_VIDEO_POSTERS__[id];
 
             return (
               <a
@@ -42,13 +42,14 @@ const MoreVideos = () => {
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-video bg-black">
-                  <img
-                    src={thumbnailUrl}
+                  {thumbnail && <img
+                    src={thumbnail.src}
+                    srcSet={thumbnail.srcSet}
                     alt={title}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                  />}
 
                   {/* Play Overlay */}
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex items-center justify-center">

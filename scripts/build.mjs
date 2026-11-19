@@ -2,20 +2,17 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { build } from "vite";
-import { downloadFeaturedVideoPoster, localFeaturedVideoPoster, readFeaturedVideoId } from "./featured-video-poster.mts";
+import { prepareYouTubeVideoPosters } from "./youtube-video-posters.mts";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-const id = readFeaturedVideoId(root);
-const localPoster = localFeaturedVideoPoster(root, id);
-const downloadedPoster = localPoster ? null : await downloadFeaturedVideoPoster(id);
-const poster = localPoster ?? (downloadedPoster ? { src: downloadedPoster.src } : null);
-if (!poster && id) console.warn("Featured video thumbnail unavailable; publishing with the video placeholder.");
+const { posters, downloads, missing } = await prepareYouTubeVideoPosters(root);
+if (missing.length) console.warn(`YouTube thumbnails unavailable for ${missing.join(", ")}; publishing with the video placeholders.`);
 
-const define = { __FEATURED_VIDEO_POSTER__: JSON.stringify(poster) };
+const define = { __YOUTUBE_VIDEO_POSTERS__: JSON.stringify(posters) };
 await build({ root, define });
-if (downloadedPoster) {
-  const file = join(root, "dist", downloadedPoster.src);
+for (const poster of downloads) {
+  const file = join(root, "dist", poster.src);
   mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, downloadedPoster.bytes);
+  writeFileSync(file, poster.bytes);
 }
 await build({ root, define, build: { ssr: "src/entry-server.tsx", outDir: "dist-ssr" } });
